@@ -1,0 +1,77 @@
+@use "../../styles/base/mixins" as *;
+
+.industries__section {
+  background-image: url("https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/nisgh2gbe0ginddnsrko_opkrn1.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 4rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    max-width: 800px;
+    margin: 0 1rem;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+
+  ul {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.2;
+
+      img {
+        width: 150px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@include respond-to-max("laptop") {
+  .industries__section {
+    flex-direction: column;
+    gap: 15vw;
+    padding: 4rem 10vw;
+
+    h2 {
+      font-size: clamp(18px, 4.5vw, 30px);
+
+      @include respond-to-max("laptop") {
+        text-wrap: balance;
+        .hide__on__mobile {
+          display: none;
+        }
+      }
+    }
+
+    ul {
+      align-items: flex-start;
+      gap: 5vw;
+      li {
+        min-width: 15px;
+        font-size: clamp(5px, 3vw, 25px);
+      }
+    }
+  }
+}

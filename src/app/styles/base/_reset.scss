@@ -1,0 +1,77 @@
+/* reset.scss */
+
+/* Reestablece el estilo de todos los elementos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* Restablece el estilo de los enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Elimina los estilos de las listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Evita saltos en las imágenes */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Restablece el estilo de las tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Restablece el estilo de los campos de formulario */
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+/* Asegura que el formulario no tenga márgenes ni rellenos adicionales */
+form {
+  margin: 0;
+  padding: 0;
+}
+
+/* Restablece el estilo de los elementos semánticos */
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+}
+
+/* Crea un margen estándar */
+body {
+  line-height: 1.5;
+}
+
+/* Elimina el fondo transparente en elementos de formulario */
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background: transparent;
+}
+
+/* Configura la fuente de los elementos de texto */
+body {
+  font-family: Arial, sans-serif;
+}

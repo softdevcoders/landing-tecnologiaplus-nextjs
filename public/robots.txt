@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /
+
+# Host
+Host: https://landing-tecnologiaplus-nextjs-dev.vercel.app/
+
+# Sitemaps
+Sitemap: https://landing-tecnologiaplus-nextjs-dev.vercel.app/sitemap.xml

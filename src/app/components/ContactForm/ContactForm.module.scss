@@ -1,0 +1,450 @@
+@use "../../styles/base/mixins" as *;
+
+.contact__form {
+  background-image: url("https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/nisgh2gbe0ginddnsrko_opkrn1.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 8rem;
+
+  @include respond-to-max("tablet") {
+    padding: 4rem 2rem;
+  }
+
+  @include respond-to-max("mobile") {
+    padding: 3rem 1rem;
+  }
+
+  .contact__form__container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include respond-to-max("laptop") {
+      flex-direction: column;
+    }
+  }
+
+  .form__container {
+    margin-top: -180px;
+    background: #f4f4f4;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    height: auto;
+    min-height: 500px;
+    width: 100%;
+    max-width: 450px;
+    overflow-y: auto; // Allow scrolling if form expands
+    transition: all 0.3s ease;
+
+    @include respond-to-max("tablet") {
+      padding: 1.5rem;
+      margin-top: -100px;
+    }
+
+    @include respond-to-max("mobile") {
+      padding: 1.25rem;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    > form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+
+      h2 {
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: #7600b3;
+        margin-bottom: 1rem;
+        text-align: center;
+
+        @include respond-to-max("mobile") {
+          font-size: 1.3rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .input_group {
+        width: 100%;
+        position: relative;
+        margin-bottom: 0.5rem;
+
+        // Floating label styles
+        .floating_label {
+          position: absolute;
+          left: 12px;
+          top: 0;
+          font-size: 0.75rem;
+          color: #666;
+          pointer-events: none;
+          transform: translateY(-50%);
+          background-color: #f4f4f4;
+          padding: 0 0.5rem;
+          opacity: 0;
+          transition: opacity 0.2s ease, transform 0.2s ease;
+          z-index: 1;
+        }
+
+        &.has_value .floating_label {
+          opacity: 1;
+        }
+
+        // Tooltip styling
+        input, textarea {
+          &[data-tooltip]:not([data-tooltip=""]) {
+            &::after {
+              content: attr(data-tooltip);
+              position: absolute;
+              top: -35px; // Position on top
+              left: 10px;
+              background-color: #e74c3c;
+              color: white;
+              padding: 5px 10px;
+              border-radius: 4px;
+              font-size: 0.75rem;
+              font-weight: 500;
+              white-space: normal;
+              width: calc(100% - 20px);
+              max-width: 250px;
+              z-index: 10;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity 0.2s ease;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+            
+            &::before {
+              content: '';
+              position: absolute;
+              top: -12px;
+              left: 20px;
+              border-width: 5px;
+              border-style: solid;
+              border-color: #e74c3c transparent transparent transparent;
+              transform: rotate(180deg);
+              opacity: 0;
+              transition: opacity 0.2s ease;
+              z-index: 10;
+            }
+            
+            &:hover::after, &:focus::after, &:hover::before, &:focus::before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      input, textarea {
+        background: #fff;
+        width: 100%;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        border: 1px solid transparent;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        font-family: inherit;
+        color: #333;
+
+        &:focus {
+          outline: none;
+          border-color: #6f3bb4;
+          box-shadow: 0 0 0 2px rgba(111, 59, 180, 0.2);
+        }
+
+        &::placeholder {
+          color: #a6a6a6;
+          opacity: 1;
+          transition: opacity 0.2s ease;
+        }
+
+        &:focus::placeholder {
+          opacity: 0.5;
+        }
+      }
+
+      .textarea {
+        min-height: 100px;
+        height: auto;
+        resize: vertical;
+        max-height: 150px;
+        border-radius: 20px;
+        padding: 0.75rem 1.25rem;
+        line-height: 1.5;
+      }
+
+      .error_input {
+        border-color: #e74c3c;
+        
+        &:focus {
+          border-color: #e74c3c;
+          box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+        }
+      }
+
+      input::placeholder, textarea::placeholder {
+        color: #a6a6a6;
+        opacity: 1;
+      }
+
+      .form_error {
+        color: #e74c3c;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-align: center;
+        background-color: rgba(231, 76, 60, 0.1);
+        padding: 0.75rem;
+        border-radius: 8px;
+        width: 100%;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .cooldown_message {
+        color: #f39c12;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-align: center;
+        width: 100%;
+        padding: 0.75rem;
+        background-color: rgba(243, 156, 18, 0.1);
+        border-radius: 8px;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .submit_button {
+        margin-top: 0.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        background: #6f3bb4;
+        color: #fff;
+        font-size: 1rem;
+        padding: 0.75rem 3rem;
+        border-radius: 50px;
+        border: none;
+        width: auto;
+        min-width: 180px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(111, 59, 180, 0.3);
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            to right,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+          );
+          transition: left 0.7s ease;
+        }
+
+        &:hover:not(:disabled) {
+          background-color: #5c2e9c;
+          transform: translateY(-3px);
+          box-shadow: 0 6px 20px rgba(111, 59, 180, 0.4);
+
+          &::before {
+            left: 100%;
+          }
+        }
+
+        &:active:not(:disabled) {
+          transform: translateY(-1px);
+          box-shadow: 0 3px 10px rgba(111, 59, 180, 0.3);
+        }
+
+        &:disabled {
+          background-color: #c8a9e9;
+          cursor: not-allowed;
+          box-shadow: none;
+        }
+
+        @include respond-to-max("mobile") {
+          width: 100%;
+          padding: 0.75rem 1rem;
+        }
+      }
+    }
+
+    .message__container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      padding: 0 2rem;
+      animation: fadeIn 0.5s ease;
+
+      .message__head {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        .check__icon {
+          font-size: 60px;
+          color: #00a58b;
+        }
+        h2 {
+          color: #7600b3;
+          line-height: 1.2;
+          font-size: 1.8rem;
+        }
+
+        @include respond-to-max("mobile") {
+          flex-direction: column;
+          gap: 1rem;
+
+          .check__icon {
+            font-size: 50px;
+          }
+
+          h2 {
+            font-size: 1.4rem;
+            text-align: center;
+          }
+        }
+      }
+
+      p {
+        color: #606060;
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.4;
+        text-wrap: balance;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+
+        @include respond-to-max("mobile") {
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  
+  .contact__texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 3rem;
+
+    @include respond-to-max("laptop") {
+      padding-left: 0;
+      margin-bottom: 2rem;
+    }
+
+    .contact__title {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #fff;
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+
+      @include respond-to-max("mobile") {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 400;
+      text-align: center;
+      max-width: 1250px;
+      line-height: 1.4;
+
+      @include respond-to-max("mobile") {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include respond-to-max("laptop") {
+  .contact__form {
+    padding: 6rem 5%;
+    margin-top: 280px;
+    .contact__form__container {
+      flex-direction: column;
+
+      .form__container {
+        order: 2;
+        margin: 40px auto 0;
+
+        .message__container {
+          .message__head {
+            flex-direction: column;
+
+            .check__icon {
+              font-size: 90px;
+            }
+
+            h2 {
+              font-size: clamp(16px, 6vw, 40px);
+              text-align: center;
+            }
+          }
+
+          p {
+            font-size: clamp(16px, 3vw, 20px);
+            text-align: center;
+            margin: 1rem 0 0;
+          }
+        }
+      }
+
+      .contact__texts {
+        order: 1;
+        margin-top: -350px;
+
+        .contact__title {
+          color: #606060;
+          width: 100%;
+          font-size: clamp(16px, 6vw, 60px);
+        }
+
+        p {
+          color: #606060;
+          font-size: clamp(14px, 3vw, 30px);
+        }
+      }
+    }
+  }
+}
+
+.noMarginTop {
+  margin-top: 0 !important;
+  @include respond-to-max("laptop") {
+    margin-top: 50px !important;
+  }
+}

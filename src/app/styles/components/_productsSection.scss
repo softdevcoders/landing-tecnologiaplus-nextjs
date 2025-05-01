@@ -1,0 +1,99 @@
+@use "../../styles/base/mixins" as *;
+
+.products__section {
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 3rem 10rem;
+
+  .products__title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #606060;
+    margin-bottom: 3rem;
+  }
+
+  .products__container {
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 2rem;
+
+    img {
+      height: 22rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: #606060;
+    font-weight: 400;
+    text-align: center;
+    max-width: 1250px;
+    line-height: 1.2;
+    text-wrap: balance;
+
+    max-height: none;
+    display: block;
+  }
+
+  .toggle__label {
+    display: none;
+    color: #606060;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .toggle__checkbox {
+    display: none;
+  }
+}
+
+@include respond-to-max("laptop") {
+  .products__section {
+    padding: 3rem 5% 10rem;
+    .products__title {
+      font-size: clamp(16px, 5.5vw, 30px);
+      text-align: center;
+      text-wrap: balance;
+    }
+    .products__container {
+      flex-direction: column;
+
+      overflow: hidden;
+      img {
+        object-fit: contain;
+      }
+    }
+
+    p {
+      max-height: 4.5em; /* Limita a 3 líneas */
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    .toggle__label {
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    /* Si el checkbox está marcado, mostramos el texto completo */
+    .toggle__checkbox:checked + p {
+      max-height: none;
+      -webkit-line-clamp: unset;
+    }
+
+    /* Cambiamos el texto del botón */
+    .toggle__checkbox:checked + p + .toggle__label::after {
+      content: " Ver menos";
+    }
+
+    .toggle__label::after {
+      content: " Ver más";
+    }
+  }
+}

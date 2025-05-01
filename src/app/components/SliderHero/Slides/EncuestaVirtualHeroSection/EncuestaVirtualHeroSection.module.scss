@@ -1,0 +1,13 @@
+@use "../BaseHeroSection" as *;
+@use "../../../../styles/base/mixins" as *;
+
+.hero {
+  .hero__content {
+    .hero__img {
+      height: 100%;
+      max-height: 600px;
+      object-fit: contain;
+      align-self: flex-end;
+    }
+  }
+}

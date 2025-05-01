@@ -1,0 +1,83 @@
+@use "../../../../styles/components/benefitsSection" as *;
+@use "../../../../styles/base/mixins" as *;
+
+.benefits__section {
+  position: relative;
+  z-index: 2;
+
+  .benefits__title {
+    font-size: 3rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      font-size: 1rem;
+
+      img {
+        width: 210px;
+      }
+    }
+
+    li:nth-child(2) img {
+      height: 170px;
+    }
+
+    li:nth-child(3) img {
+      width: 250px;
+    }
+  }
+}
+
+@include respond-to-max("laptop") {
+  .benefits__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15vw;
+
+    .benefits__title {
+      font-size: clamp(16px, 10vw, 80px);
+
+      @include respond-to-max("laptop") {
+        width: 90vw;
+        text-wrap: balance;
+        .hide__on__mobile {
+          display: none;
+        }
+      }
+    }
+
+    ul {
+      flex-direction: column;
+      li {
+        font-size: clamp(10px, 5vw, 32px);
+        flex-direction: row;
+
+        img {
+          width: 25vw;
+          height: 20vw;
+          max-width: 300px;
+          max-height: 300px;
+        }
+      }
+
+      li:nth-child(2) img {
+        height: 20vw;
+        width: 25vw;
+      }
+
+      li:nth-child(3) img {
+        width: auto;
+      }
+    }
+  }
+}

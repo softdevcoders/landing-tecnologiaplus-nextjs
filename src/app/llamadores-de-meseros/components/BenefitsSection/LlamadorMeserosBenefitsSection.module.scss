@@ -1,0 +1,72 @@
+@use "../../../styles/components/benefitsSection" as *;
+@use "../../../styles/base/mixins" as *;
+
+.video__benefits__container {
+  display: flex;
+  justify-content: center;
+  margin: -100px 3% 0;
+  gap: 4vw;
+
+  @include respond-to-max("desktop-lg") {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.video__section {
+  /*  video,
+  iframe,
+  .youtubeContainer {
+    width: 612px;
+    height: 344px !important;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+
+    @include respond-to-max("laptop") {
+      width: 90vw;
+      height: 50vw;
+      margin-top: 0;
+    }
+  } */
+}
+.benefits__section {
+  position: relative;
+  width: 650px;
+  padding: 2rem;
+  height: max-content;
+  z-index: 2;
+  display: flex;
+
+  margin: 0;
+
+  @include respond-to-max("laptop") {
+    width: 90vw;
+
+    margin-top: 0;
+  }
+
+  .benefits__title {
+    font-size: 3rem;
+    display: none;
+    @include respond-to-max("laptop") {
+      font-size: clamp(16px, 10vw, 80px);
+      display: inline-block;
+    }
+  }
+
+  ul {
+    li {
+      > div {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+        span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

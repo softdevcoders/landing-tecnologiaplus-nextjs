@@ -1,0 +1,129 @@
+@use "../../../../styles/components/heroSection" as *;
+@use "../../../../styles/base/mixins" as *;
+
+.hero {
+  .hero__content {
+    .hero__img {
+      height: 75vh;
+      max-width: none;
+      max-height: 700px;
+
+      @include respond-to-max("laptop") {
+        display: none;
+      }
+    }
+
+    .hero__img__mobile {
+      display: none;
+
+      @include respond-to-max("laptop") {
+        width: 80vw;
+        height: auto;
+        max-width: 500px;
+        display: block;
+      }
+    }
+
+    .hero__text {
+      margin-left: 0;
+
+      h1 {
+        font-size: 2.5rem;
+        span {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .hero__text__mobile {
+      display: none;
+
+      @include respond-to-max("laptop") {
+        align-self: start;
+
+        margin: 1.5rem 15px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          font-size: clamp(16px, 12vw, 100px);
+          padding: 0;
+          margin-bottom: 0.5rem;
+          text-wrap: balance;
+          text-align: center;
+          background: linear-gradient(
+            76deg,
+            #50b8f8 20%,
+            #1aa8f6 40%,
+            #9930f4 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+          font-weight: 900;
+          line-height: 1.1;
+          filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
+          -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
+
+          .hide__mobile {
+            display: none;
+          }
+        }
+
+        p {
+          font-size: clamp(16px, 4.5vw, 80px);
+          text-align: center;
+          font-weight: 400;
+          text-wrap: balance;
+          line-height: 1.4;
+          padding: 0 5vw;
+          margin-top: 1rem;
+          color: #fff;
+
+          margin: 0.5rem 0;
+
+          span {
+            font-size: clamp(16px, 7vw, 80px);
+            font-weight: 600;
+          }
+        }
+
+        .separador__text {
+          width: 60vw;
+          height: auto;
+        }
+
+        .hero__btn {
+          margin-bottom: 2rem;
+          margin-top: 2rem;
+          padding: 0.5rem 2rem;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to-max("laptop") {
+  .hero {
+    .hero__content {
+      .hero__text {
+        display: none;
+        h1 {
+          font-size: clamp(16px, 5.5vw, 30px);
+          text-align: center;
+
+          span {
+            font-size: clamp(14px, 3vw, 22px);
+            text-align: center;
+          }
+        }
+
+        p {
+          font-size: clamp(12px, 2.5vw, 20px);
+          text-align: center;
+        }
+      }
+    }
+  }
+}

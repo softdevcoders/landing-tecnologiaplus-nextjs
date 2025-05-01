@@ -1,0 +1,81 @@
+@use "../../styles/base/mixins" as *;
+
+.clients__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 3rem;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #606060;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: #606060;
+  }
+
+  .clients__container {
+    height: 150px;
+    width: 100%;
+    margin: 1rem 0;
+
+    display: flex;
+    gap: 4rem;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      background: linear-gradient(90deg, #ffffff 0, rgba(255, 255, 255, 0));
+      height: 112px;
+      width: 200px;
+      z-index: 2;
+    }
+
+    &::after {
+      right: -2px;
+      top: 0;
+      transform: rotate(180deg);
+    }
+
+    &::before {
+      left: -2px;
+      bottom: 0;
+      transform: rotate(0deg);
+    }
+
+    img {
+      height: 42px; /* Establece el alto fijo de 32px */
+      width: auto; /* Mantiene la proporción original del logo */
+      object-fit: contain;
+    }
+  }
+}
+
+@include respond-to-max("laptop") {
+  .clients__section {
+    padding: 3rem 5%;
+    h2 {
+      font-size: clamp(16px, 5vw, 30px);
+      text-align: center;
+    }
+    p {
+      font-size: clamp(16px, 4vw, 25px);
+      text-align: center;
+    }
+    .clients__container {
+      &::after,
+      &::before {
+        width: 50px;
+      }
+    }
+  }
+}

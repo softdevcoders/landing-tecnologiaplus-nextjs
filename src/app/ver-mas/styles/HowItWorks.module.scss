@@ -1,0 +1,89 @@
+@use "../../styles/base/mixins" as *;
+
+.HowItWorks__container {
+  padding: 2rem 0 4rem;
+  margin: 0 5%;
+  border-bottom: 1px #606060 solid;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2rem;
+    line-height: 1;
+
+    @include respond-to-max("laptop") {
+      font-size: clamp(16px, 5vw, 2rem);
+      text-align: center;
+      color: #606060;
+    }
+  }
+
+  .items__container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem 2rem;
+    margin: 0 auto;
+
+    @include respond-to-max("laptop") {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      flex-grow: 1;
+
+      height: auto;
+      img {
+        height: 100%;
+        width: 100%;
+        /* width: 500px; 
+        height: 420px; */
+        object-fit: contain;
+      }
+
+      p {
+        line-height: 1.2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #8828c8;
+        margin-top: -5%;
+        text-align: center;
+        flex-shrink: 0;
+        font-size: 0.8vw;
+        font-weight: 500;
+        color: #fff;
+        min-height: 60px;
+        min-width: 18vw;
+        width: max-content;
+        padding: 0.5% 6%;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+
+        @include respond-to-max("laptop") {
+          font-size: clamp(8px, 3.2vw, 2rem);
+          text-align: center;
+          padding: 5px 20px;
+          min-height: 10vw;
+
+          text-wrap: balance;
+          max-width: 80vw;
+
+          .hide__on__mobile {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

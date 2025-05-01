@@ -1,0 +1,35 @@
+@use "../../../../styles/components/benefitsSection" as *;
+@use "../../../../styles/base/mixins" as *;
+
+.benefits__section {
+  position: relative;
+  z-index: 2;
+
+  .benefits__title {
+    font-size: 3.5rem;
+
+    @include respond-to-max("laptop") {
+      font-size: clamp(16px, 10vw, 80px);
+    }
+  }
+
+  ul {
+    li {
+      @include respond-to-max("laptop") {
+        text-wrap: balance;
+        .hide__on__mobile {
+          display: none;
+        }
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+        span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

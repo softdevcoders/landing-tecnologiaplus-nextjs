@@ -1,0 +1,26 @@
+@use "../../../styles/ProductGallery.module" as *;
+
+.hero {
+  .container__products__alternatives {
+    .alternative__images {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .alternative__item {
+      border: 2px solid #fff;
+      cursor: pointer;
+      width: 90px !important;
+      height: 70px !important;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        object-fit: contain;
+        padding: 5px;
+      }
+    }
+  }
+}

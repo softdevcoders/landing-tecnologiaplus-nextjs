@@ -1,0 +1,184 @@
+@use "../../../styles/components/technicalDetails" as *;
+@use "../../../styles/base/mixins" as *;
+
+.technical__details {
+  padding: 6rem 5%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+
+  .technical__carousel__container {
+    background: #efedee;
+    border-radius: 50px;
+    position: relative;
+    width: 45%;
+    aspect-ratio: 4 / 3;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    padding: 4rem;
+
+    img {
+      padding: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .invisible {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .TechnicalDetails__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .technical__textContainer {
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #606060;
+        line-height: 1.2;
+      }
+
+      > p {
+        font-size: 2rem;
+        color: #606060;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .technical__info {
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: #606060;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      .container__colors {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .technical__circle__figure {
+        cursor: pointer;
+        height: 40px;
+        width: 40px;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background: #fff;
+
+        &.color__Azul {
+          background: #00aec5;
+        }
+
+        &.color__Amarillo {
+          background: #f3ca03;
+        }
+
+        &.color__Verde {
+          background: #00ba8a;
+        }
+
+        &.color__Rosa {
+          background: #ff3564;
+        }
+
+        &.color__Blanco {
+          background: #fff;
+          border: #606060 1px solid;
+        }
+
+        &.selected {
+          outline: 4px solid #0b71e4;
+          outline-offset: 3px;
+        }
+      }
+    }
+
+    .technical__details__btn {
+      margin-top: 2rem;
+      cursor: pointer;
+      width: max-content;
+      font-weight: 600;
+      background: #be00ff;
+      color: #fff;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      -webkit-border-radius: 2rem;
+      -moz-border-radius: 2rem;
+      -ms-border-radius: 2rem;
+      -o-border-radius: 2rem;
+    }
+  }
+}
+
+@include respond-to-max("laptop") {
+  .technical__details {
+    padding: 3rem 5%;
+    gap: 2rem;
+    .technical__carousel__container {
+      width: 100%;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      img {
+        padding: 15px;
+      }
+    }
+
+    .TechnicalDetails__container {
+      .technical__textContainer {
+        h2 {
+          font-size: clamp(16px, 5vw, 30px);
+          text-align: center;
+        }
+
+        > p {
+          font-size: clamp(16px, 4.5vw, 30px);
+          text-align: center;
+        }
+      }
+
+      .technical__info {
+        h3 {
+          font-size: clamp(16px, 5vw, 30px);
+          text-align: center;
+        }
+
+        ul {
+          li:nth-child(4) {
+            img {
+              height: 18vw;
+              width: 14vw;
+            }
+          }
+        }
+      }
+
+      .technical__info:nth-child(2) {
+        display: flex;
+      }
+    }
+  }
+}

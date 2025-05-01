@@ -1,0 +1,16 @@
+@use "@/app/ver-mas/styles/HowItWorks.module.scss" as *;
+@use "@/app/styles/base/mixins" as *;
+
+.HowItWorks__container {
+  .items__container {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include respond-to-max("laptop") {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}

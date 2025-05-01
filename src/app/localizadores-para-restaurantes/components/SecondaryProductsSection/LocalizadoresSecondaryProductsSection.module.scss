@@ -1,0 +1,206 @@
+@use "../../../styles/components/productsSection" as *;
+@use "../../../styles/base/mixins" as *;
+
+.products__section {
+  background: #fff;
+  margin-top: 4rem;
+  padding: 3rem;
+
+  @include respond-to-max("laptop") {
+    padding-bottom: 4rem;
+  }
+
+  .products__container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #606060;
+      margin: 2rem 0;
+
+      @include respond-to-max("laptop") {
+        font-size: clamp(16px, 5vw, 30px);
+        text-align: center;
+      }
+    }
+    .products__card__container {
+      display: flex;
+      gap: 4rem;
+
+      @include respond-to-max("laptop") {
+        flex-direction: column;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        gap: 1rem;
+        img {
+          height: 200px;
+          width: auto;
+          object-fit: contain;
+          margin-bottom: 1rem;
+        }
+
+        h3 {
+          color: #606060;
+          font-size: 1.5rem;
+          line-height: 1.2;
+          text-align: center;
+        }
+        p {
+          color: #6146a6;
+          font-weight: 600;
+        }
+
+        .card__btn {
+          cursor: pointer;
+          font-weight: 600;
+
+          background: #6f3bb4;
+          color: #fff;
+          font-size: 1rem;
+          padding: 0.2rem 1rem;
+          border-radius: 2rem;
+          -webkit-border-radius: 2rem;
+          -moz-border-radius: 2rem;
+          -ms-border-radius: 2rem;
+          -o-border-radius: 2rem;
+        }
+      }
+
+      .card__video {
+        @include respond-to-max("laptop") {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+        }
+        iframe,
+        > div {
+          width: 25vw;
+          height: auto;
+          aspect-ratio: 16 / 9;
+          border-radius: 12px;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          -ms-border-radius: 12px;
+          -o-border-radius: 12px;
+
+          @include respond-to-max("laptop") {
+            width: 80vw;
+          }
+        }
+
+        p {
+          font-size: 1rem;
+          font-weight: 700;
+          max-width: 400px;
+          margin: 0 auto 20px;
+          text-wrap: balance;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+
+    .products__card__container__variant {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7rem;
+
+      @include respond-to-max("laptop") {
+        flex-direction: column;
+      }
+
+      img.separator {
+        @include respond-to-max("laptop") {
+          display: none;
+        }
+      }
+
+      .card {
+        position: relative;
+        flex-direction: row;
+        
+        @include respond-to-max("laptop") {
+          display: flex;
+          flex-direction: column;
+        }
+
+        > div {
+          position: absolute;
+          top: 50px;
+          left: -45px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include respond-to-max("laptop") {
+            position: static;
+            order: 2;
+          }
+        }
+
+        &:nth-child(3) > div {
+          position: absolute;
+          top: 65px;
+          left: -45px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include respond-to-max("laptop") {
+            position: static;
+            order: 2;
+          }
+        }
+
+        img {
+          height: 360px;
+          @include respond-to-max("laptop") {
+            order: 1;
+            height: auto;
+            width: 80vw;
+          }
+        }
+
+        &:nth-child(1) img {
+          margin-top: 55px;
+          margin-left: 25px;
+          @include respond-to-max("laptop") {
+            margin: 0;
+          }
+        }
+
+        &:nth-child(3) img {
+          height: 450px;
+          @include respond-to-max("laptop") {
+            height: auto;
+          }
+        }
+
+        .card__btn {
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}
+
+.bg__section {
+  background-color: #f3f3f3;
+}
+
+.video__section {
+  margin-top: 0;
+  padding-bottom: 3rem;
+}

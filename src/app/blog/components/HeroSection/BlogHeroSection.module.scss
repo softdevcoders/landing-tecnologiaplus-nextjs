@@ -1,0 +1,44 @@
+.hero__content {
+  background-image: url("https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349921/jlxxsnlercoj0nihz4am_udppso.webp");
+  background-size: cover;
+  background-position: center;
+  height: auto;
+
+  padding: 6rem;
+
+  .blog__title {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .neon__effect {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+    font-size: 8rem;
+    font-weight: normal;
+    mix-blend-mode: screen;
+    text-shadow: 0 0 4px #00ffff, 0 0 6px #00ffff, 0 0 8px #00ffff, 0 0 15px,
+      0 0 23px, 0 0 36px, 0 0 42px #00ffff, 0 0 67px;
+  }
+
+  > p {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 400;
+
+    text-align: center;
+
+    > span {
+      font-weight: 600;
+    }
+  }
+}

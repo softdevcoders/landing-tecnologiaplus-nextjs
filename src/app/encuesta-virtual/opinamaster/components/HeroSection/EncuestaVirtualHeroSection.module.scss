@@ -1,0 +1,105 @@
+@use "../../../../styles/components/heroSection" as *;
+@use "../../../../styles/base/mixins" as *;
+
+.hero {
+  .hero__content {
+    .hero__text {
+      p {
+        font-size: 2.5rem;
+        color: #fff;
+        margin-bottom: 2rem;
+        font-weight: 500;
+      }
+
+      @include respond-to-max("laptop") {
+        display: none;
+      }
+    }
+
+    .hero__img {
+      height: 85%;
+      align-self: flex-end;
+      max-width: 800px;
+      @include respond-to-max("laptop") {
+        display: none;
+      }
+    }
+    .hero__img__mobile {
+      display: none;
+
+      @include respond-to-max("laptop") {
+        display: block;
+        width: 70vw;
+        height: auto;
+        max-width: 500px;
+      }
+    }
+  }
+
+  .hero__text__mobile {
+    display: none;
+
+    @include respond-to-max("laptop") {
+      align-self: start;
+
+      margin: 0.5rem 15px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        font-size: clamp(16px, 12vw, 100px);
+        padding: 0 10vw;
+        margin-bottom: 0.5rem;
+        text-wrap: balance;
+        text-align: center;
+        background: linear-gradient(
+          to right,
+          #50b8f8 35%,
+          #1ca5f6 50%,
+          #9930f4 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-weight: 900;
+        line-height: 1.1;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
+        -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
+
+        .hide__mobile {
+          display: none;
+        }
+      }
+
+      p {
+        font-size: clamp(16px, 6vw, 80px);
+        text-align: center;
+        font-weight: 700;
+        text-wrap: balance;
+        line-height: 1.4;
+        padding: 0 0;
+        margin-top: 1rem;
+        color: #fff;
+
+        margin: 0.5rem 0;
+
+        span {
+          font-size: clamp(16px, 7vw, 80px);
+          font-weight: 700;
+        }
+      }
+
+      .separador__text {
+        width: 60vw;
+        height: auto;
+      }
+
+      .hero__btn {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        padding: 0.5rem 2rem;
+      }
+    }
+  }
+}
