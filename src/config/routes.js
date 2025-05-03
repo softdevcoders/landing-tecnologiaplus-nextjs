@@ -1,0 +1,206 @@
+export const routes = {
+  home: {
+    label: "Inicio",
+    url: "/",
+  },
+  blog: {
+    label: "Blog",
+    url: "/blog",
+  },
+  contact: {
+    label: "Contacto",
+    url: "/contacto",
+  },
+  contact_media: {
+    facebook: {
+      url: "https://www.facebook.com/tecnologiapluscolombia",
+      label: "Facebook",
+    },
+    instagram: {
+      label: "Instagram",
+      url: "https://www.instagram.com/tecnologiapluscolombia",
+    },
+    youtube: {
+      label: "Youtube",
+      url: "https://www.youtube.com/channel/UCPho92vfQwC24X8Y3eI8Dvg",
+    },
+    phones: [
+      {
+        label: "316 468 2034",
+        url: "tel:+573164682034",
+      },
+      {
+        label: "(+57) 322 734 79 71",
+        url: "tel:+573227347971",
+      }
+    ],
+    emails: [
+      {
+        label: "ventas@tecnologiaplus.com",
+        url: "mailto:ventas@tecnologiaplus.com"
+      }
+    ]
+  },
+  landings: {
+    localizadoresParaRestaurantes: {
+      url: "/localizadores-para-restaurantes",
+      label: "Localizadores para restaurantes",
+      children: [
+        {
+          label: "REC V3",
+          url: "/localizadores-para-restaurantes/localizadores-rec-v3",
+        },
+        {
+          label: "REC C2",
+          url: "/localizadores-para-restaurantes/localizadores-cir-c2"
+        }
+      ]
+    },
+    llamadoresDeMeseros: {
+      url: "/llamadores-de-meseros",
+      label: "Llamadores de meseros",
+      children: [
+        {
+          label: "Llamador de meseros E2-N con tecla pagar",
+          url: "/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar",
+        },
+        {
+          label: "Llamador de meseros E2-B",
+          url: "/llamadores-de-meseros/llamador-de-meseros-e2-b",
+        },
+        {
+          label: "Hablador de mesa",
+          url: "/llamadores-de-meseros/hablador-de-mesa",
+        },
+        {
+          label: "Control numérico",
+          url: "/llamadores-de-meseros/control-numerico",
+        },
+        {
+          label: "Reloj receptor de llamados",
+          url: "/llamadores-de-meseros/reloj-receptor-de-llamados",
+        },
+        {
+          label: "Pantalla T1-B",
+          url: "/llamadores-de-meseros/pantalla-t1-b",
+        },
+        {
+          label: "Pantalla T6",
+          url: "/llamadores-de-meseros/pantalla-t6",
+        }
+      ]
+    },
+    turneroTurnoexpress: {
+      url: "/turnero-turnoexpress",
+      label: "Turnero Turnoexpress",
+      children: [
+        {
+          label: "Turnero T3 módulo turno",
+          url: "/turnero-turnoexpress/turnero-t3-modulo-turno",
+        },
+        {
+          label: "Turnero T3 con logo",
+          url: "/turnero-turnoexpress/turnero-t3-con-logo",
+        },
+        {
+          label: "Turnero T1-B",
+          url: "/turnero-turnoexpress/turnero-t1-b",
+        },
+        {
+          label: "Turnero T1-N",
+          url: "/turnero-turnoexpress/turnero-t1-n",
+        },
+        {
+          label: "Turnero fila única supermercados",
+          url: "/turnero-turnoexpress/turnero-fila-unica-supermercados",
+        },
+        {
+          label: "Turnero Transformer",
+          url: "/turnero-turnoexpress/turnero-transformer",
+        }
+      ]
+    },
+    sistemasDeTurnosTurnomaster: {
+      url: "/sistema-de-turnos/turnomaster",
+      label: "Sistema de turnos",
+    },
+    rollosDeFichosParaTurnos: {
+      url: "/rollos-de-fichos-para-turnos",
+      label: "Rollos de fichos para turnos",
+      children: [
+        {
+          label: "Rollos de turnos",
+          url: "/rollos-de-fichos-para-turnos/rollos-de-turnos",
+        }
+      ]
+    },
+    rollosDePapelTermico: {
+      url: "/rollos-de-papel-termico",
+      label: "Rollos de papel térmico",
+      children: [
+        {
+          label: "Rollos térmicos",
+          url: "/rollos-de-papel-termico/rollos-termicos",
+        }
+      ]
+    },
+    dispensadorDeTickets: {
+      url: "/dispensador-de-tickets",
+      label: "Dispensador de tickets",
+      children: [
+        {
+          label: "Dispensador de tickets caracol",
+          url: "/dispensador-de-tickets/dispensador-de-tickets-caracol",
+        }
+      ]
+    },
+    llamadoDeEnfermeriaCuidamaster: {
+      url: "/llamado-de-enfermeria-cuidamaster",
+      label: "Llamado de enfermería Cuidamaster",
+      children: [
+        {
+          label: "Alarma de luz",
+          url: "/llamado-de-enfermeria-cuidamaster/alarma-de-luz",
+        },
+        {
+          label: "Llamador E2 blanco",
+          url: "/llamado-de-enfermeria-cuidamaster/llamador-e2-blanco",
+        },
+        {
+          label: "Llamador E1 para cuello",
+          url: "/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello",
+        },
+        {
+          label: "Llamador EX1",
+          url: "/llamado-de-enfermeria-cuidamaster/llamador-ex1",
+        },
+        {
+          label: "Pantalla T1-B",
+          url: "/llamado-de-enfermeria-cuidamaster/pantalla-t1-b",
+        },
+        {
+          label: "Pantalla T6",
+          url: "/llamado-de-enfermeria-cuidamaster/pantalla-t6",
+        },
+        {
+          label: "Reloj receptor de llamados",
+          url: "/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados",
+        }
+      ]
+    },
+    calificadorDeServicioAlClienteOpinamaster: {
+      url: "/calificador-de-servicio-al-cliente-opinamaster",
+      label: "Calificador de servicio al cliente Opinamaster",
+      children: [
+        {
+          label: "Calificador de servicio",
+          url: "/calificador-de-servicio-al-cliente-opinamaster/calificador-de-servicio",
+        },
+        {
+          label: "Aviso de pared para calificar servicio",
+          url: "/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio",
+        }
+      ]
+    }
+  }
+};

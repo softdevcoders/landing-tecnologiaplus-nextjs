@@ -1,8 +1,8 @@
-import Header from "@/app/components/Header/Header";
+import Header from "@/components/layout/header/Header";
 import altStyles from "../../../components/Header/HeaderAlt.module.scss";
-import ContactForm from "@/app/components/ContactForm/ContactForm";
-import WppBtn from "@/app/components/WppBtn/WppBtn";
-import Footer from "@/app/components/Footer/Footer";
+import ContactForm from "@/_app/components/ContactForm/ContactForm";
+import WppBtn from "@/_app/components/WppBtn/WppBtn";
+import Footer from "@/_app/components/Footer/Footer";
 import Articulo from "./Articulo";
 
 export default function BlogPostArticulo() {
