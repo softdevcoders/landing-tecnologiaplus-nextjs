@@ -13,7 +13,7 @@ function HomeBenefitsSection() {
         <ImageCloudinary
           width={100}
           height={100}
-          loading="lazy"
+          
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738960600/texto_2x-8_sklhxz.webp"
           alt="imagen que dice Nuestros clientes"
           className={style.benefits__subtitle}
@@ -24,7 +24,7 @@ function HomeBenefitsSection() {
           <ImageCloudinary
             width={100}
             height={100}
-            loading="lazy"
+            
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738944984/icono_1_2x-8_3_fvtagl.webp"
             alt="icono de auriculares"
           />
@@ -35,7 +35,7 @@ function HomeBenefitsSection() {
           <ImageCloudinary
             width={100}
             height={100}
-            loading="lazy"
+            
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738944983/icono_2_2x-8_3_zzggy6.webp"
             alt="icono número 10 con signo de +"
           />
@@ -47,7 +47,7 @@ function HomeBenefitsSection() {
           <ImageCloudinary
             width={100}
             height={100}
-            loading="lazy"
+            
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738944981/icono_3_2x-8_3_emxtsn.webp"
             alt="icono de mantenimiento"
           />
