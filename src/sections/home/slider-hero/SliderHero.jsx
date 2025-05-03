@@ -1,6 +1,6 @@
 import styles from "./SliderHero.module.scss";
 import { SLIDER_HERO_ITEMS } from "./slides";
-import SliderHeroClient from "./SliderHeroClient"; // ya es client-only
+import SliderHeroClient from "./SliderHeroClient";
 
 export default function SliderHero() {
   return (
