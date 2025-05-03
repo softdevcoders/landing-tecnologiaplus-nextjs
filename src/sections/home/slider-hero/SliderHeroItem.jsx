@@ -26,6 +26,7 @@ const SliderHeroItem = ({ title, image, description, button }) => {
           alt={image.alt}
           width={350}
           height={350}
+          priority
         />
       </div>
 
