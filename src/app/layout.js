@@ -1,9 +1,8 @@
 // Styles
-import "@/styles/critical.scss";
+// import "@/styles/critical.scss";
 import "@/styles/main.scss";
 
 // Components
-import SchemaOrg from "../components/SchemaOrg";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
 export const metadata = {
@@ -86,22 +85,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className="font-montserrat">
       <head>
-        {/* Essential resource hints */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://tecnologiaplus.com" />
-        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://api.emailjs.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />
-
-        {/* Font links using CDN - ensure proper font loading */}
-        <link  rel="stylesheet" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;900&family=Bebas+Neue&display=swap" />
-
-        {/* <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;900&family=Bebas+Neue&display=swap" />
+        {/* <link
+          rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;900&family=Bebas+Neue&display=swap"
+          onload="this.onload=null;this.rel='stylesheet'"
+        />
         <noscript>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;900&family=Bebas+Neue&display=swap" />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;900&family=Bebas+Neue&display=swap"
+        />
         </noscript> */}
-
         {/* Favicon explicit links */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -132,8 +127,6 @@ export default function RootLayout({ children }) {
 
         {/* Fix referrer policy for cross-origin requests */}
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-        <SchemaOrg />
       </head>
       <body>
         <LayoutWrapper>
