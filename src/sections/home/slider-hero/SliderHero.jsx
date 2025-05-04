@@ -4,7 +4,7 @@ import SliderHeroClient from "./SliderHeroClient";
 
 export default function SliderHero() {
   return (
-    <div className={styles.swiper__container}>
+    <div className={styles.slider__container}>
       <SliderHeroClient items={SLIDER_HERO_ITEMS} styles={styles} />
     </div>
   );
