@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className="font-montserrat">
       <head>
-        {/* <link
+        <link
           rel="preload"
           as="style"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;900&family=Bebas+Neue&display=swap"
@@ -96,7 +96,7 @@ export default function RootLayout({ children }) {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;900&family=Bebas+Neue&display=swap"
         />
-        </noscript> */}
+        </noscript>
         {/* Favicon explicit links */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

@@ -1,5 +1,4 @@
 import { routes } from "@/config/routes";
-import { priority } from "../../../../next-sitemap.config";
 
 export const SLIDER_HERO_ITEMS = [
   {
