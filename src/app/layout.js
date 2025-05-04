@@ -106,27 +106,6 @@ export default function RootLayout({ children }) {
 
         {/* Core meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        {/* Dimension hints for critical LCP images */}
-        <meta name="thumbnail:width" content="375" />
-        <meta name="thumbnail:height" content="400" />
-
-        {/* Enhanced security headers */}
-        <meta
-          httpEquiv="Feature-Policy"
-          content="autoplay 'none'; camera 'none'; microphone 'none'; geolocation 'none'"
-        />
-        <meta
-          httpEquiv="Permissions-Policy"
-          content="interest-cohort=(), browsing-topics=(), attribution-reporting=()"
-        />
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https://res.cloudinary.com https://api.emailjs.com; img-src 'self' data: https: https://res.cloudinary.com https://i.ytimg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src data: 'self' https://fonts.gstatic.com; frame-src https://www.youtube-nocookie.com https://www.youtube.com; object-src 'none'; block-all-mixed-content; base-uri 'self'"
-        />
-
-        {/* Fix referrer policy for cross-origin requests */}
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
       </head>
       <body>
         <LayoutWrapper>
