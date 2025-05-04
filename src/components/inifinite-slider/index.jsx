@@ -1,5 +1,5 @@
-import ImageCloudinary from '../ui/image-cloudinary';
 import styles from './infinite-slider.module.scss';
+import ImageCloudinary from '../ui/image-cloudinary';
 
 export default function InfiniteSlider({ logos }) {
   const duplicated = [...logos, ...logos];
