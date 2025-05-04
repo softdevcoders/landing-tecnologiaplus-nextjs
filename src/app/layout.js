@@ -6,6 +6,14 @@ import "@/styles/main.scss";
 import SchemaOrg from "../components/SchemaOrg";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
+import { Montserrat } from 'next/font/google'
+ 
+const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 export const metadata = {
   title: {
     template: "%s | Tecnología Plus",
@@ -84,7 +92,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className="font-montserrat">
+    <html lang="es" className={montserrat.className}>
       <head>
         {/* Essential resource hints */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -95,7 +103,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />
 
         {/* Font links using CDN - ensure proper font loading */}
-        <link  rel="stylesheet" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;900&family=Bebas+Neue&display=swap" />
+        {/* <link  rel="stylesheet" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;900&family=Bebas+Neue&display=swap" /> */}
 
         {/* <link
           rel="preload"
