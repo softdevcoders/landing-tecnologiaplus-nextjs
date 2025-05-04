@@ -1,12 +1,8 @@
-"use client";
-import React from "react";
 import style from "./HomeClientsSection.module.scss";
-import { useLogos } from "../../../context/LogosContext";
-
-import InfiniteSlider2 from "@/_app/components/sliders/InfiniteSlider2";
+import InfiniteSlider from "@/components/inifinite-slider";
+import { logosHome } from "@/config/client-logos";
 
 function HomeClientsSection() {
-  const { logosHome } = useLogos();
 
   return (
     <section className={style.clients__section}>
@@ -16,11 +12,7 @@ function HomeClientsSection() {
         cliente.
       </p>
       <div className={style.clients__container}>
-        <InfiniteSlider2 
-          logos={logosHome} 
-          speedPreset="slow"
-          stopOnFocus={false}
-        />
+        <InfiniteSlider logos={logosHome}/>
       </div>
     </section>
   );

@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import SliderHeroItem from "./SliderHeroItem";
+import ArrowLeft from "@/components/ui/icons/arrow-left";
+import ArrowRight from "@/components/ui/icons/arrow-right";
 
 export default function SliderHero({ styles, items }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -25,10 +27,10 @@ export default function SliderHero({ styles, items }) {
       </div>
 
       <button className={styles.prev} onClick={() => goToSlide(activeIndex - 1)}>
-        &#10094;
+        <ArrowLeft />
       </button>
       <button className={styles.next} onClick={() => goToSlide(activeIndex + 1)}>
-        &#10095;
+        <ArrowRight />
       </button>
 
       <div className={styles.bullets}>

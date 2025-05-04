@@ -1,4 +1,5 @@
 import HomeBenefitsSection from "@/sections/home/BenefitsSection/HomeBenefitsSection";
+import HomeClientsSection from "@/sections/home/ClientsSection/HomeClientsSection";
 // import HomeClientsSection from "@/sections/home/ClientsSection/HomeClientsSection";
 import HomeProductsSection from "@/sections/home/ProductsSection/HomeProductsSection";
 import HomeRecentPostsSection from "@/sections/home/RecentPost/HomeRecentPostsSection";
@@ -38,7 +39,7 @@ export default function Home() {
   return (
     <>
       <SliderHero />
-      {/* <HomeClientsSection /> */}
+      <HomeClientsSection />
       <HomeProductsSection />
       <VideoSection />
       <HomeBenefitsSection />
