@@ -1,9 +1,9 @@
-import LayoutWrapperHeaderDark from "@/components/layout/LayoutWrapperHeaderDark"
+import LayoutWrapperHeaderLight from "@/components/layout/LayoutWrapperHeaderLight"
 
 const Layout = ({ children }) => (
-  <LayoutWrapperHeaderDark>
+  <LayoutWrapperHeaderLight>
     {children}
-  </LayoutWrapperHeaderDark>
+  </LayoutWrapperHeaderLight>
 )
 
 export default Layout
