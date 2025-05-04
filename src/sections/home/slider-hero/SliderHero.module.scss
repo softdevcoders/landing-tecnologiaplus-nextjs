@@ -1,10 +1,8 @@
-@use "@/styles/base/mixins" as *;
-
-
 .slider__container {  
-  background-image: url("https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349921/jlxxsnlercoj0nihz4am_udppso.webp");
-  background-size: cover;
-  background-position: center;
+  // background-image: url("https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349921/jlxxsnlercoj0nihz4am_udppso.webp");
+  // background-size: cover;
+  // background-position: center;
+  position: relative;
   height: calc(100vh - 70px);
 
   .slider {
