@@ -12,8 +12,8 @@ export default function InfiniteSlider({ logos }) {
             <ImageCloudinary
               src={logo.src}
               alt={logo.alt}
-              width={300}
-              height={300}
+              width={150}
+              height={150}
               sizes="(max-width: 640px) 80vw, 
               (max-width: 768px) 60vw, 
               (max-width: 1024px) 40vw, 
