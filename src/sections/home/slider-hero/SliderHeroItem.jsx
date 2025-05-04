@@ -2,7 +2,7 @@ import { CldImage } from "next-cloudinary";
 import styles from "./SliderHero.module.scss";
 import Link from "next/link";
 
-const SliderHeroItem = ({ title, image, description, button }) => {
+const SliderHeroItem = ({ title, image, description, button, priority }) => {
   return (
     <div className={styles.slider__hero__content}>
       {/* Image Section */}
@@ -13,7 +13,7 @@ const SliderHeroItem = ({ title, image, description, button }) => {
           alt={image.alt}
           width={350}
           height={350}
-          priority
+          {...priority && { priority: true } }
         />
       </div>
 

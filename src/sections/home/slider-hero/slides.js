@@ -1,4 +1,5 @@
 import { routes } from "@/config/routes";
+import { priority } from "../../../../next-sitemap.config";
 
 export const SLIDER_HERO_ITEMS = [
   {
@@ -12,6 +13,7 @@ export const SLIDER_HERO_ITEMS = [
       href: routes.landings.localizadoresParaRestaurantes.url,
       text: "Ver más",
     },
+    priority: true
   },
   {
     title: "Llamador de meseros",
