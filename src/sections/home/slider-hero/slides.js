@@ -12,7 +12,8 @@ export const SLIDER_HERO_ITEMS = [
       href: routes.landings.localizadoresParaRestaurantes.url,
       text: "Ver más",
     },
-    priority: true
+    priority: true,
+    fetchPriority: "high"
   },
   {
     title: "Llamador de meseros",

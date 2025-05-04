@@ -14,7 +14,8 @@ const SliderHeroItem = ({ title, image, description, button, priority }) => {
           width={350}
           height={350}
           sizes="(min-width: 1024px) 25vw, 100px"
-          {...priority && { priority: true } }
+          {...priority && { priority } }
+          {...fetchPriority && { fetchPriority } }
         />
       </div>
 
