@@ -2,19 +2,6 @@ import { CldImage } from "next-cloudinary";
 import styles from "./SliderHero.module.scss";
 import Link from "next/link";
 
-/**
- * SliderHeroItem Component
- * 
- * Props:
- * - title (string): The title to display in the slider item.
- * - image (object): The image object containing:
- *   - src (string): The source URL of the image.
- *   - alt (string): The alt text for the image.
- * - description (string): The description text to display.
- * - button (object): The button object containing:
- *   - href (string): The URL the button links to.
- *   - text (string): The text to display on the button.
- */
 const SliderHeroItem = ({ title, image, description, button }) => {
   return (
     <div className={styles.slider__hero__content}>

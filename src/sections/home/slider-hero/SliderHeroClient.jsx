@@ -1,29 +1,45 @@
 'use client';
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { useState } from "react";
 import SliderHeroItem from "./SliderHeroItem";
 
-export default function SliderHeroClient({ items, styles }) {
+export default function SliderHero({ styles, items }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const goToSlide = (index) => {
+    const total = items.length;
+    setActiveIndex((index + total) % total);
+  };
+
   return (
-    <Swiper
-      className={styles.swiper__root}
-      spaceBetween={50}
-      slidesPerView={1}
-      autoplay={false}
-      pagination={{ clickable: true }}
-      navigation={true}
-      loop={false}
-      modules={[Navigation, Pagination, Autoplay]}
-    >
-      {items.map((item, index) => (
-        <SwiperSlide key={index}>
-          <SliderHeroItem {...item} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className={styles.slider}>
+      <div className={styles.slides} style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className={`${styles.slide} ${index === activeIndex ? styles.active : ''}`}
+          >
+            <SliderHeroItem {...item} />
+          </div>
+        ))}
+      </div>
+
+      <button className={styles.prev} onClick={() => goToSlide(activeIndex - 1)}>
+        &#10094;
+      </button>
+      <button className={styles.next} onClick={() => goToSlide(activeIndex + 1)}>
+        &#10095;
+      </button>
+
+      <div className={styles.bullets}>
+        {items.map((_, index) => (
+          <span
+            key={index}
+            className={`${styles.bullet} ${index === activeIndex ? styles.active : ''}`}
+            onClick={() => goToSlide(index)}
+          ></span>
+        ))}
+      </div>
+    </div>
   );
 }
