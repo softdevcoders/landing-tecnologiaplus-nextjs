@@ -1,5 +1,8 @@
+import Link from "next/link";
 import style from "./LocalizadoresSecondaryProductsSection.module.scss";
 import YouTubePlayer from "@/components/YouTubePlayer";
+import { routes } from "@/config/routes";
+import ImageCloudinary from "@/components/ui/image-cloudinary";
 
 function LocalizadoresSecondaryProductsSection() {
   return (
@@ -12,39 +15,42 @@ function LocalizadoresSecondaryProductsSection() {
             <div className={style.card}>
               <div>
                 <h3>REC V3</h3>
-                <a
+                <Link
                   className={style.card__btn}
-                  href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/localizadores-para-restaurantes/localizadores-rec-v3"
+                  href={routes.landings.localizadoresParaRestaurantes.children.rec_v3.url}
                 >
                   Ver más
-                </a>
+                </Link>
                 <p>2.595 vendidos</p>
               </div>
-              <img
-                loading="lazy"
+              <ImageCloudinary
+                width={480}
+                height={360}
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738855044/rec_v3_1_2x-8_ctzrqp.webp"
                 alt="Localizador para restaurantes REC V3 junto a su base de carga"
               />
             </div>
-            <img
+            <ImageCloudinary
+              width={5}
+              height={350}
               className={style.separator}
-              loading="lazy"
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738851946/linea_2x-8_n80wv9.webp"
               alt="Separador"
             />
             <div className={style.card}>
               <div>
                 <h3>CIR C2</h3>
-                <a
+                <Link
                   className={style.card__btn}
-                  href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/localizadores-para-restaurantes/localizadores-cir-c2"
+                  href={routes.landings.localizadoresParaRestaurantes.children.rec_c2.url}
                 >
                   Ver más
-                </a>
+                </Link>
                 <p>1.630 vendidos</p>
               </div>
-              <img
-                loading="lazy"
+              <ImageCloudinary
+                width={480}
+                height={360}
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738851948/cir_c2_1_2x-8_lb8ufb.webp"
                 alt="Localizadores para clientes CIR C2 junto a su base de carga"
               />

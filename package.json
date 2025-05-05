@@ -28,6 +28,7 @@
     "react-infinite-logo-slider": "^1.1.4",
     "sass": "^1.84.0",
     "styled-jsx": "^5.1.6",
+    "swiper": "^11.2.6",
     "zod": "^3.24.3"
   },
   "devDependencies": {

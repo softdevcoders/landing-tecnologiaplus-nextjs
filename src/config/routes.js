@@ -45,16 +45,16 @@ export const routes = {
     localizadoresParaRestaurantes: {
       url: "/localizadores-para-restaurantes",
       label: "Localizadores para restaurantes",
-      children: [
-        {
+      children: {
+        rec_v3: {
           label: "REC V3",
           url: "/localizadores-para-restaurantes/localizadores-rec-v3",
         },
-        {
+        rec_c2: {
           label: "REC C2",
           url: "/localizadores-para-restaurantes/localizadores-cir-c2"
         }
-      ]
+      }
     },
     llamadoresDeMeseros: {
       url: "/llamadores-de-meseros",

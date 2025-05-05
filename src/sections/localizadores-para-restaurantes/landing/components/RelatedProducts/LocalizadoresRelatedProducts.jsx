@@ -6,6 +6,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import style from "./LocalizadoresRelatedProducts.module.scss";
+import ImageCloudinary from "@/components/ui/image-cloudinary";
+import { routes } from "@/config/routes";
 
 function LocalizadoresRelatedProducts({ titleClassName = "" }) {
   const products = [
@@ -14,21 +16,21 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
       description: "Organiza y mejora el servicio.",
       img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745436638/Frame_1_35_vku1gs_746c0e.webp",
       sold: "8.527 vendidos",
-      link: "http://landing-tecnologiaplus-nextjs-dev.vercel.app/rollos-de-fichos-para-turnos",
+      link: routes.landings.rollosDeFichosParaTurnos.url,
     },
     {
       name: "TurnoExpress",
       description: "Rapidez y agilidad para tus filas.",
       img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350028/TurnoExpress_2x-8_ri7zqh_xjz8bw.webp",
       sold: "692 vendidos",
-      link: "https://landing-tecnologiaplus-nextjs-dev.vercel.app/turnero/turnoexpress",
+      link: routes.landings.turneroTurnoexpress.url,
     },
     {
       name: "TurnoMaster",
       description: "Digitaliza la gestión de turnos.",
       img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350030/TurnoMaster_2x-8_stvupu_tvjv5q.webp",
       sold: "194 vendidos",
-      link: "http://landing-tecnologiaplus-nextjs-dev.vercel.app/sistema-de-turnos/turnomaster",
+      link: routes.landings.sistemasDeTurnosTurnomaster.url,
       className: style.turnomaster__card,
     },
   ];
@@ -68,8 +70,9 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
                       <h3>{product.name}</h3>
                       <p>{product.description}</p>
                     </div>
-                    <img
-                      loading="lazy"
+                    <ImageCloudinary
+                      width={320}
+                      height={230}
                       src={product.img}
                       alt={`imagen de ${product.name}`}
                     />
@@ -87,32 +90,36 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
       <div className={style.related__products__specs}>
         <ul>
           <li>
-            <img
-              loading="lazy"
+            <ImageCloudinary
+              width={320}
+              height={230}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349925/xcbtnf1wh1en4taujsdx_avnfkj.webp"
               alt="icono pulgar arriba"
             />
             <p>Precios Justos</p>
           </li>
           <li>
-            <img
-              loading="lazy"
+            <ImageCloudinary
+              width={320}
+              height={230}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349925/zpyfcqvsxo6wdubn2kdu_iuw7tl.webp"
               alt="icono de seguridad"
             />
             <p>Protección al comprador</p>
           </li>
           <li>
-            <img
-              loading="lazy"
+            <ImageCloudinary
+              width={320}
+              height={230}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349921/jg3stajnopybox4xxdkd_favvxk.webp"
               alt="icono de excelencia"
             />
             <p>Garantía superior</p>
           </li>
           <li>
-            <img
-              loading="lazy"
+            <ImageCloudinary
+              width={320}
+              height={230}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349925/ynuxn64wkw3nkqxl4tvo_lwqzi0.webp"
               alt="icono de Envíos en Colombia y Latinoamérica"
             />

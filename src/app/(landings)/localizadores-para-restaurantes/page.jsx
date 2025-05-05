@@ -4,7 +4,7 @@ import LocalizadoresClientsSection from "@/sections/localizadores-para-restauran
 import LocalizadoresHeroSection from "@/sections/localizadores-para-restaurantes/landing/components/HeroSection/LocalizadoresHeroSection";
 import LocalizadoresIndustriesSection from "@/sections/localizadores-para-restaurantes/landing/components/IndustriesSection/LocalizadoresIndustriesSection";
 import LocalizadoresProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/ProductsSection/LocalizadoresProductsSection";
-// import LocalizadoresRelatedProducts from "@/sections/localizadores-para-restaurantes/landing/components/RelatedProducts/LocalizadoresRelatedProducts";
+import LocalizadoresRelatedProducts from "@/sections/localizadores-para-restaurantes/landing/components/RelatedProducts/LocalizadoresRelatedProducts";
 import LocalizadoresSecondaryProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/SecondaryProductsSection/LocalizadoresSecondaryProductsSection";
 
 // Metadata for the page, used for SEO and social sharing
@@ -61,7 +61,7 @@ export default function LocalizadoresLanding() {
       <LocalizadoresIndustriesSection />
 
       {/* Related Products Section: Expects no props, suggests related products */}
-      {/* <LocalizadoresRelatedProducts /> */}
+      <LocalizadoresRelatedProducts />
     </>
   );
 }
