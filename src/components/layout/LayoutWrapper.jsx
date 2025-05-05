@@ -1,7 +1,7 @@
 import ContactForm from "./contact-form/ContactForm"
 import Footer from "./footer/Footer"
 import SecondaryHeader from "./secondary-header/SecondaryHeader"
-import WhatsappButton from "./whatsapp-button/WhatsappButton"
+import WhatsappButton from "./whatsapp-button"
 
 const LayoutWrapper = ({ children }) => {
 

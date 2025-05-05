@@ -1,6 +1,5 @@
 import HomeBenefitsSection from "@/sections/home/BenefitsSection/HomeBenefitsSection";
 import HomeClientsSection from "@/sections/home/ClientsSection/HomeClientsSection";
-// import HomeClientsSection from "@/sections/home/ClientsSection/HomeClientsSection";
 import HomeProductsSection from "@/sections/home/ProductsSection/HomeProductsSection";
 import HomeRecentPostsSection from "@/sections/home/RecentPost/HomeRecentPostsSection";
 import SliderHero from "@/sections/home/slider-hero/SliderHero";

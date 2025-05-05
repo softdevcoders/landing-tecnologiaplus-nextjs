@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import style from "./WhatsappButton.module.scss";
+import style from "./whatsapp-button.module.scss";
 import { FaWhatsapp } from "react-icons/fa";
 
 function WhatsappButton() {

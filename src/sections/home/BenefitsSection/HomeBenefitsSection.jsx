@@ -11,9 +11,8 @@ function HomeBenefitsSection() {
           NOS ELIGEN
         </h2>
         <ImageCloudinary
-          width={100}
-          height={100}
-          sizes="(max-width: 1024px) 25vw, 100px"
+          width={500}
+          height={50}
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738960600/texto_2x-8_sklhxz.webp"
           alt="imagen que dice Nuestros clientes"
           className={style.benefits__subtitle}
