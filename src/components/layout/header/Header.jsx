@@ -4,7 +4,6 @@ import styles from "./Header.module.scss";
 import { HiPhone } from "react-icons/hi2";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
-import Image from "next/image";
 import { routes } from "@/config/routes";
 import { CldImage } from "next-cloudinary";
 
