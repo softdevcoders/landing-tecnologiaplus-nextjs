@@ -5,6 +5,19 @@ import { IoIosArrowDown } from "react-icons/io";
 import { HiPhone } from "react-icons/hi2";
 import { routes } from "@/config/routes";
 
+const productLinks = [
+  { href: routes.landings.localizadoresParaRestaurantes.url, text: routes.landings.localizadoresParaRestaurantes.label },
+  { href: routes.landings.llamadoresDeMeseros.url, text: routes.landings.llamadoresDeMeseros.label },
+  { href: routes.landings.turneroTurnoexpress.url, text: routes.landings.turneroTurnoexpress.label },
+  { href: routes.landings.sistemasDeTurnosTurnomaster.url, text: routes.landings.sistemasDeTurnosTurnomaster.label },
+  { href: routes.landings.rollosDeFichosParaTurnos.url, text: routes.landings.rollosDeFichosParaTurnos.label },
+  { href: routes.landings.rollosDePapelTermico.url, text: routes.landings.rollosDePapelTermico.label },
+  { href: routes.landings.dispensadorDeTickets.url, text: routes.landings.dispensadorDeTickets.label },
+  { href: routes.landings.llamadoDeEnfermeriaCuidamaster.url, text: routes.landings.llamadoDeEnfermeriaCuidamaster.label },
+  { href: routes.landings.calificadorDeServicioAlClienteOpinamaster.url, text: routes.landings.calificadorDeServicioAlClienteOpinamaster.label },
+  { href: routes.landings.encuestaVirtual.url, text: routes.landings.encuestaVirtual.label },
+];
+
 function SecondaryHeader() {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -73,56 +86,11 @@ function SecondaryHeader() {
               dropdownOpen["productos"] ? style.show : ""
             }`}
           >
-            <li>
-              <a href="http://landing-tecnologiaplus-nextjs-dev.vercel.app/localizadores-para-restaurantes">
-                Localizadores autoservicio
-              </a>
-            </li>
-            <li>
-              <a href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/llamadores-de-meseros">
-                Llamadores de meseros
-              </a>
-            </li>
-            <li>
-              <a href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/turnero/turnoexpress">
-                Turnero TurnoExpress
-              </a>
-            </li>
-            <li>
-              <a href="http://landing-tecnologiaplus-nextjs-dev.vercel.app/sistema-de-turnos/turnomaster">
-                Sistema de turnos
-              </a>
-            </li>
-            <li>
-              <a href="http://landing-tecnologiaplus-nextjs-dev.vercel.app/rollos-de-fichos-para-turnos">
-                Rollos para turnos
-              </a>
-            </li>
-            <li>
-              <a href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/rollos-de-papel-termico">
-                Rollos térmicos
-              </a>
-            </li>
-            <li>
-              <a href="http://landing-tecnologiaplus-nextjs-dev.vercel.app/dispensador-de-tickets">
-                Dispensador de tickets
-              </a>
-            </li>
-            <li>
-              <a href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/llamado-de-enfermeria/cuidamaster">
-                Llamado de enfermería
-              </a>
-            </li>
-            <li>
-              <a href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/calificador-de-servicio-al-cliente/opinamaster">
-                Calificador de servicio
-              </a>
-            </li>
-            <li>
-              <a href="http://landing-tecnologiaplus-nextjs-dev.vercel.app/encuesta-virtual/opinamaster">
-                Encuesta virtual
-              </a>
-            </li>
+            {productLinks.map(({ href, text }) => (
+              <li key={href}>
+                <a href={href}>{text}</a>
+              </li>
+            ))}
           </ul>
         </div>
         <a
