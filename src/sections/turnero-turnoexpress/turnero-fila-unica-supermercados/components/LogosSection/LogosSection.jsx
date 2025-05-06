@@ -1,26 +1,14 @@
-"use client";
-import styles from "@/app/ver-mas/styles/LogosSection.module.scss";
-import { IoIosArrowForward } from "react-icons/io";
-import { useLogos } from "@/app/context/LogosContext";
-import InfiniteSlider2 from "@/app/components/sliders/InfiniteSlider2";
+import NuestrosClientes from "@/components/layout/nuestros-clientes";
+import { logosTurnoExpress } from "@/config/client-logos";
 
-function LogosSection() {
-  const { logosTurnoExpress } = useLogos();
-
+function TurnoExpressClientsSection() {
   return (
-    <section className={styles.logossection__container}>
-      <div className={styles.header}>
-        <h2>Algunos clientes</h2>
-      </div>
-      <div className={styles.content}>
-        <InfiniteSlider2
-          logos={logosTurnoExpress}
-          speedPreset="slow"
-          stopOnFocus={false}
-        />
-      </div>
-    </section>
+    <NuestrosClientes
+      title="Algunos de nuestros clientes"
+      description="Empresas que confían en Tecnología Plus para mejorar la atención al cliente."
+      logos={logosTurnoExpress}
+    />
   );
 }
 
-export default LogosSection;
+export default TurnoExpressClientsSection;
