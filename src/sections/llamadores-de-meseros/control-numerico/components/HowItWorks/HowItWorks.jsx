@@ -1,4 +1,4 @@
-import styles from "../../../../styles/HowItWorks.module.scss";
+import styles from "@/styles/HowItWorks.module.scss";
 
 function HowItWorks() {
   return (

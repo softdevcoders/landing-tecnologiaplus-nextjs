@@ -1,26 +1,33 @@
-import ContactForm from "@/app/components/ContactForm/ContactForm";
-import WppBtn from "@/app/components/WppBtn/WppBtn";
-import Footer from "@/app/components/Footer/Footer";
-import style from "../../../llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts.module.scss";
-import SecondaryHeader from "@/app/components/SecondaryHeader/SecondaryHeader";
-import TechnicalSheet from "./components/TechnicalSheet/TechnicalSheet";
-import HowItWorks from "./components/HowItWorks/HowItWorks";
-import LlamadorMeserosRelatedProducts from "@/app/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts";
-import LogosSection from "./components/LogosSection/LogosSection";
-import ProductGallerySelected from "./components/ProductGallery/ProductGallerySelected";
+// Importing styles for the related products section
+import style from "@/sections/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts.module.scss";
+
+// Importing specific components for the "Hablador de Mesa" section
+import TechnicalSheet from "@/sections/llamadores-de-meseros/control-numerico/components/TechnicalSheet/TechnicalSheet";
+import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts";
+import LogosSection from "@/sections/llamadores-de-meseros/components/ClientsSection/LlamadorMeserosClientsSection";
+import ProductGallerySelected from "@/sections/llamadores-de-meseros/control-numerico/components/ProductGallery/ProductGallerySelected";
+import HowItWorks from "@/sections/llamadores-de-meseros/control-numerico/components/HowItWorks/HowItWorks";
 
 export default function VerMasMeserosControlNumerico() {
-    return (
-        <>
-            <ProductGallerySelected />
-            <SecondaryHeader />
-            <TechnicalSheet />
-            <HowItWorks />
-            <LogosSection />
-            <LlamadorMeserosRelatedProducts titleClassName={style.customTitle} />
-            <ContactForm />
-            <WppBtn />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      {/* ProductGallerySelected: Displays a gallery of selected products */}
+      <ProductGallerySelected />
+
+      {/* TechnicalSheet: Displays the technical specifications of the product */}
+      <TechnicalSheet />
+
+      {/* HowItWorks: Explains how the product works */}
+      <HowItWorks />
+
+      {/* LogosSection: Displays a section with partner or brand logos */}
+      <LogosSection />
+
+      {/* LlamadorMeserosRelatedProducts: Displays related products */}
+      {/* Props: 
+        - titleClassName (string): Custom CSS class for the title styling 
+      */}
+      <LlamadorMeserosRelatedProducts titleClassName={style.customTitle} />
+    </>
+  );
 }
