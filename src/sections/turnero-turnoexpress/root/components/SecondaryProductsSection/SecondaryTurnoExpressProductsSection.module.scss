@@ -1,0 +1,97 @@
+@use "../../../../styles/components/productsSection" as *;
+@use "../../../../styles/base/mixins" as *;
+
+.products__section {
+  margin-top: -100px;
+  padding-top: 120px;
+  padding-bottom: 3rem;
+
+  z-index: 1;
+  .products__container {
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #606060;
+      margin: 2rem 0;
+      @include respond-to-max("laptop") {
+        font-size: clamp(16px, 5vw, 30px);
+        text-align: center;
+      }
+    }
+
+    .products__card__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+
+        img {
+          height: 300px;
+          width: auto;
+          object-fit: contain;
+          margin-bottom: 1rem;
+          @include respond-to-max("laptop") {
+            height: auto;
+            max-width: 80vw;
+          }
+        }
+
+        &:nth-child(1) img {
+          height: 320px;
+          @include respond-to-max("laptop") {
+            height: auto;
+            max-width: 80vw;
+          }
+        }
+
+        &:nth-child(2) img {
+          margin-top: 20px;
+          @include respond-to-max("laptop") {
+            margin-top: 0;
+          }
+        }
+
+        h3 {
+          color: #606060;
+          font-size: 1rem;
+          @include respond-to-max("laptop") {
+            font-size: clamp(16px, 4.5vw, 30px);
+            text-align: center;
+          }
+        }
+        p {
+          color: #606060;
+          font-size: 1.5rem;
+          @include respond-to-max("laptop") {
+            font-size: clamp(16px, 5vw, 30px);
+            text-align: center;
+          }
+        }
+
+        .card__btn {
+          cursor: pointer;
+          font-weight: 600;
+          margin-top: 20px;
+          background: #6f3bb4;
+          color: #fff;
+          font-size: 1rem;
+          padding: 0.2rem 1rem;
+          border-radius: 2rem;
+          -webkit-border-radius: 2rem;
+          -moz-border-radius: 2rem;
+          -ms-border-radius: 2rem;
+          -o-border-radius: 2rem;
+        }
+      }
+    }
+  }
+}
