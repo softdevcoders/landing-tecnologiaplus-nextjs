@@ -91,8 +91,8 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
         <ul>
           <li>
             <ImageCloudinary
-              width={320}
-              height={230}
+              width={30}
+              height={30}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349925/xcbtnf1wh1en4taujsdx_avnfkj.webp"
               alt="icono pulgar arriba"
             />
@@ -100,8 +100,8 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
           </li>
           <li>
             <ImageCloudinary
-              width={320}
-              height={230}
+              width={30}
+              height={30}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349925/zpyfcqvsxo6wdubn2kdu_iuw7tl.webp"
               alt="icono de seguridad"
             />
@@ -109,8 +109,8 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
           </li>
           <li>
             <ImageCloudinary
-              width={320}
-              height={230}
+              width={30}
+              height={30}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349921/jg3stajnopybox4xxdkd_favvxk.webp"
               alt="icono de excelencia"
             />
@@ -118,8 +118,8 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
           </li>
           <li>
             <ImageCloudinary
-              width={320}
-              height={230}
+              width={30}
+              height={30}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349925/ynuxn64wkw3nkqxl4tvo_lwqzi0.webp"
               alt="icono de Envíos en Colombia y Latinoamérica"
             />
