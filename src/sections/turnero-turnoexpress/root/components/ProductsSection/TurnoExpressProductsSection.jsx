@@ -1,4 +1,7 @@
+import Link from "next/link";
 import style from "./TurnoExpressProductsSection.module.scss";
+import ImageCloudinary from "@/components/ui/image-cloudinary";
+import { routes } from "@/config/routes";
 
 function TurnoExpressProductsSection() {
   return (
@@ -9,101 +12,107 @@ function TurnoExpressProductsSection() {
       <div className={style.products__container}>
         <div className={style.products__card__container}>
           <div className={style.card}>
-            <img
-              loading="lazy"
+            <ImageCloudinary
+              width={215}
+              height={150}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739197744/Turnero_T1B_2x-8_1_1_opvowd.webp"
               alt="Turnero T1-B"
             />
             <h3>
-              Turnero T<span>1</span>-B
+              Turnero T1-B
             </h3>
             <p>294 vendidos</p>
-            <a
+            <Link
               className={style.card__btn}
-              href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/turnero-turnoexpress/turnero-t1-b"
+              href={routes.landings.turneroTurnoexpress.children.turneroT1B.url}
             >
               Ver más
-            </a>
+            </Link>
           </div>
           <div className={style.card}>
-            <img
-              loading="lazy"
+            <ImageCloudinary
+              width={215}
+              height={150}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431727/Turnero_T1N_2x-8_r4igzs.webp"
               alt="Turnero digital  T1-N"
             />
             <h3>
-              Turnero T<span>1</span>-N
+              Turnero T1-N
             </h3>
             <p>869 vendidos</p>
-            <a
+            <Link
               className={style.card__btn}
-              href="https://landing-tecnologiaplus-nextjs.vercel.app/turnero-turnoexpress/turnero-t1-n"
+              href={routes.landings.turneroTurnoexpress.children.turneroT1N.url}
             >
               Ver más
-            </a>
+            </Link>
           </div>
           <div className={style.card}>
-            <img
-              loading="lazy"
+            <ImageCloudinary
+              width={215}
+              height={150}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431726/Fila_unica_2x-8_iejxvf.webp"
               alt="Turnero colombia de fila única"
             />
             <h3>Turnero fila única</h3>
             <p>32 vendidos</p>
-            <a
+            <Link
               className={style.card__btn}
-              href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/turnero-turnoexpress/turnero-fila-unica-supermercados"
+              href={routes.landings.turneroTurnoexpress.children.turneroFilaUnicaSupermercados.url}
             >
               Ver más
-            </a>
+            </Link>
           </div>
           <div className={style.card}>
-            <img
-              loading="lazy"
+            <ImageCloudinary
+              width={215}
+              height={150}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431727/Turnero_T3_2x-8_ypmexo.webp"
               alt="Turneros digitales  T3"
             />
             <h3>Turnero T3</h3>
             <p>692 vendidos</p>
-            <a
+            <Link
               className={style.card__btn}
-              href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/turnero-turnoexpress/turnero-t3-modulo-turno"
+              href={routes.landings.turneroTurnoexpress.children.turneroT3ModuloTurno.url}
             >
               Ver más
-            </a>
+            </Link>
           </div>
         </div>
         <h2>Turneros digitales personalizados</h2>
         <div className={style.products__card__container}>
           <div className={style.card}>
-            <img
-              loading="lazy"
+            <ImageCloudinary
+              width={475}
+              height={150}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431730/Segun_producto_2x-8_fepwc0.webp"
               alt="turneros inalámbricos personalizados según producto"
             />
             <h3>Turnero Transformer</h3>
             <p>82 vendidos</p>
-            <a
+            <Link
               className={style.card__btn}
-              href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/turnero-turnoexpress/turnero-transformer"
+              href={routes.landings.turneroTurnoexpress.children.turneroTransformer.url}
             >
               Ver más
-            </a>
+            </Link>
           </div>
           <div className={style.card}>
-            <img
-              loading="lazy"
+            <ImageCloudinary
+              width={475}
+              height={150}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431729/T3_con_logo_2x-8_ofmcyp.webp"
               alt="Turneros bogota​ T3 con logo"
             />
             <h3>Turnero T3 - con logo</h3>
             <p>269 vendidos</p>
-            <a
+            <Link
               className={style.card__btn}
-              href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/turnero-turnoexpress/turnero-t3-modulo-turno"
+              href={routes.landings.turneroTurnoexpress.children.turneroT3ConLogo.url}
             >
               Ver más
-            </a>
+            </Link>
           </div>
         </div>
       </div>

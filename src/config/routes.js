@@ -93,32 +93,32 @@ export const routes = {
     turneroTurnoexpress: {
       url: "/turnero-turnoexpress",
       label: "Turnero Turnoexpress",
-      children: [
-        {
+      children: {
+        turneroT3ModuloTurno: {
           label: "Turnero T3 módulo turno",
           url: "/turnero-turnoexpress/turnero-t3-modulo-turno",
         },
-        {
+        turneroT3ConLogo: {
           label: "Turnero T3 con logo",
           url: "/turnero-turnoexpress/turnero-t3-con-logo",
         },
-        {
+        turneroT1B: {
           label: "Turnero T1-B",
           url: "/turnero-turnoexpress/turnero-t1-b",
         },
-        {
+        turneroT1N: {
           label: "Turnero T1-N",
           url: "/turnero-turnoexpress/turnero-t1-n",
         },
-        {
+        turneroFilaUnicaSupermercados: {
           label: "Turnero fila única supermercados",
           url: "/turnero-turnoexpress/turnero-fila-unica-supermercados",
         },
-        {
+        turneroTransformer: {
           label: "Turnero Transformer",
           url: "/turnero-turnoexpress/turnero-transformer",
         }
-      ]
+      }
     },
     sistemasDeTurnosTurnomaster: {
       url: "/sistema-de-turnos/turnomaster",
