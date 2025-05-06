@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import style from "./SecondaryHeader.module.scss";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiPhone } from "react-icons/hi2";
+import { routes } from "@/config/routes";
 
 function SecondaryHeader() {
   const [isVisible, setIsVisible] = useState(false);
@@ -46,12 +47,12 @@ function SecondaryHeader() {
     >
       <a
         className={style.inicio__mobile}
-        href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/"
+        href={routes.home.url}
       >
         Inicio
       </a>
       <div className={`${style.nav__links} ${menuOpen ? style.showMenu : ""}`}>
-        <a href="https://landing-tecnologiaplus-nextjs-dev.vercel.app/">
+        <a href={routes.home.url}>
           Inicio
         </a>
         {/* Dropdown Productos */}
