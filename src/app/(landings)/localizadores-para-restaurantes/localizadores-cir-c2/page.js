@@ -27,7 +27,7 @@ export const metadata = {
 
 export default function VerMasLocalizadoresCirC2() {
   return (
-    <div style={{ marginTop: "150px" }}>
+    <>
       {/* Galería de imágenes del producto seleccionado */}
       <ProductGallerySelected />
 
@@ -42,6 +42,6 @@ export default function VerMasLocalizadoresCirC2() {
 
       {/* Productos relacionados con un título personalizado */}
       <LocalizadoresRelatedProducts titleClassName={style.customTitle} />
-    </div>
+    </>
   );
 }
