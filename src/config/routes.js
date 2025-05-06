@@ -59,36 +59,36 @@ export const routes = {
     llamadoresDeMeseros: {
       url: "/llamadores-de-meseros",
       label: "Llamadores de meseros",
-      children: [
-        {
+      children: { 
+        e2_n: {
           label: "Llamador de meseros E2-N con tecla pagar",
           url: "/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar",
         },
-        {
+        e2_b: {
           label: "Llamador de meseros E2-B",
           url: "/llamadores-de-meseros/llamador-de-meseros-e2-b",
         },
-        {
+        habladorDeMesa:{
           label: "Hablador de mesa",
           url: "/llamadores-de-meseros/hablador-de-mesa",
         },
-        {
+        controlNumerico: {  
           label: "Control numérico",
           url: "/llamadores-de-meseros/control-numerico",
         },
-        {
+        relojReceptorDeLlamados: {
           label: "Reloj receptor de llamados",
           url: "/llamadores-de-meseros/reloj-receptor-de-llamados",
         },
-        {
+        t1_b: {
           label: "Pantalla T1-B",
           url: "/llamadores-de-meseros/pantalla-t1-b",
         },
-        {
+        t6: {
           label: "Pantalla T6",
           url: "/llamadores-de-meseros/pantalla-t6",
         }
-      ]
+      }
     },
     turneroTurnoexpress: {
       url: "/turnero-turnoexpress",
