@@ -1,0 +1,10 @@
+@use "@/styles/components/industriesSection" as *;
+@use "@/styles/base/mixins" as *;
+
+.industries__section {
+  margin: 3rem 0;
+
+  @include respond-to-max("laptop") {
+    margin-top: 0;
+  }
+}
