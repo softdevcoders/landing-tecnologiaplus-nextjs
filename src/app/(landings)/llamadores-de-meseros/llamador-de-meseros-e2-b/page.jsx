@@ -1,9 +1,9 @@
-import style from "@/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts.module.scss";
-import LogosSection from "../control-numerico/components/LogosSection/LogosSection";
-import LlamadorMeserosRelatedProducts from "@/app/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts";
-import HowItWorks from "./components/HowItWorks/HowItWorks";
-import TechnicalSheet from "./components/TechnicalSheet/TechnicalSheet";
-import ProductGallerySelected from "./components/ProductGallery/ProductGallerySelected";
+import style from "@/sections/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts.module.scss";
+import LogosSection from "@/sections/llamadores-de-meseros/components/ClientsSection/LlamadorMeserosClientsSection";
+import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts";
+import HowItWorks from "@/sections/llamadores-de-meseros/llamador-de-meseros-e2-b/components/HowItWorks/HowItWorks";
+import TechnicalSheet from "@/sections/llamadores-de-meseros/llamador-de-meseros-e2-b/components/TechnicalSheet/TechnicalSheet";
+import ProductGallerySelected from "@/sections/llamadores-de-meseros/llamador-de-meseros-e2-b/components/ProductGallery/ProductGallerySelected";
 
 export default function VerMasMeserosLlamadorV2b() {
   return (
