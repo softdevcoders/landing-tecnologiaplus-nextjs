@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import styles from "@/styles/ProductGallery.module.scss";
+
+import { useState } from "react";
 import useDisableRightClick from "@/hooks/useDisableRightClick";
 import {
   IoIosArrowBack,
@@ -11,18 +12,32 @@ import {
 } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
 import Popup from "@/components/PopUp/Popup";
+
 function ProductGallery() {
   const [isOpen, setIsOpen] = useState(false);
   const images = [
-    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741622306/Frame_1_32_fg46my.webp",
-    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016956/3_4x-8_4_jpow97.webp",
-    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016956/1_4x-8_7_lw7jp3.webp",
-    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016955/4_4x-8_5_xujts9.webp",
-    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741622477/Frame_1_33_d1et3p.webp",
+    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq.webp",
+    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039882/5_4x-8_wzjgam.webp",
+    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/7_4x-8_1_saux20.webp",
+    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/3_4x-8_wiiwjz.webp",
+    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he.webp",
+  ];
+
+  const alternativeImages = [
+    {
+      name: "Negro",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039510/Frame_2_5_fznqyt.webp",
+    },
+    {
+      name: "Blanco",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039509/Frame_2_6_qar5li.webp",
+    },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const selectedImage = images[selectedIndex];
+  const [selectedAltIndex, setSelectedAltIndex] = useState(0);
+  const [isAlternative, setIsAlternative] = useState(true);
+
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showScrollButtons, setShowScrollButtons] = useState(images.length > 5);
 
@@ -34,14 +49,38 @@ function ProductGallery() {
     setScrollPosition((prev) => Math.max(prev - 1, 0));
   };
 
+  const selectedImage = isAlternative
+    ? alternativeImages[selectedAltIndex].url
+    : images[selectedIndex];
+  const selectedVariantName = isAlternative
+    ? alternativeImages[selectedAltIndex].name
+    : "Opciones";
+
   const handleNextImage = () => {
-    setSelectedIndex((prevIndex) => (prevIndex + 1) % images.length);
+    if (isAlternative) {
+      setSelectedAltIndex(
+        (prevIndex) => (prevIndex + 1) % alternativeImages.length
+      );
+    } else {
+      setSelectedIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }
   };
 
   const handlePrevImage = () => {
-    setSelectedIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    if (isAlternative) {
+      setSelectedAltIndex((prevIndex) =>
+        prevIndex === 0 ? alternativeImages.length - 1 : prevIndex - 1
+      );
+    } else {
+      setSelectedIndex((prevIndex) =>
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      );
+    }
+  };
+
+  const handleSelectAlternative = (img, index) => {
+    setSelectedAltIndex(index);
+    setIsAlternative(true);
   };
 
   useDisableRightClick();
@@ -69,17 +108,14 @@ function ProductGallery() {
               .slice(scrollPosition, scrollPosition + 5)
               .map((img, index) => (
                 <img
-                  key={scrollPosition + index} // Usamos un índice único para evitar problemas de key
+                  key={index}
                   src={img}
-                  alt={`Thumbnail ${scrollPosition + index + 1}`}
+                  alt={`Thumbnail ${index + 1}`}
                   onClick={() => {
+                    setIsAlternative(false);
                     setSelectedIndex(scrollPosition + index);
                   }}
-                  className={
-                    selectedIndex === scrollPosition + index
-                      ? styles.active
-                      : ""
-                  }
+                  className={selectedImage === img ? styles.active : ""}
                   style={{ cursor: "pointer" }}
                 />
               ))}
@@ -89,7 +125,7 @@ function ProductGallery() {
                 onClick={handleScrollDown}
                 onMouseDown={(e) => e.preventDefault()}
               />
-            )}
+            )}{" "}
             <button
               onClick={() => setIsOpen(true)}
               className={styles.btn__multimedia}
@@ -105,7 +141,9 @@ function ProductGallery() {
               onClick={handlePrevImage}
               onMouseDown={(e) => e.preventDefault()}
             />
+
             <img loading="lazy" src={selectedImage} alt="Imagen seleccionada" />
+
             <IoIosArrowForward
               className={styles.icon__next}
               onClick={handleNextImage}
@@ -113,15 +151,19 @@ function ProductGallery() {
             />
 
             <div className={styles.pagination}>
-              {images.map((_, index) => (
+              {(isAlternative ? alternativeImages : images).map((_, index) => (
                 <div
                   key={index}
                   className={`${styles.dot} ${
-                    selectedIndex === index ? styles.activeDot : ""
+                    index === (isAlternative ? selectedAltIndex : selectedIndex)
+                      ? styles.activeDot
+                      : ""
                   }`}
-                  onClick={() => {
-                    setSelectedIndex(index);
-                  }}
+                  onClick={() =>
+                    isAlternative
+                      ? setSelectedAltIndex(index)
+                      : setSelectedIndex(index)
+                  }
                 />
               ))}
             </div>
@@ -131,8 +173,37 @@ function ProductGallery() {
         {/* Información del producto */}
         <div className={styles.container__info__products}>
           <div className={styles.container__titles}>
-            <h1>Localizadores para restaurantes REC-V3</h1>
-            <p>Tus clientes disfrutan el tiempo mientras esperan el pedido</p>
+            <h1>LLAMADOR DE MESEROS E2-N CON TECLA PAGAR</h1>
+            <p> Permite llamar al mesero y pedir la cuenta.</p>
+          </div>
+
+          {/* Alternativas */}
+          <div className={styles.container__products__alternatives}>
+            <h2>Elige color</h2>
+
+            {selectedVariantName && (
+              <h3 className={styles.variantName}>{selectedVariantName}</h3>
+            )}
+
+            <div className={styles.alternative__images}>
+              {alternativeImages.map((img, index) => (
+                <div
+                  key={index}
+                  className={`${styles.alternative__item} ${
+                    selectedAltIndex === index && isAlternative
+                      ? styles.selected
+                      : ""
+                  }`}
+                  onClick={() => handleSelectAlternative(img, index)}
+                >
+                  <img
+                    src={img.url}
+                    alt={img.name}
+                    className={styles.thumbnail}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className={styles.container__contact__info}>
@@ -147,11 +218,9 @@ function ProductGallery() {
           </div>
 
           <p>
-            Con los Localizadores para restaurantes los clientes esperan su
-            pedido sin temor de perder el turno, ya que el avisador de pedidos
-            vibra y alumbra cuando el pedido está listo, evitando ruidos
-            molestos para los demás clientes. Ideal para plazoletas de comida y
-            restaurantes autoservicio.
+            Llamador de meseros inalámbrico para reducir tiempo de espera, ideal
+            en restaurantes, hoteles, bares, cafés y salas VIP. La mejor forma
+            de agilizar el servicio.
           </p>
         </div>
       </div>
@@ -165,23 +234,23 @@ function ProductGallery() {
             label: "Galería",
             images: [
               {
-                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741622306/Frame_1_32_fg46my.webp",
+                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq.webp",
                 alt: "Imagen 1",
               },
               {
-                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016956/3_4x-8_4_jpow97.webp",
+                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039882/5_4x-8_wzjgam.webp",
                 alt: "Imagen 2",
               },
               {
-                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016956/1_4x-8_7_lw7jp3.webp",
+                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/7_4x-8_1_saux20.webp",
                 alt: "Imagen 3",
               },
               {
-                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016955/4_4x-8_5_xujts9.webp",
+                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/3_4x-8_wiiwjz.webp",
                 alt: "Imagen 4",
               },
               {
-                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741622477/Frame_1_33_d1et3p.webp",
+                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he.webp",
                 alt: "Imagen 5",
               },
             ],
@@ -191,7 +260,7 @@ function ProductGallery() {
             label: "Medidas",
             images: [
               {
-                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741622477/Frame_1_33_d1et3p.webp",
+                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he.webp",
                 alt: "Imagen de medidas",
               },
             ],

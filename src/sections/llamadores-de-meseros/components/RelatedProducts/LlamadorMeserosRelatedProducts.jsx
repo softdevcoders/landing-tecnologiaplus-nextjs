@@ -5,18 +5,18 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import style from "./LocalizadoresRelatedProducts.module.scss";
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import style from "./LlamadorMeserosRelatedProducts.module.scss";
+import { useEffect, useState } from "react";
 import { routes } from "@/config/routes";
 
-function LocalizadoresRelatedProducts({ titleClassName = "" }) {
+function LlamadorMeserosRelatedProducts({ titleClassName = "" }) {
   const products = [
     {
-      name: "Rollos de turnos",
-      description: "Organiza y mejora el servicio.",
-      img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745436638/Frame_1_35_vku1gs_746c0e.webp",
-      sold: "8.527 vendidos",
-      link: routes.landings.rollosDeFichosParaTurnos.url,
+      name: "Localizadores para restaurantes",
+      description: "Lleva el autoservicio a otro nivel.",
+      img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741708165/NUEVA_etp9mi.webp",
+      sold: "4.225 vendidos",
+      link: routes.landings.localizadoresParaRestaurantes.url,
     },
     {
       name: "TurnoExpress",
@@ -26,14 +26,21 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
       link: routes.landings.turneroTurnoexpress.url,
     },
     {
-      name: "TurnoMaster",
-      description: "Digitaliza la gestión de turnos.",
-      img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350030/TurnoMaster_2x-8_stvupu_tvjv5q.webp",
-      sold: "194 vendidos",
-      link: routes.landings.sistemasDeTurnosTurnomaster.url,
-      className: style.turnomaster__card,
+      name: "CuidaMaster",
+      description: "Transforma opiniones en acciones estratégicas.",
+      img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738596111/cuidamaster_2x-8_dlawzx.webp",
+      sold: "9.825 vendidos",
+      link: routes.landings.llamadoDeEnfermeriaCuidamaster.url,
     },
   ];
+
+  // Use client-side only state initialization to avoid hydration mismatches
+  const [shouldLoop, setShouldLoop] = useState(false);
+
+  // Only enable loop on client-side after component mounts
+  useEffect(() => {
+    setShouldLoop(products.length > 3);
+  }, [products.length]);
 
   return (
     <section className={style.related__products}>
@@ -46,7 +53,7 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={20}
             slidesPerView={1}
-            loop={true}
+            loop={shouldLoop}
             navigation
             pagination={{ clickable: true }}
             breakpoints={{
@@ -56,23 +63,15 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
             }}
           >
             {products.map((product, index) => (
-              <SwiperSlide
-                key={index}
-                className={`${style.swiper__slide} ${product.className || ""}`}
-              >
-                <div
-                  className={`${style.related__products__card} ${
-                    product.className || ""
-                  }`}
-                >
+              <SwiperSlide key={index} className={style.swiper__slide}>
+                <div className={style.related__products__card}>
                   <div className={style.card__info}>
                     <div className={style.card__text}>
                       <h3>{product.name}</h3>
                       <p>{product.description}</p>
                     </div>
-                    <ImageCloudinary
-                      width={320}
-                      height={230}
+                    <img
+                      loading="lazy"
                       src={product.img}
                       alt={`imagen de ${product.name}`}
                     />
@@ -90,36 +89,32 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
       <div className={style.related__products__specs}>
         <ul>
           <li>
-            <ImageCloudinary
-              width={30}
-              height={30}
+            <img
+              loading="lazy"
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349925/xcbtnf1wh1en4taujsdx_avnfkj.webp"
               alt="icono pulgar arriba"
             />
             <p>Precios Justos</p>
           </li>
           <li>
-            <ImageCloudinary
-              width={30}
-              height={30}
+            <img
+              loading="lazy"
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349925/zpyfcqvsxo6wdubn2kdu_iuw7tl.webp"
               alt="icono de seguridad"
             />
             <p>Protección al comprador</p>
           </li>
           <li>
-            <ImageCloudinary
-              width={30}
-              height={30}
+            <img
+              loading="lazy"
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349921/jg3stajnopybox4xxdkd_favvxk.webp"
               alt="icono de excelencia"
             />
             <p>Garantía superior</p>
           </li>
           <li>
-            <ImageCloudinary
-              width={30}
-              height={30}
+            <img
+              loading="lazy"
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349925/ynuxn64wkw3nkqxl4tvo_lwqzi0.webp"
               alt="icono de Envíos en Colombia y Latinoamérica"
             />
@@ -131,4 +126,4 @@ function LocalizadoresRelatedProducts({ titleClassName = "" }) {
   );
 }
 
-export default LocalizadoresRelatedProducts;
+export default LlamadorMeserosRelatedProducts;

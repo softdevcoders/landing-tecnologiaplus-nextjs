@@ -1,0 +1,7 @@
+.layout_header_margin_top {
+  margin-top: 80px;
+
+  @media (min-width: 1024px) {
+    margin-top: 130px;
+  }
+}

@@ -8,37 +8,37 @@ function HowItWorks() {
         <div className={styles.item}>
           <img
             loading="lazy"
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016959/14_4x-8_6_xofupb.webp"
-            alt="El asesor entrega al cliente un localizador para restaurantes"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/14_4x-8_1_nfpyrv.webp"
+            alt="Usuario presionando el llamador de meseros"
           />
           <p>
-            1. El cliente hace el pedido y{" "}
+            1. El cliente presiona el botón: tecla{" "}
             <br className={styles.hide__on__mobile} />
-            le entregan un localizador
+            para llamar al mesero o tecla para pagar
           </p>
         </div>
         <div className={styles.item}>
           <img
             loading="lazy"
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016958/15_4x-8_6_sfwzly.webp"
-            alt="El asesor presiona el botón para llamar al cliente"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/15_4x-8_1_otbk7u.webp"
+            alt="Mesero recibiendo el llamado en el reloj recepto o pantallas de turno"
           />
           <p>
-            2. Cuando el pedido está listo, digita{" "}
+            2. El mesero recibe el llamado en{" "}
             <br className={styles.hide__on__mobile} />
-            en el control el número del localizador
+            alguna de las pantallas o en el reloj
           </p>
         </div>
         <div className={styles.item}>
           <img
             loading="lazy"
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016957/16_4x-8_5_gfceng.webp"
-            alt="El cliente recibe el aviso en el localizador alumbrando vibrando y sonando"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/16_4x-8_2_ej3v5o.webp"
+            alt="Usuario siendo atendida por el mesero"
           />
           <p>
-            3. El localizador vibra, alumbra y suena,{" "}
+            3. El mesero atiende el llamado y presiona la{" "}
             <br className={styles.hide__on__mobile} />
-            notificando al cliente del llamado
+            tecla CANCELAR para borrar el llamado
           </p>
         </div>
       </div>
