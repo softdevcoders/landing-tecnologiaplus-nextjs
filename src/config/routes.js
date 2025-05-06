@@ -44,7 +44,7 @@ export const routes = {
   landings: {
     localizadoresParaRestaurantes: {
       url: "/localizadores-para-restaurantes",
-      label: "Localizadores para restaurantes",
+      label: "Localizadores autoservicio",
       children: {
         rec_v3: {
           label: "REC V3",
@@ -93,32 +93,32 @@ export const routes = {
     turneroTurnoexpress: {
       url: "/turnero-turnoexpress",
       label: "Turnero Turnoexpress",
-      children: [
-        {
+      children: {
+        turneroT3ModuloTurno: {
           label: "Turnero T3 módulo turno",
           url: "/turnero-turnoexpress/turnero-t3-modulo-turno",
         },
-        {
+        turneroT3ConLogo: {
           label: "Turnero T3 con logo",
           url: "/turnero-turnoexpress/turnero-t3-con-logo",
         },
-        {
+        turneroT1B: {
           label: "Turnero T1-B",
           url: "/turnero-turnoexpress/turnero-t1-b",
         },
-        {
+        turneroT1N: {
           label: "Turnero T1-N",
           url: "/turnero-turnoexpress/turnero-t1-n",
         },
-        {
+        turneroFilaUnicaSupermercados: {
           label: "Turnero fila única supermercados",
           url: "/turnero-turnoexpress/turnero-fila-unica-supermercados",
         },
-        {
+        turneroTransformer: {
           label: "Turnero Transformer",
           url: "/turnero-turnoexpress/turnero-transformer",
         }
-      ]
+      }
     },
     sistemasDeTurnosTurnomaster: {
       url: "/sistema-de-turnos/turnomaster",
@@ -126,7 +126,7 @@ export const routes = {
     },
     rollosDeFichosParaTurnos: {
       url: "/rollos-de-fichos-para-turnos",
-      label: "Rollos de fichos para turnos",
+      label: "Rollos para turnos",
       children: [
         {
           label: "Rollos de turnos",
@@ -136,7 +136,7 @@ export const routes = {
     },
     rollosDePapelTermico: {
       url: "/rollos-de-papel-termico",
-      label: "Rollos de papel térmico",
+      label: "Rollos térmicos",
       children: [
         {
           label: "Rollos térmicos",
@@ -156,7 +156,7 @@ export const routes = {
     },
     llamadoDeEnfermeriaCuidamaster: {
       url: "/llamado-de-enfermeria-cuidamaster",
-      label: "Llamado de enfermería Cuidamaster",
+      label: "Llamado de enfermería",
       children: [
         {
           label: "Alarma de luz",
@@ -190,7 +190,7 @@ export const routes = {
     },
     calificadorDeServicioAlClienteOpinamaster: {
       url: "/calificador-de-servicio-al-cliente-opinamaster",
-      label: "Calificador de servicio al cliente Opinamaster",
+      label: "Calificador de servicio",
       children: [
         {
           label: "Calificador de servicio",
@@ -201,6 +201,10 @@ export const routes = {
           url: "/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio",
         }
       ]
+    },
+    encuestaVirtual: {
+      url: "/encuesta-virtual-opinamaster",
+      label: "Encuesta virtual",
     }
   }
 };

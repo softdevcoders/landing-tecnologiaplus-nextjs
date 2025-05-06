@@ -63,16 +63,16 @@ function Header({ customStyles = {} }) {
   );
 
   const productLinks = [
-    { href: "/localizadores-para-restaurantes", text: "Localizadores autoservicio" },
-    { href: "/llamadores-de-meseros", text: "Llamadores de meseros" },
-    { href: "/turnero/turnoexpress", text: "Turnero TurnoExpress" },
-    { href: "/sistema-de-turnos/turnomaster", text: "Sistema de turnos" },
-    { href: "/rollos-de-fichos-para-turnos", text: "Rollos para turnos" },
-    { href: "/rollos-de-papel-termico", text: "Rollos térmicos" },
-    { href: "/dispensador-de-tickets", text: "Dispensador de tickets" },
-    { href: "/llamado-de-enfermeria/cuidamaster", text: "Llamado de enfermería" },
-    { href: "/calificador-de-servicio-al-cliente/opinamaster", text: "Calificador de servicio" },
-    { href: "/encuesta-virtual/opinamaster", text: "Encuesta virtual" },
+    { href: routes.landings.localizadoresParaRestaurantes.url, text: routes.landings.localizadoresParaRestaurantes.label },
+    { href: routes.landings.llamadoresDeMeseros.url, text: routes.landings.llamadoresDeMeseros.label },
+    { href: routes.landings.turneroTurnoexpress.url, text: routes.landings.turneroTurnoexpress.label },
+    { href: routes.landings.sistemasDeTurnosTurnomaster.url, text: routes.landings.sistemasDeTurnosTurnomaster.label },
+    { href: routes.landings.rollosDeFichosParaTurnos.url, text: routes.landings.rollosDeFichosParaTurnos.label },
+    { href: routes.landings.rollosDePapelTermico.url, text: routes.landings.rollosDePapelTermico.label },
+    { href: routes.landings.dispensadorDeTickets.url, text: routes.landings.dispensadorDeTickets.label },
+    { href: routes.landings.llamadoDeEnfermeriaCuidamaster.url, text: routes.landings.llamadoDeEnfermeriaCuidamaster.label },
+    { href: routes.landings.calificadorDeServicioAlClienteOpinamaster.url, text: routes.landings.calificadorDeServicioAlClienteOpinamaster.label },
+    { href: routes.landings.encuestaVirtual.url, text: routes.landings.encuestaVirtual.label },
   ];
 
   return (
