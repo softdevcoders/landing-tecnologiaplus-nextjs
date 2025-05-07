@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import styles from "../../../../styles/ProductGallery.module.scss";
-import altStyles from "../../../../../components/Header/HeaderAlt.module.scss";
-import useDisableRightClick from "../../../../../../../hooks/useDisableRightClick";
+import styles from "@/styles/ProductGallery.module.scss";
+import useDisableRightClick from "@/hooks/useDisableRightClick";
 import {
   IoIosArrowBack,
   IoIosArrowDown,
@@ -11,8 +10,7 @@ import {
   IoIosArrowUp,
 } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
-import Header from "@/app/components/Header/Header";
-import Popup from "@/app/components/PopUp/Popup";
+import Popup from "@/components/PopUp/Popup";
 
 function ProductGallery() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,14 +51,6 @@ function ProductGallery() {
 
   return (
     <section className={styles.hero}>
-      <Header
-        customStyles={{
-          header: altStyles.altHeader,
-          phoneBtn: altStyles.altPhoneBtn,
-          searchIcon: altStyles.altSearchIcon,
-        }}
-      />
-
       <div className={styles.action__nav}>
         <button onClick={() => window.history.back()}>
           <IoIosArrowBack className={styles.icon__back} /> Volver
