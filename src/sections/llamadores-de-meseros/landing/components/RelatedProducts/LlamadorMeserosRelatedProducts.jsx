@@ -1,9 +1,9 @@
 import RelatedProducts from "@/components/layout/related-products";
 
-function LocalizadoresRelatedProducts() {
+function LlamadorMeserosRelatedProducts() {
   return (
     <RelatedProducts />
   )
 }
 
-export default LocalizadoresRelatedProducts;
+export default LlamadorMeserosRelatedProducts;

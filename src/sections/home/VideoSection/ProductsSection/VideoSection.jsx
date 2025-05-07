@@ -5,7 +5,7 @@ import Link from "next/link";
 
 // Dynamic import for YouTubePlayer with SSR enabled and a loading placeholder
 const YouTubePlayer = dynamic(
-  () => import("../../../../components/YouTubePlayer"),
+  () => import("@/components/YouTubePlayer"),
   {
     ssr: true,
     loading: () => <VideoPlaceholder />,

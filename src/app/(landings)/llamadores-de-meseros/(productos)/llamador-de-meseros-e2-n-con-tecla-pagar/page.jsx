@@ -1,7 +1,6 @@
-import style from "@/sections/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts.module.scss";
-import LogosSection from "@/sections/llamadores-de-meseros/components/ClientsSection/LlamadorMeserosClientsSection";
+import LogosSection from "@/sections/llamadores-de-meseros/landing/components/ClientsSection/LlamadorMeserosClientsSection";
 import TechnicalSheet from "@/sections/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar/components/TechnicalSheet/TechnicalSheet";
-import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts";
+import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/landing/components/RelatedProducts/LlamadorMeserosRelatedProducts";
 import HowItWorks from "@/sections/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar/components/HowItWorks/HowItWorks";
 import ProductGallerySelected from "@/sections/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar/components/ProductGallery/ProductGallerySelected";
 
@@ -23,7 +22,7 @@ export default function VerMasMeserosLlamadorV2n() {
       {/* LlamadorMeserosRelatedProducts: Muestra productos relacionados. 
         Props:
         - titleClassName (string): Clase CSS personalizada para el título. */}
-      <LlamadorMeserosRelatedProducts titleClassName={style.customTitle} />
+      <LlamadorMeserosRelatedProducts />
     </>
   );
 }

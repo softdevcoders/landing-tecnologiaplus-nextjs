@@ -1,9 +1,8 @@
-import style from "@/sections/localizadores-para-restaurantes/landing/components/RelatedProducts/LocalizadoresRelatedProducts.module.scss"; // Estilos específicos para productos relacionados
-import TechnicalSheet from "./components/TechnicalSheet/TechnicalSheet";
-import HowItWorks from "./components/HowItWorks/HowItWorks";
+import TechnicalSheet from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/TechnicalSheet/TechnicalSheet";
+import HowItWorks from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/HowItWorks/HowItWorks";
 import LocalizadoresRelatedProducts from "@/sections/localizadores-para-restaurantes/landing/components/RelatedProducts/LocalizadoresRelatedProducts"; // Componente para mostrar productos relacionados
-import LogosSection from "./components/LogosSection/LogosSection"; // Sección de logos de marcas o clientes
-import ProductGallerySelected from "./components/ProductGallery/ProductGallerySelected";
+import LogosSection from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/LogosSection/LogosSection"; // Sección de logos de marcas o clientes
+import ProductGallerySelected from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/ProductGallery/ProductGallerySelected";
 
 export const metadata = {
   title: "Localizadores para Restaurantes REC-V3: Experiencia Sin Espera",
@@ -43,7 +42,7 @@ export default function VerMasLocalizadoresRecV3() {
       {/* LocalizadoresRelatedProducts: Displays related products. 
         Props:
         - titleClassName (string): Custom CSS class for the title. */}
-      <LocalizadoresRelatedProducts titleClassName={style.customTitle} />
+      <LocalizadoresRelatedProducts />
     </>
   );
 }
