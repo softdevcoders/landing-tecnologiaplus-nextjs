@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import styles from "@/styles/ProductGallery.module.scss";
-
-import useDisableRightClick from "../../../../../hooks/useDisableRightClick";
+import useDisableRightClick from "@/hooks/useDisableRightClick";
 import {
   IoIosArrowBack,
   IoIosArrowDown,
@@ -11,7 +10,6 @@ import {
   IoIosArrowUp,
 } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
-
 import Popup from "@/components/PopUp/Popup";
 
 function ProductGallery() {
@@ -52,14 +50,6 @@ function ProductGallery() {
 
   return (
     <section className={styles.hero}>
-      <Header
-        customStyles={{
-          header: altStyles.altHeader,
-          phoneBtn: altStyles.altPhoneBtn,
-          searchIcon: altStyles.altSearchIcon,
-        }}
-      />
-
       <div className={styles.action__nav}>
         <button onClick={() => window.history.back()}>
           <IoIosArrowBack className={styles.icon__back} /> Volver

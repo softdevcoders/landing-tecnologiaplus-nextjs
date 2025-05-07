@@ -35,8 +35,7 @@ function MobileProductGallery() {
   const swiperRef = useRef(null);
 
   return (
-<div className={styles.mobileGallery}>
-
+    <div className={styles.mobileGallery}>
       <div className={styles.action__nav}>
         <button onClick={() => window.history.back()}>
           <IoIosArrowBack className={styles.icon__back} /> Volver
