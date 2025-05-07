@@ -1,6 +1,5 @@
-import style from "@/sections/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts.module.scss";
-import LogosSection from "@/sections/llamadores-de-meseros/components/ClientsSection/LlamadorMeserosClientsSection";
-import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts";
+import LogosSection from "@/sections/llamadores-de-meseros/landing/components/ClientsSection/LlamadorMeserosClientsSection";
+import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/landing/components/RelatedProducts/LlamadorMeserosRelatedProducts";
 import HowItWorks from "@/sections/llamadores-de-meseros/llamador-de-meseros-e2-b/components/HowItWorks/HowItWorks";
 import TechnicalSheet from "@/sections/llamadores-de-meseros/llamador-de-meseros-e2-b/components/TechnicalSheet/TechnicalSheet";
 import ProductGallerySelected from "@/sections/llamadores-de-meseros/llamador-de-meseros-e2-b/components/ProductGallery/ProductGallerySelected";
@@ -24,7 +23,7 @@ export default function VerMasMeserosLlamadorV2b() {
       {/* Props:
         - titleClassName (string): Custom CSS class for the title styling
       */}
-      <LlamadorMeserosRelatedProducts titleClassName={style.customTitle} />
+      <LlamadorMeserosRelatedProducts />
     </>
   );
 }

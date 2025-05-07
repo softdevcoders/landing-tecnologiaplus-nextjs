@@ -1,12 +1,12 @@
 // Importación de componentes específicos de la página
-import LlamadorMeserosBenefitsSection from "@/sections/llamadores-de-meseros/components/BenefitsSection/LlamadorMeserosBenefitsSection"; // Props: { benefits: Array }
-import LlamadorMeserosClientsSection from "@/sections/llamadores-de-meseros/components/ClientsSection/LlamadorMeserosClientsSection"; // Props: { clients: Array }
-import LlamadorMeserosHeroSection from "@/sections/llamadores-de-meseros/components/HeroSection/LlamadorMeserosHeroSection"; // Props: { title: String, subtitle: String, image: String }
-import LlamadorMeserosIndustriesSection from "@/sections/llamadores-de-meseros/components/IndustriesSection/LlamadorMeserosIndustriesSection"; // Props: { industries: Array }
-import LlamadorMeserosProductsSection from "@/sections/llamadores-de-meseros/components/ProductsSection/LlamadorMeserosProductsSection"; // Props: { products: Array }
-import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/components/RelatedProducts/LlamadorMeserosRelatedProducts"; // Props: { relatedProducts: Array }
-import LlamadorMeserosSecondaryProductsSection from "@/sections/llamadores-de-meseros/components/SecondaryProductsSection/LlamadorMeserosSecondaryProductsSection"; // Props: { secondaryProducts: Array }
-import StepsSectionLlamadorMeseros from "@/sections/llamadores-de-meseros/components/StepsSection/StepsSectionLlamadorMeseros"; // Props: { steps: Array }
+import LlamadorMeserosBenefitsSection from "@/sections/llamadores-de-meseros/landing/components/BenefitsSection/LlamadorMeserosBenefitsSection"; // Props: { benefits: Array }
+import LlamadorMeserosClientsSection from "@/sections/llamadores-de-meseros/landing/components/ClientsSection/LlamadorMeserosClientsSection"; // Props: { clients: Array }
+import LlamadorMeserosHeroSection from "@/sections/llamadores-de-meseros/landing/components/HeroSection/LlamadorMeserosHeroSection"; // Props: { title: String, subtitle: String, image: String }
+import LlamadorMeserosIndustriesSection from "@/sections/llamadores-de-meseros/landing/components/IndustriesSection/LlamadorMeserosIndustriesSection"; // Props: { industries: Array }
+import LlamadorMeserosProductsSection from "@/sections/llamadores-de-meseros/landing/components/ProductsSection/LlamadorMeserosProductsSection"; // Props: { products: Array }
+import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/landing/components/RelatedProducts/LlamadorMeserosRelatedProducts"; // Props: { relatedProducts: Array }
+import LlamadorMeserosSecondaryProductsSection from "@/sections/llamadores-de-meseros/landing/components/SecondaryProductsSection/LlamadorMeserosSecondaryProductsSection"; // Props: { secondaryProducts: Array }
+import StepsSectionLlamadorMeseros from "@/sections/llamadores-de-meseros/landing/components/StepsSection/StepsSectionLlamadorMeseros"; // Props: { steps: Array }
 
 // Metadatos de la página
 export const metadata = {
