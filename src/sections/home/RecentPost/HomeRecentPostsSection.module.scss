@@ -1,5 +1,5 @@
-@use "../../../styles/components/productsSection" as *;
-@use "../../../styles/base/mixins" as *;
+@use "@/styles/components/productsSection" as *;
+@use "@/styles/base/mixins" as *;
 
 .products__section {
   @include respond-to-max("laptop") {

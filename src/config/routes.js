@@ -127,12 +127,12 @@ export const routes = {
     rollosDeFichosParaTurnos: {
       url: "/rollos-de-fichos-para-turnos",
       label: "Rollos para turnos",
-      children: [
-        {
+      children: {
+        rollosDeTurnos: {
           label: "Rollos de turnos",
           url: "/rollos-de-fichos-para-turnos/rollos-de-turnos",
         }
-      ]
+      }
     },
     rollosDePapelTermico: {
       url: "/rollos-de-papel-termico",
