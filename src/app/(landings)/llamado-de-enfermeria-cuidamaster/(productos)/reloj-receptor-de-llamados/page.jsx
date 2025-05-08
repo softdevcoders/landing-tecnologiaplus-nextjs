@@ -1,8 +1,8 @@
 // Importing components for the page
-import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/alarma-de-luz/components/LogosSection/LogosSection"; // Logos section component
+import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/ClientsSection/EnfermeriaClientsSection"; // Logos section component
 import TechnicalSheet from "@/sections/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados/components/TechnicalSheet/TechnicalSheet"; // Technical sheet component
 import HowItWorks from "@/sections/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados/components/HowItWorks/HowItWorks"; // How it works section component
-import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria/cuidamaster/components/RelatedProducts/EnfermeriaRelatedProducts"; // Related products component
+import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/RelatedProducts/EnfermeriaRelatedProducts"; // Related products section component
 import ProductGallerySelected from "@/sections/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados/components/ProductGallery/ProductGallerySelected"; // Product gallery component
 
 // Metadata for the page

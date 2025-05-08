@@ -1,8 +1,8 @@
 // Component imports
-import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/alarma-de-luz/components/LogosSection/LogosSection";
+import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/ClientsSection/EnfermeriaClientsSection";
 import TechnicalSheet from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-ex1/components/TechnicalSheet/TechnicalSheet";
 import HowItWorks from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-ex1/components/HowItWorks/HowItWorks";
-import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria/cuidamaster/components/RelatedProducts/EnfermeriaRelatedProducts";
+import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/RelatedProducts/EnfermeriaRelatedProducts";
 import ProductGallerySelected from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-ex1/components/ProductGallery/ProductGallerySelected";
 
 // Metadata for the page

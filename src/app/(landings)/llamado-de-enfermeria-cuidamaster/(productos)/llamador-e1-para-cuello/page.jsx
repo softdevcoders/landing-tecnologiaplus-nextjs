@@ -1,9 +1,9 @@
 // Component imports
 import TechnicalSheet from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello/components/TechnicalSheet/TechnicalSheet";
 import HowItWorks from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello/components/HowItWorks/HowItWorks";
-import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria/cuidamaster/components/RelatedProducts/EnfermeriaRelatedProducts";
+import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/RelatedProducts/EnfermeriaRelatedProducts";
 import ProductGallerySelected from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello/components/ProductGallery/ProductGallerySelected";
-import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/alarma-de-luz/components/LogosSection/LogosSection";
+import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/ClientsSection/EnfermeriaClientsSection";
 
 // Metadata for SEO
 export const metadata = {

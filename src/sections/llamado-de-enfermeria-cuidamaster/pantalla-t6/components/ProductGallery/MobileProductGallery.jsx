@@ -6,9 +6,9 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import styles from "@/app/ver-mas/styles/ProductGallery.module.scss";
-import altStyles from "@/app/components/Header/HeaderAlt.module.scss";
-import Header from "@/app/components/Header/Header";
+import styles from "@/styles/ProductGallery.module.scss";
+
+
 import { IoIosArrowBack } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -33,14 +33,7 @@ function MobileProductGallery() {
 
   return (
     <div className={styles.mobileGallery}>
-      <Header
-        customStyles={{
-          header: altStyles.altHeader,
-          phoneBtn: altStyles.altPhoneBtn,
-          searchIcon: altStyles.altSearchIcon,
-          menuIcon: altStyles.altMenuIcon,
-        }}
-      />
+
 
       <div className={styles.action__nav}>
         <button onClick={() => window.history.back()}>

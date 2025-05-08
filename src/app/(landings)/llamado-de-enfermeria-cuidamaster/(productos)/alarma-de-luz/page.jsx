@@ -1,9 +1,9 @@
 // Component imports
 import TechnicalSheet from "@/sections/llamado-de-enfermeria-cuidamaster/alarma-de-luz/components/TechnicalSheet/TechnicalSheet";
 import HowItWorks from "@/sections/llamado-de-enfermeria-cuidamaster/alarma-de-luz/components/HowItWorks/HowItWorks";
-import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria/cuidamaster/components/RelatedProducts/EnfermeriaRelatedProducts";
+import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/RelatedProducts/EnfermeriaRelatedProducts";
 import ProductGallerySelected from "@/sections/llamado-de-enfermeria-cuidamaster/alarma-de-luz/components/ProductGallery/ProductGallerySelected";
-import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/alarma-de-luz/components/LogosSection/LogosSection";
+import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/ClientsSection/EnfermeriaClientsSection";
 
 // Metadata for the page
 export const metadata = {

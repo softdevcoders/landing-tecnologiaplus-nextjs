@@ -1,6 +1,6 @@
 "use client";
 import { useLogos } from "@/app/context/LogosContext";
-import styles from "@/app/ver-mas/styles/LogosSection.module.scss";
+import styles from "@/styles/LogosSection.module.scss";
 import InfiniteSlider2 from "@/app/components/sliders/InfiniteSlider2";
 
 function LogosSection() {

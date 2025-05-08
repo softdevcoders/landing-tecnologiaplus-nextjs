@@ -1,8 +1,8 @@
 // Importación de componentes específicos para la página
-import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/alarma-de-luz/components/LogosSection/LogosSection";
-import TechnicalSheet from "@/sections/ver-mas/meseros/pantalla-6-llamados/components/TechnicalSheet/TechnicalSheet";
+import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/ClientsSection/EnfermeriaClientsSection";
+import TechnicalSheet from "@/sections/llamado-de-enfermeria-cuidamaster/pantalla-t6/components/TechnicalSheet/TechnicalSheet";
 import HowItWorks from "@/sections/llamado-de-enfermeria-cuidamaster/pantalla-t6/components/HowItWorks/HowItWorks";
-import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria/cuidamaster/components/RelatedProducts/EnfermeriaRelatedProducts";
+import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/RelatedProducts/EnfermeriaRelatedProducts";
 import ProductGallerySelected from "@/sections/llamado-de-enfermeria-cuidamaster/pantalla-t6/components/ProductGallery/ProductGallerySelected";
 
 // Metadatos de la página para SEO y redes sociales

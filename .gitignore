@@ -52,3 +52,7 @@ yarn*
 # Ignorar los CSS generados por SASS
 styles/**/*.css
 styles/**/*.css.map
+
+sitemap.xml
+sitemap-*.xml
+robots.txt
