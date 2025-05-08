@@ -9,10 +9,10 @@ export default function SliderHero() {
        <ImageCloudinary
         src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349921/jlxxsnlercoj0nihz4am_udppso.webp"
         alt="Background Image for Slider Hero"
-        fill
+        width={200}
+        height={200}
         priority
         fetchPriority="high"
-        sizes="(min-width: 1024px) 25vw, 100px"
         style={{
           objectFit: 'cover',
           objectPosition: 'center',
