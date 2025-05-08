@@ -96,7 +96,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .landing_hero__container{
 
     .landing_hero__content {
@@ -145,7 +145,7 @@
       .landing_hero__content__image{
         justify-content: flex-end;
         .landing_hero__content__image__img{
-          max-height: 600px;
+          max-height: 700px;
           max-width: 600px;
         }
       }
