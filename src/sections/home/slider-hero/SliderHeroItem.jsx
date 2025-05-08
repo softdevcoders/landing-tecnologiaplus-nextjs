@@ -26,13 +26,8 @@ const SliderHeroItem = ({ title, image, description, button, priority, fetchPrio
               className={styles.slider__hero__content__text__image}
               src={image.image_text_column.src}
               alt={image.image_text_column.alt}
-              sizes="(max-width: 640px) 80vw, 
-                (max-width: 768px) 60vw, 
-                (max-width: 1024px) 40vw, 
-                (max-width: 1280px) 30vw, 
-                25vw"
-              width={350}
-              height={350}
+              width={100}
+              height={100}
             />
           )}
         </div>

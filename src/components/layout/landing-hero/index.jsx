@@ -8,10 +8,10 @@ const LandingHero = ({ title, image, description, button, priority, fetchPriorit
       <ImageCloudinary
         src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349921/jlxxsnlercoj0nihz4am_udppso.webp"
         alt="Background Image for Slider Hero"
-        fill
+        width={200}
+        height={200}
         priority
         fetchPriority="high"
-        sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 1800px"
         className={styles.landing_hero__background}
       />
       <div className={styles.landing_hero__content}>
@@ -21,8 +21,8 @@ const LandingHero = ({ title, image, description, button, priority, fetchPriorit
             className={styles.landing_hero__content__image__img}
             src={image.src}
             alt={image.alt}
-            width={600}
-            height={600}
+            width={200}
+            height={200}
             {...priority && { priority: true } }
             {...fetchPriority && { fetchPriority: "high" } }
           />
