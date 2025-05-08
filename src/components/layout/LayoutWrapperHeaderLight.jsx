@@ -1,4 +1,4 @@
-const { default: Header } = require("./header/Header");
+import Header from "./header/Header";
 
 const LayoutWrapperHeaderLight = ({ children }) => (
   <>

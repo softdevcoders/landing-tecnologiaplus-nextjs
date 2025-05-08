@@ -137,12 +137,12 @@ export const routes = {
     rollosDePapelTermico: {
       url: "/rollos-de-papel-termico",
       label: "Rollos térmicos",
-      children: [
-        {
+      children: {
+        rollosTermicos:{
           label: "Rollos térmicos",
           url: "/rollos-de-papel-termico/rollos-termicos",
         }
-      ]
+      }
     },
     dispensadorDeTickets: {
       url: "/dispensador-de-tickets",

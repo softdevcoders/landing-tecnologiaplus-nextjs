@@ -7,10 +7,10 @@ function TurnosHeroSection() {
       title="Numeración clara y corte preciso"
       image={{
         src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1744458412/Nueva_imagen_2x-8_xi5zmr.webp",
-        alt: "Rollos para impresora térmica personalizados",
+        alt: "Rollos de fichos para turnos imagen principal",
         image_text_column: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1744463735/12-8_qjsewx.webp",
-          alt: "Rollos para impresora térmica personalizados",
+          alt: "Logo turnoExpress",
         }
       }}
       button={{

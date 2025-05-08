@@ -21,8 +21,8 @@ const LandingHero = ({ title, image, description, button, priority, fetchPriorit
             className={styles.landing_hero__content__image__img}
             src={image.src}
             alt={image.alt}
-            width={600}
-            height={600}
+            width={800}
+            height={800}
             {...priority && { priority: true } }
             {...fetchPriority && { fetchPriority: "high" } }
           />
