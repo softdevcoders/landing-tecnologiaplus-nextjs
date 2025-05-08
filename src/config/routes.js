@@ -147,12 +147,12 @@ export const routes = {
     dispensadorDeTickets: {
       url: "/dispensador-de-tickets",
       label: "Dispensador de tickets",
-      children: [
-        {
+      children: {
+        dispensadorDeTicketsCaracol: {
           label: "Dispensador de tickets caracol",
           url: "/dispensador-de-tickets/dispensador-de-tickets-caracol",
         }
-      ]
+      }
     },
     llamadoDeEnfermeriaCuidamaster: {
       url: "/llamado-de-enfermeria-cuidamaster",
