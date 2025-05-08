@@ -4,8 +4,8 @@ import HowItWorks from "@/sections/calificador-de-servicio-al-cliente-opinamaste
 import ProductGallerySelected from "@/sections/calificador-de-servicio-al-cliente-opinamaster/calificador-de-servicio/components/ProductGallery/ProductGallerySelected";
 
 // Component imports using absolute paths
-import CalificadorRelatedProducts from "@/app/calificador-de-servicio-al-cliente/opinamaster/components/RelatedProducts/CalificadorRelatedProducts";
-import LogosSection from "@/app/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio/components/LogosSection/LogosSection";
+import CalificadorRelatedProducts from "@/sections/calificador-de-servicio-al-cliente-opinamaster/landing/components/RelatedProducts/CalificadorRelatedProducts";
+import LogosSection from "@/sections/calificador-de-servicio-al-cliente-opinamaster/landing/components/ClientsSection/CalificadorClientsSection";
 
 export const metadata = {
   title: "Calificador de Servicio al Cliente: Opinión en Tiempo Real",
