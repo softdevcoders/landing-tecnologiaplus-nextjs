@@ -11,6 +11,7 @@ import styles from "@/styles/ProductGallery.module.scss";
 
 import { IoIosArrowBack } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
+import ImageCloudinary from "@/components/ui/image-cloudinary";
 
 // Main gallery images - don't modify these constants during rendering
 const GALLERY_IMAGES = [
@@ -54,7 +55,9 @@ function MobileProductGallery() {
       >
         {GALLERY_IMAGES.map((img, index) => (
           <SwiperSlide key={generateImageKey(img, index)}>
-            <img
+            <ImageCloudinary
+              width={485}
+              height={382}
               src={img}
               alt={`Imagen ${index + 1}`}
               className={styles.mainImage}

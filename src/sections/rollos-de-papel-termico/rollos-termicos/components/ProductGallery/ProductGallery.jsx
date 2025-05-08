@@ -13,6 +13,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import Popup from "@/components/PopUp/Popup";
 import useDisableRightClick from "@/hooks/useDisableRightClick";
+import ImageCloudinary from "@/components/ui/image-cloudinary";
 
 function ProductGallery() {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +72,9 @@ function ProductGallery() {
             {images
               .slice(scrollPosition, scrollPosition + 5)
               .map((img, index) => (
-                <img
+                <ImageCloudinary
+                  width={117}
+                  height={92}
                   key={scrollPosition + index} // Usamos un índice único para evitar problemas de key
                   src={img}
                   alt={`Thumbnail ${scrollPosition + index + 1}`}
@@ -108,7 +111,12 @@ function ProductGallery() {
               onClick={handlePrevImage}
               onMouseDown={(e) => e.preventDefault()}
             />
-            <img loading="lazy" src={selectedImage} alt="Imagen seleccionada" />
+            <ImageCloudinary
+              width={765}
+              height={606}  
+              src={selectedImage} 
+              alt="Imagen seleccionada" 
+            />
             <IoIosArrowForward
               className={styles.icon__next}
               onClick={handleNextImage}

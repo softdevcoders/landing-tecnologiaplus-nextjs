@@ -1,6 +1,5 @@
 import TechnicalSheet from "@/sections/rollos-de-papel-termico/rollos-termicos/components/TechnicalSheet/TechnicalSheet";
 import LogosSection from "@/sections/rollos-de-papel-termico/rollos-termicos/components/LogosSection/LogosSection";
-import style from "@/app/rollos-de-papel-termico/components/RelatedProducts/RelatedProducts.module.scss";
 import RelatedProducts from "@/sections/rollos-de-papel-termico/landing/components/RelatedProducts/RelatedProducts";
 import ProductGallerySelected from "@/sections/rollos-de-papel-termico/rollos-termicos/components/ProductGallery/ProductGallerySelected";
 
@@ -37,7 +36,7 @@ export default function VerMasTermicos() {
       <LogosSection />
 
       {/* RelatedProducts: Recibe un prop `titleClassName` para personalizar el estilo del título */}
-      <RelatedProducts titleClassName={style.customTitle} />
+      <RelatedProducts />
     </>
   );
 }

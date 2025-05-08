@@ -1,3 +1,4 @@
+import ImageCloudinary from "@/components/ui/image-cloudinary";
 import styles from "./TechnicalSheet.module.scss";
 
 function TechnicalSheet() {
@@ -6,8 +7,9 @@ function TechnicalSheet() {
       <h2>Ficha técnica</h2>
       <div className={styles.items__container}>
         <div className={styles.item}>
-          <img
-            loading="lazy"
+          <ImageCloudinary
+            width={50}
+            height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392284/ICONO_5_z4dhr8.svg"
             alt="icono de papel"
           />
@@ -17,8 +19,9 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <img
-            loading="lazy"
+          <ImageCloudinary
+            width={50}
+            height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392284/ICONO_4_hctj7d.svg"
             alt="icono de rollos"
           />
@@ -28,8 +31,9 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <img
-            loading="lazy"
+          <ImageCloudinary
+            width={50}
+            height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392284/ICONO_3_zoivd7.svg"
             alt="icono de impresora"
           />
@@ -39,8 +43,9 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <img
-            loading="lazy"
+          <ImageCloudinary
+            width={50}
+            height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392283/ICONO_2_fqr5sl.svg"
             alt="icono de check"
           />
@@ -50,16 +55,18 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <img
-            loading="lazy"
+          <ImageCloudinary
+            width={50}
+            height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392283/ICONO_1_ctsg4n.svg"
             alt="icono de color morado"
           />
           <p>Color: blanco</p>
         </div>
         <div className={styles.item}>
-          <img
-            loading="lazy"
+          <ImageCloudinary
+            width={50}
+            height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392283/ICONO_fdyhsa.svg"
             alt="icono de rollo con medidas"
           />
