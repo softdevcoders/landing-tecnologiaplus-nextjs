@@ -1,0 +1,30 @@
+@use "@/styles/components/benefitsSection" as *;
+@use "@/styles/base/mixins" as *;
+
+.benefits__section {
+  position: relative;
+  z-index: 2;
+
+  ul {
+    li {
+      > div {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+        span {
+          font-size: 1rem;
+        }
+        span.hide__on__mobile {
+          display: inline-block;
+          font-size: inherit;
+        }
+        @include respond-to-max("laptop") {
+          text-wrap: balance;
+          span.hide__on__mobile {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use "@/styles/HowItWorks.module.scss" as *;
+
+.HowItWorks__container {
+  .items__container {
+    .item {
+      img {
+        max-height: 400px;
+      }
+    }
+    .item:last-child {
+      img {
+        margin-top: -35px;
+        max-height: 500px;
+      }
+    }
+  }
+}
