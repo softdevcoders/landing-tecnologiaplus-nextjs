@@ -191,16 +191,16 @@ export const routes = {
     calificadorDeServicioAlClienteOpinamaster: {
       url: "/calificador-de-servicio-al-cliente-opinamaster",
       label: "Calificador de servicio",
-      children: [
-        {
+      children: {
+        calificadorDeServicio: {
           label: "Calificador de servicio",
           url: "/calificador-de-servicio-al-cliente-opinamaster/calificador-de-servicio",
         },
-        {
+        avisoDeParedParaCalificarServicio: {
           label: "Aviso de pared para calificar servicio",
           url: "/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio",
         }
-      ]
+      }
     },
     encuestaVirtual: {
       url: "/encuesta-virtual-opinamaster",
