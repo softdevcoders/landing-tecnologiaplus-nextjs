@@ -11,7 +11,7 @@ const LandingHero = ({ title, image, description, button, priority, fetchPriorit
         fill
         priority
         fetchPriority="high"
-        sizes="(min-width: 1024px) 25vw, 100px"
+        sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 1800px"
         className={styles.landing_hero__background}
       />
       <div className={styles.landing_hero__content}>
