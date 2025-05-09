@@ -1,0 +1,95 @@
+.blogCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  background-color: #FFFFFF;
+  width: 360px;
+  box-shadow: 0 4px 6px #0000001a;
+
+  .blogCard__image {
+    width: 100%;
+    height: 200px;
+    border-radius: 0.5rem 0.5rem 0 0;
+    overflow: hidden;
+
+    .blogCard__image__img {
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  
+  .blogCard__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem;
+    color: #606060;
+
+    .blogCard__title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      display: -webkit-box; /* Webkit for Chrome, Safari */
+      -webkit-box-orient: vertical; /* Webkit for Chrome, Safari */
+      -webkit-line-clamp: 2; /* Webkit for Chrome, Safari */
+      overflow: hidden; /* Oculta el texto desbordado */
+      text-overflow: ellipsis; /* Aplica el '...' al texto truncado */
+      display: -moz-box; /* Firefox - prefiere flexbox o grid, pero algunos navegadores antiguos necesitan esto */
+      display: box; /* Antiguos navegadores como IE */
+    }
+
+    .blogCard__excerpt {
+      font-size: 1rem;
+      -webkit-line-clamp: 3; /* Webkit for Chrome, Safari */
+      -webkit-box-orient: vertical; /* Webkit for Chrome, Safari */
+      overflow: hidden; /* Oculta el texto desbordado */
+      text-overflow: ellipsis; /* Aplica el '...' al texto truncado */
+      display: -webkit-box; /* Webkit for Chrome, Safari */
+      display: -moz-box; /* Firefox - prefiere flexbox o grid, pero algunos navegadores antiguos necesitan esto */
+      display: box; /* Antiguos navegadores como IE */
+      margin-bottom: 0;
+      font-weight: 500;
+    }
+
+    .blogCard__footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .blogCard__date {
+
+      }
+
+      .blogCard__ctaButton {
+        color: #fff;
+        background: #6f3bb4;
+        border-radius: 2rem;
+        align-items: center;
+        gap: 5px;
+        margin-left: auto;
+        padding: .5rem 1rem;
+        font-size: .8rem;
+        font-weight: 600;
+        line-height: 1.2;
+        text-decoration: none;
+        display: flex;
+
+        svg {
+          transition: transform 0.5s ease;
+        }
+
+        &:hover {
+          svg {
+            transform: translateX(3px);
+          }
+        }
+      }
+    }
+  }
+}
