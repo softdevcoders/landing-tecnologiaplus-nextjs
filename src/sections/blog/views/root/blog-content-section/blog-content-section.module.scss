@@ -1,0 +1,37 @@
+.blogContent__container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  .blogContent__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 360px);
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .blogContent__pagination {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+
+    .blogContent__paginationButton {
+      color: #606060;
+      cursor: pointer;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 8px 12px;
+      font-weight: 600;
+      transition: background .3s;
+      min-width: 35px;     
+
+      &:hover,
+      &.active {
+        color: #6f3bb4;
+        background: #eadef3;
+        font-weight: 700;
+      }
+    }
+  }
+}
