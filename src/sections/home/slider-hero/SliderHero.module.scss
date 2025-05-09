@@ -102,17 +102,27 @@
       .slides {
         .slide {
           .slider__hero__content {
+            height: calc(100vh - 128px);
+            margin-top: 128px;
             grid-template-rows: auto;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 3rem;
+            padding: 0 1rem;
 
             .slider__hero__content__image,
             .slider__hero__content__text {
+              padding: 0;
               height: 100%;
+            }
+
+            .slider__hero__content__image {
+              margin-top: 0;
             }
 
             .slider__hero__content__text{
               align-items: flex-start; 
               justify-content: center;
+              padding-right: 6.5rem;
 
               .slider__hero__content__text__image_container {
                 display: flex;
@@ -147,7 +157,7 @@
               justify-content: flex-end;
               .slider__hero__content__image__img{
                 max-height: 600px;
-                max-width: 600px;
+                max-width: 700px;
               }
             }
           }
