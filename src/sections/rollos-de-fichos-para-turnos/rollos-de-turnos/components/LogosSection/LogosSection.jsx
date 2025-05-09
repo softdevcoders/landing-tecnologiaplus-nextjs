@@ -5,7 +5,7 @@ function LogosSection() {
   return (
     <NuestrosClientes 
       title="Algunos de nuestros clientes"
-      description="Empresas que confían en Tecnología Plus para mejorar la atención al cliente."
+      description="Grandes y pequeñas empresas confían en nuestros fichos de turnos para ordenar la atención al cliente."
       logos={logosTurnos}
     />
   );

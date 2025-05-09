@@ -121,7 +121,7 @@ export const routes = {
       }
     },
     sistemasDeTurnosTurnomaster: {
-      url: "/sistema-de-turnos/turnomaster",
+      url: "/sistema-de-turnos-turnomaster",
       label: "Sistema de turnos",
     },
     rollosDeFichosParaTurnos: {

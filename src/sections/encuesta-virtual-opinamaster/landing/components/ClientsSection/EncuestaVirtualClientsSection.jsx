@@ -1,14 +1,14 @@
 import NuestrosClientes from "@/components/layout/nuestros-clientes";
 import { logosCalificador } from "@/config/client-logos";
 
-function CalificadorClientsSection() {
+function EncuestaVirtualClientsSection() {
   return (
     <NuestrosClientes 
       title="Algunos de nuestros clientes"
-      description="Empresas que toman decisiones con el calificador de servicio al cliente de OpinaMaster"
+      description="Marcas que utilizan la encuesta virtual y mejoran la experiencia de sus clientes."
       logos={logosCalificador}
     />
   );
 }
 
-export default CalificadorClientsSection;
+export default EncuestaVirtualClientsSection;

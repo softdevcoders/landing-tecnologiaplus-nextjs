@@ -11,8 +11,8 @@ const SliderHeroItem = ({ title, image, description, button, priority, fetchPrio
           className={styles.slider__hero__content__image__img}
           src={image.src}
           alt={image.alt}
-          width={200}
-          height={200}
+          width={600}
+          height={600}
           {...priority && { priority: true } }
           {...fetchPriority && { fetchPriority: "high" } }
         />

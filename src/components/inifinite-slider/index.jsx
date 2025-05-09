@@ -9,18 +9,18 @@ export default function InfiniteSlider({ logos }) {
       <div className={styles.sliderTrack}>
         {duplicated.map((logo, idx) => (
           <div key={idx} className={styles.slide}>
-            <ImageCloudinary
+            {/* <ImageCloudinary
               src={logo.src}
               alt={logo.alt}
               width={200}
               height={200}
-            />
-            {/* <img
+            /> */}
+            <img
               src={logo.src}
               alt={logo.alt}
               width={150}
               height={150}
-            /> */}
+            />
           </div>
         ))}
       </div>

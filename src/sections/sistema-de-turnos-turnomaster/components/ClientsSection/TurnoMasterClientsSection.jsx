@@ -6,7 +6,7 @@ function TurnoMasterClientsSection() {
   return (
     <NuestrosClientes 
       title="Algunos de nuestros clientes"
-      description="Empresas que confían en Tecnología Plus para mejorar la atención al cliente."
+      description="Empresas que usan TurnoMaster para agilizar el flujo de filas en tiempo real"
       logos={logosTurnoMaster}
     />
   );
