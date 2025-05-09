@@ -5,7 +5,7 @@ function LlamadorMeserosClientsSection() {
   return (
     <NuestrosClientes
       title="Algunos de nuestros clientes"
-      description="Empresas que confían en Tecnología Plus para mejorar la atención al cliente."
+      description="Negocios que agilizan su atención al cliente con nuestro sistema de Llamador de Meseros."
       logos={logosLlamadorMeseros}
     />
   );

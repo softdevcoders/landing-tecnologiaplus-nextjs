@@ -5,7 +5,7 @@ function TurnoExpressClientsSection() {
   return (
     <NuestrosClientes
       title="Algunos de nuestros clientes"
-      description="Empresas que confían en Tecnología Plus para mejorar la atención al cliente."
+      description="Empresas que eliminan las filas usando el Turnero Digital."
       logos={logosTurnoExpress}
     />
   );

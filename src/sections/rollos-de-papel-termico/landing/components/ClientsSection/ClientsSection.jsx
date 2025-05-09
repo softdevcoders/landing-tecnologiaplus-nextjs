@@ -5,7 +5,7 @@ function ClientsSection() {
   return (
     <NuestrosClientes 
       title="Algunos de nuestros clientes"
-      description="Empresas que confían en Tecnología Plus para mejorar la atención al cliente."
+      description="Nuestra calidad en rollos térmicos respalda a grandes empresas."
       logos={logosTermicos}
     />
   );

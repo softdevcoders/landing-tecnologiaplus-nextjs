@@ -5,7 +5,7 @@ function CalificadorClientsSection() {
   return (
     <NuestrosClientes 
       title="Algunos de nuestros clientes"
-      description="Empresas que confían en Tecnología Plus para mejorar la atención al cliente."
+      description="Empresas que toman decisiones con el calificador de servicio al cliente de OpinaMaster"
       logos={logosCalificador}
     />
   );

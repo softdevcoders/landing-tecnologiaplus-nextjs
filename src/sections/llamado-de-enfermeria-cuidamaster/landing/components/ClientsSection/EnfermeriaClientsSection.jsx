@@ -5,7 +5,7 @@ function EnfermeriaClientsSection() {
   return (
     <NuestrosClientes 
       title="Algunos de nuestros clientes"
-      description="Empresas que confían en Tecnología Plus para mejorar la atención al cliente."
+      description="Entidades médicas que mejoran su atención con el llamado de enfermeras"
       logos={logosEnfermeria}
     />
   );

@@ -5,7 +5,7 @@ function HomeClientsSection() {
   return (
     <NuestrosClientes 
       title="Algunos de nuestros clientes"
-      description="Empresas que confían en Tecnología Plus para mejorar la atención al cliente."
+      description="Grandes marcas confían en nuestros Localizadores de clientes para mejorar su atención y agilizar sus pedidos."
       logos={logosLocalizadores}
     />
   );
