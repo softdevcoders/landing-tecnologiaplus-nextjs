@@ -1,0 +1,27 @@
+.blogMain__main {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  margin-bottom: 10rem;
+  
+  .blogMain__noPosts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .blogMain__link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: var(--color-primary);
+      font-size: 1.6rem;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

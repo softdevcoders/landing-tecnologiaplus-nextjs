@@ -1,8 +1,10 @@
 import BlogView from "@/sections/blog/views/root/blog-view";
 
-const BlogPage = () => {
+const BlogPage = ({ searchParams }) => {
+  const page = searchParams.page || 1;
+  
   return (
-    <BlogView />
+    <BlogView page={page} />
   );
 }
 

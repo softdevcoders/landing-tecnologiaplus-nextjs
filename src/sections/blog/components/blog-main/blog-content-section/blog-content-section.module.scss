@@ -26,12 +26,17 @@
       transition: background .3s;
       min-width: 35px;     
 
-      &:hover,
-      &.active {
+      &:hover {
         color: #6f3bb4;
         background: #eadef3;
         font-weight: 700;
       }
+    }
+
+    .blogContent__paginationButton__active {
+      color: #6f3bb4;
+      background: #eadef3;
+      font-weight: 700;
     }
   }
 }
