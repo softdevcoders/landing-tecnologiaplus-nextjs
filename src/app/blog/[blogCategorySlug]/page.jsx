@@ -1,5 +1,5 @@
+import CategoryView from "@/sections/blog/views/categories/category-view";
 import { getCategories } from "@/request/server/categories/get-categories";
-import BlogView from "@/sections/blog/views/root/blog-view";
 import { notFound } from "next/navigation";
 
 const BlogCategoryPage = async ({ searchParams, params }) => {
@@ -15,7 +15,7 @@ const BlogCategoryPage = async ({ searchParams, params }) => {
   const category = Object.values(categories).find(category => category.slug === blogCategorySlug);
 
   return (
-    <BlogView page={page} category={category.category_key} />
+    <CategoryView page={page} category={category.category_key} />
   );
 }
 
