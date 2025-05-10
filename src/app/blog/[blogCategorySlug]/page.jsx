@@ -1,10 +1,21 @@
-const BlogCategoryPage = () => {
+import { getCategories } from "@/request/server/categories/get-categories";
+import BlogView from "@/sections/blog/views/root/blog-view";
+import { notFound } from "next/navigation";
+
+const BlogCategoryPage = async ({ searchParams, params }) => {
+  const { blogCategorySlug } = await params
+  const categories = getCategories();
+
+  if (!Object.values(categories).some(category => category.slug === blogCategorySlug)) {
+    return notFound();
+  }
+
+  const page = searchParams.page || 1;
+
+  const category = Object.values(categories).find(category => category.slug === blogCategorySlug);
 
   return (
-    <div>
-      <h1>BlogCategoryPage</h1>
-      <p>Welcome to the BlogCategoryPage page!</p>
-    </div>
+    <BlogView page={page} category={category.category_key} />
   );
 }
 

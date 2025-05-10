@@ -1,20 +1,5 @@
-const categories = {
-  LLAMADO_DE_ENFERMERIA_CUIDAMASTER: {
-    category_key: "LLAMADO_DE_ENFERMERIA_CUIDAMASTER",
-    category_name: "Llamado de enfermería CuidaMaster",
-    url_category: "/llamado-de-enfermeria-cuidamaster",
-  },
-  LOCALIZADORES_PARA_RESTAURANTES: {
-    category_key: "LOCALIZADORES_PARA_RESTAURANTES",
-    category_name: "Localizadores para restaurantes",
-    url_category: "/localizadores-para-restaurantes",
-  },
-  LLAMADORES_DE_MESEROS: {
-    category_key: "LLAMADORES_DE_MESEROS",
-    category_name: "Llamadores de meseros",
-    url_category: "/llamadores-de-meseros",
-  }
-}
+import { categories } from "@/data/categories";
+
 
 const llamadoresDeEnfermeriaPosts = [
   {
