@@ -1,16 +1,16 @@
-import LandingHero from "@/components/layout/landing-hero";
+import LandingHero from "@/components/landing-hero";
+import { landingHeros } from "@/config/landing-heros";
 
 function TurnoExpressHeroSection() {
   return (
-    <LandingHero
-      title="Turnero digital: Adiós a las filas"
-      image={{
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431726/Imagen_bannerprincipal_2x-8_daisi3.webp",
-        alt: "Turnero digital",
-      }}
-      description="Agilidad y orden en cada turno."
-      priority={true}
-      fetchPriority="high"
+    <LandingHero 
+      {...({
+        ...landingHeros.turneroTurnoexpress,
+        title: landingHeros.turneroTurnoexpress.informationSingleLanding.title,
+        subTitle: landingHeros.turneroTurnoexpress.informationSingleLanding.subTitle,
+        description: landingHeros.turneroTurnoexpress.informationSingleLanding.description,
+        button: null
+      })} 
     />
   )
 }

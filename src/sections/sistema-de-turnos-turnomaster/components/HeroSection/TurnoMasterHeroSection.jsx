@@ -1,16 +1,16 @@
-import LandingHero from "@/components/layout/landing-hero";
+import LandingHero from "@/components/landing-hero";
+import { landingHeros } from "@/config/landing-heros";
 
 function TurnoMasterHeroSection() {
   return (
-    <LandingHero
-      title="Sistema de turnos de espera"
-      image={{
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860875/imagen_ppal_2x-8_1_cpkvb2.webp",
-        alt: "Software de feedback de clientes con pantalla de turnos",
-      }}
-      description="Lleva tu sala de espera al siguiente nivel"
-      priority={true}
-      fetchPriority="high"
+    <LandingHero 
+      {...({
+        ...landingHeros.sistemasDeTurnosTurnomaster,
+        title: landingHeros.sistemasDeTurnosTurnomaster.informationSingleLanding.title,
+        subTitle: landingHeros.sistemasDeTurnosTurnomaster.informationSingleLanding.subTitle,
+        description: landingHeros.sistemasDeTurnosTurnomaster.informationSingleLanding.description,
+        button: null
+      })} 
     />
   );
 }

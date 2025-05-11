@@ -1,16 +1,16 @@
-import LandingHero from "@/components/layout/landing-hero";
+import LandingHero from "@/components/landing-hero";
+import { landingHeros } from "@/config/landing-heros";
 
 function EncuestaVirtualHeroSection() {
   return (
-    <LandingHero
-      title="Encuesta virtual: Detecta los puntos fuertes"
-      image={{
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738607993/Imagen_principal_2x-8_pc1qfd.webp",
-        alt: "Software de encuestas en línea",
-      }}
-      description="y como mejorar tu negocio."
-      priority={true}
-      fetchPriority="high"
+    <LandingHero 
+      {...({
+        ...landingHeros.encuestaVirtual,
+        title: landingHeros.encuestaVirtual.informationSingleLanding.title,
+        subTitle: landingHeros.encuestaVirtual.informationSingleLanding.subTitle,
+        description: landingHeros.encuestaVirtual.informationSingleLanding.description,
+        button: null
+      })} 
     />
   );
 }

@@ -4,7 +4,7 @@ export const SLIDER_HERO_ITEMS = [
   {
     title: "Localizadores para restaurantes",
     image: {
-      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745506512/bQaT52.tif_4x-8_su2sfk.webp",
+      src: "v1745506512/bQaT52.tif_4x-8_su2sfk.webp",
       alt: "Localizadores para clientes",
     },
     description: "Tiempo de espera sin temor a perder el turno.",
@@ -18,7 +18,7 @@ export const SLIDER_HERO_ITEMS = [
   {
     title: "Llamador de meseros",
     image: {
-      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745506524/1_4x-8_5_kwkmli.webp",
+      src: "v1745506524/1_4x-8_5_kwkmli.webp",
       alt: "Llamador de meseros",
     },
     description: "Un solo toque evita largas esperas.",
@@ -30,10 +30,10 @@ export const SLIDER_HERO_ITEMS = [
   {
     title: "Llamado de enfermería",
     image: {
-      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745506524/2_4x-8_5_igrf1u.webp",
+      src: "v1745506524/2_4x-8_5_igrf1u.webp",
       alt: "Llamado de enfermería",
       image_text_column: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1744462125/Logo_CuidaMaster_4x-8_cn4z4h.webp",
+        src: "v1744462125/Logo_CuidaMaster_4x-8_cn4z4h.webp",
         alt: "CuidaMaster Logo",
       },
     },
@@ -46,10 +46,10 @@ export const SLIDER_HERO_ITEMS = [
   {
     title: "Sistema de turnos de espera",
     image: {
-      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745506523/4_4x-8_2_lxfolj.webp",
+      src: "v1745506523/4_4x-8_2_lxfolj.webp",
       alt: "Sistema de turnos de espera",
       image_text_column: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_auto,q_auto/v1744830279/3-8_jxkhuf.webp",
+        src: "f_auto,q_auto/v1744830279/3-8_jxkhuf.webp",
         alt: "Turno Master Logo",
       },
     },
@@ -62,10 +62,10 @@ export const SLIDER_HERO_ITEMS = [
   {
     title: "Turnero digital",
     image: {
-      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745506512/8_4x-8_1_tpdrqu.webp",
+      src: "v1745506512/8_4x-8_1_tpdrqu.webp",
       alt: "Turnero digital",
       image_text_column: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1744463735/12-8_qjsewx.webp",
+        src: "v1744463735/12-8_qjsewx.webp",
         alt: "Logo Turno Express",
       },
     },
@@ -78,10 +78,10 @@ export const SLIDER_HERO_ITEMS = [
   {
     title: "Dispensador de tickets",
     image: {
-      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745506512/9_4x-8_1_biykgd.webp",
+      src: "v1745506512/9_4x-8_1_biykgd.webp",
       alt: "Dispensador de tickets",
       image_text_column: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1744463735/12-8_qjsewx.webp",
+        src: "v1744463735/12-8_qjsewx.webp",
         alt: "Logo Turno Express",
       },
     },
@@ -94,10 +94,10 @@ export const SLIDER_HERO_ITEMS = [
   {
     title: "Rollos de turnos",
     image: {
-      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745506512/10_4x-8_l0ccbu.webp",
+      src: "v1745506512/10_4x-8_l0ccbu.webp",
       alt: "Rollos de turnos",
       image_text_column: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1744463735/12-8_qjsewx.webp",
+        src: "v1744463735/12-8_qjsewx.webp",
         alt: "Logo Turno Express",
       },
     },
@@ -110,7 +110,7 @@ export const SLIDER_HERO_ITEMS = [
   {
     title: "Rollos térmicos",
     image: {
-      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745506512/11_4x-8_2_nsacou.webp",
+      src: "v1745506512/11_4x-8_2_nsacou.webp",
       alt: "Rollos de turnos",
     },
     description: "Para tickets, facturas y más.",
@@ -122,10 +122,10 @@ export const SLIDER_HERO_ITEMS = [
   {
     title: "Calificador de servicio",
     image: {
-      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745506513/5_4x-8_3_s0vc5b.webp",
+      src: "v1745506513/5_4x-8_3_s0vc5b.webp",
       alt: "Rollos de turnos",
       image_text_column: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1744467470/6-8_xncpdx.webp",
+        src: "v1744467470/6-8_xncpdx.webp",
         alt: "Logo Turno Express",
       },
     },
@@ -138,10 +138,10 @@ export const SLIDER_HERO_ITEMS = [
   {
     title: "Encuesta virtual",
     image: {
-      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1745506523/7_4x-8_2_a0z5uj.webp",
+      src: "v1745506523/7_4x-8_2_a0z5uj.webp",
       alt: "Rollos de turnos",
       image_text_column: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1744467470/6-8_xncpdx.webp",
+        src: "v1744467470/6-8_xncpdx.webp",
         alt: "Logo Turno Express",
       },
     },
