@@ -1,16 +1,15 @@
-import LandingHero from "@/components/layout/landing-hero";
+import LandingHero from "@/components/landing-hero";
+import { landingHeros } from "@/config/landing-heros";
 
 function CalificadorHeroSection() {
   return (
-    <LandingHero
-      title="OpinaMaster: El calificador de servicio"
-      image={{
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738596299/Imagen_principal_2x-8_xvqvel.webp",
-        alt: "Rollos de fichos para turnos imagen principal",
-      }}
-      description="Para crecer con la voz de tus clientes."
-      priority={true}
-      fetchPriority="high"
+    <LandingHero 
+      {...({
+        ...landingHeros.calificadorDeServicioAlClienteOpinamaster,
+        title: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationSingleLanding.title,
+        subTitle: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationSingleLanding.subTitle,
+        description: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationSingleLanding.description,
+      })} 
     />
   );
 }

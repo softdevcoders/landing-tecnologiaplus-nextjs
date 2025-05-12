@@ -2,7 +2,8 @@ import React from "react";
 import classNames from "classnames";
 import style from "./Card.module.scss";
 import Link from "next/link";
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
+import ResponsiveImage from "../../responsive-image";
 
 const Card = ({
   title,
@@ -22,12 +23,18 @@ const Card = ({
           <h3>{title}</h3>
           <p>{description}</p>
         </div>
-        <ImageCloudinary
+        <ResponsiveImage
+          image={{
+            src: imageSrc,
+            alt: altText,
+            sizes: [
+              { imageWidth: 400, mediaQuery: "(min-width: 0px)" }, 
+              { imageWidth: 500, mediaQuery: "(min-width: 700px)" }, 
+            ],
+          }}
           src={imageSrc}
           alt={altText}
           className={style.card__image}
-          width={200}
-          height={200}
         />
       </div>
       {link && (

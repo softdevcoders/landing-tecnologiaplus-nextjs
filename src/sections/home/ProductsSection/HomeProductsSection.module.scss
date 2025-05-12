@@ -1,32 +1,72 @@
-@use "@/styles/components/productsSection" as *;
-@use "@/styles/base/mixins" as *;
+.productsSection__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: #f4f4f4;
 
-.products__section {
-  /* padding-bottom: 400px; */
-  padding-bottom: 0;
-  > h2 {
-    margin-bottom: 3rem;
-
-    @include respond-to-max("laptop") {
-      font-size: clamp(16px, 5vw, 30px);
-      text-align: center;
-    }
-  }
-  > p {
-    font-size: 0.8rem;
-    max-width: 1011px;
+  .productsSection__tittle {
+    font-size: clamp(1rem, 1.5vw + 1rem, 2.5rem);
   }
 
-  .products__container {
+  .productsSection__content {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 80px 40px;
-    width: 95vw; // Asegura que el contenedor ocupa todo el ancho de la pantalla
-    /* padding: 20px; */
+    grid-template-columns: repeat(auto-fill, min(max(200px, 100%), 500px));
+    gap: 2rem;
+    row-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    .productsSection__card {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      min-height: 500px;
+      padding: 2rem;
+      border-radius: 1rem;
+      background-color: #FFFFFF;
+      transition: all 0.3s ease-in-out;
 
-    @include respond-to-max("laptop") {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-      max-width: 500px;
+      .productsSection__cardTitle {
+        color: #606060;
+        text-align: center;
+        font-size: clamp(1.1rem, 1.5vw + 0.25rem, 1.3rem);
+        font-weight: 700;
+      }
+
+      .productsSection__cardDescription {
+        color: #606060;
+        text-align: center;
+        font-size: clamp(0.8rem, 1.5vw + 0.25rem, 1rem);
+        font-weight: 400;
+        margin: 0;
+      }
+
+      .productsSection__cardImage {
+        min-height: 400px;
+      }
+
+      .productsSection__cardBtn {
+        position: absolute;
+        bottom: -1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
+  }
+
+  .productsSection__description {
+    color: #606060;
+    text-align: center;
+    font-size: clamp(0.8rem, 1.5vw + 0.25rem, 0.8rem);
+    font-weight: 400;
+    margin-top: 4rem;
+    width: min(max(200px, 100%), 1200px);
   }
 }

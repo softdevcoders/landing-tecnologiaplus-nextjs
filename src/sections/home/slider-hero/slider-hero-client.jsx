@@ -1,27 +1,35 @@
 'use client';
 
 import { useState } from "react";
-import SliderHeroItem from "./SliderHeroItem";
 import ArrowLeft from "@/components/ui/icons/arrow-left";
 import ArrowRight from "@/components/ui/icons/arrow-right";
+import LandingHero from "@/components/landing-hero";
 
 export default function SliderHero({ styles, items }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const goToSlide = (index) => {
-    const total = items.length;
+    const total = Object.keys(items).length;
     setActiveIndex((index + total) % total);
   };
 
   return (
     <div className={styles.slider}>
       <div className={styles.slides} style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
-        {items.map((item, index) => (
+        {Object.keys(items).map((key, index) => (
           <div
             key={index}
             className={`${styles.slide} ${index === activeIndex ? styles.active : ''}`}
           >
-            <SliderHeroItem {...item} />
+            <LandingHero 
+              {...({
+                ...items[key],
+                title: items[key].informationSliderLanding.title,
+                subTitle: items[key].informationSliderLanding.subTitle,
+                description: items[key].informationSliderLanding.description,
+                showBackground: false,
+              })} 
+            />
           </div>
         ))}
       </div>
@@ -34,7 +42,7 @@ export default function SliderHero({ styles, items }) {
       </button>
 
       <div className={styles.bullets}>
-        {items.map((_, index) => (
+        {Object.keys(items).map((_, index) => (
           <span
             key={index}
             className={`${styles.bullet} ${index === activeIndex ? styles.active : ''}`}
