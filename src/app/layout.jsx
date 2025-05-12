@@ -7,10 +7,16 @@ import "@/components/layout/header/Header.module.scss";
 import SchemaOrg from "../components/SchemaOrg";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
-import { Montserrat } from 'next/font/google'
+import { Bebas_Neue, Montserrat } from 'next/font/google'
  
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const bebas = Bebas_Neue({
+  weight: ["400"],
   subsets: ['latin'],
   display: 'swap',
 })
@@ -93,7 +99,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={montserrat.className}>
+    <html lang="es" className={`${montserrat.className} ${bebas.className}`}>
       <head>
         {/* Essential resource hints */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
