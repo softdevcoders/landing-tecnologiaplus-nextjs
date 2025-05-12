@@ -4,7 +4,7 @@ import { info } from "sass";
 const commonSizesPrimaryImage = [
   { imageWidth: 400, mediaQuery: "(min-width: 0px)" }, 
   { imageWidth: 500, mediaQuery: "(min-width: 700px)" }, 
-  { imageWidth: 600, mediaQuery: "(min-width: 1200px)" }
+  { imageWidth: 800, mediaQuery: "(min-width: 1200px)" }
 ]
 
 const commonSizesSecondaryImage = [

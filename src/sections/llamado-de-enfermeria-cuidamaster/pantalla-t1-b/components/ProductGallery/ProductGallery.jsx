@@ -12,7 +12,7 @@ import {
 } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
 
-import Popup from "@/components/PopUp/Popup";
+import Popup from "@/components/ui/PopUp/Popup";
 
 function ProductGallery() {
   const [isOpen, setIsOpen] = useState(false);

@@ -4,14 +4,16 @@ import Link from "next/link";
 import { landingHeros } from "@/config/landing-heros";
 import ResponsiveImage from "@/components/ui/responsive-image";
 
-const LandingHero = ({ title, subTitle, description, button, image, imageTextColumn }) => {
+const LandingHero = ({ title, subTitle, description, button, image, imageTextColumn, showBackground = true }) => {
   
   return (
     <div className={styles.landing_hero__container}>
-      <ResponsiveImage 
-        className={styles.landing_hero__background} 
-        image={landingHeros.background.image}
-      />
+      {showBackground && (
+        <ResponsiveImage 
+          className={styles.landing_hero__background} 
+          image={landingHeros.background.image}
+        />
+      )}
       <div className={styles.landing_hero__content}>
         <div className={styles.landing_hero__content__image}>
           <ResponsiveImage 

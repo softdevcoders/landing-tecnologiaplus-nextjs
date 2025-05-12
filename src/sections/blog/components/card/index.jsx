@@ -1,5 +1,5 @@
 // import Link from "next/link"
-import LinkButton from "@/components/link"
+import LinkButton from "@/components/ui/link"
 import Link from "next/link"
 import style from "./card.module.scss"
 import { cleanText } from "@/lib/clean-text"

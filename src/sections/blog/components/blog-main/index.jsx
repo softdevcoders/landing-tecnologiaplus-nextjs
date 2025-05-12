@@ -2,7 +2,7 @@ import style from './blog-main.module.scss';
 import BlogHeroSection from "./blog-hero-section"
 import BlogContentSection from './blog-content-section';
 import { routes } from "@/config/routes";
-import Link from '@/components/link';
+import Link from '@/components/ui/link';
 
 const BlogMain = ({ posts, pagination }) => {
   return (

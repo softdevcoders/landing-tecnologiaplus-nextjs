@@ -1,4 +1,4 @@
-import Card from "@/components/cards/Products/Card";
+import Card from "@/components/ui/cards/Products/Card";
 import style from "./HomeProductsSection.module.scss";
 import { routes } from "@/config/routes";
 

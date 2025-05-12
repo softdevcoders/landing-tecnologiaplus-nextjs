@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BlogCard from "../../../components/cards/Blog/BlogCard";
+import BlogCard from "../../../components/ui/cards/Blog/BlogCard";
 import style from "./HomeRecentPostsSection.module.scss";
 import { IoIosArrowForward } from "react-icons/io";
 import { routes } from "@/config/routes";
