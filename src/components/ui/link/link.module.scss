@@ -5,8 +5,8 @@
   border-radius: 2rem;
   align-items: center;
   gap: 5px;
-  padding: .5rem 1rem;
-  font-size: .8rem;
+  padding: .75rem 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
@@ -21,4 +21,14 @@
       transform: translateX(3px);
     }
   }
+}
+
+.big {
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+}
+
+.small {
+  padding: .5rem 1rem;
+  font-size: .8rem;
 }

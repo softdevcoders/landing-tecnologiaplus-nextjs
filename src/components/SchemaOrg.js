@@ -9,8 +9,8 @@ export default function SchemaOrg() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     'name': 'Tecnología Plus',
-    'url': 'https://landing-tecnologiaplus-nextjs-dev.vercel.app',
-    'logo': 'https://landing-tecnologiaplus-nextjs-dev.vercel.app/logo.png',
+    'url': 'https://tecnologiaplus.com',
+    'logo': 'https://tecnologiaplus.com/logo.png',
     'description': 'Soluciones tecnológicas profesionales: sistemas de turnos, llamadores de meseros y localizadores',
     'address': {
       '@type': 'PostalAddress',
