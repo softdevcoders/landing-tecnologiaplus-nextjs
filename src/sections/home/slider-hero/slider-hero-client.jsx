@@ -34,10 +34,10 @@ export default function SliderHero({ styles, items }) {
         ))}
       </div>
 
-      <button className={styles.prev} onClick={() => goToSlide(activeIndex - 1)}>
+      <button className={`${styles.prev} ${(activeIndex === 0 ? styles.hide : '')}`} onClick={() => goToSlide(activeIndex - 1)}>
         <ArrowLeft />
       </button>
-      <button className={styles.next} onClick={() => goToSlide(activeIndex + 1)}>
+      <button className={`${styles.next} ${(activeIndex === Object.keys(items).length - 1 ? styles.hide : '')}`} onClick={() => goToSlide(activeIndex + 1)}>
         <ArrowRight />
       </button>
 
