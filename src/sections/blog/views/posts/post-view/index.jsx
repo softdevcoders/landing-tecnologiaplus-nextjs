@@ -18,7 +18,7 @@ const PostView = ({ post }) => {
           <div className={style.blogPostView__imageContainer}>
           <img 
             className={style.blogPostView__image}
-            src={post.yoast_head_json.og_image[0].url}  
+            src={post.images[0]}  
           />
 
           </div>
