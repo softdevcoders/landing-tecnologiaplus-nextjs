@@ -10,14 +10,14 @@ const Card = ({ post }) => {
     <article className={style.blogCard}>
       <div className={style.blogCard__image} >
         <img 
-          src={post.yoast_head_json.og_image[0].url} 
+          src={post.images[0]} 
           alt="Imagen representativa del post de llamado de enfermería" 
           className={style.blogCard__image__img} 
         />
       </div>
       
       <div className={style.blogCard__content}>
-        <Link href={post.link} title="Leer el artículo completo sobre el sistema de llamado de enfermería">
+        <Link href={post.current_link} title="Leer el artículo completo sobre el sistema de llamado de enfermería">
           <h2 className={style.blogCard__title}>
               {cleanText(post.title.rendered)}
           </h2>
@@ -27,7 +27,7 @@ const Card = ({ post }) => {
         </p>
         <div className={style.blogCard__footer}>
           <time className={style.blogCard__date}>{formatDate(post.date)}</time>
-          <LinkButton href={post.link} title="Leer más sobre el sistema de llamado de enfermería">
+          <LinkButton href={post.current_link} title="Leer más sobre el sistema de llamado de enfermería">
             Leer más
           </LinkButton>
         </div>

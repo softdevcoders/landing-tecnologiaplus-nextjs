@@ -21,6 +21,7 @@ const ResponsiveImage = ({ className, image }) => {
         src={`${baseUrl}${defaultSize.imageWidth}/${src}`}
         alt={alt}
         className={style.responsiveImageImg}
+        loading="lazy"
       />
     </picture>
   );
