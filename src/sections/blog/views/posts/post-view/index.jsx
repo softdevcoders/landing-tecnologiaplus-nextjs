@@ -3,6 +3,7 @@ import style from "./post-view.module.scss";
 import Card from "@/sections/blog/components/card";
 import { formatDate } from "@/lib/format-date";
 import { cleanText } from "@/lib/clean-text";
+import { htmlReader } from "@/lib/html-reader";
 
 const PostView = ({ post }) => {
   const { posts } = getPosts({ blogPostSlug: post.categories[0], page: 1, pageSize: 3 });
@@ -24,7 +25,8 @@ const PostView = ({ post }) => {
           </div>
           <div 
             className={style.blogPostView__contentHtml} 
-            dangerouslySetInnerHTML={{ __html: cleanText(post.content?.rendered, ['br']) }} 
+            // dangerouslySetInnerHTML={{ __html: cleanText(post.content?.rendered, ['br']) }} 
+            dangerouslySetInnerHTML={{ __html: htmlReader(post.content.template_name) }} 
           />
         </div>
 
