@@ -46,23 +46,6 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      // title: "Localizadores para restaurantes",
-      // description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
-      // images: [{
-      //   src: "v1745266173/Recurso_17_3x-8_1_sjgfak.webp",
-      //   alt: "Localizadores para clientes",
-      //   sizes: commonSizesPrimaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high",
-      //   className: styles.landing_hero__content__image_mobile
-      // },{
-      //   src: "v1744781254/Imagen_portada_4x-8_dfrjjg_1_1_lvtv17.webp",
-      //   alt: "Localizadores para clientes",
-      //   sizes: commonSizesPrimaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high",
-      //   className: styles.landing_hero__content__image_desktop
-      // }]
       mobile: {
         text: {
           title: "Localizadores para restaurantes",
@@ -112,8 +95,31 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
+      mobile: {
+        text: {
+          title: "Llamador de meseros",
+          subTitle: "Un solo toque evita largas esperas",
+          description: "Silencioso y de largo alcance",
+        },
+        image: {
+          src: "v1745506524/4_4x-8_nlf2cd_1_dih39x.webp",
+          alt: "Llamador de meseros",
+          sizes: commonSizesPrimaryImage,
+        }
+      },
+      desktop: {
+        text: {
+          title: "Llamador de Meseros: Un solo toque evita largas esperas.",
+          description: "Silencioso y de largo alcance.",
+        },
+        image: {
+          src: "v1745506524/1_4x-8_5_kwkmli.webp",
+          alt: "Llamador de meseros",
+          sizes: commonSizesPrimaryImage,
+        }
+      }
+      /*
       title: "Llamador de Meseros: Un solo toque evita largas esperas.",
-      // subTitle: "Un solo toque evita largas esperas.",
       description: "Silencioso y de largo alcance.",
       images: [{
         src: "v1745506524/4_4x-8_nlf2cd_1_dih39x.webp",
@@ -130,6 +136,7 @@ export const landingHeros = {
         fetchPriority: "high",
         className: styles.landing_hero__content__image_desktop
       }],
+      */
     },
   },
   llamadoDeEnfermeriaCuidamaster: {
