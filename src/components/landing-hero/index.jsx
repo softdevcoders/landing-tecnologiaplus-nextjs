@@ -1,26 +1,36 @@
-import ImageCloudinary from "@/components/ui/image-cloudinary";
 import styles from "./landing-hero.module.scss";
 import Link from "next/link";
 import { landingHeros } from "@/config/landing-heros";
 import ResponsiveImage from "@/components/ui/responsive-image";
+import LandingHeroImageContent from "./landing-hero-image-content";
 
-const LandingHero = ({ title, subTitle, description, button, image, imageTextColumn, showBackground = true }) => {
+const LandingHero = (props) => {
+  const { 
+    title, 
+    subTitle, 
+    description, 
+    button, 
+    images, 
+    imageTextColumn, 
+    showBackground = true, 
+    customTemplate = false,
+    templateName = null 
+  } = props;
   
   return (
     <div className={styles.landing_hero__container}>
       {showBackground && (
         <ResponsiveImage 
           className={styles.landing_hero__background} 
-          image={landingHeros.background.image}
+          image={landingHeros.background.images}
         />
       )}
       <div className={styles.landing_hero__content}>
-        <div className={styles.landing_hero__content__image}>
-          <ResponsiveImage 
-            className={styles.landing_hero__content__image__img} 
-            image={image}
-          />
-        </div>
+        <LandingHeroImageContent 
+          images={images} 
+          customTemplate={customTemplate}
+          templateName={templateName} 
+        />
         <div className={styles.landing_hero__content__text}>
           <div className={styles.landing_hero__content__text__image_container}>
             {imageTextColumn && (
@@ -32,22 +42,53 @@ const LandingHero = ({ title, subTitle, description, button, image, imageTextCol
           </div>
           {title && subTitle && (
             <>
-              <h1 className={styles.landing_hero__content__text__title}>
-                {title}
-              </h1>
+              {Array.isArray(title) && (
+                <h1 className={styles.landing_hero__content__text__title}>
+                  {title.map((item, index) => (
+                    <span 
+                      key={index} 
+                      className={item.className}
+                      dangerouslySetInnerHTML={{ __html: item.text }} 
+                    />
+                  ))}
+                </h1>
+              )}
+              {!Array.isArray(title) && (
+                <h1 
+                  className={styles.landing_hero__content__text__title}
+                  dangerouslySetInnerHTML={{ __html: title }} 
+                />
+              )}
               <h2 className={styles.landing_hero__content__text__subtitle}>
                 {subTitle}
               </h2>
             </>
           )}
           {title && !subTitle && (
-            <h1 className={styles.landing_hero__content__text__subtitle}>
-              {title}
-            </h1>
+            <>
+              {Array.isArray(title) && (
+                <h1 className={styles.landing_hero__content__text__title}>
+                  {title.map((item, index) => (
+                    <span 
+                      key={index} 
+                      className={item.className}
+                      dangerouslySetInnerHTML={{ __html: item.text }} 
+                    />
+                  ))}
+                </h1>
+              )}
+              {!Array.isArray(title) && (
+                <h1 
+                  className={styles.landing_hero__content__text__title}
+                  dangerouslySetInnerHTML={{ __html: title }} 
+                />
+              )}
+            </>
           )}
-          <p className={styles.landing_hero__content__text__description}>
-            {description}
-          </p>
+          <p 
+            className={styles.landing_hero__content__text__description}
+            dangerouslySetInnerHTML={{ __html: description }} 
+          />
           {button && (
             <Link
               href={button.href}

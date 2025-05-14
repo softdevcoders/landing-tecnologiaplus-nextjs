@@ -6,9 +6,10 @@ function LocalizadoresHeroSection() {
     <LandingHero 
       {...({
         ...landingHeros.localizadoresParaRestaurantes,
-        title: landingHeros.localizadoresParaRestaurantes.informationSingleLanding.title,
-        subTitle: landingHeros.localizadoresParaRestaurantes.informationSingleLanding.subTitle,
-        description: landingHeros.localizadoresParaRestaurantes.informationSingleLanding.description,
+        title: landingHeros.localizadoresParaRestaurantes.informationPortadas.title,
+        subTitle: landingHeros.localizadoresParaRestaurantes.informationPortadas.subTitle,
+        description: landingHeros.localizadoresParaRestaurantes.informationPortadas.description,
+        images: landingHeros.localizadoresParaRestaurantes.informationPortadas.images,
         button: null
       })} 
     />

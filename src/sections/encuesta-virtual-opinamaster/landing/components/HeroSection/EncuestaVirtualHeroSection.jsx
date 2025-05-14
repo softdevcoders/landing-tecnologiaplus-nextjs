@@ -6,9 +6,10 @@ function EncuestaVirtualHeroSection() {
     <LandingHero 
       {...({
         ...landingHeros.encuestaVirtual,
-        title: landingHeros.encuestaVirtual.informationSingleLanding.title,
-        subTitle: landingHeros.encuestaVirtual.informationSingleLanding.subTitle,
-        description: landingHeros.encuestaVirtual.informationSingleLanding.description,
+        title: landingHeros.encuestaVirtual.informationPortadas.title,
+        subTitle: landingHeros.encuestaVirtual.informationPortadas.subTitle,
+        description: landingHeros.encuestaVirtual.informationPortadas.description,
+        images: landingHeros.encuestaVirtual.informationPortadas.images,
         button: null
       })} 
     />

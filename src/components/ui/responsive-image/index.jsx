@@ -2,7 +2,7 @@ import style from "./responsive-image.module.scss";
 
 const ResponsiveImage = ({ className, image }) => {
   const baseUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_`;
-  const {src, alt, sizes, ...props} = image;
+  const {src, alt, sizes, className: _, ...props} = image;
   const [defaultSize, ...restSizes] = sizes;
   
   const sources = restSizes.reverse().map((size) => (

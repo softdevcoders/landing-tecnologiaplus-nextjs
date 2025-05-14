@@ -10,7 +10,7 @@ export default function SliderHero() {
     <div className={styles.slider__container}>
       <ResponsiveImage 
         className={styles.slider__background} 
-        image={background.image}
+        image={background.images}
       />
       <SliderHeroClient items={restLandings} styles={styles} />
     </div>

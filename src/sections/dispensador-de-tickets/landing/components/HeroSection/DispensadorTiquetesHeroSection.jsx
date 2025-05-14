@@ -6,9 +6,10 @@ function DispensadorTiquetesHeroSection() {
     <LandingHero 
       {...({
         ...landingHeros.dispensadorDeTickets,
-        title: landingHeros.dispensadorDeTickets.informationSingleLanding.title,
-        subTitle: landingHeros.dispensadorDeTickets.informationSingleLanding.subTitle,
-        description: landingHeros.dispensadorDeTickets.informationSingleLanding.description,
+        title: landingHeros.dispensadorDeTickets.informationPortadas.title,
+        subTitle: landingHeros.dispensadorDeTickets.informationPortadas.subTitle,
+        description: landingHeros.dispensadorDeTickets.informationPortadas.description,
+        images: landingHeros.dispensadorDeTickets.informationPortadas.images,
         button: null
       })} 
     />

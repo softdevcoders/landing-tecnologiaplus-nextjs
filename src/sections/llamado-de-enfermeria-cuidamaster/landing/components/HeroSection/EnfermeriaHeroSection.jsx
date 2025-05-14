@@ -6,9 +6,10 @@ function EnfermeriaHeroSection() {
     <LandingHero 
       {...({
         ...landingHeros.llamadoDeEnfermeriaCuidamaster,
-        title: landingHeros.llamadoDeEnfermeriaCuidamaster.informationSingleLanding.title,
-        subTitle: landingHeros.llamadoDeEnfermeriaCuidamaster.informationSingleLanding.subTitle,
-        description: landingHeros.llamadoDeEnfermeriaCuidamaster.informationSingleLanding.description,
+        title: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.title,
+        subTitle: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.subTitle,
+        description: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.description,
+        images: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.images,
         button: null
       })} 
     />

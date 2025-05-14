@@ -6,9 +6,10 @@ function HeroSection() {
     <LandingHero 
       {...({
         ...landingHeros.rollosDePapelTermico,
-        title: landingHeros.rollosDePapelTermico.informationSingleLanding.title,
-        subTitle: landingHeros.rollosDePapelTermico.informationSingleLanding.subTitle,
-        description: landingHeros.rollosDePapelTermico.informationSingleLanding.description,
+        title: landingHeros.rollosDePapelTermico.informationPortadas.title,
+        subTitle: landingHeros.rollosDePapelTermico.informationPortadas.subTitle,
+        description: landingHeros.rollosDePapelTermico.informationPortadas.description,
+        images: landingHeros.rollosDePapelTermico.informationPortadas.images,
         button: null
       })} 
     />
