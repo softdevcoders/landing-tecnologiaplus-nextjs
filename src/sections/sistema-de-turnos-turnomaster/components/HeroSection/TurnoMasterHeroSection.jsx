@@ -6,9 +6,10 @@ function TurnoMasterHeroSection() {
     <LandingHero 
       {...({
         ...landingHeros.sistemasDeTurnosTurnomaster,
-        title: landingHeros.sistemasDeTurnosTurnomaster.informationSingleLanding.title,
-        subTitle: landingHeros.sistemasDeTurnosTurnomaster.informationSingleLanding.subTitle,
-        description: landingHeros.sistemasDeTurnosTurnomaster.informationSingleLanding.description,
+        title: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.title,
+        subTitle: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.subTitle,
+        description: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.description,
+        images: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.images,
         button: null
       })} 
     />

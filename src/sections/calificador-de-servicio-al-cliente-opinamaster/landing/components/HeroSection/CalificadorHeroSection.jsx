@@ -6,9 +6,10 @@ function CalificadorHeroSection() {
     <LandingHero 
       {...({
         ...landingHeros.calificadorDeServicioAlClienteOpinamaster,
-        title: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationSingleLanding.title,
-        subTitle: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationSingleLanding.subTitle,
-        description: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationSingleLanding.description,
+        title: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.title,
+        subTitle: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.subTitle,
+        description: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.description,
+        images: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.images,
       })} 
     />
   );

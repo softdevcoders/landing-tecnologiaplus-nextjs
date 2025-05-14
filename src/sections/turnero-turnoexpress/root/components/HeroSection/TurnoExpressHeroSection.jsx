@@ -6,9 +6,10 @@ function TurnoExpressHeroSection() {
     <LandingHero 
       {...({
         ...landingHeros.turneroTurnoexpress,
-        title: landingHeros.turneroTurnoexpress.informationSingleLanding.title,
-        subTitle: landingHeros.turneroTurnoexpress.informationSingleLanding.subTitle,
-        description: landingHeros.turneroTurnoexpress.informationSingleLanding.description,
+        title: landingHeros.turneroTurnoexpress.informationPortadas.title,
+        subTitle: landingHeros.turneroTurnoexpress.informationPortadas.subTitle,
+        description: landingHeros.turneroTurnoexpress.informationPortadas.description,
+        images: landingHeros.turneroTurnoexpress.informationPortadas.images,
         button: null
       })} 
     />

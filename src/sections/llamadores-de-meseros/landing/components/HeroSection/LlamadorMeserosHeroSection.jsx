@@ -6,9 +6,10 @@ function LlamadorMeserosHeroSection() {
     <LandingHero 
       {...({
         ...landingHeros.llamadoresDeMeseros,
-        title: landingHeros.llamadoresDeMeseros.informationSingleLanding.title,
-        subTitle: landingHeros.llamadoresDeMeseros.informationSingleLanding.subTitle,
-        description: landingHeros.llamadoresDeMeseros.informationSingleLanding.description,
+        title: landingHeros.llamadoresDeMeseros.informationPortadas.title,
+        subTitle: landingHeros.llamadoresDeMeseros.informationPortadas.subTitle,
+        description: landingHeros.llamadoresDeMeseros.informationPortadas.description,
+        images: landingHeros.llamadoresDeMeseros.informationPortadas.images,
         button: null
       })} 
     />

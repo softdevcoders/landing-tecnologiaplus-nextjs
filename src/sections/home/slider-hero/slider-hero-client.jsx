@@ -23,10 +23,8 @@ export default function SliderHero({ styles, items }) {
           >
             <LandingHero 
               {...({
-                ...items[key],
-                title: items[key].informationSliderLanding.title,
-                subTitle: items[key].informationSliderLanding.subTitle,
-                description: items[key].informationSliderLanding.description,
+                ...items[key].informationHome,
+                title: items[key].informationHome.title,
                 showBackground: false,
               })} 
             />

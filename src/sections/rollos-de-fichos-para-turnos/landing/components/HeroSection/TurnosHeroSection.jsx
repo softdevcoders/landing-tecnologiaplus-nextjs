@@ -6,9 +6,10 @@ function TurnosHeroSection() {
     <LandingHero 
       {...({
         ...landingHeros.rollosDeFichosParaTurnos,
-        title: landingHeros.rollosDeFichosParaTurnos.informationSingleLanding.title,
-        subTitle: landingHeros.rollosDeFichosParaTurnos.informationSingleLanding.subTitle,
-        description: landingHeros.rollosDeFichosParaTurnos.informationSingleLanding.description,
+        title: landingHeros.rollosDeFichosParaTurnos.informationPortadas.title,
+        subTitle: landingHeros.rollosDeFichosParaTurnos.informationPortadas.subTitle,
+        description: landingHeros.rollosDeFichosParaTurnos.informationPortadas.description,
+        images: landingHeros.rollosDeFichosParaTurnos.informationPortadas.images,
         button: null
       })} 
     />

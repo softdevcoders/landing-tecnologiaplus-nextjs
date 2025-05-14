@@ -1,0 +1,16 @@
+@media (min-width: 1024px) {
+  .encuestaVirtualImage {
+    position: relative;
+    flex-grow: 1;
+    max-width: 700px !important;
+    max-height: 700px !important;
+    align-self: flex-end;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      object-fit: contain;
+    }
+  }
+}
