@@ -1,19 +1,44 @@
-import LandingHero from "@/components/landing-hero";
+import stylesDefault from "@/components/landing-hero-portada/styles.module.scss";
+import style from "./styles.module.scss";
+import { LandingHeroPortadaContainer, LandingHeroPortadaContent, LandingHeroPortadaContentImage, LandingHeroPortadaContentImageImg, LandingHeroPortadaContentText, LandingHeroPortadaContentTextDescription, LandingHeroPortadaContentTextTitle } from "@/components/landing-hero-portada";
 import { landingHeros } from "@/config/landing-heros";
 
-function LocalizadoresHeroSection() {
+function HeroSection() {
   return (
-    <LandingHero 
-      {...({
-        ...landingHeros.localizadoresParaRestaurantes,
-        title: landingHeros.localizadoresParaRestaurantes.informationPortadas.title,
-        subTitle: landingHeros.localizadoresParaRestaurantes.informationPortadas.subTitle,
-        description: landingHeros.localizadoresParaRestaurantes.informationPortadas.description,
-        images: landingHeros.localizadoresParaRestaurantes.informationPortadas.images,
-        button: null
-      })} 
-    />
+    <LandingHeroPortadaContainer>
+      <LandingHeroPortadaContent>
+        {/* Seccion de Images */}
+        <>
+          <LandingHeroPortadaContentImage className={stylesDefault.content__image__imgMobile}>
+            <LandingHeroPortadaContentImageImg image={landingHeros.localizadoresParaRestaurantes.informationPortadas.mobile.image} />
+          </LandingHeroPortadaContentImage>
+          <LandingHeroPortadaContentImage className={stylesDefault.content__image__imgDesktop}>
+            <LandingHeroPortadaContentImageImg image={landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image} />
+          </LandingHeroPortadaContentImage>
+        </>
+
+        {/* Seccion de Texto */}
+        <>
+          <LandingHeroPortadaContentText className={stylesDefault.content__text__mobile}>
+            <LandingHeroPortadaContentTextTitle>
+              {landingHeros.localizadoresParaRestaurantes.informationPortadas.mobile.text.title}
+            </LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentTextDescription>
+              {landingHeros.localizadoresParaRestaurantes.informationPortadas.mobile.text.description}
+            </LandingHeroPortadaContentTextDescription>
+          </LandingHeroPortadaContentText>
+          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__desktop} ${style.content__text__desktop__custom}`}>
+            <LandingHeroPortadaContentTextTitle className={style.content__text__title__desktop__custom}>
+              {landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.text.title}
+            </LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentTextDescription className={style.content__text__description__desktop__custom}>
+              {landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.text.description}
+            </LandingHeroPortadaContentTextDescription>
+          </LandingHeroPortadaContentText>
+        </>
+      </LandingHeroPortadaContent>
+    </LandingHeroPortadaContainer>
   )
 }
 
-export default LocalizadoresHeroSection;
+export default HeroSection;

@@ -4,6 +4,7 @@ import styles from "@/components/landing-hero/landing-hero.module.scss";
 export const templateNames = {
   LLAMADO_DE_ENFERMERIA_CUIDAMASTER_HOME: "LLAMADO_DE_ENFERMERIA_CUIDAMASTER_HOME",
   ENCUESTA_VIRTUAL_OPINAMASTER_HOME: "ENCUESTA_VIRTUAL_OPINAMASTER_HOME",
+  LOCALIZADORES_RESTAURANTES_PORTADA: "LOCALIZADORES_RESTAURANTES_PORTADA",
 }
 
 const commonSizesPrimaryImage = [
@@ -45,23 +46,45 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      title: "Localizadores para restaurantes",
-      description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
-      images: [{
-        src: "v1745266173/Recurso_17_3x-8_1_sjgfak.webp",
-        alt: "Localizadores para clientes",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_mobile
-      },{
-        src: "v1744781254/Imagen_portada_4x-8_dfrjjg_1_1_lvtv17.webp",
-        alt: "Localizadores para clientes",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_desktop
-      }]
+      // title: "Localizadores para restaurantes",
+      // description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
+      // images: [{
+      //   src: "v1745266173/Recurso_17_3x-8_1_sjgfak.webp",
+      //   alt: "Localizadores para clientes",
+      //   sizes: commonSizesPrimaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high",
+      //   className: styles.landing_hero__content__image_mobile
+      // },{
+      //   src: "v1744781254/Imagen_portada_4x-8_dfrjjg_1_1_lvtv17.webp",
+      //   alt: "Localizadores para clientes",
+      //   sizes: commonSizesPrimaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high",
+      //   className: styles.landing_hero__content__image_desktop
+      // }]
+      mobile: {
+        text: {
+          title: "Localizadores para restaurantes",
+          description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
+        },
+        image: {
+          src: "v1745266173/Recurso_17_3x-8_1_sjgfak.webp",
+          alt: "Localizadores para clientes",
+          sizes: commonSizesPrimaryImage,
+        }
+      },
+      desktop: {
+        text: {
+          title: "Localizadores para restaurantes:",
+          description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
+        },
+        image: {
+          src: "v1744781254/Imagen_portada_4x-8_dfrjjg_1_1_lvtv17.webp",
+          alt: "Localizadores para clientes",
+          sizes: commonSizesPrimaryImage,
+        }
+      }
     },
   },
   llamadoresDeMeseros: {
