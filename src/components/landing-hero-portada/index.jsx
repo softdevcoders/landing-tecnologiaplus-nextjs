@@ -80,4 +80,19 @@ export const LandingHeroPortadaContentTextButton = ({className = "", href, child
   ) 
 }
 
+export const LandingHeroPortadaContentDivider = ({className = ""}) => {
+  return (
+    <ResponsiveImage 
+      className={`${styles.content__divider} ${className}`} 
+      image={{
+        src: "v1745196016/linea_2x-8_n80wv9_6a5e17-horizontal_giisl2.webp",
+        alt: "Turnero digital",
+        sizes: [
+          { imageWidth: 400, mediaQuery: "(min-width: 0px)" }, 
+        ],
+      }}
+    />
+  ) 
+}
+
 

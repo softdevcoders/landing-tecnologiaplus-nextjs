@@ -9,7 +9,7 @@ function HeroSection() {
       <LandingHeroPortadaContent>
         {/* Seccion de Images */}
         <>
-          <LandingHeroPortadaContentImage className={stylesDefault.content__image__imgMobile}>
+          <LandingHeroPortadaContentImage className={`${stylesDefault.content__image__imgMobile} ${style.content__image__imgMobile__custom}`}>
             <LandingHeroPortadaContentImageImg image={landingHeros.localizadoresParaRestaurantes.informationPortadas.mobile.image} />
           </LandingHeroPortadaContentImage>
           <LandingHeroPortadaContentImage className={stylesDefault.content__image__imgDesktop}>
@@ -20,10 +20,10 @@ function HeroSection() {
         {/* Seccion de Texto */}
         <>
           <LandingHeroPortadaContentText className={stylesDefault.content__text__mobile}>
-            <LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentTextTitle className={style.content__text__title__mobile__custom}>
               {landingHeros.localizadoresParaRestaurantes.informationPortadas.mobile.text.title}
             </LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentTextDescription>
+            <LandingHeroPortadaContentTextDescription className={style.content__text__description__mobile__custom}>
               {landingHeros.localizadoresParaRestaurantes.informationPortadas.mobile.text.description}
             </LandingHeroPortadaContentTextDescription>
           </LandingHeroPortadaContentText>

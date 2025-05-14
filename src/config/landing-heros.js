@@ -8,8 +8,8 @@ export const templateNames = {
 }
 
 const commonSizesPrimaryImage = [
-  { imageWidth: 400, mediaQuery: "(min-width: 0px)" }, 
-  { imageWidth: 500, mediaQuery: "(min-width: 700px)" }, 
+  { imageWidth: 600, mediaQuery: "(min-width: 0px)" }, 
+  { imageWidth: 700, mediaQuery: "(min-width: 700px)" }, 
   { imageWidth: 900, mediaQuery: "(min-width: 1200px)" }
 ]
 
@@ -297,31 +297,30 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      title: "Turnero digital",
-      subTitle: "Adiós a las filas",
-      description: "Agilidad y orden en cada turno.",
-      images: [{
-        src: "v1744861623/Group_8_pkcnqa.webp",
-        alt: "Turnero digital",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_mobile
-      },{
-        src: "v1738431726/Imagen_bannerprincipal_2x-8_daisi3.webp",
-        alt: "Turnero digital",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_desktop
-      }],
-      imageTextColumn: {
-        src: "v1744463735/12-8_qjsewx.webp",
-        alt: "Logo Turno Express",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+      mobile: {
+        text: {
+          title: "Turnero digital",
+          subTitle: "Adiós a las filas",
+          description: "Orden y agilidad en cada turno.",
+        },
+        image: {
+          src: "v1745243183/Recurso_22_3x-8_ofq0yg.webp",
+          alt: "Turnero digital",
+          sizes: commonSizesPrimaryImage,
+        }
       },
+      desktop: {
+        text: {
+          title: "Turnero digital:",
+          subTitle: "Adiós a las filas",
+          description: "Agilidad y orden en cada turno.",
+        },
+        image: {
+          src: "v1738431726/Imagen_bannerprincipal_2x-8_daisi3.webp",
+          alt: "Turnero digital",
+          sizes: commonSizesPrimaryImage,
+        }
+      }
     },
   },
   dispensadorDeTickets: {
