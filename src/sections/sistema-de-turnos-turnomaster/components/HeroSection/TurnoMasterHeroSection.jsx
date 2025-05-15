@@ -6,7 +6,7 @@ import { landingHeros } from "@/config/landing-heros";
 function HeroSection() {
   return (
     <LandingHeroPortadaContainer>
-      <LandingHeroPortadaContent>
+      <LandingHeroPortadaContent className={style.content__mobile__custom}>
         {/* Seccion de Images */}
         <>
           <LandingHeroPortadaContentImage className={`${stylesDefault.content__image__imgMobile} ${style.content__image__imgMobile__custom}`}>
