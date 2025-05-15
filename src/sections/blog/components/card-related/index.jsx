@@ -1,12 +1,12 @@
 // import Link from "next/link"
 import LinkButton from "@/components/ui/link"
 import Link from "next/link"
-import style from "./card.module.scss"
+import style from "./card-related.module.scss"
 import { cleanText } from "@/lib/clean-text"
 import { formatDate } from "@/lib/format-date"
 import ResponsiveImage from "@/components/ui/responsive-image"
 
-const Card = ({ post }) => {
+const CarRelated = ({ post }) => {
   return (
     <article className={style.blogCard}>
       <div className={style.blogCard__image} >
@@ -16,7 +16,7 @@ const Card = ({ post }) => {
             alt: `Imagen de ${post.title.rendered}`,
             className: style.blogCard__image__img,
             sizes: [
-              { imageWidth: 360, mediaQuery: "(min-width: 0px)" }, 
+              { imageWidth: 335, mediaQuery: "(min-width: 0px)" }, 
             ],
           }}
         />
@@ -33,7 +33,12 @@ const Card = ({ post }) => {
         </p>
         <div className={style.blogCard__footer}>
           <time className={style.blogCard__date}>{formatDate(post.date)}</time>
-          <LinkButton href={post.current_link} title={`Leer más sobre ${post.title.rendered}`} className={style.blogCard__button}>
+          <LinkButton 
+            href={post.current_link} 
+            title={`Leer más sobre ${post.title.rendered}`} 
+            className={style.blogCard__button}
+            size="small"
+          >
             Leer más
           </LinkButton>
         </div>
@@ -42,4 +47,4 @@ const Card = ({ post }) => {
   )
 }
 
-export default Card
+export default CarRelated

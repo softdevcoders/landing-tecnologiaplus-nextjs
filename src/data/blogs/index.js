@@ -28,7 +28,7 @@ const llamadoresDeEnfermeriaPosts = [
         "rendered": "<p>En este artículo te explicamos porque un llamado de enfermeria mejora el servicio en un centro geriátrico, también conocido como hogar de cuidado de ancianos, residencia de ancianos o centro de atención a personas mayores, es una institución especializada en ofrecer atención y cuidado a personas de edad avanzada que necesitan asistencia y supervisión continua&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747075097/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos/uoafg9o5tum5d0kfmc1s.jpg"
+        "v1747075097/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos/uoafg9o5tum5d0kfmc1s.jpg"
     ],
     "categories": [
       categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,
@@ -53,7 +53,7 @@ const llamadoresDeEnfermeriaPosts = [
         ]
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747075097/website-v2/blog/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria/deuzrhwcdvak5wgmizbr.jpg",
+        "v1747075097/website-v2/blog/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria/deuzrhwcdvak5wgmizbr.jpg",
     ],
     "content": {
         "rendered": "\n<p>Hace algunos años que se comenzó a implementar el <a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><strong>sistema de llamado de enfermería</strong></a> en Colombia, una manera eficiente de atender las necesidades de los pacientes en clínicas, hogares geriátricos y gerontológicos, debido a las facilidades que ofrece tanto para las enfermeras, como para los pacientes.</p>\n\n\n\n<p>No por nada se han vuelto tendencia y una norma casi obligatoria en los últimos años. Es por ello que en<em> Tecnología Plus</em> queremos ofrecerte algunos de los mejores<strong> sistemas de llamado de enfermería</strong> del mercado, puesto que sabemos lo importante de ofrecer comodidades tanto para tu personal como para tus pacientes.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-ventajas-de-utilizar-un-sistema-de-llamado-de-enfermeras\">Ventajas de utilizar un sistema de llamado de enfermeras</h2>\n\n\n\n<p>Aunque no todas las empresas del sector salud en Colombia cuentan con esta tecnología, la verdad es que resulta una de las mejores opciones de inversión que pueden realizar por los grandes beneficios que aporta, no solo para el personal, sino también para los pacientes.</p>\n\n\n\n<ul>\n<li>No emiten ruidos molestos que puedan perturbar la paz de tu clínica.</li>\n\n\n\n<li>Diseñados para fijarlos sobre cualquier tipo de superficie.</li>\n\n\n\n<li>Los enfermeros solo deben utilizar el reloj receptor digital donde recibirán el llamado de enfermera de los pacientes.</li>\n\n\n\n<li>Puedes configurar y utilizar cualquiera de nuestros sistemas de llamado en la zona de enfermería.</li>\n\n\n\n<li>Entrenar a tu personal para utilizar los llamadores es fácil.</li>\n\n\n\n<li>Le ofreces a los pacientes más seguridad y accesibilidad a los enfermeros en caso de necesidad.</li>\n\n\n\n<li>Te mantiene actualizado en cuanto a tecnología de atención al paciente.</li>\n\n\n\n<li>Es fácil enseñarle el método de funcionamiento a tus pacientes para que llamen a las enfermeras.</li>\n\n\n\n<li>Nuestros modelos son resistentes al agua.</li>\n\n\n\n<li>Tienen un largo alcance de hasta 50 metros de distancia.</li>\n\n\n\n<li>Los llamadores de enfermeras &#8211; pacientes son inalámbricos.</li>\n</ul>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-como-funciona-el-sistema-de-llamado-de-paciente-enfermera\">¿Cómo funciona el sistema de llamado de paciente enfermera?</h2>\n\n\n\n<p>El funcionamiento del sistema&nbsp; de llamada paciente &#8211; enfermera es bastante practico, ya que a través de los modelos que tenemos disponibles en Tecnología Plus, el proceso se hace más simple.&nbsp;</p>\n\n\n\n<p>El <a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><strong><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"></a><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><strong><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><strong>sistema de llamado de enfermería</strong></a></strong></a></strong></a> </a>solo debes instalarlo cerca de la cama del paciente y este debe tener un acceso fácil, cómodo y rápido. Por su parte, el llamador con cable extensor es para pacientes que no pueden levantarse de la cama y así ofrecer más comodidades.</p>\n\n\n\n<p>En cualquiera de los casos, ambos modelos cuentan con 2 botones para el uso de los pacientes:</p>\n\n\n\n<ul>\n<li>Call.</li>\n\n\n\n<li>Cancel.</li>\n</ul>\n\n\n\n<p>Una vez lo has instalado, solo debes presentarle al paciente el funcionamiento que tienen los botones, lo cual no es difícil, por lo que te aseguras de evitar inconvenientes con el funcionamiento y/o errores en el uso de los llamadores.</p>\n\n\n\n<p>El paciente solo debe aparentar el botón respectivo para que la enfermera reciba la señal, ya sea en su muñeca con el reloj digital, en su pantalla instalada en la sala de enfermeras o a través de una alarma de luz. Esto bastará para saber que debe movilizarse hacia la sala del enfermero lo más pronto posible.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-empresas-de-salud-que-usan-nuestro-llamado-de-enfermeras\">Empresas de salud que usan nuestro llamado de enfermeras</h2>\n\n\n\n<p>Si estás decidido a instalar estos <strong><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><strong>sistema de llamado de enfermeras</strong></a> </a></strong>en tu clínica, hogar geriátrico o gerontológicos, quizá te gustaría conocer algunos casos de éxitos de otras empresas que ya cuentan con los llamadores de Tecnología Plus:</p>\n\n\n\n<ul>\n<li>Hospital San Carlos</li>\n\n\n\n<li>Hogar casa Viva</li>\n\n\n\n<li>Dermosalud</li>\n\n\n\n<li>Hospital San Rafael.</li>\n\n\n\n<li>Hogar Gerontológico El Bosque.</li>\n\n\n\n<li>Hogar La Alborada.<br></li>\n</ul>\n\n\n\n<p class=\"has-text-align-center\">¡<a href=\"https://tecnologiaplus.com/contacto/\">Contáctanos hoy</a> mismo y descubre cómo podemos llevar tu servicio al siguiente nivel!</p>\n",
@@ -92,7 +92,7 @@ const llamadoresDeEnfermeriaPosts = [
         "rendered": "<p>La eficiencia y la satisfacción del paciente son dos pilares fundamentales para el éxito de cualquier institución de salud. Un sistema de llamador de pacientes se ha convertido en una herramienta esencial para hospitales, clínicas y consultorios, mejorando estos aspectos clave. En Colombia, la adopción de esta tecnología ha crecido rápidamente, demostrando su efectividad y&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747075100/website-v2/blog/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes/fsmtqpuetpamgbb1pfgu.jpg"
+        "v1747075100/website-v2/blog/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes/fsmtqpuetpamgbb1pfgu.jpg"
     ],
     "categories": [
         categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,
@@ -127,7 +127,7 @@ const llamadoresDeEnfermeriaPosts = [
       categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key
     ],
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747075103/website-v2/blog/llamado-de-enfermeria-cuidamaster/mejora-experiencia-paciente-con-timbre-llamado-enfermeria/tsiffdejmcbp9c833dhe.png"
+        "v1747075103/website-v2/blog/llamado-de-enfermeria-cuidamaster/mejora-experiencia-paciente-con-timbre-llamado-enfermeria/tsiffdejmcbp9c833dhe.png"
     ]
   },
   {
@@ -156,7 +156,7 @@ const llamadoresDeEnfermeriaPosts = [
         "rendered": "\n<h2 class=\"wp-block-heading\" id=\"que-son-los-llamadores-de-enfermeria-y-como-funcionan\"><strong>¿Qué son los Llamadores de Enfermería y cómo funcionan?</strong></h2>\n\n\n\n<p>Los<strong> llamadores de enfermería</strong> son sistemas diseñados para mejorar la comunicación entre los pacientes y el personal médico. A través de dispositivos conectados a un sistema central, permiten a los pacientes solicitar asistencia con solo presionar un botón, optimizando tiempos de respuesta y mejorando la calidad del servicio.&nbsp;</p>\n\n\n\n<p>Los<strong> <a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\">llamadores de enfermería</a></strong> han demostrado ser herramientas fundamentales en la gestión hospitalaria, facilitando una comunicación efectiva y rápida.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"componentes-principales-de-un-sistema-de-llamado-de-enfermeria\"><strong>Componentes principales de un sistema de llamado de enfermería</strong></h2>\n\n\n\n<p>🛎️<em> Botón de llamada:</em> Ubicado en las camas o baños de los pacientes.</p>\n\n\n\n<p>📡 <em>Panel de control central:</em> Recibe y gestiona las alertas.</p>\n\n\n\n<p>📱 <em>Dispositivos móviles para el personal:</em> Facilitan la respuesta inmediata.</p>\n\n\n\n<p>💡<em> Sistema de luces o sonido:</em> Indica la urgencia de la solicitud.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"beneficios-de-los-llamadores-de-enfermeria-en-hospitales\"><strong>Beneficios de los Llamadores de Enfermería en Hospitales</strong></h2>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"1-reduccion-en-tiempos-de-respuesta\">⏳  1. Reducción en tiempos de respuesta</h3>\n\n\n\n<p>Gracias a la automatización del llamado, el personal de enfermería recibe alertas en tiempo real, lo que disminuye los tiempos de espera del paciente. Los <strong>llamadores de enfermería</strong> permiten actuar con rapidez ante emergencias o solicitudes de atención.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"2-mejora-en-la-calidad-del-servicio\">🩺 2. Mejora en la calidad del servicio</h3>\n\n\n\n<p>El acceso rápido a la atención genera mayor confianza en los pacientes y mejora la percepción del servicio hospitalario. Contar con<strong> llamadores de enfermería</strong> bien implementados marca una diferencia significativa en la experiencia del paciente.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"3-mayor-organizacion-del-trabajo\">📋 3. Mayor organización del trabajo</h3>\n\n\n\n<p>Los llamados permiten priorizar urgencias, organizando mejor las tareas del personal de salud. Un sistema de<a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"> <strong>llamadores de enfermería</strong> </a>estructurado ayuda a gestionar mejor los recursos hospitalarios.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"4-bienestar-del-personal-de-salud\">💆‍♀️ 4. Bienestar del personal de salud</h3>\n\n\n\n<p>Al contar con una herramienta eficiente para gestionar solicitudes, el personal médico reduce su carga de trabajo innecesaria y puede enfocarse en la atención prioritaria. Los <strong>llamadores de enfermería</strong> ayudan a optimizar el flujo de trabajo y a reducir el estrés del personal.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"comparativa-impacto-en-la-satisfaccion-del-paciente\"><strong>📊 Comparativa: Impacto en la Satisfacción del Paciente</strong></h2>\n\n\n\n<p></p>\n\n\n\n<figure class=\"wp-block-table\"><table><tbody><tr><td><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Característica</strong></td><td><strong>Con Llamadores de Enfermería</strong></td><td><strong>Sin Llamadores de Enfermería</strong></td></tr><tr><td>Rapidez de atención</td><td>✅ Alta</td><td>❌ Baja</td></tr><tr><td>Organización del personal</td><td>✅ Óptima</td><td>❌ Desordenada</td></tr><tr><td>Confianza del paciente</td><td>✅ Alta</td><td>❌ Media</td></tr><tr><td>Reducción de carga laboral</td><td>✅ Sí</td><td>❌ No</td></tr></tbody></table></figure>\n\n\n\n<p></p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1030\" height=\"588\" src=\"https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,h_588,w_1030/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-llamadores-enfermeria-transforman-hospitales/ytd55tftrqvsdcngnfxs.png\" alt=\"\" class=\"wp-image-10543\" srcset=\"https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,h_588,w_1030/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-llamadores-enfermeria-transforman-hospitales/ytd55tftrqvsdcngnfxs.png 1030w, https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,h_171,w_300/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-llamadores-enfermeria-transforman-hospitales/ytd55tftrqvsdcngnfxs.png 300w, https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,h_438,w_768/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-llamadores-enfermeria-transforman-hospitales/ytd55tftrqvsdcngnfxs.png 768w, https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,h_457,w_800/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-llamadores-enfermeria-transforman-hospitales/ytd55tftrqvsdcngnfxs.png 800w, https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,h_571,w_1000/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-llamadores-enfermeria-transforman-hospitales/ytd55tftrqvsdcngnfxs.png 1000w, https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,h_788,w_1274/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-llamadores-enfermeria-transforman-hospitales/ytd55tftrqvsdcngnfxs.png 1274w\" sizes=\"(max-width: 1030px) 100vw, 1030px\" /></figure>\n\n\n\n<p><strong>Artículos relacionados:</strong></p>\n\n\n\n<p>✅ <a href=\"https://tecnologiaplus.com/timbre-de-llamado-de-enfermeria-mejora-la-experiencia-del-paciente/\">Mejora la Experiencia del Paciente con un Timbre de Llamado de Enfermería 🏥</a></p>\n\n\n\n<p>✅ <a href=\"https://tecnologiaplus.com/llamador-de-pacientes-conoce-los-beneficios-de-invertir-en-estos-sistemas/\">Llamador De Pacientes: Conoce Los Beneficios De Invertir En Estos Sistemas</a></p>\n\n\n\n<p>✅<a href=\"https://tecnologiaplus.com/llamado-de-enfermeria-como-mejorar-el-servicio-en-geriatricos/\">Llamado de Enfermería ¿Cómo Mejorar El Servicio De Enfermería En Un Hogar Geriátrico O Gerontológico?</a></p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"como-implementar-un-sistema-de-llamado-de-enfermeria\"><strong>Cómo Implementar un Sistema de Llamado de Enfermería</strong></h2>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"1-evaluacion-de-necesidades\">1️⃣ Evaluación de necesidades</h3>\n\n\n\n<p>Cada hospital debe analizar cuántos dispositivos necesita y dónde instalarlos para maximizar su eficacia. Un análisis detallado garantizará que los <strong>llamadores de enfermería</strong> sean utilizados estratégicamente.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"2-eleccion-del-sistema-adecuado\">2️⃣ Elección del sistema adecuado</h3>\n\n\n\n<p>Existen modelos inalámbricos o cableados, con distintas funciones según el nivel de automatización requerido. Es fundamental seleccionar<strong><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"> llamadores de enfermería</a></strong> que se adapten a las necesidades del hospital.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"3-capacitacion-del-personal\">3️⃣ Capacitación del personal</h3>\n\n\n\n<p>El éxito del sistema depende del uso adecuado por parte del equipo de salud. Es clave brindar entrenamientos específicos. Los<strong> llamadores de enfermería</strong> solo serán efectivos si el personal sabe cómo utilizarlos correctamente.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"4-monitoreo-y-mantenimiento\">4️⃣ Monitoreo y mantenimiento</h3>\n\n\n\n<p>Realizar revisiones periódicas garantiza su funcionamiento óptimo y evita fallos en momentos críticos. Implementar protocolos de revisión asegura que los<strong> llamadores de enfermería</strong> siempre estén operativos.</p>\n\n\n\n<p>Los<strong><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"> llamadores de enfermería</a> </strong>de <em>Tecnología Plus</em><strong> </strong>están transformando la experiencia hospitalaria al brindar una atención más rápida y efectiva. Su implementación facilita la organización del personal, mejora la satisfacción del paciente y eleva la calidad del servicio.</p>\n\n\n\n<p>Si buscas una solución efectiva para mejorar la comunicación en hospitales, los llamadores de enfermería  de <a href=\"https://tecnologiaplus.com\"><em>Tecnología Plus</em></a> son la mejor opción.</p>\n\n\n\n<p class=\"has-text-align-center\"> <a href=\"https://tecnologiaplus.com/contacto/\">¡Recibe asesoría personalizada! Invierte en tecnología que facilita el contacto entre paciente &#8211; enfermera 🏥</a></p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747075099/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-llamadores-enfermeria-transforman-hospitales/gms90lhxpci31d37ffa6.png"
+        "v1747075099/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-llamadores-enfermeria-transforman-hospitales/gms90lhxpci31d37ffa6.png"
     ],
     "categories": [
       categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key
@@ -190,7 +190,7 @@ const llamadoresDeEnfermeriaPosts = [
         ]
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747075104/website-v2/blog/llamado-de-enfermeria-cuidamaster/timbre-para-cama-hospital-atencion-rapida-paciente/bmyshz1lqrxmoj2m9kon.png"
+        "v1747075104/website-v2/blog/llamado-de-enfermeria-cuidamaster/timbre-para-cama-hospital-atencion-rapida-paciente/bmyshz1lqrxmoj2m9kon.png"
     ],
     "categories": [
       categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key
@@ -222,7 +222,7 @@ const llamadoresDeEnfermeriaPosts = [
         "rendered": "<p>Los Desafíos del Personal de Enfermería en el Día a Día El personal de enfermería es el pilar fundamental en la atención hospitalaria. Son quienes están en primera línea, garantizando el bienestar de los pacientes, administrando medicamentos, supervisando signos vitales y respondiendo a emergencias médicas. Sin embargo, su trabajo no solo implica conocimientos técnicos.</p>\n",
     },
     "images": [
-        "https://tecnologiaplus.com/wp-content/uploads/2025/03/18.png"
+        "website-v2/blog/llamado-de-enfermeria-cuidamaster/boton-para-llamar-enfermera-facilita-labor-personal/yk9qvs37vgvhe0gr6ir2"
     ],
     "categories": [
       categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key
@@ -257,7 +257,7 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>⏳ El tiempo es oro en la industria gastronómica.&nbsp; Los clientes valoran la rapidez y la atención eficaz, y los tiempos de espera pueden marcar la diferencia entre una experiencia memorable y una opinión negativa. Si alguna vez has visto a tus comensales molestos por demoras en el servicio, es momento de considerar una solución&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157483/website-v2/blog/llamadores-de-meseros/como-reducir-tiempos-espera-restaurante/aiutpy8klvv69ihivj5b.png"
+        "v1747157483/website-v2/blog/llamadores-de-meseros/como-reducir-tiempos-espera-restaurante/aiutpy8klvv69ihivj5b.png"
     ],
     "categories": [
       categories.LLAMADORES_DE_MESEROS.category_key
@@ -291,7 +291,7 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>La innovación es el motor que impulsa el éxito en la industria gastronómica. Uno de los avances más destacados en los últimos años son los timbres de mesa para tu restaurante, dispositivos diseñados para transformar la experiencia del cliente y optimizar las operaciones de los restaurantes. Si estás considerando implementar esta tecnología, estás dando un&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157483/website-v2/blog/llamadores-de-meseros/implementar-timbres-de-mesa-para-restaurante/suiuoact7fezz12zadwq.jpg"
+        "v1747157483/website-v2/blog/llamadores-de-meseros/implementar-timbres-de-mesa-para-restaurante/suiuoact7fezz12zadwq.jpg"
     ],
     "categories": [
       categories.LLAMADORES_DE_MESEROS.category_key
@@ -323,7 +323,7 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>En el sector de la gastronomía, ofrecer una experiencia única y memorable a los clientes no es una opción, sino una necesidad. La calidad de la comida es importante, pero la rapidez y la calidad del servicio marcan la diferencia en la satisfacción del cliente. En este sentido, la tecnología juega un papel crucial, y&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157481/website-v2/blog/llamadores-de-meseros/llamadores-mesa-tecnologia-revoluciona-atencion-al-cliente/iavdhcw1p10bk3wtigqo.jpg"
+        "v1747157481/website-v2/blog/llamadores-de-meseros/llamadores-mesa-tecnologia-revoluciona-atencion-al-cliente/iavdhcw1p10bk3wtigqo.jpg"
     ],
     "categories": [
       categories.LLAMADORES_DE_MESEROS.category_key
@@ -355,7 +355,7 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>Llamador de Mesero: ¿Cómo Reducir el Tiempo de Espera y Mejorar la Satisfacción del Cliente? En cualquier negocio de atención al cliente, los tiempos de espera juegan un papel fundamental en la experiencia general de los usuarios. Si bien la calidad de los productos o servicios es crucial, la rapidez con la que los clientes&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157482/website-v2/blog/llamadores-de-meseros/reducir-tiempo-de-espera-mejora-satisfaccion-del-cliente/pvi5tnbibi4x687qtb7f.jpg"
+        "v1747157482/website-v2/blog/llamadores-de-meseros/reducir-tiempo-de-espera-mejora-satisfaccion-del-cliente/pvi5tnbibi4x687qtb7f.jpg"
     ],
     "categories": [
       categories.LLAMADORES_DE_MESEROS.category_key
@@ -387,7 +387,7 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>Impulsa la Satisfacción del Cliente y Aumenta las Propinas con Tecnología Plus En el competitivo mundo de la gastronomía, cada detalle cuenta. Aunque la calidad de la comida es el factor más importante y lo que realmente atrae a los clientes, el servicio al cliente también juega un papel crucial en definir la experiencia general&#8230;.</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157482/website-v2/blog/llamadores-de-meseros/aumenta-propinas-llamadores-de-meseros-en-restaurantes/nakufcgzvecdp035txld.jpg"
+        "v1747157482/website-v2/blog/llamadores-de-meseros/aumenta-propinas-llamadores-de-meseros-en-restaurantes/nakufcgzvecdp035txld.jpg"
     ],
     "categories": [
       categories.LLAMADORES_DE_MESEROS.category_key
@@ -419,7 +419,7 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>Para optimizar la administración de restaurantes, es crucial centrarse en la experiencia del cliente desde su llegada hasta su partida. Esto implica ofrecer un servicio excepcional y personalizado, preferiblemente inmediato, lo cual se logra mediante el uso de tecnologías innovadoras como los llamadores de meseros, que mejoran la atención al cliente al permitir una respuesta&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157481/website-v2/blog/llamadores-de-meseros/como-mejorar-administracion-restaurantes/ai7vfkwc9eykpenkmbx1.jpg"
+        "v1747157481/website-v2/blog/llamadores-de-meseros/como-mejorar-administracion-restaurantes/ai7vfkwc9eykpenkmbx1.jpg"
     ],
     "categories": [
       categories.LLAMADORES_DE_MESEROS.category_key
@@ -451,7 +451,7 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>En un mundo donde los clientes valoran cada vez más la rapidez, la eficiencia y la personalización, los llamadores de meseros están ganando terreno como una solución innovadora para mejorar el servicio en los restaurantes. Aunque aún no se han masificado como los localizadores, estos dispositivos representan una tendencia en crecimiento, optimizando las operaciones y&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157482/website-v2/blog/llamadores-de-meseros/transforma-atencion-cliente-llamadores-de-meseros/axpan0mvlx8uvnpjojqh.jpg"
+        "v1747157482/website-v2/blog/llamadores-de-meseros/transforma-atencion-cliente-llamadores-de-meseros/axpan0mvlx8uvnpjojqh.jpg"
     ],
     "categories": [
       categories.LLAMADORES_DE_MESEROS.category_key
@@ -483,7 +483,7 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>Como gerente y dueño de un restaurante, tienes la responsabilidad de ofrecer el mejor servicio posible, tanto en infraestructura como en atención al cliente. Estos aspectos son fundamentales para garantizar una experiencia memorable, lo que aumenta las posibilidades de que los comensales regresen y recomienden tu establecimiento. Sin embargo, es natural que te preguntes cómo&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157481/website-v2/blog/llamadores-de-meseros/como-mejorar-servicio-restaurante/l699mlifpw0p2rtshopf.jpg"
+        "v1747157481/website-v2/blog/llamadores-de-meseros/como-mejorar-servicio-restaurante/l699mlifpw0p2rtshopf.jpg"
     ],
     "categories": [
       categories.LLAMADORES_DE_MESEROS.category_key
@@ -515,7 +515,7 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>Cuando hablamos de atención al cliente, pensamos en empresas como Amazon, Zara, Netflix, entre otras grandes industrias. Sin embargo, no solo estas grandes compañías deben ofrecer un servicio de atención al cliente de calidad, ya que las pequeñas industrias también tienen esta responsabilidad. Y es que el protocolo de atención al cliente de tu empresa&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157483/website-v2/blog/llamadores-de-meseros/mejorar-atencion-gimnasios-llamador-entrenadores/cji9wlpmcig6bsoxoapl.jpg"
+        "v1747157483/website-v2/blog/llamadores-de-meseros/mejorar-atencion-gimnasios-llamador-entrenadores/cji9wlpmcig6bsoxoapl.jpg"
     ],
     "categories": [
       categories.LLAMADORES_DE_MESEROS.category_key
@@ -547,7 +547,7 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>Los Llamadores de Meseros: La Clave para Transformar el Servicio en Tu Restaurante La calidad en el servicio al cliente es un factor determinante para el éxito de cualquier restaurante. Los llamadores de meseros han emergido como una herramienta revolucionaria para agilizar la atención al cliente, reducir tiempos de espera y crear una experiencia satisfactoria&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157482/website-v2/blog/llamadores-de-meseros/llamadores-meseros-esenciales-elevar-nivel-restaurante/ukbqtenmdkg9skitc8jt.jpg"
+        "v1747157482/website-v2/blog/llamadores-de-meseros/llamadores-meseros-esenciales-elevar-nivel-restaurante/ukbqtenmdkg9skitc8jt.jpg"
     ],
     "categories": [
       categories.LLAMADORES_DE_MESEROS.category_key
@@ -579,7 +579,7 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>La industria de la gastronomía es altamente competitiva y está en constante evolución. Los clientes ya no solo buscan una buena comida, sino una experiencia completa: rapidez, comodidad y atención de calidad. Uno de los principales desafíos en un restaurante es la comunicación entre los clientes y los meseros. ¿Cuántas veces un comensal ha intentado&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157480/website-v2/blog/llamadores-de-meseros/llamador-de-meseros-realmente-necesario/pqyz7gyor9jska8me88f.jpg"
+        "v1747157480/website-v2/blog/llamadores-de-meseros/llamador-de-meseros-realmente-necesario/pqyz7gyor9jska8me88f.jpg"
     ],
     "categories": [
       categories.LLAMADORES_DE_MESEROS.category_key
@@ -648,7 +648,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>En la industria gastronómica, la organización y rapidez en el servicio son claves para ofrecer una experiencia satisfactoria. Cuando un cliente visita un restaurante, espera no solo una comida deliciosa, sino también un servicio fluido, sin largas esperas ni confusión en la asignación de mesas. Sin embargo, en horas pico o en establecimientos con alta&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157490/website-v2/blog/localizadores-para-restaurantes/turneros-autoservicio-atencion-cliente/i3d5rirxzgdnwq0cxcby.png"
+        "v1747157490/website-v2/blog/localizadores-para-restaurantes/turneros-autoservicio-atencion-cliente/i3d5rirxzgdnwq0cxcby.png"
     ],
     "categories": [
       categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
@@ -680,7 +680,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>Brindar un excelente servicio al cliente es esencial para el éxito de cualquier negocio de comida. En el caso de los restaurantes autoservicio, garantizar una experiencia satisfactoria, rápida y sin contratiempos se convierte en un factor clave para fidelizar a los clientes y destacarse en un mercado competitivo. Para lograrlo, es fundamental contar con una&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157484/website-v2/blog/localizadores-para-restaurantes/autoservicio-restaurante-8-infaltables/shwocfd5yexl6prratf4.jpg"
+        "v1747157484/website-v2/blog/localizadores-para-restaurantes/autoservicio-restaurante-8-infaltables/shwocfd5yexl6prratf4.jpg"
     ],
     "categories": [
       categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
@@ -712,7 +712,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>En los restaurantes de autoservicio, donde no hay servicio a la mesa ni meseros, la rapidez y la organización del proceso de atención son esenciales para garantizar la satisfacción del cliente. Para lograrlo, herramientas tecnológicas como los avisadores de clientes se han convertido en una solución eficiente que optimiza el servicio y mejora la experiencia&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157485/website-v2/blog/localizadores-para-restaurantes/avisadores-clientes-restaurante-autoservicio/iv5xyyaht7ps7rxvdfw1.jpg"
+        "v1747157485/website-v2/blog/localizadores-para-restaurantes/avisadores-clientes-restaurante-autoservicio/iv5xyyaht7ps7rxvdfw1.jpg"
     ],
     "categories": [
       categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
@@ -744,7 +744,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>La tecnología ha llegado para facilitarle la vida a cientos de negocios, y la industria gastronómica no es la excepción. Los localizadores para restaurantes han revolucionado la forma en que los establecimientos atienden a los clientes, mejorando notablemente la eficiencia en la toma de pedidos y ofreciendo una experiencia más fluida. Esto marca un antes&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157484/website-v2/blog/localizadores-para-restaurantes/escoger-localizador-ideal-restaurante-bogota/zjmueqynef85vavenptj.jpg"
+        "v1747157484/website-v2/blog/localizadores-para-restaurantes/escoger-localizador-ideal-restaurante-bogota/zjmueqynef85vavenptj.jpg"
     ],
     "categories": [
       categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
@@ -776,7 +776,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>Si estás considerando implementar localizadores para restaurantes autoservicio en Colombia, es fundamental que tengas en cuenta ciertos aspectos clave para garantizar una inversión exitosa. En Tecnología Plus, como fabricantes de esta tecnología, sabemos que elegir el sistema adecuado puede marcar la diferencia en la experiencia del cliente y la eficiencia operativa de tu negocio. Por&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157486/website-v2/blog/localizadores-para-restaurantes/autoservicio-colombia-6-claves/xd13dwcmrrtrfewxp5oa.jpg"
+        "v1747157486/website-v2/blog/localizadores-para-restaurantes/autoservicio-colombia-6-claves/xd13dwcmrrtrfewxp5oa.jpg"
     ],
     "categories": [
       categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
@@ -808,7 +808,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>En la industria gastronómica actual, la eficiencia y la rapidez en la atención al cliente marcan la diferencia. Un servicio ágil no solo mejora la experiencia del usuario, sino que también incrementa la rentabilidad del negocio. En Tecnología Plus, somos fabricantes de localizadores de clientes para restaurantes autoservicio, diseñados para optimizar los tiempos de espera&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157485/website-v2/blog/localizadores-para-restaurantes/localizadores-clientes-autoservicio/kmqmrs58emlnndbelt7g.jpg"
+        "v1747157485/website-v2/blog/localizadores-para-restaurantes/localizadores-clientes-autoservicio/kmqmrs58emlnndbelt7g.jpg"
     ],
     "categories": [
       categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
@@ -840,7 +840,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>Los localizadores para restaurantes o avisadores de pedidos han revolucionado la industria gastronómica, facilitando la comunicación entre el establecimiento y los clientes. Hace algunos años, pocos restaurantes de autoservicio contaban con esta tecnología, pero hoy en día su uso se ha convertido en una necesidad para mejorar la atención y agilizar el servicio. Gracias a&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157485/website-v2/blog/localizadores-para-restaurantes/como-elegir-localizadores-para-restaurantes/jiko3dmfxdau84gu4klp.jpg"
+        "v1747157485/website-v2/blog/localizadores-para-restaurantes/como-elegir-localizadores-para-restaurantes/jiko3dmfxdau84gu4klp.jpg"
     ],
     "categories": [
       categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
@@ -872,7 +872,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>En la industria gastronómica, la rapidez y eficiencia en el servicio son clave para garantizar una experiencia satisfactoria. Es aquí donde los avisadores de pedidos, también conocidos como llamadores y localizadores para restaurantes, juegan un papel fundamental. Estos dispositivos han revolucionado la forma en que los restaurantes en Colombia, especialmente en Bogotá, gestionan la atención&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747157483/website-v2/blog/localizadores-para-restaurantes/por-que-usar-localizadores-para-restaurantes/uz3xvayckifntwzzehbp.jpg"
+        "v1747157483/website-v2/blog/localizadores-para-restaurantes/por-que-usar-localizadores-para-restaurantes/uz3xvayckifntwzzehbp.jpg"
     ],
     "categories": [
       categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
@@ -904,7 +904,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>Las zonas de comidas —como las de centros comerciales, plazoletas o patios gastronómicos— enfrentan un enemigo silencioso: el caos. Filas interminables, pedidos confundidos, clientes impacientes, gritos para llamar turnos y un ambiente de tensión constante. Todo eso afecta la experiencia del usuario y reduce las posibilidades de fidelización. ¿La buena noticia? Existe una solución moderna,&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747324697/website-v2/blog/localizadores-para-restaurantes/caos-zonas-de-comida/koguv8erlwueak1u0oo3.png"
+        "v1747324697/website-v2/blog/localizadores-para-restaurantes/caos-zonas-de-comida/koguv8erlwueak1u0oo3.png"
     ],
     "categories": [
       categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
@@ -936,7 +936,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>Imagina este escenario: estás en una plazoleta de comidas un sábado al mediodía. El lugar está lleno. Hay familias con niños impacientes, trabajadores en su hora de almuerzo, turistas buscando un bocado rápido. Todos ordenan sus comidas y, de inmediato, se forma una escena caótica: 🔊 Números que se gritan desde los mostradores 🤷‍♂️ Personas&#8230;</p>\n",
     },
     "images": [
-        "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747324711/website-v2/blog/localizadores-para-restaurantes/secreto-espera-agradable/xskzmzz0vrbjr9nkakdb.jpg"
+        "v1747324711/website-v2/blog/localizadores-para-restaurantes/secreto-espera-agradable/xskzmzz0vrbjr9nkakdb.jpg"
     ],
     "categories": [
       categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
