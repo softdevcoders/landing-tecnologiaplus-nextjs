@@ -6,7 +6,7 @@ import { cleanText } from "@/lib/clean-text";
 import { htmlReader } from "@/lib/html-reader";
 
 const PostView = ({ post }) => {
-  const { posts } = getPosts({ blogPostSlug: post.categories[0], page: 1, pageSize: 3 });
+  const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3 });
 
   return (
     <main className={style.blogPostView__container}>
