@@ -12,16 +12,16 @@
         margin-bottom: 20px;
         font-size: 28px;
         font-weight: 700;
+        text-align: center;
       }
     }
 
     .blogPostView__content {
       .blogPostView__imageContainer {
-        float: left;
+        display: flex;
+        justify-content: center;  
+        align-items: center;
         width: 100%;
-        height: auto;
-        margin: 0 20px 20px 0;
-        border-radius: 8px;
 
         .blogPostView__image {
           object-fit: cover;
@@ -164,7 +164,7 @@
 
   .blogPostView__related {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     background: #f1f1f1;
     flex-direction: column;
     width: 100%;
@@ -174,14 +174,13 @@
     .blogPostView__relatedTitle {
       color: #606060;
       text-align: center;
-      margin-bottom: 1rem;
       font-size: 1.5rem;
       font-weight: 900;
     }
 
     .blogPostView__relatedList {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 360px);
+      grid-template-columns: repeat(auto-fill, 20.9375rem);
       gap: 2rem;
       justify-content: center;
       .blogPostView__relatedItem {
@@ -191,19 +190,19 @@
   }
 }
 
-@media (min-width: 1000px) {
-  .blogPostView__container {
+// @media (min-width: 1000px) {
+//   .blogPostView__container {
 
-    .blogPostView__article {
+//     .blogPostView__article {
 
-      .blogPostView__content {
-        .blogPostView__imageContainer {
-          width: 500px;
-        }
-      }
-    }
-  }
-}
+//       .blogPostView__content {
+//         .blogPostView__imageContainer {
+//           width: 500px;
+//         }
+//       }
+//     }
+//   }
+// }
 
 @media (min-width: 1500px) {
   .blogPostView__container {
@@ -214,7 +213,7 @@
     .blogPostView__related {
       position: sticky;
       top: 5rem;
-      min-width: 500px;
+      max-width: 500px;
     }
   }
 }

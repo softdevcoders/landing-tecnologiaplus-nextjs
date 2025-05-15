@@ -23,5 +23,11 @@ export const categories = {
     category_name: "Turnero TurnoMaster",
     url_category: "/turnero-turnomaster",
     slug: "turnero-turnomaster",
-  }
+  },
+  TURNERO_TURNOEXPRESS: {
+    category_key: "TURNERO_TURNOEXPRESS",
+    category_name: "Turnero TurnoExpress",
+    url_category: "/turnero-turnoexpress",
+    slug: "turnero-turnoexpress",
+  },
 }

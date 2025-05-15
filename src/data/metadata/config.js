@@ -1,0 +1,1 @@
+export const LOGO_METADATA = "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_limit,w_640/f_auto/q_auto/v1738349922/Logo_Tecnolog%C3%ADa_Plus_2024_cyahos_cgz5gx"

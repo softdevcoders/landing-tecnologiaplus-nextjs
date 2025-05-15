@@ -1,9 +1,9 @@
 import { getPosts } from "@/request/server/posts/get-posts";
 import style from "./post-view.module.scss";
-import Card from "@/sections/blog/components/card";
 import { formatDate } from "@/lib/format-date";
-import { cleanText } from "@/lib/clean-text";
 import { htmlReader } from "@/lib/html-reader";
+import ResponsiveImage from "@/components/ui/responsive-image";
+import CarRelated from "@/sections/blog/components/card-related";
 
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3 });
@@ -17,9 +17,19 @@ const PostView = ({ post }) => {
 
         <div itemProp="articleBody" className={style.blogPostView__content}>
           <div className={style.blogPostView__imageContainer}>
-          <img 
+          {/* <img 
             className={style.blogPostView__image}
             src={post.images[0]}  
+          /> */}
+          <ResponsiveImage  
+            image={{
+              src: post.images[0],
+              alt: post.title.rendered,
+              sizes: [
+                { imageWidth: 500, mediaQuery: "(min-width: 0px)" }, 
+                { imageWidth: 1200, mediaQuery: "(min-width: 1024px)" }
+              ],
+            }}
           />
 
           </div>
@@ -56,7 +66,7 @@ const PostView = ({ post }) => {
         <ul className={style.blogPostView__relatedList}>
           {posts.map((post) => (
             <li key={post.id} itemProp="relatedLink" itemScope itemType="https://schema.org/BlogPosting" className={style.blogPostView__relatedItem}>
-              <Card post={post} />
+              <CarRelated post={post} />
             </li>
           ))}
         </ul>
