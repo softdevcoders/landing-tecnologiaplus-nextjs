@@ -7,8 +7,12 @@ export const LandingHeroPortadaContainer = ({ className = "", children }) => {
   return (
     <div className={`${styles.container} ${className}`}>
       <ResponsiveImage 
-        className={styles.background} 
+        className={`${styles.background} ${styles.background__desktop}`} 
         image={landingHeros.background.images}
+      />
+      <ResponsiveImage 
+        className={`${styles.background} ${styles.background__mobile}`} 
+        image={landingHeros.backgroundMobilePortada.images}
       />
       {children}
     </div>

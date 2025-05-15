@@ -29,6 +29,17 @@ export const landingHeros = {
       ],
     },
   },
+  backgroundMobilePortada: {
+    images: {
+      src: "v1745272277/Fondo_3x-8_yjkwov.webp",
+      alt: "Background Image for Slider Hero",
+      priority: "true",
+      fetchPriority: "high",
+      sizes: [
+        { imageWidth: 300, mediaQuery: "(min-width: 0px)" }, 
+      ],
+    },
+  },
   localizadoresParaRestaurantes: {
     informationHome: {    
       title: "Localizadores para restaurantes",
@@ -238,31 +249,54 @@ export const landingHeros = {
       }
     },
     informationPortadas: {
-      title: "TurnoMaster",
-      subTitle: "Sistema de turnos de espera",
-      description: "Lleva tu sala de espera al siguiente nivel",
-      images: [{
-        src: "v1744861623/Group_7_zgut7e.webp",
-        alt: "Sistema de turnos de espera",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_mobile
-      },{
-        src: "v1745506523/imagen_ppal_2x-8_1_cpkvb2.webp",
-        alt: "Sistema de turnos de espera",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_desktop
-      }],
-      imageTextColumn: {
-        src: "f_auto,q_auto/v1744830279/3-8_jxkhuf.webp",
-        alt: "Turno Master Logo",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+      // title: "TurnoMaster",
+      // subTitle: "Sistema de turnos de espera",
+      // description: "Lleva tu sala de espera al siguiente nivel",
+      // images: [{
+      //   src: "v1744861623/Group_7_zgut7e.webp",
+      //   alt: "Sistema de turnos de espera",
+      //   sizes: commonSizesPrimaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high",
+      //   className: styles.landing_hero__content__image_mobile
+      // },{
+      //   src: "v1745506523/imagen_ppal_2x-8_1_cpkvb2.webp",
+      //   alt: "Sistema de turnos de espera",
+      //   sizes: commonSizesPrimaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high",
+      //   className: styles.landing_hero__content__image_desktop
+      // }],
+      // imageTextColumn: {
+      //   src: "f_auto,q_auto/v1744830279/3-8_jxkhuf.webp",
+      //   alt: "Turno Master Logo",
+      //   sizes: commonSizesSecondaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high"
+      // },
+      mobile: {
+        text: {
+          title: "Sistema de turnos de espera",
+          description: "Digitaliza tu sala de espera fácilmente.",
+        },
+        image: {
+          src: "v1745263542/Recurso_20_3x-8_bbrvfp.webp",
+          alt: "Sistema de turnos de espera",
+          sizes: commonSizesPrimaryImage,
+        }
       },
+      desktop: {
+        text: {
+          title: "TurnoMaster:",
+          subTitle: "Sistema de turnos de espera",
+          description: "Lleva tu sala de espera al siguiente nivel",
+        },
+        image: {
+          src: "v1738860875/imagen_ppal_2x-8_1_cpkvb2.webp",
+          alt: "Sistema de turnos de espera",
+          sizes: commonSizesPrimaryImage,
+        }
+      }
     },
   },
   turneroTurnoexpress: {
