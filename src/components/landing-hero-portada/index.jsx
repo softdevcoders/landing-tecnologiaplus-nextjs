@@ -84,6 +84,17 @@ export const LandingHeroPortadaContentTextButton = ({className = "", href, child
   ) 
 }
 
+export const LandingHeroPortadaContentTextLogoBrand = ({className = "", image}) => {
+  return (
+    <div className={`${styles.landing_hero__content__logo__brand__image_container} ${className}`}>
+      <ResponsiveImage 
+        className={styles.landing_hero__content__logo__brand__image} 
+        image={image}
+      />
+    </div>
+  )
+}
+
 export const LandingHeroPortadaContentDivider = ({className = ""}) => {
   return (
     <ResponsiveImage 

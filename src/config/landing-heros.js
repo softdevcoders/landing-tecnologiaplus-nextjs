@@ -249,31 +249,6 @@ export const landingHeros = {
       }
     },
     informationPortadas: {
-      // title: "TurnoMaster",
-      // subTitle: "Sistema de turnos de espera",
-      // description: "Lleva tu sala de espera al siguiente nivel",
-      // images: [{
-      //   src: "v1744861623/Group_7_zgut7e.webp",
-      //   alt: "Sistema de turnos de espera",
-      //   sizes: commonSizesPrimaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high",
-      //   className: styles.landing_hero__content__image_mobile
-      // },{
-      //   src: "v1745506523/imagen_ppal_2x-8_1_cpkvb2.webp",
-      //   alt: "Sistema de turnos de espera",
-      //   sizes: commonSizesPrimaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high",
-      //   className: styles.landing_hero__content__image_desktop
-      // }],
-      // imageTextColumn: {
-      //   src: "f_auto,q_auto/v1744830279/3-8_jxkhuf.webp",
-      //   alt: "Turno Master Logo",
-      //   sizes: commonSizesSecondaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high"
-      // },
       mobile: {
         text: {
           title: "Sistema de turnos de espera",
@@ -448,30 +423,68 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      title: "Numeración clara y corte preciso",
-      description: "para agilizar la atención de turnos.",
-      images: [{
-        src: "v1744861625/Group_6_gqyr8k.webp",
-        alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_mobile
-      },{
-        src: "v1745506512/10_4x-8_l0ccbu.webp",
-        alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_desktop
-      }],
-      imageTextColumn: {
-        src: "v1744463735/12-8_qjsewx.webp",
-        alt: "Logo Turno Express",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+      // title: "Numeración clara y corte preciso",
+      // description: "para agilizar la atención de turnos.",
+      // images: [{
+      //   src: "v1744861625/Group_6_gqyr8k.webp",
+      //   alt: "Rollos de turnos",
+      //   sizes: commonSizesPrimaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high",
+      //   className: styles.landing_hero__content__image_mobile
+      // },{
+      //   src: "v1745506512/10_4x-8_l0ccbu.webp",
+      //   alt: "Rollos de turnos",
+      //   sizes: commonSizesPrimaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high",
+      //   className: styles.landing_hero__content__image_desktop
+      // }],
+      // imageTextColumn: {
+      //   src: "v1744463735/12-8_qjsewx.webp",
+      //   alt: "Logo Turno Express",
+      //   sizes: commonSizesSecondaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high"
+      // },
+      mobile: {
+        text: {
+          title: "Rollos de turnos",
+          subTitle: "Numeración clara y corte preciso para",  
+          description: "agilizar la atención de turnos.",
+        },
+        image: {
+          src: "v1745243187/Recurso_25_3x-8_hwimpu.webp",
+          alt: "Rollos de turnos",
+          sizes: commonSizesPrimaryImage,
+        },
+        button: {
+          href: routes.landings.rollosDeFichosParaTurnos.url,
+          text: "Ver más",
+        }
       },
+      desktop: {
+        text: {
+          title: "Numeración clara y corte preciso",
+          description: "para agilizar la atención de turnos.",
+        },
+        image: {
+          src: "v1745506512/10_4x-8_l0ccbu.webp",
+          alt: "Rollos de turnos",
+          sizes: commonSizesPrimaryImage,
+        },
+        button: {
+          href: routes.landings.rollosDeFichosParaTurnos.url,
+          text: "Ver más",
+        },
+        imageTextColumn: {
+          src: "v1744463735/12-8_qjsewx.webp",
+          alt: "Logo Turno Express",
+          sizes: [{ imageWidth: 300, mediaQuery: "(min-width: 0px)" }],
+          priority: "true",
+          fetchPriority: "high"
+        },
+      }
     },    
   },
   rollosDePapelTermico: {
