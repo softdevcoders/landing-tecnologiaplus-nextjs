@@ -423,30 +423,6 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      // title: "Numeración clara y corte preciso",
-      // description: "para agilizar la atención de turnos.",
-      // images: [{
-      //   src: "v1744861625/Group_6_gqyr8k.webp",
-      //   alt: "Rollos de turnos",
-      //   sizes: commonSizesPrimaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high",
-      //   className: styles.landing_hero__content__image_mobile
-      // },{
-      //   src: "v1745506512/10_4x-8_l0ccbu.webp",
-      //   alt: "Rollos de turnos",
-      //   sizes: commonSizesPrimaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high",
-      //   className: styles.landing_hero__content__image_desktop
-      // }],
-      // imageTextColumn: {
-      //   src: "v1744463735/12-8_qjsewx.webp",
-      //   alt: "Logo Turno Express",
-      //   sizes: commonSizesSecondaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high"
-      // },
       mobile: {
         text: {
           title: "Rollos de turnos",
@@ -504,15 +480,46 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      title: "Rollos térmicos en variedadde tamaños. ¡Somos fabricantes!",
-      description: "Perfectos para tickets, facturas y más. ¡No busques más!",
-      images: {
-        src: "v1745506512/11_4x-8_2_nsacou.webp",
-        alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high"
+      // title: "Rollos térmicos en variedadde tamaños. ¡Somos fabricantes!",
+      // description: "Perfectos para tickets, facturas y más. ¡No busques más!",
+      // images: {
+      //   src: "v1745506512/11_4x-8_2_nsacou.webp",
+      //   alt: "Rollos de turnos",
+      //   sizes: commonSizesPrimaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high"
+      // },
+      mobile: {
+        text: {
+          title: "Rollos térmicos",
+          subTitle: "En variedad de tamaños </br> ¡Somos fabricantes!",
+          description: "Perfectos para tickets, facturas y más.",
+        },
+        image: {
+          src: "v1744771350/tiuyfgrjwlmhj4gdzrtm_lybcwl_1_alshzc.webp",
+          alt: "Rollos de turnos",
+          sizes: commonSizesPrimaryImage,
+        },
+        button: {
+          href: routes.landings.rollosDePapelTermico.url,
+          text: "Ver más",
+        },
       },
+      desktop: {
+        text: {
+          title: "Rollos térmicos en variedad de tamaños. ¡Somos fabricantes!",
+          subTitle: "Perfectos para tickets, facturas y más.</br>¡No busques más!",
+        },
+        image: {
+          src: "v1738349924/tiuyfgrjwlmhj4gdzrtm_lybcwl.webp",
+          alt: "Rollos de turnos",
+          sizes: commonSizesPrimaryImage,
+        },
+        button: {
+          href: routes.landings.rollosDePapelTermico.url,
+          text: "Ver más",
+        },
+      }
     },
   },
   calificadorDeServicioAlClienteOpinamaster: {
