@@ -184,31 +184,6 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      // title: "Llamado de Enfermería:",
-      // subTitle: "Más cerca de tus pacientes.",
-      // description: "Facilita el contacto entre el paciente y personal de salud.",
-      // images: [{
-      //   src: "v1744861534/Group_5_t7cyjd.webp",
-      //   alt: "Llamado de enfermería",
-      //   sizes: commonSizesPrimaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high",
-      //   className: styles.landing_hero__content__image_mobile
-      // },{
-      //   src: "v1745506524/2_4x-8_5_igrf1u.webp",
-      //   alt: "Llamado de enfermería",
-      //   sizes: commonSizesPrimaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high",
-      //   className: styles.landing_hero__content__image_desktop
-      // }],
-      // imageTextColumn: {
-      //   src: "v1744462125/Logo_CuidaMaster_4x-8_cn4z4h.webp",
-      //   alt: "CuidaMaster Logo",
-      //   sizes: commonSizesSecondaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high"
-      // },
       mobile: {
         text: {
           title: "Llamado de enfermería",
@@ -588,31 +563,29 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      title: "OpinaMaster:",
-      subTitle: "El calificador de servicio",
-      description: "para crecer con la voz de tus clientes.",
-      images: [{
-        src: "v1744864122/Group_1_kihtey.webp",
-        alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_mobile
-      },{
-        src: "v1745506513/5_4x-8_3_s0vc5b.webp",
-        alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_desktop
-      }],
-      imageTextColumn: {
-        src: "v1744467470/6-8_xncpdx.webp",
-        alt: "Logo Turno Express",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+      mobile: {
+        text: {
+          title: "Calificador </br> de servicio",
+          subTitle: "para crecer con la </br> voz de tus clientes.",
+        },
+        image: {
+          src: "v1745243188/Recurso_26_3x-8_ydpvir.webp",
+          alt: "Calificador de servicio",
+          sizes: commonSizesPrimaryImage,
+        }
       },
+      desktop: {
+        text: {
+          title: "OpinaMaster:",
+          subTitle: "El calificador de servicio",
+          description: "para crecer con la voz de tus clientes.",
+        },
+        image: {
+          src: "v1738596299/Imagen_principal_2x-8_xvqvel.webp",
+          alt: "Calificador de servicio",
+          sizes: commonSizesPrimaryImage,
+        },
+      }
     },
     
   },
