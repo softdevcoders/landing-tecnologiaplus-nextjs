@@ -4,7 +4,7 @@ import SliderHeroClient from "./slider-hero-client";
 import ResponsiveImage from "@/components/ui/responsive-image";
 
 export default function SliderHero() {
-  const { background, ...restLandings } = landingHeros
+  const { background, backgroundMobilePortada, ...restLandings } = landingHeros
 
   return (
     <div className={styles.slider__container}>
