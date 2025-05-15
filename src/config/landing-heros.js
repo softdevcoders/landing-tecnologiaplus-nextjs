@@ -184,31 +184,60 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      title: "Llamado de Enfermería:",
-      subTitle: "Más cerca de tus pacientes.",
-      description: "Facilita el contacto entre el paciente y personal de salud.",
-      images: [{
-        src: "v1744861534/Group_5_t7cyjd.webp",
-        alt: "Llamado de enfermería",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_mobile
-      },{
-        src: "v1745506524/2_4x-8_5_igrf1u.webp",
-        alt: "Llamado de enfermería",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_desktop
-      }],
-      imageTextColumn: {
-        src: "v1744462125/Logo_CuidaMaster_4x-8_cn4z4h.webp",
-        alt: "CuidaMaster Logo",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+      // title: "Llamado de Enfermería:",
+      // subTitle: "Más cerca de tus pacientes.",
+      // description: "Facilita el contacto entre el paciente y personal de salud.",
+      // images: [{
+      //   src: "v1744861534/Group_5_t7cyjd.webp",
+      //   alt: "Llamado de enfermería",
+      //   sizes: commonSizesPrimaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high",
+      //   className: styles.landing_hero__content__image_mobile
+      // },{
+      //   src: "v1745506524/2_4x-8_5_igrf1u.webp",
+      //   alt: "Llamado de enfermería",
+      //   sizes: commonSizesPrimaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high",
+      //   className: styles.landing_hero__content__image_desktop
+      // }],
+      // imageTextColumn: {
+      //   src: "v1744462125/Logo_CuidaMaster_4x-8_cn4z4h.webp",
+      //   alt: "CuidaMaster Logo",
+      //   sizes: commonSizesSecondaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high"
+      // },
+      mobile: {
+        text: {
+          title: "Llamado de enfermería",
+          subTitle: "Conecta al paciente con </b> el personal de salud.",
+        },
+        image: {
+          src: "v1745243187/Recurso_19_3x-8_okf5hg.webp",
+          alt: "Llamado de enfermería",
+          sizes: commonSizesPrimaryImage,
+        }
       },
+      desktop: {
+        text: {
+          title: "Llamado de Enfermería: </br> Más cerca de tus pacientes.",
+          subTitle: "Facilita el contacto entre el paciente y <br> personal de salud.",
+        },
+        image: {
+          src: "v1738685528/Imagen_principal_2x-8_1_cnekrr.webp",
+          alt: "Llamado de enfermería",
+          sizes: commonSizesPrimaryImage,
+        },  
+        imageTextColumn: {
+          src: "v1744462125/Logo_CuidaMaster_4x-8_cn4z4h.webp",
+          alt: "CuidaMaster Logo",
+          sizes: commonSizesSecondaryImage,
+          priority: "true",
+          fetchPriority: "high"
+        },
+      }
     },
   },
   sistemasDeTurnosTurnomaster: {
@@ -364,31 +393,6 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      // title: "Dispensador de tickets",
-      // subTitle: "Adiós a las filas",
-      // description: "Orden y comodidad en cada turno.",
-      // images: [{
-      //   src: "v1744861625/Group_3_nkqa3u.webp",
-      //   alt: "Dispensador de tickets",
-      //   sizes: commonSizesPrimaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high",
-      //   className: styles.landing_hero__content__image_mobile
-      // },{
-      //   src: "v1745506512/9_4x-8_1_biykgd.webp",
-      //   alt: "Dispensador de tickets",
-      //   sizes: commonSizesPrimaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high",
-      //   className: styles.landing_hero__content__image_desktop
-      // }],
-      // imageTextColumn: {
-      //   src: "v1744463735/12-8_qjsewx.webp",
-      //   alt: "Logo Turno Express",
-      //   sizes: commonSizesSecondaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high"
-      // },
       mobile: {
         text: {
           title: "Dispensador de tickets",
