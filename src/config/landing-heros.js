@@ -623,31 +623,28 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      title: "Encuesta virtual:",
-      subTitle: "Detecta los puntos fuertes",
-      description: "y como mejorar tu negocio.",
-      images: [{
-        src: "v1745243245/Recurso_21_3x-8_1_pkt9h3.webp",
-        alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_mobile
-      },{
-        src: "v1745506523/7_4x-8_2_a0z5uj.webp",
-        alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_desktop
-      }],
-      imageTextColumn: {
-        src: "v1744467470/6-8_xncpdx.webp",
-        alt: "Logo Turno Express",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+      mobile: {
+        text: {
+          title: "Encuesta virtual",
+          subTitle: "Detecta puntos débiles </br> y mejora tu negocio.",
+        },
+        image: {
+          src: "v1745243183/Recurso_21_3x-8_1_qdom6g.webp",
+          alt: "Encuesta virtual",
+          sizes: commonSizesPrimaryImage,
+        }
       },
+      desktop: {
+        text: {
+          title: "Encuesta virtual: </br> Detecta los puntos fuertes",
+          subTitle: "y como mejorar tu negocio.",
+        },
+        image: {
+          src: "v1738607993/Imagen_principal_2x-8_pc1qfd.webp",
+          alt: "Encuesta virtual",
+          sizes: commonSizesPrimaryImage,
+        },
+      }
     },
   }
 }
