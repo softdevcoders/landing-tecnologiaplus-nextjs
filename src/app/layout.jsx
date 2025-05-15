@@ -8,6 +8,7 @@ import SchemaOrg from "../components/SchemaOrg";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
 import { Bebas_Neue, Montserrat } from 'next/font/google'
+import getMetadata from "@/request/server/metadata/get-metadata";
  
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -21,81 +22,10 @@ const bebas = Bebas_Neue({
   display: 'swap',
 })
 
-export const metadata = {
-  title: {
-    template: "%s | Tecnología Plus",
-    default: "Tecnología Plus - Sistemas de Turnos y Llamadores de Meseros",
-  },
-  description:
-    "Soluciones tecnológicas profesionales: sistemas de turnos, llamadores de meseros y localizadores para mejorar la eficiencia y experiencia en su negocio",
-  metadataBase: new URL(
-    "https://landing-tecnologiaplus-nextjs-dev.vercel.app"
-  ),
-  keywords: [
-    "sistemas de turnos",
-    "llamador de meseros",
-    "localizadores",
-    "tecnología para negocios",
-    "dispositivos para restaurantes",
-  ],
-  alternates: {
-    canonical: "/",
-    languages: {
-      "es-ES": "/",
-    },
-  },
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: {
-      index: false,
-      follow: false,
-      "max-image-preview": "none",
-      "max-video-preview": -1,
-      "max-snippet": -1,
-    },
-  },
-  openGraph: {
-    title: "Tecnología Plus - Sistemas para Mejorar su Negocio",
-    description:
-      "Soluciones tecnológicas profesionales: sistemas de turnos, llamadores de meseros y localizadores para mejorar la eficiencia de su negocio",
-    url: "https://landing-tecnologiaplus-nextjs-dev.vercel.app",
-    siteName: "Tecnología Plus",
-    locale: "es_ES",
-    type: "website",
-    images: [
-      {
-        url: "/android-chrome-192x192.png",
-        width: 192,
-        height: 192,
-        alt: "Tecnología Plus - Soluciones tecnológicas para su negocio",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary",
-    title: "Tecnología Plus - Sistemas para Mejorar su Negocio",
-    description:
-      "Soluciones tecnológicas profesionales: sistemas de turnos, llamadores de meseros y localizadores",
-    images: ["/android-chrome-192x192.png"],
-  },
-  icons: {
-    icon: [
-      { url: "/favicon.ico", type: "image/x-icon" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: "/apple-touch-icon.png",
-  },
-  verification: {
-    google: "your-google-site-verification",
-  },
-  other: {
-    "msapplication-TileImage": "/mstile-270x270.png",
-  },
-};
+export async function generateMetadata() {
+  const metadata = getMetadata('default');
+  return metadata;
+}
 
 export default function RootLayout({ children }) {
   return (
