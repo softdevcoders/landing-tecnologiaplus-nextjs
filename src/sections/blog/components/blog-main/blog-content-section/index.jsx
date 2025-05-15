@@ -15,7 +15,7 @@ const BlogContentSection = ({ posts, pagination }) => {
         {Array.from({ length: pagination.totalPages }, (_, i) => ++i).map((page) => (
           <Link 
             key={page} 
-            href={`/blog?page=${page}`} 
+            href={`?page=${page}`} 
             className={`${style.blogContent__paginationButton} ${+pagination.currentPage === page ? style.blogContent__paginationButton__active : ''}`}
           >
             {page}
