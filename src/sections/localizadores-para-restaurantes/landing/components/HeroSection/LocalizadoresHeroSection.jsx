@@ -12,7 +12,7 @@ function HeroSection() {
           <LandingHeroPortadaContentImage className={`${stylesDefault.content__image__imgMobile} ${style.content__image__imgMobile__custom}`}>
             <LandingHeroPortadaContentImageImg image={landingHeros.localizadoresParaRestaurantes.informationPortadas.mobile.image} />
           </LandingHeroPortadaContentImage>
-          <LandingHeroPortadaContentImage className={stylesDefault.content__image__imgDesktop}>
+          <LandingHeroPortadaContentImage className={`${stylesDefault.content__image__imgDesktop} ${style.content__image__imgDesktop__custom}`}>
             <LandingHeroPortadaContentImageImg image={landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image} />
           </LandingHeroPortadaContentImage>
         </>

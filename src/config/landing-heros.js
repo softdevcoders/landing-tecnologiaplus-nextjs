@@ -314,7 +314,7 @@ export const landingHeros = {
         text: {
           title: "Turnero digital",
           subTitle: "Adiós a las filas",
-          description: "Orden y agilidad en cada turno.",
+          description: "Orden y agilidad </br> en cada turno.",
         },
         image: {
           src: "v1745243183/Recurso_22_3x-8_ofq0yg.webp",
@@ -443,8 +443,8 @@ export const landingHeros = {
     informationPortadas: {
       mobile: {
         text: {
-          title: "Rollos de turnos",
-          subTitle: "Numeración clara y corte preciso para",  
+          title: "Rollos </br> de turnos",
+          subTitle: "Numeración clara </br> y corte preciso para",  
           description: "agilizar la atención de turnos.",
         },
         image: {
@@ -453,7 +453,7 @@ export const landingHeros = {
           sizes: commonSizesPrimaryImage,
         },
         button: {
-          href: routes.landings.rollosDeFichosParaTurnos.url,
+          href: routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url,
           text: "Ver más",
         }
       },
@@ -468,7 +468,7 @@ export const landingHeros = {
           sizes: commonSizesPrimaryImage,
         },
         button: {
-          href: routes.landings.rollosDeFichosParaTurnos.url,
+          href: routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url,
           text: "Ver más",
         },
         imageTextColumn: {
@@ -502,15 +502,15 @@ export const landingHeros = {
         text: {
           title: "Rollos térmicos",
           subTitle: "En variedad de tamaños </br> ¡Somos fabricantes!",
-          description: "Perfectos para tickets, facturas y más.",
+          description: "Perfectos para tickets,</br> facturas y más.",
         },
         image: {
-          src: "v1745243187/Recurso_23_3x-8_kplypr.webp",
+          src: "v1744771350/tiuyfgrjwlmhj4gdzrtm_lybcwl_1_alshzc.webp",
           alt: "Rollos de turnos",
           sizes: commonSizesPrimaryImage,
         },
         button: {
-          href: routes.landings.rollosDePapelTermico.url,
+          href: routes.landings.rollosDePapelTermico.children.rollosTermicos.url,
           text: "Ver más",
         },
       },
@@ -525,7 +525,7 @@ export const landingHeros = {
           sizes: commonSizesPrimaryImage,
         },
         button: {
-          href: routes.landings.rollosDePapelTermico.url,
+          href: routes.landings.rollosDePapelTermico.children.rollosTermicos.url,
           text: "Ver más",
         },
       }

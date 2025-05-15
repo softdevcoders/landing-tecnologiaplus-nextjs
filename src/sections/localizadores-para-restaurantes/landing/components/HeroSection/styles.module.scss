@@ -45,3 +45,9 @@
   font-weight: 500 !important;
   margin: 0 !important;
 }
+
+.content__image__imgDesktop__custom {
+  picture {
+    max-width: 800px !important;
+  }
+}

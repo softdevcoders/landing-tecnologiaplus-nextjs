@@ -34,7 +34,7 @@ function HeroSection() {
             <LandingHeroPortadaContentTextSubTitle className={style.content__text__subTitle__desktop__custom}>
               {landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.desktop.text.subTitle}
             </LandingHeroPortadaContentTextSubTitle>
-            <LandingHeroPortadaContentTextDescription className={style.content__text__descriptio__desktop__custom}>
+            <LandingHeroPortadaContentTextDescription className={style.content__text__description__desktop__custom}>
               {landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.desktop.text.description}
             </LandingHeroPortadaContentTextDescription>
           </LandingHeroPortadaContentText>

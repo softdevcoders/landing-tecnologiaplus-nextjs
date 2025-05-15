@@ -2,11 +2,11 @@
 // Mobile Styles
 // +++++++++++++++++++++
 .content__mobile__custom {
-  margin-top: 3rem !important;
+  // margin-top: 3rem !important;
 }
 
 .content__image__imgMobile__custom {
-  padding: 2rem !important;
+  padding: 0 2rem !important;
 
   picture {
     max-width: 300px !important;
@@ -47,6 +47,8 @@
   height: 100% !important;
   position: relative !important;
   width: 600px !important;
+  margin-top: 0 !important;
+
   picture {
     position: absolute !important;
     bottom: 0 !important;
@@ -84,6 +86,6 @@
 
 @media (min-width: 1024px) {
   .content__mobile__custom {
-    margin-top: 0 !important;
+    // margin-top: 0 !important;
   }
 }

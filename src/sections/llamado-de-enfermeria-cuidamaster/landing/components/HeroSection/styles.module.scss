@@ -2,11 +2,11 @@
 // Mobile Styles
 // +++++++++++++++++++++
 .content__mobile__custom {
-  margin-top: 3rem !important;
+  // margin-top: 3rem !important;
 }
 
 .content__image__imgMobile__custom {
-  padding: 2rem !important;
+  padding: 0 2rem !important;
 
   picture {
     max-width: 300px !important;
@@ -43,7 +43,7 @@
 // +++++++++++++++++++++
 
 .content__image__imgDesktop__custom {
-  height: 100% !important;
+  height: calc(100vh - 128px) !important;
   position: relative !important;
   width: 800px !important;
   picture {
@@ -51,12 +51,12 @@
     bottom: 0 !important;
     right: -100px !important;
     width: 100% !important;
+    max-width: 800px !important;
   }
 }
 
 .content__text__desktop__custom {
   max-width: 700px !important;
-  margin-left: 3rem !important;
 }
 
 .content__text__title__desktop__custom {
