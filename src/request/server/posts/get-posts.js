@@ -8,14 +8,17 @@ const filterAndPaginatePosts = ({ posts, page, pageSize, categoryFilter }) => {
     filteredPosts = posts.filter(post =>
       post.categories.includes(categoryFilter)
     );
-  }
 
+  }
+  
+  filteredPosts = sortByDate(filteredPosts);
+  
   const totalPosts = filteredPosts.length;
   const totalPages = Math.ceil(totalPosts / pageSize);
   const paginatedPosts = filteredPosts.slice((page - 1) * pageSize, page * pageSize);
 
   return {
-    posts: sortByDate(paginatedPosts),
+    posts: paginatedPosts,
     pagination: {
       currentPage: page,
       totalPages,
