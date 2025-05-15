@@ -364,31 +364,70 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      title: "Dispensador de tickets",
-      subTitle: "Adiós a las filas",
-      description: "Orden y comodidad en cada turno.",
-      images: [{
-        src: "v1744861625/Group_3_nkqa3u.webp",
-        alt: "Dispensador de tickets",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_mobile
-      },{
-        src: "v1745506512/9_4x-8_1_biykgd.webp",
-        alt: "Dispensador de tickets",
-        sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
-        className: styles.landing_hero__content__image_desktop
-      }],
-      imageTextColumn: {
-        src: "v1744463735/12-8_qjsewx.webp",
-        alt: "Logo Turno Express",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+      // title: "Dispensador de tickets",
+      // subTitle: "Adiós a las filas",
+      // description: "Orden y comodidad en cada turno.",
+      // images: [{
+      //   src: "v1744861625/Group_3_nkqa3u.webp",
+      //   alt: "Dispensador de tickets",
+      //   sizes: commonSizesPrimaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high",
+      //   className: styles.landing_hero__content__image_mobile
+      // },{
+      //   src: "v1745506512/9_4x-8_1_biykgd.webp",
+      //   alt: "Dispensador de tickets",
+      //   sizes: commonSizesPrimaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high",
+      //   className: styles.landing_hero__content__image_desktop
+      // }],
+      // imageTextColumn: {
+      //   src: "v1744463735/12-8_qjsewx.webp",
+      //   alt: "Logo Turno Express",
+      //   sizes: commonSizesSecondaryImage,
+      //   priority: "true",
+      //   fetchPriority: "high"
+      // },
+      mobile: {
+        text: {
+          title: "Dispensador de tickets",
+          subTitle: "Adiós a las filas",
+          description: "Orden y comodidad </br> en cada turno.",
+        },
+        image: {
+          src: "v1745243187/Recurso_23_3x-8_kplypr.webp",
+          alt: "Dispensador de tickets",
+          sizes: commonSizesPrimaryImage,
+        },
+        button: {
+          href: routes.landings.dispensadorDeTickets.url,
+          text: "Ver más",  
+        }
       },
+      desktop: {
+        text: {
+          title: "Dispensador de tickets",
+          subTitle: "Adiós a las filas",
+          description: "Orden y comodidad en cada turno.",
+        },
+        image: {
+          src: "v1738424725/Imagen_banner_2x-8_qd3lwx.webp",
+          alt: "Dispensador de tickets",
+          sizes: commonSizesPrimaryImage,
+        },
+        imageTextColumn: {
+          src: "v1744463735/12-8_qjsewx.webp",
+          alt: "Logo Turno Express",
+          sizes: commonSizesSecondaryImage,
+          priority: "true",
+          fetchPriority: "high"
+        },
+        button: {
+          href: routes.landings.dispensadorDeTickets.url,
+          text: "Ver más",  
+        }
+      }
     },
   },
   rollosDeFichosParaTurnos: {
@@ -480,15 +519,6 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      // title: "Rollos térmicos en variedadde tamaños. ¡Somos fabricantes!",
-      // description: "Perfectos para tickets, facturas y más. ¡No busques más!",
-      // images: {
-      //   src: "v1745506512/11_4x-8_2_nsacou.webp",
-      //   alt: "Rollos de turnos",
-      //   sizes: commonSizesPrimaryImage,
-      //   priority: "true",
-      //   fetchPriority: "high"
-      // },
       mobile: {
         text: {
           title: "Rollos térmicos",
@@ -496,7 +526,7 @@ export const landingHeros = {
           description: "Perfectos para tickets, facturas y más.",
         },
         image: {
-          src: "v1744771350/tiuyfgrjwlmhj4gdzrtm_lybcwl_1_alshzc.webp",
+          src: "v1745243187/Recurso_23_3x-8_kplypr.webp",
           alt: "Rollos de turnos",
           sizes: commonSizesPrimaryImage,
         },

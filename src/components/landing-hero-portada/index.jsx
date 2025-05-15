@@ -71,9 +71,10 @@ export const LandingHeroPortadaContentTextSubTitle = ({className = "", children}
 
 export const LandingHeroPortadaContentTextDescription = ({className = "", children}) => {
   return (
-    <p className={`${styles.content__text__description} ${className}`}>
-      {children}
-    </p>
+    <p 
+      className={`${styles.content__text__description} ${className}`}
+      dangerouslySetInnerHTML={{__html: children}}
+    />
   ) 
 }
 
