@@ -978,8 +978,47 @@ const localizadoresParaRestaurantesPosts = [
 */
 ];
 
+const turneroTurnoexpress = [
+    
+/*
+  {
+    "id": ,
+    "date": "",
+    "slug": "",
+    "current_link": "/blog/localizadores-para-restaurantes/",
+    "previous_link": [
+        "/timbres-de-mesa-para-tu-restaurante"
+    ],
+    "metadata": {
+        "title": "",
+        "description": "",
+        "keywords": [
+            "",
+        ]
+    },
+    "title": {
+        "rendered": ""
+    },
+    "content": {
+        "rendered": "",
+        "template_name": "/localizadores-para-restaurantes/",
+    },
+    "excerpt": {
+        "rendered": "",
+    },
+    "images": [
+        ""
+    ],
+    "categories": [
+      categories.TURNERO_TURNOEXPRESS.category_key
+    ],
+  },
+*/
+]
+
 export default [
   ...llamadoresDeEnfermeriaPosts,
   ...llamadoresDeMeserosPosts,
-  ...localizadoresParaRestaurantesPosts
+  ...localizadoresParaRestaurantesPosts,
+  ...turneroTurnoexpress
 ]
