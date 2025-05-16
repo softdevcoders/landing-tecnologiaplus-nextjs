@@ -28,6 +28,10 @@ const filterAndPaginatePosts = ({ posts, page, pageSize, categoryFilter }) => {
   };
 };
 
-export const getPosts = ({ category, page, pageSize = 8 }) => {
+export const getPosts = ({ category, page, pageSize = 8, allPosts = false }) => {
+  if (allPosts) {
+    return posts;
+  }
+
   return filterAndPaginatePosts({ posts, page, pageSize, categoryFilter: category });
 }

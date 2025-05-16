@@ -17,10 +17,7 @@ const PostView = ({ post }) => {
 
         <div itemProp="articleBody" className={style.blogPostView__content}>
           <div className={style.blogPostView__imageContainer}>
-          {/* <img 
-            className={style.blogPostView__image}
-            src={post.images[0]}  
-          /> */}
+
           <ResponsiveImage  
             image={{
               src: post.images[0],
@@ -35,7 +32,6 @@ const PostView = ({ post }) => {
           </div>
           <div 
             className={style.blogPostView__contentHtml} 
-            // dangerouslySetInnerHTML={{ __html: cleanText(post.content?.rendered, ['br']) }} 
             dangerouslySetInnerHTML={{ __html: htmlReader(post.content.template_name) }} 
           />
         </div>
