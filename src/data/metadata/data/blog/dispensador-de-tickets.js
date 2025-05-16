@@ -1,8 +1,8 @@
 import { routes } from "@/config/routes";
-import { LOGO_METADATA } from "./config";
+import { LOGO_METADATA } from "@/data/metadata/config";
 
 export const metadata = {
-  title: "Página de Blog",
+  title: "Página de Blog - Dispensador de Tickets",
   description:
     "Somos fabricantes. Descubre en nuestro blog cómo la tecnología mejora la experiencia de los usuarios en comercios. ¡Innovación para un mejor servicio!",
   keywords: [
