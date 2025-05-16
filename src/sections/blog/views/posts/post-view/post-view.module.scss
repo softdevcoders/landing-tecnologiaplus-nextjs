@@ -180,29 +180,16 @@
 
     .blogPostView__relatedList {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 20.9375rem);
+      grid-template-columns: repeat(auto-fill, min(100%,20.9375rem));
       gap: 2rem;
       justify-content: center;
-      .blogPostView__relatedItem {
 
-      }
+      // .blogPostView__relatedItem {
+
+      // }
     }     
   }
 }
-
-// @media (min-width: 1000px) {
-//   .blogPostView__container {
-
-//     .blogPostView__article {
-
-//       .blogPostView__content {
-//         .blogPostView__imageContainer {
-//           width: 500px;
-//         }
-//       }
-//     }
-//   }
-// }
 
 @media (min-width: 1500px) {
   .blogPostView__container {

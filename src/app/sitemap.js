@@ -2,7 +2,7 @@ import { routes } from "@/config/routes";
 
 export default async function sitemap() {
   const links = [];
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://example.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tecnologiaplus.com';
 
   const addRoutes = (routeObject) => {
     for (const key in routeObject) {
