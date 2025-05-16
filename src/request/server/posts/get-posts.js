@@ -28,7 +28,7 @@ const filterAndPaginatePosts = ({ posts, page, pageSize, categoryFilter }) => {
   };
 };
 
-export const getPosts = ({ category, page, pageSize = 8, allPosts = false }) => {
+export const getPosts = ({ category, page, pageSize = 9, allPosts = false }) => {
   if (allPosts) {
     return posts;
   }
