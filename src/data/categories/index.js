@@ -3,7 +3,7 @@ export const categories = {
     category_key: "CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER",
     category_name: "Calificador de servicio al cliente OpinaMaster",
     url_category: "/calificador-de-servicio-al-cliente-opinamaster",
-    slug: "calificador-de-servicio-al-cliente-opinamaster", 
+    slug: "calificador-de-servicio-al-cliente-opinamaster",
   },
   DISPENSADOR_DE_TICKETS: {
     category_key: "DISPENSADOR_DE_TICKETS",
