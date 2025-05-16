@@ -1,8 +1,10 @@
 import { routes } from "@/config/routes";
+import { getPosts } from "@/request/server/posts/get-posts";
 
 export default async function sitemap() {
   const links = [];
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tecnologiaplus.com';
+  const posts = getPosts({ allPosts: true });
 
   const addRoutes = (routeObject) => {
     for (const key in routeObject) {
@@ -24,6 +26,15 @@ export default async function sitemap() {
           }
         }
       }
+    }
+
+    for (const post of posts) {
+      links.push({
+        url: `${baseUrl}${post.current_link}`,
+        changefreq: 'daily',
+        priority: 0.8,
+        lastmod: post.updated_at ?? post.date,
+      });
     }
   };
 
