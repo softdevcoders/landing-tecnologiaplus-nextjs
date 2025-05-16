@@ -1,4 +1,4 @@
-import { LOGO_METADATA } from "./config";
+import { LOGO_METADATA } from "@/data/metadata/config";
 
 export const metadata = {
     title: {
