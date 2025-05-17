@@ -41,19 +41,36 @@ const PostView = ({ post }) => {
             <span className={style.blogPostView__sharingTitle}>Compartir</span>
             <ul className={style.blogPostView__sharingList}>
               <li className={style.blogPostView__sharingItem}>
-                <a href="#" className={style.blogPostView__sharingLink}>Facebook</a>
+                <a 
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}`)}`} 
+                  className={`${style.blogPostView__sharingLink} ${style.facebook}`} 
+                  title="Compartir en Facebook"
+                  target="_blank"
+                >
+                  <img
+                    src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738944985/facebook_2x-8_sy9pch.webp"
+                    alt="Compartir en Facebook"
+                  />
+                </a>
               </li>
               <li className={style.blogPostView__sharingItem}>
-                <a href="#" className={style.blogPostView__sharingLink}>Twitter</a>
-              </li>
-              <li className={style.blogPostView__sharingItem}>
-                <a href="#" className={style.blogPostView__sharingLink}>LinkedIn</a>  
+                <a 
+                  href={`https://wa.me/?text=${encodeURIComponent(`${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}`)}`} 
+                  className={style.blogPostView__sharingLink} 
+                  title="Compartir en WhatsApp"
+                  target="_blank"
+                >
+                  <img
+                    src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738944987/wpp_2x-8_tsgorp.webp"
+                    alt="Compartir en WhatsApp"
+                  />
+                </a>
               </li>
             </ul>
           </div>
           <div className={style.blogPostView__dateInformation}>
             <p>Publicado: {formatDate(post.date)}</p>
-            <p>Actualizado: junio 28, 2023</p>
+            {/* <p>Actualizado: junio 28, 2023</p> */}
           </div>
         </footer>
       </article>
