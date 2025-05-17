@@ -38,7 +38,7 @@ const PostView = ({ post }) => {
           />
           <div className={style.blogPostView__contentHtlmFooter}>
             <p  className={style.blogPostView__contentHtmlFooterText}><Link href={routes.contact.url} className={style.blogPostView__contentHtmlFooterLink}>Contáctanos hoy mismo</Link> y descubre cómo podemos llevar tu servicio al siguiente nivel!</p>
-            <a href={routes.contact.url} className={style.blogPostView__contentHtmlFooterButton}>Cotizar</a>
+            <a href="https://wa.me/573164682034" target="_blank" className={style.blogPostView__contentHtmlFooterButton}>Cotizar</a>
           </div>
         </div>
 
