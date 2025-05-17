@@ -54,6 +54,7 @@
       display: box; /* Antiguos navegadores como IE */
       margin-bottom: 0;
       font-weight: 500;
+      line-height: 1.2;
     }
 
     .blogCard__footer {
@@ -62,7 +63,10 @@
       align-items: center;
       justify-content: space-between;
 
-      .blogCard__date { }
+      .blogCard__date { 
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
     }
   }
 }
