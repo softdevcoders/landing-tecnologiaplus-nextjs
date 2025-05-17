@@ -4,6 +4,8 @@ import { formatDate } from "@/lib/format-date";
 import { htmlReader } from "@/lib/html-reader";
 import ResponsiveImage from "@/components/ui/responsive-image";
 import CarRelated from "@/sections/blog/components/card-related";
+import Link from "next/link";
+import { routes } from "@/config/routes";
 
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3 });
@@ -34,6 +36,10 @@ const PostView = ({ post }) => {
             className={style.blogPostView__contentHtml} 
             dangerouslySetInnerHTML={{ __html: htmlReader(post.content.template_name) }} 
           />
+          <div className={style.blogPostView__contentHtlmFooter}>
+            <p  className={style.blogPostView__contentHtmlFooterText}><Link href={routes.contact.url} className={style.blogPostView__contentHtmlFooterLink}>Contáctanos hoy mismo</Link> y descubre cómo podemos llevar tu servicio al siguiente nivel!</p>
+            <a href={routes.contact.url} className={style.blogPostView__contentHtmlFooterButton}>Cotizar</a>
+          </div>
         </div>
 
         <footer className={style.blogPostView__footer}>
@@ -70,7 +76,9 @@ const PostView = ({ post }) => {
           </div>
           <div className={style.blogPostView__dateInformation}>
             <p>Publicado: {formatDate(post.date)}</p>
-            {/* <p>Actualizado: junio 28, 2023</p> */}
+            {post.modified && (
+              <p>Actualizado: {formatDate(post.modified)}</p>
+            )}
           </div>
         </footer>
       </article>
