@@ -980,7 +980,7 @@ const localizadoresParaRestaurantesPosts = [
 
 const turneroTurnoexpress = [
   {
-    "id": 10607,
+    "id": 10607999,
     "date": "2025-03-17T19:05:04",
     "modified": "2025-05-16T09:13:56",
     "slug": "moderniza-tu-atencion-cliente-restaurantes-autoservicio",
@@ -1077,7 +1077,40 @@ const turneroTurnoexpress = [
     "categories": [
       categories.TURNERO_TURNOEXPRESS.category_key
     ],
-  },    
+  },
+  {
+    "id": 9279,
+    "date": "2023-06-28T09:19:52",
+    "modified": "2025-05-16T09:39:34",
+    "slug": "turneros-digitales-casos-exito-colombia",
+    "current_link": "/blog/turnero-turnoexpress/turneros-digitales-casos-exito-colombia",
+    "previous_link": [
+        "/casos-de-exito-de-turneros-en-colombia"
+    ],
+    "metadata": {
+        "title": "El turnero digital su importancia para todos los negocios",
+        "description": "¿Dudas sobre incorporar un turnero digital en tu negocio? En Tecnología Plus descubres sus beneficios antes de decidirte.",
+        "keywords": [
+            "Turnero digital",
+        ]
+    },
+    "title": {
+        "rendered": "La importancia de los Turneros Digitales: casos de éxito en Colombia"
+    },
+    "content": {
+        "rendered": "\n<p>Algo que por desgracia, es común, es que no se realice de manera adecuada la atención al cliente durante la gestión de los turnos. El lapso entre la espera del cliente, y el momento de ser atendido, <strong>es más importante de lo que parece</strong>, pues durante ese tiempo, podrías perder interesados potenciales en tu negocio, si no haces bien las cosas.</p>\n\n\n\n<p>La espera siempre será un enemigo contra el cual batallar. Tener a alguien formando una fila, con sensación de inseguridad por el momento en que recibirá algún servicio, <strong>es una pesadilla para los empresarios</strong>. Y es que es una de las primeras causas que hacen que sus clientes salgan corriendo sin mirar atrás.&nbsp;</p>\n\n\n\n<p>Para evitar semejante escenario, es crucial aplicar medidas preventivas, y una de las más sencillas, eficientes y económicas, es implementar un <a href=\"https://tecnologiaplus.com/turnero-digital/\" target=\"_blank\" rel=\"noreferrer noopener\">turnero digital</a>. </p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-el-turnero-digital-aliado-del-empresario\"><strong>El turnero digital: aliado del empresario</strong></h2>\n\n\n\n<p>El turnero digital les da la automatización a los negocios. Esa que, hoy en día, es prácticamente una exigencia en cualquier sistema de gestión, (sea las de turnos o en cualquier otro ámbito). Con los <strong>turneros digitales</strong>, los clientes pueden estar seguros y tranquilos del momento en que recibirán su servicio, sin tener que estar formados en fila, uno tras otro, ni temer porque suceda algo que les impida obtener lo que quieren.&nbsp;</p>\n\n\n\n<p>En distintos sectores donde se tiene atención al cliente han adoptado el <strong>turnero digital</strong> como su fiel aliado porque es una herramienta que <strong>gestiona mejor la atención al cliente</strong>, no solo informándolos a ellos de cuándo llegará su turno, sino también ofreciendo datos concisos a los operadores del servicio.&nbsp;</p>\n\n\n\n<p>Con esto, es posible que generen estrategias o decidan cuándo tomar medidas en caso de que el tiempo de los turnos se alargue o estanque por algún motivo. Además, <strong>son muy fáciles de instalar</strong> y vienen en diferentes formas.&nbsp;</p>\n\n\n\n<p>Los <strong>turneros inalámbricos</strong>, por ejemplo, son ideales si prefieres evitar el cableado excesivo en tu negocio. Funcionan de la misma forma que un turnero común, solo que emiten señales a distancia, y también vienen con <strong>un precio que se ajusta a gran variedad de presupuestos</strong>.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-colombia-esta-abrazando-los-beneficios-de-los-turneros-digitales\"><strong>Colombia está abrazando los beneficios de los turneros digitales</strong></h2>\n\n\n\n<p>El <strong>turno digital en Colombia</strong> es una herramienta para organizar el flujo de clientes día a día, permitiendo mejorar los tiempos de atención y por ende, la satisfacción del cliente y la reputación del negocio. Al sector servicios le interesa mucho la calidad en la atención al cliente, y para esto es clave <strong>&nbsp;la organización que les brindan los turneros digitales</strong>.&nbsp;</p>\n\n\n\n<p>Por si no lo sabías, negocios de distintos sectores han recibido nuestros servicios en Tecnología Plus. Cada uno ha recibido un <strong>turnero digital</strong> que ha marcado la diferencia en la organización y la atención al cliente.&nbsp;</p>\n\n\n\n<p>Si quieres formar parte de estas empresas que saben muy bien lo que quieren y poseen todas las herramientas, no pierdas tu tiempo y acude a nuestros métodos de contacto. Quizá lo que le hace falta a tu empresa sea algo tan simple como <strong>un medio automático de gestionar los turnos</strong>.&nbsp;&nbsp;</p>\n",
+        "template_name": "/turnero-turnoexpress/turneros-digitales-casos-exito-colombia.html",
+    },
+    "excerpt": {
+        "rendered": "<p>Algo que por desgracia, es común, es que no se realice de manera adecuada la atención al cliente durante la gestión de los turnos. El lapso entre la espera del cliente, y el momento de ser atendido, es más importante de lo que parece, pues durante ese tiempo, podrías perder interesados potenciales en tu negocio,&#8230;</p>\n",
+    },
+    "images": [
+        "website-v2/blog/turnero-turnoexpress/turneros-digitales-casos-exito-colombia/nwewzakbnogro4dbg79z"
+    ],
+    "categories": [
+      categories.TURNERO_TURNOEXPRESS.category_key
+    ],
+  },
 /*
   {
     "id": ,

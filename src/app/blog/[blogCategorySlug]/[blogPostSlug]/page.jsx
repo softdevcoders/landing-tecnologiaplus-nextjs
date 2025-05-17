@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   
   return {
     metadataBase: new URL(baseUrl),
-    title: post?.metadata?.title,
+    title: post?.title?.rendered,
     keywords: post?.metadata?.keywords,
     description: post?.metadata?.description,
     openGraph: {
