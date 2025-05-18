@@ -44,12 +44,9 @@
 
 .content__image__imgDesktop__custom {
   justify-content: flex-end !important;
-  height: 100% !important;
-  position: relative !important;
-  width: 600px !important;
-  margin-top: 0 !important;
+  // position: relative !important;
 
-  picture {
+  img {
     position: absolute !important;
     bottom: 0 !important;
     width: 100% !important;

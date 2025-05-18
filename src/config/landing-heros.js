@@ -22,22 +22,18 @@ export const landingHeros = {
     images: {
       src: "v1738349921/jlxxsnlercoj0nihz4am_udppso.webp",
       alt: "Background Image for Slider Hero",
-      priority: "true",
-      fetchPriority: "high",
-      sizes: [
-        { imageWidth: 300, mediaQuery: "(min-width: 0px)" }, 
-      ],
+      loading: "lazy",
+      width: 200,
+      height: 200,
     },
   },
   backgroundMobilePortada: {
     images: {
       src: "v1745272277/Fondo_3x-8_yjkwov.webp",
       alt: "Background Image for Slider Hero",
-      priority: "true",
-      fetchPriority: "high",
-      sizes: [
-        { imageWidth: 300, mediaQuery: "(min-width: 0px)" }, 
-      ],
+      loading: "lazy",
+      width: 200,
+      height: 200,
     },
   },
   localizadoresParaRestaurantes: {
@@ -65,7 +61,8 @@ export const landingHeros = {
         image: {
           src: "v1745266173/Recurso_17_3x-8_1_sjgfak.webp",
           alt: "Localizadores para clientes",
-          sizes: commonSizesPrimaryImage,
+          width: 500,
+          height: 550
         }
       },
       desktop: {
@@ -76,7 +73,8 @@ export const landingHeros = {
         image: {
           src: "v1744781254/Imagen_portada_4x-8_dfrjjg_1_1_lvtv17.webp",
           alt: "Localizadores para clientes",
-          sizes: commonSizesPrimaryImage,
+          width: 900,
+          height: 701
         }
       }
     },
@@ -115,7 +113,8 @@ export const landingHeros = {
         image: {
           src: "v1745506524/4_4x-8_nlf2cd_1_dih39x.webp",
           alt: "Llamador de meseros",
-          sizes: commonSizesPrimaryImage,
+          width: 500,
+          height: 553
         }
       },
       desktop: {
@@ -126,7 +125,8 @@ export const landingHeros = {
         image: {
           src: "v1745506524/1_4x-8_5_kwkmli.webp",
           alt: "Llamador de meseros",
-          sizes: commonSizesPrimaryImage,
+          width: 900,
+          height: 500
         }
       }
       /*
@@ -192,7 +192,8 @@ export const landingHeros = {
         image: {
           src: "v1745243187/Recurso_19_3x-8_okf5hg.webp",
           alt: "Llamado de enfermería",
-          sizes: commonSizesPrimaryImage,
+          width: 500,
+          height: 553
         }
       },
       desktop: {
@@ -203,14 +204,14 @@ export const landingHeros = {
         image: {
           src: "v1738685528/Imagen_principal_2x-8_1_cnekrr.webp",
           alt: "Llamado de enfermería",
-          sizes: commonSizesPrimaryImage,
+          width: 900,
+          height: 741
         },  
         imageTextColumn: {
           src: "v1744462125/Logo_CuidaMaster_4x-8_cn4z4h.webp",
           alt: "CuidaMaster Logo",
-          sizes: commonSizesSecondaryImage,
-          priority: "true",
-          fetchPriority: "high"
+          width: 300,
+          height: 133
         },
       }
     },
@@ -261,7 +262,8 @@ export const landingHeros = {
         image: {
           src: "v1745263542/Recurso_20_3x-8_bbrvfp.webp",
           alt: "Sistema de turnos de espera",
-          sizes: commonSizesPrimaryImage,
+          width: 600,
+          height: 521
         }
       },
       desktop: {
@@ -273,7 +275,8 @@ export const landingHeros = {
         image: {
           src: "v1738860875/imagen_ppal_2x-8_1_cpkvb2.webp",
           alt: "Sistema de turnos de espera",
-          sizes: commonSizesPrimaryImage,
+          width: 1200,
+          height: 1009
         }
       }
     },
@@ -319,7 +322,8 @@ export const landingHeros = {
         image: {
           src: "v1745243183/Recurso_22_3x-8_ofq0yg.webp",
           alt: "Turnero digital",
-          sizes: commonSizesPrimaryImage,
+          width: 500,
+          height: 541
         }
       },
       desktop: {
@@ -331,7 +335,8 @@ export const landingHeros = {
         image: {
           src: "v1738431726/Imagen_bannerprincipal_2x-8_daisi3.webp",
           alt: "Turnero digital",
-          sizes: commonSizesPrimaryImage,
+          width: 900,
+          height: 500
         }
       }
     },
@@ -377,7 +382,8 @@ export const landingHeros = {
         image: {
           src: "v1745243187/Recurso_23_3x-8_kplypr.webp",
           alt: "Dispensador de tickets",
-          sizes: commonSizesPrimaryImage,
+          width: 500,
+          height: 557
         },
         button: {
           href: routes.landings.dispensadorDeTickets.url,
@@ -393,14 +399,14 @@ export const landingHeros = {
         image: {
           src: "v1738424725/Imagen_banner_2x-8_qd3lwx.webp",
           alt: "Dispensador de tickets",
-          sizes: commonSizesPrimaryImage,
+          width: 900,
+          height: 818
         },
         imageTextColumn: {
           src: "v1744463735/12-8_qjsewx.webp",
           alt: "Logo Turno Express",
-          sizes: commonSizesSecondaryImage,
-          priority: "true",
-          fetchPriority: "high"
+          width: 400,
+          height: 65
         },
         button: {
           href: routes.landings.dispensadorDeTickets.url,
@@ -450,7 +456,8 @@ export const landingHeros = {
         image: {
           src: "v1745243187/Recurso_25_3x-8_hwimpu.webp",
           alt: "Rollos de turnos",
-          sizes: commonSizesPrimaryImage,
+          width: 500,
+          height: 447
         },
         button: {
           href: routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url,
@@ -465,7 +472,8 @@ export const landingHeros = {
         image: {
           src: "v1745506512/10_4x-8_l0ccbu.webp",
           alt: "Rollos de turnos",
-          sizes: commonSizesPrimaryImage,
+          width: 900,
+          height: 610
         },
         button: {
           href: routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url,
@@ -474,9 +482,8 @@ export const landingHeros = {
         imageTextColumn: {
           src: "v1744463735/12-8_qjsewx.webp",
           alt: "Logo Turno Express",
-          sizes: [{ imageWidth: 300, mediaQuery: "(min-width: 0px)" }],
-          priority: "true",
-          fetchPriority: "high"
+          width: 400,
+          height: 65
         },
       }
     },    
@@ -507,7 +514,8 @@ export const landingHeros = {
         image: {
           src: "v1744771350/tiuyfgrjwlmhj4gdzrtm_lybcwl_1_alshzc.webp",
           alt: "Rollos de turnos",
-          sizes: commonSizesPrimaryImage,
+          width: 500,
+          height: 361
         },
         button: {
           href: routes.landings.rollosDePapelTermico.children.rollosTermicos.url,
@@ -522,7 +530,8 @@ export const landingHeros = {
         image: {
           src: "v1738349924/tiuyfgrjwlmhj4gdzrtm_lybcwl.webp",
           alt: "Rollos de turnos",
-          sizes: commonSizesPrimaryImage,
+          width: 900,
+          height: 649
         },
         button: {
           href: routes.landings.rollosDePapelTermico.children.rollosTermicos.url,
@@ -571,7 +580,8 @@ export const landingHeros = {
         image: {
           src: "v1745243188/Recurso_26_3x-8_ydpvir.webp",
           alt: "Calificador de servicio",
-          sizes: commonSizesPrimaryImage,
+          width: 600,
+          height: 692
         }
       },
       desktop: {
@@ -583,7 +593,8 @@ export const landingHeros = {
         image: {
           src: "v1738596299/Imagen_principal_2x-8_xvqvel.webp",
           alt: "Calificador de servicio",
-          sizes: commonSizesPrimaryImage,
+          width: 900,
+          height: 968
         },
       }
     },
@@ -631,7 +642,8 @@ export const landingHeros = {
         image: {
           src: "v1745243183/Recurso_21_3x-8_1_qdom6g.webp",
           alt: "Encuesta virtual",
-          sizes: commonSizesPrimaryImage,
+          width: 600,
+          height: 603
         }
       },
       desktop: {
@@ -642,7 +654,8 @@ export const landingHeros = {
         image: {
           src: "v1738607993/Imagen_principal_2x-8_pc1qfd.webp",
           alt: "Encuesta virtual",
-          sizes: commonSizesPrimaryImage,
+          width: 900,
+          height: 905
         },
       }
     },

@@ -37,7 +37,8 @@
 
 .content__image__imgDesktop__custom {
   justify-content: flex-end !important;
-  picture {
+
+  img {
     max-width: 730px !important;
   }
 }
@@ -52,11 +53,7 @@
   font-weight: 700 !important;
   line-height: 1 !important;
 }
-.content__text__subTitle__desktop__custom {
-  // font-size: 2.5rem !important;
-  // font-weight: 850 !important;
-  // line-height: 1 !important;
-}
+
 .content__text__description__desktop__custom {
   font-size: 1rem !important;
   font-weight: 500 !important;

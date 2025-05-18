@@ -8,7 +8,7 @@
 .content__image__imgMobile__custom {
   padding: 0 2rem !important;
 
-  picture {
+  img {
     max-width: 300px !important;
   }
 }
@@ -46,7 +46,7 @@
   height: calc(100vh - 128px) !important;
   position: relative !important;
   width: 800px !important;
-  picture {
+  img {
     position: absolute !important;
     bottom: 0 !important;
     right: -100px !important;
@@ -79,8 +79,9 @@
   margin-bottom: 2rem !important;
   width: 225px !important;
 
-  picture {
+  img {
     width: 100% !important;
+    height: auto !important;
   }
 }
 

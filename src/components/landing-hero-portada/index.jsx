@@ -2,17 +2,20 @@ import styles from "./styles.module.scss";
 import Link from "next/link";
 import { landingHeros } from "@/config/landing-heros";
 import ResponsiveImage from "@/components/ui/responsive-image";
+import Image from "next/image";
 
 export const LandingHeroPortadaContainer = ({ className = "", children }) => {
   return (
     <div className={`${styles.container} ${className}`}>
-      <ResponsiveImage 
+      <Image 
+        {...landingHeros.background.images}
         className={`${styles.background} ${styles.background__desktop}`} 
-        image={landingHeros.background.images}
+        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.background.images.width}/${landingHeros.background.images.src}`}
       />
-      <ResponsiveImage 
+      <Image 
+        {...landingHeros.backgroundMobilePortada.images}
         className={`${styles.background} ${styles.background__mobile}`} 
-        image={landingHeros.backgroundMobilePortada.images}
+        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.backgroundMobilePortada.images.width}/${landingHeros.backgroundMobilePortada.images.src}`}
       />
       {children}
     </div>
@@ -37,9 +40,11 @@ export const LandingHeroPortadaContentImage = ({ children, className = "" }) => 
 
 export const LandingHeroPortadaContentImageImg = ({ image, className = "" }) => {
   return (
-    <ResponsiveImage 
-      className={`${styles.content__image__img} ${className}`} 
-      image={image}
+    <Image
+      className={`${styles.content__image__img} ${className}`}
+      {...image} 
+      src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${image.width}/${image.src}`}
+      loading="lazy"
     />
   )
 }
@@ -90,9 +95,11 @@ export const LandingHeroPortadaContentTextButton = ({className = "", href, child
 export const LandingHeroPortadaContentTextLogoBrand = ({className = "", image}) => {
   return (
     <div className={`${styles.landing_hero__content__logo__brand__image_container} ${className}`}>
-      <ResponsiveImage 
+      <Image
         className={styles.landing_hero__content__logo__brand__image} 
-        image={image}
+        {...image} 
+        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${image.width}/${image.src}`}
+        loading="lazy"
       />
     </div>
   )
