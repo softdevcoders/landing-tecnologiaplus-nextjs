@@ -13,7 +13,7 @@ function HeroSection() {
             <LandingHeroPortadaContentImageImg image={landingHeros.rollosDeFichosParaTurnos.informationPortadas.mobile.image} />
           </LandingHeroPortadaContentImage>
           <LandingHeroPortadaContentImage className={`${stylesDefault.content__image__imgDesktop} ${style.content__image__imgDesktop__custom}`}>
-            <LandingHeroPortadaContentImageImg image={landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.image} />
+             <LandingHeroPortadaContentImageImg image={landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.image} />
           </LandingHeroPortadaContentImage>
         </>
 
@@ -36,9 +36,7 @@ function HeroSection() {
             </LandingHeroPortadaContentTextButton>
           </LandingHeroPortadaContentText>
           <LandingHeroPortadaContentText className={`${stylesDefault.content__text__desktop} ${style.content__text__desktop__custom}`}>
-            <LandingHeroPortadaContentTextLogoBrand 
-              image={landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.imageTextColumn}
-            />
+            <LandingHeroPortadaContentTextLogoBrand image={landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.imageTextColumn }/>
             <LandingHeroPortadaContentTextTitle className={style.content__text__title__desktop__custom}>
               {landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.text.title}
             </LandingHeroPortadaContentTextTitle>
