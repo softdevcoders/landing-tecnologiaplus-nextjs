@@ -1,14 +1,19 @@
 import posts from "@/data/blogs";
 import { sortByDate } from "@/lib/sort-by-date";
 
-const filterAndPaginatePosts = ({ posts, page, pageSize, categoryFilter }) => {
+const filterAndPaginatePosts = ({ posts, page, pageSize, categoryFilter, exclude }) => {
   let filteredPosts = posts;
 
   if (categoryFilter) {
     filteredPosts = posts.filter(post =>
       post.categories.includes(categoryFilter)
     );
+  }
 
+  if (exclude.length > 0) {
+    filteredPosts = filteredPosts.filter(post =>
+      !exclude.includes(post.id)
+    );
   }
   
   filteredPosts = sortByDate(filteredPosts);
@@ -28,10 +33,10 @@ const filterAndPaginatePosts = ({ posts, page, pageSize, categoryFilter }) => {
   };
 };
 
-export const getPosts = ({ category, page = 1, pageSize = 9, allPosts = false }) => {
+export const getPosts = ({ category, page = 1, pageSize = 9, allPosts = false, exclude = [] }) => {
   if (allPosts) {
     return posts;
   }
 
-  return filterAndPaginatePosts({ posts, page, pageSize, categoryFilter: category });
+  return filterAndPaginatePosts({ posts, page, pageSize, categoryFilter: category, exclude });
 }
