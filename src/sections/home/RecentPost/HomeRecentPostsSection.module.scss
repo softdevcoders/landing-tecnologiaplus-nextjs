@@ -1,58 +1,53 @@
-@use "@/styles/components/productsSection" as *;
-@use "@/styles/base/mixins" as *;
+.products__section{
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 10rem;
+  background-color: #f4f4f4;
 
-.products__section {
-  @include respond-to-max("laptop") {
-    padding-bottom: 3rem;
-  }
-
-  h2 {
-    margin-bottom: 4rem;
-
-    @include respond-to-max("laptop") {
-      font-size: clamp(16px, 5vw, 30px);
-      text-align: center;
-    }
+  .products__title {
+    text-align: center;
   }
 
   .products__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 85%;
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
-
-    @media (max-width: 1600px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: 768px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
+    grid-template-columns: repeat(1, 435px);
+    justify-content: center;
+    gap: 2rem;
   }
 
-  .btn__go_to_blog {
+  .btn__go_to_blog{
     color: #394751;
-    font-weight: 700;
-    line-height: 1.2;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700; 
+    line-height: 1.2;
     text-decoration: underline;
+    display: flex;
 
-    @include respond-to-max("laptop") {
-      font-size: clamp(16px, 5vw, 1.5rem);
-    }
-
-    .icon__btn {
+    svg {
       color: #b627ff;
       margin-top: 2px;
       margin-left: 5px;
     }
   }
+}
+
+@media (min-width: 790px) {
+  .products__section {
+    .products__container {
+      grid-template-columns: repeat(2, 435px);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .products__section {
+    .products__container {
+      grid-template-columns: repeat(3, 435px);
+    }
+  }
+  
 }

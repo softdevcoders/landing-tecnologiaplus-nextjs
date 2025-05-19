@@ -12,19 +12,12 @@ const LandingHero = (props) => {
     button, 
     images, 
     imageTextColumn, 
-    showBackground = true, 
     customTemplate = false,
     templateName = null 
   } = props;
   
   return (
     <div className={styles.landing_hero__container}>
-      {showBackground && (
-        <ResponsiveImage 
-          className={styles.landing_hero__background} 
-          image={landingHeros.background.images}
-        />
-      )}
       <div className={styles.landing_hero__content}>
         <LandingHeroImageContent 
           images={images} 

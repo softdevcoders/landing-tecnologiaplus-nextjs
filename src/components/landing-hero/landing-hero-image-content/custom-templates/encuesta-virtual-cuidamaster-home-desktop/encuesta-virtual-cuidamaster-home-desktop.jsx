@@ -1,15 +1,19 @@
 import styleDefault from "@/components/landing-hero/landing-hero.module.scss"
 import style from "./encuesta-virtual-cuidamaster-home-desktop.module.scss"
-import ResponsiveImage from "@/components/ui/responsive-image";
+import Image from "next/image";
 
 const EncuestaVirtualCuidamasteHomeDesktop = ({ images }) => {
   return (
     <>
       {!Array.isArray(images) && (
         <div className={styleDefault.landing_hero__content__image}>
-          <ResponsiveImage 
+          <Image 
             className={styleDefault.landing_hero__content__image__img} 
-            image={images}
+            width={900}
+            height={680}
+            alt={images.alt}
+            src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_900/${images.src}`}
+            loading="lazy"
           />
         </div>
       )}
@@ -19,9 +23,13 @@ const EncuestaVirtualCuidamasteHomeDesktop = ({ images }) => {
             key={index} 
             className={`${styleDefault.landing_hero__content__image} ${image.className}`}
           >
-            <ResponsiveImage 
+            <Image 
               className={`${styleDefault.landing_hero__content__image__img} ${style.encuestaVirtualImage}`} 
-              image={image}
+              width={900}
+              height={680}
+              alt={image.alt}
+              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_900/${image.src}`}
+              loading="lazy"
             />
           </div>
         ))

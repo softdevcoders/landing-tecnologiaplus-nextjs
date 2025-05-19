@@ -1,20 +1,20 @@
 // import Link from "next/link"
 import LinkButton from "@/components/ui/link"
 import Link from "next/link"
-import style from "./card.module.scss"
+import style from "./card-home.module.scss"
 import { cleanText } from "@/lib/clean-text"
 import { formatDate } from "@/lib/format-date"
 import Image from "next/image"
 
-const Card = ({ post }) => {
+const CardHome = ({ post }) => {
   return (
     <article className={style.blogCard}>
       <div className={style.blogCard__image} >
         <Image  
           src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_360/${post.images[0]}`}
           alt={post.title.rendered}
-          width={360}
-          height={203}
+          width={435}
+          height={235}
         />
       </div>
       
@@ -38,4 +38,4 @@ const Card = ({ post }) => {
   )
 }
 
-export default Card
+export default CardHome
