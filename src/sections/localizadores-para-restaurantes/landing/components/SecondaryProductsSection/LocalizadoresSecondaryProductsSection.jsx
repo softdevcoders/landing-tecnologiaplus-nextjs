@@ -73,6 +73,7 @@ function LocalizadoresSecondaryProductsSection() {
               <YouTubePlayer
                 videoId="aB7FLAPCCJ8"
                 title="Rec V3 - Localizadores para restaurantes"
+                imageCover="https://i.ytimg.com/vi_webp/aB7FLAPCCJ8/maxresdefault.webp"
               />
             </div>
 
@@ -81,6 +82,7 @@ function LocalizadoresSecondaryProductsSection() {
               <YouTubePlayer
                 videoId="b2nlu7sOlcI"
                 title="Cir C2 - Localizadores para restaurantes"
+                imageCover="https://i.ytimg.com/vi_webp/b2nlu7sOlcI/sddefault.webp"
               />
             </div>
           </div>
