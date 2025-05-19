@@ -5,7 +5,7 @@ import { HiPhone } from "react-icons/hi2";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { routes } from "@/config/routes";
-import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 
 function Header({ customStyles = {} }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -93,12 +93,14 @@ function Header({ customStyles = {} }) {
         href={routes.home.url}
         className={`${styles.logo__container} ${customStyles.logoContainer || ""}`}
       >
-        <CldImage
-          loading="lazy"
+        <Image
+          loading="eager"
+          priority
+          fetchPriority="high"
           className={`${styles.logo} ${customStyles.logo || ""}`}
           width={320}
           height={100}
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349922/Logo_Tecnolog%C3%ADa_Plus_2024_cyahos_cgz5gx.svg"
+          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp/c_scale/w_600/website-v2/zyl0ca6woqgk2ehlynem"
           alt="logo Tecnología plus"
         />
       </Link>
