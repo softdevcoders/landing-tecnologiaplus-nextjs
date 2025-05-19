@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
   return {
     metadataBase: new URL(baseUrl),
     title: {
-      absolute: post?.title?.rendered
+      absolute: post?.metadata?.title
     },
     keywords: post?.metadata?.keywords,
     description: post?.metadata?.description,
