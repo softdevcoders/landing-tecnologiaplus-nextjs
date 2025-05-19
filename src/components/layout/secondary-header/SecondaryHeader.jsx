@@ -94,7 +94,6 @@ function SecondaryHeader() {
           </ul>
         </div>
         <a
-          className={style.btn__mobile}
           href={routes.blog.url}
         >
           Blog

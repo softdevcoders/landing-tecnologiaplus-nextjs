@@ -11,11 +11,15 @@ export async function generateMetadata({ params }) {
   
   return {
     metadataBase: new URL(baseUrl),
-    title: post?.title?.rendered,
+    title: {
+      absolute: post?.title?.rendered
+    },
     keywords: post?.metadata?.keywords,
     description: post?.metadata?.description,
     openGraph: {
-      title: post?.metadata?.title,
+      title: {
+        absolute: post?.metadata?.title
+      },
       description: post?.metadata?.description,
       url: `${baseUrl}${post.current_link}`,
       siteName: post?.metadata?.title,
@@ -31,7 +35,9 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title: post?.metadata?.title,
+      title: {
+        absolute: post?.metadata?.title
+      },
       description: post?.metadata?.description,
       images: [{
         url: `https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${post.images[0]}`,
