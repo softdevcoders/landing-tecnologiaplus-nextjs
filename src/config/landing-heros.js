@@ -8,11 +8,11 @@ export const templateNames = {
 }
 
 const commonSizesPrimaryImage = [
-  { imageWidth: 600, mediaQuery: "(min-width: 0px)" }, 
-  { imageWidth: 700, mediaQuery: "(min-width: 700px)" }, 
-  { imageWidth: 900, mediaQuery: "(min-width: 1200px)" }
+  { imageWidth: 600, mediaQuery: "(min-width: 0px)" }, // Para pantallas pequeñas, hasta 600px de ancho
+  { imageWidth: 700, mediaQuery: "(min-width: 700px)" }, // Para tabletas o pantallas medianas, 700px de ancho
+  { imageWidth: 900, mediaQuery: "(min-width: 1200px)" }, // Para pantallas grandes, 900px de ancho
+  { imageWidth: 1200, mediaQuery: "(min-width: 1600px)" } // Para pantallas grandes o de alta resolución, 1200px o más
 ]
-
 const commonSizesSecondaryImage = [
   { imageWidth: 300, mediaQuery: "(min-width: 0px)" }, 
 ]

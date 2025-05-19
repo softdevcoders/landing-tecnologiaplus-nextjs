@@ -2,6 +2,7 @@ import style from "./HomeProductsSection.module.scss";
 import { routes } from "@/config/routes";
 import ResponsiveImage from "@/components/ui/responsive-image";
 import Link from "@/components/ui/link";
+import Image from "next/image";
 
 const products = [
   {
@@ -96,17 +97,11 @@ function HomeProductsSection() {
           <div key={index} className={style.productsSection__card}>
             <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
             <p className={style.productsSection__cardDescription}>{product.description}</p>
-            <ResponsiveImage 
-              image={{
-                src: product.imageSrc,
-                alt: product.altText,
-                sizes: [
-                  { imageWidth: 300, mediaQuery: "(min-width: 0px)" }, 
-                  { imageWidth: 500, mediaQuery: "(min-width: 700px)" }, 
-                ],
-              }}
-              src={product.imageSrc}
+            <Image
+              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_463/${product.imageSrc}`}
               alt={product.altText}
+              width={463}
+              height={350}
               className={style.productsSection__cardImage}
             />
             {product.link && (

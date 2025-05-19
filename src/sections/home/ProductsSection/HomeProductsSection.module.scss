@@ -47,6 +47,7 @@
 
       .productsSection__cardImage {
         min-height: 400px;
+        object-fit: contain;
       }
 
       .productsSection__cardBtn {

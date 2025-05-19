@@ -25,7 +25,6 @@ export default function SliderHero({ styles, items }) {
               {...({
                 ...items[key].informationHome,
                 title: items[key].informationHome.title,
-                showBackground: false,
               })} 
             />
           </div>
