@@ -71,7 +71,8 @@
           display: inline-block;
         }
         
-        p[class='footerCallToAction'] {
+        p[class='footerCallToAction'],
+        h4[class='footerCallToAction'] {
           text-align: center;
         }
 
