@@ -11,11 +11,17 @@ export const LandingHeroPortadaContainer = ({ className = "", children }) => {
         {...landingHeros.background.images}
         className={`${styles.background} ${styles.background__desktop}`} 
         src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.background.images.width}/${landingHeros.background.images.src}`}
+        loading="eager"
+        fetchPriority="high"
+        priority
       />
       <Image 
         {...landingHeros.backgroundMobilePortada.images}
         className={`${styles.background} ${styles.background__mobile}`} 
         src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.backgroundMobilePortada.images.width}/${landingHeros.backgroundMobilePortada.images.src}`}
+        loading="eager"
+        fetchPriority="high"
+        priority
       />
       {children}
     </div>
@@ -44,7 +50,9 @@ export const LandingHeroPortadaContentImageImg = ({ image, className = "" }) => 
       className={`${styles.content__image__img} ${className}`}
       {...image} 
       src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${image.width}/${image.src}`}
-      loading="lazy"
+      loading="eager"
+      fetchPriority="high"
+      priority
     />
   )
 }
