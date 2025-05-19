@@ -3,6 +3,7 @@ import Link from "next/link";
 import { landingHeros } from "@/config/landing-heros";
 import ResponsiveImage from "@/components/ui/responsive-image";
 import LandingHeroImageContent from "./landing-hero-image-content";
+import Image from "next/image";
 
 const LandingHero = (props) => {
   const { 
@@ -27,9 +28,12 @@ const LandingHero = (props) => {
         <div className={styles.landing_hero__content__text}>
           <div className={styles.landing_hero__content__text__image_container}>
             {imageTextColumn && (
-              <ResponsiveImage 
+              <Image 
                 className={styles.landing_hero__content__text__image} 
-                image={imageTextColumn}
+                width={imageTextColumn.width}
+                height={imageTextColumn.height}
+                alt={imageTextColumn.alt}
+                src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${imageTextColumn.width}/${imageTextColumn.src}`}
               />
             )}
           </div>

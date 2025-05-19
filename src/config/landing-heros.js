@@ -43,8 +43,8 @@ export const landingHeros = {
       images: [{
         src: "v1745506512/bQaT52.tif_4x-8_su2sfk.webp",
         alt: "Localizadores para clientes",
-        width: 500,
-        height: 378,
+        width: 350,
+        height: 265,
         className: styles.landing_hero__content__image_mobile,
         priority: "true",
         fetchPriority: "high"
@@ -176,9 +176,8 @@ export const landingHeros = {
       imageTextColumn: {
         src: "v1744462125/Logo_CuidaMaster_4x-8_cn4z4h.webp",
         alt: "CuidaMaster Logo",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+        width: 225,
+        height: 100,
       },
       button: {
         href: routes.landings.llamadoDeEnfermeriaCuidamaster.url,
@@ -242,9 +241,8 @@ export const landingHeros = {
       imageTextColumn: {
         src: "f_auto,q_auto/v1744830279/3-8_jxkhuf.webp",
         alt: "Turno Master Logo",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+        width: 225,
+        height: 100,
       },
       button: {
         href: routes.landings.sistemasDeTurnosTurnomaster.url,
@@ -297,9 +295,8 @@ export const landingHeros = {
       imageTextColumn: {
         src: "v1744463735/12-8_qjsewx.webp",
         alt: "Logo Turno Express",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+        width: 225,
+        height: 100,
       },
       button: {
         href: routes.landings.turneroTurnoexpress.url,
@@ -353,9 +350,8 @@ export const landingHeros = {
       imageTextColumn: {
         src: "v1744463735/12-8_qjsewx.webp",
         alt: "Logo Turno Express",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+        width: 225,
+        height: 100,
       },
       button: {
         href: routes.landings.dispensadorDeTickets.url,
@@ -423,9 +419,8 @@ export const landingHeros = {
       imageTextColumn: {
         src: "v1744463735/12-8_qjsewx.webp",
         alt: "Logo Turno Express",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+        width: 225,
+        height: 100,
       },
       button: {
         href: routes.landings.rollosDeFichosParaTurnos.url,
@@ -542,9 +537,8 @@ export const landingHeros = {
       imageTextColumn: {
         src: "v1744467470/6-8_xncpdx.webp",
         alt: "Logo Turno Express",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+        width: 225,
+        height: 100,
       },
       button: {
         href: routes.landings.calificadorDeServicioAlClienteOpinamaster.url,
@@ -600,9 +594,8 @@ export const landingHeros = {
       imageTextColumn: {
         src: "v1744467470/6-8_xncpdx.webp",
         alt: "Logo Turno Express",
-        sizes: commonSizesSecondaryImage,
-        priority: "true",
-        fetchPriority: "high"
+        width: 225,
+        height: 100,
       },
       button: {
         href: routes.landings.encuestaVirtual.url,
