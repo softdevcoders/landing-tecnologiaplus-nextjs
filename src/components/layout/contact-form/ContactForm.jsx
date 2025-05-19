@@ -6,6 +6,7 @@ import { z } from "zod";
 import style from "./ContactForm.module.scss";
 import { GoCheckCircleFill } from "react-icons/go";
 import emailjs from "@emailjs/browser";
+import Image from "next/image";
 
 // EmailJS configuration - use environment variables if available, fallback to hardcoded values
 // You can manage your EmailJS account at https://www.emailjs.com/
@@ -227,6 +228,13 @@ function ContactForm({ noMarginTop = false }) {
 
   return (
     <section className={style.contact__form}>
+      <Image
+        src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_300/v1738349923/nisgh2gbe0ginddnsrko_opkrn1.webp"
+        alt="Contact Form Background"
+        width={1920}
+        height={1080}
+        className={style.contact__form__background}
+      />
       <div className={style.contact__form__container}>
         <div
           className={`${style.form__container} ${
