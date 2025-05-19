@@ -12,6 +12,8 @@ export default function SliderHero() {
         {...landingHeros.background.images}
         className={styles.slider__background}
         src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.background.images.width}/${landingHeros.background.images.src}`}
+        fetchPriority="high"
+        loading="eager"
       />
       <SliderHeroClient items={restLandings} styles={styles} />
     </div>

@@ -5,7 +5,8 @@
   justify-content: center;
   border-radius: 0.9rem;
   background-color: #FFFFFF;
-  width: 435px;
+  width: 100%;
+  max-width: 435px;
   box-shadow: 0 4px 6px #0000001a;
 
   .blogCard__image {
