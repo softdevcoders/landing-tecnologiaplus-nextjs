@@ -1,4 +1,4 @@
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 import style from "./LocalizadoresProductsSection.module.scss";
 
 function LocalizadoresProductsSection() {
@@ -7,16 +7,14 @@ function LocalizadoresProductsSection() {
       <h2>Más de 1.000 restaurantes usan nuestros localizadores</h2>
       <p>Elige el avisador de pedidos que mejor se adapte a tu negocio.</p>
       <div className={style.products__container}>
-        <ImageCloudinary
-          loading="lazy"
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738851946/rec_v3_2x-8_ehwkxo.webp"
+        <Image
+          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_470/v1738851946/rec_v3_2x-8_ehwkxo.webp"
           alt="Localizador para clientes Rec V3"
           width={500}
-          height={500}
+          height={402}
         />
-        <ImageCloudinary
-          loading="lazy"
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738851948/cir_c2_2x-8_icgmcm.webp"
+        <Image
+          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_600/v1738851948/cir_c2_2x-8_icgmcm.webp"
           alt="Localizador para restaurantes Cir C2"
           width={600}
           height={500}
