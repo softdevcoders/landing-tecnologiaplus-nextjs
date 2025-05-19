@@ -8,7 +8,7 @@ import Link from "next/link";
 import { routes } from "@/config/routes";
 
 const PostView = ({ post }) => {
-  const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3 });
+  const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
 
   return (
     <main className={style.blogPostView__container}>
