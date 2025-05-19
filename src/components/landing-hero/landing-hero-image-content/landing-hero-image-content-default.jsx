@@ -13,7 +13,6 @@ const LandingHeroImageContentDefault = ({ images }) => {
             height={680}
             alt={images.alt}
             src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_900/${images.src}`}
-            {...images.fetchPriority ? { fetchPriority: images.fetchPriority, priority: 'high' } : { loading: "lazy" }}
           />
         </div>
       )}
@@ -25,11 +24,10 @@ const LandingHeroImageContentDefault = ({ images }) => {
           >
             <Image 
               className={styles.landing_hero__content__image__img} 
-              width={900}
-              height={680}
+              width={image.width || 900}
+              height={image.height || 680}
               alt={image.alt}
-              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_900/${image.src}`}
-              {...image.fetchPriority ? { fetchPriority: image.fetchPriority, priority: 'high' } : { loading: "lazy" }}
+              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${image.width || 900}/${image.src}`}
             />
           </div>
         ))

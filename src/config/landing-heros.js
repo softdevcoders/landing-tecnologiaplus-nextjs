@@ -40,13 +40,23 @@ export const landingHeros = {
     informationHome: {    
       title: "Localizadores para restaurantes",
       description: "Tiempo de espera sin temor a perder el turno.",
-      images: {
+      images: [{
         src: "v1745506512/bQaT52.tif_4x-8_su2sfk.webp",
         alt: "Localizadores para clientes",
-        sizes: commonSizesPrimaryImage,
+        width: 500,
+        height: 378,
+        className: styles.landing_hero__content__image_mobile,
         priority: "true",
         fetchPriority: "high"
-      },
+      },{
+        src: "v1745506512/bQaT52.tif_4x-8_su2sfk.webp",
+        alt: "Localizadores para clientes",
+        width: 640,
+        height: 484,
+        className: styles.landing_hero__content__image_desktop,
+        priority: "true",
+        fetchPriority: "high"
+      }],
       button: {
         href: routes.landings.localizadoresParaRestaurantes.url,
         text: "Ver más",
