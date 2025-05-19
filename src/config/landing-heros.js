@@ -46,7 +46,6 @@ export const landingHeros = {
         width: 350,
         height: 265,
         className: styles.landing_hero__content__image_mobile,
-        priority: "true",
         fetchPriority: "high"
       },{
         src: "v1745506512/bQaT52.tif_4x-8_su2sfk.webp",
@@ -54,7 +53,6 @@ export const landingHeros = {
         width: 640,
         height: 484,
         className: styles.landing_hero__content__image_desktop,
-        priority: "true",
         fetchPriority: "high"
       }],
       button: {
