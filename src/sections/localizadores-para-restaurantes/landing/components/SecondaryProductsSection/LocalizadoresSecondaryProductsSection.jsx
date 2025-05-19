@@ -2,7 +2,7 @@ import Link from "next/link";
 import style from "./LocalizadoresSecondaryProductsSection.module.scss";
 import YouTubePlayer from "@/components/YouTubePlayer";
 import { routes } from "@/config/routes";
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 
 function LocalizadoresSecondaryProductsSection() {
   return (
@@ -23,18 +23,18 @@ function LocalizadoresSecondaryProductsSection() {
                 </Link>
                 <p>2.595 vendidos</p>
               </div>
-              <ImageCloudinary
-                width={480}
-                height={360}
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738855044/rec_v3_1_2x-8_ctzrqp.webp"
+              <Image
+                width={800}
+                height={595}
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_800/v1738855044/rec_v3_1_2x-8_ctzrqp.webp"
                 alt="Localizador para restaurantes REC V3 junto a su base de carga"
               />
             </div>
-            <ImageCloudinary
+            <Image
               width={5}
               height={350}
               className={style.separator}
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738851946/linea_2x-8_n80wv9.webp"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_5/v1738851946/linea_2x-8_n80wv9.webp"
               alt="Separador"
             />
             <div className={style.card}>
@@ -48,10 +48,10 @@ function LocalizadoresSecondaryProductsSection() {
                 </Link>
                 <p>1.630 vendidos</p>
               </div>
-              <ImageCloudinary
-                width={480}
-                height={360}
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738851948/cir_c2_1_2x-8_lb8ufb.webp"
+              <Image
+                width={800}
+                height={595}
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_800/v1738851948/cir_c2_1_2x-8_lb8ufb.webp"
                 alt="Localizadores para clientes CIR C2 junto a su base de carga"
               />
             </div>
