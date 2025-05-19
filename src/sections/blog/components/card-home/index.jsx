@@ -15,6 +15,7 @@ const CardHome = ({ post }) => {
           alt={post.title.rendered}
           width={435}
           height={235}
+          className={style.blogCard__image__img}
         />
       </div>
       

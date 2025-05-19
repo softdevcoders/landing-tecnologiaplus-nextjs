@@ -87,15 +87,11 @@ export const landingHeros = {
         src: "v1745506524/4_4x-8_nlf2cd_1_dih39x.webp",
         alt: "Llamador de meseros",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_mobile
       },{
         src: "v1745506524/1_4x-8_5_kwkmli.webp",
         alt: "Llamador de meseros",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_desktop
       }],
       button: {
@@ -160,15 +156,11 @@ export const landingHeros = {
         src: "v1744861534/Group_5_t7cyjd.webp",
         alt: "Llamado de enfermería",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_mobile
       },{
         src: "v1745506524/2_4x-8_5_igrf1u.webp",
         alt: "Llamado de enfermería",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_desktop
       }],
       imageTextColumn: {
@@ -230,15 +222,11 @@ export const landingHeros = {
         src: "v1744861623/Group_7_zgut7e.webp",
         alt: "Sistema de turnos de espera",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_mobile
       },{
         src: "v1745506523/4_4x-8_2_lxfolj.webp",
         alt: "Sistema de turnos de espera",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_desktop
       }],
       imageTextColumn: {
@@ -289,15 +277,11 @@ export const landingHeros = {
         src: "v1744861623/Group_8_pkcnqa.webp",
         alt: "Turnero digital",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_mobile
       },{
         src: "v1745506512/8_4x-8_1_tpdrqu.webp",
         alt: "Turnero digital",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_desktop
       }],
       imageTextColumn: {
@@ -349,15 +333,11 @@ export const landingHeros = {
         src: "v1744861625/Group_3_nkqa3u.webp",
         alt: "Dispensador de tickets",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_mobile
       },{
         src: "v1745506512/9_4x-8_1_biykgd.webp",
         alt: "Dispensador de tickets",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_desktop
       }],
       imageTextColumn: {
@@ -423,15 +403,11 @@ export const landingHeros = {
         src: "v1744861625/Group_6_gqyr8k.webp",
         alt: "Rollos de turnos",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_mobile
       },{
         src: "v1745506512/10_4x-8_l0ccbu.webp",
         alt: "Rollos de turnos",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_desktop
       }],
       imageTextColumn: {
@@ -496,8 +472,6 @@ export const landingHeros = {
         src: "v1745506512/11_4x-8_2_nsacou.webp",
         alt: "Rollos de turnos",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high"
       },
       button: {
         href: routes.landings.rollosDePapelTermico.url,
@@ -548,15 +522,11 @@ export const landingHeros = {
         src: "v1744864122/Group_1_kihtey.webp",
         alt: "Rollos de turnos",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_mobile
       },{
         src: "v1745506513/5_4x-8_3_s0vc5b.webp",
         alt: "Rollos de turnos",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_desktop
       }],
       imageTextColumn: {
@@ -610,15 +580,11 @@ export const landingHeros = {
         src: "v1745243245/Recurso_21_3x-8_1_pkt9h3.webp",
         alt: "Rollos de turnos",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_mobile
       },{
         src: "v1745506523/7_4x-8_2_a0z5uj.webp",
         alt: "Rollos de turnos",
         sizes: commonSizesPrimaryImage,
-        priority: "true",
-        fetchPriority: "high",
         className: styles.landing_hero__content__image_desktop
       }],
       imageTextColumn: {

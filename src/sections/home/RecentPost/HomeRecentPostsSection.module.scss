@@ -35,7 +35,7 @@
   }
 }
 
-@media (min-width: 790px) {
+@media (min-width: 950px) {
   .products__section {
     .products__container {
       grid-template-columns: repeat(2, 435px);
@@ -43,11 +43,10 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .products__section {
     .products__container {
       grid-template-columns: repeat(3, 435px);
     }
   }
-  
 }
