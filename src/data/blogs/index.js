@@ -1619,39 +1619,39 @@ const dispensadorDeTicketsPosts = [
       categories.DISPENSADOR_DE_TICKETS.category_key
     ],
   },
-//   {
-//     "id": ,
-//     "date": "",
-//     "modified": "",
-//     "slug": "",
-//     "current_link": `/blog${categories.DISPENSADOR_DE_TICKETS.url_category}/`,
-//     "previous_link": [
-//         "/"
-//     ],
-//     "metadata": {
-//         "title": "",
-//         "description": "",
-//         "keywords": [
-//             "",
-//         ]
-//     },
-//     "title": {
-//         "rendered": ""
-//     },
-//     "content": {
-//         "rendered": "",
-//         "template_name": "/dispensador-de-tickets/",
-//     },
-//     "excerpt": {
-//         "rendered": "",
-//     },
-//     "images": [
-//         ""
-//     ],
-//     "categories": [
-//       categories.DISPENSADOR_DE_TICKETS.category_key
-//     ],
-//   },
+  {
+    "id": 9528,
+    "date": "2023-08-02T08:22:42",
+    "modified": "2025-05-16T09:35:08",
+    "slug": "integrar-dispensador-turnos-sistema-gestion",
+    "current_link": `/blog${categories.DISPENSADOR_DE_TICKETS.url_category}/integrar-dispensador-turnos-sistema-gestion`,
+    "previous_link": [
+        "/blog/dispensador-de-tickets/integra-un-dispensador-de-turnos-con-tu-sistema-de-gestion"
+    ],
+    "metadata": {
+        "title": "Integra un dispensador de turnos con tu sistema de gestión",
+        "description": "Optimiza la atención al cliente con un dispensador de turnos. Descubre sus beneficios y cómo implementarlo en tu empresa. ¡Asesoria personalizada!",
+        "keywords": [
+            "Dispensador de turnos",
+        ]
+    },
+    "title": {
+        "rendered": "¿Cómo integrar un Dispensador de Turnos con tu sistema de gestión?"
+    },
+    "content": {
+        "rendered": "\n<p>Si tienes una empresa que está orientada a la atención al cliente, seguro te habrás dado cuenta que siempre buscas la manera de mejorar este servicio tan importante. Y es que una buena experiencia de los clientes en tu empresa es parte clave para garantizar la fidelización de los prospectos.</p>\n\n\n\n<p>Uno de los problemas que enfrentarás tarde o temprano, sobre todo si cuentas con una sala de espera, es la gestión de dicho tiempo. Por suerte, hay diferentes métodos para solventar este obstáculo como es la integración de un <a href=\"https://tecnologiaplus.com/dispensador-de-tiquetes/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/dispensador-de-tiquetes/\">dispensador de turnos</a>, una tecnología simple, pero eficiente al momento de gestionar los tiempos de espera.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-que-es-un-dispensador-de-tickets-para-turnos\">¿Qué es un dispensador de tickets para turnos?</h2>\n\n\n\n<p>Un <strong>dispensador de turnos</strong> es un dispositivo o sistema utilizado en entornos públicos o comerciales para organizar y gestionar el flujo de personas que requieren la atención o servicio de tu empresa, ya sea una clínica, droguería, entre otros. </p>\n\n\n\n<p>Su principal objetivo es evitar el caos y la confusión al asignar turnos a los clientes o usuarios, permitiendo un proceso ordenado y eficiente. En Tecnología plus tenemos dos modelos, el <a href=\"https://tecnologiaplus.com/dispensador-de-tiquetes/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/dispensador-de-tiquetes/\">dispensador de turnos</a> manual y el sistema de software.<strong> </strong>Lo ideal es que en función de tus necesidades, elijas un modelo u otro, pero de eso ya hablaremos más adelante.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-como-funcionaria-tu-gestion-con-un-dispensador-de-turno\">¿Cómo funcionaría tu gestión con un dispensador de turno?</h2>\n\n\n\n<p>El proceso no es muy diferente y, como te habrás imaginado, es bastante sencillo de implementar en cualquier empresa:</p>\n\n\n\n<ol>\n<li>Emisión del ticket:<strong> </strong>el dispensador emite tickets numerados de manera secuencial a medida que las personas llegan al área de servicio. Los clientes toman un ticket del dispensador que contiene un número que indica el orden en el que serán atendidos.</li>\n\n\n\n<li>Pantalla o tablero de visualización:<strong> </strong>junto al dispensador de tickets, suele haber una pantalla o tablero electrónico que muestra el número del turno actual y el número del próximo turno a ser atendido. Esto permite que los clientes puedan ver cuándo es su turno aproximado de recibir atención.</li>\n\n\n\n<li>Atención ordenada: a medida que los empleados o funcionarios están disponibles para ofrecer el servicio, llaman o muestran en la pantalla el número del siguiente turno a ser atendido. Los clientes se presentan cuando ven que su número está próximo.</li>\n\n\n\n<li>Gestión de prioridades: algunos dispensadores de tickets para turnos también permiten gestionar prioridades, como clientes con discapacidades, personas mayores o usuarios que requieren atención urgente. Dicha facilidad la puedes consultar en el precio del dispensador de turnos electrónico.</li>\n</ol>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-integra-tu-dispensador-de-turnos-en-medellin\">Integra tu dispensador de turnos en Medellín&nbsp;</h2>\n\n\n\n<p>La integración de un<strong><a href=\"https://tecnologiaplus.com/dispensador-de-tiquetes/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/dispensador-de-tiquetes/\"> dispensador de turnos</a></strong> con un sistema de gestión puede mejorar la eficiencia y la organización de las operaciones en entornos donde se requiere una atención al cliente ordenada y con tiempos específicos. </p>\n\n\n\n<p>Aquí te dejamos algunos pasos generales que pueden ayudarte a realizar esta integración:</p>\n\n\n\n<ul>\n<li>Identifica tus necesidades y requisitos: define claramente qué funciones deseas integrar entre el dispensador de turnos y tu sistema de gestión. </li>\n\n\n\n<li>Selecciona el dispensador de turnos adecuado: asegúrate de que el dispensador de turnos que elijas sea compatible con la opción de integración que necesitas si no eliges uno manual. Algunos dispensadores de turnos ofrecen API o soluciones de integración que facilitan el proceso.</li>\n\n\n\n<li>Implementación y monitoreo: procede con la implementación en tu sistema de gestión. Asegúrate de monitorear el rendimiento y la estabilidad después de la implementación para corregir cualquier problema que pueda surgir.</li>\n\n\n\n<li>Capacitación del personal: proporciona capacitación a tu personal sobre cómo utilizar el dispensador de turnos integrado en el sistema de gestión. Asegúrate de que comprendan cómo asignar turnos, rastrear clientes y utilizar todas las funciones integradas de manera efectiva.</li>\n</ul>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-que-beneficios-te-aportara-el-dispensador-de-turnos\">¿Qué beneficios te aportará el dispensador de turnos?</h2>\n\n\n\n<p>Finalmente, es hora de ver qué beneficios te aportará este tipo de tecnología a la empresa, aquí ves algunos de los más destacables beneficios:</p>\n\n\n\n<ul>\n<li>Organización: facilita la gestión ordenada y equitativa del flujo de clientes o usuarios.</li>\n\n\n\n<li>Eficiencia: reduce el tiempo de espera y optimiza la asignación de recursos para una atención más rápida.</li>\n\n\n\n<li>Mejora la experiencia del cliente:<strong> </strong>proporciona una atención más satisfactoria y cómoda para los usuarios.</li>\n\n\n\n<li>Gestión de datos:<strong> </strong>permite obtener información sobre el rendimiento y la productividad del servicio.</li>\n\n\n\n<li>Priorización:<strong> </strong>podrás dar prioridad a clientes con necesidades especiales o urgentes.</li>\n</ul>\n\n\n\n<p>Recuerda que un aspecto importante de tu empresa es la gestión de turnos, por lo que contar con un sistema avanzado y tecnológico que te ayude a mejorar este apartado es crucial.&nbsp;</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-donde-adquirir-un-dispensador-o-un-software-de-turnos\">¿Dónde adquirir un dispensador o un software de turnos?</h2>\n\n\n\n<p>En Tecnología Plus creemos que la innovación es la clave para ofrecer buenos servicios de atención al cliente, por lo que estamos dispuestos a<strong> </strong>ayudar a las empresas con la integración de los <strong><a href=\"https://tecnologiaplus.com/dispensador-de-tiquetes/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/dispensador-de-tiquetes/\">dispensadores de turnos</a></strong> manuales y de software para dar más facilidades a sus clientes.</p>\n\n\n\n<p><a href=\"https://tecnologiaplus.com/contacto/\">Contáctanos hoy</a> y descubre cómo podemos ayudarte a llevar tu gestión de filas al siguiente nivel.</p>\n",
+        "template_name": "/dispensador-de-tickets/integrar-dispensador-turnos-sistema-gestion.html",
+    },
+    "excerpt": {
+        "rendered":  "<p>Si tienes una empresa que está orientada a la atención al cliente, seguro te habrás dado cuenta que siempre buscas la manera de mejorar este servicio tan importante. Y es que una buena experiencia de los clientes en tu empresa es parte clave para garantizar la fidelización de los prospectos. Uno de los problemas que&#8230;</p>\n",
+    },
+    "images": [
+        "website-v2/blog/dispensador-de-tickets/integrar-dispensador-turnos-sistema-gestion/fftzagaeoapujutqdiob"
+    ],
+    "categories": [
+      categories.DISPENSADOR_DE_TICKETS.category_key
+    ],
+  },
 /*
 {
     "id": ,
