@@ -1,4 +1,4 @@
-import { categories } from "@/data/categories";
+import { categories } from "@/config/categories";
 
 
 const llamadoresDeEnfermeriaPosts = [
@@ -9,7 +9,7 @@ const llamadoresDeEnfermeriaPosts = [
     "previous_link": [
         "/llamado-de-enfermeria-como-mejorar-el-servicio-en-geriatricos"
     ],
-    "current_link": "/blog/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos",
+    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/como-mejorar-servicio-enfermeria-en-geriatricos`,
     "title": {
         "rendered": "Cómo mejorar el servicio de enfermería en un hogar geriátrico o gerontológico"
     },
@@ -41,7 +41,7 @@ const llamadoresDeEnfermeriaPosts = [
     "preious_link": [
         "/por-que-usar-sistema-de-llamado-de-enfermeria"
     ],
-    "current_link": "/blog/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria",
+    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/por-que-usar-sistema-llamado-de-enfermeria`,
     "title": {
         "rendered": "¿Por qué usar el Sistema de Llamado de Enfermería?"
     },
@@ -73,7 +73,7 @@ const llamadoresDeEnfermeriaPosts = [
     "previous_link": [
         "/llamador-de-pacientes-conoce-los-beneficios-de-invertir-en-estos-sistemas"
     ],
-    "current_link": "/blog/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes",
+    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/beneficios-invertir-en-sistemas-de-llamador-de-pacientes`,
     "metadata": {
         "title": "Llamador de pacientes: Beneficios de estos sistemas",
         "description": "Mejora la rentabilidad y eficiencia de tu clínica u hospital con un sistema de llamador de pacientes. ¡Aumenta tu productividad hoy mismo!",
@@ -105,7 +105,7 @@ const llamadoresDeEnfermeriaPosts = [
     "previous_link": [
         "/timbre-de-llamado-de-enfermeria-mejora-la-experiencia-del-paciente"
     ],
-    "current_link": "/blog/llamado-de-enfermeria-cuidamaster/mejora-experiencia-paciente-con-timbre-llamado-enfermeria",
+    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/mejora-experiencia-paciente-con-timbre-llamado-enfermeria`,
     "metadata": {
         "title": "Timbre de Llamado de Enfermería: Mejora la atención",
         "description": "Descubre cómo un Timbre de Llamado de Enfermería mejora la atención, optimiza tiempos y reduce el estrés del paciente. Asesoría personalizada",
@@ -137,7 +137,7 @@ const llamadoresDeEnfermeriaPosts = [
     "previous_link": [
         "/llamadores-de-enfermeria-como-transforman-los-hospitales"
     ],
-    "current_link": "/blog/llamado-de-enfermeria-cuidamaster/como-llamadores-enfermeria-transforman-hospitales",
+    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/como-llamadores-enfermeria-transforman-hospitales`,
     "metadata": {
         "title": "Llamadores de Enfermería: Cómo transforman los hospitales",
         "description": "Descubre cómo los llamadores de enfermería mejoran la atención, optimizan tiempos y transforman la experiencia hospitalaria.",
@@ -164,11 +164,11 @@ const llamadoresDeEnfermeriaPosts = [
   },
   {
     "id": 10552,
-    "date": "2025-03-13T13:45:41",
+    "date": "2025-03-13T13:45:41", 
     "slug": "timbre-para-cama-hospital-atencion-rapida-paciente",
     "status": "publish",
     "type": "post",
-    "current_link": "/blog/llamado-de-enfermeria-cuidamaster/timbre-para-cama-hospital-atencion-rapida-paciente",
+    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/timbre-para-cama-hospital-atencion-rapida-paciente`,
     "previous_link": [
         "/timbre-para-cama-de-hospital-atencion-rapida-y-eficaz"
     ],
@@ -200,7 +200,8 @@ const llamadoresDeEnfermeriaPosts = [
     "id": 10546,
     "date": "2025-03-12T14:43:08",
     "slug": "boton-para-llamar-enfermera-facilita-labor-personal",
-    "current_link": "/blog/llamado-de-enfermeria-cuidamaster/boton-para-llamar-enfermera-facilita-labor-personal",
+    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/boton-para-llamar-enfermera-facilita-labor-personal`,
+    
     "previous_link": [
         "/boton-para-llamar-a-enfermera-como-facilita-la-labor-del-personal-de-enfermeria"
     ],
@@ -235,7 +236,7 @@ const llamadoresDeMeserosPosts = [
     "id": 10621,
     "date": "2025-03-26T10:56:03",
     "slug": "como-reducir-tiempos-espera-restaurante",
-    "current_link": "/blog/llamadores-de-meseros/como-reducir-tiempos-espera-restaurante",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/como-reducir-tiempos-espera-restaurante`,
     "previous_link": [
         "/llamadores-de-meseros-como-reducir-los-tiempos-de-espera"
     ],
@@ -269,7 +270,7 @@ const llamadoresDeMeserosPosts = [
     "slug": "implementar-timbres-de-mesa-para-restaurante",
     "status": "publish",
     "type": "post",
-    "current_link": "/blog/llamadores-de-meseros/implementar-timbres-de-mesa-para-restaurante",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/implementar-timbres-de-mesa-para-restaurante`,
     "previous_link": [
         "/timbres-de-mesa-para-tu-restaurante"
     ],
@@ -301,7 +302,7 @@ const llamadoresDeMeserosPosts = [
     "id": 10393,
     "date": "2025-02-04T13:30:09",
     "slug": "llamadores-mesa-tecnologia-revoluciona-atencion-al-cliente",
-    "current_link": "/blog/llamadores-de-meseros/llamadores-mesa-tecnologia-revoluciona-atencion-al-cliente",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/llamadores-mesa-tecnologia-revoluciona-atencion-al-cliente`,
     "previous_link": [
         "/llamadores-de-mesa-la-tecnologia-que-revoluciona-la-atecion-al-cliente"
     ],
@@ -333,7 +334,7 @@ const llamadoresDeMeserosPosts = [
     "id": 10386,
     "date": "2025-02-04T13:49:04",
     "slug": "reducir-tiempo-de-espera-mejora-satisfaccion-del-cliente",
-    "current_link": "/blog/llamadores-de-meseros/reducir-tiempo-de-espera-mejora-satisfaccion-del-cliente",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/reducir-tiempo-de-espera-mejora-satisfaccion-del-cliente`,
     "previous_link": [
         "/llamador-de-meseros-mejora-la-satisfaccion-del-cliente/"
     ],
@@ -365,7 +366,8 @@ const llamadoresDeMeserosPosts = [
     "id": 10367,
     "date": "2025-02-04T13:49:04",
     "slug": "aumenta-propinas-llamadores-de-meseros-en-restaurantes",
-    "current_link": "/blog/llamadores-de-meseros/aumenta-propinas-llamadores-de-meseros-en-restaurantes",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/aumenta-propinas-llamadores-de-meseros-en-restaurantes`,
+    
     "previous_link": [
         "/aumenta-las-propinas-con-llamadores-de-meseros"
     ],
@@ -397,7 +399,7 @@ const llamadoresDeMeserosPosts = [
     "id": 3268,
     "date": "2025-02-04T13:49:04",
     "slug": "como-mejorar-administracion-restaurantes",
-    "current_link": "/blog/llamadores-de-meseros/como-mejorar-administracion-restaurantes",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/como-mejorar-administracion-restaurantes`,
     "previous_link": [
         "/como-mejorar-la-administracion-de-restaurantes"
     ],
@@ -429,7 +431,7 @@ const llamadoresDeMeserosPosts = [
     "id": 10408,
     "date": "2025-02-04T13:49:04",
     "slug": "transforma-atencion-cliente-llamadores-de-meseros",
-    "current_link": "/blog/llamadores-de-meseros/transforma-atencion-cliente-llamadores-de-meseros",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/transforma-atencion-cliente-llamadores-de-meseros`,
     "previous_link": [
         "/mejorar-servicio-restaurante"
     ],
@@ -461,7 +463,7 @@ const llamadoresDeMeserosPosts = [
     "id": 3251,
     "date": "2023-07-15T10:37:00",
     "slug": "como-mejorar-servicio-restaurante",
-    "current_link": "/blog/llamadores-de-meseros/como-mejorar-servicio-restaurante",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/como-mejorar-servicio-restaurante`,
     "previous_link": [
         "/timbres-de-mesa-para-tu-restaurante"
     ],
@@ -493,7 +495,7 @@ const llamadoresDeMeserosPosts = [
     "id": 8574,
     "date": "2023-05-28T12:11:00",
     "slug": "mejorar-atencion-gimnasios-llamador-entrenadores",
-    "current_link": "/blog/llamadores-de-meseros/mejorar-atencion-gimnasios-llamador-entrenadores",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/mejorar-atencion-gimnasios-llamador-entrenadores`,
     "previous_link": [
         "/mejora-la-atencion-en-los-gimnasios-a-traves-del-llamador-de-entrenadores"
     ],
@@ -525,7 +527,7 @@ const llamadoresDeMeserosPosts = [
     "id": 10358,
     "date": "2025-02-04T08:58:57",
     "slug": "llamadores-meseros-esenciales-elevar-nivel-restaurante",
-    "current_link": "/blog/llamadores-de-meseros/llamadores-meseros-esenciales-elevar-nivel-restaurante",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/llamadores-meseros-esenciales-elevar-nivel-restaurante`,
     "previous_link": [
         "/por-que-los-llamadores-de-meseros-son-claves-para-tu-restaurante"
     ],
@@ -557,7 +559,7 @@ const llamadoresDeMeserosPosts = [
     "id": 10150,
     "date": "2024-07-27T16:22:02",
     "slug": "llamador-de-meseros-realmente-necesario",
-    "current_link": "/blog/llamadores-de-meseros/llamador-de-meseros-realmente-necesario",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/llamador-de-meseros-realmente-necesario`,
     "previous_link": [
         "/llamador-de-meseros-es-realmente-necesario"
     ],
@@ -590,7 +592,7 @@ const llamadoresDeMeserosPosts = [
     "id": 10402,
     "date": "2025-02-04T13:49:04",
     "slug": "",
-    "current_link": "/blog/llamadores-de-meseros/",
+    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/como-mejorar-servicio-enfermeria-en-geriatricos`,
     "previous_link": [
         "/timbres-de-mesa-para-tu-restaurante"
     ],
@@ -622,43 +624,11 @@ const llamadoresDeMeserosPosts = [
 ]
 
 const localizadoresParaRestaurantesPosts = [
-//   {
-//     "id": 10607,
-//     "date": "2025-03-17T19:05:04",
-//     "slug": "turneros-autoservicio-atencion-cliente",
-//     "current_link": "/blog/localizadores-para-restaurantes/turneros-autoservicio-atencion-cliente",
-//     "previous_link": [
-//         "/turneros-para-restaurantes-moderniza-tu-atencion-al-cliente"
-//     ],
-//     "metadata": {
-//         "title": "Turneros para Restaurantes: Moderniza la atención al cliente",
-//         "description": "Los Turneros para restaurantes agilizan la atención y eliminan filas. Somos fabricantes de sistemas digitales e inalámbricos.",
-//         "keywords": [
-//             "turneros para restaurantes",
-//         ]
-//     },
-//     "title": {
-//         "rendered": "Moderniza tu atención al cliente con Turneros para Restaurantes Autoservicio"
-//     },
-//     "content": {
-//         "rendered": "\n<p>En la industria gastronómica, la organización y rapidez en el servicio son claves para ofrecer una experiencia satisfactoria. Cuando un cliente visita un restaurante, espera no solo una comida deliciosa, sino también un servicio fluido, sin largas esperas ni confusión en la asignación de mesas. Sin embargo, en horas pico o en establecimientos con alta demanda, la gestión de turnos puede convertirse en un desafío que afecta tanto a los comensales como al personal.</p>\n\n\n\n<p>Sin un sistema adecuado, las filas desordenadas, la incertidumbre sobre los tiempos de espera y la falta de comunicación pueden generar frustración. Un cliente que no sabe cuánto tiempo debe esperar puede sentirse incómodo e impaciente, lo que aumenta las posibilidades de que abandone el restaurante en busca de otra opción con un proceso más claro y eficiente. Esto no solo significa una pérdida de ventas para el negocio, sino también una posible mala reseña que puede afectar la reputación del restaurante en plataformas digitales.</p>\n\n\n\n<p>Por otro lado, el personal del restaurante también se ve afectado. Sin un <em>sistema de gestión de filas</em>, los anfitriones y meseros deben recordar turnos manualmente o depender de listas improvisadas, lo que aumenta la carga de trabajo y el margen de error. La asignación de mesas puede volverse caótica, y el tiempo que debería destinarse a ofrecer un excelente servicio se desperdicia tratando de manejar la fila de espera. En el peor de los casos, esto puede traducirse en errores, clientes molestos y pérdida de eficiencia operativa.</p>\n\n\n\n<p>Aquí es donde los <strong><a href=\"https://tecnologiaplus.com/turnero/\">turneros para restaurantes</a></strong> se convierten en una solución esencial. Con estos dispositivos, los clientes pueden esperar su turno de manera organizada, sin necesidad de aglomerarse en la entrada ni estar preguntando constantemente cuánto tiempo falta para ser atendidos. Los turneros permiten que cada persona sepa exactamente cuándo le corresponde su mesa, reduciendo la ansiedad y mejorando su experiencia general en el restaurante.</p>\n\n\n\n<p>Además, la implementación de&nbsp; <strong>turneros para restaurantes</strong> facilita el trabajo del personal. Al automatizar el proceso de asignación de turnos, los empleados pueden enfocarse en brindar una mejor atención en lugar de gestionar largas filas. La eficiencia operativa se incrementa significativamente, lo que se traduce en un flujo de trabajo más ágil y una experiencia más placentera tanto para los clientes como para los trabajadores.</p>\n\n\n\n<p>En <em>Tecnología Plus</em>, somos fabricantes de <em>turneros digitales e inalámbricos</em>, diseñados para modernizar la gestión de filas en restaurantes. Nuestra tecnología no solo mejora la experiencia del cliente, sino que también optimiza el flujo de atención, permitiendo que cada servicio sea más ágil, organizado y libre de estrés tanto para los comensales como para el equipo del restaurante.</p>\n\n\n\n<hr class=\"wp-block-separator has-alpha-channel-opacity\"/>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"los-problemas-comunes-en-la-gestion-de-filas-en-restaurantes-autoservicio\"><br><strong>🍽️ Los Problemas Comunes en la Gestión de Filas en Restaurantes Autoservicio</strong></h2>\n\n\n\n<p>Muchos restaurantes enfrentan retos diarios al recibir clientes, especialmente en horas pico. Algunos de los problemas más frecuentes incluyen:</p>\n\n\n\n<p>🔴 Clientes desinformados sobre su tiempo de espera, lo que genera incomodidad e impaciencia.<br><br>🔴 Aglomeraciones en la entrada, dificultando el acceso y afectando la imagen del negocio.<br><br>🔴 Dificultades para el personal, que debe recordar los turnos manualmente o administrar largas listas de espera.<br><br>🔴 Pérdida de clientes, que prefieren buscar otro establecimiento en lugar de esperar sin un sistema claro.<br><br>🔴 Quejas y mala reputación, pues una mala gestión de filas puede generar comentarios negativos en redes sociales y plataformas de reseñas.</p>\n\n\n\n<p>Contar con un&nbsp; <strong>turnero para restaurantes</strong> no solo soluciona estos problemas, sino que también mejora la percepción del restaurante, mostrando un servicio moderno y bien organizado.</p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1030\" height=\"570\" src=\"https://tecnologiaplus.com/wp-content/uploads/2025/03/image-6-1030x570.png\" alt=\"turneros para restaurantes autoservicio\" class=\"wp-image-10608\" srcset=\"https://tecnologiaplus.com/wp-content/uploads/2025/03/image-6-1030x570.png 1030w, https://tecnologiaplus.com/wp-content/uploads/2025/03/image-6-300x166.png 300w, https://tecnologiaplus.com/wp-content/uploads/2025/03/image-6-768x425.png 768w, https://tecnologiaplus.com/wp-content/uploads/2025/03/image-6-800x442.png 800w, https://tecnologiaplus.com/wp-content/uploads/2025/03/image-6-1000x553.png 1000w, https://tecnologiaplus.com/wp-content/uploads/2025/03/image-6.png 1338w\" sizes=\"(max-width: 1030px) 100vw, 1030px\" /></figure>\n\n\n\n<hr class=\"wp-block-separator has-alpha-channel-opacity\"/>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"como-funcionan-los-turneros-para-restaurantes-autoservicio\"><br><strong>📟 ¿Cómo Funcionan los Turneros para Restaurantes Autoservicio?</strong></h2>\n\n\n\n<p>Los<strong> <a href=\"https://tecnologiaplus.com/turnero/\">turneros para restaurantes</a></strong> permiten que el proceso de espera sea claro y sin confusión. El funcionamiento es simple y eficiente:</p>\n\n\n\n<p>1️⃣ El cliente recibe un número al llegar al restaurante, ya sea impreso o digital en su celular.<br><br>2️⃣ Puede visualizar su turno en una pantalla o recibir una notificación cuando sea su turno.<br><br>3️⃣ El personal del restaurante tiene un mejor control sobre la asignación de mesas y la gestión de clientes.<br><br>4️⃣ Se eliminan las filas desordenadas, evitando la saturación en la entrada del establecimiento.</p>\n\n\n\n<p>Los&nbsp; <strong>turneros para restaurantes</strong> de <em>Tecnología Plus</em> no requieren instalación de cables ni conexión a una computadora, lo que los hace ideales para cualquier tipo de restaurante.</p>\n\n\n\n<hr class=\"wp-block-separator has-alpha-channel-opacity\"/>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"beneficios-de-usar-un-turnero-digital-en-restaurantes-autoservicio\"><br><strong>🚀 Beneficios de Usar un Turnero Digital en Restaurantes Autoservicio</strong></h2>\n\n\n\n<p>💡<em> Mayor organización:</em> Reduce el caos en la entrada y permite un servicio más eficiente.<br><br>💡<em> Experiencia mejorada: </em>Los clientes esperan de manera más cómoda, sin ansiedad ni incertidumbre.<br><br>💡 <em>Optimización del trabajo del personal:</em> Menos presión para los meseros y anfitriones, quienes pueden enfocarse en atender mejor.<br><br>💡 <em>Aumento de clientes atendidos:</em> Una mejor gestión del tiempo permite servir a más personas en menos tiempo.<br><br>💡<em> Imagen moderna y profesional: </em>Los turneros digitales muestran que el restaurante usa tecnología avanzada para mejorar la experiencia del cliente.</p>\n\n\n\n<p>En <em>Tecnología Plus</em>, nuestros <em>turneros digitales e inalámbricos </em>incluyen pantallas antirreflejo y alarmas sonoras para mejorar la visibilidad y eficiencia del servicio.</p>\n\n\n\n<hr class=\"wp-block-separator has-alpha-channel-opacity\"/>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"comparativa-sin-vs-con-turneros-para-restaurantes-autoservicio\"><br><strong>📊 Comparativa – Sin vs. Con Turneros para </strong><br><strong>Restaurantes Autoservicio</strong><br></h2>\n\n\n\n<figure class=\"wp-block-table\"><table><tbody><tr><td>🚫 Sin Turnero</td><td>✅ Con Turnero</td></tr><tr><td>❌ Aglomeraciones en la entrada</td><td>✅ Organización y flujo de clientes mejorado</td></tr><tr><td>❌ Clientes molestos por la espera</td><td>✅ Mayor satisfacción y comodidad</td></tr><tr><td>❌ El personal pierde tiempo gestionando turnos manualmente</td><td>✅ Automatización del proceso, más eficiencia</td></tr><tr><td>❌ Riesgo de perder clientes impacientes</td><td>✅ Fidelización y más reservas</td></tr><tr><td>❌ Percepción de servicio lento y desordenado</td><td>✅ Imagen profesional y moderna</td></tr></tbody></table></figure>\n\n\n\n<hr class=\"wp-block-separator has-alpha-channel-opacity\"/>\n\n\n\n<h4 class=\"wp-block-heading\" id=\"tecnologia-plus-turneros-digitales-e-inalambricos-de-alta-calidad\"><br><strong>🛠️ Tecnología Plus: Turneros Digitales e Inalámbricos de Alta Calidad</strong></h4>\n\n\n\n<p>En <em>Tecnología Plus</em>, fabricamos turneros digitales y turneros inalámbricos de última tecnología para mejorar la atención en restaurantes.</p>\n\n\n\n<figure class=\"wp-block-image size-full\"><img loading=\"lazy\" decoding=\"async\" width=\"910\" height=\"511\" src=\"https://tecnologiaplus.com/wp-content/uploads/2025/03/image-7.png\" alt=\"\" class=\"wp-image-10613\" srcset=\"https://tecnologiaplus.com/wp-content/uploads/2025/03/image-7.png 910w, https://tecnologiaplus.com/wp-content/uploads/2025/03/image-7-300x168.png 300w, https://tecnologiaplus.com/wp-content/uploads/2025/03/image-7-768x431.png 768w, https://tecnologiaplus.com/wp-content/uploads/2025/03/image-7-800x449.png 800w\" sizes=\"(max-width: 910px) 100vw, 910px\" /></figure>\n\n\n\n<p>✅ Pantallas anti reflejo para una mejor visibilidad.<br><br>✅ Sistema inalámbrico: No requiere instalación de cables ni conexión a PC.<br><br>✅ Fácil de usar: Configuración rápida e intuitiva.<br><br>✅ Fabricación de alta calidad: Diseñados para ofrecer durabilidad y eficiencia.<br><br>✅ Clientes satisfechos: Colmédica, Clínica Palermo, entre otros.</p>\n\n\n\n<p>Si buscas una solución moderna y eficiente para la gestión de filas en tu restaurante, contáctanos para recibir una asesoría personalizada y elegir el mejor sistema para tu negocio.</p>\n\n\n\n<hr class=\"wp-block-separator has-alpha-channel-opacity\"/>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"contactanos-y-moderniza-tu-restaurante-con-tecnologia-plus\"><br><strong>📞 Contáctanos y Moderniza tu Restaurante con Tecnología Plus</strong></h3>\n\n\n\n<p>No dejes que la desorganización afecte la experiencia de tus clientes. Implementa un <strong><a href=\"https://tecnologiaplus.com/turnero/\">turneros para restaurantes  </a></strong>y optimiza la atención en tu restaurante con la tecnología avanzada de Tecnología Plus.</p>\n\n\n\n<p class=\"has-text-align-center\"><a href=\"https://tecnologiaplus.com/contacto/\">📩 Solicita una cotización y descubre cómo podemos ayudarte a impulsar tu negocio al éxito.</a></p>\n",
-//         "template_name": "/localizadores-para-restaurantes/turneros-autoservicio-atencion-cliente.html",
-//     },
-//     "excerpt": {
-//         "rendered": "<p>En la industria gastronómica, la organización y rapidez en el servicio son claves para ofrecer una experiencia satisfactoria. Cuando un cliente visita un restaurante, espera no solo una comida deliciosa, sino también un servicio fluido, sin largas esperas ni confusión en la asignación de mesas. Sin embargo, en horas pico o en establecimientos con alta&#8230;</p>\n",
-//     },
-//     "images": [
-//         "v1747157490/website-v2/blog/localizadores-para-restaurantes/turneros-autoservicio-atencion-cliente/i3d5rirxzgdnwq0cxcby.png"
-//     ],
-//     "categories": [
-//       categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
-//     ],
-//   },
   {
     "id": 9276,
     "date": "2023-06-28T09:09:36",
     "slug": "autoservicio-restaurante-8-infaltables",
-    "current_link": "/blog/localizadores-para-restaurantes/autoservicio-restaurante-8-infaltables",
+    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/autoservicio-restaurante-8-infaltables`,
     "previous_link": [
         "/8-cosas-que-no-pueden-faltar-en-un-restaurante-autoservicio"
     ],
@@ -690,7 +660,7 @@ const localizadoresParaRestaurantesPosts = [
     "id": 10197,
     "date": "2024-08-27T15:04:51",
     "slug": "avisadores-clientes-restaurante-autoservicio",
-    "current_link": "/blog/localizadores-para-restaurantes/avisadores-clientes-restaurante-autoservicio",
+    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/avisadores-clientes-restaurante-autoservicio`,
     "previous_link": [
         "/avisadores-de-clientes-tecnologia-para-restaurantes-autoservicio"
     ],
@@ -722,7 +692,7 @@ const localizadoresParaRestaurantesPosts = [
     "id": 9767,
     "date": "2024-05-08T17:58:32",
     "slug": "escoger-localizador-ideal-restaurante-bogota",
-    "current_link": "/blog/localizadores-para-restaurantes/escoger-localizador-ideal-restaurante-bogota",
+    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/escoger-localizador-ideal-restaurante-bogota`,
     "previous_link": [
         "/localizador-para-restaurantes-como-escoger-el-ideal-en-bogota"
     ],
@@ -754,7 +724,7 @@ const localizadoresParaRestaurantesPosts = [
     "id": 9757,
     "date": "2024-04-23T09:07:29",
     "slug": "autoservicio-colombia-6-claves",
-    "current_link": "/blog/localizadores-para-restaurantes/autoservicio-colombia-6-claves",
+    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/autoservicio-colombia-6-claves`,
     "previous_link": [
         "/localizadores-para-restaurantes-de-autoservicio-en-colombia-6-puntos-claves"
     ],
@@ -786,7 +756,7 @@ const localizadoresParaRestaurantesPosts = [
     "id": 8592,
     "date": "2023-11-03T08:23:39",
     "slug": "localizadores-clientes-autoservicio",
-    "current_link": "/blog/localizadores-para-restaurantes/localizadores-clientes-autoservicio",
+    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/localizadores-clientes-autoservicio`,
     "previous_link": [
         "/localizadores-de-clientes-para-restaurantes-autoservicio"
     ],
@@ -818,7 +788,7 @@ const localizadoresParaRestaurantesPosts = [
     "id": 8596,
     "date": "2023-08-01T14:04:00",
     "slug": "como-elegir-localizadores-para-restaurantes",
-    "current_link": "/blog/localizadores-para-restaurantes/como-elegir-localizadores-para-restaurantes",
+    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/como-elegir-localizadores-para-restaurantes`,
     "previous_link": [
         "/como-elegir-localizadores-para-restaurante"
     ],
@@ -850,7 +820,7 @@ const localizadoresParaRestaurantesPosts = [
     "id": 8594,
     "date": "2023-07-07T14:01:00",
     "slug": "por-que-usar-localizadores-para-restaurantes",
-    "current_link": "/blog/localizadores-para-restaurantes/por-que-usar-localizadores-para-restaurantes",
+    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/por-que-usar-localizadores-para-restaurantes`,
     "previous_link": [
         "/por-que-usar-localizadores-para-restaurantes"
     ],
@@ -882,7 +852,7 @@ const localizadoresParaRestaurantesPosts = [
     "id": 10644,
     "date": "2025-05-13T09:45:42",
     "slug": "caos-zonas-de-comida",
-    "current_link": "/blog/localizadores-para-restaurantes/caos-zonas-de-comida",
+    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/caos-zonas-de-comida`,
     "previous_link": [
         "/localizadores-para-restaurantes-caos-zonas-de-comida"
     ],
@@ -914,7 +884,7 @@ const localizadoresParaRestaurantesPosts = [
     "id": 10653,
     "date": "2025-05-13T15:03:18",
     "slug": "secreto-espera-agradable",
-    "current_link": "/blog/localizadores-para-restaurantes/secreto-espera-agradable",
+    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/secreto-espera-agradable`,
     "previous_link": [
         "/localizadores-de-clientes-secreto-espera-agradable"
     ],
@@ -947,7 +917,7 @@ const localizadoresParaRestaurantesPosts = [
     "id": ,
     "date": "",
     "slug": "",
-    "current_link": "/blog/localizadores-para-restaurantes/",
+    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/como-mejorar-servicio-enfermeria-en-geriatricos`,
     "previous_link": [
         "/timbres-de-mesa-para-tu-restaurante"
     ],
@@ -984,7 +954,7 @@ const turneroTurnoexpress = [
     "date": "2025-03-17T19:05:04",
     "modified": "2025-05-16T09:13:56",
     "slug": "moderniza-tu-atencion-cliente-restaurantes-autoservicio",
-    "current_link": "/blog/turnero-turnoexpress/moderniza-tu-atencion-cliente-restaurantes-autoservicio",
+    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/moderniza-tu-atencion-cliente-restaurantes-autoservicio`,
     "previous_link": [
         "/turneros-para-restaurantes-moderniza-tu-atencion-al-cliente"
     ],
@@ -1017,7 +987,7 @@ const turneroTurnoexpress = [
     "date": "2025-03-17T18:43:25",
     "modified": "2025-05-16T09:14:51",
     "slug": "orden-en-salas-de-espera-digiturno",
-    "current_link": "/blog/turnero-turnoexpress/orden-en-salas-de-espera-digiturno",
+    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/orden-en-salas-de-espera-digiturno`,
     "previous_link": [
         "/turnero-digiturno-el-caos-en-las-salas-de-espera-y-la-necesidad-de-orden/"
     ],
@@ -1050,7 +1020,7 @@ const turneroTurnoexpress = [
     "date": "2025-03-13T14:40:43",
     "modified": "2025-05-16T09:18:17",
     "slug": "organizador-filas-digital-como-funciona",
-    "current_link": "/blog/turnero-turnoexpress/organizador-filas-digital-como-funciona",
+    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/organizador-filas-digital-como-funciona`,
     "previous_link": [
         "/organizador-de-filas-como-funciona-y-porque-deberias-usarlo"
     ],
@@ -1083,7 +1053,7 @@ const turneroTurnoexpress = [
     "date": "2023-06-28T09:19:52",
     "modified": "2025-05-16T09:39:34",
     "slug": "turneros-digitales-casos-exito-colombia",
-    "current_link": "/blog/turnero-turnoexpress/turneros-digitales-casos-exito-colombia",
+    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/turneros-digitales-casos-exito-colombia`,
     "previous_link": [
         "/casos-de-exito-de-turneros-en-colombia"
     ],
@@ -1116,7 +1086,7 @@ const turneroTurnoexpress = [
     "date": "2024-09-10T11:38:36",
     "modified": "2025-05-16T09:21:46",
     "slug": "gestor-turnos-clientes-digitales-manuales",
-    "current_link": "/blog/turnero-turnoexpress/gestor-turnos-clientes-digitales-manuales",
+    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/gestor-turnos-clientes-digitales-manuales`,
     "previous_link": [
         "/gestor-de-turnos-digital-o-manual"
     ],
@@ -1150,7 +1120,7 @@ const turneroTurnoexpress = [
     "date": "",
     "modified": "",
     "slug": "",
-    "current_link": "/blog/turnero-turnoexpress/",
+    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/como-mejorar-servicio-enfermeria-en-geriatricos`,
     "previous_link": [
         "/"
     ],
@@ -1187,7 +1157,7 @@ const turneroTurnomaster = [
     "date": "2024-07-16T09:45:45",
     "modified": "2025-05-16T09:28:10",
     "slug": "reducir-tiempo-espera-gestion-turnos",
-    "current_link": "/blog/turnero-turnomaster/reducir-tiempo-espera-gestion-turnos",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/reducir-tiempo-espera-gestion-turnos`,
     "previous_link": [
         "/sistema-de-turnos-como-reducir-tiempo-de-espera-de-tus-clientes"
     ],
@@ -1220,7 +1190,7 @@ const turneroTurnomaster = [
     "date": "2024-05-21T11:42:50",
     "modified": "2025-05-16T09:29:33",
     "slug": "sistema-espera-inteligente-como-funciona",
-    "current_link": "/blog/turnero-turnomaster/sistema-espera-inteligente-como-funciona",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/sistema-espera-inteligente-como-funciona`,
     "previous_link": [
         "/que-es-un-sistema-de-espera-inteligente-y-como-funciona"
     ],
@@ -1253,7 +1223,7 @@ const turneroTurnomaster = [
     "date": "2023-11-03T08:36:18",
     "modified": "2025-05-16T09:33:32",
     "slug": "mejor-sistema-turnos-inalambrico-drogueria",
-    "current_link": "/blog/turnero-turnomaster/mejor-sistema-turnos-inalambrico-drogueria",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/mejor-sistema-turnos-inalambrico-drogueria`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/sistema-de-turnos-inalambrico-para-tu-drogueria"
     ],
@@ -1286,7 +1256,7 @@ const turneroTurnomaster = [
     "date": "2023-11-03T08:20:05",
     "modified": "2025-05-16T09:34:34",
     "slug": "pantalla-de-turnos-plan-eficaz-equipo",
-    "current_link": "/blog/turnero-turnomaster/pantalla-de-turnos-plan-eficaz-equipo",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/pantalla-de-turnos-plan-eficaz-equipo`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/pantalla-de-turnos-como-crear-un-plan-de-manejo-de-turnos-para-tu-equipo/"
     ],
@@ -1319,7 +1289,7 @@ const turneroTurnomaster = [
     "date": "2023-07-19T09:51:45",
    "modified": "2025-05-16T09:38:08",
     "slug": "mejor-software-turnos-negocio",
-    "current_link": "/blog/turnero-turnomaster/mejor-software-turnos-negocio",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/mejor-software-turnos-negocio`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/como-elegir-el-mejor-software-de-turnos"
     ],
@@ -1352,7 +1322,7 @@ const turneroTurnomaster = [
     "date": "2023-07-12T14:21:00",
     "modified": "2025-05-16T09:38:50",
     "slug": "mejorar-gestion-filas",
-    "current_link": "/blog/turnero-turnomaster/mejorar-gestion-filas",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/mejorar-gestion-filas`,
     "previous_link": [
         "/blog/turnero-turnoexpress/como-mejorar-la-gestion-de-filas/"
     ],
@@ -1385,7 +1355,7 @@ const turneroTurnomaster = [
     "date": "2023-06-12T14:16:00",
     "modified": "2025-05-16T09:40:10",
     "slug": "importancia-sistema-turnos-negocios-beneficios",
-    "current_link": "/blog/turnero-turnomaster/importancia-sistema-turnos-negocios-beneficios",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/importancia-sistema-turnos-negocios-beneficios`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/por-que-implementar-un-sistema-de-turnos"
     ],
@@ -1418,7 +1388,7 @@ const turneroTurnomaster = [
     "date": "2020-10-28T14:20:13",
     "modified": "2025-05-16T09:40:38",
     "slug": "5-ventajas-software-turnos",
-    "current_link": "/blog/turnero-turnomaster/5-ventajas-software-turnos",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/5-ventajas-software-turnos`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/5-ventajas-del-software-de-turnos/"
     ],
@@ -1451,7 +1421,7 @@ const turneroTurnomaster = [
     "date": "2020-10-28T14:18:20",
     "modified": "2025-05-16T09:41:02",
     "slug": "organizar-filas-turnero-digital",
-    "current_link": "/blog/turnero-turnomaster/organizar-filas-turnero-digital",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/organizar-filas-turnero-digital`,
     "previous_link": [
         "/blog/turnero-turnoexpress/como-organizar-las-filas/"
     ],
@@ -1484,7 +1454,7 @@ const turneroTurnomaster = [
     "date": "2023-11-06T07:15:32",
     "modified": "2025-05-16T09:33:18",
     "slug": "integrar-sistema-espera-software-gestion-facturacion",
-    "current_link": "/blog/turnero-turnomaster/integrar-sistema-espera-software-gestion-facturacion",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/integrar-sistema-espera-software-gestion-facturacion`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/como-integrar-un-sistema-de-espera-con-software-de-gestion-o-facturacion/"
     ],
@@ -1517,7 +1487,7 @@ const turneroTurnomaster = [
     "date": "2024-08-08T10:55:25",
     "modified": "2025-05-16T09:27:15",
     "slug": "facilitar-transicion-software-gestion-turnos",
-    "current_link": "/blog/turnero-turnomaster/facilitar-transicion-software-gestion-turnos",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/facilitar-transicion-software-gestion-turnos`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/software-de-turnos-como-facilitar-la-transicion/",
     ],
@@ -1551,7 +1521,7 @@ const turneroTurnomaster = [
     "date": "",
     "modified": "",
     "slug": "",
-    "current_link": "/blog/turnero-turnomaster/",
+    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/como-mejorar-servicio-enfermeria-en-geriatricos`,
     "previous_link": [
         "/"
     ],

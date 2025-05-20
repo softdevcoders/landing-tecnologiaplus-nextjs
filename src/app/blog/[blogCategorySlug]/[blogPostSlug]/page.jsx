@@ -66,6 +66,9 @@ const BlogPostPage = async ({ params }) => {
 
   const { blogPostSlug } = await params;
 
+  console.log("blogPostSlug", blogPostSlug);
+  
+
   const post = getPost({ blogPostSlug });
 
   if (!post) {

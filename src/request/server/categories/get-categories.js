@@ -1,4 +1,4 @@
-import { categories } from '@/data/categories'
+import { categories } from '@/config/categories'
 
 export const getCategories = () => {
   return categories

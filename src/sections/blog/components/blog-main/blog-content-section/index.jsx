@@ -1,7 +1,7 @@
 import Card from "@/sections/blog/components/card";
 import style from "./blog-content-section.module.scss";
 import Link from "next/link";
-import { categories } from "@/data/categories";
+import { categories } from "@/config/categories";
 import blogs from "@/data/blogs";
 
 const BlogContentSection = ({ posts, pagination }) => {
