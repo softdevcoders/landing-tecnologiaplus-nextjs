@@ -119,6 +119,17 @@
             border: 1px solid #e0e0e0;
           }
         }
+
+        picture[class='w-50'] {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          img {
+            width: 50%;
+            height: auto;
+          }
+        }
       }
 
       .blogPostView__contentHtlmFooter {
