@@ -3,17 +3,22 @@
   width: 100%;
   padding: 2rem 0;
   background: #fff;
+  -webkit-overflow-scrolling: touch;
 
   .sliderTrack {
     display: flex;
     width: fit-content;
-    animation: 240s linear 0s infinite normal none running scroll;
+    -webkit-animation: scroll 140s linear infinite;
+    animation: scroll 140s linear infinite;
+    will-change: transform;
   }
 
   .slide {
     flex: 0 0 auto;
     padding: 0 2rem;
     width: max-content;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
     img {
       width: 130px;
@@ -22,15 +27,29 @@
       max-height: 50px;
       object-fit: contain;
       filter: grayscale(100%) opacity(0.7);
+      -webkit-filter: grayscale(100%) opacity(0.7);
     }
   }
 }
 
-@keyframes scroll {
-  from {
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
-  to {
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
