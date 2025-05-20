@@ -21,7 +21,7 @@ export const enlacesParaReemplazar = [
   },
   {
     "previous": "https://tecnologiaplus.com/calificador-de-servicio/",
-    "current": "/blog/calificador-de-servicio-al-cliente-opinamaster/herramienta-retroalimentacion-cliente/"
+    "current": "/blog/calificador-de-servicio-al-cliente/herramienta-retroalimentacion-cliente/"
   },
   {
     "previous": "https://tecnologiaplus.com/calificador-de-servicios/",
@@ -29,7 +29,7 @@ export const enlacesParaReemplazar = [
   },
   {
     "previous": "https://tecnologiaplus.com/calificadores-de-servicio-la-herramienta-clave-para-la-retroalimentacion-del-cliente/",
-    "current": "/blog/calificador-de-servicio-al-cliente-opinamaster/herramienta-retroalimentacion-cliente"
+    "current": "/blog/calificador-de-servicio-al-cliente/herramienta-retroalimentacion-cliente"
   },
   {
     "previous": "https://tecnologiaplus.com/como-elegir-el-mejor-software-de-turnos/",
@@ -65,11 +65,11 @@ export const enlacesParaReemplazar = [
   },
   {
     "previous": "https://tecnologiaplus.com/gestor-de-turnos-digital-o-manual/",
-    "current": "/blog/turnero-turnoexpress/gestor-turnos-clientes-digitales-manuales/"
+    "current": "/blog/turnero/gestor-turnos-clientes-digitales-manuales/"
   },
   {
     "previous": "https://tecnologiaplus.com/gestor-de-turnos/",
-    "current": "/blog/turnero-turnoexpress/gestor-turnos-clientes-digitales-manuales/"
+    "current": "/blog/turnero/gestor-turnos-clientes-digitales-manuales/"
   },
   {
     "previous": "https://tecnologiaplus.com/llamado-de-enfermeria-como-mejorar-el-servicio-en-geriatricos/",
