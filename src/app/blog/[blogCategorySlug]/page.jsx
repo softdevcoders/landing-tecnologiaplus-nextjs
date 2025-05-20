@@ -20,12 +20,12 @@ const BlogCategoryPage = async ({ searchParams, params }) => {
     return notFound();
   }
 
-  const page = searchParams.page || 1;
+  const { page } = await searchParams;
 
   const category = Object.values(categories).find(category => category.slug === blogCategorySlug);
 
   return (
-    <CategoryView page={page} category={category.category_key} />
+    <CategoryView page={page || 1} category={category.category_key} />
   );
 }
 
