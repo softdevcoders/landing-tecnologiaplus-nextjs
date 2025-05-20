@@ -1793,6 +1793,77 @@ const rollosDeFichosParaTurnos = [
 */
 ]
 
+const rollosDePapelTermico = [
+{
+    "id": 9525,
+    "date": "2023-08-02T08:14:50",
+    "modified": "2025-05-16T09:35:28",
+    "slug": "secreto-del-exito-en-gestion-de-turnos",
+    "current_link": `/blog${categories.ROLLOS_DE_PAPEL_TERMICO.url_category}/secreto-del-exito-en-gestion-de-turnos`,
+    "previous_link": [
+        "/blog/rollos-de-papel-termico/rollos-de-papel-termico-el-secreto-del-exito-gestionando-turnos/"
+    ],
+    "metadata": {
+        "title": "Rollos de papel térmico: El secreto del éxito en turnos",
+        "description": "¿Sabes por qué el papel térmico es ideal para la gestión de turnos? Conoce sus beneficios y diferencias con el papel normal. ¡Asesoria personalizada!",
+        "keywords": [
+            "Rollos de papel térmico",
+        ]
+    },
+    "title": {
+        "rendered": "Rollos de Papel Térmico: El secreto del éxito en la gestión de turnos"
+    },
+    "content": {
+        "rendered": "\n<p>Los dispensadores de turnos en Medellín se han popularizado en los últimos años para facilitar la gestión de filas en las empresas. Sin embargo, también se ha popularizado el uso de <strong><a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">Rollos de papel térmico</a></strong> en los dispensadores de turnos, por una amplia variedad de motivos, desde la economía, hasta la facilidad de uso y la calidad.</p>\n\n\n\n<p>Es por eso que es cada vez más común el uso de este tipo de <strong>rollos de papel térmico</strong> de alta calidad para las impresoras térmicas o los dispensadores de turno. Así que es probable que te interese conocer los beneficios y características de este tipo de papel y su aporte en el éxito de la gestión de filas</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-que-es-el-papel-termico\">¿Qué es el papel térmico?</h2>\n\n\n\n<p>Los<a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\"> <strong>rollos de papel térmico</strong></a> tienen una capa especializada en su superficie que reacciona al calor para producir imágenes o texto, de ahí que se use en los dispensadores de tickets para turnos.<strong> </strong></p>\n\n\n\n<p>Se caracteriza porque no requiere de la tinta, el tóner o las cintas de impresión convencionales, ya que la impresión en papel de transferencia térmica se logra mediante la aplicación de calor directo en áreas específicas del papel.</p>\n\n\n\n<p>Es por ello que las impresoras térmicas son utilizadas en la mayoría de los casos donde se requiera la impresión de recibos, etiquetas, tickets, códigos de barras y otros tipos de información que no necesitan una impresión a largo plazo y que se actualiza con frecuencia.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-como-se-diferencia-de-los-rollos-termicos-de-otros-tipos-de-papel\">¿Cómo se diferencia de los rollos térmicos de otros tipos de papel?</h2>\n\n\n\n<p>El <strong><a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">papel térmico</a></strong> y el papel normal, también conocido como papel bond o papel común, son dos tipos diferentes de papel utilizados para diversas aplicaciones debido a sus propiedades específicas, aquí te mencionamos algunas diferencias entre ellos:</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-tecnologia-de-impresion\">Tecnología de impresión</h3>\n\n\n\n<p>El papel normal se utiliza en impresoras láser, impresoras de inyección de tinta y fotocopiadoras. La impresión en papel de transferencia térmica se produce mediante la deposición de tóner o tinta líquida,<strong> </strong>mientras que en el<strong> papel térmico</strong> como el que ofrece Tecnología Plus, la impresión se produce mediante la activación térmica de la capa especializada del papel.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-durabilidad-de-la-impresion\">Durabilidad de la impresión</h3>\n\n\n\n<p>Es normal que te preguntes cuánto dura el <strong><a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">papel térmico</a></strong> y la verdad es que la impresión en el <strong>rollo de papel térmico</strong> es más susceptible a los desgastes por luz, por lo que desaparece más rápido.</p>\n\n\n\n<p>Mientras que en el papel normal tiende a perdurar por más tiempo, razón por la cual el<strong> papel térmico </strong>se puede usar en un dispensador de turnos manual por su corto tiempo de vida útil.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-uso-de-tinta-o-toner\">Uso de tinta o tóner</h3>\n\n\n\n<p>El <strong><a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">rollo de papel térmico</a></strong> no requiere tinta ni tóner para la impresión, lo que significa que no necesita recargas, por lo que es una excelente opción para reducir costos operativos,<strong> </strong>mientras que el papel tradicional sí requiere de recargas de tinta o tóner dependiendo del sistema de impresión que utilice. </p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-beneficios-de-utilizar-papel-termico-premium-en-tus-dispensador-de-turnos\">Beneficios de utilizar papel térmico premium en tus dispensador de turnos&nbsp;</h2>\n\n\n\n<p>Hay diferentes razones para optar por el <strong>papel térmico</strong>, sobre todo si estás considerando el precio de un dispensador de turnos electrónico, ya que requiere de este tipo de papel. Aquí te mencionamos algunas de ellas</p>\n\n\n\n<ul>\n<li>Impresión silenciosa y rápida: las impresoras térmicas son conocidas por su funcionamiento silencioso y velocidad de impresión. La ausencia de mecanismos complejos, como cartuchos de tinta o tambores de tóner,<strong> </strong>permite una impresión rápida y eficiente lo que las hace ideales para clínicas, droguerías, entre otras empresas.</li>\n\n\n\n<li>Facilidad de uso y mantenimiento:<strong> </strong>ya que no requiere de cambios frecuentes de cartuchos de tinta o tóner, las impresoras térmicas son fáciles de usar y mantener. Esto resulta especialmente útil en entornos con alto volumen de impresión.</li>\n\n\n\n<li>Portabilidad: las impresoras térmicas portátiles son comunes en aplicaciones como la impresión de recibos en dispositivos móviles. El papel térmico es ligero y fácil de transportar,<strong> </strong>lo que facilita su uso en movimiento.</li>\n\n\n\n<li>Economía de espacio:<strong> </strong>los rollos de papel térmico suelen ser más compactos que las bobinas de papel convencionales, lo que ayuda a<strong> </strong>ahorrar espacio de almacenamiento.</li>\n</ul>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-donde-adquirir-el-papel-termino-premium\">¿Dónde adquirir el papel término premium?</h2>\n\n\n\n<p>Recuerda que para disfrutar de estos beneficios, necesitas el <strong><a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">rollo de papel térmico </a></strong>premium y para tu suerte, Tecnología Plus cuenta con una excelente opción<strong> </strong>de este material a un precio accesible para que tengas el mejor<strong> papel termico</strong> para tus dispensadores de turnos.<br><br><a href=\"https://tecnologiaplus.com/contacto/\">Contáctanos hoy</a> y descubre cómo podemos ayudarte a llevar tu gestión de filas al siguiente nivel.</p>\n",
+        "template_name": "/rollos-de-papel-termico/secreto-del-exito-en-gestion-de-turnos.html",
+    },
+    "excerpt": {
+        "rendered": "<p>Los dispensadores de turnos en Medellín se han popularizado en los últimos años para facilitar la gestión de filas en las empresas. Sin embargo, también se ha popularizado el uso de Rollos de papel térmico en los dispensadores de turnos, por una amplia variedad de motivos, desde la economía, hasta la facilidad de uso y&#8230;</p>\n",
+    },
+    "images": [
+        "website-v2/blog/rollos-de-papel-termico/secreto-del-exito-en-gestion-de-turnos/b1i3dckri6zwvzulzbet"
+    ],
+    "categories": [
+        categories.ROLLOS_DE_PAPEL_TERMICO.category_key
+    ],
+},
+/*
+{
+    "id": ,
+    "date": "",
+    "modified": "",
+    "slug": "",
+    "current_link": `/blog${categories.ROLLOS_DE_PAPEL_TERMICO.url_category}/`,
+    "previous_link": [
+        "/"
+    ],
+    "metadata": {
+        "title": "",
+        "description": "",
+        "keywords": [
+            "",
+        ]
+    },
+    "title": {
+        "rendered": ""
+    },
+    "content": {
+        "rendered": "",
+        "template_name": "/rollos-de-papel-termico/",
+    },
+    "excerpt": {
+        "rendered": "",
+    },
+    "images": [
+        ""
+    ],
+    "categories": [
+        categories.ROLLOS_DE_PAPEL_TERMICO.category_key
+    ],
+},
+*/
+]
+
 export default [
   ...llamadoresDeEnfermeriaPosts,
   ...llamadoresDeMeserosPosts,
@@ -1800,5 +1871,6 @@ export default [
   ...turneroTurnoexpressPosts,
   ...turneroTurnomasterPosts,
   ...dispensadorDeTicketsPosts,
-  ...rollosDeFichosParaTurnos
+  ...rollosDeFichosParaTurnos,
+  ...rollosDePapelTermico
 ]
