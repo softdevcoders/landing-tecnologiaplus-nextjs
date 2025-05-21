@@ -5,7 +5,6 @@ import "@/components/layout/header/Header.module.scss";
 
 // Components
 import SchemaOrg from "../components/SchemaOrg";
-import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
 import { Bebas_Neue, Montserrat } from 'next/font/google'
 import getMetadata from "@/request/server/metadata/get-metadata";
@@ -89,9 +88,7 @@ export default function RootLayout({ children }) {
         <SchemaOrg />
       </head>
       <body>
-        <LayoutWrapper>
-          {children}
-        </LayoutWrapper>
+        {children}
       </body>
     </html>
   );
