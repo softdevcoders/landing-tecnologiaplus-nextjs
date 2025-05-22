@@ -18,6 +18,7 @@ import { metadata as calificadorDeServicioAlClienteOpinamasterLanding } from '@/
 import { metadata as llamadoDeEnfermeriaCuidamasterLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/root';
 import { metadata as localizadoresParaRestaurantesLanding } from '@/data/metadata/data/landings/localizadores-para-restaurantes/root';
 import { metadata as rollosDeFichosParaTurnosLanding } from '@/data/metadata/data/landings/rollos-de-fichos-para-turnos/root';
+import { metadata as dispensadorDeTicketsLanding } from '@/data/metadata/data/landings/dispensador-de-tickets/root';
   
 export default {  
   default: defaultMetadata,
@@ -55,5 +56,8 @@ export default {
     'rollos-de-fichos-para-turnos': {
       root: rollosDeFichosParaTurnosLanding,
     },
+    'dispensador-de-tickets': {
+      root: dispensadorDeTicketsLanding,
+    }
   }
 };
