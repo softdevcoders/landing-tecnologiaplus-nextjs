@@ -19,6 +19,7 @@ import { metadata as llamadoDeEnfermeriaCuidamasterLanding } from '@/data/metada
 import { metadata as localizadoresParaRestaurantesLanding } from '@/data/metadata/data/landings/localizadores-para-restaurantes/root';
 import { metadata as rollosDeFichosParaTurnosLanding } from '@/data/metadata/data/landings/rollos-de-fichos-para-turnos/root';
 import { metadata as dispensadorDeTicketsLanding } from '@/data/metadata/data/landings/dispensador-de-tickets/root';
+import { metadata as llamadoresDeMeserosLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/root';
   
 export default {  
   default: defaultMetadata,
@@ -58,6 +59,9 @@ export default {
     },
     'dispensador-de-tickets': {
       root: dispensadorDeTicketsLanding,
+    },
+    'llamadores-de-meseros': {
+      root: llamadoresDeMeserosLanding,
     }
   }
 };
