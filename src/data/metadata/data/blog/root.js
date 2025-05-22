@@ -1,5 +1,5 @@
 import { routes } from "@/config/routes";
-import { LOGO_METADATA } from "@/data/metadata/config";
+import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 
 const title = "Blog - Tecnología Plus";
 const description = "Somos fabricantes. Descubre en nuestro blog cómo la tecnología mejora la experiencia de los usuarios en comercios. ¡Innovación para un mejor servicio!";
@@ -12,6 +12,7 @@ export const metadata = {
   },
   description: description,
   keywords: keywords,
+  robots: ROBOTS_CONFIG,
   openGraph: {
     title: {
       absolute: title,

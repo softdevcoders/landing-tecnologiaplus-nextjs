@@ -13,7 +13,6 @@ export async function generateMetadata() {
   return metadata;
 }
 
-
 // Main landing page component
 export default function RollosTermicosLanding() {
   return (

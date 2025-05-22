@@ -14,6 +14,7 @@ import { metadata as contact } from '@/data/metadata/data/contacto';
 import { metadata as home } from '@/data/metadata/data/home';
 import { metadata as turneroTurnoexpressLanding } from '@/data/metadata/data/landings/turnero-turnoexpress/root';
 import { metadata as rollosDePapelTermicoLanding } from '@/data/metadata/data/landings/rollos-de-papel-termico/root';
+import { metadata as calificadorDeServicioAlClienteOpinamasterLanding } from '@/data/metadata/data/landings/calificador-de-servicio-al-cliente-opinamaster/root';
 
 export default {  
   default: defaultMetadata,
@@ -38,6 +39,9 @@ export default {
     },
     'rollos-de-papel-termico': {
       root: rollosDePapelTermicoLanding,
+    },
+    'calificador-de-servicio-al-cliente-opinamaster': {
+      root: calificadorDeServicioAlClienteOpinamasterLanding,
     },
   }
 };

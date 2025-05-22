@@ -1,5 +1,5 @@
 import { routes } from "@/config/routes";
-import { LOGO_METADATA } from "@/data/metadata/config";
+import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 
 const title = "Turnero Digital: Agiliza y organiza las filas en tu negocio.";
 const description = "Turnero digital: Somos fabricantes. Acelera la atención al cliente y moderniza tu negocio. ¡Solicita una asesoria ahora!";
@@ -12,6 +12,7 @@ export const metadata = {
   },
   description: description,
   keywords: keywords,
+  robots: ROBOTS_CONFIG,
   openGraph: {
     title: {
       absolute: title,

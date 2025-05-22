@@ -1,5 +1,5 @@
 import { routes } from "@/config/routes";
-import { LOGO_METADATA } from "@/data/metadata/config";
+import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 
 const title = "Rollos Térmicos: Somos fabricantes de alta calidad";
 const description = "Rollos de papel Térmico, somos fabricantes de alta calidad, durabilidad y precios bajos, cuidando tu impresora termica. ¡Compra ahora en Tecnología Plus!";
@@ -12,6 +12,7 @@ export const metadata = {
   },
   description: description,
   keywords: keywords,
+  robots: ROBOTS_CONFIG,
   openGraph: {
     title: {
       absolute: title,

@@ -1,76 +1,49 @@
-import { LOGO_METADATA } from "@/data/metadata/config";
+import { routes } from "@/config/routes";
+import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
+
+const title = "Sistemas innovadores para agilizar y potenciar la atención al cliente";
+const description = "Lleva tu negocio al siguiente nivel, en Tecnología Plus somos expertos en sistemas para agilizar y pontenciar el servicio al cliente ¡Contactanos ahora!";
+const keywords = ["Tecnología Plus"];
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.home.url}`;
 
 export const metadata = {
+  title: {
+    absolute: title,
+  },
+  description: description,
+  keywords: keywords,
+  robots: ROBOTS_CONFIG,
+  openGraph: {
     title: {
-      default: "Tecnología Plus - Sistemas de Turnos y Llamadores de Meseros",
+      absolute: title,
     },
-    description:
-      "Soluciones tecnológicas profesionales: sistemas de turnos, llamadores de meseros y localizadores para mejorar la eficiencia y experiencia en su negocio",
-    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
-    keywords: [
-      "sistemas de turnos",
-      "llamador de meseros",
-      "localizadores",
-      "tecnología para negocios",
-      "dispositivos para restaurantes",
-    ],
-    alternates: {
-      canonical: "/",
-      languages: {
-        "es-ES": "/",
-      },
+    description: description,
+    url: url,
+    siteName: "Tecnología Plus",
+    locale: "es_ES",
+    type: "website",
+    images: [{
+      url: LOGO_METADATA,
+      width: 192,
+      height: 192,
+      alt: "Logo de Tecnología Plus",
+    }],
+  },
+  twitter: {
+    title: {
+      absolute: title,
     },
-    robots: {
-      index: false,
-      follow: false,
-      googleBot: {
-        index: false,
-        follow: false,
-        "max-image-preview": "none",
-        "max-video-preview": -1,
-        "max-snippet": -1,
-      },
-    },
-    openGraph: {
-      title: {
-        default: "Tecnología Plus - Sistemas para Mejorar su Negocio",
-      },
-      description:
-        "Soluciones tecnológicas profesionales: sistemas de turnos, llamadores de meseros y localizadores para mejorar la eficiencia de su negocio",
-      url: process.env.NEXT_PUBLIC_BASE_URL,
-      siteName: "Tecnología Plus",
-      locale: "es_ES",
-      type: "website",
-      images: [{
-        url: LOGO_METADATA,
-        width: 192,
-        height: 192,
-        alt: "Tecnología Plus - Soluciones tecnológicas para su negocio",
-      }],
-    },
-    twitter: {
-      card: "summary",
-      title: {
-        default: "Tecnología Plus - Sistemas para Mejorar su Negocio",
-      },
-      description:
-        "Soluciones tecnológicas profesionales: sistemas de turnos, llamadores de meseros y localizadores",
-      images: [LOGO_METADATA],
-    },
-    icons: {
-      icon: [
-        { url: "/favicon.ico", type: "image/x-icon" },
-        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-        { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-        { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
-      ],
-      apple: "/apple-touch-icon.png",
-    },
-    // verification: {
-    //   google: "your-google-site-verification",
-    // },
-    other: {
-      "msapplication-TileImage": "/mstile-270x270.png",
-    },
-  };
+    description: description,
+    siteName: "Tecnología Plus",
+    url: url,
+    locale: "es_ES",
+    type: "website",
+    images: [{
+      url: LOGO_METADATA,
+      width: 192,
+      height: 192,
+      alt: "Logo de Tecnología Plus",
+    }],
+    card: "summary",
+  },
+};
