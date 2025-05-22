@@ -22,7 +22,7 @@ import { metadata as dispensadorDeTicketsLanding } from '@/data/metadata/data/la
 import { metadata as llamadoresDeMeserosLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/root';
 import { metadata as sistemasDeTurnosTurnomasterLanding } from '@/data/metadata/data/landings/sistema-de-turnos-turnomaster/root';
 import { metadata as encuestaVirtualOpinamasterLanding } from '@/data/metadata/data/landings/encuesta-virtual-opinamaster/root';
-
+  
 export default {  
   default: defaultMetadata,
   home,
@@ -31,14 +31,14 @@ export default {
     root: blog,
     'localizadores-para-restaurantes': localizadoresParaRestaurantes,
     'llamadores-de-meseros': llamadoresDeMeseros,
-    'llamado-de-enfermeria-cuidamaster': llamadoDeEnfermeriaCuidamaster,
-    'sistema-de-turnos-turnomaster': sistemasDeTurnosTurnomaster,
-    'turnero-turnoexpress': turneroTurnoexpress,
+    'llamado-de-enfermeria': llamadoDeEnfermeriaCuidamaster,
+    'sistema-de-turnos': sistemasDeTurnosTurnomaster,
+    'turnero': turneroTurnoexpress,
     'dispensador-de-tickets': dispensadorDeTickets,
     'rollos-de-fichos-para-turnos': rollosDeFichosParaTurnos,
     'rollos-de-papel-termico': rollosDePapelTermico,
-    'calificador-de-servicio-al-cliente-opinamaster': calificadorDeServicioAlClienteOpinamaster,
-    'encuesta-virtual-opinamaster': encuestaVirtualOpinamaster
+    'calificador-de-servicio-al-cliente': calificadorDeServicioAlClienteOpinamaster,
+    'encuesta-virtual': encuestaVirtualOpinamaster
   },
   landings: {
     'turnero-turnoexpress': {

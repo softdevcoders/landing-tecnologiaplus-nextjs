@@ -1,5 +1,6 @@
 import { getPost } from "@/request/server/posts/get-post";
 import PostView from "@/sections/blog/views/posts/post-view";
+import { ROBOTS_CONFIG } from "@/data/metadata/config";
 
 // // Page Metadata
 export async function generateMetadata({ params }) {
@@ -16,6 +17,7 @@ export async function generateMetadata({ params }) {
     },
     keywords: post?.metadata?.keywords,
     description: post?.metadata?.description,
+    robots: ROBOTS_CONFIG,
     openGraph: {
       title: {
         absolute: post?.metadata?.title
