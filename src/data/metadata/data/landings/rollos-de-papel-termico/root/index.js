@@ -13,6 +13,9 @@ export const metadata = {
   description: description,
   keywords: keywords,
   robots: ROBOTS_CONFIG,
+  alternates: {
+    canonical: url,
+  },
   openGraph: {
     title: {
       absolute: title,

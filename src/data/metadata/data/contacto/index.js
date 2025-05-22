@@ -10,6 +10,9 @@ export const metadata = {
   title: {
     absolute: title,
   },
+  alternates: {
+    canonical: url,
+  },
   description: description,
   keywords: keywords,
   robots: ROBOTS_CONFIG,

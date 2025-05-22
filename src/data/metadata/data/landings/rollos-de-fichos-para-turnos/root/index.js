@@ -1,10 +1,10 @@
 import { routes } from "@/config/routes";
 import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 
-const title = "Llamado de Enfermería: Hacemos fácil la atención de tus pacientes";
-const description = "Sistema de llamado de enfermería, somos fabricantes de bajo costo para modernizar y facilitar la atención de pacientes en el sector salud y geriatrico.";
-const keywords = ["Llamado de Enfermería"];
-const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.landings.llamadoDeEnfermeriaCuidamaster.url}`;
+const title = "Fichos para Turnos: Fabricantes de calidad garantizada";
+const description = "Somos fabricantes de fichos para turnos de alta calidad. Compra directo de fábrica con entrega rápida. ¡Cotiza ahora y recibe asesoría personalizada!";
+const keywords = ["Fichos para Turnos"];
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.landings.rollosDeFichosParaTurnos.url}`;
 
 export const metadata = {
   title: {

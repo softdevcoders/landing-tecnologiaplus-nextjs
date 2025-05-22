@@ -17,7 +17,8 @@ import { metadata as rollosDePapelTermicoLanding } from '@/data/metadata/data/la
 import { metadata as calificadorDeServicioAlClienteOpinamasterLanding } from '@/data/metadata/data/landings/calificador-de-servicio-al-cliente-opinamaster/root';
 import { metadata as llamadoDeEnfermeriaCuidamasterLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/root';
 import { metadata as localizadoresParaRestaurantesLanding } from '@/data/metadata/data/landings/localizadores-para-restaurantes/root';
-
+import { metadata as rollosDeFichosParaTurnosLanding } from '@/data/metadata/data/landings/rollos-de-fichos-para-turnos/root';
+  
 export default {  
   default: defaultMetadata,
   home,
@@ -50,6 +51,9 @@ export default {
     },
     'localizadores-para-restaurantes': {
       root: localizadoresParaRestaurantesLanding,
+    },
+    'rollos-de-fichos-para-turnos': {
+      root: rollosDeFichosParaTurnosLanding,
     },
   }
 };
