@@ -20,6 +20,7 @@ import { metadata as localizadoresParaRestaurantesLanding } from '@/data/metadat
 import { metadata as rollosDeFichosParaTurnosLanding } from '@/data/metadata/data/landings/rollos-de-fichos-para-turnos/root';
 import { metadata as dispensadorDeTicketsLanding } from '@/data/metadata/data/landings/dispensador-de-tickets/root';
 import { metadata as llamadoresDeMeserosLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/root';
+import { metadata as sistemasDeTurnosTurnomasterLanding } from '@/data/metadata/data/landings/sistema-de-turnos-turnomaster/root';
   
 export default {  
   default: defaultMetadata,
@@ -62,6 +63,9 @@ export default {
     },
     'llamadores-de-meseros': {
       root: llamadoresDeMeserosLanding,
+    },
+    'sistema-de-turnos-turnomaster': {
+      root: sistemasDeTurnosTurnomasterLanding,
     }
   }
 };
