@@ -2,7 +2,6 @@ import { LOGO_METADATA } from "@/data/metadata/config";
 
 export const metadata = {
     title: {
-      template: "%s | Tecnología Plus",
       default: "Tecnología Plus - Sistemas de Turnos y Llamadores de Meseros",
     },
     description:
@@ -34,7 +33,6 @@ export const metadata = {
     },
     openGraph: {
       title: {
-        template: "%s | Tecnología Plus",
         default: "Tecnología Plus - Sistemas para Mejorar su Negocio",
       },
       description:
@@ -53,7 +51,6 @@ export const metadata = {
     twitter: {
       card: "summary",
       title: {
-        template: "%s | Tecnología Plus",
         default: "Tecnología Plus - Sistemas para Mejorar su Negocio",
       },
       description:

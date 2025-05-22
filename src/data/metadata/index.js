@@ -10,9 +10,15 @@ import { metadata as rollosDeFichosParaTurnos } from '@/data/metadata/data/blog/
 import { metadata as rollosDePapelTermico } from '@/data/metadata/data/blog/rollos-de-papel-termico';
 import { metadata as sistemasDeTurnosTurnomaster } from '@/data/metadata/data/blog/sistema-de-turnos-turnomaster';
 import { metadata as turneroTurnoexpress } from '@/data/metadata/data/blog/turnero-turnoexpress';
+import { metadata as contact } from '@/data/metadata/data/contacto';
+import { metadata as home } from '@/data/metadata/data/home';
+import { metadata as turneroTurnoexpressLanding } from '@/data/metadata/data/landings/turnero-turnoexpress/root';
+import { metadata as rollosDePapelTermicoLanding } from '@/data/metadata/data/landings/rollos-de-papel-termico/root';
 
-export default {
+export default {  
   default: defaultMetadata,
+  home,
+  contact,
   blog: {
     root: blog,
     'localizadores-para-restaurantes': localizadoresParaRestaurantes,
@@ -25,5 +31,13 @@ export default {
     'rollos-de-papel-termico': rollosDePapelTermico,
     'calificador-de-servicio-al-cliente-opinamaster': calificadorDeServicioAlClienteOpinamaster,
     'encuesta-virtual-opinamaster': encuestaVirtualOpinamaster
+  },
+  landings: {
+    'turnero-turnoexpress': {
+      root: turneroTurnoexpressLanding,
+    },
+    'rollos-de-papel-termico': {
+      root: rollosDePapelTermicoLanding,
+    },
   }
 };

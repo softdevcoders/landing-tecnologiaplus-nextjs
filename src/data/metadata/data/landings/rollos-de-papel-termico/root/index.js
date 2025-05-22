@@ -1,10 +1,10 @@
 import { routes } from "@/config/routes";
 import { LOGO_METADATA } from "@/data/metadata/config";
 
-const title = "Blog - Tecnología Plus";
-const description = "Somos fabricantes. Descubre en nuestro blog cómo la tecnología mejora la experiencia de los usuarios en comercios. ¡Innovación para un mejor servicio!";
-const keywords = ["Blog"];
-const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.blog.url}`;
+const title = "Rollos Térmicos: Somos fabricantes de alta calidad";
+const description = "Rollos de papel Térmico, somos fabricantes de alta calidad, durabilidad y precios bajos, cuidando tu impresora termica. ¡Compra ahora en Tecnología Plus!";
+const keywords = ["Papél Térmico"];
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.landings.rollosDePapelTermico.url}`;
 
 export const metadata = {
   title: {

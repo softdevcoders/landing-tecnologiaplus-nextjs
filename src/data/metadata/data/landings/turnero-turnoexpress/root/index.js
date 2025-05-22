@@ -1,10 +1,10 @@
 import { routes } from "@/config/routes";
 import { LOGO_METADATA } from "@/data/metadata/config";
 
-const title = "Blog - Tecnología Plus";
-const description = "Somos fabricantes. Descubre en nuestro blog cómo la tecnología mejora la experiencia de los usuarios en comercios. ¡Innovación para un mejor servicio!";
-const keywords = ["Blog"];
-const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.blog.url}`;
+const title = "Turnero Digital: Agiliza y organiza las filas en tu negocio.";
+const description = "Turnero digital: Somos fabricantes. Acelera la atención al cliente y moderniza tu negocio. ¡Solicita una asesoria ahora!";
+const keywords = ["Turnero"];
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.landings.turneroTurnoexpress.url}`;
 
 export const metadata = {
   title: {
