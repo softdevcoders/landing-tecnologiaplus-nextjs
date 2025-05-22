@@ -4,7 +4,7 @@ import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 const title = "Rollos Térmicos: Somos fabricantes de alta calidad";
 const description = "Rollos de papel Térmico, somos fabricantes de alta calidad, durabilidad y precios bajos, cuidando tu impresora termica. ¡Compra ahora en Tecnología Plus!";
 const keywords = ["Papél Térmico"];
-const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.landings.rollosDePapelTermico.url}`;
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.rollosDePapelTermico.url}`;
 
 export const metadata = {
   title: {

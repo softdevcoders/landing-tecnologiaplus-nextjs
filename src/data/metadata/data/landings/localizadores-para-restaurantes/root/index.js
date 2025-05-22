@@ -4,7 +4,7 @@ import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 const title = "Localizadores para restaurantes: organiza y resalta tu marca";
 const description = "Somos fabricantes expertos en autoservicio, impulsa tu negocio con nuestros localizadores. ¡Solicita una asesoria ahora!";
 const keywords = ["Localizadores para Restaurantes"];
-const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.landings.localizadoresParaRestaurantes.url}`;
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.localizadoresParaRestaurantes.url}`;
 
 export const metadata = {
   title: {

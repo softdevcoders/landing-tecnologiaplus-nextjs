@@ -4,7 +4,7 @@ import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 const title = "Llamado de Enfermería: Hacemos fácil la atención de tus pacientes";
 const description = "Sistema de llamado de enfermería, somos fabricantes de bajo costo para modernizar y facilitar la atención de pacientes en el sector salud y geriatrico.";
 const keywords = ["Llamado de Enfermería"];
-const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.landings.llamadoDeEnfermeriaCuidamaster.url}`;
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.llamadoDeEnfermeriaCuidamaster.url}`;
 
 export const metadata = {
   title: {

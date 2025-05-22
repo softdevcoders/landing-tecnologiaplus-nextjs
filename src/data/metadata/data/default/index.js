@@ -4,7 +4,7 @@ import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 const title = "Sistemas innovadores para agilizar y potenciar la atención al cliente";
 const description = "Lleva tu negocio al siguiente nivel, en Tecnología Plus somos expertos en sistemas para agilizar y pontenciar el servicio al cliente ¡Contactanos ahora!";
 const keywords = ["Tecnología Plus"];
-const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.home.url}`;
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.home.url}`;
 
 export const metadata = {
   title: {

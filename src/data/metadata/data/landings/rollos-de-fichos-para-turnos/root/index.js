@@ -4,7 +4,7 @@ import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 const title = "Fichos para Turnos: Fabricantes de calidad garantizada";
 const description = "Somos fabricantes de fichos para turnos de alta calidad. Compra directo de fábrica con entrega rápida. ¡Cotiza ahora y recibe asesoría personalizada!";
 const keywords = ["Fichos para Turnos"];
-const url = `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.landings.rollosDeFichosParaTurnos.url}`;
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.rollosDeFichosParaTurnos.url}`;
 
 export const metadata = {
   title: {
