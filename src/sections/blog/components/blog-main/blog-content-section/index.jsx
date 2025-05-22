@@ -1,10 +1,12 @@
 import Card from "@/sections/blog/components/card";
 import style from "./blog-content-section.module.scss";
 import Link from "next/link";
-import { categories } from "@/config/categories";
 import blogs from "@/data/blogs";
+import { routes } from "@/config/routes";
 
 const BlogContentSection = ({ posts, pagination }) => {
+  const categories = routes.blog.children;
+
   return (
     <div className={style.blogContent__container}>
       <div className={style.blogContent__content}>
@@ -29,10 +31,10 @@ const BlogContentSection = ({ posts, pagination }) => {
       <div className={style.blogContent__categories}>
         <h2 className={style.blogContent__categoriesTitle}>Categorías</h2>
         <ul className={style.blogContent__categoriesList}>
-          {Object.keys(categories).map((category) => (
+          {Object.keys(routes.blog.children).map((category) => (
             <li key={categories[category].category_key} className={style.blogContent__categoriesItem}>
-              <Link href={`/blog${categories[category].url_category}`} className={style.blogContent__categoriesLink}>
-                {`${categories[category].category_name} (${blogs.filter((post) => post.categories.includes(category)).length})`}
+              <Link href={categories[category].url} className={style.blogContent__categoriesLink}>
+                {`${categories[category].category_name} (${blogs.filter((post) => post.categories.includes(categories[category].category_key)).length})`}
               </Link>
             </li>
           ))}

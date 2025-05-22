@@ -1,5 +1,6 @@
 import { categories } from '@/config/categories'
+import { routes } from '@/config/routes'
 
 export const getCategories = () => {
-  return categories
+  return routes.blog.children
 }
