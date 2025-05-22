@@ -16,6 +16,7 @@ import { metadata as turneroTurnoexpressLanding } from '@/data/metadata/data/lan
 import { metadata as rollosDePapelTermicoLanding } from '@/data/metadata/data/landings/rollos-de-papel-termico/root';
 import { metadata as calificadorDeServicioAlClienteOpinamasterLanding } from '@/data/metadata/data/landings/calificador-de-servicio-al-cliente-opinamaster/root';
 import { metadata as llamadoDeEnfermeriaCuidamasterLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/root';
+import { metadata as localizadoresParaRestaurantesLanding } from '@/data/metadata/data/landings/localizadores-para-restaurantes/root';
 
 export default {  
   default: defaultMetadata,
@@ -46,6 +47,9 @@ export default {
     },
     'llamado-de-enfermeria-cuidamaster': {
       root: llamadoDeEnfermeriaCuidamasterLanding,
+    },
+    'localizadores-para-restaurantes': {
+      root: localizadoresParaRestaurantesLanding,
     },
   }
 };
