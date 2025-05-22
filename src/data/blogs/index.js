@@ -1,4 +1,5 @@
 import { categories } from "@/config/categories";
+import { routes } from "@/config/routes";
 
 
 const llamadoresDeEnfermeriaPosts = [
@@ -9,7 +10,7 @@ const llamadoresDeEnfermeriaPosts = [
     "previous_link": [
         "/llamado-de-enfermeria-como-mejorar-el-servicio-en-geriatricos"
     ],
-    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/como-mejorar-servicio-enfermeria-en-geriatricos`,
+    "current_link": `${routes.blog.children.llamadoDeEnfermeriaCuidamaster.url}/como-mejorar-servicio-enfermeria-en-geriatricos`,
     "title": {
         "rendered": "Cómo mejorar el servicio de enfermería en un hogar geriátrico o gerontológico"
     },
@@ -31,7 +32,7 @@ const llamadoresDeEnfermeriaPosts = [
         "v1747075097/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos/uoafg9o5tum5d0kfmc1s.jpg"
     ],
     "categories": [
-      categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,
+      routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key,
     ],
   },
   {
@@ -41,7 +42,7 @@ const llamadoresDeEnfermeriaPosts = [
     "preious_link": [
         "/por-que-usar-sistema-de-llamado-de-enfermeria"
     ],
-    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/por-que-usar-sistema-llamado-de-enfermeria`,
+    "current_link": `${routes.blog.children.llamadoDeEnfermeriaCuidamaster.url}/por-que-usar-sistema-llamado-de-enfermeria`,
     "title": {
         "rendered": "¿Por qué usar el Sistema de Llamado de Enfermería?"
     },
@@ -63,7 +64,7 @@ const llamadoresDeEnfermeriaPosts = [
         "rendered": "<p>Hace algunos años que se comenzó a implementar el sistema de llamado de enfermería en Colombia, una manera eficiente de atender las necesidades de los pacientes en clínicas, hogares geriátricos y gerontológicos, debido a las facilidades que ofrece tanto para las enfermeras, como para los pacientes. No por nada se han vuelto tendencia y una&#8230;</p>\n",
     },
     "categories": [
-        categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,
+        routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key,
     ],
   },
   {
@@ -73,7 +74,7 @@ const llamadoresDeEnfermeriaPosts = [
     "previous_link": [
         "/llamador-de-pacientes-conoce-los-beneficios-de-invertir-en-estos-sistemas"
     ],
-    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/beneficios-invertir-en-sistemas-de-llamador-de-pacientes`,
+    "current_link": `${routes.blog.children.llamadoDeEnfermeriaCuidamaster.url}/beneficios-invertir-en-sistemas-de-llamador-de-pacientes`,
     "metadata": {
         "title": "Llamador de pacientes: Beneficios de estos sistemas",
         "description": "Mejora la rentabilidad y eficiencia de tu clínica u hospital con un sistema de llamador de pacientes. ¡Aumenta tu productividad hoy mismo!",
@@ -95,7 +96,7 @@ const llamadoresDeEnfermeriaPosts = [
         "v1747075100/website-v2/blog/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes/fsmtqpuetpamgbb1pfgu.jpg"
     ],
     "categories": [
-        categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,
+        routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key,
     ],
   },
   {
@@ -105,7 +106,7 @@ const llamadoresDeEnfermeriaPosts = [
     "previous_link": [
         "/timbre-de-llamado-de-enfermeria-mejora-la-experiencia-del-paciente"
     ],
-    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/mejora-experiencia-paciente-con-timbre-llamado-enfermeria`,
+    "current_link": `${routes.blog.children.llamadoDeEnfermeriaCuidamaster.url}/mejora-experiencia-paciente-con-timbre-llamado-enfermeria`,
     "metadata": {
         "title": "Timbre de Llamado de Enfermería: Mejora la atención",
         "description": "Descubre cómo un Timbre de Llamado de Enfermería mejora la atención, optimiza tiempos y reduce el estrés del paciente. Asesoría personalizada",
@@ -124,7 +125,7 @@ const llamadoresDeEnfermeriaPosts = [
         "rendered": "<p>El Estrés del Paciente y la Importancia de una Comunicación Rápida&nbsp; Cuando un paciente ingresa a un hospital o clínica, su estado físico y emocional puede verse afectado por múltiples factores: el dolor, la incertidumbre sobre su condición, la preocupación por los resultados médicos y el ambiente hospitalario en sí mismo. En estos momentos, sentirse&#8230;</p>\n",
     },
     "categories": [
-      categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key
+      routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key
     ],
     "images": [
         "v1747075103/website-v2/blog/llamado-de-enfermeria-cuidamaster/mejora-experiencia-paciente-con-timbre-llamado-enfermeria/tsiffdejmcbp9c833dhe.png"
@@ -137,7 +138,7 @@ const llamadoresDeEnfermeriaPosts = [
     "previous_link": [
         "/llamadores-de-enfermeria-como-transforman-los-hospitales"
     ],
-    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/como-llamadores-enfermeria-transforman-hospitales`,
+    "current_link": `${routes.blog.children.llamadoDeEnfermeriaCuidamaster.url}/como-llamadores-enfermeria-transforman-hospitales`,
     "metadata": {
         "title": "Llamadores de Enfermería: Cómo transforman los hospitales",
         "description": "Descubre cómo los llamadores de enfermería mejoran la atención, optimizan tiempos y transforman la experiencia hospitalaria.",
@@ -159,7 +160,7 @@ const llamadoresDeEnfermeriaPosts = [
         "v1747075099/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-llamadores-enfermeria-transforman-hospitales/gms90lhxpci31d37ffa6.png"
     ],
     "categories": [
-      categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key
+      routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key
     ],
   },
   {
@@ -168,7 +169,7 @@ const llamadoresDeEnfermeriaPosts = [
     "slug": "timbre-para-cama-hospital-atencion-rapida-paciente",
     "status": "publish",
     "type": "post",
-    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/timbre-para-cama-hospital-atencion-rapida-paciente`,
+    "current_link": `${routes.blog.children.llamadoDeEnfermeriaCuidamaster.url}/timbre-para-cama-hospital-atencion-rapida-paciente`,
     "previous_link": [
         "/timbre-para-cama-de-hospital-atencion-rapida-y-eficaz"
     ],
@@ -193,14 +194,14 @@ const llamadoresDeEnfermeriaPosts = [
         "v1747075104/website-v2/blog/llamado-de-enfermeria-cuidamaster/timbre-para-cama-hospital-atencion-rapida-paciente/bmyshz1lqrxmoj2m9kon.png"
     ],
     "categories": [
-      categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key
+      routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key
     ],
   },
   {
     "id": 10546,
     "date": "2025-03-12T14:43:08",
     "slug": "boton-para-llamar-enfermera-facilita-labor-personal",
-    "current_link": `/blog${categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.url_category}/boton-para-llamar-enfermera-facilita-labor-personal`,
+    "current_link": `${routes.blog.children.llamadoDeEnfermeriaCuidamaster.url}/boton-para-llamar-enfermera-facilita-labor-personal`,
     
     "previous_link": [
         "/boton-para-llamar-a-enfermera-como-facilita-la-labor-del-personal-de-enfermeria"
@@ -226,7 +227,7 @@ const llamadoresDeEnfermeriaPosts = [
         "website-v2/blog/llamado-de-enfermeria-cuidamaster/boton-para-llamar-enfermera-facilita-labor-personal/yk9qvs37vgvhe0gr6ir2"
     ],
     "categories": [
-      categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key
+      routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key
     ],
   },
 ];
@@ -236,7 +237,7 @@ const llamadoresDeMeserosPosts = [
     "id": 10621,
     "date": "2025-03-26T10:56:03",
     "slug": "como-reducir-tiempos-espera-restaurante",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/como-reducir-tiempos-espera-restaurante`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/como-reducir-tiempos-espera-restaurante`,
     "previous_link": [
         "/llamadores-de-meseros-como-reducir-los-tiempos-de-espera"
     ],
@@ -261,7 +262,7 @@ const llamadoresDeMeserosPosts = [
         "v1747157483/website-v2/blog/llamadores-de-meseros/como-reducir-tiempos-espera-restaurante/aiutpy8klvv69ihivj5b.png"
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.category_key
     ],
   },
   {
@@ -270,7 +271,7 @@ const llamadoresDeMeserosPosts = [
     "slug": "implementar-timbres-de-mesa-para-restaurante",
     "status": "publish",
     "type": "post",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/implementar-timbres-de-mesa-para-restaurante`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/implementar-timbres-de-mesa-para-restaurante`,
     "previous_link": [
         "/timbres-de-mesa-para-tu-restaurante"
     ],
@@ -295,14 +296,14 @@ const llamadoresDeMeserosPosts = [
         "v1747157483/website-v2/blog/llamadores-de-meseros/implementar-timbres-de-mesa-para-restaurante/suiuoact7fezz12zadwq.jpg"
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.category_key
     ],
   },
   {
     "id": 10393,
     "date": "2025-02-04T13:30:09",
     "slug": "llamadores-mesa-tecnologia-revoluciona-atencion-al-cliente",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/llamadores-mesa-tecnologia-revoluciona-atencion-al-cliente`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/llamadores-mesa-tecnologia-revoluciona-atencion-al-cliente`,
     "previous_link": [
         "/llamadores-de-mesa-la-tecnologia-que-revoluciona-la-atecion-al-cliente"
     ],
@@ -327,14 +328,14 @@ const llamadoresDeMeserosPosts = [
         "v1747157481/website-v2/blog/llamadores-de-meseros/llamadores-mesa-tecnologia-revoluciona-atencion-al-cliente/iavdhcw1p10bk3wtigqo.jpg"
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.category_key
     ],
   },
   {
     "id": 10386,
     "date": "2025-02-04T13:49:04",
     "slug": "reducir-tiempo-de-espera-mejora-satisfaccion-del-cliente",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/reducir-tiempo-de-espera-mejora-satisfaccion-del-cliente`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/reducir-tiempo-de-espera-mejora-satisfaccion-del-cliente`,
     "previous_link": [
         "/llamador-de-meseros-mejora-la-satisfaccion-del-cliente/"
     ],
@@ -359,14 +360,14 @@ const llamadoresDeMeserosPosts = [
         "v1747157482/website-v2/blog/llamadores-de-meseros/reducir-tiempo-de-espera-mejora-satisfaccion-del-cliente/pvi5tnbibi4x687qtb7f.jpg"
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.category_key
     ],
   },
   {
     "id": 10367,
     "date": "2025-02-04T13:49:04",
     "slug": "aumenta-propinas-llamadores-de-meseros-en-restaurantes",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/aumenta-propinas-llamadores-de-meseros-en-restaurantes`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/aumenta-propinas-llamadores-de-meseros-en-restaurantes`,
     
     "previous_link": [
         "/aumenta-las-propinas-con-llamadores-de-meseros"
@@ -392,14 +393,14 @@ const llamadoresDeMeserosPosts = [
         "v1747157482/website-v2/blog/llamadores-de-meseros/aumenta-propinas-llamadores-de-meseros-en-restaurantes/nakufcgzvecdp035txld.jpg"
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.category_key
     ],
   },
   {
     "id": 3268,
     "date": "2025-02-04T13:49:04",
     "slug": "como-mejorar-administracion-restaurantes",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/como-mejorar-administracion-restaurantes`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/como-mejorar-administracion-restaurantes`,
     "previous_link": [
         "/como-mejorar-la-administracion-de-restaurantes"
     ],
@@ -424,14 +425,14 @@ const llamadoresDeMeserosPosts = [
         "v1747157481/website-v2/blog/llamadores-de-meseros/como-mejorar-administracion-restaurantes/ai7vfkwc9eykpenkmbx1.jpg"
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.category_key
     ],
   },
   {
     "id": 10408,
     "date": "2025-02-04T13:49:04",
     "slug": "transforma-atencion-cliente-llamadores-de-meseros",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/transforma-atencion-cliente-llamadores-de-meseros`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/transforma-atencion-cliente-llamadores-de-meseros`,
     "previous_link": [
         "/mejorar-servicio-restaurante"
     ],
@@ -456,14 +457,14 @@ const llamadoresDeMeserosPosts = [
         "v1747157482/website-v2/blog/llamadores-de-meseros/transforma-atencion-cliente-llamadores-de-meseros/axpan0mvlx8uvnpjojqh.jpg"
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.category_key
     ],
   },
   {
     "id": 3251,
     "date": "2023-07-15T10:37:00",
     "slug": "como-mejorar-servicio-restaurante",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/como-mejorar-servicio-restaurante`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/como-mejorar-servicio-restaurante`,
     "previous_link": [
         "/timbres-de-mesa-para-tu-restaurante"
     ],
@@ -488,14 +489,14 @@ const llamadoresDeMeserosPosts = [
         "v1747157481/website-v2/blog/llamadores-de-meseros/como-mejorar-servicio-restaurante/l699mlifpw0p2rtshopf.jpg"
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.category_key
     ],
   },
   {
     "id": 8574,
     "date": "2023-05-28T12:11:00",
     "slug": "mejorar-atencion-gimnasios-llamador-entrenadores",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/mejorar-atencion-gimnasios-llamador-entrenadores`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/mejorar-atencion-gimnasios-llamador-entrenadores`,
     "previous_link": [
         "/mejora-la-atencion-en-los-gimnasios-a-traves-del-llamador-de-entrenadores"
     ],
@@ -520,14 +521,14 @@ const llamadoresDeMeserosPosts = [
         "v1747157483/website-v2/blog/llamadores-de-meseros/mejorar-atencion-gimnasios-llamador-entrenadores/cji9wlpmcig6bsoxoapl.jpg"
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.category_key
     ],
   },
   {
     "id": 10358,
     "date": "2025-02-04T08:58:57",
     "slug": "llamadores-meseros-esenciales-elevar-nivel-restaurante",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/llamadores-meseros-esenciales-elevar-nivel-restaurante`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/llamadores-meseros-esenciales-elevar-nivel-restaurante`,
     "previous_link": [
         "/por-que-los-llamadores-de-meseros-son-claves-para-tu-restaurante"
     ],
@@ -552,14 +553,14 @@ const llamadoresDeMeserosPosts = [
         "v1747157482/website-v2/blog/llamadores-de-meseros/llamadores-meseros-esenciales-elevar-nivel-restaurante/ukbqtenmdkg9skitc8jt.jpg"
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.category_key
     ],
   },
   {
     "id": 10150,
     "date": "2024-07-27T16:22:02",
     "slug": "llamador-de-meseros-realmente-necesario",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/llamador-de-meseros-realmente-necesario`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/llamador-de-meseros-realmente-necesario`,
     "previous_link": [
         "/llamador-de-meseros-es-realmente-necesario"
     ],
@@ -584,7 +585,7 @@ const llamadoresDeMeserosPosts = [
         "v1747157480/website-v2/blog/llamadores-de-meseros/llamador-de-meseros-realmente-necesario/pqyz7gyor9jska8me88f.jpg"
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.category_key
     ],
   },
 /*
@@ -592,7 +593,7 @@ const llamadoresDeMeserosPosts = [
     "id": 10402,
     "date": "2025-02-04T13:49:04",
     "slug": "",
-    "current_link": `/blog${categories.LLAMADORES_DE_MESEROS.url_category}/como-mejorar-servicio-enfermeria-en-geriatricos`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/como-mejorar-servicio-enfermeria-en-geriatricos`,
     "previous_link": [
         "/timbres-de-mesa-para-tu-restaurante"
     ],
@@ -617,7 +618,7 @@ const llamadoresDeMeserosPosts = [
         ""
     ],
     "categories": [
-      categories.LLAMADORES_DE_MESEROS.category_key
+      routes.blog.children.llamadoresDeMeseros.url
     ],
   },
 */
@@ -628,7 +629,7 @@ const localizadoresParaRestaurantesPosts = [
     "id": 9276,
     "date": "2023-06-28T09:09:36",
     "slug": "autoservicio-restaurante-8-infaltables",
-    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/autoservicio-restaurante-8-infaltables`,
+    "current_link": `${routes.blog.children.localizadoresParaRestaurantes.url}/autoservicio-restaurante-8-infaltables`,
     "previous_link": [
         "/8-cosas-que-no-pueden-faltar-en-un-restaurante-autoservicio"
     ],
@@ -653,14 +654,14 @@ const localizadoresParaRestaurantesPosts = [
         "v1747157484/website-v2/blog/localizadores-para-restaurantes/autoservicio-restaurante-8-infaltables/shwocfd5yexl6prratf4.jpg"
     ],
     "categories": [
-      categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
+      routes.blog.children.localizadoresParaRestaurantes.category_key
     ],
   },
   {
     "id": 10197,
     "date": "2024-08-27T15:04:51",
     "slug": "avisadores-clientes-restaurante-autoservicio",
-    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/avisadores-clientes-restaurante-autoservicio`,
+    "current_link": `${routes.blog.children.localizadoresParaRestaurantes.url}/avisadores-clientes-restaurante-autoservicio`,
     "previous_link": [
         "/avisadores-de-clientes-tecnologia-para-restaurantes-autoservicio"
     ],
@@ -685,14 +686,14 @@ const localizadoresParaRestaurantesPosts = [
         "v1747157485/website-v2/blog/localizadores-para-restaurantes/avisadores-clientes-restaurante-autoservicio/iv5xyyaht7ps7rxvdfw1.jpg"
     ],
     "categories": [
-      categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
+      routes.blog.children.localizadoresParaRestaurantes.category_key
     ],
   },
   {
     "id": 9767,
     "date": "2024-05-08T17:58:32",
     "slug": "escoger-localizador-ideal-restaurante-bogota",
-    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/escoger-localizador-ideal-restaurante-bogota`,
+    "current_link": `${routes.blog.children.localizadoresParaRestaurantes.url}/escoger-localizador-ideal-restaurante-bogota`,
     "previous_link": [
         "/localizador-para-restaurantes-como-escoger-el-ideal-en-bogota"
     ],
@@ -717,14 +718,14 @@ const localizadoresParaRestaurantesPosts = [
         "v1747157484/website-v2/blog/localizadores-para-restaurantes/escoger-localizador-ideal-restaurante-bogota/zjmueqynef85vavenptj.jpg"
     ],
     "categories": [
-      categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
+      routes.blog.children.localizadoresParaRestaurantes.category_key
     ],
   },
   {
     "id": 9757,
     "date": "2024-04-23T09:07:29",
     "slug": "autoservicio-colombia-6-claves",
-    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/autoservicio-colombia-6-claves`,
+    "current_link": `${routes.blog.children.localizadoresParaRestaurantes.url}/autoservicio-colombia-6-claves`,
     "previous_link": [
         "/localizadores-para-restaurantes-de-autoservicio-en-colombia-6-puntos-claves"
     ],
@@ -749,14 +750,14 @@ const localizadoresParaRestaurantesPosts = [
         "v1747157486/website-v2/blog/localizadores-para-restaurantes/autoservicio-colombia-6-claves/xd13dwcmrrtrfewxp5oa.jpg"
     ],
     "categories": [
-      categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
+      routes.blog.children.localizadoresParaRestaurantes.category_key
     ],
   },
   {
     "id": 8592,
     "date": "2023-11-03T08:23:39",
     "slug": "localizadores-clientes-autoservicio",
-    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/localizadores-clientes-autoservicio`,
+    "current_link": `${routes.blog.children.localizadoresParaRestaurantes.url}/localizadores-clientes-autoservicio`,
     "previous_link": [
         "/localizadores-de-clientes-para-restaurantes-autoservicio"
     ],
@@ -781,14 +782,14 @@ const localizadoresParaRestaurantesPosts = [
         "v1747157485/website-v2/blog/localizadores-para-restaurantes/localizadores-clientes-autoservicio/kmqmrs58emlnndbelt7g.jpg"
     ],
     "categories": [
-      categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
+      routes.blog.children.localizadoresParaRestaurantes.category_key
     ],
   },
   {
     "id": 8596,
     "date": "2023-08-01T14:04:00",
     "slug": "como-elegir-localizadores-para-restaurantes",
-    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/como-elegir-localizadores-para-restaurantes`,
+    "current_link": `${routes.blog.children.localizadoresParaRestaurantes.url}/como-elegir-localizadores-para-restaurantes`,
     "previous_link": [
         "/como-elegir-localizadores-para-restaurante"
     ],
@@ -813,14 +814,14 @@ const localizadoresParaRestaurantesPosts = [
         "v1747157485/website-v2/blog/localizadores-para-restaurantes/como-elegir-localizadores-para-restaurantes/jiko3dmfxdau84gu4klp.jpg"
     ],
     "categories": [
-      categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
+      routes.blog.children.localizadoresParaRestaurantes.category_key
     ],
   },
   {
     "id": 8594,
     "date": "2023-07-07T14:01:00",
     "slug": "por-que-usar-localizadores-para-restaurantes",
-    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/por-que-usar-localizadores-para-restaurantes`,
+    "current_link": `${routes.blog.children.localizadoresParaRestaurantes.url}/por-que-usar-localizadores-para-restaurantes`,
     "previous_link": [
         "/por-que-usar-localizadores-para-restaurantes"
     ],
@@ -845,14 +846,14 @@ const localizadoresParaRestaurantesPosts = [
         "v1747157483/website-v2/blog/localizadores-para-restaurantes/por-que-usar-localizadores-para-restaurantes/uz3xvayckifntwzzehbp.jpg"
     ],
     "categories": [
-      categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
+      routes.blog.children.localizadoresParaRestaurantes.category_key
     ],
   },
   {
     "id": 10644,
     "date": "2025-05-13T09:45:42",
     "slug": "caos-zonas-de-comida",
-    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/caos-zonas-de-comida`,
+    "current_link": `${routes.blog.children.localizadoresParaRestaurantes.url}/caos-zonas-de-comida`,
     "previous_link": [
         "/localizadores-para-restaurantes-caos-zonas-de-comida"
     ],
@@ -877,14 +878,14 @@ const localizadoresParaRestaurantesPosts = [
         "v1747324697/website-v2/blog/localizadores-para-restaurantes/caos-zonas-de-comida/koguv8erlwueak1u0oo3.png"
     ],
     "categories": [
-      categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
+      routes.blog.children.localizadoresParaRestaurantes.category_key
     ],
   },
   {
     "id": 10653,
     "date": "2025-05-13T15:03:18",
     "slug": "secreto-espera-agradable",
-    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/secreto-espera-agradable`,
+    "current_link": `${routes.blog.children.localizadoresParaRestaurantes.url}/secreto-espera-agradable`,
     "previous_link": [
         "/localizadores-de-clientes-secreto-espera-agradable"
     ],
@@ -909,7 +910,7 @@ const localizadoresParaRestaurantesPosts = [
         "v1747324711/website-v2/blog/localizadores-para-restaurantes/secreto-espera-agradable/xskzmzz0vrbjr9nkakdb.jpg"
     ],
     "categories": [
-      categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
+      routes.blog.children.localizadoresParaRestaurantes.category_key
     ],
   },
 /*
@@ -917,7 +918,7 @@ const localizadoresParaRestaurantesPosts = [
     "id": ,
     "date": "",
     "slug": "",
-    "current_link": `/blog${categories.LOCALIZADORES_PARA_RESTAURANTES.url_category}/como-mejorar-servicio-enfermeria-en-geriatricos`,
+    "current_link": `${routes.blog.children.}/como-mejorar-servicio-enfermeria-en-geriatricos`,
     "previous_link": [
         "/timbres-de-mesa-para-tu-restaurante"
     ],
@@ -942,7 +943,7 @@ const localizadoresParaRestaurantesPosts = [
         ""
     ],
     "categories": [
-      categories.LOCALIZADORES_PARA_RESTAURANTES.category_key
+      routes.blog.children.localizadoresParaRestaurantes.url
     ],
   },
 */
@@ -954,7 +955,7 @@ const turneroTurnoexpressPosts = [
     "date": "2025-03-17T19:05:04",
     "modified": "2025-05-16T09:13:56",
     "slug": "moderniza-tu-atencion-cliente-restaurantes-autoservicio",
-    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/moderniza-tu-atencion-cliente-restaurantes-autoservicio`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/moderniza-tu-atencion-cliente-restaurantes-autoservicio`,
     "previous_link": [
         "/turneros-para-restaurantes-moderniza-tu-atencion-al-cliente"
     ],
@@ -979,7 +980,7 @@ const turneroTurnoexpressPosts = [
         "website-v2/blog/turnero-turnoexpress/moderniza-tu-atencion-cliente-restaurantes-autoservicio/lqnre9i35j1cm1vjlunj"
     ],
     "categories": [
-      categories.TURNERO_TURNOEXPRESS.category_key
+      routes.blog.children.turneroTurnoexpress.category_key
     ],
   },
   {
@@ -987,7 +988,7 @@ const turneroTurnoexpressPosts = [
     "date": "2025-03-17T18:43:25",
     "modified": "2025-05-16T09:14:51",
     "slug": "orden-en-salas-de-espera-digiturno",
-    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/orden-en-salas-de-espera-digiturno`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/orden-en-salas-de-espera-digiturno`,
     "previous_link": [
         "/turnero-digiturno-el-caos-en-las-salas-de-espera-y-la-necesidad-de-orden/"
     ],
@@ -1012,7 +1013,7 @@ const turneroTurnoexpressPosts = [
         "website-v2/blog/turnero-turnoexpress/orden-en-salas-de-espera-digiturno/gtrg6boc6zmpdgzfgiwc"
     ],
     "categories": [
-      categories.TURNERO_TURNOEXPRESS.category_key
+      routes.blog.children.turneroTurnoexpress.category_key
     ],
   },
   {
@@ -1020,7 +1021,7 @@ const turneroTurnoexpressPosts = [
     "date": "2025-03-13T14:40:43",
     "modified": "2025-05-16T09:18:17",
     "slug": "organizador-filas-digital-como-funciona",
-    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/organizador-filas-digital-como-funciona`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/organizador-filas-digital-como-funciona`,
     "previous_link": [
         "/organizador-de-filas-como-funciona-y-porque-deberias-usarlo"
     ],
@@ -1045,7 +1046,7 @@ const turneroTurnoexpressPosts = [
         "website-v2/blog/turnero-turnoexpress/organizador-filas-digital-como-funciona/jztble0ufairb6g7srom"
     ],
     "categories": [
-      categories.TURNERO_TURNOEXPRESS.category_key
+      routes.blog.children.turneroTurnoexpress.category_key
     ],
   },
   {
@@ -1053,7 +1054,7 @@ const turneroTurnoexpressPosts = [
     "date": "2023-06-28T09:19:52",
     "modified": "2025-05-16T09:39:34",
     "slug": "turneros-digitales-casos-exito-colombia",
-    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/turneros-digitales-casos-exito-colombia`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/turneros-digitales-casos-exito-colombia`,
     "previous_link": [
         "/casos-de-exito-de-turneros-en-colombia"
     ],
@@ -1078,7 +1079,7 @@ const turneroTurnoexpressPosts = [
         "website-v2/blog/turnero-turnoexpress/turneros-digitales-casos-exito-colombia/nwewzakbnogro4dbg79z"
     ],
     "categories": [
-      categories.TURNERO_TURNOEXPRESS.category_key
+      routes.blog.children.turneroTurnoexpress.category_key
     ],
   },
   {
@@ -1086,7 +1087,7 @@ const turneroTurnoexpressPosts = [
     "date": "2024-09-10T11:38:36",
     "modified": "2025-05-16T09:21:46",
     "slug": "gestor-turnos-clientes-digitales-manuales",
-    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/gestor-turnos-clientes-digitales-manuales`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/gestor-turnos-clientes-digitales-manuales`,
     "previous_link": [
         "/gestor-de-turnos-digital-o-manual"
     ],
@@ -1111,7 +1112,7 @@ const turneroTurnoexpressPosts = [
         "website-v2/blog/turnero-turnoexpress/gestor-turnos-clientes-digitales-manuales/jizumbpz22hdkeqrujio"
     ],
     "categories": [
-      categories.TURNERO_TURNOEXPRESS.category_key
+      routes.blog.children.turneroTurnoexpress.category_key
     ],
   },
 /*
@@ -1120,7 +1121,7 @@ const turneroTurnoexpressPosts = [
     "date": "",
     "modified": "",
     "slug": "",
-    "current_link": `/blog${categories.TURNERO_TURNOEXPRESS.url_category}/como-mejorar-servicio-enfermeria-en-geriatricos`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/como-mejorar-servicio-enfermeria-en-geriatricos`,
     "previous_link": [
         "/"
     ],
@@ -1145,7 +1146,7 @@ const turneroTurnoexpressPosts = [
         ""
     ],
     "categories": [
-      categories.TURNERO_TURNOEXPRESS.category_key
+      routes.blog.children.turneroTurnoexpress.category_key
     ],
   },
 */
@@ -1157,7 +1158,7 @@ const turneroTurnomasterPosts = [
     "date": "2024-07-16T09:45:45",
     "modified": "2025-05-16T09:28:10",
     "slug": "reducir-tiempo-espera-gestion-turnos",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/reducir-tiempo-espera-gestion-turnos`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/reducir-tiempo-espera-gestion-turnos`,
     "previous_link": [
         "/sistema-de-turnos-como-reducir-tiempo-de-espera-de-tus-clientes"
     ],
@@ -1182,7 +1183,7 @@ const turneroTurnomasterPosts = [
         "website-v2/blog/turnero-turnomaster/reducir-tiempo-espera-gestion-turnos/b2hncc0io0rvigtvues2"
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
   {
@@ -1190,7 +1191,7 @@ const turneroTurnomasterPosts = [
     "date": "2024-05-21T11:42:50",
     "modified": "2025-05-16T09:29:33",
     "slug": "sistema-espera-inteligente-como-funciona",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/sistema-espera-inteligente-como-funciona`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/sistema-espera-inteligente-como-funciona`,
     "previous_link": [
         "/que-es-un-sistema-de-espera-inteligente-y-como-funciona"
     ],
@@ -1215,7 +1216,7 @@ const turneroTurnomasterPosts = [
         "website-v2/blog/turnero-turnomaster/sistema-espera-inteligente-como-funciona/c1t4tln8da6rvvzi0l0z"
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
   {
@@ -1223,7 +1224,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-11-03T08:36:18",
     "modified": "2025-05-16T09:33:32",
     "slug": "mejor-sistema-turnos-inalambrico-drogueria",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/mejor-sistema-turnos-inalambrico-drogueria`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/mejor-sistema-turnos-inalambrico-drogueria`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/sistema-de-turnos-inalambrico-para-tu-drogueria"
     ],
@@ -1248,7 +1249,7 @@ const turneroTurnomasterPosts = [
         "website-v2/blog/turnero-turnomaster/mejor-sistema-turnos-inalambrico-drogueria/gazy4zrbrtunb94fqzqu"
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
   {
@@ -1256,7 +1257,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-11-03T08:20:05",
     "modified": "2025-05-16T09:34:34",
     "slug": "pantalla-de-turnos-plan-eficaz-equipo",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/pantalla-de-turnos-plan-eficaz-equipo`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/pantalla-de-turnos-plan-eficaz-equipo`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/pantalla-de-turnos-como-crear-un-plan-de-manejo-de-turnos-para-tu-equipo/"
     ],
@@ -1281,7 +1282,7 @@ const turneroTurnomasterPosts = [
         "website-v2/blog/turnero-turnomaster/pantalla-de-turnos-plan-eficaz-equipo/azqvp2abgwzewt86mff3"
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
   {
@@ -1289,7 +1290,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-07-19T09:51:45",
    "modified": "2025-05-16T09:38:08",
     "slug": "mejor-software-turnos-negocio",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/mejor-software-turnos-negocio`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/mejor-software-turnos-negocio`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/como-elegir-el-mejor-software-de-turnos"
     ],
@@ -1314,7 +1315,7 @@ const turneroTurnomasterPosts = [
         "website-v2/blog/turnero-turnomaster/mejor-software-turnos-negocio/ytlgl7cteynexoaxbta2"
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
   {
@@ -1322,7 +1323,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-07-12T14:21:00",
     "modified": "2025-05-16T09:38:50",
     "slug": "mejorar-gestion-filas",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/mejorar-gestion-filas`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/mejorar-gestion-filas`,
     "previous_link": [
         "/blog/turnero-turnoexpress/como-mejorar-la-gestion-de-filas/"
     ],
@@ -1347,7 +1348,7 @@ const turneroTurnomasterPosts = [
         "website-v2/blog/turnero-turnomaster/mejorar-gestion-filas/x1nbdd9kb4wfp3woki8q"
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
   {
@@ -1355,7 +1356,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-06-12T14:16:00",
     "modified": "2025-05-16T09:40:10",
     "slug": "importancia-sistema-turnos-negocios-beneficios",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/importancia-sistema-turnos-negocios-beneficios`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/importancia-sistema-turnos-negocios-beneficios`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/por-que-implementar-un-sistema-de-turnos"
     ],
@@ -1380,7 +1381,7 @@ const turneroTurnomasterPosts = [
         "website-v2/blog/turnero-turnomaster/importancia-sistema-turnos-negocios-beneficios/aluplk2xbe1ukxzp5i8c"
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
   {
@@ -1388,7 +1389,7 @@ const turneroTurnomasterPosts = [
     "date": "2020-10-28T14:20:13",
     "modified": "2025-05-16T09:40:38",
     "slug": "5-ventajas-software-turnos",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/5-ventajas-software-turnos`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/5-ventajas-software-turnos`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/5-ventajas-del-software-de-turnos/"
     ],
@@ -1413,7 +1414,7 @@ const turneroTurnomasterPosts = [
         "website-v2/blog/turnero-turnomaster/5-ventajas-software-turnos/zrnygwr1o9zunjkfb2wr"
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
   {
@@ -1421,7 +1422,7 @@ const turneroTurnomasterPosts = [
     "date": "2020-10-28T14:18:20",
     "modified": "2025-05-16T09:41:02",
     "slug": "organizar-filas-turnero-digital",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/organizar-filas-turnero-digital`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/organizar-filas-turnero-digital`,
     "previous_link": [
         "/blog/turnero-turnoexpress/como-organizar-las-filas/"
     ],
@@ -1446,7 +1447,7 @@ const turneroTurnomasterPosts = [
         "website-v2/blog/turnero-turnomaster/organizar-filas-turnero-digital/xtycndmshsuacstzeosw"
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
   {
@@ -1454,7 +1455,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-11-06T07:15:32",
     "modified": "2025-05-16T09:33:18",
     "slug": "integrar-sistema-espera-software-gestion-facturacion",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/integrar-sistema-espera-software-gestion-facturacion`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/integrar-sistema-espera-software-gestion-facturacion`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/como-integrar-un-sistema-de-espera-con-software-de-gestion-o-facturacion/"
     ],
@@ -1479,7 +1480,7 @@ const turneroTurnomasterPosts = [
         "website-v2/blog/turnero-turnomaster/integrar-sistema-espera-software-gestion-facturacion/mx8yt5dzxgnjayg026ez"
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
   {
@@ -1487,7 +1488,7 @@ const turneroTurnomasterPosts = [
     "date": "2024-08-08T10:55:25",
     "modified": "2025-05-16T09:27:15",
     "slug": "facilitar-transicion-software-gestion-turnos",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/facilitar-transicion-software-gestion-turnos`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/facilitar-transicion-software-gestion-turnos`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/software-de-turnos-como-facilitar-la-transicion/",
     ],
@@ -1512,7 +1513,7 @@ const turneroTurnomasterPosts = [
         "website-v2/blog/turnero-turnomaster/facilitar-transicion-software-gestion-turnos/lndlnjblnk3to4o9nnc5"
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
 /*
@@ -1521,7 +1522,7 @@ const turneroTurnomasterPosts = [
     "date": "",
     "modified": "",
     "slug": "",
-    "current_link": `/blog${categories.SISTEMA_DE_TURNOS_TURNOMASTER.url_category}/como-mejorar-servicio-enfermeria-en-geriatricos`,
+    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/como-mejorar-servicio-enfermeria-en-geriatricos`,
     "previous_link": [
         "/"
     ],
@@ -1546,7 +1547,7 @@ const turneroTurnomasterPosts = [
         ""
     ],
     "categories": [
-      categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key
+      routes.blog.children.sistemasDeTurnosTurnomaster.category_key
     ],
   },
 */
@@ -1558,7 +1559,7 @@ const dispensadorDeTicketsPosts = [
     "date": "2024-06-18T07:51:30",
     "modified": "2025-05-16T09:28:41",
     "slug": "calcular-inversion-despachador-tickets-colombia",
-    "current_link": `/blog${categories.DISPENSADOR_DE_TICKETS.url_category}/calcular-inversion-despachador-tickets-colombia`,
+    "current_link": `${routes.blog.children.dispensadorDeTickets.url}/calcular-inversion-despachador-tickets-colombia`,
     "previous_link": [
         "/blog/dispensador-de-tickets/despachador-de-tickets-en-colombia-cuanto-invertir/"
     ],
@@ -1583,7 +1584,7 @@ const dispensadorDeTicketsPosts = [
         "website-v2/blog/dispensador-de-tickets/calcular-inversion-despachador-tickets-colombia/faelxxxeysxstquthqpn"
     ],
     "categories": [
-        categories.DISPENSADOR_DE_TICKETS.category_key
+        routes.blog.children.dispensadorDeTickets.category_key
     ],
 },
 {
@@ -1591,7 +1592,7 @@ const dispensadorDeTicketsPosts = [
     "date": "2024-06-05T20:33:27",
     "modified": "2025-05-16T09:28:59",
     "slug": "deberias-tener-dispensador-turnos-negocio",
-    "current_link": `/blog${categories.DISPENSADOR_DE_TICKETS.url_category}/deberias-tener-dispensador-turnos-negocio`,
+    "current_link": `${routes.blog.children.dispensadorDeTickets.url}/deberias-tener-dispensador-turnos-negocio`,
     "previous_link": [
         "/blog/dispensador-de-tickets/deberias-tener-un-dispensador-de-turnos-en-tu-negocio/"
     ],
@@ -1616,7 +1617,7 @@ const dispensadorDeTicketsPosts = [
         "website-v2/blog/dispensador-de-tickets/deberias-tener-dispensador-turnos-negocio/oweismz9w8mzdz2yq2hc"
     ],
     "categories": [
-      categories.DISPENSADOR_DE_TICKETS.category_key
+      routes.blog.children.dispensadorDeTickets.category_key
     ],
   },
   {
@@ -1624,7 +1625,7 @@ const dispensadorDeTicketsPosts = [
     "date": "2023-08-02T08:22:42",
     "modified": "2025-05-16T09:35:08",
     "slug": "integrar-dispensador-turnos-sistema-gestion",
-    "current_link": `/blog${categories.DISPENSADOR_DE_TICKETS.url_category}/integrar-dispensador-turnos-sistema-gestion`,
+    "current_link": `${routes.blog.children.dispensadorDeTickets.url}/integrar-dispensador-turnos-sistema-gestion`,
     "previous_link": [
         "/blog/dispensador-de-tickets/integra-un-dispensador-de-turnos-con-tu-sistema-de-gestion"
     ],
@@ -1649,7 +1650,7 @@ const dispensadorDeTicketsPosts = [
         "website-v2/blog/dispensador-de-tickets/integrar-dispensador-turnos-sistema-gestion/fftzagaeoapujutqdiob"
     ],
     "categories": [
-      categories.DISPENSADOR_DE_TICKETS.category_key
+      routes.blog.children.dispensadorDeTickets.category_key
     ],
   },
 /*
@@ -1658,7 +1659,7 @@ const dispensadorDeTicketsPosts = [
     "date": "",
     "modified": "",
     "slug": "",
-    "current_link": `/blog${categories.DISPENSADOR_DE_TICKETS.url_category}/`,
+    "current_link": `${routes.blog.children.dispensadorDeTickets.url}/`,
     "previous_link": [
         "/"
     ],
@@ -1683,86 +1684,86 @@ const dispensadorDeTicketsPosts = [
         ""
     ],
     "categories": [
-      categories.DISPENSADOR_DE_TICKETS.category_key
+      routes.blog.children.dispensadorDeTickets.category_key
     ],
   },
 */
 ]
 
 const rollosDeFichosParaTurnos = [
-    {
-        "id": 10222,
-        "date": "2024-09-03T19:54:37",
-        "modified": "2025-05-16T09:22:54",
-        "slug": "todo-lo-que-necesitas-saber-numeros-guia-completa",
-        "current_link": `/blog${categories.ROLLOS_DE_FICHOS_PARA_TURNOS.url_category}/todo-lo-que-necesitas-saber-numeros-guia-completa`,
-        "previous_link": [
-            "/blog/rollos-de-fichos-para-turnos/rollos-de-numeros-para-turnos-guia-completa/"
-        ],
-        "metadata": {
-            "title": "Rollos De Números Para Turnos: Guía Completa",
-            "description": "Descubre todo lo que necesitas saber sobre los rollos de números para turnos. Aprende sus ventajas, características y cómo elegir el mejor para tu negocio.",
-            "keywords": [
-                "Rollos De Números Para Turnos",
-            ]
-        },
-        "title": {
-            "rendered": "Todo lo que necesitas saber sobre Rollos de Números para Turnos: Guía completa"
-        },
-        "content": {
-            "rendered": "\n<p>En el mundo moderno, la gestión eficiente de filas y turnos se ha vuelto esencial, especialmente en entornos donde la atención al cliente es fundamental. Los <strong>Rollos De Números Para Turnos</strong>, utilizados en los dispensadores de tiquetes, juegan un papel crucial en este proceso, permitiendo un control ordenado y justo del servicio.</p>\n\n\n\n<p>Aunque puedan parecer simples, conocer todos los detalles sobre los <strong><a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">Rollos De Números Para Turnos</a></strong> es esencial para identificar sus beneficios. Esto te ayudará a saber si los necesitas para gestionar los tiempos de espera y mejorar la gestión de filas en tu empresa o negocio. Además, es importante tener en cuenta la calidad con la que están elaborados estos rollos numéricos, especialmente cuando los adquieres a través de <em>Tecnología Plus</em>, una marca que se destaca por ofrecer productos duraderos y de alta calidad.</p>\n\n\n\n<figure class=\"wp-block-image size-full is-resized\"><img loading=\"lazy\" decoding=\"async\" width=\"1000\" height=\"412\" src=\"https://tecnologiaplus.com/wp-content/uploads/2023/06/2-1.png\" alt=\"\" class=\"wp-image-9055\" style=\"width:583px;height:auto\" srcset=\"https://tecnologiaplus.com/wp-content/uploads/2023/06/2-1.png 1000w, https://tecnologiaplus.com/wp-content/uploads/2023/06/2-1-800x330.png 800w, https://tecnologiaplus.com/wp-content/uploads/2023/06/2-1-300x124.png 300w, https://tecnologiaplus.com/wp-content/uploads/2023/06/2-1-768x316.png 768w\" sizes=\"(max-width: 1000px) 100vw, 1000px\" /></figure>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-que-son-los-rollos-de-turnos\">¿Qué son los rollos de turnos?</h2>\n\n\n\n<p>Los <strong>Rollos De Números Para Turnos</strong> se utilizan en sistemas de gestión de filas para asignar un número a cada cliente que llega a un establecimiento. Estos números, impresos en tiquetes individuales, permiten a los clientes esperar su turno de forma ordenada, eliminando la necesidad de hacer filas físicas y reduciendo el caos en los puntos de atención.</p>\n\n\n\n<p>En Colombia y otros países de América Latina, los <strong><a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">Rollos De Números Para Turnos</a></strong> son muy comunes en bancos, clínicas, oficinas gubernamentales y comercios con alta demanda de atención al cliente.</p>\n\n\n\n<p>Las fichas de turnos están diseñadas para ser fáciles de rasgar y lo suficientemente duraderas para mantenerse intactas durante la espera del cliente.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-diferencia-entre-rollos-de-turnos-y-rollos-de-papel-terimco\">Diferencia entre rollos de turnos y rollos de papel térimco</h2>\n\n\n\n<p>Los <strong>Rollos De Números Para Turnos</strong> se usan en dispensadores tipo caracol, con fichas numéricas duraderas y de fácil lectura. En cambio, los rollos térmicos funcionan en sistemas digitales de gestión de turnos, compatibles con impresoras térmicas. Cada tipo de rollo se adapta a distintas necesidades según el establecimiento y el volumen de clientes.</p>\n\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large is-resized\"><img loading=\"lazy\" decoding=\"async\" width=\"1030\" height=\"1030\" src=\"https://tecnologiaplus.com/wp-content/uploads/2024/06/28-1030x1030.jpg\" alt=\"Cómo organizar filas\" class=\"wp-image-10088\" style=\"width:415px;height:auto\" srcset=\"https://tecnologiaplus.com/wp-content/uploads/2024/06/28-1030x1030.jpg 1030w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-80x80.jpg 80w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-300x300.jpg 300w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-768x768.jpg 768w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-800x800.jpg 800w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-1000x1000.jpg 1000w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-100x100.jpg 100w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28.jpg 1081w\" sizes=\"(max-width: 1030px) 100vw, 1030px\" /></figure></div>\n\n\n<p></p>\n\n\n\n<p>Para decidir entre <strong>rollos de números para turnos</strong> o<a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\"> <em>rollos de papel térmico</em></a>, deberías considerar los siguientes puntos:</p>\n\n\n\n<ul>\n<li><em>Evaluación y feedback:</em> ¿Quieres recibir estadísticas y feedback?</li>\n\n\n\n<li><em>Tipo de dispensador:</em> ¿Usas un dispensador manual (tipo caracol) o un panel digital?</li>\n\n\n\n<li><em>Facilidad de uso: </em>¿Prefieres fichas numeradas o impresiones automáticas?</li>\n\n\n\n<li><em>Presupuesto:</em> ¿Qué opción es más rentable para tu negocio?</li>\n\n\n\n<li><em>Mantenimiento:</em> ¿Necesitas una solución sencilla o más tecnológica?</li>\n\n\n\n<li><em>Experiencia del cliente:</em> ¿Qué sistema mejora la atención en tu establecimiento?</li>\n</ul>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-como-funcionan-los-rollos-de-turnos\">¿Cómo funcionan los rollos de turnos?</h2>\n\n\n<div class=\"wp-block-image\">\n<figure class=\"alignleft size-full is-resized\"><img loading=\"lazy\" decoding=\"async\" width=\"358\" height=\"276\" src=\"https://tecnologiaplus.com/wp-content/uploads/2023/12/turneros1.png\" alt=\"Rollos numéricos\" class=\"wp-image-9708\" style=\"width:311px;height:auto\" srcset=\"https://tecnologiaplus.com/wp-content/uploads/2023/12/turneros1.png 358w, https://tecnologiaplus.com/wp-content/uploads/2023/12/turneros1-300x231.png 300w\" sizes=\"(max-width: 358px) 100vw, 358px\" /></figure></div>\n\n\n<p>El funcionamiento de los <strong><a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">rollos de números para turnos</a></strong> es bastante sencillo y efectivo. Cuando implementamos un sistema con fichas de turnos, el cliente simplemente se acerca hasta el dispensador de tiquetes y toma la ficha con su número de turno.</p>\n\n\n\n<p>Este sistema permite que la espera del cliente sea más agradable. Luego, será llamado en una pantalla LED o por un altavoz. Esto no solo mejora la experiencia del cliente al reducir la ansiedad por las filas, sino que también permite a las empresas gestionar el flujo de personas de manera más organizada.</p>\n\n\n\n<figure class=\"wp-block-image size-full\"><img loading=\"lazy\" decoding=\"async\" width=\"881\" height=\"399\" src=\"https://tecnologiaplus.com/wp-content/uploads/2024/09/EG53vS1XkAAglfw.jpg\" alt=\"\" class=\"wp-image-10244\" srcset=\"https://tecnologiaplus.com/wp-content/uploads/2024/09/EG53vS1XkAAglfw.jpg 881w, https://tecnologiaplus.com/wp-content/uploads/2024/09/EG53vS1XkAAglfw-300x136.jpg 300w, https://tecnologiaplus.com/wp-content/uploads/2024/09/EG53vS1XkAAglfw-768x348.jpg 768w, https://tecnologiaplus.com/wp-content/uploads/2024/09/EG53vS1XkAAglfw-800x362.jpg 800w\" sizes=\"(max-width: 881px) 100vw, 881px\" /></figure>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-ventajas-de-utilizar-el-rollo-de-turno\">Ventajas de utilizar el rollo de turno</h2>\n\n\n\n<p>El uso de <strong>rollos de números para turnos</strong> ofrece muchos beneficios para negocios y clientes. Algunas de las ventajas más importantes son:</p>\n\n\n\n<ul>\n<li><em>Mejor organización:</em> ayudan a gestionar el flujo de personas, evitando aglomeraciones y garantizando un servicio justo y ordenado.</li>\n\n\n\n<li><em>Reducción del estrés:</em> los clientes no se preocupan por perder su lugar en la fila, lo que reduce la ansiedad y mejora la satisfacción con el servicio.</li>\n\n\n\n<li><em>Eficiencia operativa:</em> permiten priorizar y seguir el servicio, facilitando que el personal se enfoque en atender a los clientes en lugar de gestionar las filas.</li>\n\n\n\n<li><em>Mejor experiencia del cliente: </em>con un número asignado, los clientes pueden realizar otras actividades mientras esperan, lo que mejora su experiencia general.</li>\n\n\n\n<li><em>Flexibilidad en la gestión:</em> los sistemas digitales ajustan la velocidad de atención según la demanda, optimizando el flujo de manera dinámica y eficiente.</li>\n</ul>\n\n\n\n<p>Además, los <strong>rollos de números para turnos</strong> ofrecen variedad de colores y tipografía personalizada, lo que permite adaptarlos a la imagen de marca de tu negocio. Esta personalización puede incluir desde el color de las fichas hasta el logo de la empresa, haciendo que el sistema de turnos sea aún más eficiente y representativo de tu negocio.</p>\n\n\n\n<p>Los <strong><a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">rollos de números para turnos</a></strong> están elaborados en acrílico, un material duradero y resistente que garantiza un uso prolongado y de calidad en diversos entornos comerciales y de atención al cliente. Disponibles en rollos de 2.000 o 3.000 tiquetes, estos rollos están diseñados para asignar turnos de manera eficiente, siguiendo el orden de llegada de los clientes.</p>\n\n\n\n<p>Los <strong>rollos de números para turnos</strong> son ideales para dispensadores de turnos tipo caracol, proporcionando una solución práctica y fácil de usar. Además, estos rollos están disponibles en versiones con 2 o 3 dígitos, lo que permite adaptarse a las necesidades de cada negocio, ya sea para un volumen alto o bajo de clientes.</p>\n\n\n\n<p class=\"has-text-align-center\"><a href=\"https://tecnologiaplus.com/contacto/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/contacto/\">¡Contactanos haz que tu sistema de atención al cliente sea más organizada con Tecnología Plus!</a></p>\n",
-            "template_name": "/rollos-de-fichos-para-turnos/todo-lo-que-necesitas-saber-numeros-guia-completa.html",
-        },
-        "excerpt": {
-            "rendered": "<p>En el mundo moderno, la gestión eficiente de filas y turnos se ha vuelto esencial, especialmente en entornos donde la atención al cliente es fundamental. Los Rollos De Números Para Turnos, utilizados en los dispensadores de tiquetes, juegan un papel crucial en este proceso, permitiendo un control ordenado y justo del servicio. Aunque puedan parecer&#8230;</p>\n",
-        },
-        "images": [
-            "website-v2/blog/rollos-de-fichos-para-turnos/todo-lo-que-necesitas-saber-numeros-guia-completa/ijwhfn49a9bbohzefccp"
-        ],
-        "categories": [
-            categories.ROLLOS_DE_FICHOS_PARA_TURNOS.category_key
-        ],
+{
+    "id": 10222,
+    "date": "2024-09-03T19:54:37",
+    "modified": "2025-05-16T09:22:54",
+    "slug": "todo-lo-que-necesitas-saber-numeros-guia-completa",
+    "current_link": `${routes.blog.children.rollosDeFichosParaTurnos.url}/todo-lo-que-necesitas-saber-numeros-guia-completa`,
+    "previous_link": [
+        "/blog/rollos-de-fichos-para-turnos/rollos-de-numeros-para-turnos-guia-completa/"
+    ],
+    "metadata": {
+        "title": "Rollos De Números Para Turnos: Guía Completa",
+        "description": "Descubre todo lo que necesitas saber sobre los rollos de números para turnos. Aprende sus ventajas, características y cómo elegir el mejor para tu negocio.",
+        "keywords": [
+            "Rollos De Números Para Turnos",
+        ]
     },
-    {
-        "id": 9771,
-        "date": "2024-05-15T11:30:46",
-        "modified": "2025-05-16T09:29:56",
-        "slug": "aspectos-clave-comprar-rollos-turnos",
-        "current_link": `/blog${categories.ROLLOS_DE_FICHOS_PARA_TURNOS.url_category}/aspectos-clave-comprar-rollos-turnos`,
-        "previous_link": [
-            "/blog/rollos-de-fichos-para-turnos/los-aspectos-que-debe-tener-en-cuenta-al-comprar-rollos-de-turnos"
-        ],
-        "metadata": {
-            "title": "Rollos de turnos: Aspectos clave al comprar para tu negocio",
-            "description": "Descubre los aspectos esenciales a tener en cuenta al comprar rollos de turnos para garantizar la eficiencia en la gestión de filas en tu negocio.",
-            "keywords": [
-                "Comprar rollos de turnos",
-            ]
-        },
-        "title": {
-            "rendered": "Aspectos clave a considerar al comprar Rollos de Turnos"
-        },
-        "content": {
-            "rendered": "\n<p>Lo primero que debes tener en cuenta al <strong><a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">comprar rollos de turnos</a></strong> es que existen dos tipos de material. El primero son los <a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">rollos térmicos</a>, que se imprimen con impresoras térmicas, y el segundo son los <a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">rollos de números de turnos, </a>que se utilizan con un sistema manual más sencillo y se presentan en caracoles.</p>\n\n\n\n<p>Aunque esta es una de las diferencias clave entre ellos, no es la única ni la más importante al momento de elegir el tipo de rollo. A continuación, te explicamos los aspectos que debes considerar para elegir entre los rollos térmicos y los <a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">rollos de números para turnos</a>. En <em>Tecnología Plus</em>, te ayudamos a tomar la mejor decisión para tu negocio.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-rollos-de-papel-termico-o-rollos-de-numeros-para-turnos\">¿Rollos de papel térmico o rollos de números para turnos?</h2>\n\n\n\n<p>Ante esta pregunta, no existe una respuesta definitiva, ya que cada empresa tiene un sistema de atención al cliente único, y cada una debe adaptarse a su propio contexto para satisfacer tanto las necesidades de sus clientes como sus objetivos internos.</p>\n\n\n\n<p>Por eso, al momento de <strong>comprar rollos de turnos</strong>, hemos preparado una lista de puntos a considerar. Esto te ayudará a decidir cuál de estas dos opciones disponibles en Tecnología Plus es la más adecuada para mejorar la operatividad de tu negocio y continuar con su crecimiento.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-tipo-de-negocio\">Tipo de negocio</h3>\n\n\n\n<p>Lo primero que debes hacer al <strong><a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">comprar rollos de turnos</a></strong> es identificar el tipo de negocio que tienes. Por ejemplo, en una clínica, los <strong>rollos térmicos</strong> son una excelente opción, ya que requieren un sistema más avanzado debido al alto número de personas a atender. Con estos rollos y un software de turnos avanzado, puedes llevar un mejor control y registro de los pacientes.</p>\n\n\n\n<p>Por otro lado, si tu negocio es una tienda minorista, los rollos de números para turnos son más que suficientes para gestionar el sistema de atención al cliente. En <em><a href=\"https://tecnologiaplus.com/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/\">Tecnología Plus</a></em>, te ayudamos a elegir la mejor opción para tu empresa.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-volumen-de-clientes\">Volumen de clientes</h3>\n\n\n\n<p>Este punto es crucial al momento de <strong>comprar rollos de turnos</strong>, ya que los <a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">rollos térmicos</a> ofrecen una mayor adaptabilidad y escalabilidad para empresas que buscan expandirse. Esto les permite asegurar una operatividad más eficiente en momentos de alta demanda.</p>\n\n\n\n<p>Por otro lado, los<a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\"> rollos de números para turnos </a>están diseñados para puntos de atención pequeños o medianos, ya que su método de control y escalabilidad es más limitado.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-presupuesto\">Presupuesto</h3>\n\n\n\n<p>Como te imaginarás, el<em><a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\"> papel térmico</a></em> dispone de una tecnología más avanzada, pero esto no siempre es lo mejor. Implica un mayor presupuesto para su instalación, mantenimiento y uso.</p>\n\n\n\n<p>Por otro lado, <strong>comprar rollos de números para turnos</strong> es mucho más económico, lo que los convierte en una excelente opción para empresas en crecimiento. Además, requieren nulo mantenimiento. Los caracoles y rollos de turneros están disponibles en Tecnología Plus, listos para ayudarte a gestionar de manera eficiente tu sistema de atención al cliente.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-funcionalidad-adicional\">Funcionalidad adicional</h3>\n\n\n\n<p>Este es otro punto a destacar de los rollos térmicos, ya que pueden incluir una capa extra de funcionalidades al momento de ser solicitados y/o entregados al cliente.</p>\n\n\n\n<p>En cambio, al <a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\"><strong>comprar rollos de turnos</strong> </a>más tradicionales, como los de papel para turneros, no tendrás estas opciones. En su mejor versión, solo podrás personalizar el caracol para que coincida con los colores de tu marca o lleve el logo de tu empresa.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-facilidad-de-uso\">Facilidad de uso</h3>\n\n\n\n<p>Al considerar este aspecto, debes pensar no solo en el cliente, sino también en tu personal. El sistema que elijas debe ser fácil de aprender a usar para ambos, y en cualquiera de los dos casos, es bastante sencillo.</p>\n\n\n\n<p>Si decides <strong>comprar rollos de turnos</strong> con un sistema que permita al cliente solicitar su turno por sí mismo para la impresión del ticket, tal vez enfrentes un pequeño desafío al principio para que se familiaricen con el proceso. Sin embargo, con el tiempo, esta barrera se superará fácilmente.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-necesidades-de-tu-sector\">Necesidades de tu sector</h3>\n\n\n\n<p>Como mencionamos al principio del artículo, las necesidades de cada empresa que busca ampliar o mejorar su sistema de atención al cliente con t<a href=\"https://tecnologiaplus.com/turnero/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/turnero/\">urneros inalámbricos </a>son distintas.</p>\n\n\n\n<p>Por eso, al <strong>comprar rollos de turnos</strong>, debes elegir entre <a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">papel de transferencia térmica</a> o <strong>rollos de números para turnos</strong> según las necesidades específicas de tu empresa.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-datos-adicionales\">Datos adicionales</h3>\n\n\n\n<p>Los datos y métricas pueden ser proporcionados por los sistemas de<a href=\"https://tecnologiaplus.com/software-para-turnos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/software-para-turnos/\"> software de turnos</a> más avanzados, los cuales utilizan rollos térmicos. Esta información es valiosa para identificar fallas, solucionar cuellos de botella y mejorar la operatividad en cualquier fase de la espera del cliente.</p>\n\n\n\n<p>Estos datos no se pueden obtener con los rollos de turneros más tradicionales. Por lo tanto, si necesitas estos datos, el papel tradicional para que tus clientes tomen sus turnos debe ser descartado casi por completo.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-el-cambio-de-tecnologia-del-rollo-de-turnero-al-papel-termico\">El cambio de tecnología del rollo de turnero al papel térmico</h2>\n\n\n\n<p>¿Si eliges uno no puedes elegir el otro? Sí y no, ¿qué queremos decir con esto? Si tu empresa es pequeña y está comenzando, quizá la mejor opción sea <strong><a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">comprar rollos de turnos</a></strong> con números, pero a medida que crezcas, podrías querer dar el salto a un sistema más avanzado.</p>\n\n\n\n<p>Sin embargo, puede ser contraproducente contar con el sistema más avanzado y luego volver al anterior, ya que esto podría sentirse como un retroceso en la calidad del servicio de atención al cliente.</p>\n\n\n\n<p>¿Qué recomiendan los expertos de <em>Tecnología Plus</em>? Para las empresas pequeñas, comenzar con el sistema básico y, cuando sea necesario, cambiarlo por uno más avanzado.</p>\n\n\n\n<p>Las empresas medianas pueden optar por cualquiera de los dos sistemas, dependiendo de los factores que mencionamos antes. Y para las empresas grandes, recomendamos con seguridad la utilización de los <a href=\"https://tecnologiaplus.com/software-para-turnos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/software-para-turnos/\">software de turnos</a> que emplean <a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">papel térmico</a>.</p>\n\n\n\n<p>En cualquiera de estos casos, <a href=\"https://tecnologiaplus.com/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/\"><em>Tecnología Plus</em></a> ofrece el apoyo, la asesoría y la guía para ayudarte a tomar las mejores decisiones que lleven a tu empresa al siguiente nivel.</p>\n\n\n\n<p>¡<a href=\"https://tecnologiaplus.com/contacto/\">Contáctanos hoy</a>! y descubre cómo podemos ayudarte a llevar tu gestión de filas al siguiente nivel.</p>\n",
-            "template_name": "/rollos-de-fichos-para-turnos/aspectos-clave-comprar-rollos-turnos.html",
-        },
-        "excerpt": {
-            "rendered": "<p>Lo primero que debes tener en cuenta al comprar rollos de turnos es que existen dos tipos de material. El primero son los rollos térmicos, que se imprimen con impresoras térmicas, y el segundo son los rollos de números de turnos, que se utilizan con un sistema manual más sencillo y se presentan en caracoles&#8230;.</p>\n",
-        },
-        "images": [
-            "website-v2/blog/rollos-de-fichos-para-turnos/aspectos-clave-comprar-rollos-turnos/hafllbs5tgvqejm7xy08"
-        ],
-        "categories": [
-          categories.ROLLOS_DE_FICHOS_PARA_TURNOS.category_key
-        ],
+    "title": {
+        "rendered": "Todo lo que necesitas saber sobre Rollos de Números para Turnos: Guía completa"
     },
+    "content": {
+        "rendered": "\n<p>En el mundo moderno, la gestión eficiente de filas y turnos se ha vuelto esencial, especialmente en entornos donde la atención al cliente es fundamental. Los <strong>Rollos De Números Para Turnos</strong>, utilizados en los dispensadores de tiquetes, juegan un papel crucial en este proceso, permitiendo un control ordenado y justo del servicio.</p>\n\n\n\n<p>Aunque puedan parecer simples, conocer todos los detalles sobre los <strong><a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">Rollos De Números Para Turnos</a></strong> es esencial para identificar sus beneficios. Esto te ayudará a saber si los necesitas para gestionar los tiempos de espera y mejorar la gestión de filas en tu empresa o negocio. Además, es importante tener en cuenta la calidad con la que están elaborados estos rollos numéricos, especialmente cuando los adquieres a través de <em>Tecnología Plus</em>, una marca que se destaca por ofrecer productos duraderos y de alta calidad.</p>\n\n\n\n<figure class=\"wp-block-image size-full is-resized\"><img loading=\"lazy\" decoding=\"async\" width=\"1000\" height=\"412\" src=\"https://tecnologiaplus.com/wp-content/uploads/2023/06/2-1.png\" alt=\"\" class=\"wp-image-9055\" style=\"width:583px;height:auto\" srcset=\"https://tecnologiaplus.com/wp-content/uploads/2023/06/2-1.png 1000w, https://tecnologiaplus.com/wp-content/uploads/2023/06/2-1-800x330.png 800w, https://tecnologiaplus.com/wp-content/uploads/2023/06/2-1-300x124.png 300w, https://tecnologiaplus.com/wp-content/uploads/2023/06/2-1-768x316.png 768w\" sizes=\"(max-width: 1000px) 100vw, 1000px\" /></figure>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-que-son-los-rollos-de-turnos\">¿Qué son los rollos de turnos?</h2>\n\n\n\n<p>Los <strong>Rollos De Números Para Turnos</strong> se utilizan en sistemas de gestión de filas para asignar un número a cada cliente que llega a un establecimiento. Estos números, impresos en tiquetes individuales, permiten a los clientes esperar su turno de forma ordenada, eliminando la necesidad de hacer filas físicas y reduciendo el caos en los puntos de atención.</p>\n\n\n\n<p>En Colombia y otros países de América Latina, los <strong><a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">Rollos De Números Para Turnos</a></strong> son muy comunes en bancos, clínicas, oficinas gubernamentales y comercios con alta demanda de atención al cliente.</p>\n\n\n\n<p>Las fichas de turnos están diseñadas para ser fáciles de rasgar y lo suficientemente duraderas para mantenerse intactas durante la espera del cliente.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-diferencia-entre-rollos-de-turnos-y-rollos-de-papel-terimco\">Diferencia entre rollos de turnos y rollos de papel térimco</h2>\n\n\n\n<p>Los <strong>Rollos De Números Para Turnos</strong> se usan en dispensadores tipo caracol, con fichas numéricas duraderas y de fácil lectura. En cambio, los rollos térmicos funcionan en sistemas digitales de gestión de turnos, compatibles con impresoras térmicas. Cada tipo de rollo se adapta a distintas necesidades según el establecimiento y el volumen de clientes.</p>\n\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large is-resized\"><img loading=\"lazy\" decoding=\"async\" width=\"1030\" height=\"1030\" src=\"https://tecnologiaplus.com/wp-content/uploads/2024/06/28-1030x1030.jpg\" alt=\"Cómo organizar filas\" class=\"wp-image-10088\" style=\"width:415px;height:auto\" srcset=\"https://tecnologiaplus.com/wp-content/uploads/2024/06/28-1030x1030.jpg 1030w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-80x80.jpg 80w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-300x300.jpg 300w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-768x768.jpg 768w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-800x800.jpg 800w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-1000x1000.jpg 1000w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28-100x100.jpg 100w, https://tecnologiaplus.com/wp-content/uploads/2024/06/28.jpg 1081w\" sizes=\"(max-width: 1030px) 100vw, 1030px\" /></figure></div>\n\n\n<p></p>\n\n\n\n<p>Para decidir entre <strong>rollos de números para turnos</strong> o<a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\"> <em>rollos de papel térmico</em></a>, deberías considerar los siguientes puntos:</p>\n\n\n\n<ul>\n<li><em>Evaluación y feedback:</em> ¿Quieres recibir estadísticas y feedback?</li>\n\n\n\n<li><em>Tipo de dispensador:</em> ¿Usas un dispensador manual (tipo caracol) o un panel digital?</li>\n\n\n\n<li><em>Facilidad de uso: </em>¿Prefieres fichas numeradas o impresiones automáticas?</li>\n\n\n\n<li><em>Presupuesto:</em> ¿Qué opción es más rentable para tu negocio?</li>\n\n\n\n<li><em>Mantenimiento:</em> ¿Necesitas una solución sencilla o más tecnológica?</li>\n\n\n\n<li><em>Experiencia del cliente:</em> ¿Qué sistema mejora la atención en tu establecimiento?</li>\n</ul>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-como-funcionan-los-rollos-de-turnos\">¿Cómo funcionan los rollos de turnos?</h2>\n\n\n<div class=\"wp-block-image\">\n<figure class=\"alignleft size-full is-resized\"><img loading=\"lazy\" decoding=\"async\" width=\"358\" height=\"276\" src=\"https://tecnologiaplus.com/wp-content/uploads/2023/12/turneros1.png\" alt=\"Rollos numéricos\" class=\"wp-image-9708\" style=\"width:311px;height:auto\" srcset=\"https://tecnologiaplus.com/wp-content/uploads/2023/12/turneros1.png 358w, https://tecnologiaplus.com/wp-content/uploads/2023/12/turneros1-300x231.png 300w\" sizes=\"(max-width: 358px) 100vw, 358px\" /></figure></div>\n\n\n<p>El funcionamiento de los <strong><a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">rollos de números para turnos</a></strong> es bastante sencillo y efectivo. Cuando implementamos un sistema con fichas de turnos, el cliente simplemente se acerca hasta el dispensador de tiquetes y toma la ficha con su número de turno.</p>\n\n\n\n<p>Este sistema permite que la espera del cliente sea más agradable. Luego, será llamado en una pantalla LED o por un altavoz. Esto no solo mejora la experiencia del cliente al reducir la ansiedad por las filas, sino que también permite a las empresas gestionar el flujo de personas de manera más organizada.</p>\n\n\n\n<figure class=\"wp-block-image size-full\"><img loading=\"lazy\" decoding=\"async\" width=\"881\" height=\"399\" src=\"https://tecnologiaplus.com/wp-content/uploads/2024/09/EG53vS1XkAAglfw.jpg\" alt=\"\" class=\"wp-image-10244\" srcset=\"https://tecnologiaplus.com/wp-content/uploads/2024/09/EG53vS1XkAAglfw.jpg 881w, https://tecnologiaplus.com/wp-content/uploads/2024/09/EG53vS1XkAAglfw-300x136.jpg 300w, https://tecnologiaplus.com/wp-content/uploads/2024/09/EG53vS1XkAAglfw-768x348.jpg 768w, https://tecnologiaplus.com/wp-content/uploads/2024/09/EG53vS1XkAAglfw-800x362.jpg 800w\" sizes=\"(max-width: 881px) 100vw, 881px\" /></figure>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-ventajas-de-utilizar-el-rollo-de-turno\">Ventajas de utilizar el rollo de turno</h2>\n\n\n\n<p>El uso de <strong>rollos de números para turnos</strong> ofrece muchos beneficios para negocios y clientes. Algunas de las ventajas más importantes son:</p>\n\n\n\n<ul>\n<li><em>Mejor organización:</em> ayudan a gestionar el flujo de personas, evitando aglomeraciones y garantizando un servicio justo y ordenado.</li>\n\n\n\n<li><em>Reducción del estrés:</em> los clientes no se preocupan por perder su lugar en la fila, lo que reduce la ansiedad y mejora la satisfacción con el servicio.</li>\n\n\n\n<li><em>Eficiencia operativa:</em> permiten priorizar y seguir el servicio, facilitando que el personal se enfoque en atender a los clientes en lugar de gestionar las filas.</li>\n\n\n\n<li><em>Mejor experiencia del cliente: </em>con un número asignado, los clientes pueden realizar otras actividades mientras esperan, lo que mejora su experiencia general.</li>\n\n\n\n<li><em>Flexibilidad en la gestión:</em> los sistemas digitales ajustan la velocidad de atención según la demanda, optimizando el flujo de manera dinámica y eficiente.</li>\n</ul>\n\n\n\n<p>Además, los <strong>rollos de números para turnos</strong> ofrecen variedad de colores y tipografía personalizada, lo que permite adaptarlos a la imagen de marca de tu negocio. Esta personalización puede incluir desde el color de las fichas hasta el logo de la empresa, haciendo que el sistema de turnos sea aún más eficiente y representativo de tu negocio.</p>\n\n\n\n<p>Los <strong><a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">rollos de números para turnos</a></strong> están elaborados en acrílico, un material duradero y resistente que garantiza un uso prolongado y de calidad en diversos entornos comerciales y de atención al cliente. Disponibles en rollos de 2.000 o 3.000 tiquetes, estos rollos están diseñados para asignar turnos de manera eficiente, siguiendo el orden de llegada de los clientes.</p>\n\n\n\n<p>Los <strong>rollos de números para turnos</strong> son ideales para dispensadores de turnos tipo caracol, proporcionando una solución práctica y fácil de usar. Además, estos rollos están disponibles en versiones con 2 o 3 dígitos, lo que permite adaptarse a las necesidades de cada negocio, ya sea para un volumen alto o bajo de clientes.</p>\n\n\n\n<p class=\"has-text-align-center\"><a href=\"https://tecnologiaplus.com/contacto/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/contacto/\">¡Contactanos haz que tu sistema de atención al cliente sea más organizada con Tecnología Plus!</a></p>\n",
+        "template_name": "/rollos-de-fichos-para-turnos/todo-lo-que-necesitas-saber-numeros-guia-completa.html",
+    },
+    "excerpt": {
+        "rendered": "<p>En el mundo moderno, la gestión eficiente de filas y turnos se ha vuelto esencial, especialmente en entornos donde la atención al cliente es fundamental. Los Rollos De Números Para Turnos, utilizados en los dispensadores de tiquetes, juegan un papel crucial en este proceso, permitiendo un control ordenado y justo del servicio. Aunque puedan parecer&#8230;</p>\n",
+    },
+    "images": [
+        "website-v2/blog/rollos-de-fichos-para-turnos/todo-lo-que-necesitas-saber-numeros-guia-completa/ijwhfn49a9bbohzefccp"
+    ],
+    "categories": [
+        routes.blog.children.rollosDeFichosParaTurnos.category_key
+    ],
+},
+{
+    "id": 9771,
+    "date": "2024-05-15T11:30:46",
+    "modified": "2025-05-16T09:29:56",
+    "slug": "aspectos-clave-comprar-rollos-turnos",
+    "current_link": `${routes.blog.children.rollosDeFichosParaTurnos.url}/aspectos-clave-comprar-rollos-turnos`,
+    "previous_link": [
+        "/blog/rollos-de-fichos-para-turnos/los-aspectos-que-debe-tener-en-cuenta-al-comprar-rollos-de-turnos"
+    ],
+    "metadata": {
+        "title": "Rollos de turnos: Aspectos clave al comprar para tu negocio",
+        "description": "Descubre los aspectos esenciales a tener en cuenta al comprar rollos de turnos para garantizar la eficiencia en la gestión de filas en tu negocio.",
+        "keywords": [
+            "Comprar rollos de turnos",
+        ]
+    },
+    "title": {
+        "rendered": "Aspectos clave a considerar al comprar Rollos de Turnos"
+    },
+    "content": {
+        "rendered": "\n<p>Lo primero que debes tener en cuenta al <strong><a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">comprar rollos de turnos</a></strong> es que existen dos tipos de material. El primero son los <a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">rollos térmicos</a>, que se imprimen con impresoras térmicas, y el segundo son los <a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">rollos de números de turnos, </a>que se utilizan con un sistema manual más sencillo y se presentan en caracoles.</p>\n\n\n\n<p>Aunque esta es una de las diferencias clave entre ellos, no es la única ni la más importante al momento de elegir el tipo de rollo. A continuación, te explicamos los aspectos que debes considerar para elegir entre los rollos térmicos y los <a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">rollos de números para turnos</a>. En <em>Tecnología Plus</em>, te ayudamos a tomar la mejor decisión para tu negocio.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-rollos-de-papel-termico-o-rollos-de-numeros-para-turnos\">¿Rollos de papel térmico o rollos de números para turnos?</h2>\n\n\n\n<p>Ante esta pregunta, no existe una respuesta definitiva, ya que cada empresa tiene un sistema de atención al cliente único, y cada una debe adaptarse a su propio contexto para satisfacer tanto las necesidades de sus clientes como sus objetivos internos.</p>\n\n\n\n<p>Por eso, al momento de <strong>comprar rollos de turnos</strong>, hemos preparado una lista de puntos a considerar. Esto te ayudará a decidir cuál de estas dos opciones disponibles en Tecnología Plus es la más adecuada para mejorar la operatividad de tu negocio y continuar con su crecimiento.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-tipo-de-negocio\">Tipo de negocio</h3>\n\n\n\n<p>Lo primero que debes hacer al <strong><a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">comprar rollos de turnos</a></strong> es identificar el tipo de negocio que tienes. Por ejemplo, en una clínica, los <strong>rollos térmicos</strong> son una excelente opción, ya que requieren un sistema más avanzado debido al alto número de personas a atender. Con estos rollos y un software de turnos avanzado, puedes llevar un mejor control y registro de los pacientes.</p>\n\n\n\n<p>Por otro lado, si tu negocio es una tienda minorista, los rollos de números para turnos son más que suficientes para gestionar el sistema de atención al cliente. En <em><a href=\"https://tecnologiaplus.com/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/\">Tecnología Plus</a></em>, te ayudamos a elegir la mejor opción para tu empresa.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-volumen-de-clientes\">Volumen de clientes</h3>\n\n\n\n<p>Este punto es crucial al momento de <strong>comprar rollos de turnos</strong>, ya que los <a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">rollos térmicos</a> ofrecen una mayor adaptabilidad y escalabilidad para empresas que buscan expandirse. Esto les permite asegurar una operatividad más eficiente en momentos de alta demanda.</p>\n\n\n\n<p>Por otro lado, los<a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\"> rollos de números para turnos </a>están diseñados para puntos de atención pequeños o medianos, ya que su método de control y escalabilidad es más limitado.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-presupuesto\">Presupuesto</h3>\n\n\n\n<p>Como te imaginarás, el<em><a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\"> papel térmico</a></em> dispone de una tecnología más avanzada, pero esto no siempre es lo mejor. Implica un mayor presupuesto para su instalación, mantenimiento y uso.</p>\n\n\n\n<p>Por otro lado, <strong>comprar rollos de números para turnos</strong> es mucho más económico, lo que los convierte en una excelente opción para empresas en crecimiento. Además, requieren nulo mantenimiento. Los caracoles y rollos de turneros están disponibles en Tecnología Plus, listos para ayudarte a gestionar de manera eficiente tu sistema de atención al cliente.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-funcionalidad-adicional\">Funcionalidad adicional</h3>\n\n\n\n<p>Este es otro punto a destacar de los rollos térmicos, ya que pueden incluir una capa extra de funcionalidades al momento de ser solicitados y/o entregados al cliente.</p>\n\n\n\n<p>En cambio, al <a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\"><strong>comprar rollos de turnos</strong> </a>más tradicionales, como los de papel para turneros, no tendrás estas opciones. En su mejor versión, solo podrás personalizar el caracol para que coincida con los colores de tu marca o lleve el logo de tu empresa.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-facilidad-de-uso\">Facilidad de uso</h3>\n\n\n\n<p>Al considerar este aspecto, debes pensar no solo en el cliente, sino también en tu personal. El sistema que elijas debe ser fácil de aprender a usar para ambos, y en cualquiera de los dos casos, es bastante sencillo.</p>\n\n\n\n<p>Si decides <strong>comprar rollos de turnos</strong> con un sistema que permita al cliente solicitar su turno por sí mismo para la impresión del ticket, tal vez enfrentes un pequeño desafío al principio para que se familiaricen con el proceso. Sin embargo, con el tiempo, esta barrera se superará fácilmente.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-necesidades-de-tu-sector\">Necesidades de tu sector</h3>\n\n\n\n<p>Como mencionamos al principio del artículo, las necesidades de cada empresa que busca ampliar o mejorar su sistema de atención al cliente con t<a href=\"https://tecnologiaplus.com/turnero/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/turnero/\">urneros inalámbricos </a>son distintas.</p>\n\n\n\n<p>Por eso, al <strong>comprar rollos de turnos</strong>, debes elegir entre <a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">papel de transferencia térmica</a> o <strong>rollos de números para turnos</strong> según las necesidades específicas de tu empresa.</p>\n\n\n\n<h3 class=\"wp-block-heading\" id=\"h-datos-adicionales\">Datos adicionales</h3>\n\n\n\n<p>Los datos y métricas pueden ser proporcionados por los sistemas de<a href=\"https://tecnologiaplus.com/software-para-turnos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/software-para-turnos/\"> software de turnos</a> más avanzados, los cuales utilizan rollos térmicos. Esta información es valiosa para identificar fallas, solucionar cuellos de botella y mejorar la operatividad en cualquier fase de la espera del cliente.</p>\n\n\n\n<p>Estos datos no se pueden obtener con los rollos de turneros más tradicionales. Por lo tanto, si necesitas estos datos, el papel tradicional para que tus clientes tomen sus turnos debe ser descartado casi por completo.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-el-cambio-de-tecnologia-del-rollo-de-turnero-al-papel-termico\">El cambio de tecnología del rollo de turnero al papel térmico</h2>\n\n\n\n<p>¿Si eliges uno no puedes elegir el otro? Sí y no, ¿qué queremos decir con esto? Si tu empresa es pequeña y está comenzando, quizá la mejor opción sea <strong><a href=\"https://tecnologiaplus.com/rollos-de-turno/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-de-turno/\">comprar rollos de turnos</a></strong> con números, pero a medida que crezcas, podrías querer dar el salto a un sistema más avanzado.</p>\n\n\n\n<p>Sin embargo, puede ser contraproducente contar con el sistema más avanzado y luego volver al anterior, ya que esto podría sentirse como un retroceso en la calidad del servicio de atención al cliente.</p>\n\n\n\n<p>¿Qué recomiendan los expertos de <em>Tecnología Plus</em>? Para las empresas pequeñas, comenzar con el sistema básico y, cuando sea necesario, cambiarlo por uno más avanzado.</p>\n\n\n\n<p>Las empresas medianas pueden optar por cualquiera de los dos sistemas, dependiendo de los factores que mencionamos antes. Y para las empresas grandes, recomendamos con seguridad la utilización de los <a href=\"https://tecnologiaplus.com/software-para-turnos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/software-para-turnos/\">software de turnos</a> que emplean <a href=\"https://tecnologiaplus.com/rollos-termicos/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/rollos-termicos/\">papel térmico</a>.</p>\n\n\n\n<p>En cualquiera de estos casos, <a href=\"https://tecnologiaplus.com/\" data-type=\"link\" data-id=\"https://tecnologiaplus.com/\"><em>Tecnología Plus</em></a> ofrece el apoyo, la asesoría y la guía para ayudarte a tomar las mejores decisiones que lleven a tu empresa al siguiente nivel.</p>\n\n\n\n<p>¡<a href=\"https://tecnologiaplus.com/contacto/\">Contáctanos hoy</a>! y descubre cómo podemos ayudarte a llevar tu gestión de filas al siguiente nivel.</p>\n",
+        "template_name": "/rollos-de-fichos-para-turnos/aspectos-clave-comprar-rollos-turnos.html",
+    },
+    "excerpt": {
+        "rendered": "<p>Lo primero que debes tener en cuenta al comprar rollos de turnos es que existen dos tipos de material. El primero son los rollos térmicos, que se imprimen con impresoras térmicas, y el segundo son los rollos de números de turnos, que se utilizan con un sistema manual más sencillo y se presentan en caracoles&#8230;.</p>\n",
+    },
+    "images": [
+        "website-v2/blog/rollos-de-fichos-para-turnos/aspectos-clave-comprar-rollos-turnos/hafllbs5tgvqejm7xy08"
+    ],
+    "categories": [
+        routes.blog.children.rollosDeFichosParaTurnos.category_key
+    ],
+},
 /*
 {
     "id": ,
     "date": "",
     "modified": "",
     "slug": "",
-    "current_link": `/blog${categories.ROLLOS_DE_FICHOS_PARA_TURNOS.url_category}/`,
+    "current_link": `${routes.blog.children.rollosDeFichosParaTurnos.url}/`,
     "previous_link": [
         "/"
     ],
@@ -1787,7 +1788,7 @@ const rollosDeFichosParaTurnos = [
         ""
     ],
     "categories": [
-      categories.ROLLOS_DE_FICHOS_PARA_TURNOS.category_key
+      routes.blog.children.rollosDeFichosParaTurnos.category_key
     ],
 },
 */
@@ -1799,7 +1800,7 @@ const rollosDePapelTermico = [
     "date": "2023-08-02T08:14:50",
     "modified": "2025-05-16T09:35:28",
     "slug": "secreto-del-exito-en-gestion-de-turnos",
-    "current_link": `/blog${categories.ROLLOS_DE_PAPEL_TERMICO.url_category}/secreto-del-exito-en-gestion-de-turnos`,
+    "current_link": `${routes.blog.children.rollosDePapelTermico.url}/secreto-del-exito-en-gestion-de-turnos`,
     "previous_link": [
         "/blog/rollos-de-papel-termico/rollos-de-papel-termico-el-secreto-del-exito-gestionando-turnos/"
     ],
@@ -1832,7 +1833,7 @@ const rollosDePapelTermico = [
     "date": "2024-05-29T19:05:27",
     "modified": "2025-05-16T09:29:16",
     "slug": "que-es-papel-transferencia-termica-como-usarlo",
-    "current_link": `/blog${categories.ROLLOS_DE_PAPEL_TERMICO.url_category}/que-es-papel-transferencia-termica-como-usarlo`,
+    "current_link": `${routes.blog.children.rollosDePapelTermico.url}/que-es-papel-transferencia-termica-como-usarlo`,
     "previous_link": [
         "/blog/rollos-de-papel-termico/que-es-el-papel-de-transferencia-termica-y-como-usarlo-en-tu-negocio/"
     ],
@@ -1865,7 +1866,7 @@ const rollosDePapelTermico = [
     "date": "2024-05-02T13:49:05",
     "date_gmt": "2024-05-02T18:49:05",
     "slug": "como-ahorrar-dinero-medio-ambiente",
-    "current_link": `/blog${categories.ROLLOS_DE_PAPEL_TERMICO.url_category}/como-ahorrar-dinero-medio-ambiente`,
+    "current_link": `${routes.blog.children.rollosDePapelTermico.url}/como-ahorrar-dinero-medio-ambiente`,
     "previous_link": [
         "/blog/rollos-de-papel-termico/como-ahorrar-dinero-y-cuidar-el-medio-ambiente-con-rollos-de-papel-termico"
     ],
@@ -1899,7 +1900,7 @@ const rollosDePapelTermico = [
     "date": "",
     "modified": "",
     "slug": "",
-    "current_link": `/blog${categories.ROLLOS_DE_PAPEL_TERMICO.url_category}/`,
+    "current_link": `${routes.blog.children.rollosDePapelTermico.url}/`,
     "previous_link": [
         "/"
     ],
@@ -1936,7 +1937,7 @@ const calificadorDeServicioAlCliente = [
     "date": "2020-10-28T12:27:06",
     "modified": "2025-05-19T11:16:43",
     "slug": "evaluar-calidad-servicio-cliente",
-    "current_link": `/blog${categories.CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER.url_category}/evaluar-calidad-servicio-cliente`,
+    "current_link": `${routes.blog.children.calificadorDeServicioAlClienteOpinamaster.url}/evaluar-calidad-servicio-cliente`,
     "previous_link": [
         "/blog/llamadores-de-meseros/calificador-de-servicio-como-evaluar-la-calidad-del-servicio-al-cliente"
     ],
@@ -1961,7 +1962,7 @@ const calificadorDeServicioAlCliente = [
         "website-v2/blog/calificador-de-servicio-al-cliente-opinamaster/evaluar-calidad-servicio-cliente/yasunmdhgoduyojqbwe2"
     ],
     "categories": [
-        categories.CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER.category_key
+        routes.blog.children.calificadorDeServicioAlClienteOpinamaster.category_key
     ],
 },
 {
@@ -1969,7 +1970,7 @@ const calificadorDeServicioAlCliente = [
     "date": "2024-07-19T08:47:34",
     "modified": "2025-05-19T11:16:59",
     "slug": "herramienta-retroalimentacion-cliente",
-    "current_link": `/blog${categories.CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER.url_category}/herramienta-retroalimentacion-cliente`,
+    "current_link": `${routes.blog.children.calificadorDeServicioAlClienteOpinamaster.url}/herramienta-retroalimentacion-cliente`,
     "previous_link": [
         "/blog/llamadores-de-meseros/calificadores-de-servicio-la-herramienta-clave-para-la-retroalimentacion-del-cliente/"
     ],
@@ -1994,7 +1995,7 @@ const calificadorDeServicioAlCliente = [
         "website-v2/blog/calificador-de-servicio-al-cliente-opinamaster/herramienta-retroalimentacion-cliente/jonsknrmc0pssapwj4xy"
     ],
     "categories": [
-      categories.CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER.category_key
+      routes.blog.children.calificadorDeServicioAlClienteOpinamaster.category_key
     ],
 },
 /*
@@ -2003,7 +2004,7 @@ const calificadorDeServicioAlCliente = [
     "date": "",
     "modified": "",
     "slug": "",
-    "current_link": `/blog${categories.CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER.url_category}/`,
+    "current_link": `${routes.blog.children.calificadorDeServicioAlClienteOpinamaster.url}/`,
     "previous_link": [
         "/"
     ],
@@ -2028,7 +2029,7 @@ const calificadorDeServicioAlCliente = [
         ""
     ],
     "categories": [
-      categories.CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER.category_key
+      routes.blog.children.calificadorDeServicioAlClienteOpinamaster.category_key
     ],
 },
 */

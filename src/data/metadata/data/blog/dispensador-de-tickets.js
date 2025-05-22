@@ -1,18 +1,27 @@
 import { routes } from "@/config/routes";
-import { LOGO_METADATA } from "@/data/metadata/config";
+import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
+
+const title = "Dispensador de Tickets - Tecnología Plus";
+const description = "Dispensador de tickets para sistemas de turnos. Ideales para organizar filas y mejorar la atención al cliente en puntos de alta concurrencia.";
+const keywords = ["Blog", "Dispensador de Tickets"];
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.blog.children.dispensadorDeTickets.url}`;
 
 export const metadata = {
-  title: "Página de Blog - Dispensador de Tickets",
-  description:
-    "Somos fabricantes. Descubre en nuestro blog cómo la tecnología mejora la experiencia de los usuarios en comercios. ¡Innovación para un mejor servicio!",
-  keywords: [
-    "Blog",
-  ],
+  title: {
+    absolute: title,
+  },
+  alternates: {
+    canonical: url,
+  },
+  description: description,
+  keywords: keywords,
+  robots: ROBOTS_CONFIG,
   openGraph: {
-    title: "Blog - Tecnología Plus",
-    description:
-      "Somos fabricantes. Descubre en nuestro blog cómo la tecnología mejora la experiencia de los usuarios en comercios. ¡Innovación para un mejor servicio!",
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/${routes.blog.url}`,
+    title: {
+      absolute: title,
+    },
+    description: description,
+    url: url,
     siteName: "Tecnología Plus",
     locale: "es_ES",
     type: "website",
@@ -20,22 +29,24 @@ export const metadata = {
       url: LOGO_METADATA,
       width: 192,
       height: 192,
-      alt: "Tecnología Plus - Soluciones tecnológicas para su negocio",
+      alt: "Logo de Tecnología Plus",
     }],
   },
   twitter: {
-    card: "summary",
-    title: "Blog - Tecnología Plus",
-    description:
-      "Somos fabricantes. Descubre en nuestro blog cómo la tecnología mejora la experiencia de los usuarios en comercios. ¡Innovación para un mejor servicio!",
+    title: {
+      absolute: title,
+    },
+    description: description,
     siteName: "Tecnología Plus",
+    url: url,
     locale: "es_ES",
     type: "website",
     images: [{
       url: LOGO_METADATA,
       width: 192,
       height: 192,
-      alt: "Tecnología Plus - Soluciones tecnológicas para su negocio",
+      alt: "Logo de Tecnología Plus",
     }],
+    card: "summary",
   },
 };

@@ -2,15 +2,15 @@ import getMetadata from "@/request/server/metadata/get-metadata";
 import BlogView from "@/sections/blog/views/root/blog-view";
 
 export async function generateMetadata() {
-  const metadata = getMetadata('blog');
+  const { root: metadata } = getMetadata('blog');
   return metadata;
 }
 
-const BlogPage = ({ searchParams }) => {
-  const page = searchParams.page || 1;
+const BlogPage = async ({ searchParams }) => {
+  const { page } = await searchParams;
   
   return (
-    <BlogView page={page} />
+    <BlogView page={page || 1} />
   );
 }
 

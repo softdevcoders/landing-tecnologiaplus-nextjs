@@ -7,7 +7,7 @@ import SliderHero from "@/sections/home/slider-hero";
 import VideoSection from "@/sections/home/VideoSection/ProductsSection/VideoSection";
 
 export async function generateMetadata() {
-  const metadata = getMetadata('default');
+  const metadata = getMetadata('home');
   return metadata;
 }
 
