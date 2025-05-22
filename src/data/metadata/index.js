@@ -21,7 +21,8 @@ import { metadata as rollosDeFichosParaTurnosLanding } from '@/data/metadata/dat
 import { metadata as dispensadorDeTicketsLanding } from '@/data/metadata/data/landings/dispensador-de-tickets/root';
 import { metadata as llamadoresDeMeserosLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/root';
 import { metadata as sistemasDeTurnosTurnomasterLanding } from '@/data/metadata/data/landings/sistema-de-turnos-turnomaster/root';
-  
+import { metadata as encuestaVirtualOpinamasterLanding } from '@/data/metadata/data/landings/encuesta-virtual-opinamaster/root';
+
 export default {  
   default: defaultMetadata,
   home,
@@ -66,6 +67,9 @@ export default {
     },
     'sistema-de-turnos-turnomaster': {
       root: sistemasDeTurnosTurnomasterLanding,
+    },
+    'encuesta-virtual-opinamaster': {
+      root: encuestaVirtualOpinamasterLanding,
     }
   }
 };
