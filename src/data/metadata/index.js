@@ -47,6 +47,7 @@ import { metadata as llamadoresDeMeserosLandingPantallaT1BLanding } from '@/data
 import { metadata as llamadoresDeMeserosLandingPantallaT6Landing } from '@/data/metadata/data/landings/llamadores-de-meseros/pantalla-t6';
 import { metadata as llamadoresDeMeserosLandingLlamadorDeMeserosE2BLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/llamador-de-meseros-e2-b';
 import { metadata as llamadoresDeMeserosLandingLlamadorDeMeserosE2NConTeclaPagarLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar';
+import { metadata as rollosDeFichosParaTurnosLandingRollosDeTurnos } from '@/data/metadata/data/landings/rollos-de-fichos-para-turnos/rollos-de-turnos';
   
 export default {  
   default: defaultMetadata,
@@ -123,6 +124,10 @@ export default {
       'pantalla-t6': llamadoresDeMeserosLandingPantallaT6Landing,
       'llamador-de-meseros-e2-b': llamadoresDeMeserosLandingLlamadorDeMeserosE2BLanding,
       'llamador-de-meseros-e2-n-con-tecla-pagar': llamadoresDeMeserosLandingLlamadorDeMeserosE2NConTeclaPagarLanding,
+    },
+    'rollos-de-fichos-para-turnos': {
+      root: rollosDeFichosParaTurnosLanding,
+      'rollos-de-turnos': rollosDeFichosParaTurnosLandingRollosDeTurnos,
     }
   }
 };
