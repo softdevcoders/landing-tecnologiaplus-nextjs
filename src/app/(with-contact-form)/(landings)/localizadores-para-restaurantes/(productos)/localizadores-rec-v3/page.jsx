@@ -3,26 +3,12 @@ import HowItWorks from "@/sections/localizadores-para-restaurantes/localizadores
 import LocalizadoresRelatedProducts from "@/sections/localizadores-para-restaurantes/landing/components/RelatedProducts/LocalizadoresRelatedProducts"; // Componente para mostrar productos relacionados
 import LogosSection from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/LogosSection/LogosSection"; // Sección de logos de marcas o clientes
 import ProductGallerySelected from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/ProductGallery/ProductGallerySelected";
+import getMetadata from "@/request/server/metadata/get-metadata";
 
-export const metadata = {
-  title: "Localizadores para Restaurantes REC-V3: Experiencia Sin Espera",
-  description:
-    "Tus clientes esperan su pedido sin perder el turno. Avisador vibra y alumbra cuando el pedido está listo. Ideal para autoservicio y plazoletas de comida.",
-  keywords: ["localizadores para restaurantes"],
-  openGraph: {
-    title: "Localizadores para Restaurantes REC-V3: Experiencia Sin Espera",
-    description:
-      "Tus clientes esperan su pedido sin perder el turno. Avisador vibra y alumbra cuando el pedido está listo. Ideal para autoservicio y plazoletas de comida.",
-    url: "https://landing-tecnologiaplus-nextjs-dev.vercel.app/localizadores-para-restaurantes/localizadores-rec-v3",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Localizadores para Restaurantes REC-V3: Experiencia Sin Espera",
-    description:
-      "Tus clientes esperan su pedido sin perder el turno. Avisador vibra y alumbra cuando el pedido está listo. Ideal para autoservicio y plazoletas de comida.",
-  },
-};
+export async function generateMetadata() {
+  const { 'localizadores-para-restaurantes': { 'localizadores-rec-v3': metadata } } = getMetadata('landings');
+  return metadata;
+} 
 
 export default function VerMasLocalizadoresRecV3() {
   return (

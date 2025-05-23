@@ -3,26 +3,12 @@ import HowItWorks from "@/sections/localizadores-para-restaurantes/localizadores
 import LocalizadoresRelatedProducts from "@/sections/localizadores-para-restaurantes/landing/components/RelatedProducts/LocalizadoresRelatedProducts"; // Componente para mostrar productos relacionados
 import LogosSection from "@/sections/localizadores-para-restaurantes/localizadores-cir-c2/components/LogosSection/LogosSection"; // Sección de logos de marcas o clientes
 import ProductGallerySelected from "@/sections/localizadores-para-restaurantes/localizadores-cir-c2/components/ProductGallery/ProductGallerySelected"; // Galería de imágenes del producto seleccionado
-
-export const metadata = {
-  title: "Localizadores CIR-C2: Solución para Autoservicio Eficiente",
-  description:
-    "Mantén el orden y mejora la entrega de pedidos con localizadores CIR-C2. Control separado y máxima eficiencia en restaurantes de autoservicio. ¡Solicita demo!",
-  keywords: ["localizadores para restaurantes"],
-  openGraph: {
-    title: "Localizadores CIR-C2: Solución para Autoservicio Eficiente",
-    description:
-      "Mantén el orden y mejora la entrega de pedidos con localizadores CIR-C2. Control separado y máxima eficiencia en restaurantes de autoservicio. ¡Solicita demo!",
-    url: "https://landing-tecnologiaplus-nextjs-dev.vercel.app/localizadores-para-restaurantes/localizadores-cir-c2",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Localizadores CIR-C2: Solución para Autoservicio Eficiente",
-    description:
-      "Mantén el orden y mejora la entrega de pedidos con localizadores CIR-C2. Control separado y máxima eficiencia en restaurantes de autoservicio. ¡Solicita demo!",
-  },
-};
+import getMetadata from "@/request/server/metadata/get-metadata";
+  
+export async function generateMetadata() {
+  const { 'localizadores-para-restaurantes': { 'localizadores-cir-c2': metadata } } = getMetadata('landings');
+  return metadata;
+} 
 
 export default function VerMasLocalizadoresCirC2() {
   return (

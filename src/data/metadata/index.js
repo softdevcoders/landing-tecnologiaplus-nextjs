@@ -18,6 +18,8 @@ import { metadata as calificadorDeServicioAlClienteOpinamasterLanding } from '@/
 import { metadata as llamadoDeEnfermeriaCuidamasterLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/root';
 import { metadata as llamadoDeEnfermeriaCuidamasterAlarmaDeLuzLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/alarma-de-luz';
 import { metadata as localizadoresParaRestaurantesLanding } from '@/data/metadata/data/landings/localizadores-para-restaurantes/root';
+import { metadata as localizadoresParaRestaurantesLandingLocalizadoresRecV3 } from '@/data/metadata/data/landings/localizadores-para-restaurantes/localizadores-rec-v3';
+import { metadata as localizadoresParaRestaurantesLandingLocalizadoresCirC2 } from '@/data/metadata/data/landings/localizadores-para-restaurantes/localizadores-cir-c2';
 import { metadata as rollosDeFichosParaTurnosLanding } from '@/data/metadata/data/landings/rollos-de-fichos-para-turnos/root';
 import { metadata as dispensadorDeTicketsLanding } from '@/data/metadata/data/landings/dispensador-de-tickets/root';
 import { metadata as llamadoresDeMeserosLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/root';
@@ -82,6 +84,8 @@ export default {
     },
     'localizadores-para-restaurantes': {
       root: localizadoresParaRestaurantesLanding,
+      'localizadores-rec-v3': localizadoresParaRestaurantesLandingLocalizadoresRecV3,
+      'localizadores-cir-c2': localizadoresParaRestaurantesLandingLocalizadoresCirC2,
     },
     'rollos-de-fichos-para-turnos': {
       root: rollosDeFichosParaTurnosLanding,
