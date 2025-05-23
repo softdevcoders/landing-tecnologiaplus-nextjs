@@ -40,7 +40,14 @@ import { metadata as turneroTurnoexpressLandingTurneroT3ModuloTurno } from '@/da
 import { metadata as turneroTurnoexpressLandingTurneroTransformer } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-transformer';
 import { metadata as calificadorDeServicioAlClienteOpinamasterLandingCalificadorDeServicio } from '@/data/metadata/data/landings/calificador-de-servicio-al-cliente-opinamaster/calificador-de-servicio';
 import { metadata as calificadorDeServicioAlClienteOpinamasterLandingAvisoDeParedParaCalificarServicio } from '@/data/metadata/data/landings/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio';
-
+import { metadata as llamadoresDeMeserosLandingHabladorDeMesa } from '@/data/metadata/data/landings/llamadores-de-meseros/hablador-de-mesa';
+import { metadata as llamadoresDeMeserosLandingControlNumerico } from '@/data/metadata/data/landings/llamadores-de-meseros/control-numerico';
+import { metadata as llamadoresDeMeserosLandingRelojReceptorDeLlamados } from '@/data/metadata/data/landings/llamadores-de-meseros/reloj-receptor-de-llamados';
+import { metadata as llamadoresDeMeserosLandingPantallaT1BLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/pantalla-t1-b';
+import { metadata as llamadoresDeMeserosLandingPantallaT6Landing } from '@/data/metadata/data/landings/llamadores-de-meseros/pantalla-t6';
+import { metadata as llamadoresDeMeserosLandingLlamadorDeMeserosE2BLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/llamador-de-meseros-e2-b';
+import { metadata as llamadoresDeMeserosLandingLlamadorDeMeserosE2NConTeclaPagarLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar';
+  
 export default {  
   default: defaultMetadata,
   home,
@@ -106,6 +113,16 @@ export default {
     },
     'encuesta-virtual-opinamaster': {
       root: encuestaVirtualOpinamasterLanding,
+    },
+    'llamadores-de-meseros': {
+      root: llamadoresDeMeserosLanding,
+      'hablador-de-mesa': llamadoresDeMeserosLandingHabladorDeMesa,
+      'control-numerico': llamadoresDeMeserosLandingControlNumerico,
+      'reloj-receptor-de-llamados': llamadoresDeMeserosLandingRelojReceptorDeLlamados,
+      'pantalla-t1-b': llamadoresDeMeserosLandingPantallaT1BLanding,
+      'pantalla-t6': llamadoresDeMeserosLandingPantallaT6Landing,
+      'llamador-de-meseros-e2-b': llamadoresDeMeserosLandingLlamadorDeMeserosE2BLanding,
+      'llamador-de-meseros-e2-n-con-tecla-pagar': llamadoresDeMeserosLandingLlamadorDeMeserosE2NConTeclaPagarLanding,
     }
   }
 };
