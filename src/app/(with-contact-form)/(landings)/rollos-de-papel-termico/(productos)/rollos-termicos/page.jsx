@@ -2,26 +2,12 @@ import TechnicalSheet from "@/sections/rollos-de-papel-termico/rollos-termicos/c
 import LogosSection from "@/sections/rollos-de-papel-termico/rollos-termicos/components/LogosSection/LogosSection";
 import RelatedProducts from "@/sections/rollos-de-papel-termico/landing/components/RelatedProducts/RelatedProducts";
 import ProductGallerySelected from "@/sections/rollos-de-papel-termico/rollos-termicos/components/ProductGallery/ProductGallerySelected";
+import getMetadata from "@/request/server/metadata/get-metadata";
 
-export const metadata = {
-  title: "Rollos de Papel Térmico: Calidad y Compatibilidad Garantizada",
-  description:
-    "Rollos térmicos para tickets y facturas. Variedad de tamaños y alta durabilidad. Compatibles con múltiples impresoras. ¡Compra directo de fabricante!",
-  keywords: ["Rollos de Papel térmico"],
-  openGraph: {
-    title: "Rollos de Papel Térmico: Calidad y Compatibilidad Garantizada",
-    description:
-      "Rollos térmicos para tickets y facturas. Variedad de tamaños y alta durabilidad. Compatibles con múltiples impresoras. ¡Compra directo de fabricante!",
-    url: "https://landing-tecnologiaplus-nextjs-dev.vercel.app/rollos-de-papel-termico/rollos-termicos",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Rollos de Papel Térmico: Calidad y Compatibilidad Garantizada",
-    description:
-      "Rollos térmicos para tickets y facturas. Variedad de tamaños y alta durabilidad. Compatibles con múltiples impresoras. ¡Compra directo de fabricante!",
-  },
-};
+export async function generateMetadata() {
+  const { 'rollos-de-papel-termico': { 'rollos-termicos': metadata } } = getMetadata('landings');
+  return metadata;
+}
 
 export default function VerMasTermicos() {
   return (

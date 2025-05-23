@@ -29,6 +29,8 @@ import { metadata as llamadoDeEnfermeriaCuidamasterLlamadorEx1Landing } from '@/
 import { metadata as llamadoDeEnfermeriaCuidamasterPantallaT1BLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/pantalla-t1-b';
 import { metadata as llamadoDeEnfermeriaCuidamasterPantallaT6Landing } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/pantalla-t6';
 import { metadata as llamadoDeEnfermeriaCuidamasterRelojReceptorDeLlamadosLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados';
+import { metadata as rollosDePapelTermicoLandingRollosTermicos } from '@/data/metadata/data/landings/rollos-de-papel-termico/rollos-termicos';
+import { metadata as dispensadorDeTicketsLandingDispensadorDeTicketsCaracol } from '@/data/metadata/data/landings/dispensador-de-tickets/dispensador-de-tickets-caracol';
   
 export default {  
   default: defaultMetadata,
@@ -53,6 +55,7 @@ export default {
     },
     'rollos-de-papel-termico': {
       root: rollosDePapelTermicoLanding,
+      'rollos-termicos': rollosDePapelTermicoLandingRollosTermicos, 
     },
     'calificador-de-servicio-al-cliente-opinamaster': {
       root: calificadorDeServicioAlClienteOpinamasterLanding,
@@ -75,6 +78,7 @@ export default {
     },
     'dispensador-de-tickets': {
       root: dispensadorDeTicketsLanding,
+      'dispensador-de-tickets-caracol': dispensadorDeTicketsLandingDispensadorDeTicketsCaracol,
     },
     'llamadores-de-meseros': {
       root: llamadoresDeMeserosLanding,
