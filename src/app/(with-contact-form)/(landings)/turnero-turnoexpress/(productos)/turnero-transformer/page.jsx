@@ -5,26 +5,12 @@ import HowItWorks from "@/sections/turnero-turnoexpress/turnero-t3-modulo-turno/
 import TurnoExpressRelatedProducts from "@/sections/turnero-turnoexpress/root/components/RelatedProducts/TurnoExpressRelatedProducts";
 import ProductGallerySelected from "@/sections/turnero-turnoexpress/turnero-t3-modulo-turno/components/ProductGallery/ProductGallerySelected";
 import ControlsOptions from "@/sections/turnero-turnoexpress/turnero-t1-n/components/ControlsOptions/ControlsOptions";
+import getMetadata from "@/request/server/metadata/get-metadata";
 
-export const metadata = {
-  title: "Turnero Transformer: Personalización Total en la Gestión de Turnos",
-  description:
-    "Turnero adaptable a cada producto o servicio. Ideal para autoservicio y oficinas con múltiples filas. Mejora la atención sin alterar procesos. ¡Conócelos!",
-  keywords: ["Turnero"],
-  openGraph: {
-    title: "Turnero Transformer: Personalización Total en la Gestión de Turnos",
-    description:
-      "Turnero adaptable a cada producto o servicio. Ideal para autoservicio y oficinas con múltiples filas. Mejora la atención sin alterar procesos. ¡Conócelos!",
-    url: "https://landing-tecnologiaplus-nextjs-dev.vercel.app/turnero-turnoexpress/turnero-transformer",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Turnero Transformer: Personalización Total en la Gestión de Turnos",
-    description:
-      "Turnero adaptable a cada producto o servicio. Ideal para autoservicio y oficinas con múltiples filas. Mejora la atención sin alterar procesos. ¡Conócelos!",
-  },
-};
+export async function generateMetadata() {
+  const { 'turnero-turnoexpress': { 'turnero-transformer': metadata } } = getMetadata('landings');
+  return metadata;
+} 
 
 export default function VerMasPantallaSegunProducto() {
   return (

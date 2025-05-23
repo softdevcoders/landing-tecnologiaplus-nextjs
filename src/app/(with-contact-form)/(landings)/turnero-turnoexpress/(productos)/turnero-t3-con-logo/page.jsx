@@ -5,26 +5,12 @@ import HowItWorks from "@/sections/turnero-turnoexpress/turnero-t3-modulo-turno/
 import TurnoExpressRelatedProducts from "@/sections/turnero-turnoexpress/root/components/RelatedProducts/TurnoExpressRelatedProducts";
 import ProductGallerySelected from "@/sections/turnero-turnoexpress/turnero-t3-modulo-turno/components/ProductGallery/ProductGallerySelected";
 import ControlsOptions from "@/sections/turnero-turnoexpress/turnero-t1-n/components/ControlsOptions/ControlsOptions";
+import getMetadata from "@/request/server/metadata/get-metadata";
 
-export const metadata = {
-  title: "Turnero T3: Llama Turnos y Resalta tu Marca Profesionalmente",
-  description:
-    "Turnero digital con espacio para logo. Llama turnos en orden y muestra ventanillas libres. Eleva la imagen y eficiencia de tu empresa. ¡Solicita demo!",
-  keywords: ["Turnero digital"],
-  openGraph: {
-    title: "Turnero T3: Llama Turnos y Resalta tu Marca Profesionalmente",
-    description:
-      "Turnero digital con espacio para logo. Llama turnos en orden y muestra ventanillas libres. Eleva la imagen y eficiencia de tu empresa. ¡Solicita demo!",
-    url: "https://landing-tecnologiaplus-nextjs-dev.vercel.app/turnero-turnoexpress/turnero-t3-modulo-turno",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Turnero T3: Llama Turnos y Resalta tu Marca Profesionalmente",
-    description:
-      "Turnero digital con espacio para logo. Llama turnos en orden y muestra ventanillas libres. Eleva la imagen y eficiencia de tu empresa. ¡Solicita demo!",
-  },
-};
+export async function generateMetadata() {
+  const { 'turnero-turnoexpress': { 'turnero-t3-con-logo': metadata } } = getMetadata('landings');
+  return metadata;
+} 
 
 export default function VerMasPantallaT3() {
   return (

@@ -31,7 +31,12 @@ import { metadata as llamadoDeEnfermeriaCuidamasterPantallaT6Landing } from '@/d
 import { metadata as llamadoDeEnfermeriaCuidamasterRelojReceptorDeLlamadosLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados';
 import { metadata as rollosDePapelTermicoLandingRollosTermicos } from '@/data/metadata/data/landings/rollos-de-papel-termico/rollos-termicos';
 import { metadata as dispensadorDeTicketsLandingDispensadorDeTicketsCaracol } from '@/data/metadata/data/landings/dispensador-de-tickets/dispensador-de-tickets-caracol';
-  
+import { metadata as turneroTurnoexpressLandingTurneroFilaUnicaSupermercados } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-fila-unica-supermercados';
+import { metadata as turneroTurnoexpressLandingTurneroT1B } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-t1-b';
+import { metadata as turneroTurnoexpressLandingTurneroT1N } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-t1-n';
+import { metadata as turneroTurnoexpressLandingTurneroT3ModuloTurno } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-t3-modulo-turno';
+import { metadata as turneroTurnoexpressLandingTurneroTransformer } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-transformer';
+
 export default {  
   default: defaultMetadata,
   home,
@@ -52,6 +57,11 @@ export default {
   landings: {
     'turnero-turnoexpress': {
       root: turneroTurnoexpressLanding,
+      'turnero-fila-unica-supermercados': turneroTurnoexpressLandingTurneroFilaUnicaSupermercados,
+      'turnero-t1-b': turneroTurnoexpressLandingTurneroT1B,
+      'turnero-t1-n': turneroTurnoexpressLandingTurneroT1N,
+      'turnero-t3-modulo-turno': turneroTurnoexpressLandingTurneroT3ModuloTurno,
+      'turnero-transformer': turneroTurnoexpressLandingTurneroTransformer,
     },
     'rollos-de-papel-termico': {
       root: rollosDePapelTermicoLanding,

@@ -5,27 +5,12 @@ import HowItWorks from "@/sections/turnero-turnoexpress/turnero-t1-n/components/
 import TurnoExpressRelatedProducts from "@/sections/turnero-turnoexpress/root/components/RelatedProducts/TurnoExpressRelatedProducts";
 import ProductGallerySelected from "@/sections/turnero-turnoexpress/turnero-t1-n/components/ProductGallery/ProductGallerySelected";
 import ControlsOptions from "@/sections/turnero-turnoexpress/turnero-t1-n/components/ControlsOptions/ControlsOptions";
+import getMetadata from "@/request/server/metadata/get-metadata";
 
-// Metadata for the page
-export const metadata = {
-  title: "Turnero T1-N: Organización y Marca en la Gestión de Turnos",
-  description:
-    "Pantalla personalizable que proyecta tu imagen mientras gestiona turnos. Uso frecuente en salud, gastronomía y oficinas. ¡Solicita asesoría personalizada!",
-  keywords: ["Turnero digital"],
-  openGraph: {
-    title: "Turnero T1-N: Organización y Marca en la Gestión de Turnos",
-    description:
-      "Pantalla personalizable que proyecta tu imagen mientras gestiona turnos. Uso frecuente en salud, gastronomía y oficinas. ¡Solicita asesoría personalizada!",
-    url: "https://landing-tecnologiaplus-nextjs.vercel.app/turnero-turnoexpress/turnero-t1-n",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Turnero T1-N: Organización y Marca en la Gestión de Turnos",
-    description:
-      "Pantalla personalizable que proyecta tu imagen mientras gestiona turnos. Uso frecuente en salud, gastronomía y oficinas. ¡Solicita asesoría personalizada!",
-  },
-};
+export async function generateMetadata() {
+  const { 'turnero-turnoexpress': { 'turnero-t1-n': metadata } } = getMetadata('landings');
+  return metadata;
+} 
 
 export default function VerMasPantallaT1N() {
   return (
