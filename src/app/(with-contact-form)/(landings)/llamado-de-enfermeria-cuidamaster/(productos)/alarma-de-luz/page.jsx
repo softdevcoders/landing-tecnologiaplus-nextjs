@@ -4,27 +4,12 @@ import HowItWorks from "@/sections/llamado-de-enfermeria-cuidamaster/alarma-de-l
 import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/RelatedProducts/EnfermeriaRelatedProducts";
 import ProductGallerySelected from "@/sections/llamado-de-enfermeria-cuidamaster/alarma-de-luz/components/ProductGallery/ProductGallerySelected";
 import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/ClientsSection/EnfermeriaClientsSection";
+import getMetadata from "@/request/server/metadata/get-metadata";
 
-// Metadata for the page
-export const metadata = {
-  title: "Alarma de Luz para Enfermería: Atención Visual y Sonora",
-  description:
-    "Facilita la comunicación en hospitales con nuestra alarma de luz y sonido. Ideal para áreas amplias y entornos ruidosos. ¡Solicita tu cotización!",
-  keywords: ["Alarma visual y sonora"],
-  openGraph: {
-    title: "Alarma de Luz para Enfermería: Atención Visual y Sonora",
-    description:
-      "Facilita la comunicación en hospitales con nuestra alarma de luz y sonido. Ideal para áreas amplias y entornos ruidosos. ¡Solicita tu cotización!",
-    url: "https://landing-tecnologiaplus-nextjs-dev.vercel.app/llamado-de-enfermeria-cuidamaster/alarma-de-luz",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Alarma de Luz para Enfermería: Atención Visual y Sonora",
-    description:
-      "Facilita la comunicación en hospitales con nuestra alarma de luz y sonido. Ideal para áreas amplias y entornos ruidosos. ¡Solicita tu cotización!",
-  },
-};
+export async function generateMetadata() {
+  const { 'llamado-de-enfermeria-cuidamaster': { 'alarma-de-luz': metadata } } = getMetadata('landings');
+  return metadata;
+}
 
 // Main component for the page
 export default function VerMasEnfermeriaAlarmaDeLuz() {
