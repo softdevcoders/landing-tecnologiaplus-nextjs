@@ -5,27 +5,12 @@ import TechnicalSheet from "@/sections/turnero-turnoexpress/turnero-t1-b/compone
 import HowItWorks from "@/sections/turnero-turnoexpress/turnero-t1-b/components/HowItWorks/HowItWorks";
 import TurnoExpressRelatedProducts from "@/sections/turnero-turnoexpress/root/components/RelatedProducts/TurnoExpressRelatedProducts";
 import ProductGallerySelected from "@/sections/turnero-turnoexpress/turnero-t1-b/components/ProductGallery/ProductGallerySelected";
+import getMetadata from "@/request/server/metadata/get-metadata";
 
-// Metadatos para SEO y redes sociales
-export const metadata = {
-  title: "Turnero T1-B: Solución Compacta en Salas de Espera",
-  description:
-    "Turnero inalámbrico de bajo costo, ideal para zonas de espera pequeñas. Llama turnos en orden y aleatorios. Fácil instalación y uso. ¡Cotiza ahora!",
-  keywords: ["Turnero"],
-  openGraph: {
-    title: "Turnero T1-B: Solución Compacta en Salas de Espera",
-    description:
-      "Turnero inalámbrico de bajo costo, ideal para zonas de espera pequeñas. Llama turnos en orden y aleatorios. Fácil instalación y uso. ¡Cotiza ahora!",
-    url: "https://landing-tecnologiaplus-nextjs-dev.vercel.app/turnero-turnoexpress/turnero-t1-b",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Turnero T1-B: Solución Compacta en Salas de Espera",
-    description:
-      "Turnero inalámbrico de bajo costo, ideal para zonas de espera pequeñas. Llama turnos en orden y aleatorios. Fácil instalación y uso. ¡Cotiza ahora!",
-  },
-};
+export async function generateMetadata() {
+  const { 'turnero-turnoexpress': { 'turnero-t1-b': metadata } } = getMetadata('landings');
+  return metadata;
+} 
 
 // Componente principal de la página
 export default function VerMasPantallaT1B() {

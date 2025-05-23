@@ -4,6 +4,12 @@ import TechnicalSheet from "@/sections/llamadores-de-meseros/reloj-receptor-de-l
 import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/landing/components/RelatedProducts/LlamadorMeserosRelatedProducts"; // Componente para mostrar productos relacionados
 import HowItWorks from "@/sections/llamadores-de-meseros/reloj-receptor-de-llamados/components/HowItWorks/HowItWorks"; // Componente para explicar cómo funciona el producto
 import ProductGallerySelected from "@/sections/llamadores-de-meseros/reloj-receptor-de-llamados/components/ProductGallery/ProductGallerySelected"; // Componente para mostrar la galería de imágenes del producto
+import getMetadata from "@/request/server/metadata/get-metadata";
+
+export async function generateMetadata() {
+  const { 'llamadores-de-meseros': { 'reloj-receptor-de-llamados': metadata } } = getMetadata('landings');
+  return metadata;
+} 
 
 // Componente principal de la página
 export default function VerMasMeserosRelojReceptor() {

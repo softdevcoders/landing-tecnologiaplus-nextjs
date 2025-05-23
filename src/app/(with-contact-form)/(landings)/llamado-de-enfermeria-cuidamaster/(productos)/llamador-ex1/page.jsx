@@ -4,27 +4,13 @@ import TechnicalSheet from "@/sections/llamado-de-enfermeria-cuidamaster/llamado
 import HowItWorks from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-ex1/components/HowItWorks/HowItWorks";
 import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/RelatedProducts/EnfermeriaRelatedProducts";
 import ProductGallerySelected from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-ex1/components/ProductGallery/ProductGallerySelected";
+import getMetadata from "@/request/server/metadata/get-metadata";
 
-// Metadata for the page
-export const metadata = {
-  title: "Llamador de Enfermería EX1: Cable Extensor y Accesibilidad",
-  description:
-    "Facilita el llamado de ayuda con el EX1, diseñado para máxima accesibilidad en camas hospitalarias y hogares geriátricos. ¡Solicita información!",
-  keywords: ["Sistema de timbres para habitaciones"],
-  openGraph: {
-    title: "Llamador de Enfermería EX1: Cable Extensor y Accesibilidad",
-    description:
-      "Facilita el llamado de ayuda con el EX1, diseñado para máxima accesibilidad en camas hospitalarias y hogares geriátricos. ¡Solicita información!",
-    url: "https://landing-tecnologiaplus-nextjs-dev.vercel.app/llamado-de-enfermeria-cuidamaster/llamador-ex1",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Llamador de Enfermería EX1: Cable Extensor y Accesibilidad",
-    description:
-      "Facilita el llamado de ayuda con el EX1, diseñado para máxima accesibilidad en camas hospitalarias y hogares geriátricos. ¡Solicita información!",
-  },
-};
+export async function generateMetadata() {
+  const { 'llamado-de-enfermeria-cuidamaster': { 'llamador-ex1': metadata } } = getMetadata('landings');
+  return metadata;
+}
+
 
 // Main component for the page
 export default function VerMasEnfermeriaLlamadorConExtensor() {
