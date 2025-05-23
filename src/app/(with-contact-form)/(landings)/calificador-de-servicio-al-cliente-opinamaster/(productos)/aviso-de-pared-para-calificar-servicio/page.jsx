@@ -3,29 +3,15 @@ import TechnicalSheet from "@/sections/calificador-de-servicio-al-cliente-opinam
 import HowItWorks from "@/sections/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio/components/HowItWorks/HowItWorks";
 import LogosSection from "@/sections/calificador-de-servicio-al-cliente-opinamaster/landing/components/ClientsSection/CalificadorClientsSection";
 import ProductGallerySelected from "@/sections/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio/components/ProductGallery/ProductGallerySelected";
-
+import getMetadata from "@/request/server/metadata/get-metadata";
+  
 // Importing related products component
 import CalificadorRelatedProducts from "@/sections/calificador-de-servicio-al-cliente-opinamaster/landing/components/RelatedProducts/CalificadorRelatedProducts";
 
-export const metadata = {
-  title: "Aviso de Pared para Calificar Servicio: Opiniones Sin Contacto",
-  description:
-    "Recoge opiniones fácilmente en baños, áreas comunes y coworking. Calificador práctico y discreto para espacios sin contacto humano. ¡Mejora tu servicio!",
-  keywords: ["AVISO DE PARED"],
-  openGraph: {
-    title: "Aviso de Pared para Calificar Servicio: Opiniones Sin Contacto",
-    description:
-      "Recoge opiniones fácilmente en baños, áreas comunes y coworking. Calificador práctico y discreto para espacios sin contacto humano. ¡Mejora tu servicio!",
-    url: "https://landing-tecnologiaplus-nextjs-dev.vercel.app/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Aviso de Pared para Calificar Servicio: Opiniones Sin Contacto",
-    description:
-      "Recoge opiniones fácilmente en baños, áreas comunes y coworking. Calificador práctico y discreto para espacios sin contacto humano. ¡Mejora tu servicio!",
-  },
-};
+export async function generateMetadata() {
+  const { 'calificador-de-servicio-al-cliente-opinamaster': { 'aviso-de-pared-para-calificar-servicio': metadata } } = getMetadata('landings');
+  return metadata;
+}
 
 export default function VerMasAvisoDePared() {
   return (

@@ -38,6 +38,8 @@ import { metadata as turneroTurnoexpressLandingTurneroT1B } from '@/data/metadat
 import { metadata as turneroTurnoexpressLandingTurneroT1N } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-t1-n';
 import { metadata as turneroTurnoexpressLandingTurneroT3ModuloTurno } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-t3-modulo-turno';
 import { metadata as turneroTurnoexpressLandingTurneroTransformer } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-transformer';
+import { metadata as calificadorDeServicioAlClienteOpinamasterLandingCalificadorDeServicio } from '@/data/metadata/data/landings/calificador-de-servicio-al-cliente-opinamaster/calificador-de-servicio';
+import { metadata as calificadorDeServicioAlClienteOpinamasterLandingAvisoDeParedParaCalificarServicio } from '@/data/metadata/data/landings/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio';
 
 export default {  
   default: defaultMetadata,
@@ -71,6 +73,8 @@ export default {
     },
     'calificador-de-servicio-al-cliente-opinamaster': {
       root: calificadorDeServicioAlClienteOpinamasterLanding,
+      'calificador-de-servicio': calificadorDeServicioAlClienteOpinamasterLandingCalificadorDeServicio,
+      'aviso-de-pared-para-calificar-servicio': calificadorDeServicioAlClienteOpinamasterLandingAvisoDeParedParaCalificarServicio,
     },
     'llamado-de-enfermeria-cuidamaster': {
       root: llamadoDeEnfermeriaCuidamasterLanding,
