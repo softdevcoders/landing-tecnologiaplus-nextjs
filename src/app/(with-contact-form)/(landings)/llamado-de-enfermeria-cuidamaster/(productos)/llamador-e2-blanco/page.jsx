@@ -4,27 +4,13 @@ import TechnicalSheet from "@/sections/llamado-de-enfermeria-cuidamaster/llamado
 import HowItWorks from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-e2-blanco/components/HowItWorks/HowItWorks";
 import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/RelatedProducts/EnfermeriaRelatedProducts";
 import ProductGallerySelected from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-e2-blanco/components/ProductGallery/ProductGallerySelected";
+import getMetadata from "@/request/server/metadata/get-metadata";
 
-// Metadata for the page
-export const metadata = {
-  title: "Llamador de Enfermería E2 Blanco: Atención Inmediata",
-  description:
-    "Mejora la experiencia de pacientes en clínicas y hospitales con el llamador inalámbrico E2. Ágil, cómodo y fácil de usar. ¡Solicita asesoría hoy!",
-  keywords: ["Llamado de enfermería inhalambrico"],
-  openGraph: {
-    title: "Llamador de Enfermería E2 Blanco: Atención Inmediata",
-    description:
-      "Mejora la experiencia de pacientes en clínicas y hospitales con el llamador inalámbrico E2. Ágil, cómodo y fácil de usar. ¡Solicita asesoría hoy!",
-    url: "https://landing-tecnologiaplus-nextjs-dev.vercel.app/llamado-de-enfermeria-cuidamaster/llamador-e2-blanco",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Llamador de Enfermería E2 Blanco: Atención Inmediata",
-    description:
-      "Mejora la experiencia de pacientes en clínicas y hospitales con el llamador inalámbrico E2. Ágil, cómodo y fácil de usar. ¡Solicita asesoría hoy!",
-  },
-};
+export async function generateMetadata() {
+  const { 'llamado-de-enfermeria-cuidamaster': { 'llamador-e2-blanco': metadata } } = getMetadata('landings');
+  return metadata;
+}
+
 
 // Main component for the page
 export default function VerMasEnfermeriaLlamadorV2b() {

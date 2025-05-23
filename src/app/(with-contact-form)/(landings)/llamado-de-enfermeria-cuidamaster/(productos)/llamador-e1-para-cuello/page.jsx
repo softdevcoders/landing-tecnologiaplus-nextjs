@@ -4,27 +4,13 @@ import HowItWorks from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-e1
 import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/RelatedProducts/EnfermeriaRelatedProducts";
 import ProductGallerySelected from "@/sections/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello/components/ProductGallery/ProductGallerySelected";
 import LogosSection from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/ClientsSection/EnfermeriaClientsSection";
+import getMetadata from "@/request/server/metadata/get-metadata";
+  
+export async function generateMetadata() {
+  const { 'llamado-de-enfermeria-cuidamaster': { 'llamador-e1-para-cuello': metadata } } = getMetadata('landings');
+  return metadata;
+}
 
-// Metadata for SEO
-export const metadata = {
-  title: "Llamador de Enfermería E1 para Cuello: Autonomía Total",
-  description:
-    "Brinda libertad a tus pacientes con el botón portátil E1. Resistente al agua y fácil de usar. Perfecto para adultos mayores. ¡Conoce sus ventajas!",
-  keywords: ["Botón de enfermería"],
-  openGraph: {
-    title: "Llamador de Enfermería E1 para Cuello: Autonomía Total",
-    description:
-      "Brinda libertad a tus pacientes con el botón portátil E1. Resistente al agua y fácil de usar. Perfecto para adultos mayores. ¡Conoce sus ventajas!",
-    url: "http://landing-tecnologiaplus-nextjs-dev.vercel.app/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Llamador de Enfermería E1 para Cuello: Autonomía Total",
-    description:
-      "Brinda libertad a tus pacientes con el botón portátil E1. Resistente al agua y fácil de usar. Perfecto para adultos mayores. ¡Conoce sus ventajas!",
-  },
-};
 
 // Main component
 export default function VerMasEnfermeriaBotonE1() {

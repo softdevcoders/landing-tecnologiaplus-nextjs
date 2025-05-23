@@ -4,27 +4,13 @@ import TechnicalSheet from "@/sections/llamado-de-enfermeria-cuidamaster/reloj-r
 import HowItWorks from "@/sections/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados/components/HowItWorks/HowItWorks"; // How it works section component
 import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/RelatedProducts/EnfermeriaRelatedProducts"; // Related products section component
 import ProductGallerySelected from "@/sections/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados/components/ProductGallery/ProductGallerySelected"; // Product gallery component
+import getMetadata from "@/request/server/metadata/get-metadata";
 
-// Metadata for the page
-export const metadata = {
-  title: "Reloj Receptor de Llamados: Atención Ágil en Enfermería",
-  description:
-    "Recibe alertas instantáneas y vibra mostrando el número de cama. Ideal para personal de salud en hospitales y hogares geriátricos. ¡Solicita asesoría!",
-  keywords: ["Reloj receptor de llamados de enfermería"],
-  openGraph: {
-    title: "Reloj Receptor de Llamados: Atención Ágil en Enfermería",
-    description:
-      "Recibe alertas instantáneas y vibra mostrando el número de cama. Ideal para personal de salud en hospitales y hogares geriátricos. ¡Solicita asesoría!",
-    url: "http://landing-tecnologiaplus-nextjs-dev.vercel.app/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Reloj Receptor de Llamados: Atención Ágil en Enfermería",
-    description:
-      "Recibe alertas instantáneas y vibra mostrando el número de cama. Ideal para personal de salud en hospitales y hogares geriátricos. ¡Solicita asesoría!",
-  },
-};
+export async function generateMetadata() {
+  const { 'llamado-de-enfermeria-cuidamaster': { 'reloj-receptor-de-llamados': metadata } } = getMetadata('landings');
+  return metadata;
+}
+
 
 // Main component for the page
 export default function VerMasEnfermeriaRelojReceptor() {

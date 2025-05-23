@@ -23,6 +23,12 @@ import { metadata as dispensadorDeTicketsLanding } from '@/data/metadata/data/la
 import { metadata as llamadoresDeMeserosLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/root';
 import { metadata as sistemasDeTurnosTurnomasterLanding } from '@/data/metadata/data/landings/sistema-de-turnos-turnomaster/root';
 import { metadata as encuestaVirtualOpinamasterLanding } from '@/data/metadata/data/landings/encuesta-virtual-opinamaster/root';
+import { metadata as llamadoDeEnfermeriaCuidamasterLlamadorE1ParaCuelloLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello';
+import { metadata as llamadoDeEnfermeriaCuidamasterLlamadorE2BlancoLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/llamador-e2-blanco';
+import { metadata as llamadoDeEnfermeriaCuidamasterLlamadorEx1Landing } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/llamador-ex1';
+import { metadata as llamadoDeEnfermeriaCuidamasterPantallaT1BLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/pantalla-t1-b';
+import { metadata as llamadoDeEnfermeriaCuidamasterPantallaT6Landing } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/pantalla-t6';
+import { metadata as llamadoDeEnfermeriaCuidamasterRelojReceptorDeLlamadosLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados';
   
 export default {  
   default: defaultMetadata,
@@ -54,6 +60,12 @@ export default {
     'llamado-de-enfermeria-cuidamaster': {
       root: llamadoDeEnfermeriaCuidamasterLanding,
       'alarma-de-luz': llamadoDeEnfermeriaCuidamasterAlarmaDeLuzLanding,
+      'llamador-e1-para-cuello': llamadoDeEnfermeriaCuidamasterLlamadorE1ParaCuelloLanding,
+      'llamador-e2-blanco': llamadoDeEnfermeriaCuidamasterLlamadorE2BlancoLanding,
+      'llamador-ex1': llamadoDeEnfermeriaCuidamasterLlamadorEx1Landing,
+      'pantalla-t1-b': llamadoDeEnfermeriaCuidamasterPantallaT1BLanding,
+      'pantalla-t6': llamadoDeEnfermeriaCuidamasterPantallaT6Landing,
+      'reloj-receptor-de-llamados': llamadoDeEnfermeriaCuidamasterRelojReceptorDeLlamadosLanding,   
     },
     'localizadores-para-restaurantes': {
       root: localizadoresParaRestaurantesLanding,
