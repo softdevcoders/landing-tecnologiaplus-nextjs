@@ -52,6 +52,7 @@ const products = [
     description: "Transforma opiniones en acciones estratégicas.",
     imageSrc: "v1738685536/Opinamaster_2x-8_sg1wyy.webp",
     altText: "imagen de OpinaMaster",
+    link: routes.landings.encuestaVirtual.url,
   }, 
   {
     title: "Dispensador de tiquetes",

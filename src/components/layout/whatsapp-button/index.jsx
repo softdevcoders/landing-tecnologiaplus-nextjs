@@ -1,25 +1,22 @@
-'use client'
-import { useEffect, useState } from "react";
+'use client';
+
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import style from "./whatsapp-button.module.scss";
 import { FaWhatsapp } from "react-icons/fa";
 
-function WhatsappButton() {
+const WhatsappButton = () => {
   const [whatsappLink, setWhatsappLink] = useState("https://wa.me/573164682034");
-  
+  const pathname = usePathname();
+
   useEffect(() => {
-    // Get the current page information to include in the message
-    if (typeof window !== 'undefined') {
-      const currentPage = window.location.href;
-      const pageTitle = document.title || 'Tecnología Plus';
-      
-      // Create a more professional and friendly message
-      const message = encodeURIComponent(
-        `Hola, estoy interesado en sus productos. Estoy visitando la página "${pageTitle}" y me gustaría recibir más información. ¿Podrían ayudarme?`
-      );
-      
-      setWhatsappLink(`https://wa.me/573164682034?text=${message}`);
-    }
-  }, []);
+    const pageTitle = document.title || 'Tecnología Plus';
+    const message = encodeURIComponent(
+      `Hola, estoy interesado en sus productos. Estoy visitando la página "${pageTitle}" y me gustaría recibir más información. ¿Podrían ayudarme?`
+    );
+
+    setWhatsappLink(`https://wa.me/573164682034?text=${message}`);
+  }, [pathname]);
 
   return (
     <a
@@ -32,6 +29,8 @@ function WhatsappButton() {
       <FaWhatsapp />
     </a>
   );
-}
+};
 
 export default WhatsappButton;
+
+
