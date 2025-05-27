@@ -56,7 +56,7 @@ function Header({ headerAlt = false }) {
         <div className={styles.header__navlinks_left}>
           <Link href={routes.home.url} className={styles.header__navlinks_link}>{routes.home.label}</Link>
           <DropdownMenu links={productLinks} title="Productos" />
-          <DropdownMenu links={blogLinks} title="Blog" />
+          <DropdownMenu links={blogLinks} title={{ href: routes.blog.url, text: "Blog" }} />
         </div>
         <div className={styles.header__logo_image_container}>
           <div className={styles.header__logo_image_container_mobile}>
