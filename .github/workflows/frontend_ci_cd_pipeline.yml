@@ -27,7 +27,7 @@ env:
   GMAIL_RECIPIENTS: ${{ secrets.GMAIL_RECIPIENTS }}
   GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
   SHOULD_ROBOTS_INDEX: ${{ vars.SHOULD_ROBOTS_INDEX }}
-  
+
   NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
   NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
   NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
@@ -73,6 +73,10 @@ jobs:
       - name: Stop Current Running Container
         run: |
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm -f ${{ env.DOCKER_CONTAINER_NAME }} || true
+      
+      - name: Prune Docker Images unused
+        run: |
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f
 
       - name: Pull Docker Image
         run: |
@@ -87,5 +91,8 @@ jobs:
             -e GMAIL_RECIPIENTS=${{ env.GMAIL_RECIPIENTS }} \
             -e GMAIL_APP_PASSWORD=${{ env.GMAIL_APP_PASSWORD }} \
             -e SHOULD_ROBOTS_INDEX=${{ env.SHOULD_ROBOTS_INDEX }} \
+            -e NEXT_PUBLIC_BASE_URL=${{ env.NEXT_PUBLIC_BASE_URL }} \
+            -e NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }} \
+            -e NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=${{ env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }} \
             --name ${{ env.DOCKER_CONTAINER_NAME }} \
             ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}

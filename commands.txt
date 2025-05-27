@@ -7,5 +7,3 @@ docker compose -f docker-compose.yml --env-file .env up --build
 #   PRODUCTION COMMANDS
 ########################################
 docker compose -f docker-compose-production.yml --env-file .env.production up --build 
-
-docker compose -f docker-compose-production.yml --env-file .env.production up --build --abort-on-container-exit --remove-orphans
