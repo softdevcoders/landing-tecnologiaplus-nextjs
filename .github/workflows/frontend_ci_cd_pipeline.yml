@@ -74,10 +74,6 @@ jobs:
         run: |
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm -f ${{ env.DOCKER_CONTAINER_NAME }} || true
       
-      - name: Prune Docker Images unused
-        run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f
-
       - name: Pull Docker Image
         run: |
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker pull ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
@@ -96,3 +92,7 @@ jobs:
             -e NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=${{ env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }} \
             --name ${{ env.DOCKER_CONTAINER_NAME }} \
             ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
+            
+      - name: Prune Docker Images unused
+        run: |
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f
