@@ -72,7 +72,7 @@ const BlogPostPage = async ({ params }) => {
   const post = getPost({ blogPostSlug });
 
   if (!post) {
-    return notFound();
+    return null;
   }
 
   return (
