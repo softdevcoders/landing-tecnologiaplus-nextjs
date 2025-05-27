@@ -13,7 +13,6 @@ export async function generateMetadata({ params }) {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
     
     return {
-      metadataBase: new URL(baseUrl),
       title: {
         absolute: post?.metadata?.title
       },
@@ -38,11 +37,12 @@ export async function generateMetadata({ params }) {
         type: 'website',
       },
       twitter: {
-        card: 'summary_large_image',
+        card: 'summary',
         title: {
           absolute: post?.metadata?.title
         },
         description: post?.metadata?.description,
+        url: `${baseUrl}${post.current_link}`,
         images: [{
           url: `https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${post.images[0]}`,
           width: 600,
@@ -53,9 +53,6 @@ export async function generateMetadata({ params }) {
       },
       alternates: {
         canonical: `${baseUrl}${post.current_link}`,
-        languages: {
-          es: `${baseUrl}${post.current_link}`,
-        },
       },
       manifest: `${baseUrl}/manifest.json`,
       icons: {
@@ -71,22 +68,17 @@ export async function generateMetadata({ params }) {
 }
 
 const BlogPostPage = async ({ params }) => {
-  try {
-    const { blogPostSlug } = await params;
+  const { blogPostSlug } = await params;
 
-    const post = getPost({ blogPostSlug });
+  const post = getPost({ blogPostSlug });
 
-    if (!post) {
-      return notFound();
-    }
-
-    return (
-      <PostView post={post} />
-    );
-  } catch (error) {
-    console.error("Error loading blog post:", error);
-    return null;
+  if (!post) {
+    return notFound();
   }
+
+  return (
+    <PostView post={post} />
+  );
 }
 
 export default BlogPostPage;
