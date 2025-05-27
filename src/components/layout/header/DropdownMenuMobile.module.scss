@@ -1,7 +1,6 @@
 
 .dropdownMenu {
   &__container {
-    gap: 1rem;
     width: 100%;
 
     .dropdownMenu__title {
@@ -39,7 +38,6 @@
       visibility: hidden;
       opacity: 0; 
       height: 0;
-      overflow: hidden;
       transition: all 0.3s ease;
 
       &.dropdownMenu__itemsVisible {

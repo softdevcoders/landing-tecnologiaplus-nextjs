@@ -1,15 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import styles from "./DropdownMenuMobile.module.scss";
 import { IoIosArrowDown } from "react-icons/io";
+import styles from "./DropdownMenuMobile.module.scss";
 
-const DropdownMenuMobile = ({ links = [], title = "" }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const DropdownMenuMobile = ({ links = [], title = "", isOpen = false, handleDropDownMobileOpen = () => {} }) => {
   const handleTitleClick = () => {
-    setIsOpen(!isOpen);
+    handleDropDownMobileOpen(title, !isOpen);
   };
 
   return (

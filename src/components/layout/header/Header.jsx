@@ -11,7 +11,12 @@ import styles from "./Header.module.scss";
 
 function Header({ headerAlt = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [dropDownMobileOpen, setDropDownMobileOpen] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleDropDownMobileOpen = (title) => {
+    setDropDownMobileOpen(title === dropDownMobileOpen ? null : title);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,8 +104,8 @@ function Header({ headerAlt = false }) {
       {isMenuOpen && (
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
           <Link href={routes.home.url} className={styles.header__navlinks_link}>{routes.home.label}</Link>  
-          <DropdownMenuMobile links={productLinks} title="Productos" />
-          <DropdownMenuMobile links={blogLinks} title="Blog" />
+          <DropdownMenuMobile links={productLinks} title="Productos" isOpen={dropDownMobileOpen === "Productos"} handleDropDownMobileOpen={handleDropDownMobileOpen} />
+          <DropdownMenuMobile links={blogLinks} title="Blog" isOpen={dropDownMobileOpen === "Blog"} handleDropDownMobileOpen={handleDropDownMobileOpen} />
           <Link href={routes.contact.url} className={styles.header__navlinks_link}>{routes.contact.label}</Link>
         </div>
       )}
