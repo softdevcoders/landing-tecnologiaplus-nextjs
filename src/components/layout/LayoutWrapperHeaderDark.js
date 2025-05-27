@@ -1,15 +1,8 @@
 import Header from "./header/Header";
-import altStyles from "./header/HeaderAlt.module.scss";
 
 const LayoutWrapperHeaderDark = ({ children }) => (
   <>
-    <Header 
-      customStyles={{
-        header: altStyles.altHeader,
-        phoneBtn: altStyles.altPhoneBtn,
-        searchIcon: altStyles.altSearchIcon,
-      }}
-    />
+    <Header headerAlt />
     {children}
   </>
 )

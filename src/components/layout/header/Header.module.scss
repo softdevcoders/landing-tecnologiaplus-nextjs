@@ -8,8 +8,41 @@
   background-color: transparent;
   transition: all 0.3s ease;
 
-  &.scrolled {
+  &.scrolled{
     background-color: #090143;
+  }
+
+  &.headerAlt {
+    .header__navlinks_phone {
+      .phone__label {
+        color: #ae00ff;
+      }
+    }
+
+    .menuButton {
+      span {
+        background: #ae00ff;
+      }
+    }
+
+    .header__navlinks_link,
+    div[data-attribute="dropdown-menu-title"] {
+      color: #606060;
+    }
+
+    &.scrolled {
+      .header__navlinks_link,
+      div[data-attribute="dropdown-menu-title"],
+      .phone__label {
+        color: #fff;
+      }
+
+      .menuButton {
+        span {
+          background: #fff;
+        }
+      }
+    }
   }
 
   &__container {
@@ -77,12 +110,12 @@
   .mobileMenu {
     display: none;
     position: fixed;
-    top: 79px;
+    top: 70px;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #11151a;
-    padding: 1.25rem;
+    padding: 0 1.25rem;
     z-index: 1000;
     transition: all 0.3s ease;
 
@@ -91,7 +124,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      gap: 1rem;
+      gap: 0;
     }
 
     .header__navlinks_link {
@@ -147,6 +180,7 @@
         }
       }
     }
+
   }
 }
 

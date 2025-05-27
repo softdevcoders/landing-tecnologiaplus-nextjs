@@ -8,7 +8,7 @@ import { routes } from "@/config/routes";
 import { useEffect, useState } from "react";
 import { HiPhone } from "react-icons/hi2";
 
-function Header() {
+function Header({ headerAlt = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -45,7 +45,7 @@ function Header() {
   }));
 
     return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${headerAlt ? styles.headerAlt : ""}`}>
       <div className={styles.header__container}>
         <div className={styles.header__navlinks_left}>
           <Link href={routes.home.url} className={styles.header__navlinks_link}>{routes.home.label}</Link>
