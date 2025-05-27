@@ -20,7 +20,7 @@ function Header({ headerAlt = false }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 0) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -36,6 +36,14 @@ function Header({ headerAlt = false }) {
     };
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen || dropDownMobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
+    }
+  }, [isMenuOpen, dropDownMobileOpen]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -50,7 +58,7 @@ function Header({ headerAlt = false }) {
     text: child.label,
   }));
 
-    return (
+  return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${headerAlt ? styles.headerAlt : ""}`}>
       <div className={styles.header__container}>
         <div className={styles.header__navlinks_left}>
