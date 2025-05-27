@@ -10,7 +10,7 @@ const LayoutWrapper = ({ children }) => {
     <>
       <DisableRightClickOnImages />
       {children}
-      <SecondaryHeader />
+      {/* <SecondaryHeader /> */}
       <ContactForm />
       <WhatsappButton />
       <Footer />

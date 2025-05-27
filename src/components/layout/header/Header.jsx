@@ -5,11 +5,30 @@ import Image from "next/image";
 import DropdownMenu from "@/components/layout/header/DropdownMenu";
 import styles from "./Header.module.scss";
 import { routes } from "@/config/routes";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HiPhone } from "react-icons/hi2";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    window.scrollTo(0, 0);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -26,7 +45,7 @@ function Header() {
   }));
 
     return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.header__container}>
         <div className={styles.header__navlinks_left}>
           <Link href={routes.home.url} className={styles.header__navlinks_link}>{routes.home.label}</Link>
@@ -69,17 +88,18 @@ function Header() {
             <HiPhone className={styles.phone__icon} />
             <span className={styles.phone__label}>{routes.contact_media.phones[0].label}</span>
           </a>
-          <button onClick={toggleMenu} className={styles.menuButton}>
+          <button onClick={toggleMenu} className={`${styles.menuButton} ${isMenuOpen ? styles.open : ""}`}>
             <span></span>
             <span></span>
           </button>
         </div>
       </div>
+
       {isMenuOpen && (
-        <div className={styles.mobileMenu}>
+        <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
           <Link href={routes.home.url} className={styles.header__navlinks_link}>{routes.home.label}</Link>  
-          <DropdownMenu links={productLinks} title="Productos" />
-          <DropdownMenu links={blogLinks} title="Blog" />
+          {/* <DropdownMenu links={productLinks} title="Productos" />
+          <DropdownMenu links={blogLinks} title="Blog" /> */}
           <Link href={routes.contact.url} className={styles.header__navlinks_link}>{routes.contact.label}</Link>
         </div>
       )}
