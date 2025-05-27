@@ -76,7 +76,7 @@ jobs:
       
       - name: Prune Docker Images unused
         run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f --filter "until=24h"
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f
 
       - name: Pull Docker Image
         run: |
