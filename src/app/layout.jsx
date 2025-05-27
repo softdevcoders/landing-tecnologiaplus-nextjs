@@ -21,11 +21,6 @@ const bebas = Bebas_Neue({
   display: 'swap',
 })
 
-export async function generateMetadata() {
-  const metadata = getMetadata('default');
-  return metadata;
-}
-
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${montserrat.className} ${bebas.className}`}>

@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <LayoutWrapperHeaderDark>
       <DisableRightClickOnImages />
       {children}
-      <SecondaryHeader />
+      {/* <SecondaryHeader /> */}
       <WhatsappButton />
       <Footer />
     </LayoutWrapperHeaderDark>
