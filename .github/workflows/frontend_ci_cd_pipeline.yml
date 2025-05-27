@@ -27,7 +27,7 @@ env:
   GMAIL_RECIPIENTS: ${{ secrets.GMAIL_RECIPIENTS }}
   GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
   SHOULD_ROBOTS_INDEX: ${{ vars.SHOULD_ROBOTS_INDEX }}
-  
+
   NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
   NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
   NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
@@ -73,6 +73,10 @@ jobs:
       - name: Stop Current Running Container
         run: |
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm -f ${{ env.DOCKER_CONTAINER_NAME }} || true
+      
+      - name: Prune Docker Images unused
+        run: |
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f --filter "until=24h"
 
       - name: Pull Docker Image
         run: |
