@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import DropdownMenu from "@/components/layout/header/DropdownMenu";
-import styles from "./Header.module.scss";
 import { routes } from "@/config/routes";
 import { useEffect, useState } from "react";
+import DropdownMenu from "@/components/layout/header/DropdownMenu";
+import DropdownMenuMobile from "@/components/layout/header/DropdownMenuMobile"; 
 import { HiPhone } from "react-icons/hi2";
+import styles from "./Header.module.scss";
 
 function Header({ headerAlt = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -98,8 +99,8 @@ function Header({ headerAlt = false }) {
       {isMenuOpen && (
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
           <Link href={routes.home.url} className={styles.header__navlinks_link}>{routes.home.label}</Link>  
-          {/* <DropdownMenu links={productLinks} title="Productos" />
-          <DropdownMenu links={blogLinks} title="Blog" /> */}
+          <DropdownMenuMobile links={productLinks} title="Productos" />
+          <DropdownMenuMobile links={blogLinks} title="Blog" />
           <Link href={routes.contact.url} className={styles.header__navlinks_link}>{routes.contact.label}</Link>
         </div>
       )}
