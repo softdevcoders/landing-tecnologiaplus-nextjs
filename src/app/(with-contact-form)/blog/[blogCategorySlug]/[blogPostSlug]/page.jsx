@@ -85,7 +85,7 @@ const BlogPostPage = async ({ params }) => {
     );
   } catch (error) {
     console.error("Error loading blog post:", error);
-    return notFound();
+    return null;
   }
 }
 
