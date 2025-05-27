@@ -3,6 +3,7 @@ import PostView from "@/sections/blog/views/posts/post-view";
 import { ROBOTS_CONFIG } from "@/data/metadata/config";
 import { notFound } from "next/navigation";
 
+export const dynamic = 'force-dynamic';
 // // Page Metadata
 export async function generateMetadata({ params }) {
   try {
