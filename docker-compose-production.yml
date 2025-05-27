@@ -1,0 +1,27 @@
+services:
+  ##################################################################################
+  #   tecnologia-plus - Setup Frontend Container - tecnologia-plus
+  ##################################################################################
+
+  tecnologia-plus-frontend:
+    container_name: tecnologia-plus-frontend-prod
+    image: ${DOCKER_HUB_USERNAME}/${DOCKER_HUB_TECNOLOGIA_PLUS_IMAGE}:prod
+    build:
+      context: ./
+      target: production
+      args:
+        - NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}
+        - NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL}
+        - NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=${NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}
+    environment:
+      - GMAIL_USER=${GMAIL_USER}
+      - GMAIL_RECIPIENTS=${GMAIL_RECIPIENTS}
+      - GMAIL_APP_PASSWORD=${GMAIL_APP_PASSWORD}
+      - SHOULD_ROBOTS_INDEX=${SHOULD_ROBOTS_INDEX}
+      # - NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}
+      # - NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL}
+      # - NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=${NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}
+    ports:
+      - "${DOCKER_TECNOLOGIA_PLUS_HOST_PORT}:${DOCKER_TECNOLOGIA_PLUS_CONTAINER_PORT}"
+    expose:
+      - 3000
