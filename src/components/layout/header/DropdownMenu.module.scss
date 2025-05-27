@@ -48,8 +48,8 @@
     transition: opacity 0.3s ease;
 
     .dropdownMenu__item {
-      font-size: 1.1rem;
-      font-weight: 600;
+      font-size: 1rem;
+      font-weight: 500;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -59,9 +59,16 @@
       border-radius: 0.5rem;
       transition: background-color 0.3s ease;
       white-space: nowrap;
-
+      color: #fff !important;  
+      letter-spacing: 0.1rem;
+      line-height: 1.5;
+      transition: all 0.3s ease;  
+      text-align: left; 
       &:hover {
-        font-weight: 700;
+        font-weight: 600;
+        transition: font-weight 0.3s ease;  
+        transform: translateY(-1px);
+        color: #6f3bb4 !important;
       }
     }
   }
