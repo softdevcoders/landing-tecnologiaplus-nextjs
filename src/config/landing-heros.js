@@ -57,7 +57,7 @@ export const landingHeros = {
       }],
       button: {
         href: routes.landings.localizadoresParaRestaurantes.url,
-        text: "Ver más",
+        text: "Ver másssss",
       },
     },
     informationPortadas: {
