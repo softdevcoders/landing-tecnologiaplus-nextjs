@@ -3,9 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { routes } from "@/config/routes";
-import { useEffect, useState } from "react";
-import DropdownMenu from "@/components/layout/header/DropdownMenu";
-import DropdownMenuMobile from "@/components/layout/header/DropdownMenuMobile"; 
+import { useEffect, useState, useCallback } from "react";
+import DropdownMenu from "@/components/layout/header/dropdown-menu/DropdownMenu";
+import DropdownMenuMobile from "@/components/layout/header/dropdown-menu-mobile/DropdownMenuMobile"; 
 import { HiPhone } from "react-icons/hi2";
 import styles from "./Header.module.scss";
 
@@ -14,9 +14,14 @@ function Header({ headerAlt = false }) {
   const [dropDownMobileOpen, setDropDownMobileOpen] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleDropDownMobileOpen = (title) => {
+  const handleDropDownMobileOpen = useCallback((title) => {
     setDropDownMobileOpen(title === dropDownMobileOpen ? null : title);
-  };
+  }, [dropDownMobileOpen]);
+
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen((prev) => !prev);
+    setDropDownMobileOpen(null);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,10 +48,6 @@ function Header({ headerAlt = false }) {
       document.body.style.overflow = 'visible';
     }
   }, [isMenuOpen, dropDownMobileOpen]);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const productLinks = Object.values(routes.landings).map((child) => ({
     href: child.url,

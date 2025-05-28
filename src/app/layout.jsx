@@ -7,7 +7,6 @@ import "@/components/layout/header/Header.module.scss";
 import SchemaOrg from "../components/SchemaOrg";
 
 import { Bebas_Neue, Montserrat } from 'next/font/google'
-import getMetadata from "@/request/server/metadata/get-metadata";
  
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800", "900"],

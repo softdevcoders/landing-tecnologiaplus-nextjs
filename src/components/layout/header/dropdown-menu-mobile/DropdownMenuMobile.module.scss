@@ -1,4 +1,3 @@
-
 .dropdownMenu {
   &__container {
     width: 100%;
@@ -17,7 +16,7 @@
       width: 100%;
       text-align: left;
       border-bottom: 1px solid #2b2e36;
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease, font-weight 0.3s ease;
 
       &:hover {
         transform: translateY(-1px);
@@ -38,7 +37,7 @@
       visibility: hidden;
       opacity: 0; 
       height: 0;
-      transition: all 0.3s ease;
+      transition: visibility 0s, opacity 0.3s ease, height 0.3s ease;
 
       &.dropdownMenu__itemsVisible {
         visibility: visible;
@@ -55,7 +54,7 @@
         font-size: 1rem;
         letter-spacing: 0.1rem;
         line-height: 1.5;
-        transition: all 0.3s ease;  
+        transition: transform 0.3s ease, font-weight 0.3s ease;  
         
         &:hover {
           transform: translateY(-1px);
