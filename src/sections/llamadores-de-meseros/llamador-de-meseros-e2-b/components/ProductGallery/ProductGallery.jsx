@@ -19,7 +19,7 @@ function ProductGallery() {
     thumbnail:
       "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743115272/Frame_1_11_v59cqa.webp",
     videoUrl:
-      "https://res.cloudinary.com/ddqh0mkx9/video/upload/v1743107660/COMPRESS_ANIMACIO%CC%81N_FINAL_COM_AJUSTES_nualz4.mp4",
+      "/video.mp4",
   };
 
   const images = [
@@ -190,7 +190,7 @@ function ProductGallery() {
               onMouseDown={(e) => e.preventDefault()}
             />
             {isVideoSelected ? (
-              <video controls className={styles.videoPlayer}>
+              <video controls autoPlay className={styles.videoPlayer}>
                 <source src={videoData.videoUrl} type="video/mp4" />
                 Tu navegador no soporta videos.
               </video>
