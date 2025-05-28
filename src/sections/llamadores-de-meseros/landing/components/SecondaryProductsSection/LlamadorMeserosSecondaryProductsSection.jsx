@@ -185,6 +185,7 @@ function LlamadorMeserosSecondaryProductsSection() {
               </p>
               <YouTubePlayer
                 videoId="XevVCpp6Drc"
+                imageCover="https://i.ytimg.com/vi_webp/XevVCpp6Drc/sddefault.webp"
                 title="Personal más alerta, facilita el llamado de meseros desde la cocina"
               />
             </div>
