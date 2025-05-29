@@ -3,7 +3,7 @@ services:
   #   tecnologia-plusplus - Setup Frontend Container - tecnologia-plusplus
   ##################################################################################
 
-  tecnologia-plus-frontend-dev:
+  tecnologia-plus-frontend:
     container_name: tecnologia-plus-frontend-dev
     image: ${DOCKER_HUB_USERNAME}/${DOCKER_HUB_TECNOLOGIA_PLUS_IMAGE}:dev
     build:
