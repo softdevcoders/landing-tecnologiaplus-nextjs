@@ -1,5 +1,5 @@
 
-import ContactForm from '@/components/layout/contact-form/ContactForm'
+import ContactForm from '@/components/contact-form/contact-form'
 import style from './contact.module.scss'
 
 const ContactSection = () => {

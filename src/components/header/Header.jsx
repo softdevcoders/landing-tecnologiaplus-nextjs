@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { routes } from "@/config/routes";
 import { useEffect, useState, useCallback } from "react";
-import DropdownMenu from "@/components/layout/header/dropdown-menu/DropdownMenu";
-import DropdownMenuMobile from "@/components/layout/header/dropdown-menu-mobile/DropdownMenuMobile"; 
+import DropdownMenu from "@/components/header/dropdown-menu/DropdownMenu";
+import DropdownMenuMobile from "@/components/header/dropdown-menu-mobile/DropdownMenuMobile"; 
 import { HiPhone } from "react-icons/hi2";
 import styles from "./Header.module.scss";
 

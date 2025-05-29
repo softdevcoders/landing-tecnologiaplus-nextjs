@@ -11,7 +11,7 @@ import {
   IoIosArrowUp,
 } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
-import Popup from "@/components/ui/PopUp/Popup";
+import Popup from "@/components/ui/pop-up";
 import useDisableRightClick from "@/hooks/useDisableRightClick";
 import ImageCloudinary from "@/components/ui/image-cloudinary";
 

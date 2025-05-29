@@ -70,7 +70,6 @@ const nextConfig = {
       { source: '/blog-tecnologiapnus/page/2', destination: '/blog/', permanent: true },
       { source: '/blog/page/2', destination: '/blog/', permanent: true },
       { source: '/blog/page/2', destination: '/blog/', permanent: true },
-      { source: '/blog', destination: '/blog/', permanent: true },
       { source: '/turnero-digiturno-el-caos-en-las-salas-de-espera-y-la-necesidad-de-orden', destination: '/blog/turnero/orden-en-salas-de-espera-digiturno/', permanent: true },
       { source: '/category/servicio-de-enfermeria', destination: '/llamado-de-enfermeria-cuidamaster/', permanent: true },
       { source: '/category/llamadores', destination: '/llamadores-de-meseros/', permanent: true },

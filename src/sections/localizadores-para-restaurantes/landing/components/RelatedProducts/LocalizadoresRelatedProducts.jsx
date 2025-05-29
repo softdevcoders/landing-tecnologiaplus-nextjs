@@ -1,4 +1,4 @@
-import RelatedProducts from "@/components/layout/related-products";
+import RelatedProducts from "@/components/related-products";
 
 function LocalizadoresRelatedProducts() {
   return (

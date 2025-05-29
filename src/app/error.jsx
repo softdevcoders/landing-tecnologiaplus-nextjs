@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import styles from './error.module.scss';
-import Header from '@/components/layout/header/Header';
+import Header from '@/components/header/Header';
 
 export const metadata = {
   title: 'Error 500 | Tecnología Plus',

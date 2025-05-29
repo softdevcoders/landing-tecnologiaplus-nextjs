@@ -1,8 +1,7 @@
-import ContactForm from "./contact-form/ContactForm"
-import DisableRightClickOnImages from "./disable-menu-contextual"
-import Footer from "./footer/Footer"
-import SecondaryHeader from "./secondary-header/SecondaryHeader"
-import WhatsappButton from "./whatsapp-button"
+import ContactForm from "@/components/contact-form/contact-form"
+import DisableRightClickOnImages from "@/components/disable-menu-contextual"
+import Footer from "@/components/footer/Footer"
+import WhatsappButton from "@/components/whatsapp-button"
 
 const LayoutWrapper = ({ children }) => {
 
@@ -10,7 +9,6 @@ const LayoutWrapper = ({ children }) => {
     <>
       <DisableRightClickOnImages />
       {children}
-      {/* <SecondaryHeader /> */}
       <ContactForm />
       <WhatsappButton />
       <Footer />
