@@ -1,4 +1,4 @@
-import NuestrosClientes from "@/components/layout/nuestros-clientes";
+import NuestrosClientes from "@/components/nuestros-clientes";
 import { logosLlamadorMeseros } from "@/config/client-logos";
 
 function LlamadorMeserosClientsSection() {

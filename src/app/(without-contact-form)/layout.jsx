@@ -1,8 +1,7 @@
-import DisableRightClickOnImages from "@/components/layout/disable-menu-contextual"
-import Footer from "@/components/layout/footer/Footer"
+import DisableRightClickOnImages from "@/components/disable-menu-contextual"
+import Footer from "@/components/footer/Footer"
 import LayoutWrapperHeaderDark from "@/components/layout/LayoutWrapperHeaderDark"
-import SecondaryHeader from "@/components/layout/secondary-header/SecondaryHeader"
-import WhatsappButton from "@/components/layout/whatsapp-button"
+import WhatsappButton from "@/components/whatsapp-button"
 
 const Layout = ({ children }) => {
 
@@ -10,7 +9,6 @@ const Layout = ({ children }) => {
     <LayoutWrapperHeaderDark>
       <DisableRightClickOnImages />
       {children}
-      {/* <SecondaryHeader /> */}
       <WhatsappButton />
       <Footer />
     </LayoutWrapperHeaderDark>

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import style from './ContactForm.module.scss';
+import style from './contact-form.module.scss';
 import { FaCheck } from 'react-icons/fa';
 
 const ContactFormClient = ({ sendEmail }) => {

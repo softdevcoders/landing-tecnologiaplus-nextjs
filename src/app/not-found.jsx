@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './not-found.module.scss';
-import Header from '@/components/layout/header/Header';
+import Header from '@/components/header/Header';
 
 export const metadata = {
   title: 'Página no encontrada | Tecnología Plus',

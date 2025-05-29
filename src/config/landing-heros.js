@@ -393,7 +393,7 @@ export const landingHeros = {
           height: 65
         },
         button: {
-          href: routes.landings.dispensadorDeTickets.url,
+          href: routes.landings.dispensadorDeTickets.children.dispensadorDeTicketsCaracol.url,
           text: "Ver más",  
         }
       }

@@ -1,10 +1,6 @@
 // Styles
 import "@/styles/critical.scss";
 import "@/styles/main.scss";
-import "@/components/layout/header/Header.module.scss";
-
-// Components
-import SchemaOrg from "../components/SchemaOrg";
 
 import { Bebas_Neue, Montserrat } from 'next/font/google'
  

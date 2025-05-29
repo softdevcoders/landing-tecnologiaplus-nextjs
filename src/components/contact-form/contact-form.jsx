@@ -1,8 +1,8 @@
 // Server Component
-import ContactFormClient from "./ContactFormClient";
+import ContactFormClient from "./contact-form-client";
 import { sendEmail } from "@/app/actions/contact";
 import Image from "next/image";
-import style from "./ContactForm.module.scss";
+import style from "./contact-form.module.scss";
 
 async function ContactForm({ noMarginTop = false }) {
   return (

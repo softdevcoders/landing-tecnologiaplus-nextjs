@@ -1,4 +1,4 @@
-import NuestrosClientes from "@/components/layout/nuestros-clientes";
+import NuestrosClientes from "@/components/nuestros-clientes";
 import { logosHome } from "@/config/client-logos";
 
 function HomeClientsSection() {
