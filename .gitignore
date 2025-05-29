@@ -38,6 +38,7 @@ next-env.d.ts
 ##yarn
 .yarn/
 yarn*
+pnpm-lock.yaml
 
 
 ##cursor files
