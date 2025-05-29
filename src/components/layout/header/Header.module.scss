@@ -65,9 +65,37 @@
   &__navlinks_left,
   &__navlinks_right {
     .header__navlinks_link,
-    .header__navlinks_phone,
     div[data-attribute="dropdown-menu"] {
       display: none;
+    }
+
+    .header__navlinks_phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 5px 12px;
+      width: max-content;
+      border: 1px solid #ae00ff; // Simplified color notation
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      border-radius: 2rem; // Removed vendor prefixes for border-radius
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      .phone__label {
+        display: none;
+      }
+
+      .phone__icon {
+        color: #ae00ff; // Simplified color notation
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+      }
     }
   }
 
@@ -152,32 +180,9 @@
   .header {
     &__navlinks_right {
       .header__navlinks_phone {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 5px 12px;
-        width: max-content;
-        border: 1px solid #ae00ff; // Simplified color notation
-        font-size: 10px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.1rem;
-        border-radius: 2rem; // Removed vendor prefixes for border-radius
-        transition: all 0.3s ease;
-        cursor: pointer;
-  
         .phone__label {
+          display: block;  
           color: #fff;  
-          word-wrap: nowrap;
-        }
-  
-        .phone__icon {
-          color: #ae00ff; // Simplified color notation
-          font-size: 1.2rem;
-        }
-  
-        &:hover {
-          transform: translateY(-2px);
         }
       }
     }
