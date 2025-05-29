@@ -10,18 +10,18 @@ export default async function sitemap() {
     for (const key in routeObject) {
       const route = routeObject[key];
       if (route.url) {
-        links.push({ url: `${baseUrl}${route.url}`, changefreq: 'daily', priority: 1.0 });
+        links.push({ url: `${baseUrl}${route.url}`, changeFrequency: 'daily', priority: 1.0, lastModified: new Date().toISOString() });
       }
 
       if (key === 'landings') {
         for (const landingKey in routeObject[key]) {
           const landingRoute = routeObject[key][landingKey];
-          links.push({ url: `${baseUrl}${landingRoute.url}`, changefreq: 'daily', priority: 1.0 });
+          links.push({ url: `${baseUrl}${landingRoute.url}`, changeFrequency: 'daily', priority: 1.0, lastModified: new Date().toISOString() });
 
           if (landingRoute.children) {
             for (const childKey in landingRoute.children) {
               const childRoute = landingRoute.children[childKey];
-              links.push({ url: `${baseUrl}${childRoute.url}`, changefreq: 'daily', priority: 1.0 });
+              links.push({ url: `${baseUrl}${childRoute.url}`, changeFrequency: 'daily', priority: 1.0, lastModified: new Date().toISOString() });
             }
           }
         }
@@ -31,9 +31,9 @@ export default async function sitemap() {
     for (const post of posts) {
       links.push({
         url: `${baseUrl}${post.current_link}`,
-        changefreq: 'daily',
+        changeFrequency: 'daily',
         priority: 0.8,
-        lastmod: post.updated_at ?? post.date,
+        lastModified: post.modified && new Date(post.modified) > new Date(post.date) ? post.modified : post.date,
       });
     }
   };
