@@ -1,0 +1,39 @@
+.benefits__section {
+  background-color: #f4f4f4;
+  padding: 1rem;
+
+  .benefits__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 2;
+
+    .benefits__background_container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .benefits__background_image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .benefits__content {
+      position: relative;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .benefits__section {
+    padding: 5rem 3rem;
+  }
+}

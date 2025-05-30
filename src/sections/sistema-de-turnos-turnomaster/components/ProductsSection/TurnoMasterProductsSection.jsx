@@ -1,13 +1,16 @@
 import ImageCloudinary from "@/components/ui/image-cloudinary";
 import style from "./TurnoMasterProductsSection.module.scss";
+import { routes } from "@/config/routes";
 
 function TurnoMasterProductsSection() {
+  const currentUrl = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.sistemasDeTurnosTurnomaster.url}`;
+  
   return (
     <section className={style.products__section}>
       <h2>Dos formas de solicitar el turno</h2>
       <a
         className={style.card__btn}
-        href="https://wa.me/573164682034"
+        href={`https://wa.me/573164682034?text=${encodeURIComponent(`Hola, estoy interesado en sus productos. Estoy visitando la página 'Sistema de turnos TurnoMaster' y me gustaría recibir más información. \n\n ${currentUrl}`)}`} 
         target="_blank"
         rel="noreferrer"
       >
@@ -30,7 +33,7 @@ function TurnoMasterProductsSection() {
         />
         <a
           className={style.card__btn__mobile}
-          href="https://wa.me/573164682034"
+          href={`https://wa.me/573164682034?text=${encodeURIComponent(`Hola, estoy interesado en sus productos. Estoy visitando la página 'Sistema de turnos TurnoMaster' y me gustaría recibir más información. \n\n ${currentUrl}`)}`} 
           target="_blank"
           rel="noreferrer"
         >

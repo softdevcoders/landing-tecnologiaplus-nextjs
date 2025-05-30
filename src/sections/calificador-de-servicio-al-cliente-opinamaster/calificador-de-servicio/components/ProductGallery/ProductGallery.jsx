@@ -10,8 +10,8 @@ import {
   IoIosArrowForward,
   IoIosArrowUp,
 } from "react-icons/io";
-import { FaWhatsapp } from "react-icons/fa";
 
+import TinesPreguntasButton from "@/components/tines-preguntas-button";
 import Popup from "@/components/ui/pop-up";
 
 function ProductGallery() {
@@ -139,14 +139,7 @@ function ProductGallery() {
             <p>Para crecer con la opinión de tus clientes</p>
           </div>
           <div className={styles.container__contact__info}>
-            <a
-              href="https://wa.me/573164682034"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaWhatsapp className={styles.icon__wpp} />
-            </a>
-            <h3>¿Tienes preguntas?</h3>
+            <TinesPreguntasButton styles={styles} />
           </div>
           <p>
             Calificador de servicio al cliente para capturar en un segundo la
