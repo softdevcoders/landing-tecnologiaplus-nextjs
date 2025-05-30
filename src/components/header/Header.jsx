@@ -34,7 +34,7 @@ function Header({ headerAlt = false }) {
 
     window.addEventListener('scroll', handleScroll);
 
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
