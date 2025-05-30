@@ -2,6 +2,10 @@
   background-color: #f4f4f4;
   padding: 1rem;
 
+  &.overlay__white {
+    background-color: #fff;
+  }
+
   .benefits__container {
     position: relative;
     display: flex;
