@@ -69,26 +69,31 @@ function LocalizadoresSecondaryProductsSection() {
       </section>
       <section className={style.video__section}>
         <div className={style.video__container}>
-          <h2>Veamos funcionar nuestros Localizadores para restaurantes</h2>
+          <h2 className={style.video__title}>Veamos funcionar nuestros Localizadores para restaurantes</h2>
           <div
             className={style.video__card__container}
           >
             <div className={style.video__card}>
-              <p>Rec V3 - Localizadores para restaurantes</p>
-              <YouTubePlayer
-                videoId="aB7FLAPCCJ8"
-                title="Rec V3 - Localizadores para restaurantes"
-                imageCover="https://i.ytimg.com/vi_webp/aB7FLAPCCJ8/maxresdefault.webp"
-              />
+              <p className={style.video__card__title}>Rec V3 - Localizadores para restaurantes</p>
+              <div className={style.video__card__player__container}>
+                <YouTubePlayer
+                  videoId="aB7FLAPCCJ8"
+                  title="Rec V3 - Localizadores para restaurantes"
+                  imageCover="https://i.ytimg.com/vi_webp/aB7FLAPCCJ8/maxresdefault.webp"
+                />
+              </div>
+
             </div>
 
             <div className={style.video__card}>
-              <p>Cir C2 - Localizadores para restaurantes</p>
-              <YouTubePlayer
-                videoId="b2nlu7sOlcI"
-                title="Cir C2 - Localizadores para restaurantes"
-                imageCover="https://i.ytimg.com/vi_webp/b2nlu7sOlcI/sddefault.webp"
-              />
+              <p className={style.video__card__title}>Cir C2 - Localizadores para restaurantes</p>
+              <div className={style.video__card__player__container}>
+                <YouTubePlayer
+                  videoId="b2nlu7sOlcI"
+                  title="Cir C2 - Localizadores para restaurantes"
+                  imageCover="https://i.ytimg.com/vi_webp/b2nlu7sOlcI/sddefault.webp"
+                />
+              </div>
             </div>
           </div>
         </div>

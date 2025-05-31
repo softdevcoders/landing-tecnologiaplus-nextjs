@@ -13,13 +13,13 @@
     will-change: transform;
 
     @media (min-width: 768px) {
-      -webkit-animation: scroll 100s linear infinite;
-      animation: scroll 100s linear infinite;
+      -webkit-animation: scroll 120s linear infinite;
+      animation: scroll 200s linear infinite;
     }
 
     @media (min-width: 1024px) {
       -webkit-animation: scroll 80s linear infinite;
-      animation: scroll 80s linear infinite;
+      animation: scroll 180s linear infinite;
     }
   }
 

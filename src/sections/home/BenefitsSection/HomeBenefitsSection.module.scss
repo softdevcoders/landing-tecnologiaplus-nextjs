@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4.7rem;
-  padding: 4rem 1rem;
+  gap: 2rem;
+  padding: 2rem 2rem;
 
   .text__container {
     display: flex;
@@ -97,7 +97,6 @@
 
 @media (min-width: 400px) {
   .benefits__container {
-    padding: 4rem 2rem;
     .text__container {
       .benefits__title_container {
         .benefits__title {
