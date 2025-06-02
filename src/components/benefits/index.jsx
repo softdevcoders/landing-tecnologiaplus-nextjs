@@ -1,9 +1,9 @@
 import Image from "next/image";
 import style from "./benefits.module.scss";
 
-function BenefitsSection({ children, overlayWhite = false }) {
+function BenefitsSection({ children, overlayWhite = false, paddingInline = true }) {
   return (
-    <section className={`${style.benefits__section} ${overlayWhite ? style.overlay__white : ""}`}>
+    <section className={`${style.benefits__section} ${overlayWhite ? style.overlay__white : ""} ${paddingInline ? style.padding__inline : ""}`}>
       <div className={style.benefits__container}>
         <div className={style.benefits__background_container}>
           <Image 

@@ -1,70 +1,139 @@
-@use "@/styles/components/benefitsSection" as *;
-@use "@/styles/base/mixins" as *;
-
-.video__benefits__container {
+.benefits__section_container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin: -100px 3% 0;
-  gap: 4vw;
+  gap: 2rem;
+  padding: 2rem 2rem;
+  margin-top: -10rem;
 
-  @include respond-to-max("desktop-lg") {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.video__section {
-  /*  video,
-  iframe,
-  .youtubeContainer {
-    width: 612px;
-    height: 344px !important;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-
-    @include respond-to-max("laptop") {
-      width: 90vw;
-      height: 50vw;
-      margin-top: 0;
-    }
-  } */
-}
-.benefits__section {
-  position: relative;
-  width: 650px;
-  padding: 2rem;
-  height: max-content;
-  z-index: 2;
-  display: flex;
-
-  margin: 0;
-
-  @include respond-to-max("laptop") {
-    width: 90vw;
-
-    margin-top: 0;
+  .video__container, 
+  .benefits__container_list {
+    width: 100%;
+    max-width: 40.625rem;
   }
 
-  .benefits__title {
-    font-size: 3rem;
-    display: none;
-    @include respond-to-max("laptop") {
-      font-size: clamp(16px, 10vw, 80px);
-      display: inline-block;
+  .video__container {
+    border-radius: 1.25rem;
+    overflow: hidden;
+
+    div {
+      width: 100% !important;
     }
   }
 
-  ul {
-    li {
-      > div {
+  .benefits__container_list {
+    section {
+      padding: 0 !important;
+    }
+
+    .benefits__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem 2rem;
+
+      .benefits__title_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .benefits__title {
+          background: linear-gradient(90deg, #00afff, #9810ff);
+          -webkit-text-fill-color: #0000;
+          text-align: center;
+          -webkit-background-clip: text;
+          font-size: 2rem;
+          font-weight: 900;
+          line-height: 1.2;
+          display: inline-block;
+        }
+      }
+      
+    
+      .benefits__container_list {
         display: flex;
         flex-direction: column;
-        line-height: 1.2;
-        span {
-          font-size: 1rem;
+        gap: 2rem;
+    
+        .benefits__item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 1rem;
+    
+          .benefits__icon_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 70px;
+    
+            .benefits__icon {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          
+          .benefits__icon_container_text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.2;
+            display: inline-block;
+            color: #fff;
+            width: 100%;
+            max-width: 28rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .benefits__section_container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-top: -10rem;
+    gap: 5rem;
+
+    .video__container, .benefits__container_list {
+      width: 100%;
+      max-width: 50%;
+    }
+
+    .benefits__container_list {
+      .benefits__container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+
+        .benefits__title_container {
+          display: none;
+        }
+
+        .benefits__container_list {
+          width: 100%;
+          max-width: 100%;
+          .benefits__item {
+            .benefits__icon_container_text {
+              max-width: 60rem;
+              font-size: 2rem;
+            }
+          }
         }
       }
     }

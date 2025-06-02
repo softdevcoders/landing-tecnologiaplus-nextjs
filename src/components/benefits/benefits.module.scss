@@ -1,6 +1,11 @@
 .benefits__section {
   background-color: #f4f4f4;
-  padding: 3rem 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &.padding__inline {
+    padding-inline: 1rem;
+  }
 
   &.overlay__white {
     background-color: #fff;
@@ -38,6 +43,11 @@
 
 @media (min-width: 1200px) {
   .benefits__section {
-    padding: 5rem 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    &.padding__inline {
+      padding-inline: 3rem;
+    }
   }
 }
