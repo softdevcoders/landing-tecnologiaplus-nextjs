@@ -1,40 +1,55 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
 import style from "./LlamadorMeserosProductsSection.module.scss";
 
 function LlamadorMeserosProductsSection() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className={style.products__section}>
-      <div className={style.products__container}>
-        <img
-          loading="lazy"
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738694397/Group_8_og4pea.webp"
-          alt="Reloj receptor de llamados para meseros"
-          className={style.img__desktop}
-        />
-        <img
-          loading="lazy"
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743022988/11_4x-8_1_sftupq.webp"
-          alt="Reloj receptor de llamados para meseros"
-          className={style.img__mobile}
-        />
-        <img
-          loading="lazy"
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738694396/Group_9_yutx7u.webp"
-          alt="Hablador de mesa junto al botón para llamar al mesero"
-          className={style.img__desktop}
-        />
-        <img
-          loading="lazy"
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743022991/12_4x-8_km9kam.webp"
-          alt="Hablador de mesa junto al botón para llamar al mesero"
-          className={style.img__mobile}
-        />
+      <div className={style.products__container_mobile}>
+        <div className={style.products__container__item}>
+          <Image
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743022988/11_4x-8_1_sftupq.webp"
+            alt="Reloj receptor de llamados para meseros"
+            width={500}
+            height={402}
+            className={style.products__container__item__image}
+          />
+        </div>
+        <div className={style.products__container__item}>
+          <Image
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743022991/12_4x-8_km9kam.webp"
+            alt="Hablador de mesa junto al botón para llamar al mesero"
+            width={421}
+            height={253}
+            className={style.products__container__item__image}
+          />
+        </div>
       </div>
-      <input
-        type="checkbox"
-        id="toggleText"
-        className={style.toggle__checkbox}
-      />
-      <p>
+      <div className={style.products__container_desktop}>
+        <div className={style.products__container__item}>
+          <Image
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738694397/Group_8_og4pea.webp"
+            alt="Reloj receptor de llamados para meseros"
+            width={500}
+            height={402}
+            className={style.products__container__item__image}
+          />
+        </div>
+        <div className={style.products__container__item}>
+          <Image
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738694396/Group_9_yutx7u.webp"
+            alt="Hablador de mesa junto al botón para llamar al mesero"
+            width={421}
+            height={253}
+            className={style.products__container__item__image}
+          />
+        </div>
+      </div>
+      <p className={`${style.products__text} ${isOpen ? style.open : ""}`}>
         Eleva el nivel de tu negocio con el Llamador de Meseros. Este sistema
         permite que los clientes soliciten atención de manera rápida, discreta y
         sin interrumpir su conversación. Con solo pulsar un botón, el mesero
@@ -44,7 +59,12 @@ function LlamadorMeserosProductsSection() {
         satisfacción del cliente aumenta considerablemente, impactando
         directamente en la reputación y fidelización de tu negocio.
       </p>
-      <label htmlFor="toggleText" className={style.toggle__label}></label>
+      <button
+        className={style.toggle__label}
+        onClick={() => setIsOpen(!isOpen)}
+      > 
+        {isOpen ? "Ver menos" : "Ver más"}
+      </button>
     </section>
   );
 }

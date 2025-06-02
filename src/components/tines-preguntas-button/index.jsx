@@ -10,7 +10,7 @@ const TinesPreguntasButton = ({ styles }) => {
     const pageTitle = document.title || 'Tecnología Plus';
     const currentUrl = `${process.env.NEXT_PUBLIC_BASE_URL}${pathname}`;
     const message = encodeURIComponent(
-      `Hola, estoy interesado en sus productos. Estoy visitando la página "${pageTitle}" y me gustaría recibir más información. \n\n ${currentUrl}`
+      `Hola, vengo de la página "${pageTitle}" y quiero m. \n\n ${currentUrl}`
     );
 
     setWhatsappLink(`https://wa.me/573164682034?text=${message}`);

@@ -1,31 +1,41 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import style from "./LocalizadoresProductsSection.module.scss";
 
 function LocalizadoresProductsSection() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className={style.products__section}>
-      <h2>Más de 1.000 restaurantes usan nuestros localizadores</h2>
-      <p>Elige el avisador de pedidos que mejor se adapte a tu negocio.</p>
+      <h2 className={style.products__title}>
+        Más de 1.000 restaurantes usan nuestros localizadores
+      </h2>
+      <p className={style.products__description}>
+        Elige el avisador de pedidos que mejor se adapte a tu negocio.
+      </p>
       <div className={style.products__container}>
-        <Image
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_470/v1738851946/rec_v3_2x-8_ehwkxo.webp"
-          alt="Localizador para clientes Rec V3"
-          width={500}
-          height={402}
-        />
-        <Image
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_600/v1738851948/cir_c2_2x-8_icgmcm.webp"
-          alt="Localizador para restaurantes Cir C2"
-          width={600}
-          height={500}
-        />
+        <div className={style.products__container__item}>
+          <Image
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_470/v1738851946/rec_v3_2x-8_ehwkxo.webp"
+            alt="Localizador para clientes Rec V3"
+            width={500}
+            height={402}
+            className={style.products__container__item__image}
+          />
+        </div>
+        <div className={style.products__container__item}>
+          <Image
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_600/v1738851948/cir_c2_2x-8_icgmcm.webp"
+            alt="Localizador para restaurantes Cir C2"
+            width={421}
+            height={253}
+            className={style.products__container__item__image}
+          />
+        </div>
       </div>
-      <input
-        type="checkbox"
-        id="toggleText"
-        className={style.toggle__checkbox}
-      />
-      <p>
+      <p className={`${style.products__text} ${isOpen ? style.open : ""}`}>
         Los localizadores de clientes de Tecnología Plus son la solución ideal
         para facilitar la entrega de pedidos en restaurantes autoservicio y
         otros sectores. Con un alcance de más de 200 metros, estos dispositivos
@@ -45,7 +55,12 @@ function LocalizadoresProductsSection() {
         Tecnología Plus son la herramienta perfecta para transformar la
         experiencia de atención al cliente.
       </p>
-      <label htmlFor="toggleText" className={style.toggle__label}></label>
+      <button
+        className={style.toggle__label}
+        onClick={() => setIsOpen(!isOpen)}
+      > 
+        {isOpen ? "Ver menos" : "Ver más"}
+      </button>
     </section>
   );
 }

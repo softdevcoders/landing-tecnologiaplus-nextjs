@@ -6,11 +6,13 @@ function NuestrosClientes(props) {
   const { title, description, logos } = props;
 
   return (
-    <section className={style.clients__section}>
-      <h2 className={style.clients__title}>{title}</h2>
-      <p>{description}</p>
-      <div className={style.clients__container}>
+    <section className={style.nuestros__clientes__section}>
+      <h2 className={style.nuestros__clientes__title}>{title}</h2>
+      <p className={style.nuestros__clientes__description}>{description}</p>
+      <div className={style.nuestros__clientes__container}>
+        <div className={style.nuestros__clientes__background_gradient_left}></div>
         <InfiniteSlider logos={logos}/>
+        <div className={style.nuestros__clientes__background_gradient_right}></div>
       </div>
     </section>
   );
