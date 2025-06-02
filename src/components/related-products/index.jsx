@@ -5,43 +5,16 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import style from "./related-products.module.scss";
-import { routes } from "@/config/routes";
 import Link from "next/link";
 import Image from "next/image";
+import style from "./related-products.module.scss";
 
-function RelatedProducts() {
-  const products = [
-    {
-      name: "Dispensador de tiquetes",
-      description: "Complemento práctico para tomar el turno.",
-      img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349966/dispensador_de_tiquetes_2x-8_qusuqr_fuxs8k.webp",
-      sold: "2.686 vendidos",
-      className: style.dispensador__card,
-      link: routes.landings.dispensadorDeTickets.url,
-    },
-    {
-      name: "TurnoExpress",
-      description: "Rapidez y agilidad para tus filas.",
-      img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738350028/TurnoExpress_2x-8_ri7zqh_xjz8bw.webp",
-      sold: "692 vendidos",
-      link: routes.landings.turneroTurnoexpress.url,
-    },
-    {
-      name: "TurnoMaster",
-      description: "Digitaliza la gestión de turnos.",
-      img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738350030/TurnoMaster_2x-8_stvupu_tvjv5q.webp",
-      sold: "194 vendidos",
-      link: routes.landings.sistemasDeTurnosTurnomaster.url,
-      className: style.turnomaster__card,
-    },
-  ];
-
+function RelatedProducts({ products }) {
   return (
     <section className={style.related__products}>
-      <h2>Productos similares</h2>
       <div className={style.related__products__container}>
-        <div className={style.card__container}>
+        <h2 className={style.related__products__title}>Productos similares</h2>
+        <div className={style.swiper__container}>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={20}
@@ -58,23 +31,24 @@ function RelatedProducts() {
             {products.map((product, index) => (
               <SwiperSlide
                 key={index}
-                className={`${style.swiper__slide} ${product.className || ""}`}
+                className={style.swiper__slide}
               >
-                <div className={style.related__products__card}>
-                  <div className={style.card__info}>
-                    <div className={style.card__text}>
-                      <h3>{product.name}</h3>
-                      <p>{product.description}</p>
+                <div className={style.swiper__slide__card}>
+                  <div className={`${style.swiper__slide__card__info} ${product.shouldImageBeAtTheBottom ? style.swiper__slide__card__info__image__at__bottom : ""}`}>
+                    <h3 className={style.swiper__slide__card__info__title}>{product.name}</h3>
+                    <p className={style.swiper__slide__card__info__description}>{product.description}</p>
+                    <div className={style.swiper__slide__card__info__img__container}>
+                      <Image
+                        width={320}
+                        height={230}
+                        src={product.img}
+                        alt={`imagen de ${product.name}`}
+                        className={style.swiper__slide__card__info__img}
+                      />
                     </div>
-                    <Image
-                      width={320}
-                      height={230}
-                      src={product.img}
-                      alt={`imagen de ${product.name}`}
-                    />
+                    <p className={style.swiper__slide__card__info__selling__counter}>{product.sold}</p>
                   </div>
-                  <p className={style.selling__counter}>{product.sold}</p>
-                  <Link className={style.card__btn} href={product.link}>
+                  <Link className={style.swiper__slide__card__btn} href={product.link}>
                     Ver más
                   </Link>
                 </div>
@@ -84,42 +58,54 @@ function RelatedProducts() {
         </div>
       </div>
       <div className={style.related__products__specs}>
-        <ul>
-          <li>
-            <Image
-              width={30}
-              height={30}
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349925/xcbtnf1wh1en4taujsdx_avnfkj.webp"
-              alt="icono pulgar arriba"
-            />
-            <p>Precios Justos</p>
+        <ul className={style.related__products__specs__list}>
+          <li className={style.related__products__specs__list__item}>
+            <div className={style.related__products__specs__list__item__icon}>
+              <Image
+                width={30}
+                height={30}
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349925/xcbtnf1wh1en4taujsdx_avnfkj.webp"
+                alt="icono pulgar arriba"
+                className={style.related__products__specs__list__item__icon__img}
+              />
+            </div>
+            <p className={style.related__products__specs__list__item__text}>Precios Justos</p>
           </li>
-          <li>
-            <Image
-              width={30}
-              height={30}
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349925/zpyfcqvsxo6wdubn2kdu_iuw7tl.webp"
-              alt="icono de seguridad"
-            />
-            <p>Protección al comprador</p>
+          <li className={style.related__products__specs__list__item}>
+            <div className={style.related__products__specs__list__item__icon}>
+              <Image
+                width={30}
+                height={30}
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349925/zpyfcqvsxo6wdubn2kdu_iuw7tl.webp"
+                alt="icono de seguridad"
+                className={style.related__products__specs__list__item__icon__img}
+              />
+            </div>
+            <p className={style.related__products__specs__list__item__text}>Protección al comprador</p>
           </li>
-          <li>
-            <Image
-              width={30}
-              height={30}
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349921/jg3stajnopybox4xxdkd_favvxk.webp"
-              alt="icono de excelencia"
-            />
-            <p>Garantía superior</p>
+          <li className={style.related__products__specs__list__item}>
+            <div className={style.related__products__specs__list__item__icon}>
+              <Image
+                width={30}
+                height={30}
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349921/jg3stajnopybox4xxdkd_favvxk.webp"
+                alt="icono de excelencia"
+                className={style.related__products__specs__list__item__icon__img}
+              />
+            </div>
+            <p className={style.related__products__specs__list__item__text}>Garantía superior</p>
           </li>
-          <li>
-            <Image
-              width={30}
-              height={30}
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349925/ynuxn64wkw3nkqxl4tvo_lwqzi0.webp"
-              alt="icono de Envíos en Colombia y Latinoamérica"
-            />
-            <p>Envíos en Colombia y Latinoamérica</p>
+          <li className={style.related__products__specs__list__item}>
+            <div className={style.related__products__specs__list__item__icon}>
+              <Image
+                width={30}
+                height={30}
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349925/ynuxn64wkw3nkqxl4tvo_lwqzi0.webp"
+                alt="icono de Envíos en Colombia y Latinoamérica"
+                className={style.related__products__specs__list__item__icon__img}
+              />
+            </div>
+            <p className={style.related__products__specs__list__item__text}>Envíos en Colombia y Latinoamérica</p>
           </li>
         </ul>
       </div>
