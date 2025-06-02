@@ -1,74 +1,120 @@
-@use "@/styles/components/productsSection" as *;
-@use "@/styles/base/mixins" as *;
-
 .products__section {
-  padding: 3rem 0 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0 10rem;
+  background-color: #f4f4f4;
 
-  > p {
-    @include respond-to-max("laptop") {
-      margin-top: 2rem;
-      padding: 0 5vw;
+  .products__container_desktop {
+    display: none;
+  }
+
+  .products__container_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    .products__container__item {
+      width: 100%;
+    
+      .products__container__item__image {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .products__container__item:last-child {
+      padding: 0 2rem;
     }
   }
 
-  .products__container {
-    margin-bottom: 0;
-    gap: 4rem;
-    justify-content: space-between;
-
-    @include respond-to-max("laptop") {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-    }
+  .products__text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #606060;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-wrap: balance;
+    text-align: center;
     width: 100%;
-    img {
-      object-fit: contain;
-      width: 45vw;
-      height: auto;
+    max-width: 1250px;
+    margin-top: 2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    transition: max-height 0.3s ease-in-out;
 
-      @include respond-to-max("laptop") {
-        width: 80vw;
-        height: auto;
-        max-width: 500px;
-      }
+    &.open {
+      max-height: none;
+      overflow: visible;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
+      transition: max-height 0.3s ease-in-out;
+      text-wrap: balance;
+      display: block;
     }
+  }
 
-    img:nth-child(1) {
-      @include respond-to-max("laptop") {
-        /* align-self: start; */
-      }
-    }
-    img:nth-child(3) {
-      margin-right: 5vw;
-      @include respond-to-max("laptop") {
-        /* margin-right: 0; */
-      }
-    }
+  .toggle__label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #606060;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
 
-    .img__mobile:nth-child(2) {
-      @include respond-to-max("laptop") {
-        align-self: start;
-        width: 95vw;
-      }
-    }
+@media (min-width: 1024px) {
+  .products__section {
+    padding: 5rem 0 10rem;
 
-    .img__mobile {
+    .products__container_mobile {
       display: none;
-
-      @include respond-to-max("laptop") {
-        display: block;
-        width: 70vw;
-        height: auto;
-        max-width: 500px;
-      }
     }
 
-    .img__desktop {
-      @include respond-to-max("laptop") {
-        display: none;
+    .products__container_desktop {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      gap: 4rem;
+      margin-bottom: 4rem;
+
+      .products__container__item {
+        width: 100%;
+        max-width: 50rem;
+        height: 100%;
+
+        .products__container__item__image {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
       }
+
+      .products__container__item:last-child {
+        padding: 0 2rem;
+      }
+    }
+    
+    .products__text {
+      max-height: none;
+      overflow: visible;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
+      transition: max-height 0.3s ease-in-out;
+      text-wrap: balance;
+      display: block;
+    }
+
+    .toggle__label {
+      display: none;
     }
   }
 }
