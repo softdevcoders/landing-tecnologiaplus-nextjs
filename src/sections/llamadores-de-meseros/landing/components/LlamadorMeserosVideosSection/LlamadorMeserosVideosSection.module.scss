@@ -1,5 +1,6 @@
 .video__section {
-  padding: 3rem 1rem;
+  
+  background-color: #fff;
 
   .video__container {
     display: flex;
@@ -7,6 +8,8 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    padding: 3rem 1rem;
+    background-color: #fff;
 
     .video__title {
       font-size: 1.5rem;
@@ -68,9 +71,9 @@
 
 @media (min-width: 1150px) {
   .video__section {
-    padding: 5rem 3rem;
-
     .video__container {
+      padding: 5rem 3rem;
+      background-color: #fff;
       .video__title {
         color: #606060;
         margin: 0;

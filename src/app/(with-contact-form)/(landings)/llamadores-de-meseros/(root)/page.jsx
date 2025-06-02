@@ -6,6 +6,7 @@ import LlamadorMeserosIndustriesSection from "@/sections/llamadores-de-meseros/l
 import LlamadorMeserosProductsSection from "@/sections/llamadores-de-meseros/landing/components/ProductsSection/LlamadorMeserosProductsSection";
 import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/landing/components/RelatedProducts/LlamadorMeserosRelatedProducts";
 import LlamadorMeserosVideosSection from "@/sections/llamadores-de-meseros/landing/components/LlamadorMeserosVideosSection/LlamadorMeserosVideosSection";
+import LlamadorMeserosVerMasSection from "@/sections/llamadores-de-meseros/landing/components/LlamadorMeserosVerMasSection/LlamadorMeserosVerMasSection";
 import StepsSectionLlamadorMeseros from "@/sections/llamadores-de-meseros/landing/components/StepsSection/StepsSectionLlamadorMeseros";
 
 export async function generateMetadata() {
@@ -21,6 +22,7 @@ export default function LlamadorMeserosLanding() {
       <LlamadorMeserosProductsSection />
       <LlamadorMeserosBenefitsSection />
       <StepsSectionLlamadorMeseros />
+      <LlamadorMeserosVerMasSection />
       <LlamadorMeserosVideosSection />
       <LlamadorMeserosIndustriesSection />
       <LlamadorMeserosRelatedProducts />
