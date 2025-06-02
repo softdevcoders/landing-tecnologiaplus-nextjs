@@ -40,7 +40,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       gap: 2rem;
 
@@ -78,6 +78,7 @@
       align-items: center;
 
       .industries__section__list {
+        align-items: flex-start;
         width: fit-content;
         .industries__section__list__item {
           flex-direction: row;
