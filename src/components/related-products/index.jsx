@@ -8,8 +8,33 @@ import "swiper/css/pagination";
 import Link from "next/link";
 import Image from "next/image";
 import style from "./related-products.module.scss";
+import { routes } from "@/config/routes";
 
-function RelatedProducts({ products }) {
+const defaultProducts = [
+  {
+    name: "Rollos de turnos",
+    description: "Organiza y mejora el servicio.",
+    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1745436638/Frame_1_35_vku1gs_746c0e.webp",
+    sold: "8.527 vendidos",
+    link: routes.landings.rollosDeFichosParaTurnos.url,
+  },
+  {
+    name: "TurnoExpress",
+    description: "Rapidez y agilidad para tus filas.",
+    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738350028/TurnoExpress_2x-8_ri7zqh_xjz8bw.webp",
+    sold: "692 vendidos",
+    link: routes.landings.turneroTurnoexpress.url,
+  },
+  {
+    name: "TurnoMaster",
+    description: "Digitaliza la gestión de turnos.",
+    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738350030/TurnoMaster_2x-8_stvupu_tvjv5q.webp",
+    sold: "194 vendidos",
+    link: routes.landings.sistemasDeTurnosTurnomaster.url,
+  },
+];
+
+function RelatedProducts({ products = defaultProducts }) {
   return (
     <section className={style.related__products}>
       <div className={style.related__products__container}>
