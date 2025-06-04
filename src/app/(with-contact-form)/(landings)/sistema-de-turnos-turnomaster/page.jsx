@@ -12,29 +12,15 @@ export async function generateMetadata() {
   return metadata;
 }
 
-// Componente principal de la página
 export default function TurnoMasterLanding() {
   return (
     <>
-      {/* Sección de héroe: espera parámetros como título, subtítulo e imagen */}
       <TurnoMasterHeroSection />
-
-      {/* Sección de clientes: espera una lista de clientes o testimonios */}
       <TurnoMasterClientsSection />
-
-      {/* Sección de productos principales: espera una lista de productos destacados */}
       <TurnoMasterProductsSection />
-
-      {/* Sección de beneficios: espera una lista de beneficios o características */}
       <TurnoMasterBenefitsSection />
-
-      {/* Sección de productos secundarios: espera una lista de productos adicionales */}
       <SecondaryTurnoMasterProductsSection />
-
-      {/* Sección de industrias: espera una lista de industrias o sectores */}
       <TurnoMasterIndustriesSection />
-
-      {/* Sección de productos relacionados: espera una lista de productos relacionados */}
       <TurnoMasterRelatedProducts />
     </>
   );

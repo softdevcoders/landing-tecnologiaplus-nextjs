@@ -11,6 +11,10 @@
     background-color: #fff;
   }
 
+  &.no__padding__top {
+    padding-top: 3rem;
+  }
+
   .benefits__container {
     position: relative;
     display: flex;
@@ -20,6 +24,10 @@
     border-radius: 20px;
     overflow: hidden;
     z-index: 2;
+
+    &.margin__top__overlay {
+      margin-top: -7rem;
+    }
 
     .benefits__background_container {
       position: absolute;
@@ -37,6 +45,7 @@
 
     .benefits__content {
       position: relative;
+      width: 100%;
     }
   }
 }
@@ -49,5 +58,15 @@
     &.padding__inline {
       padding-inline: 3rem;
     }
+
+    &.no__padding__top {
+      padding-top: 3rem;
+    }
+
+    .benefits__container {
+      &.margin__top__overlay {
+        margin-top: -7rem;
+      }
+    } 
   }
 }
