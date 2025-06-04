@@ -36,6 +36,8 @@ function Header({ headerAlt = false }) {
 
     // window.scrollTo(0, 0);
 
+    handleScroll();
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
