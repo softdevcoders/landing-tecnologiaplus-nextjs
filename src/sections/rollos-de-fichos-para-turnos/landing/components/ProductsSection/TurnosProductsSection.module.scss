@@ -1,15 +1,43 @@
-@use "@/styles/components/productsSection" as *;
-@use "@/styles/base/mixins" as *;
-
 .products__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #f4f4f4;
+  padding: 3rem 1rem 8rem; 
+
+  .products__title {
+    font-size: 1.7rem;
+    font-weight: 900;
+    text-align: center;
+    color: #606060;
+  }
+
+  .products__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    .product__image_container {
+      width: 100%;
+      height: 100%;
+      max-width: 960px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
 }
 
-@include respond-to-max("laptop") {
+@media (min-width: 1024px) {
   .products__section {
-    .products__container {
-      img {
-        height: auto;
-      }
+    .products__title {
+      font-size: 2.5rem;
     }
   }
 }
