@@ -1,16 +1,16 @@
 import RelatedProducts from "@/components/related-products";
 import { categories } from "@/config/categories";
 
-function EnfermeriaRelatedProducts() {
+function TurnosRelatedProducts() {
   return (
     <RelatedProducts 
       productsKeys={[
-        categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key,
+        categories.LOCALIZADORES_PARA_RESTAURANTES.category_key,
         categories.TURNERO_TURNOEXPRESS.category_key,
-        categories.ENCUESTA_VIRTUAL_OPINAMASTER.category_key,
+        categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,
       ]}
     />
   );
 }
 
-export default EnfermeriaRelatedProducts;
+export default TurnosRelatedProducts;
