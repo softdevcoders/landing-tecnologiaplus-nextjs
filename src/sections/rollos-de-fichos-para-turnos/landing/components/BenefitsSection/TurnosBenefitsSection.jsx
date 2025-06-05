@@ -4,7 +4,7 @@ import style from "./TurnosBenefitsSection.module.scss";
 
 function TurnosBenefitsSection() {
   return (
-    <BenefitsSection overlayWhite>
+    <BenefitsSection overlayWhite noPaddingTop marginTopOverlay>
       <div className={style.benefits__container}>
         <div className={style.text__container}>
           <div className={style.benefits__title_container}>
