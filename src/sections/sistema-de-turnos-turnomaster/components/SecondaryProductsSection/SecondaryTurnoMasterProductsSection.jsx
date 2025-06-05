@@ -202,13 +202,7 @@ function SecondaryTurnoMasterProductsSection() {
           </div>
         </div>
         <ToggleTextContent>
-          Cada marca es única, y en Tecnología Plus lo sabemos. Por eso, nuestro
-          Sistema TurnoMaster es fácil de usar y personalizable, diseñado para
-          adaptarse a las necesidades de tu sala de espera. Configura los
-          colores, escoge la numeración de turnos, elige entre múltiples
-          opciones para organizar filas y el llamado de turnos. Además, puedes
-          integrar servicios adicionales para optimizar la experiencia del
-          usuario. Nuestro software de turnos es dinámico, lo cual permite
+        Cada marca es única, y en Tecnología Plus lo sabemos. Por eso, nuestro Sistema TurnoMaster es fácil de usar y personalizable, diseñado para adaptarse a las necesidades de tu sala de espera. Configura los colores, escoge la numeración de turnos, elige entre múltiples opciones para organizar filas y el llamado de turnos. Además, puedes integrar servicios adicionales para optimizar la experiencia del usuario. Nuestro software de turnos es dinámico, lo cual permite generar reportes detallados y visualizar métricas clave en tiempo real, facilitando la toma de decisiones para agilizar la atención. Ya sea en el sector salud, retail, oficinas u otros, TurnoMaster transforma la gestión de turnos en un proceso más ágil y organizado, mejorando la experiencia tanto para los colaboradores como para los usuarios.
         </ToggleTextContent>
       </section>
       <section className={style.additional__services__section}>

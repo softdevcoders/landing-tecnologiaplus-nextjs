@@ -229,7 +229,7 @@ function LlamadorMeserosVerMasSection() {
       type: "llamador_mesero",
     },
     {
-      title: "Hablador de mesa",
+      title: "Hablador para mesa",
       description: "2.175 vendidos",
       image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738694393/3_2x-8_igijiu.webp",
       link: routes.landings.llamadoresDeMeseros.children.habladorDeMesa.url,
