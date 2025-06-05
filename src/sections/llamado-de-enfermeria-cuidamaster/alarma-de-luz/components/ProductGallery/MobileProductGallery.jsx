@@ -159,7 +159,7 @@ function MobileProductGallery() {
       </div>
 
       {/* Colors Swiper - only visible when activeView is 'colors' */}
-      <div style={{ display: activeView === 'colors' ? 'block' : 'none' }}>
+      {/* <div style={{ display: activeView === 'colors' ? 'block' : 'none' }}>
         <Swiper
           ref={colorSwiperRef}
           modules={[Navigation, Pagination]}
@@ -194,9 +194,9 @@ function MobileProductGallery() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className={styles.thumbs__container}>
+      {/* <div className={styles.thumbs__container}>
         <h3>Galería</h3>
         <div className={styles.thumbsRow}>
           {GALLERY_IMAGES.map((img, index) => (
@@ -212,7 +212,7 @@ function MobileProductGallery() {
           ))}
         </div>
 
-        <h3>Colores</h3>
+        {/* <h3>Colores</h3>
         <div className={styles.thumbsRow}>
           {COLOR_VARIANTS.map((color, index) => (
             <div
@@ -225,8 +225,8 @@ function MobileProductGallery() {
               <img src={color.url} alt={color.name} />
             </div>
           ))}
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
 
       {/* Product information */}
       <div className={styles.container__info__products}>
