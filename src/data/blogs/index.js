@@ -940,7 +940,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>En un mundo donde la experiencia lo es todo, los negocios que entienden cómo hacer sentir bien al cliente son los que ganan. Y en zonas de comida, plazoletas, cafeterías o restaurantes autoservicio, el avisador de pedidos se ha convertido en un aliado silencioso pero poderoso para lograrlo. ¿La razón? Este pequeño dispositivo mejora radicalmente&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/localizadores-para-restaurantes/avisador-de-pedidos-fidelizacion-clientes/nokotbucpkzkxohfoiyx"
+        "website-v2/blog/localizadores-para-restaurantes/avisador-de-pedidos-fidelizacion-clientes/xianlxbcg05xy7z4rw43"
     ],
     "categories": [
         routes.blog.children.localizadoresParaRestaurantes.category_key

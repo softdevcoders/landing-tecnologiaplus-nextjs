@@ -6,6 +6,7 @@ import ResponsiveImage from "@/components/ui/responsive-image";
 import CarRelated from "@/sections/blog/components/card-related";
 import Link from "next/link";
 import { routes } from "@/config/routes";
+import Image from "next/image";
 
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
@@ -19,18 +20,23 @@ const PostView = ({ post }) => {
 
         <div itemProp="articleBody" className={style.blogPostView__content}>
           <div className={style.blogPostView__imageContainer}>
-
-          <ResponsiveImage  
-            image={{
-              src: post.images[0],
-              alt: post.title.rendered,
-              sizes: [
-                { imageWidth: 500, mediaQuery: "(min-width: 0px)" }, 
-                { imageWidth: 1200, mediaQuery: "(min-width: 1024px)" }
-              ],
-            }}
-          />
-
+            {/* <ResponsiveImage  
+              image={{
+                src: post.images[0],
+                alt: post.title.rendered,
+                sizes: [
+                  { imageWidth: 500, mediaQuery: "(min-width: 0px)" }, 
+                  { imageWidth: 1200, mediaQuery: "(min-width: 1024px)" }
+                ],
+              }}
+            /> */}
+            <Image
+              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${post.images[0]}`} 
+              alt={post.title.rendered}
+              width={1200}
+              height={630}
+              className={style.blogPostView__image}
+            />
           </div>
           <div 
             className={style.blogPostView__contentHtml} 
