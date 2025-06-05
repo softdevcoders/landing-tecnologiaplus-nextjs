@@ -381,6 +381,10 @@
     }
   }
 
+  .mainImage {
+    object-fit: contain;
+  }
+
   /* Cambiar el estilo de los bullets */
 
   :global(.swiper-wrapper) {
