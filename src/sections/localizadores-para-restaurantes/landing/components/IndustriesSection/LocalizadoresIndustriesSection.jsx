@@ -8,8 +8,8 @@ function LocalizadoresIndustriesSection() {
         <Image
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/nisgh2gbe0ginddnsrko_opkrn1.webp"
           alt="background de la sección de industrias"
-          width={100}
-          height={100}
+          width={500}
+          height={500}
           className={style.industries__section__background__image}
         />
       </div>
@@ -21,8 +21,8 @@ function LocalizadoresIndustriesSection() {
               <Image
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738694400/restaurantes_2x-8_lpqdzj.webp"
                 alt="icono de Restaurantes"
-                width={100}
-                height={100}
+                width={500}
+                height={500}
               />
             </div>
             <p className={style.industries__section__list__item__text}>
@@ -34,8 +34,8 @@ function LocalizadoresIndustriesSection() {
               <Image
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738692286/salud_2x-8_anq348.webp"
                 alt="icono de Sector salud"
-                width={100}
-                height={100}
+                width={500}
+                height={500}
               />
             </div>
             <p className={style.industries__section__list__item__text}>Salud</p>
@@ -45,8 +45,8 @@ function LocalizadoresIndustriesSection() {
               <Image
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738615995/otras_industrias_2x-8_jwvjrm.webp"
                 alt="icono de otras industrias"
-                width={100}
-                height={100}
+                width={500}
+                height={500}
               />
             </div>
             <p className={style.industries__section__list__item__text}>Otras industrias</p>
