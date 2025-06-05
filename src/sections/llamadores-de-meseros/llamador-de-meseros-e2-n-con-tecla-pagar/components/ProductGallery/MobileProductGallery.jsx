@@ -10,7 +10,7 @@ import styles from "@/styles/ProductGallery.module.scss";
 import { IoIosArrowBack } from "react-icons/io";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";   
 import classNames from "classnames";
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 
 // Main gallery images - don't modify these constants during rendering
 const GALLERY_IMAGES = [
@@ -173,9 +173,9 @@ function MobileProductGallery() {
         >
           {COLOR_VARIANTS.map((color, index) => (
             <SwiperSlide key={color.id || `color-slide-${index}`}>
-              <ImageCloudinary 
-                width={116}
-                height={92}
+              <Image
+                width={485}
+                height={382}
                 src={color.url}
                 alt={color.name}
                 className={styles.mainImage}
