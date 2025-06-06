@@ -11,9 +11,8 @@ const WhatsappButton = () => {
 
   useEffect(() => {
     const pageTitle = document.title || 'Tecnología Plus';
-    const currentUrl = `${process.env.NEXT_PUBLIC_BASE_URL}${pathname}`;
     const message = encodeURIComponent(
-      `Hola, vengo de la página "${pageTitle}" y quiero más información. \n\n ${currentUrl}`
+      `Hola, vengo de la página "${pageTitle}" y quiero más información.`
     );
 
     setWhatsappLink(`https://wa.me/573164682034?text=${message}`);

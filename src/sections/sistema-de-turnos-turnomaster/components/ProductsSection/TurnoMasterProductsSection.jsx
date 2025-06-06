@@ -3,8 +3,7 @@ import Image from "next/image";
 import style from "./TurnoMasterProductsSection.module.scss";
 
 function TurnoMasterProductsSection() {
-  const currentUrl = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.sistemasDeTurnosTurnomaster.url}`;
-  const whatsappUrl = `https://wa.me/573164682034?text=${encodeURIComponent(`Hola, estoy interesado en sus productos. Estoy visitando la página 'Sistema de turnos TurnoMaster' y me gustaría recibir más información. \n\n ${currentUrl}`)}`;
+  const whatsappUrl = `https://wa.me/573164682034?text=${encodeURIComponent(`Hola, vengo de la página "Sistema de turnos TurnoMaster" y quiero más información.`)}`;
   return (
     <section className={style.products__section}>
       <h2 className={style.products__section__title}>Dos formas de solicitar el turno</h2>
