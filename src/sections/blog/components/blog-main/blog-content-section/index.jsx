@@ -31,6 +31,11 @@ const BlogContentSection = ({ posts, pagination }) => {
       <div className={style.blogContent__categories}>
         <h2 className={style.blogContent__categoriesTitle}>Categorías</h2>
         <ul className={style.blogContent__categoriesList}>
+          <li className={style.blogContent__categoriesItem}>
+            <Link href={routes.blog.url} className={style.blogContent__categoriesLink}>
+              Todos los posts ({blogs.length})
+            </Link>
+          </li>
           {Object.keys(routes.blog.children).map((category) => (
             <li key={categories[category].category_key} className={style.blogContent__categoriesItem}>
               <Link href={categories[category].url} className={style.blogContent__categoriesLink}>

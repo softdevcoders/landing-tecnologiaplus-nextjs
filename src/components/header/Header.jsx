@@ -61,6 +61,11 @@ function Header({ headerAlt = false }) {
     text: child.label,
   }));
 
+  blogLinks.unshift({
+    href: routes.blog.url,
+    text: "Todos los posts",
+  });
+
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${headerAlt ? styles.headerAlt : ""}`}>
       <div className={styles.header__container}>
