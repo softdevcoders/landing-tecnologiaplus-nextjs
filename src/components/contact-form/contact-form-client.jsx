@@ -1,11 +1,13 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import style from './contact-form.module.scss';
 import { FaCheck } from 'react-icons/fa';
+import { usePathname } from 'next/navigation';
 
 const ContactFormClient = ({ sendEmail }) => {
+  const pathname = usePathname();
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm({
     defaultValues: {
       name: '',
@@ -15,22 +17,24 @@ const ContactFormClient = ({ sendEmail }) => {
     }
   });
   const [isSuccess, setIsSuccess] = useState(false);
-  const [cooldown, setCooldown] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
   const onSubmit = async (data) => {
-    if (cooldown) return;
-
     try {
       await sendEmail(data);
       setIsSuccess(true);
       reset();
-      setCooldown(true);
-      setTimeout(() => setCooldown(false), 60000); // 1 minute cooldown
     } catch (error) {
       setSubmitError('Hubo un error al enviar el mensaje. Por favor intenta nuevamente.');
     }
   };
+
+  useEffect(() => {
+    if (isSuccess) {
+      setIsSuccess(false);
+      reset();
+    }
+  }, [pathname]);
 
   if (isSuccess) {
     return (
@@ -54,12 +58,6 @@ const ContactFormClient = ({ sendEmail }) => {
         <div className={style.form_error}>{submitError}</div>
       )}
       
-      {cooldown && (
-        <div className={style.cooldown_message}>
-          Por favor espera un momento antes de enviar otro mensaje.
-        </div>
-      )}
-
       <div className={`${style.input_group}`}>
         <input
           type="text"
@@ -134,7 +132,7 @@ const ContactFormClient = ({ sendEmail }) => {
       <button
         type="submit"
         className={style.submit_button}
-        disabled={isSubmitting || cooldown}
+        disabled={isSubmitting}
       >
         {isSubmitting ? 'Enviando...' : 'Enviar'}
       </button>

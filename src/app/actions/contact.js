@@ -125,8 +125,39 @@ export async function sendEmail(formData) {
       `
     };
 
+    const confirmationMailOptions = {
+      from: {
+        name: 'Tecnología Plus - Confirmación de Contacto',
+        address: process.env.GMAIL_USER
+      },
+      to: sanitizedData.email,
+      subject: `[Confirmación] Tu mensaje ha sido recibido`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="background-color: #6f3bb4; color: white; padding: 20px; text-align: center;">
+            <h1 style="margin: 0;">Confirmación de Mensaje</h1>
+          </div>
+          <div style="padding: 20px; background-color: #f9f9f9;">
+            <p>Estimado/a ${sanitizedData.name},</p>
+            <p>Queremos agradecerte por contactarnos. Tu mensaje ha sido recibido con éxito y pronto nos pondremos en contacto contigo.</p>
+            <p>Gracias por confiar en nosotros.</p>
+          </div>
+          <div style="background-color: #f4f4f4; padding: 20px; text-align: center;">
+            <p>Conectate con nosotros en las redes sociales:</p>
+            <a href="https://www.facebook.com/tecnologiapluscolombia" style="margin: 0 10px; display: inline-block; color: blue; text-decoration: none;">Facebook</a>
+            <a href="https://www.instagram.com/tecnologiapluscolombia/" style="margin: 0 10px; display: inline-block; color: blue; text-decoration: none;">Instagram</a>
+            <a href="https://www.tiktok.com/@tecnologiapluscolombia?_t=ZS-8vifPxXi2KX&_r=1" style="margin: 0 10px; display: inline-block; color: blue; text-decoration: none;">TikTok</a>
+            <a href="https://www.youtube.com/channel/UCPho92vfQwC24X8Y3eI8Dvg" style="margin: 0 10px; display: inline-block; color: blue; text-decoration: none;">YouTube</a>
+          </div>
+        </div>
+      `
+    };
+
     // Enviar el correo
     await transporter.sendMail(mailOptions);
+
+    // Enviar el correo de confirmación
+    await transporter.sendMail(confirmationMailOptions);
 
     return { success: true, messageId };
   } catch (error) {

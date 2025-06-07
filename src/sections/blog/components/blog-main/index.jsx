@@ -11,10 +11,10 @@ const BlogMain = ({ posts, pagination }) => {
       {
         posts.length === 0 ? (
           <div className={style.blogMain__noPosts}>
-            <h2>No hay publicaciones</h2>
-            <p>Lo sentimos, no hay publicaciones disponibles en este momento.</p>
-            <Link href={routes.blog.url} title="Ir a todos los blogs">
-              Ir a todos los blogs
+            <h2>No hay artículos</h2>
+            <p>Lo sentimos, no hay artículos disponibles en este momento.</p>
+            <Link href={routes.blog.url} title="Todos los artículos">
+              Todos los artículos
             </Link>
           </div>
         ) : (
