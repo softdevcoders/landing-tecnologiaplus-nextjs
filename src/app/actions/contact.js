@@ -80,6 +80,7 @@ export async function sendEmail(formData) {
 
     // Verificar la conexión
     await transporterContact.verify();
+    await transporterConfirmation.verify();
 
     const messageId = generateMessageId();
     const timestamp = new Date().toLocaleString('es-ES', {
