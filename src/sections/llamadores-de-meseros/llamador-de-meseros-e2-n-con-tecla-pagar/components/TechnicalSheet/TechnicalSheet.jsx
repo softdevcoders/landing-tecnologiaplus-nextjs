@@ -1,5 +1,6 @@
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+
 import styles from "./TechnicalSheet.module.scss";
+import Image from "next/image";
 
 function TechnicalSheet() {
   return (
@@ -7,7 +8,7 @@ function TechnicalSheet() {
       <h2>Ficha técnica</h2>
       <div className={styles.items__container}>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={70}
             height={35}
             loading="lazy"
@@ -21,7 +22,7 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={70}
             height={35}
             loading="lazy"
@@ -36,7 +37,7 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={70}
             height={35}
             loading="lazy"
@@ -44,7 +45,7 @@ function TechnicalSheet() {
             alt="icono de 3 teclas de llamado"
             className={styles.img__desktop}
           />
-          <ImageCloudinary
+          <Image
             width={70}
             height={35}
             loading="lazy"
@@ -62,7 +63,7 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={70}
             height={35}
             loading="lazy"
@@ -76,7 +77,7 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={70}
             height={35}
             loading="lazy"
@@ -89,7 +90,7 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={70}
             height={35}
             loading="lazy"
