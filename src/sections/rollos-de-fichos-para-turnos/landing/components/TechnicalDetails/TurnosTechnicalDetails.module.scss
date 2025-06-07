@@ -238,7 +238,7 @@
 
 @media (min-width: 1024px) {
   .technical__details {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 560px 1fr;
     grid-template-areas: "carousel header" "carousel container";
     grid-template-rows: auto 1fr;
     column-gap: 4rem;

@@ -9,12 +9,12 @@ export default function InfiniteSlider({ logos }) {
       <div className={styles.sliderTrack}>
         {duplicated.map((logo, idx) => (
           <div key={idx} className={styles.slide}>
-            <Image
+            <img
               src={logo.src}
               alt={logo.alt}
               width={200}
               height={200}
-              loading='eager'
+              loading='lazy'
             />
           </div>
         ))}

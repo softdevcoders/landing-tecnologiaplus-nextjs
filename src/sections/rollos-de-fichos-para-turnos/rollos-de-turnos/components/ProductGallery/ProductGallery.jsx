@@ -10,7 +10,6 @@ import {
 } from "react-icons/io";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";
 import Popup from "@/components/ui/pop-up";
-import useDisableRightClick from "@/hooks/useDisableRightClick";
 
 function ProductGallery() {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,7 +93,6 @@ function ProductGallery() {
     setIsAlternative(true);
   };
 
-  useDisableRightClick();
 
   return (
     <section className={styles.hero}>

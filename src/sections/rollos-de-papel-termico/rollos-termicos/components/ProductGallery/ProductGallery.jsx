@@ -12,7 +12,7 @@ import {
 } from "react-icons/io";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";
 import Popup from "@/components/ui/pop-up";
-import useDisableRightClick from "@/hooks/useDisableRightClick";
+
 import ImageCloudinary from "@/components/ui/image-cloudinary";
 
 function ProductGallery() {
@@ -48,7 +48,6 @@ function ProductGallery() {
     );
   };
 
-  useDisableRightClick();
 
   return (
     <section className={styles.hero}>
