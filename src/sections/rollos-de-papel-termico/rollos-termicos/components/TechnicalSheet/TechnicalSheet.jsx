@@ -1,4 +1,4 @@
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 import styles from "./TechnicalSheet.module.scss";
 
 function TechnicalSheet() {
@@ -7,7 +7,7 @@ function TechnicalSheet() {
       <h2>Ficha técnica</h2>
       <div className={styles.items__container}>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={50}
             height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392284/ICONO_5_z4dhr8.svg"
@@ -19,7 +19,7 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={50}
             height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392284/ICONO_4_hctj7d.svg"
@@ -31,7 +31,7 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={50}
             height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392284/ICONO_3_zoivd7.svg"
@@ -43,7 +43,7 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={50}
             height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392283/ICONO_2_fqr5sl.svg"
@@ -55,7 +55,7 @@ function TechnicalSheet() {
           </p>
         </div>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={50}
             height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392283/ICONO_1_ctsg4n.svg"
@@ -64,7 +64,7 @@ function TechnicalSheet() {
           <p>Color: blanco</p>
         </div>
         <div className={styles.item}>
-          <ImageCloudinary
+          <Image
             width={50}
             height={50}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739392283/ICONO_fdyhsa.svg"

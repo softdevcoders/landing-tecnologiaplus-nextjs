@@ -1,14 +1,14 @@
 import { routes } from "@/config/routes";
 import style from "./DispensadorTiquetesProductsSection.module.scss";
 import Link from "next/link";
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 
 function DispensadorTiquetesProductsSection() {
   return (
     <section className={style.products__section}>
       <h2 className={style.products__title}>Dispensador de rollos de turnos</h2>
       <div className={style.products__container}>
-        <ImageCloudinary
+        <Image
           width={589}
           height={352}
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738424725/dispensador_2x-8_dwru2g.webp"

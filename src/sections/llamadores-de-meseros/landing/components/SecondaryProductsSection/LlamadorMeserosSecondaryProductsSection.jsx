@@ -2,7 +2,7 @@ import Link from "next/link";
 import style from "./LlamadorMeserosSecondaryProductsSection.module.scss";
 import YouTubePlayer from "@/components/YouTubePlayer";
 import { routes } from "@/config/routes";
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 
 function LlamadorMeserosSecondaryProductsSection() {
   return (
@@ -28,7 +28,7 @@ function LlamadorMeserosSecondaryProductsSection() {
                 </Link>
                 <p>4.987 vendidos</p>
               </div>
-              <ImageCloudinary
+              <Image
                 width={250}
                 height={250}
                 loading="lazy"
@@ -51,7 +51,7 @@ function LlamadorMeserosSecondaryProductsSection() {
                 </Link>
                 <p>4.193 vendidos</p>
               </div>
-              <ImageCloudinary
+              <Image
                 width={250}
                 height={250}
                 loading="lazy"
@@ -74,7 +74,7 @@ function LlamadorMeserosSecondaryProductsSection() {
                 </Link>
                 <p>2.175 vendidos</p>
               </div>
-              <ImageCloudinary
+              <Image
                 width={250}
                 height={250}
                 loading="lazy"
@@ -97,7 +97,7 @@ function LlamadorMeserosSecondaryProductsSection() {
                 </Link>
                 <p>198 vendidos</p>
               </div>
-              <ImageCloudinary
+              <Image
                 width={250}
                 height={250}
                 loading="lazy"
@@ -109,7 +109,7 @@ function LlamadorMeserosSecondaryProductsSection() {
           <h2>Opciones para recibir llamados</h2>
           <div className={style.products__card__container}>
             <div className={style.card}>
-              <ImageCloudinary
+              <Image
                 width={250}
                 height={250}
                 loading="lazy"
@@ -126,7 +126,7 @@ function LlamadorMeserosSecondaryProductsSection() {
               </Link>
             </div>
             <div className={style.card}>
-              <ImageCloudinary
+              <Image
                 width={250}
                 height={250}
                 loading="lazy"
@@ -145,7 +145,7 @@ function LlamadorMeserosSecondaryProductsSection() {
               </Link>
             </div>
             <div className={style.card}>
-              <ImageCloudinary
+              <Image
                 width={250}
                 height={250}
                 loading="lazy"

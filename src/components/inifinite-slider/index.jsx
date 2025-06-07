@@ -14,7 +14,6 @@ export default function InfiniteSlider({ logos }) {
               alt={logo.alt}
               width={200}
               height={200}
-              loading='lazy'
             />
           </div>
         ))}
