@@ -75,7 +75,8 @@ function EnfermeriaBenefitsSection() {
               />
             </div>
             <div className={style.benefits__icon_container_text}>
-              <p>Resiste derrames de agua. <span className={style.hide__on__mobile}>*</span></p>
+              <span className={style.benefits__icon_container_text__title}>Resiste derrames de agua.</span>
+              <span className={style.benefits__icon_container_text__subtitle}>* Referencia seleccionada</span>
             </div>
           </li>
           <li className={style.benefits__item}>
@@ -89,7 +90,7 @@ function EnfermeriaBenefitsSection() {
               />
             </div>
             <div className={style.benefits__icon_container_text}>
-              <span>Batería de larga duración.</span>
+              <span className={style.benefits__icon_container_text__title}>Batería de larga duración.</span>
             </div>
           </li>
           <li className={style.benefits__item}>
@@ -103,7 +104,7 @@ function EnfermeriaBenefitsSection() {
               />
             </div>
             <div className={style.benefits__icon_container_text}>
-              <span>Señal de largo alcance.</span>
+              <span className={style.benefits__icon_container_text__title}>Señal de largo alcance.</span>
             </div>
           </li>
         </ul>
