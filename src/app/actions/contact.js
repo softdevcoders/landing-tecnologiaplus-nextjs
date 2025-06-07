@@ -66,25 +66,28 @@ export async function sendEmail(formData) {
       throw new Error('El mensaje debe tener entre 3 y 1000 caracteres.');
     }
 
-    // Crear un transporter usando SMTP de Gmail
-    const transporter = nodemailer.createTransport({
+    const config = {
       service: 'gmail',
       auth: {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_APP_PASSWORD
       }
-    });
+    }
+
+    // Crear un transporter usando SMTP de Gmail
+    const transporterContact = nodemailer.createTransport(config);
+    const transporterConfirmation = nodemailer.createTransport(config);
 
     // Verificar la conexión
-    await transporter.verify();
+    await transporterContact.verify();
 
     const messageId = generateMessageId();
     const timestamp = new Date().toLocaleString('es-ES', {
       timeZone: 'America/Bogota'
     });
 
-    // Configurar el correo con contenido sanitizado
-    const mailOptions = {
+    // Enviar el correo
+    await transporterContact.sendMail({
       from: {
         name: 'Tecnología Plus - Formulario de Contacto',
         address: process.env.GMAIL_USER
@@ -95,7 +98,7 @@ export async function sendEmail(formData) {
         'X-Entity-Ref-ID': messageId,
         'X-Auto-Response-Suppress': 'OOF, AutoReply',
         'List-Unsubscribe': `<mailto:${process.env.GMAIL_USER}?subject=unsubscribe>`,
-        'X-Gmail-Labels': 'Contacto,Website'
+        'X-Gmail-Labels': 'Contacto'
       },
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -123,15 +126,22 @@ export async function sendEmail(formData) {
           </div>
         </div>
       `
-    };
+    });
 
-    const confirmationMailOptions = {
+    // Enviar el correo de confirmación
+    await transporterConfirmation.sendMail({
       from: {
         name: 'Tecnología Plus - Confirmación de Contacto',
         address: process.env.GMAIL_USER
       },
       to: sanitizedData.email,
       subject: `[Confirmación] Tu mensaje ha sido recibido`,
+      headers: {
+        'X-Entity-Ref-ID': messageId,
+        'X-Auto-Response-Suppress': 'OOF, AutoReply',
+        'List-Unsubscribe': `<mailto:${process.env.GMAIL_USER}?subject=unsubscribe>`,
+        'X-Gmail-Labels': 'Confirmación'
+      },
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background-color: #6f3bb4; color: white; padding: 20px; text-align: center;">
@@ -151,13 +161,7 @@ export async function sendEmail(formData) {
           </div>
         </div>
       `
-    };
-
-    // Enviar el correo
-    await transporter.sendMail(mailOptions);
-
-    // Enviar el correo de confirmación
-    await transporter.sendMail(confirmationMailOptions);
+    });
 
     return { success: true, messageId };
   } catch (error) {
