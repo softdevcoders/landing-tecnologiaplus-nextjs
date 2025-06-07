@@ -63,7 +63,7 @@ function Header({ headerAlt = false }) {
 
   blogLinks.unshift({
     href: routes.blog.url,
-    text: "Todos los posts",
+    text: "Todos los artículos",
   });
 
   return (

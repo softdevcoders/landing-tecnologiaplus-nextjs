@@ -48,6 +48,7 @@ import { metadata as llamadoresDeMeserosLandingPantallaT6Landing } from '@/data/
 import { metadata as llamadoresDeMeserosLandingLlamadorDeMeserosE2BLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/llamador-de-meseros-e2-b';
 import { metadata as llamadoresDeMeserosLandingLlamadorDeMeserosE2NConTeclaPagarLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar';
 import { metadata as rollosDeFichosParaTurnosLandingRollosDeTurnos } from '@/data/metadata/data/landings/rollos-de-fichos-para-turnos/rollos-de-turnos';
+import { metadata as turneroTurnoexpressLandingTurneroT3ConLogo } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-t3-con-logo';
   
 export default {  
   default: defaultMetadata,
@@ -74,6 +75,7 @@ export default {
       'turnero-t1-n': turneroTurnoexpressLandingTurneroT1N,
       'turnero-t3-modulo-turno': turneroTurnoexpressLandingTurneroT3ModuloTurno,
       'turnero-transformer': turneroTurnoexpressLandingTurneroTransformer,
+      'turnero-t3-con-logo': turneroTurnoexpressLandingTurneroT3ConLogo,
     },
     'rollos-de-papel-termico': {
       root: rollosDePapelTermicoLanding,

@@ -1,10 +1,10 @@
 import { routes } from "@/config/routes";
 import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 
-const title = "Turnero Digital: Agiliza y organiza las filas en tu negocio.";
+const title = "Turnero T3 con logo - Resalta tú Marca";
 const description = "Turnero digital: Somos fabricantes. Acelera la atención al cliente y moderniza tu negocio. ¡Solicita una asesoria ahora!";
-const keywords = ["Turnero"];
-const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.turneroTurnoexpress.url}`;
+const keywords = ["Turnero T3 con Logo"];
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.turneroTurnoexpress.children.turneroT3ConLogo.url}`;
 
 export const metadata = {
   title: {
