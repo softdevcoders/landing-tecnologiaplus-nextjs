@@ -12,8 +12,8 @@ import {
 } from "react-icons/io";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";
 import Popup from "@/components/ui/pop-up";
-import useDisableRightClick from "@/hooks/useDisableRightClick";
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+
+import Image from "next/image";
 
 function ProductGallery() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +48,6 @@ function ProductGallery() {
     );
   };
 
-  useDisableRightClick();
 
   return (
     <section className={styles.hero}>
@@ -72,7 +71,7 @@ function ProductGallery() {
             {images
               .slice(scrollPosition, scrollPosition + 5)
               .map((img, index) => (
-                <ImageCloudinary
+                <Image
                   width={117}
                   height={92}
                   key={scrollPosition + index} // Usamos un índice único para evitar problemas de key
@@ -111,7 +110,7 @@ function ProductGallery() {
               onClick={handlePrevImage}
               onMouseDown={(e) => e.preventDefault()}
             />
-            <ImageCloudinary
+            <Image
               width={765}
               height={606}  
               src={selectedImage} 

@@ -1,4 +1,4 @@
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 import style from "./ProductsSection.module.scss";
 
 function ProductsSection() {
@@ -6,13 +6,13 @@ function ProductsSection() {
     <section className={style.products__section}>
       <h2 className={style.products__title}>Rollos para impresora térmica</h2>
       <div className={style.products__container}>
-        <ImageCloudinary
+        <Image
           width={396}
           height={352}
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349920/image-1_1_ljyxis_qdsmdq.webp"
           alt="Rollos Térmicos blancos"
         />
-        <ImageCloudinary
+        <Image
           width={480}
           height={352}
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/Recurso-13_2x-8_1_suitny_l91ptd.webp"

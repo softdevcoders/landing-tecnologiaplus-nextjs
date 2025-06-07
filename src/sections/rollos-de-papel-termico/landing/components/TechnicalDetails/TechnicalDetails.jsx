@@ -1,4 +1,4 @@
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 import style from "./TechnicalDetails.module.scss";
 import Link from "next/link";
 import { routes } from "@/config/routes";
@@ -11,7 +11,7 @@ function TechnicalDetails() {
         <p className={style.subtitle__mobile}>Rollos térmicos</p>
       </div>
       <div className={style.technical__carousel__container}>
-        <ImageCloudinary
+        <Image
           width={714}
           height={565}
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349924/w95mg3v5l3rz4s634bso_dqg6eq.webp"
@@ -39,7 +39,7 @@ function TechnicalDetails() {
               </p>
             </li>
             <li>
-              <ImageCloudinary
+              <Image
                 width={60}
                 height={60}
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349924/uq6mantgalzbg1cwabg2_lq36yt.webp"
@@ -52,7 +52,7 @@ function TechnicalDetails() {
               </p>
             </li>
             <li>
-              <ImageCloudinary
+              <Image
                 width={60}
                 height={60}
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349922/mfucx7jyhfttrhehhv6f_gparqv.webp"
@@ -65,7 +65,7 @@ function TechnicalDetails() {
               </p>
             </li>
             <li>
-              <ImageCloudinary
+              <Image
                 width={60}
                 height={60}
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349922/mklyxhubukpeobmbjxso_swt54w.webp"
@@ -78,7 +78,7 @@ function TechnicalDetails() {
               </p>
             </li>
             <li>
-              <ImageCloudinary
+              <Image
                 width={60}
                 height={60}
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349920/jacnophczhcmtv5jmrmt_vsmuoe.webp"

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { IoIosArrowForward } from "react-icons/io";
 import style from "./BlogCard.module.scss";
 import Link from "next/link";
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 
 const BlogCard = ({
   title,
@@ -29,7 +29,7 @@ const BlogCard = ({
   const renderSocialIcons = () => (
     <div className={style.social__icons}>
       {["instagram", "facebook", "wpp"].map((platform) => (
-        <ImageCloudinary
+        <Image
           loading="lazy"
           width={20}
           height={20}
@@ -64,7 +64,7 @@ const BlogCard = ({
       className={classNames(style.blog__card, style[customClass])}
       style={{ width: width || "auto", height: height || "auto" }}
     >
-      <ImageCloudinary
+      <Image
         loading="lazy"
         width={200}
         height={200}

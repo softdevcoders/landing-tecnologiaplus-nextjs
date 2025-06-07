@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "@/styles/ProductGallery.module.scss";
-import useDisableRightClick from "@/hooks/useDisableRightClick";
+
 import {
   IoIosArrowBack,
   IoIosArrowDown,
@@ -46,8 +46,6 @@ function ProductGallery() {
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
-
-  useDisableRightClick();
 
   return (
     <section className={styles.hero}>

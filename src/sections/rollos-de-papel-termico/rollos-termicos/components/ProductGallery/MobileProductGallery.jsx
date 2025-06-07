@@ -11,7 +11,7 @@ import styles from "@/styles/ProductGallery.module.scss";
 
 import { IoIosArrowBack } from "react-icons/io";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";   
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 
 // Main gallery images - don't modify these constants during rendering
 const GALLERY_IMAGES = [
@@ -55,7 +55,7 @@ function MobileProductGallery() {
       >
         {GALLERY_IMAGES.map((img, index) => (
           <SwiperSlide key={generateImageKey(img, index)}>
-            <ImageCloudinary
+            <Image
               width={485}
               height={382}
               src={img}

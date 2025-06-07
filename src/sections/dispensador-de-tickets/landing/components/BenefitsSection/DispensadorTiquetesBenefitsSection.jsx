@@ -1,4 +1,4 @@
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 import style from "./DispensadorTiquetesBenefitsSection.module.scss";
 
 function DispensadorTiquetesBenefitsSection() {
@@ -11,7 +11,7 @@ function DispensadorTiquetesBenefitsSection() {
       </h2>
       <ul>
         <li>
-          <ImageCloudinary
+          <Image
             width={70}
             height={70}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738424672/icono_1_2x-8_gnq6al.webp"
@@ -24,7 +24,7 @@ function DispensadorTiquetesBenefitsSection() {
           </div>
         </li>
         <li>
-          <ImageCloudinary
+          <Image
             width={70}
             height={70}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738424673/icono_2_2x-8_1_rpqhcz.webp"
@@ -37,7 +37,7 @@ function DispensadorTiquetesBenefitsSection() {
           </div>
         </li>
         <li>
-          <ImageCloudinary
+          <Image
             width={70}
             height={70}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738424675/icono_3_2x-8_qsgnsv.webp"

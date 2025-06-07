@@ -1,16 +1,17 @@
-import ImageCloudinary from '@/components/ui/image-cloudinary';
+import Image from 'next/image';
 import style from './blog-hero-section.module.scss';
 
 const BlogHeroSection = () => {
   return (
     <section id="hero" aria-labelledby="heroHeading" className={style.blogHeroSection}>
-      <ImageCloudinary
+      <Image
         src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349921/jlxxsnlercoj0nihz4am_udppso.webp"
         alt="Background Image for Hero"
         width={200}
         height={200}
         priority
         fetchPriority="high"
+        loading="eager"
         className={style.blogHeroSection__background}
       />
       <div className={style.blogHeroSection__overlay}>

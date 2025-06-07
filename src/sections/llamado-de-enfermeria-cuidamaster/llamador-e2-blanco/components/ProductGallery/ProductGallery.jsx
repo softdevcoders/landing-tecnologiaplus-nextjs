@@ -3,7 +3,6 @@
 import { useState } from "react";
 import styles from "@/styles/ProductGallery.module.scss";
 
-import useDisableRightClick from "@/hooks/useDisableRightClick";
 
 import {
   IoIosArrowBack,
@@ -84,8 +83,6 @@ function ProductGallery() {
     setSelectedAltIndex(index);
     setIsAlternative(true);
   };
-
-  useDisableRightClick();
 
   return (
     <section className={styles.hero}>

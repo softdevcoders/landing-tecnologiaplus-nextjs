@@ -1,4 +1,4 @@
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 import style from "./BenefitsSection.module.scss";
 
 function BenefitsSection() {
@@ -11,7 +11,7 @@ function BenefitsSection() {
       </h2>
       <ul>
         <li>
-          <ImageCloudinary
+          <Image
             width={70}
             height={70}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/rijkjjxwhpa9hbvnj8ga_i2qgeg.webp"
@@ -24,7 +24,7 @@ function BenefitsSection() {
           </div>
         </li>
         <li>
-          <ImageCloudinary
+          <Image
             width={70}
             height={70}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349925/za4ik6yfenohf4oquc0j_fdtqew.webp"
@@ -37,7 +37,7 @@ function BenefitsSection() {
           </div>
         </li>
         <li>
-          <ImageCloudinary
+          <Image
             width={70}
             height={70}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349924/u2v3b0ngu177bi5byxcv_yckaaq.webp"

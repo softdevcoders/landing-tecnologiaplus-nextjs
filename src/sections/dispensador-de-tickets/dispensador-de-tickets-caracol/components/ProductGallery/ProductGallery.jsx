@@ -9,7 +9,6 @@ import {
   IoIosArrowUp,
 } from "react-icons/io";
 import Popup from "@/components/ui/pop-up";
-import useDisableRightClick from "@/hooks/useDisableRightClick";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";
 
 function ProductGallery() {
@@ -93,8 +92,6 @@ function ProductGallery() {
     setSelectedAltIndex(index);
     setIsAlternative(true);
   };
-
-  useDisableRightClick();
 
   return (
     <section className={styles.hero}>

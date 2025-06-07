@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import styles from "@/styles/ProductGallery.module.scss";
-import useDisableRightClick from "@/hooks/useDisableRightClick";
 import {
   IoIosArrowBack,
   IoIosArrowDown,
@@ -125,8 +124,6 @@ function ProductGallery() {
     setSelectedIndex(index);
     setIsVideoSelected(images[index] === videoData.thumbnail); // Si es el video, lo seleccionamos
   };
-
-  useDisableRightClick();
 
   return (
     <section className={styles.hero}>

@@ -1,4 +1,4 @@
-import ImageCloudinary from "@/components/ui/image-cloudinary";
+import Image from "next/image";
 import style from "./IndustriesSection.module.scss";
 
 function IndustriesSection() {
@@ -10,7 +10,7 @@ function IndustriesSection() {
       </h2>
       <ul>
         <li>
-          <ImageCloudinary
+          <Image
             width={150}
             height={129}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350027/Salud_2x-8_vg4jxo_dyuifd.webp"
@@ -19,7 +19,7 @@ function IndustriesSection() {
           <p>Sector salud</p>
         </li>
         <li>
-          <ImageCloudinary
+          <Image
             width={150}
             height={129}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349970/Oficinas_2x-8_xzhwcw_jumnnh.webp"
@@ -28,7 +28,7 @@ function IndustriesSection() {
           <p>Oficinas</p>
         </li>
         <li>
-          <ImageCloudinary
+          <Image
             width={150}
             height={129}
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349970/otras_indistrias_2x-8_bvq8fo_s2xoyg.webp"
