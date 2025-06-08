@@ -39,6 +39,11 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
     steps:
+      - name: Debug
+        run: |
+          echo "Environment Name: ${{ needs.retrieve-environment-variable.outputs.environment_name }}"
+          echo "Server Status: ${{ needs.health-check.outputs.server_status }}"
+          echo "Server Status Description: ${{ needs.health-check.outputs.server_status.description }}"
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Send Notification
