@@ -47,7 +47,7 @@ jobs:
           -e MYSQL_PASSWORD=${{ env.MYSQL_PASSWORD }} \
           -v ${{ env.MYSQL_VOLUME }}:/var/lib/mysql \
           --restart unless-stopped \
-          -d mysql:5.7
+          mysql:5.7
 
   deploy-wordpress:
     name: Deploy WordPress
@@ -87,4 +87,4 @@ jobs:
           -e WORDPRESS_DB_NAME=${{ env.WORDPRESS_DB_NAME }} \
           -v ${{ env.WORDPRESS_VOLUME }}:/var/www/html/wp-content \
           --restart unless-stopped \
-          -d wordpress  
+          wordpress  
