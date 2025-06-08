@@ -22,23 +22,19 @@ env:
   SHH_USER_PASSWORD: ${{ secrets.SHH_USER_PASSWORD }}
 
 jobs:
-  create-docker-network:
-    name: Create Docker Network
-    runs-on: ubuntu-latest
-    environment: wordpress-production
-    steps:
-      - name: Create Docker Network
-        run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker network create ${{ env.DOCKER_NETWORK }} || echo "Network already exists"  
 
   deploy-mysql:
     name: Deploy MySQL
     runs-on: ubuntu-latest
     environment: wordpress-production
-    needs: create-docker-network
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Network Creation
+        run: echo ${{env.SHH_USER_PASSWORD}} | sudo -S docker network create ${{env.DOCKER_NETWORK}} || true
 
       - name: Run MySQL Container
         run: |
@@ -57,11 +53,15 @@ jobs:
     name: Deploy WordPress
     runs-on: ubuntu-latest
     environment: wordpress-production
-    needs: [deploy-mysql, create-docker-network]
+    needs: [deploy-mysql]
     steps:
       - name: Wait for MySQL to be ready
         run: |
           sleep 30 # Espera a que MySQL esté listo
+
+      - name: Network Creation
+        run: |
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker network create ${{ env.DOCKER_NETWORK }} || true
 
       - name: Stop and Remove Existing Container
         run: |
