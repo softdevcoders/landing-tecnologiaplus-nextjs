@@ -72,15 +72,15 @@ jobs:
     steps:
       - name: Stop Current Running Container
         run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm -f ${{ env.DOCKER_CONTAINER_NAME }} || true
+          echo '${{ env.SHH_USER_PASSWORD }}' | sudo -S docker rm -f ${{ env.DOCKER_CONTAINER_NAME }} || true
       
       - name: Pull Docker Image
         run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker pull ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
+          echo '${{ env.SHH_USER_PASSWORD }}' | sudo -S docker pull ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
 
       - name: Run Docker Container
         run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker run -d \
+          echo '${{ env.SHH_USER_PASSWORD }}' | sudo -S docker run -d \
             --restart unless-stopped \
             -p ${{ env.DOCKER_HOST_PORT }}:${{ env.DOCKER_CONTAINER_PORT }} \
             -e GMAIL_USER=${{ env.GMAIL_USER }} \
@@ -95,4 +95,4 @@ jobs:
             
       - name: Prune Docker Images unused
         run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f
+          echo '${{ env.SHH_USER_PASSWORD }}' | sudo -S docker image prune -f
