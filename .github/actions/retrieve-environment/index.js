@@ -29,6 +29,9 @@ try {
         return;
       }
       break;
+    case 'schedule':
+      environmentName = 'production';
+      break;
     default:
       core.setFailed(`Unsupported event type: ${eventType}`);
       return;
