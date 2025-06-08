@@ -9,17 +9,17 @@ async function sendEmail() {
   const {
     GMAIL_USER,
     GMAIL_APP_PASSWORD,
-    GMAIL_RECIPIENTS,
+    GMAIL_RECIPIENTS_SERVER_HEALTH,
     HEALTH_CHECK_URL,
   } = process.env;
   
-  if (!GMAIL_USER || !GMAIL_APP_PASSWORD || !GMAIL_RECIPIENTS || !HEALTH_CHECK_URL) {
+  if (!GMAIL_USER || !GMAIL_APP_PASSWORD || !GMAIL_RECIPIENTS_SERVER_HEALTH || !HEALTH_CHECK_URL) {
       core.setFailed('Missing required environment variables for sending email.');
       return;
   }  
 
   try {
-    core.info(`Attempting to send email using GMAIL_USER: ${GMAIL_USER}, GMAIL_APP_PASSWORD: ${GMAIL_APP_PASSWORD}, GMAIL_RECIPIENTS: ${GMAIL_RECIPIENTS}, HEALTH_CHECK_URL: ${HEALTH_CHECK_URL}`);
+    core.info(`Attempting to send email using GMAIL_USER: ${GMAIL_USER}, GMAIL_APP_PASSWORD: ${GMAIL_APP_PASSWORD}, GMAIL_RECIPIENTS_SERVER_HEALTH: ${GMAIL_RECIPIENTS_SERVER_HEALTH}, HEALTH_CHECK_URL: ${HEALTH_CHECK_URL}`);
     
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -42,7 +42,7 @@ async function sendEmail() {
         name: 'Tecnología Plus - Servidor caido 🚨', 
         address: GMAIL_USER
       },
-      to: GMAIL_RECIPIENTS.split(','),
+      to: GMAIL_RECIPIENTS_SERVER_HEALTH.split(','),
       subject: `[Urgente] Servidor caido 🚨`,
       headers: {
         'X-Entity-Ref-ID': messageId,
