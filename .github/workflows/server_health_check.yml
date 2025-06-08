@@ -21,10 +21,13 @@ jobs:
     needs: retrieve-environment-variable
     runs-on: ubuntu-latest
     environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
+    outputs:
+      server_status: ${{ steps.perform_health_check.outputs.server_status }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Perform Health Check
+        id: perform_health_check
         uses: ./.github/actions/server_health_check
         continue-on-error: true
   debug:
