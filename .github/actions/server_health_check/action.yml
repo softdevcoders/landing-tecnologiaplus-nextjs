@@ -1,0 +1,11 @@
+name: Server Health Check Action
+
+description: Check the health of the server and send a notification if it is down.
+
+outputs:
+  server_status:
+    description: Server status value to use.
+
+runs:
+  using: "node20"
+  main: "index.js"

@@ -1,0 +1,11 @@
+name: Send Notification Email Action  
+
+description: Send a notification email if the server is down.
+
+outputs:
+  email_sent:
+    description: Email sent value to use.
+
+runs:
+  using: "node20"
+  main: "index.js"
