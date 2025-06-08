@@ -33,16 +33,19 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ env.GMAIL_APP_PASSWORD }}
           GMAIL_RECIPIENTS: ${{ env.GMAIL_RECIPIENTS }}
         continue-on-error: true
+  debug:
+    name: Debug
+    needs: [health-check, retrieve-environment-variable]
+    runs-on: ubuntu-latest
+    environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
+    steps:
       - name: Debug
         run: |
           echo "Environment Name: ${{ needs.retrieve-environment-variable.outputs.environment_name }}"
           echo "Server Status: ${{ needs.health-check.outputs.server_status }}"
-          echo "Server Status Description: ${{ needs.health-check.outputs.server_status.description }}"
-          echo "Server Status Conclusion: ${{ needs.health-check.outputs.server_status.conclusion }}"
-          echo "Server Status Conclusion Message: ${{ needs.health-check.outputs.server_status.conclusionMessage }}"
   send-notification:
     name: Send Notification
-    needs: [health-check, retrieve-environment-variable]
+    needs: [health-check, retrieve-environment-variable, debug]
     if: needs.health-check.outputs.server_status == 'failure'
     runs-on: ubuntu-latest
     environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
