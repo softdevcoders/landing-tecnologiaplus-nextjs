@@ -15,6 +15,7 @@ async function sendEmail() {
   }  
 
   try {
+    core.info(`Attempting to send email using GMAIL_USER: ${GMAIL_USER}, GMAIL_RECIPIENTS: ${GMAIL_RECIPIENTS}, HEALTH_CHECK_URL: ${HEALTH_CHECK_URL}`);
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -32,9 +33,11 @@ async function sendEmail() {
     };
 
     const result = await transporter.sendMail(mailOptions);
+    core.info(`Email sent successfully with messageId: ${result.messageId}`);
     core.setOutput('email_sent', result.messageId);
   } catch (error) {
     core.setFailed(`Error sending email: ${error.message}`);
+    core.error(`Failed to send email due to error: ${error.message}`);
     return;
   }
 }
