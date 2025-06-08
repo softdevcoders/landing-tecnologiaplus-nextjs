@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
       - name: Perform Health Check
         id: server_health_check
         uses: ./.github/actions/server_health_check
