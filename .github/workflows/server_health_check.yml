@@ -36,6 +36,7 @@ jobs:
   send-notification:
     name: Send Notification
     needs: [health-check, retrieve-environment-variable]
+    if: needs.health-check.outputs.server_status == 'failure'
     runs-on: ubuntu-latest
     environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
     steps:
@@ -47,7 +48,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Send Notification
-        if: needs.health-check.outputs.server_status == 'failure'
         uses: ./.github/actions/send-notification-email
         env:
           GMAIL_USER: ${{ env.GMAIL_USER }}
