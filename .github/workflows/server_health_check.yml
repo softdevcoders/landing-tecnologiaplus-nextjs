@@ -26,6 +26,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
       - name: Perform Health Check
         id: perform_health_check
         uses: ./.github/actions/server_health_check
@@ -49,6 +51,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
       - name: Send Notification
         uses: ./.github/actions/send-notification-email
         env:
