@@ -1,0 +1,37 @@
+name: server_health_check
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Cada 15 minutos
+  workflow_dispatch:
+
+jobs:
+  retrieve-environment-variable:
+    name: Retrieve Environment Variable
+    uses: ./.github/workflows/retrieve_environment.yml
+
+  health-check:
+    name: Health Check
+    needs: retrieve-environment-variable
+    runs-on: ubuntu-latest
+    environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
+    steps:
+      - name: Perform Health Check
+        id: server_health_check
+        uses: ./.github/actions/server_health_check
+        env:
+          HEALTH_CHECK_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
+  send-notification:
+    name: Send Notification
+    needs: [health-check, retrieve-environment-variable]
+    runs-on: ubuntu-latest
+    environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
+    steps:
+      - name: Send Notification
+        if: steps.health-check.outputs.server_status == 'failure'
+        uses: ./.github/actions/send-notification-email
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENTS: ${{ secrets.GMAIL_RECIPIENTS }}
+          HEALTH_CHECK_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }} 
