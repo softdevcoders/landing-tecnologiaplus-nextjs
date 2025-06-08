@@ -42,7 +42,7 @@ jobs:
       - name: Debug
         run: |
           echo "Environment Name: ${{ needs.retrieve-environment-variable.outputs.environment_name }}"
-          echo "Server Status: ${{ needs.health-check.outputs.server_status.description }}"
+          echo "Server Status: ${{ needs.health-check.outputs }}"
   send-notification:
     name: Send Notification
     needs: [health-check, retrieve-environment-variable, debug]
