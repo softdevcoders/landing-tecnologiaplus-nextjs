@@ -25,13 +25,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Perform Health Check
-        id: server_health_check
         uses: ./.github/actions/server_health_check
-        env:
-          HEALTH_CHECK_URL: ${{ env.HEALTH_CHECK_URL }}
-          GMAIL_USER: ${{ env.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ env.GMAIL_APP_PASSWORD }}
-          GMAIL_RECIPIENTS: ${{ env.GMAIL_RECIPIENTS }}
         continue-on-error: true
   debug:
     name: Debug
@@ -42,7 +36,7 @@ jobs:
       - name: Debug
         run: |
           echo "Environment Name: ${{ needs.retrieve-environment-variable.outputs.environment_name }}"
-          echo "Server Status: ${{ needs.health-check.outputs }}"
+          echo "Server Status: ${{ needs.health-check.outputs.server_status }}"
   send-notification:
     name: Send Notification
     needs: [health-check, retrieve-environment-variable, debug]
@@ -50,11 +44,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
     steps:
-      - name: Debug
-        run: |
-          echo "Environment Name: ${{ needs.retrieve-environment-variable.outputs.environment_name }}"
-          echo "Server Status: ${{ needs.health-check.outputs.server_status }}"
-          echo "Server Status Description: ${{ needs.health-check.outputs.server_status.description }}"
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Send Notification
