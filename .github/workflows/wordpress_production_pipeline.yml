@@ -1,0 +1,90 @@
+name: wordpress_production_pipeline
+
+on:
+  workflow_dispatch:
+
+env:
+  MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
+  MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE }}
+  MYSQL_USER: ${{ secrets.MYSQL_USER }}
+  MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+  WORDPRESS_DB_HOST: ${{ secrets.MYSQL_CONTAINER_NAME }}
+  WORDPRESS_DB_USER: ${{ secrets.MYSQL_USER }}
+  WORDPRESS_DB_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+  WORDPRESS_DB_NAME: ${{ secrets.MYSQL_DATABASE }}
+  MYSQL_CONTAINER_NAME: ${{ secrets.MYSQL_CONTAINER_NAME }}
+  WORDPRESS_CONTAINER_NAME: ${{ secrets.WORDPRESS_CONTAINER_NAME }}
+  MYSQL_HOST_PORT: ${{ secrets.MYSQL_HOST_PORT }}
+  WORDPRESS_HOST_PORT: ${{ secrets.WORDPRESS_HOST_PORT }}
+  DOCKER_NETWORK: ${{ secrets.DOCKER_NETWORK }}
+  MYSQL_VOLUME: ${{ secrets.MYSQL_VOLUME }}
+  WORDPRESS_VOLUME: ${{ secrets.WORDPRESS_VOLUME }}
+  SHH_USER_PASSWORD: ${{ secrets.SHH_USER_PASSWORD }}
+
+jobs:
+  create-docker-network:
+    name: Create Docker Network
+    runs-on: ubuntu-latest
+    environment: wordpress-production
+    steps:
+      - name: Create Docker Network
+        run: |
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker network create ${{ env.DOCKER_NETWORK }} || echo "Network already exists"  
+
+  deploy-mysql:
+    name: Deploy MySQL
+    runs-on: ubuntu-latest
+    environment: wordpress-production
+    needs: create-docker-network
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Run MySQL Container
+        run: |
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker run --name ${{ env.MYSQL_CONTAINER_NAME }} \
+          --network ${{ env.DOCKER_NETWORK }} \
+          -p ${{ env.MYSQL_HOST_PORT }}:3306 \
+          -e MYSQL_ROOT_PASSWORD=${{ env.MYSQL_ROOT_PASSWORD }} \
+          -e MYSQL_DATABASE=${{ env.MYSQL_DATABASE }} \
+          -e MYSQL_USER=${{ env.MYSQL_USER }} \
+          -e MYSQL_PASSWORD=${{ env.MYSQL_PASSWORD }} \
+          -v ${{ env.MYSQL_VOLUME }}:/var/lib/mysql \
+          --restart unless-stopped \
+          -d mysql:5.7
+
+  deploy-wordpress:
+    name: Deploy WordPress
+    runs-on: ubuntu-latest
+    environment: wordpress-production
+    needs: [deploy-mysql, create-docker-network]
+    steps:
+      - name: Wait for MySQL to be ready
+        run: |
+          sleep 30 # Espera a que MySQL esté listo
+
+      - name: Stop and Remove Existing Container
+        run: |
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker stop ${{ env.WORDPRESS_CONTAINER_NAME }} || true
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm ${{ env.WORDPRESS_CONTAINER_NAME }} || true
+
+      - name: Pull WordPress Image
+        run: |
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker pull wordpress
+
+      - name: Create WordPress Volume
+        run: |
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker volume create ${{ env.WORDPRESS_VOLUME }} || echo "Volume already exists"
+
+      - name: Run WordPress Container with Volume and Network Link  
+        run: |
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker run --name ${{ env.WORDPRESS_CONTAINER_NAME }} \
+          --network ${{ env.DOCKER_NETWORK }} \
+          -p ${{ env.WORDPRESS_HOST_PORT }}:80 \
+          -e WORDPRESS_DB_HOST=${{ env.MYSQL_CONTAINER_NAME }} \
+          -e WORDPRESS_DB_USER=${{ env.WORDPRESS_DB_USER }} \
+          -e WORDPRESS_DB_PASSWORD=${{ env.WORDPRESS_DB_PASSWORD }} \
+          -e WORDPRESS_DB_NAME=${{ env.WORDPRESS_DB_NAME }} \
+          -v ${{ env.WORDPRESS_VOLUME }}:/var/www/html/wp-content \
+          --restart unless-stopped \
+          -d wordpress  
