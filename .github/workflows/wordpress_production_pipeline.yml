@@ -31,6 +31,9 @@ jobs:
       - name: Network Creation
         run: echo ${{env.SHH_USER_PASSWORD}} | sudo -S docker network create ${{env.DOCKER_NETWORK}} || true
 
+      - name: Stop Current Running Container
+        run: echo ${{env.SHH_USER_PASSWORD}} | sudo -S docker rm -f ${{env.MYSQL_CONTAINER_NAME}} || true
+
       - name: Run MySQL Container
         run: |
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker run --name ${{ env.MYSQL_CONTAINER_NAME }} \
@@ -58,18 +61,8 @@ jobs:
         run: |
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker network create ${{ env.DOCKER_NETWORK }} || true
 
-      - name: Stop and Remove Existing Container
-        run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker stop ${{ env.WORDPRESS_CONTAINER_NAME }} || true
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm ${{ env.WORDPRESS_CONTAINER_NAME }} || true
-
-      - name: Pull WordPress Image
-        run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker pull wordpress
-
-      - name: Create WordPress Volume
-        run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker volume create ${{ env.WORDPRESS_VOLUME }} || echo "Volume already exists"
+      - name: Stop Current Running Container
+        run: echo ${{env.SHH_USER_PASSWORD}} | sudo -S docker rm -f ${{env.WORDPRESS_CONTAINER_NAME}} || true
 
       - name: Run WordPress Container with Volume and Network Link  
         run: |
