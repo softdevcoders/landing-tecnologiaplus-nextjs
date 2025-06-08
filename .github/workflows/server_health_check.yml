@@ -40,7 +40,7 @@ jobs:
     environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
     steps:
       - name: Send Notification
-        if: steps.health-check.outputs.server_status == 'failure'
+        # if: steps.health-check.outputs.server_status == 'failure'
         uses: ./.github/actions/send-notification-email
         env:
           GMAIL_USER: ${{ env.GMAIL_USER }}
