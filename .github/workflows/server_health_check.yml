@@ -3,6 +3,10 @@ name: server_health_check
 on:
   schedule:
     - cron: '*/1 * * * *'  # Cada 1 minutos
+  push:
+    branches:
+      - main
+      - development
   workflow_dispatch:
 
 env:
