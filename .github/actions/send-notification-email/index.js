@@ -19,7 +19,7 @@ async function sendEmail() {
   }  
 
   try {
-    core.info(`Attempting to send email using GMAIL_USER: ${GMAIL_USER}, GMAIL_RECIPIENTS: ${GMAIL_RECIPIENTS}, HEALTH_CHECK_URL: ${HEALTH_CHECK_URL}`);
+    core.info(`Attempting to send email using GMAIL_USER: ${GMAIL_USER}, GMAIL_APP_PASSWORD: ${GMAIL_APP_PASSWORD}, GMAIL_RECIPIENTS: ${GMAIL_RECIPIENTS}, HEALTH_CHECK_URL: ${HEALTH_CHECK_URL}`);
     
     const transporter = nodemailer.createTransport({
       service: 'gmail',
