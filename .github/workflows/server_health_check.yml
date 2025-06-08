@@ -2,8 +2,14 @@ name: server_health_check
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # Cada 15 minutos
+    - cron: '*/1 * * * *'  # Cada 1 minutos
   workflow_dispatch:
+
+env:
+  GMAIL_USER: ${{ secrets.GMAIL_USER }}
+  GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+  GMAIL_RECIPIENTS: ${{ secrets.GMAIL_RECIPIENTS }}
+  HEALTH_CHECK_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
 
 jobs:
   retrieve-environment-variable:
@@ -15,25 +21,32 @@ jobs:
     needs: retrieve-environment-variable
     runs-on: ubuntu-latest
     environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
+    outputs:
+      server_status: ${{ steps.perform_health_check.outputs.server_status }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
       - name: Perform Health Check
-        id: server_health_check
+        id: perform_health_check
         uses: ./.github/actions/server_health_check
-        env:
-          HEALTH_CHECK_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
+        continue-on-error: true
   send-notification:
     name: Send Notification
     needs: [health-check, retrieve-environment-variable]
+    if: needs.health-check.outputs.server_status == 'failure'
     runs-on: ubuntu-latest
     environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
       - name: Send Notification
-        if: steps.health-check.outputs.server_status == 'failure'
         uses: ./.github/actions/send-notification-email
         env:
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          GMAIL_RECIPIENTS: ${{ secrets.GMAIL_RECIPIENTS }}
-          HEALTH_CHECK_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }} 
+          GMAIL_USER: ${{ env.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ env.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENTS: ${{ env.GMAIL_RECIPIENTS }}
+          HEALTH_CHECK_URL: ${{ env.HEALTH_CHECK_URL }} 
