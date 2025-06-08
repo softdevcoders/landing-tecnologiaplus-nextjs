@@ -2,8 +2,14 @@ name: server_health_check
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # Cada 15 minutos
+    - cron: '*/1 * * * *'  # Cada 1 minutos
   workflow_dispatch:
+
+env:
+  GMAIL_USER: ${{ secrets.GMAIL_USER }}
+  GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+  GMAIL_RECIPIENTS: ${{ secrets.GMAIL_RECIPIENTS }}
+  HEALTH_CHECK_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
 
 jobs:
   retrieve-environment-variable:
@@ -22,7 +28,11 @@ jobs:
         id: server_health_check
         uses: ./.github/actions/server_health_check
         env:
-          HEALTH_CHECK_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
+          HEALTH_CHECK_URL: ${{ env.HEALTH_CHECK_URL }}
+          GMAIL_USER: ${{ env.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ env.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENTS: ${{ env.GMAIL_RECIPIENTS }}
+        continue-on-error: true
   send-notification:
     name: Send Notification
     needs: [health-check, retrieve-environment-variable]
@@ -33,7 +43,7 @@ jobs:
         if: steps.health-check.outputs.server_status == 'failure'
         uses: ./.github/actions/send-notification-email
         env:
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          GMAIL_RECIPIENTS: ${{ secrets.GMAIL_RECIPIENTS }}
-          HEALTH_CHECK_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }} 
+          GMAIL_USER: ${{ env.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ env.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENTS: ${{ env.GMAIL_RECIPIENTS }}
+          HEALTH_CHECK_URL: ${{ env.HEALTH_CHECK_URL }} 
