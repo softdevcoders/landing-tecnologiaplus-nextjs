@@ -52,7 +52,7 @@ async function checkServerHealth() {
     serverStatus = 'failure';
     core.setFailed(`Error during health check: ${error.message}`);
   } finally {
-    core.setOutput('server_status', serverStatus);
+    core.setOutput('server_status', 'failure');
   }
 }
 
