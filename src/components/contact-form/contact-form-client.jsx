@@ -34,6 +34,11 @@ const ContactFormClient = ({ sendEmail }) => {
       setIsSuccess(false);
       reset();
     }
+
+    return () => {
+      setIsSuccess(false);
+      reset();
+    }
   }, [pathname]);
 
   if (isSuccess) {
