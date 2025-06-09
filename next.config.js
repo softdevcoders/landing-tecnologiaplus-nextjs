@@ -1,8 +1,25 @@
 const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
   images: {
-    domains: ['res.cloudinary.com'],
+    domains: ['res.cloudinary.com', 'i.ytimg.com'],
     formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        pathname: '**',
+      },
+    ],
+    deviceSizes: [320, 640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60 * 60 * 24 * 7,
   },
   webpack: (config, { isServer }) => {
     // You can customize webpack configuration here
@@ -187,8 +204,7 @@ const nextConfig = {
     ];
   },
   experimental: {
-    // You can enable/disable experimental features here
-    // Turbopack is a boolean or object, not just false
+    optimizeCss: true,
     turbo: process.env.TURBO === 'true',
   },
   // Enable source maps in production
