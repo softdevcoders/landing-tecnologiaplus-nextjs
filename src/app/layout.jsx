@@ -32,6 +32,9 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        {process.env.SHOULD_ROBOTS_INDEX === 'true' && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
+        )}
       </body>
     </html>
   );
