@@ -1,6 +1,7 @@
 // Styles
 import "@/styles/critical.scss";
 import "@/styles/main.scss";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 import { Bebas_Neue, Montserrat } from 'next/font/google'
  
@@ -33,7 +34,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         {process.env.SHOULD_ROBOTS_INDEX === 'true' && process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
         )}
       </body>
     </html>
