@@ -875,7 +875,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>Las zonas de comidas —como las de centros comerciales, plazoletas o patios gastronómicos— enfrentan un enemigo silencioso: el caos. Filas interminables, pedidos confundidos, clientes impacientes, gritos para llamar turnos y un ambiente de tensión constante. Todo eso afecta la experiencia del usuario y reduce las posibilidades de fidelización. ¿La buena noticia? Existe una solución moderna,&#8230;</p>\n",
     },
     "images": [
-        "v1747324697/website-v2/blog/localizadores-para-restaurantes/caos-zonas-de-comida/koguv8erlwueak1u0oo3.png"
+        "v1749569846/website-v2/blog/localizadores-para-restaurantes/caos-zonas-de-comida/iacfr9xoll5uq3ui9cll.jpg"
     ],
     "categories": [
       routes.blog.children.localizadoresParaRestaurantes.category_key
@@ -907,7 +907,7 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>Imagina este escenario: estás en una plazoleta de comidas un sábado al mediodía. El lugar está lleno. Hay familias con niños impacientes, trabajadores en su hora de almuerzo, turistas buscando un bocado rápido. Todos ordenan sus comidas y, de inmediato, se forma una escena caótica: 🔊 Números que se gritan desde los mostradores 🤷‍♂️ Personas&#8230;</p>\n",
     },
     "images": [
-        "v1747324711/website-v2/blog/localizadores-para-restaurantes/secreto-espera-agradable/xskzmzz0vrbjr9nkakdb.jpg"
+        "v1749569567/website-v2/blog/localizadores-para-restaurantes/secreto-espera-agradable/ab2wfaqjsgdjraksr6lu.jpg"
     ],
     "categories": [
       routes.blog.children.localizadoresParaRestaurantes.category_key
