@@ -17,7 +17,7 @@ function MobileProductGallery() {
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741473545/Frame_1_1_usrdgr.webp",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1740498992/4_4x-8_mwaldk.webp",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741113379/2_4x-8_8_lmidfg.webp",
-    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741473542/Frame_1_iwfg8o.webp",
+    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1749567187/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/ver-mas/llamador-e1-para-cuello/x6hejabhrif3ncb2yl1m.jpg",
   ];
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
