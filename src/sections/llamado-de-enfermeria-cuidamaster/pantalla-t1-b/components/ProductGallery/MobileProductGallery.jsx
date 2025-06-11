@@ -55,9 +55,9 @@ function MobileProductGallery() {
 
       {/* Main Swiper */}
       <Swiper
-        ref={swiperRef}
         modules={[Navigation, Pagination]}
         pagination={{ clickable: true }}
+        navigation={true}
         loop={true}
         className={styles.mainSwiper}
       >
