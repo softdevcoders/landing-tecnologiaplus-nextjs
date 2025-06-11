@@ -1,6 +1,6 @@
 import Link from "next/link";
 import style from "./HomeRecentPostsSection.module.scss";
-import { IoIosArrowForward } from "react-icons/io";
+import ArrowForward from "@/components/ui/icons/arrow-forward";
 import { routes } from "@/config/routes";
 import { getPosts } from "@/request/server/posts/get-posts";
 import CardHome from "@/sections/blog/components/card-home";
@@ -21,7 +21,7 @@ function HomeRecentPostsSection() {
         className={style.btn__go_to_blog}
       >
         Visita nuestro blog
-        <IoIosArrowForward className={style.icon__btn} />
+        <ArrowForward className={style.icon__btn} size={24} />
       </Link>
     </section>
   );

@@ -1,6 +1,6 @@
 "use client";
 import styles from "@/styles/LogosSection.module.scss";
-import { IoIosArrowForward } from "react-icons/io";
+import { ArrowForward } from "@/components/ui/icons";
 import { useLogos } from "../../../../../context/LogosContext";
 import InfiniteSlider2 from "@/app/components/sliders/InfiniteSlider2";
 

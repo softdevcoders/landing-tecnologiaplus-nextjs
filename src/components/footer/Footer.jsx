@@ -1,8 +1,10 @@
 import styles from "./Footer.module.scss";
-import { FiInstagram } from "react-icons/fi";
-import { FaTiktok, FaFacebookF, FaYoutube } from "react-icons/fa";
-import { MdOutlineEmail } from "react-icons/md";
-import { HiPhone } from "react-icons/hi";
+import Instagram from "@/components/ui/icons/instagram";
+import TikTok from "@/components/ui/icons/tiktok";
+import Facebook from "@/components/ui/icons/facebook";
+import YouTube from "@/components/ui/icons/youtube";
+import Email from "@/components/ui/icons/email";
+import Phone from "@/components/ui/icons/phone";
 
 const Footer = () => {
   return (
@@ -19,7 +21,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Visitar nuestro perfil de Instagram"
               >
-                <FiInstagram />
+                <Instagram />
               </a>
             </li>
             <li>
@@ -29,7 +31,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Visitar nuestro perfil de TikTok"
               >
-                <FaTiktok />
+                <TikTok />
               </a>
             </li>
             <li>
@@ -39,7 +41,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Visitar nuestra página de Facebook"
               >
-                <FaFacebookF />
+                <Facebook />
               </a>
             </li>
             <li>
@@ -49,7 +51,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Visitar nuestro canal de YouTube"
               >
-                <FaYoutube />
+                <YouTube />
               </a>
             </li>
           </ul>
@@ -58,29 +60,24 @@ const Footer = () => {
         {/* Contacto */}
         <div>
           <h3>Contacto</h3>
-          <ul>
+          <ul className={styles.footer__contact}>
+    
             <li>
-              <a
-                href="mailto:ventas@tecnologiaplus.com"
-                aria-label="Enviar correo a ventas@tecnologiaplus.com"
-              >
-                <MdOutlineEmail /> ventas@tecnologiaplus.com
+              <a href="mailto:ventas@tecnologiaplus.com">
+                <Email />
+                <span>ventas@tecnologiaplus.com</span>
               </a>
             </li>
             <li>
-              <a
-                href="tel:+573164682034"
-                aria-label="Llamar al teléfono 316 468 20 34"
-              >
-                <HiPhone /> (+57) 316 468 20 34
+              <a href="tel:+573164682034">
+                <Phone />
+                <span>(+57) 316 468 20 34</span>
               </a>
             </li>
             <li>
-              <a
-                href="tel:+573227347971"
-                aria-label="Llamar al teléfono 322 734 79 71"
-              >
-                <HiPhone /> (+57) 322 734 79 71
+              <a href="tel:+573227347971">
+                <Phone />
+                <span>(+57) 322 734 79 71</span>
               </a>
             </li>
           </ul>

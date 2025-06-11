@@ -3,11 +3,11 @@
 import { useState } from "react";
 import styles from "@/styles/ProductGallery.module.scss";
 import {
-  IoIosArrowBack,
-  IoIosArrowDown,
-  IoIosArrowForward,
-  IoIosArrowUp,
-} from "react-icons/io";
+  ArrowBack,
+  ArrowDown,
+  ArrowForward,
+  ArrowUp
+} from "@/components/ui/icons";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";
 import Popup from "@/components/ui/pop-up";
 
@@ -129,7 +129,7 @@ function ProductGallery() {
     <section className={styles.hero}>
       <div className={styles.action__nav}>
         <button onClick={() => window.history.back()}>
-          <IoIosArrowBack className={styles.icon__back} /> Volver
+          <ArrowBack className={styles.icon__back} /> Volver
         </button>
       </div>
 
@@ -138,7 +138,7 @@ function ProductGallery() {
           {/* Miniaturas */}
           <div className={styles.container__thumbnails}>
             {showScrollButtons && scrollPosition > 0 && (
-              <IoIosArrowUp
+              <ArrowUp
                 className={styles.scrollUp}
                 onClick={handleScrollUp}
                 onMouseDown={(e) => e.preventDefault()}
@@ -161,7 +161,7 @@ function ProductGallery() {
                 />
               ))}
             {showScrollButtons && scrollPosition < images.length - 5 && (
-              <IoIosArrowDown
+              <ArrowDown
                 className={styles.scrollDown}
                 onClick={handleScrollDown}
                 onMouseDown={(e) => e.preventDefault()}
@@ -181,7 +181,7 @@ function ProductGallery() {
               isVideoSelected ? styles.videoBackground : ""
             }`}
           >
-            <IoIosArrowBack
+            <ArrowBack
               className={styles.icon__prev}
               onClick={handlePrevImage}
               onMouseDown={(e) => e.preventDefault()}
@@ -198,7 +198,7 @@ function ProductGallery() {
                 alt="Imagen seleccionada"
               />
             )}
-            <IoIosArrowForward
+            <ArrowForward
               className={styles.icon__next}
               onClick={handleNextImage}
               onMouseDown={(e) => e.preventDefault()}

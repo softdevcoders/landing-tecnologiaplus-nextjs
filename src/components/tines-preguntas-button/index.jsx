@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { FaWhatsapp } from "react-icons/fa";
+import WhatsApp from "@/components/ui/icons/whatsapp";
 
 const TinesPreguntasButton = ({ styles }) => {
   const [whatsappLink, setWhatsappLink] = useState("https://wa.me/573164682034");
@@ -22,7 +22,7 @@ const TinesPreguntasButton = ({ styles }) => {
         target="_blank"
         rel="noreferrer"
       >
-        <FaWhatsapp className={styles.icon__wpp} />
+        <WhatsApp className={styles.icon__wpp} />
       </a>
       <h3>¿Tienes preguntas?</h3>
     </>

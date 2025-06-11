@@ -1,0 +1,13 @@
+export { default as ArrowBack } from './arrow-back';
+export { default as ArrowForward } from './arrow-forward';
+export { default as ArrowUp } from './arrow-up';
+export { default as ArrowDown } from './arrow-down';
+export { default as ArrowLeft } from './arrow-left';
+export { default as ArrowRight } from './arrow-right';
+export { default as Email } from './email';
+export { default as Facebook } from './facebook';
+export { default as Instagram } from './instagram';
+export { default as Phone } from './phone';
+export { default as TikTok } from './tiktok';
+export { default as Whatsapp } from './whatsapp';
+export { default as Youtube } from './youtube'; 

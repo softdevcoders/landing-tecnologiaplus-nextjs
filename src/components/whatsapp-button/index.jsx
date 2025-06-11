@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import style from "./whatsapp-button.module.scss";
-import { FaWhatsapp } from "react-icons/fa";
+import { Whatsapp } from "@/components/ui/icons";
 
 const WhatsappButton = () => {
   const [whatsappLink, setWhatsappLink] = useState("https://wa.me/573164682034");
@@ -26,11 +26,9 @@ const WhatsappButton = () => {
       className={style.wpp__btn}
       aria-label="Contactarnos por WhatsApp"
     >
-      <FaWhatsapp />
+      <Whatsapp size={32} />
     </a>
   );
 };
 
 export default WhatsappButton;
-
-

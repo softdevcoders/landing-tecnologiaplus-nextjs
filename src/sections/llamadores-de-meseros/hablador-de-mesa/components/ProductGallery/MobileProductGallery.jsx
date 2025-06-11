@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "@/styles/ProductGallery.module.scss";
-import { IoIosArrowBack } from "react-icons/io";
+import { ArrowBack } from "@/components/ui/icons";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";   
 
 // Main gallery images - don't modify these constants during rendering
@@ -33,7 +33,7 @@ function MobileProductGallery() {
     <div className={styles.mobileGallery}>
       <div className={styles.action__nav}>
         <button onClick={() => window.history.back()}>
-          <IoIosArrowBack className={styles.icon__back} /> Volver
+          <ArrowBack className={styles.icon__back} /> Volver
         </button>
       </div>
 
@@ -44,9 +44,9 @@ function MobileProductGallery() {
 
       {/* Main Swiper */}
       <Swiper
-        ref={swiperRef}
         modules={[Navigation, Pagination]}
         pagination={{ clickable: true }}
+        navigation={true}
         loop={true}
         className={styles.mainSwiper}
       >
