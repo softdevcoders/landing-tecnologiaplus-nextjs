@@ -4,21 +4,18 @@ import Link from "next/link"
 import style from "./card-related.module.scss"
 import { cleanText } from "@/lib/clean-text"
 import { formatDate } from "@/lib/format-date"
-import ResponsiveImage from "@/components/ui/responsive-image"
+import Image from "next/image"
 
 const CarRelated = ({ post }) => {
   return (
     <article className={style.blogCard}>
       <div className={style.blogCard__image} >
-        <ResponsiveImage  
-          image={{
-            src: post.images[0], 
-            alt: `Imagen de ${post.title.rendered}`,
-            className: style.blogCard__image__img,
-            sizes: [
-              { imageWidth: 335, mediaQuery: "(min-width: 0px)" }, 
-            ],
-          }}
+        <Image  
+          src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${post.images[0]}`}
+          alt={post.title.rendered}
+          width={335}
+          height={185}
+          className={style.blogCard__image__img}
         />
       </div>
       

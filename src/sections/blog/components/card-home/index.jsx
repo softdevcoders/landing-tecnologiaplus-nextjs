@@ -11,7 +11,7 @@ const CardHome = ({ post }) => {
     <article className={style.blogCard}>
       <div className={style.blogCard__image} >
         <Image  
-          src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_360/${post.images[0]}`}
+          src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${post.images[0]}`}
           alt={post.title.rendered}
           width={435}
           height={235}
