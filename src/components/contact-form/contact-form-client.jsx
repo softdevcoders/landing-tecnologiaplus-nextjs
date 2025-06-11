@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 import style from './contact-form.module.scss';
-import { FaCheck } from 'react-icons/fa';
+import Check from '@/components/ui/icons/check';
 import { usePathname } from 'next/navigation';
 
 const ContactFormClient = ({ sendEmail }) => {
@@ -45,7 +47,7 @@ const ContactFormClient = ({ sendEmail }) => {
     return (
       <div className={style.message__container}>
         <div className={style.message__head}>
-          <FaCheck className={style.check__icon} />
+          <Check />
           <h2>¡Mensaje enviado!</h2>
         </div>
         <p>

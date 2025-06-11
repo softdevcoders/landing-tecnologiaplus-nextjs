@@ -5,8 +5,8 @@ import Image from "next/image";
 import { routes } from "@/config/routes";
 import { useEffect, useState, useCallback } from "react";
 import DropdownMenu from "@/components/header/dropdown-menu/DropdownMenu";
-import DropdownMenuMobile from "@/components/header/dropdown-menu-mobile/DropdownMenuMobile"; 
-import { HiPhone } from "react-icons/hi2";
+import DropdownMenuMobile from "@/components/header/dropdown-menu-mobile/DropdownMenuMobile";
+import { Phone } from "@/components/ui/icons";
 import styles from "./Header.module.scss";
 
 function Header({ headerAlt = false }) {
@@ -107,7 +107,7 @@ function Header({ headerAlt = false }) {
         <div className={styles.header__navlinks_right}>
           <Link href={routes.contact.url} className={styles.header__navlinks_link}>{routes.contact.label}</Link>
           <a href={routes.contact_media.phones[0].url} className={styles.header__navlinks_phone}>
-            <HiPhone className={styles.phone__icon} />
+            <Phone className={styles.phone__icon} />
             <span className={styles.phone__label}>{routes.contact_media.phones[0].label}</span>
           </a>
           <button onClick={toggleMenu} className={`${styles.menuButton} ${isMenuOpen ? styles.open : ""}`}>

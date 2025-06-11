@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { IoIosArrowForward } from "react-icons/io";
+import ArrowForward from "@/components/ui/icons/arrow-forward";
 import style from "./BlogCard.module.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -103,7 +103,7 @@ const BlogCard = ({
               padding: buttonPadding || "0.5rem 1rem",
             }}
           >
-            Leer más <IoIosArrowForward />
+            Leer más <ArrowForward />
           </Link>
         </div>
       </div>
