@@ -4,6 +4,7 @@
   padding: 2rem 0;
   background: #fff;
   -webkit-overflow-scrolling: touch;
+  position: relative;
 
   .sliderTrack {
     display: flex;
@@ -11,6 +12,7 @@
     -webkit-animation: scroll 240s linear infinite;
     animation: scroll 240s linear infinite;
     will-change: transform;
+    transform: translateZ(0);
 
     @media (min-width: 768px) {
       -webkit-animation: scroll 120s linear infinite;
@@ -29,6 +31,7 @@
     width: max-content;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    transform: translateZ(0);
 
     img {
       width: 130px;
