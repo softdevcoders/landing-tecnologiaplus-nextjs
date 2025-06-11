@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
-  const message = `Hola, te comparto este artículo que te puede interesar: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}`;
+  const message = `Hola, te comparto este artículo: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}`;
 
   return (
     <main className={style.blogPostView__container}>
