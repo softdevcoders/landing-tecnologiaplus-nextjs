@@ -69,8 +69,8 @@ function MobileProductGallery() {
       <Swiper
         modules={[Navigation, Pagination]}
         pagination={{ clickable: true }}
+        navigation={true}
         loop={true}
-        thumbs={{ swiper: thumbsSwiper }}
         className={styles.mainSwiper}
       >
         {images.map((img) => (
