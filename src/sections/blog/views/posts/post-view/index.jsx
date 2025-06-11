@@ -2,7 +2,6 @@ import { getPosts } from "@/request/server/posts/get-posts";
 import style from "./post-view.module.scss";
 import { formatDate } from "@/lib/format-date";
 import { htmlReader } from "@/lib/html-reader";
-import ResponsiveImage from "@/components/ui/responsive-image";
 import CarRelated from "@/sections/blog/components/card-related";
 import Link from "next/link";
 import { routes } from "@/config/routes";
@@ -10,6 +9,7 @@ import Image from "next/image";
 
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
+  const message = `Hola, te comparto este artículo que te puede interesar: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}`;
 
   return (
     <main className={style.blogPostView__container}>
@@ -20,16 +20,6 @@ const PostView = ({ post }) => {
 
         <div itemProp="articleBody" className={style.blogPostView__content}>
           <div className={style.blogPostView__imageContainer}>
-            {/* <ResponsiveImage  
-              image={{
-                src: post.images[0],
-                alt: post.title.rendered,
-                sizes: [
-                  { imageWidth: 500, mediaQuery: "(min-width: 0px)" }, 
-                  { imageWidth: 1200, mediaQuery: "(min-width: 1024px)" }
-                ],
-              }}
-            /> */}
             <Image
               src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${post.images[0]}`} 
               alt={post.title.rendered}
@@ -67,7 +57,7 @@ const PostView = ({ post }) => {
               </li>
               <li className={style.blogPostView__sharingItem}>
                 <a 
-                  href={`https://wa.me/?text=${encodeURIComponent(`${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}`)}`} 
+                  href={`https://wa.me/?text=${encodeURIComponent(message)}`}
                   className={style.blogPostView__sharingLink} 
                   title="Compartir en WhatsApp"
                   target="_blank"
