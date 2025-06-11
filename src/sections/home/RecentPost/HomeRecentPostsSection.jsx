@@ -21,7 +21,7 @@ function HomeRecentPostsSection() {
         className={style.btn__go_to_blog}
       >
         Visita nuestro blog
-        <ArrowForward className={style.icon__btn} />
+        <ArrowForward className={style.icon__btn} size={24} />
       </Link>
     </section>
   );

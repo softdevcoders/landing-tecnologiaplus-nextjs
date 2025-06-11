@@ -61,16 +61,23 @@ const Footer = () => {
         <div>
           <h3>Contacto</h3>
           <ul className={styles.footer__contact}>
+    
             <li>
-              <a href="tel:+573164682034">
-                <Phone />
-                <span>+57 316 468 2034</span>
+              <a href="mailto:ventas@tecnologiaplus.com">
+                <Email />
+                <span>ventas@tecnologiaplus.com</span>
               </a>
             </li>
             <li>
-              <a href="mailto:info@tecnologiaplus.com.co">
-                <Email />
-                <span>info@tecnologiaplus.com.co</span>
+              <a href="tel:+573164682034">
+                <Phone />
+                <span>(+57) 316 468 20 34</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+573227347971">
+                <Phone />
+                <span>(+57) 322 734 79 71</span>
               </a>
             </li>
           </ul>

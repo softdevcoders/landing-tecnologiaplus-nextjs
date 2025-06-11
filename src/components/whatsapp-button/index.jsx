@@ -6,30 +6,29 @@ import style from "./whatsapp-button.module.scss";
 import { Whatsapp } from "@/components/ui/icons";
 
 const WhatsappButton = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const handleScroll = () => {
-    const scrolled = window.scrollY;
-    setIsVisible(scrolled > 300);
-  };
+  const [whatsappLink, setWhatsappLink] = useState("https://wa.me/573164682034");
+  const pathname = usePathname();
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const pageTitle = document.title || 'Tecnología Plus';
+    const message = encodeURIComponent(
+      `Hola, vengo de la página "${pageTitle}" y quiero más información.`
+    );
+
+    setWhatsappLink(`https://wa.me/573164682034?text=${message}`);
+  }, [pathname]);
 
   return (
     <a
-      href="https://wa.me/573102105256"
+      href={whatsappLink}
       target="_blank"
-      rel="noopener noreferrer"
-      className={`${style.wpp__btn} ${isVisible ? style.visible : ""}`}
+      rel="noreferrer"
+      className={style.wpp__btn}
+      aria-label="Contactarnos por WhatsApp"
     >
-      <Whatsapp />
+      <Whatsapp size={32} />
     </a>
   );
 };
 
 export default WhatsappButton;
-
-

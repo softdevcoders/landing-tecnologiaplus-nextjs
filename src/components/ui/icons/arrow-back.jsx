@@ -1,6 +1,8 @@
-const ArrowBack = ({ size = 24, color = "currentColor" }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24">
-    <path fill={color} d="M15.41 7.41L14 6l-6 6l6 6l1.41-1.41L10.83 12z"/>
+const ArrowBack = ({ size = 44, color = "currentColor", className = "", ...props   }) => (
+  <svg className={className} stroke={color} fill={color} strokeWidth="0" viewBox="0 0 512 512" height={size} width={size} xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path>
   </svg>
 );
 

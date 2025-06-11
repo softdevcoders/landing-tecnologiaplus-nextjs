@@ -52,6 +52,7 @@ function MobileProductGallery() {
         pagination={{ clickable: true }}
         loop={true}
         className={styles.mainSwiper}
+        navigation={true}
       >
         {GALLERY_IMAGES.map((img, index) => (
           <SwiperSlide key={generateImageKey(img, index)}>

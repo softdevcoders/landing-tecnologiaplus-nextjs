@@ -13,7 +13,7 @@ const DropdownMenuMobile = ({ links = [], title = "", isOpen = false, handleDrop
     <div className={styles.dropdownMenu__container} data-attribute="dropdown-menu">  
       <div className={styles.dropdownMenu__title} data-attribute="dropdown-menu-title" onClick={handleTitleClick}>
         <span>{title}</span>
-        <ArrowDown className={`${styles.dropdownMenu__arrow} ${isOpen ? styles.dropdownMenu__arrowVisible : ''}`} />
+        <ArrowDown className={`${styles.dropdownMenu__arrow} ${isOpen ? styles.dropdownMenu__arrowVisible : ''}`} size={12} />
       </div>
       <div className={`${styles.dropdownMenu__items} ${isOpen ? styles.dropdownMenu__itemsVisible : ''}`}>
         {links.map((link, index) => (
