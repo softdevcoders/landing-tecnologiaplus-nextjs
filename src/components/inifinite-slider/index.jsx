@@ -1,13 +1,48 @@
+'use client';
 import Image from 'next/image';
 import styles from './infinite-slider.module.scss';
+import { useEffect, useRef } from 'react';
 
-export default function InfiniteSlider({ logos }) {
+export default function InfiniteSlider({ logos, speed = 60 }) {
   // Triplicamos los logos para asegurar una transición más suave
   const duplicated = [...logos, ...logos, ...logos];
 
+  // Referencia al track que se anima
+  const trackRef = useRef(null);
+
+  // Ajustamos la duración de la animación en función del tamaño del track
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    // Velocidad deseada en píxeles por segundo (recibida por prop `speed`)
+    const updateDuration = () => {
+      const trackWidth = track.scrollWidth;
+      // Se anima hasta -50% del ancho total
+      const travelDistance = trackWidth * 0.5; // px
+      const duration = travelDistance / speed; // segundos
+
+      // Aplicamos la duración tanto para prefijos webkit como estándar
+      track.style.animationDuration = `${duration}s`;
+      track.style.webkitAnimationDuration = `${duration}s`;
+    };
+
+    updateDuration();
+
+    // Observamos cambios de tamaño del track y cambios de viewport
+    const resizeObserver = new ResizeObserver(updateDuration);
+    resizeObserver.observe(track);
+    window.addEventListener('resize', updateDuration);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener('resize', updateDuration);
+    };
+  }, [logos, speed]);
+
   return (
     <div className={styles.slider}>
-      <div className={styles.sliderTrack}>
+      <div className={styles.sliderTrack} ref={trackRef}>
         {duplicated.map((logo, idx) => (
           <div key={`${logo.src}-${idx}`} className={styles.slide}>
             <Image
