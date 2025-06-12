@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { routes } from "@/config/routes";
 import { useEffect, useState, useCallback } from "react";
+import { usePathname } from 'next/navigation';
 import DropdownMenu from "@/components/header/dropdown-menu/DropdownMenu";
 import DropdownMenuMobile from "@/components/header/dropdown-menu-mobile/DropdownMenuMobile";
 import styles from "./Header.module.scss";
@@ -13,6 +14,14 @@ function Header({ headerAlt = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [dropDownMobileOpen, setDropDownMobileOpen] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const pathname = usePathname();
+
+  const isLinkActive = useCallback((href) => {
+    if (!href) return false;
+    if (href === '/') return pathname === '/';
+    return pathname === href || pathname.startsWith(`${href}/`);
+  }, [pathname]);
 
   const handleDropDownMobileOpen = useCallback((title) => {
     setDropDownMobileOpen(title === dropDownMobileOpen ? null : title);
@@ -66,13 +75,19 @@ function Header({ headerAlt = false }) {
     text: "Todos los artículos",
   });
 
+  // Determinar activos
+  const homeActive = isLinkActive(routes.home.url);
+  const contactActive = isLinkActive(routes.contact.url);
+  const productActive = productLinks.some((link) => isLinkActive(link.href));
+  const blogActive = isLinkActive(routes.blog.url) || blogLinks.some((link) => isLinkActive(link.href));
+
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${headerAlt ? styles.headerAlt : ""}`}>
       <div className={styles.header__container}>
         <div className={styles.header__navlinks_left}>
-          <Link href={routes.home.url} className={styles.header__navlinks_link}>{routes.home.label}</Link>
-          <DropdownMenu links={productLinks} title="Productos" />
-          <DropdownMenu links={blogLinks} title={{ href: routes.blog.url, text: "Blog" }} />
+          <Link href={routes.home.url} className={`${styles.header__navlinks_link} ${homeActive ? styles.active : ''}`}>{routes.home.label}</Link>
+          <DropdownMenu links={productLinks} title="Productos" active={productActive} />
+          <DropdownMenu links={blogLinks} title={{ href: routes.blog.url, text: "Blog" }} active={blogActive} />
         </div>
         <div className={styles.header__logo_image_container}>
           <div className={styles.header__logo_image_container_mobile}>
@@ -105,7 +120,7 @@ function Header({ headerAlt = false }) {
           </div>
         </div>
         <div className={styles.header__navlinks_right}>
-          <Link href={routes.contact.url} className={styles.header__navlinks_link}>{routes.contact.label}</Link>
+          <Link href={routes.contact.url} className={`${styles.header__navlinks_link} ${contactActive ? styles.active : ''}`}>{routes.contact.label}</Link>
           <a href={routes.contact_media.phones[0].url} className={styles.header__navlinks_phone}>
             <Phone2 className={styles.phone__icon} size={19} />
             <span className={styles.phone__label}>{routes.contact_media.phones[0].label}</span>
@@ -119,10 +134,10 @@ function Header({ headerAlt = false }) {
 
       {isMenuOpen && (
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
-          <Link href={routes.home.url} className={styles.header__navlinks_link}>{routes.home.label}</Link>  
-          <DropdownMenuMobile links={productLinks} title="Productos" isOpen={dropDownMobileOpen === "Productos"} handleDropDownMobileOpen={handleDropDownMobileOpen} />
-          <DropdownMenuMobile links={blogLinks} title="Blog" isOpen={dropDownMobileOpen === "Blog"} handleDropDownMobileOpen={handleDropDownMobileOpen} />
-          <Link href={routes.contact.url} className={styles.header__navlinks_link}>{routes.contact.label}</Link>
+          <Link href={routes.home.url} className={`${styles.header__navlinks_link} ${homeActive ? styles.active : ''}`}>{routes.home.label}</Link>  
+          <DropdownMenuMobile links={productLinks} title="Productos" isOpen={dropDownMobileOpen === "Productos"} handleDropDownMobileOpen={handleDropDownMobileOpen} active={productActive} />
+          <DropdownMenuMobile links={blogLinks} title="Blog" isOpen={dropDownMobileOpen === "Blog"} handleDropDownMobileOpen={handleDropDownMobileOpen} active={blogActive} />
+          <Link href={routes.contact.url} className={`${styles.header__navlinks_link} ${contactActive ? styles.active : ''}`}>{routes.contact.label}</Link>
         </div>
       )}
     </header>
