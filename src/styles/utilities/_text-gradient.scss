@@ -1,0 +1,25 @@
+@mixin text-gradient($gradient: linear-gradient(76deg, #50b8f8 20%, #1aa8f6 40%, #9930f4 100%)) {
+  /* Fallback */
+  color: #fff;
+
+  /* Navegadores que soportan gradient text */
+  @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+    background: $gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Fallback especial para dark-mode cuando no hay soporte */
+  @media (prefers-color-scheme: dark) {
+    @supports not (-webkit-background-clip: text) {
+      color: #fff;
+    }
+  }
+}
+
+/* Clase utilitaria lista para usar si no se desea mixin */
+.gradient-text {
+  @include text-gradient();
+} 
