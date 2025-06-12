@@ -86,13 +86,29 @@ const DisableRightClickOnImages = () => {
     const protectImage = (img) => {
       applyProtectiveStyles(img);
       
+      // Always block the context menu
       img.addEventListener('contextmenu', preventDefaultActions);
-      img.addEventListener('touchstart', handleTouchStart, { passive: true });
-      img.addEventListener('touchmove', handleTouchMove, { passive: true });
-      img.addEventListener('touchend', handleTouchEnd);
+
+      // Detect if the image lives inside a Swiper carousel (commonly used for product image sliders)
+      const isInSwiper = Boolean(
+        img.closest('.swiper') ||
+        img.closest('.swiper-container') ||
+        img.closest('.swiper-wrapper') ||
+        img.closest('.swiper-slide') ||
+        img.dataset.allowSwipe === 'true'
+      );
+
+      // Only attach the stricter touch / pointer blockers when the image is NOT in a carousel.
+      if (!isInSwiper) {
+        img.addEventListener('touchstart', handleTouchStart, { passive: true });
+        img.addEventListener('touchmove', handleTouchMove, { passive: true });
+        img.addEventListener('touchend', handleTouchEnd);
+        img.addEventListener('mousedown', preventDefaultActions);
+        img.addEventListener('pointerdown', preventDefaultActions);
+      }
+
+      // Always prevent drag and clipboard interactions regardless of Swiper presence
       img.addEventListener('dragstart', preventDefaultActions);
-      img.addEventListener('mousedown', preventDefaultActions);
-      img.addEventListener('pointerdown', preventDefaultActions);
       img.addEventListener('copy', preventDefaultActions);
       img.addEventListener('cut', preventDefaultActions);
       img.addEventListener('paste', preventDefaultActions);
