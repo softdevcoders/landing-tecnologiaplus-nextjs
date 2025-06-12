@@ -137,13 +137,11 @@ function MobileProductGallery() {
       {/* Gallery Swiper - only visible when activeView is 'gallery' */}
       <div style={{ display: activeView === 'gallery' ? 'block' : 'none' }}>
         <Swiper
-          ref={gallerySwiperRef}
           modules={[Navigation, Pagination]}
           pagination={{ clickable: true }}
+          navigation={true}
           loop={true}
           className={styles.mainSwiper}
-          onSlideChange={handleGallerySlideChange}
-          initialSlide={galleryIndex}
         >
           {GALLERY_IMAGES.map((img, index) => (
             <SwiperSlide key={generateImageKey(img, index)}>
