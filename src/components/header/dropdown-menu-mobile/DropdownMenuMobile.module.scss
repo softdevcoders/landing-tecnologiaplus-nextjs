@@ -23,6 +23,11 @@
         font-weight: 700;
       }
 
+      &.active {
+        color: #ae00ff !important;
+        font-weight: 700;
+      }
+
       .dropdownMenu__arrow {
         font-size: 0.7rem;
         transition: transform 0.3s ease;
@@ -58,6 +63,11 @@
         
         &:hover {
           transform: translateY(-1px);
+          font-weight: 700;
+        }
+
+        &.activeItem {
+          color: #ae00ff !important;
           font-weight: 700;
         }
       }

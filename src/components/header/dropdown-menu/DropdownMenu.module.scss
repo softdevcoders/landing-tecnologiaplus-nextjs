@@ -31,7 +31,11 @@
       .dropdownMenu__arrow {
         transform: rotate(180deg);
       }
-    } 
+    }
+
+    &.active {
+      color: #ae00ff !important;
+    }
   }
 
   &__items {
@@ -69,6 +73,11 @@
         transition: font-weight 0.3s ease;  
         transform: translateY(-1px);
         color: #6f3bb4 !important;
+      }
+
+      &.activeItem {
+        color: #ae00ff !important;
+        font-weight: 600;
       }
     }
   }
