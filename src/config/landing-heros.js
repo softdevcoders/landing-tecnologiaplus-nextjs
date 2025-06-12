@@ -23,8 +23,8 @@ export const landingHeros = {
       src: "v1738349921/jlxxsnlercoj0nihz4am_udppso.webp",
       alt: "Background Image for Slider Hero",
       loading: "lazy",
-      width: 200,
-      height: 200,
+      width: 1920,
+      height: 1080,
     },
   },
   backgroundMobilePortada: {

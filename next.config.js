@@ -1,3 +1,9 @@
+const path = require('path');
+// Bundle analyzer (only when ANALYZE env var is set)
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
@@ -22,6 +28,13 @@ const nextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 7,
   },
   webpack: (config, { isServer }) => {
+    // Alias Swiper to dynamic client-only wrapper to reduce bundle size
+    config.resolve = config.resolve || {};
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      'swiper/react': path.resolve(__dirname, 'src/components/ui/SwiperDynamic'),
+    };
+
     // You can customize webpack configuration here
     return config;
   },
@@ -205,10 +218,16 @@ const nextConfig = {
   },
   experimental: {
     optimizeCss: true,
+    // Divide libraries como lodash o react-icons en sub-imports automáticos
+    optimizePackageImports: [
+      'react-icons',
+      'lodash',
+    ],
     turbo: process.env.TURBO === 'true',
   },
   // Enable source maps in production
   productionBrowserSourceMaps: false,
 };
 
-module.exports = nextConfig; 
+// Export wrapped config (adds bundle analyzer if enabled)
+module.exports = withBundleAnalyzer(nextConfig); 
