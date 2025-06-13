@@ -1,13 +1,6 @@
 // +++++++++++++++++++++
 // Mobile Styles
 // +++++++++++++++++++++
-.content__mobile__custom {
-  // margin-top: 2rem !important;
-}
-
-.content__image__imgMobile__custom {
-  padding: 0 1rem !important;
-}
 
 .content__text__title__mobile__custom {
   font-size: 3rem !important;
@@ -25,16 +18,8 @@
 // Mobile Styles
 // +++++++++++++++++++++
 
-.content__image__imgDesktop__custom {
-  justify-content: flex-end !important;
-  img {
-    max-width: 730px !important;
-  }
-}
-
 .content__text__desktop__custom {
   max-width: 700px !important;
-  margin-left: 1rem !important;
 }
 
 .content__text__title__desktop__custom {

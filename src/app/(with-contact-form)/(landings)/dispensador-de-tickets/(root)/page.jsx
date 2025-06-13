@@ -15,22 +15,11 @@ export async function generateMetadata() {
 export default function DispensadorTiquetesLanding() {
   return (
     <>
-      {/* Hero Section: Displays the main banner or introduction */}
       <DispensadorTiquetesHeroSection />
-
-      {/* Clients Section: Highlights client testimonials or logos */}
       <DispensadorTiquetesClientsSection />
-
-      {/* Products Section: Showcases the products related to ticket dispensers */}
       <DispensadorTiquetesProductsSection />
-
-      {/* Benefits Section: Lists the benefits of using the product */}
       <DispensadorTiquetesBenefitsSection />
-
-      {/* Industries Section: Displays industries where the product can be used */}
       <DispensadorTiquetesIndustriesSection />
-
-      {/* Related Products Section: Suggests related products */}
       <DispensadorTiquetesRelatedProducts />
     </>
   );

@@ -1,7 +1,3 @@
-.content__image__imgMobile__custom {
-  padding: 0 2rem !important;
-}
-
 .content__text__title__mobile__custom {
   text-wrap: balance !important;
   text-align: center !important;
@@ -11,8 +7,6 @@
   -webkit-filter: drop-shadow(2px 2px 4px #0009) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
-  margin-bottom: .5rem !important;
-  padding: 0 !important;
   font-size: 3rem !important;
   font-weight: 900 !important;
   line-height: 1.1 !important;
@@ -22,8 +16,6 @@
   text-align: center !important;
   text-wrap: balance !important;
   color: #fff !important;
-  margin: 0 0 .5rem !important;
-  padding: 0 5vw !important;
   font-size: 2rem !important;
   font-weight: 600 !important;
   line-height: 1.4 !important;
@@ -33,8 +25,6 @@
   text-align: center !important;
   text-wrap: balance !important;
   color: #fff !important;
-  margin: 0 0 .5rem !important;
-  padding: 0 5vw !important;
   font-size: clamp(1rem, 4.5vw, 1.5rem ) !important;
   font-weight: 400 !important;
   line-height: 1.4 !important;
@@ -42,5 +32,4 @@
 
 .content__text__desktop__custom {
   max-width: 700px !important;
-  margin-left: 3rem !important;
 }
