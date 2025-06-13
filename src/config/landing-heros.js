@@ -564,7 +564,7 @@ export const landingHeros = {
         sizes: commonSizesPrimaryImage,
         className: styles.landing_hero__content__image_mobile
       },{
-        src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
+        src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/ubbkhbpquh0tquaz8xwl",
         alt: "Rollos de turnos",
         sizes: commonSizesPrimaryImage,
         className: styles.landing_hero__content__image_desktop
