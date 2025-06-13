@@ -3,6 +3,7 @@ import style from "./blog-content-section.module.scss";
 import Link from "next/link";
 import blogs from "@/data/blogs";
 import { routes } from "@/config/routes";
+import Pagination from "@/sections/blog/components/pagination";
 
 const BlogContentSection = ({ posts, pagination }) => {
   const categories = routes.blog.children;
@@ -16,17 +17,10 @@ const BlogContentSection = ({ posts, pagination }) => {
           ))}
         </div>
 
-        <div className={style.blogContent__pagination}>
-          {Array.from({ length: pagination.totalPages }, (_, i) => ++i).map((page) => (
-            <Link 
-              key={page} 
-              href={`?page=${page}`} 
-              className={`${style.blogContent__paginationButton} ${+pagination.currentPage === page ? style.blogContent__paginationButton__active : ''}`}
-            >
-              {page}
-            </Link>
-          ))}
-        </div>
+        <Pagination 
+          totalPages={pagination.totalPages} 
+          currentPage={+pagination.currentPage} 
+        />
       </div>
       <div className={style.blogContent__categories}>
         <h2 className={style.blogContent__categoriesTitle}>Categorías</h2>
