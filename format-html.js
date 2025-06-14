@@ -4,7 +4,7 @@ const path = require('path');
 
 // Ruta del archivo HTML a formatear
 // const htmlFile = 'src/data/blogs/html/articles/localizadores-para-restaurantes/guia-localizadores-clientes-para-restaurantes-colombia.html';
-const htmlFile = 'src/data/blogs/html/articles/localizadores-para-restaurantes/sistema-de-llamado-para-restaurante-autoservicio-porque-lo-necesitas.html';
+const htmlFile = 'src/data/blogs/html/articles/localizadores-para-restaurantes/localizadores-de-clientes-atencion-sin-mas-personal.html';
 
 // Leer el contenido del archivo
 fs.readFile(htmlFile, 'utf8', (err, data) => {
