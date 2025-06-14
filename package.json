@@ -48,6 +48,7 @@
     "glob": "^11.0.2",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^10.1.6",
+    "prettier": "^3.5.3",
     "rimraf": "^5.0.10",
     "swc-loader": "^0.2.6",
     "url-loader": "^4.1.1"
