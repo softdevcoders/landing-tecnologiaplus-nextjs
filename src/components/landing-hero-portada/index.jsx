@@ -102,7 +102,7 @@ export const LandingHeroPortadaContentTextButton = ({className = "", href, child
 
 export const LandingHeroPortadaContentTextLogoBrand = ({className = "", image}) => {
   return (
-    <div className={`${styles.landing_hero__content__logo__brand__image_container} ${className}`}>
+    <div className={`${styles.content__text__image_container} ${className}`}>
       <Image
         className={styles.landing_hero__content__logo__brand__image} 
         {...image} 

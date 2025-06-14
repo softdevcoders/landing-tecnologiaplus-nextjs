@@ -27,7 +27,33 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60 * 60 * 24 * 7,
   },
-  webpack: (config, { isServer }) => {
+  webpack: (config, { dev, isServer }) => {
+    // Optimizaciones específicas para Swiper
+    if (!isServer) {
+      config.optimization = {
+        ...config.optimization,
+        splitChunks: {
+          chunks: 'all',
+          minSize: 20000,
+          maxSize: 50000,
+          cacheGroups: {
+            swiper: {
+              test: /[\\/]node_modules[\\/]swiper[\\/]/,
+              name: 'swiper',
+              priority: 10,
+              enforce: true,
+            },
+            swiperModules: {
+              test: /[\\/]node_modules[\\/]swiper[\\/]modules[\\/]/,
+              name: 'swiper-modules',
+              priority: 20,
+              enforce: true,
+            },
+          },
+        },
+      };
+    }
+
     // Alias Swiper to dynamic client-only wrapper to reduce bundle size
     config.resolve = config.resolve || {};
     config.resolve.alias = {
@@ -227,6 +253,8 @@ const nextConfig = {
   },
   // Enable source maps in production
   productionBrowserSourceMaps: false,
+  // Optimizaciones generales
+  optimizeFonts: true,
 };
 
 // Export wrapped config (adds bundle analyzer if enabled)

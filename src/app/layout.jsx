@@ -1,6 +1,9 @@
 // Styles
 import "@/styles/critical.scss";
 import "@/styles/main.scss";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import GtmDeferred from '@/components/GtmDeferred'
 
 import { Bebas_Neue, Montserrat } from 'next/font/google'

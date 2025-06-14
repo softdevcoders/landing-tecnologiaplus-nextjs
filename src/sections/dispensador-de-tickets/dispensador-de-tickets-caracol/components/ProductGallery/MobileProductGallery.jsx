@@ -3,12 +3,12 @@
 import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
 import styles from "@/styles/ProductGallery.module.scss";
-import { ArrowBack } from "@/components/ui/icons";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";
+import BackButton from "@/components/back-button";
 import classNames from "classnames";
 
 // Main gallery images - don't modify these constants during rendering
@@ -142,9 +142,7 @@ function MobileProductGallery() {
   return (
     <div className={styles.mobileGallery}>
       <div className={styles.action__nav}>
-        <button onClick={() => window.history.back()}>
-          <ArrowBack className={styles.icon__back} /> Volver
-        </button>
+        <BackButton /> 
       </div>
 
       <div className={styles.container__titles}>
@@ -158,12 +156,13 @@ function MobileProductGallery() {
       {/* Gallery Swiper - only visible when activeView is 'gallery' */}
       <div style={{ display: activeView === "gallery" ? "block" : "none" }}>
         <Swiper
-          onSlideChange={handleGallerySlideChange}
+          ref={gallerySwiperRef}
           modules={[Navigation, Pagination]}
           pagination={{ clickable: true }}
-          navigation={true}
           loop={true}
           className={styles.mainSwiper}
+          onSlideChange={handleGallerySlideChange}
+          initialSlide={galleryIndex}
         >
           {GALLERY_IMAGES.map((img, index) => (
             <SwiperSlide key={generateImageKey(img, index)}>

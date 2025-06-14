@@ -1,7 +1,5 @@
 import styles from "./landing-hero.module.scss";
 import Link from "next/link";
-import { landingHeros } from "@/config/landing-heros";
-import ResponsiveImage from "@/components/ui/responsive-image";
 import LandingHeroImageContent from "./landing-hero-image-content";
 import Image from "next/image";
 
