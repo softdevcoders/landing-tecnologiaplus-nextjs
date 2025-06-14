@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/icons";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";
 import Popup from "@/components/ui/pop-up";
+import BackButton from "@/components/back-button";
 
 function ProductGallery() {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,9 +87,7 @@ function ProductGallery() {
   return (
     <section className={styles.hero}>
       <div className={styles.action__nav}>
-        <button onClick={() => window.history.back()}>
-          <ArrowBack className={styles.icon__back} /> Volver
-        </button>
+        <BackButton /> 
       </div>
 
       <div className={styles.container__product__gallery}>

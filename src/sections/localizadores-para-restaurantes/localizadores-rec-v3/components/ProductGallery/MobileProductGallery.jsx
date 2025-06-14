@@ -7,8 +7,8 @@ import { Navigation, Pagination } from "swiper/modules";
 // import "swiper/css/navigation";
 // import "swiper/css/pagination";
 import styles from "@/styles/ProductGallery.module.scss";
-import { ArrowBack } from "@/components/ui/icons";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";     
+import BackButton from "@/components/back-button";
 
 function MobileProductGallery() {
   const images = [
@@ -19,14 +19,12 @@ function MobileProductGallery() {
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741622477/Frame_1_33_d1et3p.webp",
   ];
 
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null); 
 
   return (
     <div className={styles.mobileGallery}>
-      <div className={styles.action__nav}>
-        <button onClick={() => window.history.back()}>
-          <ArrowBack className={styles.icon__back} /> Volver
-        </button>
+      <div className={styles.action__nav}>  
+        <BackButton /> 
       </div>
 
       <div className={styles.container__titles}>

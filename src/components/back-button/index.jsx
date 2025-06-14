@@ -1,24 +1,19 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import styles from "./back-button.module.scss";
 import { ArrowBack } from "@/components/ui/icons";
 
 export default function BackButton({ className }) {
-  const pathname = usePathname();
-  
-  // Obtener el path de la categoría (primer segmento)
-  const segments = pathname.split("/").filter(Boolean);
-  const categoryPath = segments.length >= 1 ? `/${segments[0]}` : "/";
+  const router = useRouter();
 
   return (
-    <Link 
-      href={categoryPath}
+    <button 
+      onClick={() => router.back()}
       className={`${styles.back_button} ${className || ""}`}
     >
       <ArrowBack className={styles.icon__back} size={16} />
       Volver
-    </Link>
+    </button>
   );
 } 

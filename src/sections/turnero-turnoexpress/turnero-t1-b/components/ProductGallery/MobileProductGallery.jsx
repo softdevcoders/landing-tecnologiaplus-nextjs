@@ -7,16 +7,14 @@ import { Navigation, Pagination } from "swiper/modules";
 // import "swiper/css/navigation";
 // import "swiper/css/pagination";
 import styles from "@/styles/ProductGallery.module.scss";
-
-
-import { ArrowBack } from "@/components/ui/icons";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";   
+import BackButton from "@/components/back-button";
 
 // Main gallery images - don't modify these constants during rendering
 const GALLERY_IMAGES = [
   "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741476098/Frame_1_5_cgypo1.webp",
   "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1740065235/2_4x-8_1_qcs5ym.webp",
-  "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741640914/Frame_1_67_xia2au.webp",
+  "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741640914/Frame_1_67_xia2au.webp", 
   "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741476255/Frame_1_6_ao3mbn.webp",
   "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741640721/Frame_1_66_c3ksnw.webp",
 ];
@@ -35,9 +33,7 @@ function MobileProductGallery() {
     <div className={styles.mobileGallery}>
 
       <div className={styles.action__nav}>
-        <button onClick={() => window.history.back()}>
-          <ArrowBack className={styles.icon__back} /> Volver
-        </button>
+        <BackButton /> 
       </div>
 
       <div className={styles.container__titles}>
