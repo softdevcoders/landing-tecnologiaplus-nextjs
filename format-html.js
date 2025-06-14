@@ -5,7 +5,8 @@ const path = require('path');
 // Ruta del archivo HTML a formatear
 // const htmlFile = 'src/data/blogs/html/articles/localizadores-para-restaurantes/guia-localizadores-clientes-para-restaurantes-colombia.html';
 // const htmlFile = 'src/data/blogs/html/articles/localizadores-para-restaurantes/localizadores-de-clientes-resistentes-golpes-caidas.html';
-const htmlFile = 'src/data/blogs/html/articles/llamadores-de-meseros/timbre-inalambrico-para-restaurantes-como-revoluciona-el-servicio.html';
+// const htmlFile = 'src/data/blogs/html/articles/llamadores-de-meseros/timbre-inalambrico-para-restaurantes-como-revoluciona-el-servicio.html';
+const htmlFile = 'src/data/blogs/html/articles/calificador-de-servicio-al-cliente/como-calificar-el-servicio-al-cliente-preguntas-personalizadas.html';
 
 // Leer el contenido del archivo
 fs.readFile(htmlFile, 'utf8', (err, data) => {
