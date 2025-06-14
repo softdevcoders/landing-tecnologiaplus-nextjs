@@ -34,7 +34,7 @@ function LlamadorMeserosVideosSection() {
             <p className={style.video__card__title}>Un solo toque y el número de mesa aparece en pantalla.</p>
             <div className={style.video__card__player__container}>
               <YouTubePlayer
-                videoId="b2nlu7sOlcI"
+                videoId="9CPZ2QoFyqM"
                 title="Un solo toque y el número de mesa aparece en pantalla"
                 imageCover="https://i.ytimg.com/vi_webp/9CPZ2QoFyqM/sddefault.webp"
               />
