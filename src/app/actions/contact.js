@@ -136,6 +136,7 @@ export async function sendEmail(formData) {
         address: process.env.GMAIL_USER
       },
       to: sanitizedData.email,
+      replyTo: "ventas@tecnologiaplus.com",
       subject: `[Confirmación] Tu mensaje ha sido recibido`,
       headers: {
         'X-Entity-Ref-ID': messageId,
@@ -144,23 +145,92 @@ export async function sendEmail(formData) {
         'X-Gmail-Labels': 'Confirmación'
       },
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <div style="background-color: #6f3bb4; color: white; padding: 20px; text-align: center;">
-            <h1 style="margin: 0;">Confirmación de Mensaje</h1>
-          </div>
-          <div style="padding: 20px; background-color: #f9f9f9;">
-            <p>Estimado/a ${sanitizedData.name},</p>
-            <p>Queremos agradecerte por contactarnos. Tu mensaje ha sido recibido con éxito y pronto nos pondremos en contacto contigo.</p>
-            <p>Gracias por confiar en nosotros.</p>
-          </div>
-          <div style="background-color: #f4f4f4; padding: 20px; text-align: center;">
-            <p>Conectate con nosotros en las redes sociales:</p>
-            <a href="https://www.facebook.com/tecnologiapluscolombia" style="margin: 0 10px; display: inline-block; color: blue; text-decoration: none;">Facebook</a>
-            <a href="https://www.instagram.com/tecnologiapluscolombia/" style="margin: 0 10px; display: inline-block; color: blue; text-decoration: none;">Instagram</a>
-            <a href="https://www.tiktok.com/@tecnologiapluscolombia?_t=ZS-8vifPxXi2KX&_r=1" style="margin: 0 10px; display: inline-block; color: blue; text-decoration: none;">TikTok</a>
-            <a href="https://www.youtube.com/channel/UCPho92vfQwC24X8Y3eI8Dvg" style="margin: 0 10px; display: inline-block; color: blue; text-decoration: none;">YouTube</a>
-          </div>
-        </div>
+        <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+          </head>
+          <body style="margin: 0; padding: 0; background-color: #f4f4f4;">
+            <table role="presentation" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0; padding: 0; background-color: #f4f4f4;">
+              <tr>
+                <td align="center" style="padding: 20px 0;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" style="width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden;">
+                    <!-- Header -->
+                    <tr>
+                      <td style="background-color: #2b0f76; padding: 20px;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" style="width: 100%;">
+                          <tr>
+                            <td style="width: 50%;">
+                              <h1 style="margin: 0; font-family: Arial, sans-serif; font-size: 24px; font-weight: 500; color: white;">Confirmación de mensaje</h1>
+                            </td>
+                            <td style="width: 50%; text-align: right;">
+                              <img src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1749921675/website-v2/logos/logo-email-template/cqwf2nljlutt3iucwsjp.png" alt="Tecnología Plus" style="max-width: 200px; height: auto;" />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <!-- Content -->
+                    <tr>
+                      <td style="padding: 40px 20px; background-color: #ffffff;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" style="width: 100%;">
+                          <tr>
+                            <td>
+                              <p style="margin: 0 0 20px 0; font-family: Arial, sans-serif; font-size: 18px; color: #333333;">Estimado/a ${sanitizedData.name},</p>
+                              <p style="margin: 0 0 20px 0; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333333;">Queremos agradecerte por contactarnos. Tu mensaje ha sido recibido con éxito y pronto nos pondremos en contacto contigo.</p>
+                              <p style="margin: 0; font-family: Arial, sans-serif; font-size: 16px; color: #333333;">Gracias por confiar en nosotros.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                      <td style="background-color: #2b0f76; padding: 20px;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" style="width: 120%;">
+                          <tr>
+                            <td style="width: 100px;">
+                              <p style="font-family: Arial, sans-serif; font-size: 20px; font-weight: 500; color: white;">Síguenos</p>
+                            </td>
+                            <td>
+                              <table role="presentation" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="padding-right: 15px;">
+                                    <a href="https://www.instagram.com/tecnologiapluscolombia/" style="display: inline-block; background-color: white; border-radius: 50%; padding: 8px; line-height: 0;">
+                                      <img src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1749926430/website-v2/logos/logo-email-template/b2aqxprwdfpowqm8azhz.png" alt="Instagram" width="24" height="24" style="display: block;" />
+                                    </a>
+                                  </td>
+                                  <td style="padding-right: 15px;">
+                                    <a href="https://www.tiktok.com/@tecnologiapluscolombia" style="display: inline-block; background-color: white; border-radius: 50%; padding: 8px; line-height: 0;">
+                                      <img src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1749926430/website-v2/logos/logo-email-template/i5fxv0qhy9fov2qmj25i.png" alt="TikTok" width="24" height="24" style="display: block;" />
+                                    </a>
+                                  </td>
+                                  <td style="padding-right: 15px;">
+                                    <a href="https://www.facebook.com/tecnologiapluscolombia" style="display: inline-block; background-color: white; border-radius: 50%; padding: 8px; line-height: 0;">
+                                      <img src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1749926430/website-v2/logos/logo-email-template/algv3vxhu28azt7jzn3i.png" alt="Facebook" width="24" height="24" style="display: block;" />
+                                    </a>
+                                  </td>
+                                  <td>
+                                    <a href="https://www.youtube.com/channel/UCPho92vfQwC24X8Y3eI8Dvg" style="display: inline-block; background-color: white; border-radius: 50%; padding: 8px; line-height: 0;">
+                                      <img src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1749926430/website-v2/logos/logo-email-template/gju8q7du6n9kvmqakv1k.png" alt="YouTube" width="24" height="24" style="display: block;" />
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </body>
+          </html>
       `
     });
 
