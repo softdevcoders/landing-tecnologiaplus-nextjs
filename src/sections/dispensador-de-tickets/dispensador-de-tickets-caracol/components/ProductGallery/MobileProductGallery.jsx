@@ -3,9 +3,9 @@
 import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
 import styles from "@/styles/ProductGallery.module.scss";
 import { ArrowBack } from "@/components/ui/icons";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";
@@ -158,12 +158,13 @@ function MobileProductGallery() {
       {/* Gallery Swiper - only visible when activeView is 'gallery' */}
       <div style={{ display: activeView === "gallery" ? "block" : "none" }}>
         <Swiper
-          onSlideChange={handleGallerySlideChange}
+          ref={gallerySwiperRef}
           modules={[Navigation, Pagination]}
           pagination={{ clickable: true }}
-          navigation={true}
           loop={true}
           className={styles.mainSwiper}
+          onSlideChange={handleGallerySlideChange}
+          initialSlide={galleryIndex}
         >
           {GALLERY_IMAGES.map((img, index) => (
             <SwiperSlide key={generateImageKey(img, index)}>
