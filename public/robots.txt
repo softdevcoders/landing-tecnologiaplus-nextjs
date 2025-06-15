@@ -1,9 +1,28 @@
-# *
+# Allow all robots complete access
 User-agent: *
 Allow: /
 
+# Block access to sensitive paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /.env
+Disallow: /.git
+Disallow: /node_modules/
+Disallow: /_next/static/development/
+Disallow: /_next/static/webpack/
+Disallow: /_error
+Disallow: /404
+Disallow: /500
+
+# Clean Parameters
+Disallow: /*?*
+
 # Host
-Host: http://localhost:3000
+Host: https://tecnologiaplus.com
+
+# Crawl-delay
+Crawl-delay: 10
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://tecnologiaplus.com/sitemap.xml
