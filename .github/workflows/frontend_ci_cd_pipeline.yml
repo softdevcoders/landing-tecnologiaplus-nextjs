@@ -86,7 +86,7 @@ jobs:
             -e GMAIL_USER=${{ env.GMAIL_USER }} \
             -e GMAIL_RECIPIENTS=${{ env.GMAIL_RECIPIENTS }} \
             -e GMAIL_APP_PASSWORD='${{ env.GMAIL_APP_PASSWORD }}' \
-            -e SHOULD_ROBOTS_INDEX=${{ env.SHOULD_ROBOTS_INDEX }} \
+            -e SHOULD_ROBOTS_INDEX='${{ env.SHOULD_ROBOTS_INDEX }}' \
             -e NEXT_PUBLIC_BASE_URL=${{ env.NEXT_PUBLIC_BASE_URL }} \
             -e NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }} \
             -e NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=${{ env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }} \
