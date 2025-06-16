@@ -9,7 +9,7 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   images: {
-    domains: ['res.cloudinary.com', 'i.ytimg.com'],
+    domains: ['res.cloudinary.com', 'i.ytimg.com', '31.97.14.208', 'tecnologiaplus.com'],
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
@@ -22,7 +22,18 @@ const nextConfig = {
         hostname: 'i.ytimg.com',
         pathname: '**',
       },
+      {
+        protocol: 'http',
+        hostname: '31.97.14.208',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tecnologiaplus.com',
+        pathname: '**',
+      }
     ],
+    unoptimized: process.env.NODE_ENV === 'production',
     deviceSizes: [320, 640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60 * 60 * 24 * 7,
@@ -300,9 +311,9 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: process.env.NODE_ENV === 'production' 
+            value: process.env.NEXT_PUBLIC_DOMAIN === 'tecnologiaplus.com'
               ? "default-src 'self' https://*.cloudinary.com https://*.googleapis.com https://*.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://*.gstatic.com; img-src 'self' data: blob: https: https://www.google-analytics.com https://www.googletagmanager.com https://*.cloudinary.com; connect-src 'self' https://* wss://*; frame-src 'self' https://www.googletagmanager.com; base-uri 'self'; form-action 'self';"
-              : "default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;"
+              : "default-src 'self' http: https://*.cloudinary.com https://*.googleapis.com https://*.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://*.gstatic.com; img-src 'self' data: blob: http: https: https://www.google-analytics.com https://www.googletagmanager.com https://*.cloudinary.com; connect-src 'self' http: https://* wss://*; frame-src 'self' https://www.googletagmanager.com; base-uri 'self'; form-action 'self';"
           },
           {
             key: 'Strict-Transport-Security',
