@@ -2,6 +2,7 @@ import { getPosts } from "@/request/server/posts/get-posts";
 import style from "./post-view.module.scss";
 import { formatDate } from "@/lib/format-date";
 import { htmlReader } from "@/lib/html-reader";
+import { cleanText } from "@/lib/clean-text";
 import CarRelated from "@/sections/blog/components/card-related";
 import Link from "next/link";
 import { routes } from "@/config/routes";
@@ -11,11 +12,15 @@ const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
   const message = `Hola, te comparto este artículo: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}`;
 
+  // Sanitizar el contenido del post
+  const sanitizedTitle = cleanText(post.title.rendered);
+  const sanitizedContent = cleanText(post.content.rendered, ['script', 'iframe', 'object', 'embed']);
+
   return (
     <main className={style.blogPostView__container}>
       <article itemScope itemType="https://schema.org/BlogPosting" className={style.blogPostView__article}>
         <header className={style.blogPostView__header}>
-          <h1 itemProp="headline" className={style.blogPostView__title}>{post.title.rendered}</h1>
+          <h1 itemProp="headline" className={style.blogPostView__title}>{sanitizedTitle}</h1>
         </header>
 
         <div itemProp="articleBody" className={style.blogPostView__content}>
@@ -30,7 +35,7 @@ const PostView = ({ post }) => {
           </div>
           <div 
             className={style.blogPostView__contentHtml} 
-            dangerouslySetInnerHTML={{ __html: htmlReader(post.content.template_name) }} 
+            dangerouslySetInnerHTML={{ __html: sanitizedContent }} 
           />
           <div className={style.blogPostView__contentHtlmFooter}>
             <p  className={style.blogPostView__contentHtmlFooterText}><Link href={routes.contact.url} className={style.blogPostView__contentHtmlFooterLink}>Contáctanos hoy mismo</Link> y descubre cómo podemos llevar tu servicio al siguiente nivel!</p>
