@@ -32,9 +32,9 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         {/* Security Headers */}
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        {/* <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" /> */}
 
         {/* PWA Support */}
         <link rel="manifest" href="/manifest.json" />
