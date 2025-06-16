@@ -4,7 +4,7 @@ import "@/styles/main.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import GtmDeferred from '@/components/GtmDeferred'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 import { Bebas_Neue, Montserrat } from 'next/font/google'
  
@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
         <meta name="google" content="notranslate" />
       </head>
       <body>
-        <GtmDeferred />
+        <GoogleTagManager gtmId="GTM-P8J6LTX" />
         {children}
       </body>
     </html>
