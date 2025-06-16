@@ -10,32 +10,13 @@ import Script from 'next/script';
  * – Implementa medidas de seguridad adicionales.
  */
 export default function GtmDeferred() {
-  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-P8J6LTX';
+  const GTM_ID = 'GTM-P8J6LTX';
   
-  // Verificaciones de seguridad
-  if (!GTM_ID || !/^GTM-[A-Z0-9]+$/.test(GTM_ID)) {
-    console.error('ID de GTM inválido o no configurado');
+  // Verificar que el ID de GTM sea válido
+  if (!/^GTM-[A-Z0-9]+$/.test(GTM_ID)) {
+    console.error('ID de GTM inválido');
     return null;
   }
-
-  // Lista de dominios permitidos para GTM
-  const allowedDomains = [
-    'www.googletagmanager.com',
-    'www.google-analytics.com',
-    'ssl.google-analytics.com',
-    'stats.g.doubleclick.net',
-    'www.googleadservices.com'
-  ];
-
-  // Validar que el dominio del script está en la lista permitida
-  const validateScriptDomain = (url) => {
-    try {
-      const domain = new URL(url).hostname;
-      return allowedDomains.includes(domain);
-    } catch {
-      return false;
-    }
-  };
 
   return (
     <>
@@ -51,10 +32,7 @@ export default function GtmDeferred() {
           // Configuración de seguridad básica
           window.dataLayer = window.dataLayer || [];
           
-          // Prevenir manipulación del dataLayer
-          Object.freeze(window.dataLayer);
-          
-          // Implementación estándar de GTM con validaciones adicionales
+          // Implementación estándar de GTM
           (function(w,d,s,l,i){
             // Prevenir múltiples inicializaciones
             if(w.gtmDidInit) return;
@@ -71,14 +49,8 @@ export default function GtmDeferred() {
             // Agregar atributos de seguridad
             j.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
             j.setAttribute('crossorigin', 'anonymous');
-            j.setAttribute('integrity', 'sha384-...');  // Agregar el hash SRI correcto
             
-            // Validar dominio antes de cargar
-            if(validateScriptDomain(j.src)) {
-              f.parentNode.insertBefore(j,f);
-            } else {
-              console.error('Dominio no permitido para GTM');
-            }
+            f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','${GTM_ID}');
         `}
       </Script>
