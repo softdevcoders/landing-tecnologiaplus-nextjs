@@ -5,11 +5,13 @@ export const SHOULD_ROBOTS_INDEX = process.env.SHOULD_ROBOTS_INDEX === 'true' ? 
 export const ROBOTS_CONFIG = {
   index: SHOULD_ROBOTS_INDEX,
   follow: SHOULD_ROBOTS_INDEX,
+  nocache: true,
   googleBot: {
     index: SHOULD_ROBOTS_INDEX,
     follow: SHOULD_ROBOTS_INDEX,
-    "max-image-preview": "none",
+    noimageindex: true,
     "max-video-preview": -1,
+    "max-image-preview": "large",
     "max-snippet": -1,
   },
 }

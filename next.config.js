@@ -250,7 +250,7 @@ const nextConfig = {
   },
   experimental: {
     optimizeCss: true,
-    // Divide libraries como lodash o react-icons en sub-imports automáticos
+    scrollRestoration: true,
     optimizePackageImports: [
       'react-icons',
       'lodash',
@@ -261,6 +261,65 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   // Optimizaciones generales
   optimizeFonts: true,
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  // Configuración de caché
+  onDemandEntries: {
+    maxInactiveAge: 60 * 60 * 1000, // 1 hora
+    pagesBufferLength: 5,
+  },
+  // Headers de seguridad actualizados
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on'
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), interest-cohort=(), payment=(), usb=(), bluetooth=(), serial=()'
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob: https://www.google-analytics.com https://www.googletagmanager.com https://res.cloudinary.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; frame-src 'self' https://www.googletagmanager.com; base-uri 'self'; form-action 'self';"
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains; preload'
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          },
+          {
+            key: 'X-Permitted-Cross-Domain-Policies',
+            value: 'none'
+          }
+        ]
+      }
+    ];
+  },
 };
 
 // Export wrapped config (adds bundle analyzer if enabled)
