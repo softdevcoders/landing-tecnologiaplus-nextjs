@@ -315,10 +315,12 @@ const nextConfig = {
               ? "default-src 'self' https://*.cloudinary.com https://*.googleapis.com https://*.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com data:; font-src 'self' data: https://fonts.gstatic.com https://*.gstatic.com http://fonts.gstatic.com http://*.gstatic.com; img-src 'self' data: blob: https: https://www.google-analytics.com https://www.googletagmanager.com https://*.cloudinary.com; connect-src 'self' https://* wss://*; frame-src 'self' https://www.googletagmanager.com; base-uri 'self'; form-action 'self';"
                               : "default-src 'self' http: https://*.cloudinary.com https://*.googleapis.com https://*.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com data:; font-src 'self' data: https://fonts.gstatic.com https://*.gstatic.com http://fonts.gstatic.com http://*.gstatic.com; img-src 'self' data: blob: http: https: https://www.google-analytics.com https://www.googletagmanager.com https://*.cloudinary.com; connect-src 'self' http: https://* wss://*; frame-src 'self' https://www.googletagmanager.com; base-uri 'self'; form-action 'self';"
           },
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains; preload'
-          },
+          process.env.NEXT_PUBLIC_BASE_URL === 'https://development.tecnologiaplus.com' || process.env.NEXT_PUBLIC_BASE_URL === 'https://tecnologiaplus.com'
+            ? {
+                key: 'Strict-Transport-Security',
+                value: 'max-age=31536000; includeSubDomains; preload'
+              }
+            : null,
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable'
