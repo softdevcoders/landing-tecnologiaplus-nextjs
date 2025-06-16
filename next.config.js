@@ -240,8 +240,6 @@ const nextConfig = {
       { source: '/como-ahorrar-dinero-y-cuidar-el-medio-ambiente-con-rollos-de-papel-termico', destination: '/blog/rollos-de-papel-termico/como-ahorrar-dinero-medio-ambiente', permanent: true },
       { source: '/que-es-el-papel-de-transferencia-termica-y-como-usarlo-en-tu-negocio', destination: '/blog/rollos-de-papel-termico/que-es-papel-transferencia-termica-como-usarlo', permanent: true },
       { source: '/turnero-digital', destination: '/turnero-turnoexpress', permanent: true },
-
-
       { source: '/llamado-de-enfermeria', destination: '/llamado-de-enfermeria-cuidamaster', permanent: true },
       { source: '/rollos-de-turno', destination: '/rollos-de-fichos-para-turnos', permanent: true },
       { source: '/dispensador-de-tiquetes', destination: '/dispensador-de-tickets', permanent: true },
@@ -302,7 +300,9 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com *.googleapis.com; font-src 'self' data: https://fonts.gstatic.com *.gstatic.com; img-src 'self' data: https: blob: https://www.google-analytics.com https://www.googletagmanager.com https://res.cloudinary.com *.cloudinary.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; frame-src 'self' https://www.googletagmanager.com; base-uri 'self'; form-action 'self';"
+            value: process.env.NODE_ENV === 'production' 
+              ? "default-src 'self' https://*.cloudinary.com https://*.googleapis.com https://*.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://*.gstatic.com; img-src 'self' data: blob: https: https://www.google-analytics.com https://www.googletagmanager.com https://*.cloudinary.com; connect-src 'self' https://* wss://*; frame-src 'self' https://www.googletagmanager.com; base-uri 'self'; form-action 'self';"
+              : "default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;"
           },
           {
             key: 'Strict-Transport-Security',
