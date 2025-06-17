@@ -19,7 +19,7 @@ function ProductGallery() {
     thumbnail:
       "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743115272/Frame_1_11_v59cqa.webp",
     videoUrl:
-      "/video.mp4",
+      "https://res.cloudinary.com/ddqh0mkx9/video/upload/v1750185556/website-v2/images/landings/llamadores-de-meseros/ver-mas/llamadores-de-meseros/llamador-de-meseros-e2-b/videos/zm7deogzrlnnfj6hznbv.mp4",
   };
 
   const images = [
