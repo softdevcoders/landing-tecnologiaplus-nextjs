@@ -3,9 +3,6 @@ User-agent: *
 Allow: /
 
 # Block access to sensitive paths
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
 Disallow: /.env
 Disallow: /.git
 Disallow: /node_modules/
