@@ -251,6 +251,7 @@ const nextConfig = {
       { source: '/como-ahorrar-dinero-y-cuidar-el-medio-ambiente-con-rollos-de-papel-termico', destination: '/blog/rollos-de-papel-termico/como-ahorrar-dinero-medio-ambiente', permanent: true },
       { source: '/que-es-el-papel-de-transferencia-termica-y-como-usarlo-en-tu-negocio', destination: '/blog/rollos-de-papel-termico/que-es-papel-transferencia-termica-como-usarlo', permanent: true },
       { source: '/turnero-digital', destination: '/turnero-turnoexpress', permanent: true },
+      { source: '/turnero', destination: '/turnero-turnoexpress', permanent: true },
       { source: '/llamado-de-enfermeria', destination: '/llamado-de-enfermeria-cuidamaster', permanent: true },
       { source: '/rollos-de-turno', destination: '/rollos-de-fichos-para-turnos', permanent: true },
       { source: '/dispensador-de-tiquetes', destination: '/dispensador-de-tickets', permanent: true },
