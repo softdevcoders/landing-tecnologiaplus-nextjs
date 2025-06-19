@@ -7,7 +7,7 @@ function RelatedProductsRollosPapelTermico() {
       productsKeys={[
         categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key,
         categories.TURNERO_TURNOEXPRESS.category_key,
-        categories.DISPENSADOR_DE_TICKETS.category_key,
+        categories.ROLLOS_DE_FICHOS_PARA_TURNOS.category_key,
       ]}
     />
   ) 
