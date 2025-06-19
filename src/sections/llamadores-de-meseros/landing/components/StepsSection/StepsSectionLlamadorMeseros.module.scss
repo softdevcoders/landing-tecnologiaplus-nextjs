@@ -49,6 +49,17 @@
 
     .card__desktop {
       display: block;
+
+      .card__desktop__card {
+        width: 100%;
+        height: 100%;
+
+        .card__desktop__card__image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      } 
     }
   }
 }
