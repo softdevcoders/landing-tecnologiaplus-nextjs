@@ -56,8 +56,7 @@ export default function RootLayout({ children }) {
         <meta name="google" content="notranslate" />
       </head>
       <body>
-        {/* {SHOULD_ROBOTS_INDEX && <GoogleTagManager gtmId="GTM-P8J6LTX" />} */}
-        <GoogleTagManager gtmId="GTM-P8J6LTX" />
+        {SHOULD_ROBOTS_INDEX && <GoogleTagManager gtmId="GTM-P8J6LTX" />}
         {children}
       </body>
     </html>
