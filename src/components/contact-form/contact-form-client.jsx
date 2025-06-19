@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import style from './contact-form.module.scss';
 import Check from '@/components/ui/icons/check';
 import { usePathname } from 'next/navigation';
-import { GOOGLE_TAG_EVENTS, sendGoogleTagEvent } from '@/config/google-tag-events';
+import { GOOGLE_TAG_EVENTS } from '@/config/google-tag-events';
 
 const ContactFormClient = ({ sendEmail }) => {
   const pathname = usePathname();
@@ -25,7 +25,6 @@ const ContactFormClient = ({ sendEmail }) => {
       await sendEmail(data);
       setIsSuccess(true);
       reset();
-      sendGoogleTagEvent(GOOGLE_TAG_EVENTS.BTN_FORM_CONTACT);
     } catch (error) {
       setSubmitError('Hubo un error al enviar el mensaje. Por favor intenta nuevamente.');
     }
@@ -140,6 +139,7 @@ const ContactFormClient = ({ sendEmail }) => {
         type="submit"
         className={style.submit_button}
         disabled={isSubmitting}
+        id={GOOGLE_TAG_EVENTS.BTN_FORM_CONTACT.id}
       >
         {isSubmitting ? 'Enviando...' : 'Enviar'}
       </button>
