@@ -271,9 +271,6 @@ const nextConfig = {
   // Optimizaciones generales
   optimizeFonts: true,
   swcMinify: true,
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
   // Configuración de caché
   onDemandEntries: {
     maxInactiveAge: 60 * 60 * 1000, // 1 hora
@@ -315,7 +312,67 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self' https://*.cloudinary.com https://*.googleapis.com https://*.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://*.doubleclick.net https://*.tawk.to https://embed.tawk.to; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com data:; font-src 'self' data: https://fonts.gstatic.com https://*.gstatic.com http://fonts.gstatic.com http://*.gstatic.com; img-src 'self' data: blob: https: https://www.google-analytics.com https://www.googletagmanager.com https://*.cloudinary.com; connect-src 'self' https://* wss://*; frame-src 'self' https://www.googletagmanager.com https://*.tawk.to https://tawk.to https://*.doubleclick.net https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com; base-uri 'self'; form-action 'self'; worker-src 'self' blob:;"
+            value: [
+              // Fuentes por defecto
+              "default-src 'self' https://*.cloudinary.com https://*.googleapis.com https://*.gstatic.com",
+              
+              // Scripts permitidos
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+              "https://www.googletagmanager.com",
+              "https://*.google-analytics.com",
+              "https://*.analytics.google.com",
+              "https://ssl.google-analytics.com",
+              "https://*.googleadservices.com",
+              "https://*.doubleclick.net",
+              "https://*.google.com",
+              "https://*.tawk.to",
+              "https://embed.tawk.to",
+              
+              // Estilos permitidos
+              "style-src 'self' 'unsafe-inline'",
+              "https://fonts.googleapis.com",
+              "https://*.googleapis.com",
+              "data:",
+              
+              // Fuentes permitidas
+              "font-src 'self' data:",
+              "https://fonts.gstatic.com",
+              "https://*.gstatic.com",
+              "http://fonts.gstatic.com",
+              "http://*.gstatic.com",
+              
+              // Imágenes permitidas
+              "img-src 'self' data: blob: https:",
+              "https://www.google-analytics.com",
+              "https://www.googletagmanager.com",
+              "https://*.cloudinary.com",
+              "https://*.google.com",
+              "https://*.googleadservices.com",
+              
+              // Conexiones permitidas
+              "connect-src 'self' https://* wss://*",
+              
+              // Frames permitidos
+              "frame-src 'self'",
+              "https://www.googletagmanager.com",
+              "https://*.tawk.to",
+              "https://tawk.to",
+              "https://*.doubleclick.net",
+              "https://*.google.com",
+              "https://*.googleadservices.com",
+              "https://www.youtube.com",
+              "https://youtube.com",
+              "https://www.youtube-nocookie.com",
+              
+              // Otras directivas de seguridad
+              "base-uri 'self'",
+              "form-action 'self'",
+              "worker-src 'self' blob:",
+              
+              // Directivas para objetos y medios
+              "object-src 'none'",
+              "media-src 'self' https://*.cloudinary.com"
+            ].join('; ')
           }
         ]
       }

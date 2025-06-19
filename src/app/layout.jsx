@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import { GoogleTagManager } from '@next/third-parties/google'
 
 import { Bebas_Neue, Montserrat } from 'next/font/google'
+import { SHOULD_ROBOTS_INDEX } from "@/data/metadata/config";
  
 const montserrat = Montserrat({
   weight: ["400", "700", "900"],
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
         <meta name="google" content="notranslate" />
       </head>
       <body>
+        {/* {SHOULD_ROBOTS_INDEX && <GoogleTagManager gtmId="GTM-P8J6LTX" />} */}
         <GoogleTagManager gtmId="GTM-P8J6LTX" />
         {children}
       </body>

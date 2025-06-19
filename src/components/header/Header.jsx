@@ -9,6 +9,7 @@ import DropdownMenu from "@/components/header/dropdown-menu/DropdownMenu";
 import DropdownMenuMobile from "@/components/header/dropdown-menu-mobile/DropdownMenuMobile";
 import styles from "./Header.module.scss";
 import Phone2 from "@/components/ui/icons/phone-2";
+import { sendGoogleTagEvent, GOOGLE_TAG_EVENTS } from "@/config/google-tag-events";
 
 function Header({ headerAlt = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,6 +17,10 @@ function Header({ headerAlt = false }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const pathname = usePathname();
+
+  const handleGTMEventClick = useCallback((gtmEvent) => {
+    sendGoogleTagEvent(gtmEvent);
+  }, [pathname]); 
 
   const isLinkActive = useCallback((href) => {
     if (!href) return false;
@@ -42,9 +47,7 @@ function Header({ headerAlt = false }) {
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    // window.scrollTo(0, 0);
-
+    
     handleScroll();
     
     return () => {
@@ -120,8 +123,16 @@ function Header({ headerAlt = false }) {
           </div>
         </div>
         <div className={styles.header__navlinks_right}>
-          <Link href={routes.contact.url} className={`${styles.header__navlinks_link} ${contactActive ? styles.active : ''}`}>{routes.contact.label}</Link>
-          <a href={routes.contact_media.phones[0].url} className={styles.header__navlinks_phone}>
+          <Link 
+            href={routes.contact.url} 
+            className={`${styles.header__navlinks_link} ${contactActive ? styles.active : ''}`}
+            onClick={() => handleGTMEventClick(GOOGLE_TAG_EVENTS.MENU_CONTACT)}
+          >{routes.contact.label}</Link>
+          <a 
+            href={routes.contact_media.phones[0].url} 
+            className={styles.header__navlinks_phone}
+            onClick={() => handleGTMEventClick(GOOGLE_TAG_EVENTS.PHONE_HEADER)}
+          >
             <Phone2 className={styles.phone__icon} size={19} />
             <span className={styles.phone__label}>{routes.contact_media.phones[0].label}</span>
           </a>

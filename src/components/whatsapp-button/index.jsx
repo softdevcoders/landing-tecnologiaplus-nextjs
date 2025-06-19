@@ -1,13 +1,18 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import style from "./whatsapp-button.module.scss";
 import { Whatsapp } from "@/components/ui/icons";
+import { sendGoogleTagEvent, GOOGLE_TAG_EVENTS } from "@/config/google-tag-events";
 
 const WhatsappButton = () => {
   const [whatsappLink, setWhatsappLink] = useState("https://wa.me/573164682034");
   const pathname = usePathname();
+
+  const handleGTMEventClick = useCallback((gtmEvent) => {
+    sendGoogleTagEvent(gtmEvent);
+  }, [pathname]);
 
   useEffect(() => {
     const pageTitle = document.title || 'Tecnología Plus';
@@ -25,6 +30,7 @@ const WhatsappButton = () => {
       rel="noreferrer"
       className={style.wpp__btn}
       aria-label="Contactarnos por WhatsApp"
+      onClick={() => handleGTMEventClick(GOOGLE_TAG_EVENTS.BTN_WHATSAPP)}
     >
       <Whatsapp size={32} />
     </a>
