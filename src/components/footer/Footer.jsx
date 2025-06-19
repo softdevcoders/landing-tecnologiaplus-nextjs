@@ -1,3 +1,6 @@
+"use client";
+
+import { useCallback } from "react";
 import styles from "./Footer.module.scss";
 import Instagram from "@/components/ui/icons/instagram";
 import TikTok from "@/components/ui/icons/tiktok";
@@ -5,8 +8,10 @@ import Facebook from "@/components/ui/icons/facebook";
 import YouTube from "@/components/ui/icons/youtube";
 import Email from "@/components/ui/icons/email";
 import Phone from "@/components/ui/icons/phone";
+import { GOOGLE_TAG_EVENTS } from "@/config/google-tag-events";
 
 const Footer = () => {
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__top}>
@@ -20,6 +25,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visitar nuestro perfil de Instagram"
+                id={GOOGLE_TAG_EVENTS.BTN_INSTAGRAM_FOOTER.id}
               >
                 <Instagram />
               </a>
@@ -30,6 +36,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visitar nuestro perfil de TikTok"
+                id={GOOGLE_TAG_EVENTS.BTN_TIKTOK_FOOTER.id}
               >
                 <TikTok />
               </a>
@@ -40,6 +47,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visitar nuestra página de Facebook"
+                id={GOOGLE_TAG_EVENTS.BTN_FACEBOOK_FOOTER.id}
               >
                 <Facebook />
               </a>
@@ -50,6 +58,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visitar nuestro canal de YouTube"
+                id={GOOGLE_TAG_EVENTS.BTN_YOUTUBE_FOOTER.id}
               >
                 <YouTube />
               </a>
@@ -63,19 +72,19 @@ const Footer = () => {
           <ul className={styles.footer__contact}>
     
             <li>
-              <a href="mailto:ventas@tecnologiaplus.com">
+              <a href="mailto:ventas@tecnologiaplus.com" id={GOOGLE_TAG_EVENTS.EMAIL_FOOTER.id}>
                 <Email />
                 <span>ventas@tecnologiaplus.com</span>
               </a>
             </li>
             <li>
-              <a href="tel:+573164682034">
+              <a href="tel:+573164682034" id={GOOGLE_TAG_EVENTS.PHONE_FOOTER_1.id}>
                 <Phone />
                 <span>(+57) 316 468 20 34</span>
               </a>
             </li>
             <li>
-              <a href="tel:+573227347971">
+              <a href="tel:+573227347971" id={GOOGLE_TAG_EVENTS.PHONE_FOOTER_2.id}>
                 <Phone />
                 <span>(+57) 322 734 79 71</span>
               </a>
