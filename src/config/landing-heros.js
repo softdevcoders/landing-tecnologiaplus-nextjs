@@ -47,7 +47,7 @@ export const landingHeros = {
       },{
         src: "1_lhteye.png",
         alt: "Localizadores para clientes",
-        width: 640,
+        width: 900,
         height: 484,
         className: styles.landing_hero__content__image_desktop,
         fetchPriority: "high"
