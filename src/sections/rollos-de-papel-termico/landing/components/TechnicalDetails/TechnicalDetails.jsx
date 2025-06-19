@@ -11,11 +11,10 @@ function TechnicalDetails() {
         <p className={style.subtitle__mobile}>Rollos térmicos</p>
       </div>
       <div className={style.technical__carousel__container}>
-        <Image
-          width={714}
-          height={565}
+        <img
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349924/w95mg3v5l3rz4s634bso_dqg6eq.webp"
           alt="rollos y etiquetas para impresoras termicas"
+          loading="lazy"
         />
       </div>
       <div className={style.TechnicalDetails__container}>
