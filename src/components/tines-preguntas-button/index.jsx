@@ -21,10 +21,12 @@ const TinesPreguntasButton = ({ styles }) => {
         href={whatsappLink}
         target="_blank"
         rel="noreferrer"
+        className={styles.tinesPreguntasButton}
+        style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}
       >
         <WhatsApp className={styles.icon__wpp} />
+        <h3>¿Tienes preguntas?</h3>
       </a>
-      <h3>¿Tienes preguntas?</h3>
     </>
   );
 };
