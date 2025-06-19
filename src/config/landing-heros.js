@@ -11,7 +11,7 @@ const commonSizesPrimaryImage = [
   { imageWidth: 600, mediaQuery: "(min-width: 0px)" },
   { imageWidth: 700, mediaQuery: "(min-width: 700px)" },
   { imageWidth: 900, mediaQuery: "(min-width: 1200px)" },
-  { imageWidth: 1200, mediaQuery: "(min-width: 1600px)" }
+  { imageWidth: 1400, mediaQuery: "(min-width: 1600px)" }
 ]
 
 export const landingHeros = {
@@ -40,15 +40,13 @@ export const landingHeros = {
       images: [{
         src: "1_lhteye.png",
         alt: "Localizadores para clientes",
-        width: 350,
-        height: 265,
+        sizes: commonSizesPrimaryImage,
         className: styles.landing_hero__content__image_mobile,
         fetchPriority: "high"
       },{
         src: "1_lhteye.png",
         alt: "Localizadores para clientes",
-        width: 900,
-        height: 484,
+        sizes: commonSizesPrimaryImage,
         className: styles.landing_hero__content__image_desktop,
         fetchPriority: "high"
       }],
@@ -78,7 +76,7 @@ export const landingHeros = {
         image: {
           src: "1_lhteye.png",
           alt: "Localizadores para clientes",
-          width: 900,
+          width: 1200,
           height: 701
         }
       }
