@@ -19,7 +19,7 @@ function LocalizadoresBenefitsSection() {
               <Image
                 width={100}
                 height={100}
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431751/icono_1_2x-8_zw5neg.webp"
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750350354/4_rwyfvi.png"
                 alt="icono de sonido"
                 className={style.benefits__icon}
               />
@@ -47,7 +47,7 @@ function LocalizadoresBenefitsSection() {
               <Image
                 width={100}
                 height={100}
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_100/v1738944981/icono_3_2x-8_3_emxtsn.webp"
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750350354/3_i6btxr.png"
                 alt="icono de auriculares"
                 className={style.benefits__icon}
               />
