@@ -38,16 +38,14 @@ export const landingHeros = {
       title: "Localizadores para restaurantes",
       description: "Tiempo de espera sin temor a perder el turno.",
       images: [{
-        // src: "v1745506512/bQaT52.tif_4x-8_su2sfk.webp",
-        src: "website-v2/images/landings/localizadores-para-restaurantes/landing/y7kewwat7flilc866oht",
+        src: "1_lhteye.png",
         alt: "Localizadores para clientes",
         width: 350,
         height: 265,
         className: styles.landing_hero__content__image_mobile,
         fetchPriority: "high"
       },{
-        // src: "v1745506512/bQaT52.tif_4x-8_su2sfk.webp",
-        src: "website-v2/images/landings/localizadores-para-restaurantes/landing/y7kewwat7flilc866oht",
+        src: "1_lhteye.png",
         alt: "Localizadores para clientes",
         width: 640,
         height: 484,
@@ -66,7 +64,7 @@ export const landingHeros = {
           description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
         },
         image: {
-          src: "website-v2/images/landings/localizadores-para-restaurantes/landing/y7kewwat7flilc866oht",
+          src: "1_lhteye.png",
           alt: "Localizadores para clientes",
           width: 500,
           height: 550
@@ -78,7 +76,7 @@ export const landingHeros = {
           description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
         },
         image: {
-          src: "website-v2/images/landings/localizadores-para-restaurantes/landing/y7kewwat7flilc866oht",
+          src: "1_lhteye.png",
           alt: "Localizadores para clientes",
           width: 900,
           height: 701
