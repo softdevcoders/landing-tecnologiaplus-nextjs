@@ -30,7 +30,8 @@ const WhatsappButton = () => {
       rel="noreferrer"
       className={style.wpp__btn}
       aria-label="Contactarnos por WhatsApp"
-      onClick={() => handleGTMEventClick(GOOGLE_TAG_EVENTS.BTN_WHATSAPP)}
+      // onClick={() => handleGTMEventClick(GOOGLE_TAG_EVENTS.BTN_WHATSAPP)}
+      id="btn-whatsapp"
     >
       <Whatsapp size={32} />
     </a>
