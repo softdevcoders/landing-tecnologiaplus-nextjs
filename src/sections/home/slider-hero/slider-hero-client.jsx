@@ -16,10 +16,15 @@ export default function SliderHero({ styles, items }) {
     inViewThreshold: 0.7,
     align: 'center',
     watchDrag: true,
+    speed: 10,
+    slidesToScroll: 1,
     breakpoints: {
       '(max-width: 768px)': { 
-        dragFree: true,
-        containScroll: 'keepSnaps'
+        dragFree: false,
+        containScroll: 'keepSnaps',
+        speed: 15,
+        skipSnaps: false,
+        watchDrag: true
       }
     }
   });
