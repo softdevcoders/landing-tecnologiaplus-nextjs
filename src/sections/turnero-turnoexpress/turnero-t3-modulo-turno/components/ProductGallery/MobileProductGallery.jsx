@@ -12,7 +12,7 @@ import BackButton from "@/components/back-button";
 
 function MobileProductGallery() {
   const images = [
-    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750435930/Pantalla_T3_con_medidas_3x-8_gjvcqm.png",
+    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750437279/Pantalla-T3-con-medidas_3x-8_c9m3d1.png",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741641334/Frame_1_68_bol78g.webp",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741641726/Frame_1_72_e6dexg.webp",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741641439/Frame_1_69_o8kcmz.webp",
