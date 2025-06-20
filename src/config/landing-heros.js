@@ -7,13 +7,6 @@ export const templateNames = {
   LOCALIZADORES_RESTAURANTES_PORTADA: "LOCALIZADORES_RESTAURANTES_PORTADA",
 }
 
-const commonSizesPrimaryImage = [
-  { imageWidth: 600, mediaQuery: "(min-width: 0px)" },
-  { imageWidth: 700, mediaQuery: "(min-width: 700px)" },
-  { imageWidth: 900, mediaQuery: "(min-width: 1200px)" },
-  { imageWidth: 1400, mediaQuery: "(min-width: 1600px)" }
-]
-
 export const landingHeros = {
   background: {
     images: {
@@ -40,15 +33,13 @@ export const landingHeros = {
       images: [{
         src: "1_lhteye.png",
         alt: "Localizadores para clientes",
-        sizes: commonSizesPrimaryImage,
         className: styles.landing_hero__content__image_mobile,
-        fetchPriority: "high"
+        width: 800,
       },{
         src: "1_lhteye.png",
         alt: "Localizadores para clientes",
-        sizes: commonSizesPrimaryImage,
         className: styles.landing_hero__content__image_desktop,
-        fetchPriority: "high"
+        width: 1500,
       }],
       button: {
         href: routes.landings.localizadoresParaRestaurantes.url,
@@ -76,7 +67,7 @@ export const landingHeros = {
         image: {
           src: "1_lhteye.png",
           alt: "Localizadores para clientes",
-          width: 1200,
+          width: 1500,
           height: 701
         }
       }
@@ -89,13 +80,13 @@ export const landingHeros = {
       images: [{
         src: "website-v2/images/landings/llamadores-de-meseros/landing/smtu0dxji0jj84ajorfg",
         alt: "Llamador de meseros",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_mobile
+        className: styles.landing_hero__content__image_mobile,
+        width: 800,
       },{
         src: "website-v2/images/landings/llamadores-de-meseros/landing/smtu0dxji0jj84ajorfg",
         alt: "Llamador de meseros",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_desktop
+        className: styles.landing_hero__content__image_desktop,
+        width: 1500,
       }],
       button: {
         href: routes.landings.llamadoresDeMeseros.url,
@@ -139,13 +130,13 @@ export const landingHeros = {
       images: [{
         src: "website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/pp65ihdvnzxx3arig8yj",
         alt: "Llamado de enfermería",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_mobile
+        className: styles.landing_hero__content__image_mobile,
+        width: 800,
       },{
         src: "website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
         alt: "Llamado de enfermería",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_desktop
+        className: styles.landing_hero__content__image_desktop,
+        width: 1500,
       }],
       imageTextColumn: {
         src: "v1744462125/Logo_CuidaMaster_4x-8_cn4z4h.webp",
@@ -204,13 +195,13 @@ export const landingHeros = {
       images: [{
         src: "website-v2/images/landings/sistema-de-turnos-turnomaster/landings/trdh4recmp6uwwa8ux71",
         alt: "Sistema de turnos de espera",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_mobile
+        className: styles.landing_hero__content__image_mobile,
+        width: 800,
       },{
         src: "website-v2/images/landings/sistema-de-turnos-turnomaster/landings/pibqy8gj9ekv1lb5twmw",
         alt: "Sistema de turnos de espera",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_desktop
+        className: styles.landing_hero__content__image_desktop,
+        width: 1500,
       }],
       imageTextColumn: {
         src: "f_auto,q_auto/v1744830279/3-8_jxkhuf.webp",
@@ -258,13 +249,13 @@ export const landingHeros = {
       images: [{
         src: "website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
         alt: "Turnero digital",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_mobile
+        className: styles.landing_hero__content__image_mobile,
+        width: 800,
       },{
         src: "website-v2/images/landings/turnero-turnoexpress/landings/uv4swpdtp8jpg35dclbh",
         alt: "Turnero digital",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_desktop
+        className: styles.landing_hero__content__image_desktop,
+        width: 1500,
       }],
       imageTextColumn: {
         src: "v1744463735/12-8_qjsewx.webp",
@@ -313,13 +304,13 @@ export const landingHeros = {
       images: [{
         src: "website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
         alt: "Dispensador de tickets",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_mobile
+        className: styles.landing_hero__content__image_mobile,
+        width: 800,
       },{
         src: "website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
         alt: "Dispensador de tickets",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_desktop
+        className: styles.landing_hero__content__image_desktop,
+        width: 1500,
       }],
       imageTextColumn: {
         src: "v1744463735/12-8_qjsewx.webp",
@@ -382,13 +373,13 @@ export const landingHeros = {
       images: [{
         src: "website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
         alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_mobile
+        className: styles.landing_hero__content__image_mobile,
+        width: 800,
       },{
         src: "website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
         alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_desktop
+        className: styles.landing_hero__content__image_desktop,
+        width: 1500,
       }],
       imageTextColumn: {
         src: "v1744463735/12-8_qjsewx.webp",
@@ -447,11 +438,17 @@ export const landingHeros = {
     informationHome: {    
       title: "Rollos térmicos",
       description: "Para tickets, facturas y más.",
-      images: {
+      images: [{
         src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
         alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-      },
+        className: styles.landing_hero__content__image_mobile,
+        width: 800,
+      },{
+        src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
+        alt: "Rollos de turnos",
+        className: styles.landing_hero__content__image_desktop,
+        width: 1500,
+      }],
       button: {
         href: routes.landings.rollosDePapelTermico.url,
         text: "Ver más",
@@ -500,13 +497,13 @@ export const landingHeros = {
       images: [{
         src: "website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/zmdy9nvzeoetrit2w95n",
         alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_mobile
+        className: styles.landing_hero__content__image_mobile,  
+        width: 800,
       },{
         src: "website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/epg4efgegtcqvxyfdsbe",
         alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_desktop
+        className: styles.landing_hero__content__image_desktop,
+        width: 1500,
       }],
       imageTextColumn: {
         src: "v1744467470/6-8_xncpdx.webp",
@@ -557,13 +554,13 @@ export const landingHeros = {
       images: [{
         src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
         alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_mobile
+        className: styles.landing_hero__content__image_mobile,
+        width: 800,
       },{
         src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/ubbkhbpquh0tquaz8xwl",
         alt: "Rollos de turnos",
-        sizes: commonSizesPrimaryImage,
-        className: styles.landing_hero__content__image_desktop
+        className: styles.landing_hero__content__image_desktop,
+        width: 1500,
       }],
       imageTextColumn: {
         src: "v1744467470/6-8_xncpdx.webp",
