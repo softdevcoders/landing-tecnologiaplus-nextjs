@@ -18,6 +18,7 @@
     "@hookform/resolvers": "^5.1.1",
     "@next/third-parties": "^15.3.3",
     "classnames": "^2.5.1",
+    "embla-carousel-react": "^8.6.0",
     "lightbox.js-react": "^1.5.8",
     "next": "15.3.1",
     "next-cloudinary": "^6.16.0",
