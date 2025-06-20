@@ -14,7 +14,7 @@ function BenefitsSection() {
           <Image
             width={70}
             height={70}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/rijkjjxwhpa9hbvnj8ga_i2qgeg.webp"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750350355/5_ozfta1.png"
             alt="Icono de Garantía"
           />
           <div>
@@ -27,7 +27,7 @@ function BenefitsSection() {
           <Image
             width={70}
             height={70}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349925/za4ik6yfenohf4oquc0j_fdtqew.webp"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/rijkjjxwhpa9hbvnj8ga_i2qgeg.webp"
             alt="icono de calendario"
           />
           <div>

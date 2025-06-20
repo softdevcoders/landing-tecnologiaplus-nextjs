@@ -84,6 +84,14 @@ const defaultProducts = [
     link: routes.landings.calificadorDeServicioAlClienteOpinamaster.url,
     category_key: categories.CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER.category_key,
   },
+  {
+    name: "Llamadores de meseros",
+    description: "El botón que eleva la calidad del servicio.",
+    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743107327/NUEVA_4x-8_1_wyooar.webp",
+    sold: "2.276 vendidos",
+    link: routes.landings.llamadoresDeMeseros.url,
+    category_key: categories.LLAMADORES_DE_MESEROS.category_key,
+  },
 ];
 
 function RelatedProducts({ productsKeys = [] }) {

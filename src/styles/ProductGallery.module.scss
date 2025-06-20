@@ -261,6 +261,16 @@
         h3 {
           font-size: 1.2rem;
           font-weight: 800;
+          border-bottom: 3px solid transparent;
+          transition: border-bottom 0.3s ease;
+          -webkit-transition: border-bottom 0.3s ease;
+          -moz-transition: border-bottom 0.3s ease;
+          -ms-transition: border-bottom 0.3s ease;
+          -o-transition: border-bottom 0.3s ease;
+
+          &:hover {
+            border-bottom: 3px solid #04bc06;
+          }
         }
 
         p {

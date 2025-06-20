@@ -14,7 +14,7 @@ function DispensadorTiquetesBenefitsSection() {
           <Image
             width={70}
             height={70}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738424672/icono_1_2x-8_gnq6al.webp"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750350354/2_wtupum.png"
             alt="icono de agilidad en turnos"
           />
           <div>
@@ -27,7 +27,7 @@ function DispensadorTiquetesBenefitsSection() {
           <Image
             width={70}
             height={70}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738424673/icono_2_2x-8_1_rpqhcz.webp"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750350353/1_fgaw9h.png"
             alt="icono de reloj y dinero"
           />
           <div>
