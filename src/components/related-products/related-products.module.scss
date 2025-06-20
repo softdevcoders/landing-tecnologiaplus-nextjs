@@ -154,43 +154,6 @@
       }
 
       /* Fin Swiper - Carousel */
-
-      /* Embla - Carousel */
-      .embla__viewport {
-        overflow: hidden;
-        width: 100%;
-      }
-
-      .embla__container {
-        display: flex;
-      }
-
-      /* Mantengo la misma clase del slide para reutilizar estilos existentes */
-
-      @media (max-width: 639px) {
-        .swiper__slide {
-          flex: 0 0 100%;
-        }
-      }
-
-      @media (min-width: 640px) and (max-width: 867px) {
-        .swiper__slide {
-          flex: 0 0 100%;
-        }
-      }
-
-      @media (min-width: 868px) and (max-width: 1249px) {
-        .swiper__slide {
-          flex: 0 0 50%;
-        }
-      }
-
-      @media (min-width: 1250px) {
-        .swiper__slide {
-          flex: 0 0 33.3333%;
-        }
-      }
-      /* Fin Embla - Carousel */
     }
   }
 
