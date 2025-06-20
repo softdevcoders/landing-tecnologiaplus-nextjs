@@ -32,7 +32,7 @@ function HowItWorks() {
         <div className={styles.item}>
           <img
             loading="lazy"
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741011138/14_4x-8_5_twqpqp.webp"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750431315/NUEVA_3x-100_frfoy1.jpg"
             alt="Cliente recibe el llamado por medio del localizador ya que vibra alumbra y suena"
           />
           <p>
