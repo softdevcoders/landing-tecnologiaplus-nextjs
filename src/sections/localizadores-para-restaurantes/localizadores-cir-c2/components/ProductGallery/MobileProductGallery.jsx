@@ -12,7 +12,7 @@ import BackButton from "@/components/back-button";
 
 // Main gallery images - don't modify these constants during rendering
 const GALLERY_IMAGES = [
-  "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741566172/Frame_1_25_wq4ajj.webp",
+  "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750430287/nuevo_cir_c2_3x-8_y8fruh.png",
   "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741566057/Frame_1_24_n6ekz0.webp",
   "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741011138/8_4x-8_4_okujsy.webp",
   "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741011138/11_4x-8_5_yhlqcs.webp",

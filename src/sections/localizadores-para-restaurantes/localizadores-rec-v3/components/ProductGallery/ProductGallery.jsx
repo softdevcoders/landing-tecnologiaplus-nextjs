@@ -15,7 +15,7 @@ import BackButton from "@/components/back-button";
 function ProductGallery() {
   const [isOpen, setIsOpen] = useState(false);
   const images = [
-    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741622306/Frame_1_32_fg46my.webp",
+    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750429714/reemplazo_de_rec_v3_3x-100_eozpj4.jpg",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016956/3_4x-8_4_jpow97.webp",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016956/1_4x-8_7_lw7jp3.webp",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016955/4_4x-8_5_xujts9.webp",

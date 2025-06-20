@@ -393,6 +393,11 @@
 
   .mainImage {
     object-fit: contain;
+    padding-inline: 1rem;
+
+    @media (min-width: 1024px) {
+      padding-inline: 0;
+    }
   }
 
   /* Cambiar el estilo de los bullets */
