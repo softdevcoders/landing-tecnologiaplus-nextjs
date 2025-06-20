@@ -156,7 +156,7 @@ function ProductGallery() {
             label: "Galería",
             images: [
               {
-                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741622306/Frame_1_32_fg46my.webp",
+                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750429714/reemplazo_de_rec_v3_3x-100_eozpj4.jpg",
                 alt: "Imagen 1",
               },
               {

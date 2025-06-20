@@ -156,7 +156,7 @@ function ProductGallery() {
             label: "Galería",
             images: [
               {
-                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741566172/Frame_1_25_wq4ajj.webp",
+                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750430287/nuevo_cir_c2_3x-8_y8fruh.png",
                 alt: "Imagen 1",
               },
               {
