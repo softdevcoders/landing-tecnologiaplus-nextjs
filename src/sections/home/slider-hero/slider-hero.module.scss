@@ -63,43 +63,33 @@
     .next {
       position: absolute;
       top: 50%;
-      background: transparent;
       color: white;
-      padding: 10px;
+      padding: 8px;
       cursor: pointer;
       border: none;
       font-size: 30px;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
       z-index: 10;
-      -webkit-transition: opacity 0.3s ease;
-      transition: opacity 0.3s ease;
       -webkit-appearance: none;
       appearance: none;
       outline: none;
-
-      @media (hover: hover) {
-        &:hover {
-          opacity: 0.7;
-        }
-      }
-
-      &:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-      }
-
-      @media (max-width: 768px) {
-        display: none;
-      }
     }
 
     .prev {
-      left: 10px;
+      left: 8px;
+
+      @media (min-width: 769px) {
+        left: 10px;
+      }
     }
 
     .next {
-      right: 10px;
+      right: 8px;
+
+      @media (min-width: 769px) {
+        right: 10px;
+      }
     }
 
     .bullets {
@@ -118,8 +108,8 @@
       padding: 10px;
 
       .bullet {
-        width: 0.8rem;
-        height: 0.8rem;
+        width: 1rem;
+        height: 1rem;
         padding: 0;
         margin: 0;
         border-radius: 50%;
@@ -130,32 +120,23 @@
         transition: all 0.3s ease;
         touch-action: manipulation;
 
-        @media (max-width: 768px) {
-          width: 1rem;
-          height: 1rem;
-        }
-
-        @media (hover: hover) {
-          &:hover {
-            background: rgba(255, 255, 255, 0.8);
-          }
+        &:active {
+          background: rgba(255, 255, 255, 0.8);
         }
 
         &[data-selected="true"] {
           background: rgba(255, 255, 255, 1);
         }
-      }
-    }
-  }
-}
 
-@media (max-width: 768px) {
-  .slider__container {
-    .slider {
-      .bullets {
-        .bullet {
-          width: 0.6rem;
-          height: 0.6rem;
+        @media (min-width: 769px) {
+          width: 1.1rem;
+          height: 1.1rem;
+
+          @media (hover: hover) {
+            &:hover {
+              background: rgba(255, 255, 255, 0.8);
+            }
+          }
         }
       }
     }
