@@ -244,7 +244,7 @@ export const landingHeros = {
   },
   turneroTurnoexpress: {
     informationHome: {    
-      title: "<span>Turnero</br>digital</span>",
+      title: "<span>Turnero digital</span>",
       description: "Orden y agilidad en cada turno.",
       images: [{
         src: "website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",

@@ -40,7 +40,7 @@ function MobileProductGallery() {
 
       <div className={styles.container__titles}>
         <h1>
-          PANTALLA T<span>1</span>-B
+          PANTALLA T1-B
         </h1>
         <p>
           Muestra 1 llamado en pantalla,
