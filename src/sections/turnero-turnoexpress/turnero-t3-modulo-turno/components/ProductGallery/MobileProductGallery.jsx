@@ -18,6 +18,7 @@ function MobileProductGallery() {
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741641439/Frame_1_69_o8kcmz.webp",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743774378/6_4x-8_2_ytxttp.webp",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741641512/Frame_1_70_b26kjg.webp",
+    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750437279/Pantalla-T3-con-medidas_3x-8_c9m3d1.png",
   ];
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);

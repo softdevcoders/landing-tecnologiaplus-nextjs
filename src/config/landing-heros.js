@@ -31,12 +31,12 @@ export const landingHeros = {
       title: "Localizadores para restaurantes",
       description: "Tiempo de espera sin temor a perder el turno.",
       images: [{
-        src: "1_lhteye.png",
+        src: "1_zjvtlb.png",
         alt: "Localizadores para clientes",
         className: styles.landing_hero__content__image_mobile,
         width: 800,
       },{
-        src: "1_lhteye.png",
+        src: "1_zjvtlb.png",
         alt: "Localizadores para clientes",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
@@ -53,7 +53,7 @@ export const landingHeros = {
           description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
         },
         image: {
-          src: "1_lhteye.png",
+          src: "1_zjvtlb.png",
           alt: "Localizadores para clientes",
           width: 500,
           height: 550
@@ -65,7 +65,7 @@ export const landingHeros = {
           description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
         },
         image: {
-          src: "1_lhteye.png",
+          src: "1_zjvtlb.png",
           alt: "Localizadores para clientes",
           width: 1500,
           height: 701
@@ -78,12 +78,12 @@ export const landingHeros = {
       title: "Llamador de meseros",
       description: "Un solo toque evita largas esperas.",
       images: [{
-        src: "website-v2/images/landings/llamadores-de-meseros/landing/smtu0dxji0jj84ajorfg",
+        src: "3_j5shgh.png",
         alt: "Llamador de meseros",
         className: styles.landing_hero__content__image_mobile,
         width: 800,
       },{
-        src: "website-v2/images/landings/llamadores-de-meseros/landing/smtu0dxji0jj84ajorfg",
+        src: "3_j5shgh.png",
         alt: "Llamador de meseros",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
@@ -101,7 +101,7 @@ export const landingHeros = {
           description: "Silencioso y de largo alcance",
         },
         image: {
-          src: "website-v2/images/landings/llamadores-de-meseros/landing/smtu0dxji0jj84ajorfg",
+          src: "3_j5shgh.png",
           alt: "Llamador de meseros",
           width: 500,
           height: 553
@@ -113,7 +113,7 @@ export const landingHeros = {
           description: "Silencioso y de largo alcance.",
         },
         image: {
-          src: "website-v2/images/landings/llamadores-de-meseros/landing/smtu0dxji0jj84ajorfg",
+          src: "3_j5shgh.png",
           alt: "Llamador de meseros",
           width: 900,
           height: 500
@@ -198,7 +198,7 @@ export const landingHeros = {
         className: styles.landing_hero__content__image_mobile,
         width: 800,
       },{
-        src: "website-v2/images/landings/sistema-de-turnos-turnomaster/landings/pibqy8gj9ekv1lb5twmw",
+        src: "13_adjkab.png",
         alt: "Sistema de turnos de espera",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
@@ -234,7 +234,7 @@ export const landingHeros = {
           description: "Lleva tu sala de espera al siguiente nivel",
         },
         image: {
-          src: "website-v2/images/landings/sistema-de-turnos-turnomaster/landings/trdh4recmp6uwwa8ux71",
+          src: "13_adjkab.png",
           alt: "Sistema de turnos de espera",
           width: 1200,
           height: 1009

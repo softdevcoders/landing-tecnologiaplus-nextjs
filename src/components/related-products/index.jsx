@@ -88,7 +88,7 @@ const defaultProducts = [
     name: "Llamadores de meseros",
     description: "El botón que eleva la calidad del servicio.",
     img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743107327/NUEVA_4x-8_1_wyooar.webp",
-    sold: "2.276 vendidos",
+    sold: "8.426 vendidos",
     link: routes.landings.llamadoresDeMeseros.url,
     category_key: categories.LLAMADORES_DE_MESEROS.category_key,
   },

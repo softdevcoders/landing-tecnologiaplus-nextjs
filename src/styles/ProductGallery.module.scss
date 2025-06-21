@@ -261,7 +261,7 @@
         h3 {
           font-size: 1.2rem;
           font-weight: 800;
-          border-bottom: 3px solid transparent;
+          border-bottom: 1.5px solid transparent;
           transition: border-bottom 0.3s ease;
           -webkit-transition: border-bottom 0.3s ease;
           -moz-transition: border-bottom 0.3s ease;
@@ -269,7 +269,7 @@
           -o-transition: border-bottom 0.3s ease;
 
           &:hover {
-            border-bottom: 3px solid #04bc06;
+            border-bottom: 1.5px solid #616161;
           }
         }
 
@@ -393,6 +393,11 @@
 
   .mainImage {
     object-fit: contain;
+    padding-inline: 1rem;
+
+    @media (min-width: 1024px) {
+      padding-inline: 0;
+    }
   }
 
   /* Cambiar el estilo de los bullets */
