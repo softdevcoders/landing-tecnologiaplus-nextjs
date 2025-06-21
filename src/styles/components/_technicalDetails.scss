@@ -1,7 +1,7 @@
 @use "@/styles/base/mixins" as *;
 
 .technical__details {
-  padding: 6rem 5%;
+  padding: 65px 5%;
   display: flex;
   gap: 4rem;
   .title__mobile,
@@ -123,6 +123,7 @@
       font-size: clamp(16px, 4vw, 25px);
       text-align: center;
       display: block;
+      margin: 0;
     }
 
     .technical__carousel__container {
