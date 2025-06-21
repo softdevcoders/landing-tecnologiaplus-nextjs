@@ -123,7 +123,12 @@ const Footer = () => {
               />{" "}
               Perú
             </li>
-            <li>(+51) 976 270 171</li>
+            <li>
+              <a href="tel:+51976270171">
+                <Phone />
+                <span>(+51) 976 270 171</span>
+              </a>
+            </li>
             <li>Envíos a toda Latinoamérica</li>
           </ul>
         </div>
