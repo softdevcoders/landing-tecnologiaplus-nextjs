@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const axios = require('axios');
-const axiosRetry = require('axios-retry');
+const axiosRetry = require('axios-retry').default;
 
 // Configuración de reintentos: hasta 4 intentos con back-off exponencial.
 axiosRetry(axios, {
