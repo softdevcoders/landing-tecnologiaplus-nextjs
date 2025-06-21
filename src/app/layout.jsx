@@ -24,6 +24,7 @@ const bebas = Bebas_Neue({
 })
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="es" className={`${montserrat.className} ${bebas.className} ${montserrat.variable} ${bebas.variable}`}>
       <head>
