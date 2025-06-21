@@ -2,15 +2,17 @@ import Header from "@/components/header/Header"
 import DisableRightClickOnImages from "@/components/disable-menu-contextual"
 import WhatsappButton from "@/components/whatsapp-button"
 import Footer from "@/components/footer/Footer"
+import ContactForm from "@/components/contact-form/contact-form"
 
-const LayoutWrapperHeaderDark = ({ children }) => (
+const LayoutWrapperHeaderLightWithContactForm = ({ children }) => (
   <>
-    <Header headerAlt />
+    <Header />
     <DisableRightClickOnImages />
     {children}
+    <ContactForm />
     <WhatsappButton />
     <Footer />
   </>
 )
 
-export default LayoutWrapperHeaderDark
+export default LayoutWrapperHeaderLightWithContactForm
