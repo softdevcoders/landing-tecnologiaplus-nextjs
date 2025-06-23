@@ -1,157 +1,236 @@
-# Tecnología Plus - Next.js Landing Page
+# Tecnología Plus - Landing Page (Next.js 15)
 
-![Tecnología Plus Logo](public/android-chrome-192x192.png)
+![Logo Tecnología Plus](public/android-chrome-192x192.png)
 
-## 📋 Overview
+## Descripción
 
-This is the official landing page for Tecnología Plus, a Colombian company specializing in technology solutions for businesses, including turnos (queue systems), llamador de meseros (waiter call systems), and localizadores (customer locator systems). Built with Next.js 14, this website uses modern front-end technologies to provide a fast, responsive, and SEO-friendly experience.
+Este repositorio contiene el código fuente de la página corporativa de **Tecnología Plus**, empresa colombiana especializada en soluciones tecnológicas como sistemas de turnos, llamadores de meseros y localizadores de clientes. El sitio está desarrollado con **Next.js 15** y **React 19**, implementa componentes Server/Client y está optimizado para SEO y rendimiento.
 
-## ✨ Features
+## Características principales
 
-- **Modern UI/UX**: Clean design with responsive layouts for all device sizes
-- **Performance Optimized**: Fast loading times with optimized assets and code splitting
-- **Contact System**: React Hook Form with Zod validation and EmailJS integration
-- **SEO Friendly**: Comprehensive metadata, Schema.org data, and semantic HTML
-- **Internationalization Ready**: Support for multiple languages (Spanish primary)
-- **Product Showcases**: Detailed information about various product offerings
-- **WhatsApp Integration**: Direct messaging with pre-filled context from any page
+- **Next.js 15 (App Router)** con Server Components y Routing basado en archivos.
+- **React 19** con el nuevo runtime concurrent.
+- **SCSS Modules** para un aislamiento total de estilos.
+- **Formularios de contacto** con React-Hook-Form y validaciones personalizadas; envío de correos mediante **Nodemailer** (sin backend adicional).
+- **Optimización de imágenes** vía **next/Image** y el loader integrado de Next.js.
+- **Carouseles y sliders** con **Swiper** y **Embla Carousel**.
+- **Sitemap** autogenerado a partir de la configuración de rutas (`sitemap.js`).
+- **Integración de Google Tag Manager/Analytics** usando `@next/third-parties`.
+- **Botón flotante de WhatsApp** con mensaje contextual y rastreo de eventos.
+- **Docker / docker-compose** para entornos de desarrollo y producción.
 
-## 🛠️ Technologies Used
+## Tecnologías y dependencias clave
 
-- **Next.js 14**: React framework with App Router
-- **React**: UI library
-- **SASS/SCSS**: Styling with modules for component scoping
-- **React Hook Form**: Form validation and handling
-- **Zod**: Schema validation
-- **EmailJS**: Email service without backend
-- **Cloudinary**: Image hosting and optimization
-- **Responsive Design**: Mobile-first approach
-- **Swiper**: Modern carousel/slider
-- **React Icons**: Icon library
+| Paquete | Versión | Propósito |
+|---------|---------|-----------|
+| next | 15.x | Framework principal |
+| react | 19.x | Biblioteca UI |
+| sass | 1.89.x | Pre-procesador de estilos |
+| nodemailer | 7.x | Envío de correos |
+| swiper | 11.x | Carruseles |
+| embla-carousel-react | 8.x | Slider |
+| next-cloudinary | 6.x | Imágenes optimizadas |
+| react-hook-form | 7.x | Manejo de formularios |
+| @hookform/resolvers | 5.x | Validación |
+| zod | 3.x | Esquemas (opcional) |
 
-## 📦 Installation & Setup
+## Requisitos previos
 
-### Prerequisites
+- Node.js 18.17 o superior
+- pnpm 8 + (o npm/yarn)
 
-- Node.js 18.17 or later
-- pnpm (preferred) or npm/yarn
+## Instalación
 
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/your-repo/landing-tecnologiaplus-nextjs.git
+# Clona el repositorio
+git clone https://github.com/tecnologiaplus/landing-tecnologiaplus-nextjs.git
 cd landing-tecnologiaplus-nextjs
-```
 
-2. Install dependencies:
-```bash
+# Instala dependencias
 pnpm install
 ```
 
-3. Create environment files:
+## Variables de entorno
 
-Create `.env.local` for development:
-```
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_key
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-```
+Crea un archivo `.env.local` en la raíz con las siguientes claves:
 
-4. Start the development server:
-```bash
-pnpm dev
-```
+```dotenv
+# SMTP (Gmail)
+GMAIL_USER=tu_correo@gmail.com
+GMAIL_APP_PASSWORD=tu_clave_app
+GMAIL_RECIPIENTS=ventas@tecnologiaplus.com
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## 📂 Project Structure
-
-```
-landing-tecnologiaplus-nextjs/
-├── public/               # Static files (images, favicon, etc)
-├── src/                  # Source files
-│   ├── app/              # Next.js App Router
-│   │   ├── components/   # Shared components
-│   │   ├── context/      # React contexts
-│   │   ├── styles/       # Global styles and mixins
-│   │   ├── [product]/    # Product-specific pages
-│   │   ├── ver-mas/      # Detailed pages
-│   │   ├── layout.js     # Root layout
-│   │   └── page.js       # Home page
-│   └── components/       # Global components
-├── .env.local            # Local environment variables (gitignored)
-├── EMAIL_CONFIG.md       # Documentation for email system
-├── next.config.js        # Next.js configuration
-└── package.json          # Project dependencies and scripts
+# Dominio público usado para generar el sitemap
+NEXT_PUBLIC_BASE_URL=https://tecnologiaplus.com
 ```
 
-## 🧩 Key Components
+### Gestión de nuevas variables de entorno
 
-### ContactForm
+Cuando necesites **añadir una variable** para la infraestructura de despliegue automatizado, sigue estos pasos según el tipo de variable.
 
-The form component incorporates:
+1. **Variable pública (`NEXT_PUBLIC_*`) – solo en build**
 
-- Floating labels for better UX
-- Real-time validation with useful error messages
-- Colombian phone number validation
-- Anti-spam measures with localStorage rate limiting
-- EmailJS integration for serverless email functionality
-- Responsive design for all device sizes
+   - **Dockerfile**  
+     ```Dockerfile
+     ARG NEXT_PUBLIC_MI_API_KEY
+     RUN echo "NEXT_PUBLIC_MI_API_KEY=$NEXT_PUBLIC_MI_API_KEY" >> .env.production
+     ```
+   - **GitHub Actions** (`frontend_ci_cd_pipeline.yml`)  
+     ```yaml
+     env:
+       NEXT_PUBLIC_MI_API_KEY: ${{ vars.NEXT_PUBLIC_MI_API_KEY }}
+     - name: Build Docker Image
+       run: |
+         docker build ... \
+           --build-arg NEXT_PUBLIC_MI_API_KEY=${{ env.NEXT_PUBLIC_MI_API_KEY }} \
+           ...
+     ```
+   - No es necesario pasar la variable con `-e` en el paso de `docker run`, pues queda incrustada en la imagen.
 
-### WhatsApp Button
+2. **Variable privada de runtime** (solo servidor)
 
-- Fixed position button visible throughout the site
-- Contextual message pre-filled with current page information
-- Direct link to company WhatsApp for instant communication
+   - **Dockerfile**: no requiere ningún cambio.
+   - **GitHub Actions**  
+     Define la variable en **Secrets** y añádela al paso de despliegue:
+     ```yaml
+     -e VAR_PRIVADA=${{ secrets.VAR_PRIVADA }} \
+     ```
 
-### InfiniteSlider
+3. **Variable usada en build y runtime (no pública)**
 
-- Smooth animation for showcasing client logos
-- Pause on hover functionality
-- Responsive design adjusting speed based on screen size
+   - **Dockerfile** (igual que pública, pero sin prefijo):
+     ```Dockerfile
+     ARG API_URL
+     RUN echo "API_URL=$API_URL" >> .env.production
+     ```
+   - **GitHub Actions**  
+     ```yaml
+     env:
+       API_URL: ${{ vars.API_URL }}
+     - name: Build Docker Image
+       run: |
+         docker build ... --build-arg API_URL=${{ env.API_URL }} ...
+     - name: Run Docker Container
+       run: |
+         docker run ... -e API_URL=${{ env.API_URL }} ...
+     ```
 
-## 🚀 Deployment
+> Todas las variables **sensibles** deben almacenarse en **GitHub Secrets**. Las que no lo sean (puertos, flags, etc.) pueden ir en **Environment Variables** dentro de cada entorno (`production`, `development`).
 
-The website is designed to be deployed on Vercel:
+## Scripts disponibles
 
-```bash
-pnpm build
-vercel --prod
+| Script | Descripción |
+|--------|-------------|
+| `pnpm dev` | Inicia el servidor de desarrollo en http://localhost:3000 |
+| `pnpm build` | Compila la aplicación para producción (TurboPack) |
+| `pnpm start` | Ejecuta la versión compilada |
+| `pnpm lint` | Corre ESLint |
+| `pnpm analyze` | Genera un reporte de tamaño del bundle |
+| `pnpm generate-sitemap` | Genera `public/sitemap.xml` a partir de `src/config/routes.js` |
+
+## Estructura del proyecto
+
+```text
+src/
+│
+├── app/              # Rutas y layouts (App Router)
+│   ├── (home)/       # Página principal
+│   ├── (landings)/   # Landing pages por producto
+│   ├── blog/         # Blog corporativo
+│   └── contacto/     # Página de contacto
+│
+├── components/       # Componentes reutilizables (Header, Footer…)
+├── sections/         # Secciones independientes del sitio
+├── config/           # Configuraciones globales (rutas, eventos, etc.)
+├── hooks/            # Custom hooks
+├── lib/              # Utilidades compartidas
+└── styles/           # Estilos globales y mixins SCSS
 ```
 
-Don't forget to set up environment variables in your Vercel project settings.
+## Despliegue
 
-## 📱 Mobile Responsiveness
+El proyecto está listo para desplegarse automatico usando **Github**, **Github Actions**, **Docker**, **Docker Hub**, **Actions Runner** en un **VPS en Hostinger**/
+```
 
-The site is fully responsive and tested on:
-- Desktop (1920px+)
-- Laptop (1366px)
-- Tablet (768px)
-- Mobile (375px+)
+### VPS (CI/CD automatizado con Docker + GitHub Actions)
 
-## 🔍 SEO Considerations
+A continuación se muestra un resumen del proceso **real** de despliegue utilizado en producción.
 
-- Semantic HTML structure
-- Optimized meta tags
-- Schema.org structured data
-- Fast loading (95+ Lighthouse score)
-- Accessible design practices
+1. **Build & push de la imagen Docker**
+   - Un _workflow_ de GitHub Actions (`frontend_ci_cd_pipeline.yml`) se ejecuta en cada push a las ramas `main` o `development`.
+   - La acción compila la aplicación con el `Dockerfile`, etiqueta la imagen como `usuario_docker/image:VERSION` y la publica en **Docker Hub**.
 
-## 🤝 Contributing
+2. **Runner auto-alojado en el VPS**
+   - En el VPS se creó el usuario `actions-runner` y se instaló un _self-hosted runner_.
+   - Cuando la imagen está disponible, el runner ejecuta los pasos de despliegue: detiene el contenedor anterior, ejecuta `docker pull` y lanza la nueva versión con las variables de entorno necesarias (SMTP, dominio, Google Analytics, etc.).
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add some amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a pull request
+3. **Exposición del servicio con Nginx**
+   - Nginx actúa como _reverse-proxy_ y redirecciona el tráfico HTTPS:
+     - `tecnologiaplus.com` → `localhost:5500` (producción).
+     - `development.tecnologiaplus.com` → `localhost:5600` (staging).
+   - Los archivos de los _virtual hosts_ se encuentran en `/etc/nginx/sites-available/*` y se habilitan mediante enlaces simbólicos a `sites-enabled`.
 
-## 📄 License
+4. **Infraestructura recomendada del servidor (Hostinger VPS Ubuntu 22.04)**
 
-This project is proprietary and belongs to Tecnología Plus. Unauthorized use, modification, or distribution is prohibited.
+   ```bash
+   # Actualizar sistema
+   sudo apt update && sudo apt dist-upgrade -y
+
+   # Instalar dependencias básicas
+   sudo apt install -y nginx git ufw curl apt-transport-https ca-certificates software-properties-common
+
+   # Habilitar firewall
+   sudo ufw allow "Nginx Full" && sudo ufw enable
+
+   # Instalar Docker + docker-compose plugin
+   curl -fsSL https://get.docker.com | bash
+   sudo usermod -aG docker $USER  # opcional
+
+   # (Opcional) Portainer
+   docker volume create portainer_data
+   docker run -d -p 9000:9000 --name portainer --restart always \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     -v portainer_data:/data portainer/portainer-ce
+   ```
+
+5. **Configuración rápida de Nginx para producción**
+
+   ```nginx
+   # /etc/nginx/sites-available/tecnologia-plus-frontend-prod
+   server {
+     listen 80;
+     server_name tecnologiaplus.com www.tecnologiaplus.com;
+
+     location / {
+       proxy_pass http://localhost:5500;
+       proxy_http_version 1.1;
+       proxy_set_header Upgrade $http_upgrade;
+       proxy_set_header Connection 'upgrade';
+       proxy_set_header Host $host;
+       proxy_cache_bypass $http_upgrade;
+     }
+   }
+   # Habilitar y recargar
+   sudo ln -s /etc/nginx/sites-available/tecnologia-plus-frontend-prod \
+            /etc/nginx/sites-enabled/
+   sudo nginx -t && sudo systemctl reload nginx
+   ```
+
+6. **Gestión de variables de entorno y versiones**
+
+   - Las variables sensibles (SMTP, claves API, credenciales de Docker Hub) se almacenan en **GitHub Secrets**.
+   - Valores de infraestructura (puertos, nombres de contenedor, versión de la imagen) se definen como _Environment Variables_ en cada **Environment** de GitHub (`production`, `development`).
+   - El job `retrieve-environment-variable` determina el _environment_ adecuado según la rama y expone ese valor al resto del pipeline.
+
+7. **Limpieza automática y monitoreo**
+
+   - Tras desplegar la nueva imagen, el pipeline ejecuta `docker image prune -f` para liberar espacio en disco.
+   - Un workflow programado (`server_health_check.yml`) verifica la salud del sitio y envía alertas por email en caso de error.
+
+## Licencia
+
+El código fuente es **propiedad de Tecnología Plus**. Queda prohibida la reproducción total o parcial sin autorización expresa.
 
 ---
 
-Built with ❤️ for Tecnología Plus.
-
-For more information, visit [tecnologiaplus.com](https://tecnologiaplus.com)
+Hecho con ❤️ por el equipo de Tecnología Plus.
