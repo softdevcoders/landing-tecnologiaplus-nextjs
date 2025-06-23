@@ -99,7 +99,7 @@ function HomeProductsSection() {
             <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
             <p className={style.productsSection__cardDescription}>{product.description}</p>
             <Image
-              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_463/${product.imageSrc}`}
+              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${product.imageSrc}`}
               alt={product.altText}
               width={463}
               height={350}
