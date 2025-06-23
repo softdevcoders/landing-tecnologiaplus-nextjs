@@ -4,9 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Link from "next/link";
 import Image from "next/image";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
 import style from "./related-products.module.scss";
 import { routes } from "@/config/routes";
 import { categories } from "@/config/categories";
@@ -23,7 +20,7 @@ const defaultProducts = [
   {
     name: "Rollos térmicos",
     description: "Perfectos para tickets, facturas y más.",
-    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349920/image-1_1_ljyxis_qdsmdq.webp",
+    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349920/image-1_1_ljyxis_qdsmdq.webp",
     sold: "14.485 vendidos",
     link: routes.landings.rollosDePapelTermico.url,
     category_key: categories.ROLLOS_DE_PAPEL_TERMICO.category_key,
@@ -43,11 +40,12 @@ const defaultProducts = [
     sold: "194 vendidos",
     link: routes.landings.sistemasDeTurnosTurnomaster.url,
     category_key: categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key,
+    customClass: style.turnomaster__img__custom,
   },
   {
     name: "Dispensador de tiquetes",
     description: "Complemento práctico para tomar el turno.",
-    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349966/dispensador_de_tiquetes_2x-8_qusuqr_fuxs8k.webp",
+    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349966/dispensador_de_tiquetes_2x-8_qusuqr_fuxs8k.webp",
     sold: "2.686 vendidos",
     link: routes.landings.dispensadorDeTickets.url,
     category_key: categories.DISPENSADOR_DE_TICKETS.category_key,
@@ -71,7 +69,7 @@ const defaultProducts = [
   {
     name: "OpinaMaster",
     description: "Transforma opiniones en acciones estratégicas.",
-    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738685536/Opinamaster_2x-8_sg1wyy.webp",
+    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738685536/Opinamaster_2x-8_sg1wyy.webp",
     sold: "18 vendidos",
     link: routes.landings.encuestaVirtual.url,
     category_key: categories.ENCUESTA_VIRTUAL_OPINAMASTER.category_key,
@@ -79,7 +77,7 @@ const defaultProducts = [
   {
     name: "Calificador de servicios",
     description: "Toma decisiones con la opinión de tus clientes",
-    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738607994/calificador_de_servicios_2x-8_pjnvol.webp",
+    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738607994/calificador_de_servicios_2x-8_pjnvol.webp",
     sold: "490 vendidos",
     link: routes.landings.calificadorDeServicioAlClienteOpinamaster.url,
     category_key: categories.CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER.category_key,
@@ -87,10 +85,11 @@ const defaultProducts = [
   {
     name: "Llamadores de meseros",
     description: "El botón que eleva la calidad del servicio.",
-    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743107327/NUEVA_4x-8_1_wyooar.webp",
+    img: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1743107327/NUEVA_4x-8_1_wyooar.webp",
     sold: "8.426 vendidos",
     link: routes.landings.llamadoresDeMeseros.url,
     category_key: categories.LLAMADORES_DE_MESEROS.category_key,
+    customClass: style.llamadores__img__custom,
   },
 ];
 
@@ -124,12 +123,13 @@ function RelatedProducts({ productsKeys = [] }) {
                     <h3 className={style.swiper__slide__card__info__title}>{product.name}</h3>
                     <p className={style.swiper__slide__card__info__description}>{product.description}</p>
                     <div className={style.swiper__slide__card__info__img__container}>
-                      <Image
+                      <img
                         width={320}
                         height={230}
                         src={product.img}
                         alt={`imagen de ${product.name}`}
-                        className={style.swiper__slide__card__info__img}
+                        className={`${style.swiper__slide__card__info__img} ${product.customClass ? product.customClass : ""}`}
+                        loading="lazy"
                       />
                     </div>
                     <p className={style.swiper__slide__card__info__selling__counter}>{product.sold}</p>
