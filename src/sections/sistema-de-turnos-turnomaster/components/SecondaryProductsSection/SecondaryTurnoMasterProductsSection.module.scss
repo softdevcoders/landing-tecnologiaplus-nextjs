@@ -181,6 +181,16 @@
           padding: 0;
         }
 
+        .products__card__title {
+          font-size: 2rem;
+        }
+
+        .products__card__description {
+          padding-bottom: 4rem;
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+
         .products__card__image_container {
           max-width: 40rem;
         }
