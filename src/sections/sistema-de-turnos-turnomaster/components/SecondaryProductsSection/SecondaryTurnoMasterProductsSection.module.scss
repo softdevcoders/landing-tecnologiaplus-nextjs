@@ -181,8 +181,24 @@
           padding: 0;
         }
 
+        .products__card__title {
+          font-size: 2rem;
+        }
+
+        .products__card__description {
+          padding-bottom: 4rem;
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+
         .products__card__image_container {
           max-width: 40rem;
+        }
+
+        &:first-child {
+          .products__card__image_container {
+            max-width: 50rem;
+          }
         }
 
         &:last-child {
@@ -198,22 +214,36 @@
     
     .products__container__bottom {
       flex-direction: row;
-      gap: 2rem;
+      width: 90%;
 
       .products__card {
         width: 50%;
 
         .products__card__title {
           font-size: 2rem;
-          height: 8rem;
         }
 
         .products__card__description {
           font-size: 1.2rem;
         }
 
+
         .products__card__image_container {
-          max-width: 40rem;
+          max-width: 45rem;
+        }
+
+        &:first-child {
+          .products__card__image_container {
+            img {
+              margin-top: 3rem;
+            }
+          }
+        }
+
+        &:last-child {
+          .products__card__image_container {
+            max-width: 32rem;
+          }
         }
       }
     }

@@ -76,6 +76,18 @@
                 height: 100%;
                 object-fit: contain;
               }
+
+              .turnomaster__img__custom {
+                -webkit-transform: translate(-22px, 70px) scale(1.3);
+                -ms-transform: translate(-22px, 70px) scale(1.3);
+                transform: translate(-22px, 70px) scale(1.3);
+              }
+
+              .llamadores__img__custom {
+                -webkit-transform: translate(-7px, -8px) scale(1.15);
+                -ms-transform: translate(-7px, -8px) scale(1.15);
+                transform: translate(-7px, -8px) scale(1.15);
+              }
             }
   
             .swiper__slide__card__info__selling__counter {
@@ -206,6 +218,22 @@
         .swiper__slide {
           .swiper__slide__card {
             width: 360px;
+
+            .swiper__slide__card__info {
+              .swiper__slide__card__info__img__container {
+                .turnomaster__img__custom {
+                  -webkit-transform: translate(-24px, 44px) scale(1.3);
+                  -ms-transform: translate(-24px, 44px) scale(1.3);
+                  transform: translate(-24px, 44px) scale(1.3);
+                }
+  
+                .llamadores__img__custom {
+                  -webkit-transform: translate(-24px, -5px) scale(1.3);
+                  -ms-transform: translate(-24px, -5px) scale(1.3);
+                  transform: translate(-24px, -5px) scale(1.3);
+                }
+              }
+            }
           }
         }
       }

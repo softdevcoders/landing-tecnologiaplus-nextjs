@@ -9,8 +9,8 @@ import { GoogleTagManager } from '@next/third-parties/google'
 import { Bebas_Neue, Montserrat } from 'next/font/google'
 import { SHOULD_ROBOTS_INDEX } from "@/data/metadata/config";
  
-const montserrat = Montserrat({
-  weight: ["400", "700", "900"],
+const montserrat = Montserrat({ 
+  weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-montserrat',
