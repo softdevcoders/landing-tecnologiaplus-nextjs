@@ -84,31 +84,6 @@
     }
   }
 
-  &__contact {
-    text-align: left;
-  }
-
-  &__locations {
-    text-align: left;
-
-    .footer__location_link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.25rem 0;
-      transition: color 0.3s ease;
-
-      svg {
-        width: 20px;
-        height: 20px;
-      }
-
-      &:hover {
-        color: #64ffda;
-      }
-    }
-  }
-
   img {
     width: 20px;
     height: auto;

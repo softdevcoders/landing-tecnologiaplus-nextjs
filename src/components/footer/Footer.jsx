@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback } from "react";
 import styles from "./Footer.module.scss";
 import Instagram from "@/components/ui/icons/instagram";
 import TikTok from "@/components/ui/icons/tiktok";
@@ -7,7 +8,6 @@ import Facebook from "@/components/ui/icons/facebook";
 import YouTube from "@/components/ui/icons/youtube";
 import Email from "@/components/ui/icons/email";
 import Phone from "@/components/ui/icons/phone";
-import Location from "@/components/ui/icons/location";
 import { GOOGLE_TAG_EVENTS } from "@/config/google-tag-events";
 
 const Footer = () => {
@@ -95,7 +95,7 @@ const Footer = () => {
         {/* Ubicación */}
         <div>
           <h3>Estamos en</h3>
-          <ul className={styles.footer__locations}>
+          <ul>
             <li>
               <img
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349920/colombia_1_mcsiuu_vyabd4.png"
@@ -106,28 +106,8 @@ const Footer = () => {
               />{" "}
               Colombia
             </li>
-            <li>
-              <a 
-                href="https://waze.com/ul?ll=4.671424,-74.048693&navigate=yes"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.footer__location_link}
-              >
-                <Location />
-                <span>Bogotá, Cra 19 # 82-85 oficina 401.</span>
-              </a>
-            </li>
-            <li>
-              <a 
-                href="https://waze.com/ul?ll=6.2054,-75.5676&navigate=yes"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.footer__location_link}
-              >
-                <Location />
-                <span>Medellín • El Poblado edificio Oceanía.</span>
-              </a>
-            </li>
+            <li>Bogotá, Cra 19 # 82-85 oficina 401.</li>
+            <li>Medellín • El Poblado edificio Oceanía.</li>
             <li>Cobertura nacional</li>
           </ul>
         </div>
