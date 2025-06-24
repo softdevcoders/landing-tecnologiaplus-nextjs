@@ -12,6 +12,8 @@ import {
 import TinesPreguntasButton from "@/components/tines-preguntas-button";
 import Popup from "@/components/ui/pop-up";
 import BackButton from "@/components/back-button";
+import Link from "next/link";
+import { routes } from "@/config/routes";
 
 function ProductGallery() {
   const [isOpen, setIsOpen] = useState(false);
@@ -140,7 +142,7 @@ function ProductGallery() {
 
           <p>
             Los Localizadores para restaurantes Cir C2 mantienen las ventajas
-            del modelo Rec V3 y además funciona con un control separado de los
+            del modelo <Link href={routes.landings.localizadoresParaRestaurantes.children.rec_v3.url} className={styles.related__link_to_other_product}>Rec V3</Link> y además funciona con un control separado de los
             localizadores. Ideal para locales de comida que entregan el
             localizador en un punto distinto al de llamado.
           </p>
