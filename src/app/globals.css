@@ -44,3 +44,7 @@ a {
 img {
   user-select: none;
 }
+
+span.ariel_black_font {
+  font-family: 'Ariel Black', 'Arial', sans-serif;
+}
