@@ -10,6 +10,7 @@ import Image from "next/image";
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
   const message = `Hola, te comparto este artículo: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}`;
+  const whatsappLink = `https://wa.me/573164682034?text=Hola, vengo del artículo "${post.title.rendered}" y quiero más información.`;
 
   return (
     <main className={style.blogPostView__container}>
@@ -34,7 +35,7 @@ const PostView = ({ post }) => {
           />
           <div className={style.blogPostView__contentHtlmFooter}>
             <p  className={style.blogPostView__contentHtmlFooterText}><Link href={routes.contact.url} className={style.blogPostView__contentHtmlFooterLink}>Contáctanos hoy mismo</Link> y descubre cómo podemos llevar tu servicio al siguiente nivel!</p>
-            <a href="https://wa.me/573164682034" target="_blank" className={style.blogPostView__contentHtmlFooterButton}>Cotizar</a>
+            <a href={whatsappLink} target="_blank" className={style.blogPostView__contentHtmlFooterButton}>Cotizar</a>
           </div>
         </div>
 
