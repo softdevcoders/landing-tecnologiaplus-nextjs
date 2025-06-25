@@ -32,7 +32,7 @@ function HowItWorks() {
         <div className={styles.item}>
           <img
             loading="lazy"
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741016957/16_4x-8_5_gfceng.webp"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750431315/NUEVA_3x-100_frfoy1.jpg"
             alt="El cliente recibe el aviso en el localizador alumbrando vibrando y sonando"
           />
           <p>
