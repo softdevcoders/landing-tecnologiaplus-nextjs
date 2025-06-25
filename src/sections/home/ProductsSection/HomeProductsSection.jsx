@@ -1,7 +1,6 @@
 import style from "./HomeProductsSection.module.scss";
 import { routes } from "@/config/routes";
-import ResponsiveImage from "@/components/ui/responsive-image";
-import Link from "@/components/ui/link";
+import LinkCard from "@/components/ui/link";
 import Image from "next/image";
 
 const products = [
@@ -101,15 +100,20 @@ function HomeProductsSection() {
             <Image
               src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${product.imageSrc}`}
               alt={product.altText}
-              width={463}
-              height={350}
+              width={600}
+              height={450}
+              sizes="(max-width: 768px) 316px, 600px"
               className={style.productsSection__cardImage}
+              srcSet={`
+                https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_316/${product.imageSrc} 316w,
+                https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${product.imageSrc} 600w
+              `}
             />
             {product.link && (
               <div className={style.productsSection__cardBtn}>
-                <Link className={style.productsSection__cardBtn} href={product.link} size="big">
+                <LinkCard className={style.productsSection__cardBtn} href={product.link} size="big">
                   Ver más
-                </Link>
+                </LinkCard>
               </div>
             )}
           </div>

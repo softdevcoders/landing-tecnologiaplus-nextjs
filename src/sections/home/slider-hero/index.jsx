@@ -1,15 +1,9 @@
 'use client';
 
 import { landingHeros } from "@/config/landing-heros";
+import SliderHeroClient from "./slider-hero-client";
 import styles from "./slider-hero.module.scss";
-import dynamic from "next/dynamic";
 import Image from "next/image";
-
-// Cargar la parte interactiva (Swiper) solo en cliente
-const SliderHeroClient = dynamic(() => import("./slider-hero-client"), {
-  ssr: false,
-  loading: () => null,
-});
 
 export default function SliderHero() {
   const { background, backgroundMobilePortada, ...restLandings } = landingHeros
