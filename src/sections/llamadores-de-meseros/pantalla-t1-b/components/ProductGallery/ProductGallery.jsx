@@ -131,7 +131,7 @@ function ProductGallery() {
         <div className={styles.container__info__products}>
           <div className={styles.container__titles}>
             <h1>
-              PANTALLA T1-B
+              PANTALLA T<span>1</span>-B
             </h1>
             <p>Muestra 1 llamado en pantalla, hasta 15 en cola.</p>
           </div>
