@@ -234,7 +234,7 @@
           text-transform: uppercase;
 
           span {
-            font-family: "Arial Black", sans-serif;
+            font-family: var(--font-black);
           }
         }
         p {
@@ -374,7 +374,7 @@
       padding: 0 5vw;
 
       span {
-        font-family: "Arial Black", sans-serif;
+        font-family: var(--font-black);
       }
     }
     p {

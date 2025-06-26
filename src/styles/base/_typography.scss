@@ -6,6 +6,7 @@
   --font-primary: var(--font-montserrat);
   --font-secondary: var(--font-bebas);
   --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Symbol";
+  --font-black: var(--font-archivo-black), "Arial Black", sans-serif;
   
   // Font sizes
   --fs-xs: clamp(0.75rem, 2vw, 0.875rem);
@@ -67,4 +68,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .font-inter {
   font-family: 'Inter', sans-serif;
+}
+
+.font-black {
+  font-family: var(--font-black);
+  font-weight: 900;
 }
