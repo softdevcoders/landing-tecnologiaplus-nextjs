@@ -1,9 +1,9 @@
 import TechnicalSheet from "@/sections/dispensador-de-tickets/dispensador-de-tickets-caracol/components/TechnicalSheet/TechnicalSheet";
 import HowItWorks from "@/sections/dispensador-de-tickets/dispensador-de-tickets-caracol/components/HowItWorks/HowItWorks";
-import LogosSection from "@/sections/dispensador-de-tickets/dispensador-de-tickets-caracol/components/LogosSection/LogosSection";
 import ProductGallerySelected from "@/sections/dispensador-de-tickets/dispensador-de-tickets-caracol/components/ProductGallery/ProductGallerySelected";
 import getMetadata from "@/request/server/metadata/get-metadata";
 import DispensadorTiquetesRelatedProducts from "@/sections/dispensador-de-tickets/dispensador-de-tickets-caracol/components/RelatedProducts/DispensadorTiquetesRelatedProducts";
+import DispensadorTiquetesClientsSection from "@/sections/dispensador-de-tickets/dispensador-de-tickets-caracol/components/ClientsSection/DispensadorTiquetesClientsSection";
 
 export async function generateMetadata() {
   const { 'dispensador-de-tickets': { 'dispensador-de-tickets-caracol': metadata } } = getMetadata('landings');
@@ -15,7 +15,7 @@ export default function DispensadorDeTiquetesPage() {
       <ProductGallerySelected />
       <TechnicalSheet />
       <HowItWorks />
-      <LogosSection />
+      <DispensadorTiquetesClientsSection />
       <DispensadorTiquetesRelatedProducts />
     </>
   );

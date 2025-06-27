@@ -1,7 +1,7 @@
 import TechnicalSheet from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/TechnicalSheet/TechnicalSheet";
 import HowItWorks from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/HowItWorks/HowItWorks";
-import LocalizadoresRelatedProducts from "@/sections/localizadores-para-restaurantes/landing/components/RelatedProducts/LocalizadoresRelatedProducts"; // Componente para mostrar productos relacionados
-import LogosSection from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/LogosSection/LogosSection"; // Sección de logos de marcas o clientes
+import LocalizadoresRelatedProducts from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/RelatedProducts/LocalizadoresRelatedProducts"; 
+import LogosSection from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/LogosSection/LogosSection";
 import ProductGallerySelected from "@/sections/localizadores-para-restaurantes/localizadores-rec-v3/components/ProductGallery/ProductGallerySelected";
 import getMetadata from "@/request/server/metadata/get-metadata";
 

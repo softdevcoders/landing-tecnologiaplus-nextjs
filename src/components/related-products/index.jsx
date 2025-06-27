@@ -93,13 +93,13 @@ const defaultProducts = [
   },
 ];
 
-function RelatedProducts({ productsKeys = [] }) {
+function RelatedProducts({ productsKeys = [], isVerMasView = false }) {
   const filteredProducts = productsKeys.map((key) => defaultProducts.find((product) => product.category_key === key));  
 
   return (
     <section className={style.related__products}>
       <div className={style.related__products__container}>
-        <h2 className={style.related__products__title}>Productos similares</h2>
+        <h2 className={`${style.related__products__title} ${isVerMasView ? style.related__products__title__ver__mas : ""}`}>Productos similares</h2>
         <div className={style.swiper__container}>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -147,7 +147,7 @@ function RelatedProducts({ productsKeys = [] }) {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </div> 
       </div>
       <div className={style.related__products__specs}>
         <ul className={style.related__products__specs__list}>

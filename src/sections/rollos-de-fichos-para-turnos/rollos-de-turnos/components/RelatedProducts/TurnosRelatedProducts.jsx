@@ -5,10 +5,11 @@ function TurnosRelatedProducts() {
   return (
     <RelatedProducts 
       productsKeys={[
-        categories.LOCALIZADORES_PARA_RESTAURANTES.category_key,
+        categories.DISPENSADOR_DE_TICKETS.category_key,
         categories.TURNERO_TURNOEXPRESS.category_key,
-        categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,
+        categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key,
       ]}
+      isVerMasView={true}
     />
   );
 }

@@ -11,6 +11,10 @@
     background-color: #f4f4f4;
     gap: 3rem;
 
+    &.related__products__container__ver__mas {
+      padding: 3rem 5%;
+    }
+
     .related__products__title {
       font-size: 1.5rem;
       font-weight: 900;
@@ -18,6 +22,10 @@
       color: #606060;
       width: 100%;
       text-align: center;
+
+      &.related__products__title__ver__mas {
+        font-weight: 700;
+      }
     }
 
     .swiper__container {
@@ -248,8 +256,18 @@
 @media (min-width: 1024px) {
   .related__products {
     .related__products__container {
+      padding: 3rem 5%;
+
       .related__products__title {
         font-size: 2.5rem;
+
+        &.related__products__title__ver__mas {
+          color: #000;
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 1;
+          text-align: left;
+        }
       }
     }
 
