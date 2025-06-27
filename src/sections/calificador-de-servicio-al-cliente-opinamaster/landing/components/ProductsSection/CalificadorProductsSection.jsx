@@ -7,18 +7,22 @@ function CalificadorProductsSection() {
     <section className={style.products__section}>
       <div className={style.products__container}>
         <div className={style.product__item}>
-          <img
-            loading="lazy"
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741104598/nuevo_4x-8_qbdidq.webp"
-            alt="Calificador de Servicio"
-            className={style.img__desktop}
-          />
-          <img
-            loading="lazy"
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1742992729/6_4x-8_fqosbn.webp"
-            alt="Calificador de Servicio"
-            className={style.img__mobile}
-          />
+          <Link href={routes.landings.calificadorDeServicioAlClienteOpinamaster.children.calificadorDeServicio.url}> 
+            <img
+              loading="lazy"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741104598/nuevo_4x-8_qbdidq.webp"
+              alt="Calificador de Servicio"
+              className={style.img__desktop}
+            />
+          </Link>
+          <Link href={routes.landings.calificadorDeServicioAlClienteOpinamaster.children.calificadorDeServicio.url}> 
+            <img
+              loading="lazy"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1742992729/6_4x-8_fqosbn.webp"
+              alt="Calificador de Servicio"
+              className={style.img__mobile}
+            />
+          </Link>
           <div className={style.btn__container}>
             <p className={style.selling__counter}>472 vendidos</p>
             <Link
@@ -30,18 +34,22 @@ function CalificadorProductsSection() {
           </div>
         </div>
         <div className={style.product__item}>
-          <img
-            loading="lazy"
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738678296/Group_2_fpyzaa.webp"
-            alt="Aviso de pared con calificador de servicio al cliente"
-            className={style.img__desktop}
-          />
-          <img
-            loading="lazy"
+          <Link href={routes.landings.calificadorDeServicioAlClienteOpinamaster.children.avisoDeParedParaCalificarServicio.url}> 
+            <img
+              loading="lazy"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738678296/Group_2_fpyzaa.webp"
+              alt="Aviso de pared con calificador de servicio al cliente"
+              className={style.img__desktop}
+            />
+          </Link>
+          <Link href={routes.landings.calificadorDeServicioAlClienteOpinamaster.children.avisoDeParedParaCalificarServicio.url}> 
+            <img
+              loading="lazy"
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1742992730/7_4x-8_nuhjlt.webp"
             alt="Calificador de Servicio"
             className={style.img__mobile}
-          />
+            />
+          </Link>
           <div className={style.btn__container}>
             <p className={style.selling__counter}>38 vendidos</p>
             <Link

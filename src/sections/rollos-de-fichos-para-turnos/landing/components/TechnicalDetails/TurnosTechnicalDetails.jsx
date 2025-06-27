@@ -77,9 +77,11 @@ function TurnosTechnicalDetails() {
     <section className={style.technical__details}>
       <div className={style.technical__details__header}>
         <h2 className={style.technical__details__header__title}>Ficha Técnica</h2>
-        <p className={style.technical__details__header__description}>Rollos de turnos</p>
+        <Link href={routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url}> 
+          <p className={style.technical__details__header__description}>Rollos de turnos</p>
+        </Link>
       </div>
-      <div className={style.technical__details__carousel_container}>
+      <Link href={routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url} className={style.technical__details__carousel_container}> 
         <div className={style.technical__details__carousel}>
           {colors.map((color) => (
             <div className={`${style.technical__details__carousel__item} ${selectedColor === color.id ? style.selected : ""}`} key={color.id}>
@@ -92,9 +94,9 @@ function TurnosTechnicalDetails() {
                 className={style.technical__details__carousel__item__image}
               />
             </div>
-          ))}
+            ))}
         </div>
-      </div>
+      </Link>
       <div className={style.technical__details__container}>
         <div className={style.technical__details__container__body}>
           <div className={style.technical__details__container__body__colors_container}>

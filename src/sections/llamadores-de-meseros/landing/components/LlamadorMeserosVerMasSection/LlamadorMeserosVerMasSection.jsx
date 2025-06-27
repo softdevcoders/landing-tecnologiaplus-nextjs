@@ -67,18 +67,22 @@ function LlamadorMeserosVerMasSection() {
           {products.filter((product) => product.type === "llamador_mesero").map((product, index) => (
             <div key={index} className={style.ver__mas__section__container__card}>
               <div className={style.ver__mas__section__container__card__image}>
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  width={250}
-                  height={250}
-                  className={style.ver__mas__section__container__card__image__img}
-                />
+                <Link href={product.link}>  
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    width={250}
+                    height={250}
+                    className={style.ver__mas__section__container__card__image__img}
+                  />
+                </Link>
               </div>
               <div className={style.ver__mas__section__container__card__content}>
-                <h3
-                  dangerouslySetInnerHTML={{ __html: product.title }}   
-                />
+                <Link href={product.link}>  
+                  <h3
+                    dangerouslySetInnerHTML={{ __html: product.title }}   
+                  />
+                </Link>
                 <Link
                   className={style.ver__mas__section__container__card__content__btn}
                   href={product.link}
@@ -99,19 +103,22 @@ function LlamadorMeserosVerMasSection() {
           {products.filter((product) => product.type === "recibir_llamados").map((product, index) => (
             <div key={index} className={style.ver__mas__section__container__card}>
               <div className={style.ver__mas__section__container__card__image}>
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  width={250}
-                  height={250}
-                  className={style.ver__mas__section__container__card__image__img}
-                />
+                <Link href={product.link}>  
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    width={250}
+                    height={250}
+                    className={style.ver__mas__section__container__card__image__img}
+                  />
+                </Link>
               </div>
               <div className={style.ver__mas__section__container__card__content}>
-                <h3
-                  dangerouslySetInnerHTML={{ __html: product.title }}   
-                />
-                
+                <Link href={product.link}>  
+                  <h3
+                    dangerouslySetInnerHTML={{ __html: product.title }}   
+                  />
+                </Link>
                 <Link
                   className={style.ver__mas__section__container__card__content__btn}
                   href={product.link}
