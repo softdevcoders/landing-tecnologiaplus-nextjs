@@ -10,14 +10,14 @@ function TurnoExpressProductsSection() {
 
   const products = [
     {
-      title: "Turnero T1-B",
+      title: "Turnero T<span>1</span>-B",
       description: "294 vendidos",
       image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739197744/Turnero_T1B_2x-8_1_1_opvowd.webp",
       link: routes.landings.turneroTurnoexpress.children.turneroT1B.url,
       type: "panel_turnos",
     },
     {
-      title: "Turnero T1-N",
+      title: "Turnero T<span>1</span>-N",
       description: "869 vendidos",
       image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431727/Turnero_T1N_2x-8_r4igzs.webp",
       link: routes.landings.turneroTurnoexpress.children.turneroT1N.url,
@@ -74,7 +74,9 @@ function TurnoExpressProductsSection() {
                 />
               </div>
               <div className={style.ver__mas__section__container__card__content}>
-                <h3>{product.title}</h3>
+                <h3
+                  dangerouslySetInnerHTML={{ __html: product.title }}
+                />
                 <Link
                   className={style.ver__mas__section__container__card__content__btn}
                   href={product.link}
@@ -104,8 +106,10 @@ function TurnoExpressProductsSection() {
                 />
               </div>
               <div className={style.ver__mas__section__container__card__content}>
-                <h3>{product.title}</h3> 
-                
+                <h3
+                  dangerouslySetInnerHTML={{ __html: product.title }}
+                />
+
                 <Link
                   className={style.ver__mas__section__container__card__content__btn}
                   href={product.link}

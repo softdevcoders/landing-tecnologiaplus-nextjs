@@ -1,8 +1,8 @@
 import style from "./HomeProductsSection.module.scss";
 import { routes } from "@/config/routes";
-import ResponsiveImage from "@/components/ui/responsive-image";
-import Link from "@/components/ui/link";
+import LinkCard from "@/components/ui/link";
 import Image from "next/image";
+import Link from "next/link";
 
 const products = [
   {
@@ -96,20 +96,44 @@ function HomeProductsSection() {
       <div className={style.productsSection__content}>
         {products.map((product, index) => (
           <div key={index} className={style.productsSection__card}>
-            <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
+            {product.link ? (
+              <Link title={`Ver más sobre ${product.title}`} href={product.link}>
+                <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
+              </Link>
+            ) : (
+              <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
+            )}
             <p className={style.productsSection__cardDescription}>{product.description}</p>
-            <Image
-              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${product.imageSrc}`}
-              alt={product.altText}
-              width={463}
-              height={350}
-              className={style.productsSection__cardImage}
-            />
+            {product.link ? (
+              <Link title={`Ver más sobre ${product.title}`}  href={product.link}>
+                <Image
+                  src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${product.imageSrc}`}
+                  alt={product.altText}
+                  width={463}
+                  height={350}
+                  sizes="(max-width: 768px) 316px, 600px"
+                  className={style.productsSection__cardImage}
+                  srcSet={`
+                    https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_316/${product.imageSrc} 316w,
+                    https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${product.imageSrc} 600w
+                  `}
+                />
+              </Link>
+              ) : (
+              <Image
+                src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${product.imageSrc}`}
+                alt={product.altText}
+                width={463}
+                height={350}
+                sizes="(max-width: 768px) 316px, 600px"
+                className={style.productsSection__cardImage}
+              />
+            )}
             {product.link && (
               <div className={style.productsSection__cardBtn}>
-                <Link className={style.productsSection__cardBtn} href={product.link} size="big">
+                <LinkCard className={style.productsSection__cardBtn} href={product.link} size="big">
                   Ver más
-                </Link>
+                </LinkCard>
               </div>
             )}
           </div>

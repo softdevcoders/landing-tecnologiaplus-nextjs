@@ -42,7 +42,7 @@ function LlamadorMeserosVerMasSection() {
       type: "recibir_llamados",
     },
     {
-      title: "Pantalla T1-B de 1 llamado",
+      title: "Pantalla T<span>1</span>-B de <span>1</span> llamado",
       description: "886 vendidos",
       image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739197744/Turnero_T1B_2x-8_1_1_opvowd.webp",
       link: routes.landings.llamadoresDeMeseros.children.t1_b.url,
@@ -76,7 +76,9 @@ function LlamadorMeserosVerMasSection() {
                 />
               </div>
               <div className={style.ver__mas__section__container__card__content}>
-                <h3>{product.title}</h3>
+                <h3
+                  dangerouslySetInnerHTML={{ __html: product.title }}   
+                />
                 <Link
                   className={style.ver__mas__section__container__card__content__btn}
                   href={product.link}
@@ -106,7 +108,9 @@ function LlamadorMeserosVerMasSection() {
                 />
               </div>
               <div className={style.ver__mas__section__container__card__content}>
-                <h3>{product.title}</h3> 
+                <h3
+                  dangerouslySetInnerHTML={{ __html: product.title }}   
+                />
                 
                 <Link
                   className={style.ver__mas__section__container__card__content__btn}

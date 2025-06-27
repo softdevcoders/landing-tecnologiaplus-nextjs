@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { GoogleTagManager } from '@next/third-parties/google'
 
-import { Bebas_Neue, Montserrat } from 'next/font/google'
+import { Bebas_Neue, Montserrat, Archivo_Black } from 'next/font/google'
 import { SHOULD_ROBOTS_INDEX } from "@/data/metadata/config";
  
 const montserrat = Montserrat({ 
@@ -23,10 +23,17 @@ const bebas = Bebas_Neue({
   variable: '--font-bebas',
 })
 
+const archivo_black = Archivo_Black({
+  weight: ["400"],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-archivo-black',
+})
+
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="es" className={`${montserrat.className} ${bebas.className} ${montserrat.variable} ${bebas.variable}`}>
+    <html lang="es" className={`${montserrat.className} ${bebas.className} ${archivo_black.variable} ${montserrat.variable} ${bebas.variable}`}>
       <head>
         {/* Preconnect for CDN & Google Fonts */}
         <link rel="preconnect" href="https://res.cloudinary.com" />

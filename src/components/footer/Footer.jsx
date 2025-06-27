@@ -9,6 +9,7 @@ import YouTube from "@/components/ui/icons/youtube";
 import Email from "@/components/ui/icons/email";
 import Phone from "@/components/ui/icons/phone";
 import { GOOGLE_TAG_EVENTS } from "@/config/google-tag-events";
+import Location from "@/components/ui/icons/location";
 
 const Footer = () => {
 
@@ -106,8 +107,34 @@ const Footer = () => {
               />{" "}
               Colombia
             </li>
-            <li>Bogotá, Cra 19 # 82-85 oficina 401.</li>
-            <li>Medellín • El Poblado edificio Oceanía.</li>
+            {/* <li>Bogotá, Cra 19 # 82-85 oficina 401.</li>
+            <li>Medellín • El Poblado edificio Oceanía.</li> */}
+            <li>
+              <a 
+                href="https://www.waze.com/es-419/live-map/directions/co/cundinamarca/bogota/cra-19-82-85?navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location&to=place.ChIJHYS6OvSaP44REHXTw2Y8H6Y"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Abrir ubicación en Waze"
+                aria-label="Abrir ubicación en Waze"
+                className={styles.footer__location_link}
+              >
+                <Location size={16}/>
+                <span>Bogotá, Cra 19 # 82-85 oficina 401.</span>
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://ul.waze.com/ul?place=ChIJ-afFdjEoRI4RFepmRGgN4qA&ll=6.22033970%2C-75.56726930&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Abrir ubicación en Waze"
+                aria-label="Abrir ubicación en Waze"
+                className={styles.footer__location_link}
+              >
+                <Location size={16}/>
+                <span>Medellín • El Poblado edificio Oceanía.</span>
+              </a>
+            </li>
             <li>Cobertura nacional</li>
           </ul>
         </div>

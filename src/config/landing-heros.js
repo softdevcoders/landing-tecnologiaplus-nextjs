@@ -34,12 +34,14 @@ export const landingHeros = {
         src: "1_zjvtlb.png",
         alt: "Localizadores para clientes",
         className: styles.landing_hero__content__image_mobile,
-        width: 800,
+        width: 600,
+        fetchPriority: "high",
       },{
         src: "1_zjvtlb.png",
         alt: "Localizadores para clientes",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
+        fetchPriority: "high",
       }],
       button: {
         href: routes.landings.localizadoresParaRestaurantes.url,

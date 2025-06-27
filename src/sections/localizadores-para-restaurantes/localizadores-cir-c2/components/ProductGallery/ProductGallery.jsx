@@ -12,11 +12,13 @@ import {
 import TinesPreguntasButton from "@/components/tines-preguntas-button";
 import Popup from "@/components/ui/pop-up";
 import BackButton from "@/components/back-button";
+import Link from "next/link";
+import { routes } from "@/config/routes";
 
 function ProductGallery() {
   const [isOpen, setIsOpen] = useState(false);
   const images = [
-    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750430287/nuevo_cir_c2_3x-8_y8fruh.png",
+    "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750866698/localizadores_cir_c2_25_06_2024_sk4gqn.jpg",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741566057/Frame_1_24_n6ekz0.webp",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741011138/8_4x-8_4_okujsy.webp",
     "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741011138/11_4x-8_5_yhlqcs.webp",
@@ -140,7 +142,7 @@ function ProductGallery() {
 
           <p>
             Los Localizadores para restaurantes Cir C2 mantienen las ventajas
-            del modelo Rec V3 y además funciona con un control separado de los
+            del modelo <Link href={routes.landings.localizadoresParaRestaurantes.children.rec_v3.url} className={styles.related__link_to_other_product}>Rec V3</Link> y además funciona con un control separado de los
             localizadores. Ideal para locales de comida que entregan el
             localizador en un punto distinto al de llamado.
           </p>
@@ -156,7 +158,7 @@ function ProductGallery() {
             label: "Galería",
             images: [
               {
-                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750430287/nuevo_cir_c2_3x-8_y8fruh.png",
+                src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750866698/localizadores_cir_c2_25_06_2024_sk4gqn.jpg",
                 alt: "Imagen 1",
               },
               {

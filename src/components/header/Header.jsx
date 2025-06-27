@@ -132,7 +132,7 @@ function Header({ headerAlt = false }) {
             <Phone2 className={styles.phone__icon} size={19} />
             <span className={styles.phone__label}>{routes.contact_media.phones[0].label}</span>
           </a>
-          <button onClick={toggleMenu} className={`${styles.menuButton} ${isMenuOpen ? styles.open : ""}`}>
+          <button aria-label="Abrir menú" onClick={toggleMenu} className={`${styles.menuButton} ${isMenuOpen ? styles.open : ""}`}>
             <span></span>
             <span></span>
           </button>
