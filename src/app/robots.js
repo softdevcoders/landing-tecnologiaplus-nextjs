@@ -5,16 +5,17 @@ export default function robots() {
         userAgent: '*',
         allow: [
           '/',
-          '/_next/image*',
-          '/_next/static/images/*',
+          '/_next/static/chunks/*',
+          '/_next/static/css/*',
           '/_next/static/media/*',
+          '/_next/image*',
+          '/_next/static/[^/]+/*',
           '/blog/*?page=*'
         ],
         disallow: [
           '/api/',
           '/_next/static/development/*',
           '/_next/static/webpack/*',
-          '/_next/static/chunks/*',
           '/.env',
           '/.git',
           '/node_modules/',
