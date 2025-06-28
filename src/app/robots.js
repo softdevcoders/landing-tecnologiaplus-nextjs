@@ -10,7 +10,7 @@ export default function robots() {
           '/_next/static/media/*',
           '/_next/image*',
           '/_next/static/[^/]+/*',
-          '/blog/*?page=*'
+          '/blog/*'
         ],
         disallow: [
           '/api/',
@@ -21,16 +21,14 @@ export default function robots() {
           '/node_modules/',
           '/_error',
           '/404',
-          '/500',
-          '/*?*',
-          '/*?*&*'
+          '/500'
         ]
       },
       {
         userAgent: 'Mediapartners-Google',
         allow: [
           '/',
-          '/blog/*?page=*'
+          '/blog/*'
         ],
       },
       {
