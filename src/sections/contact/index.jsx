@@ -6,7 +6,7 @@ const ContactSection = () => {
   return (
     <section className={style.contact}>
       <div className={style.contact_container}>
-        <ContactForm noMarginTop />
+        <ContactForm noMarginTop isContactPage />
       </div>
     </section>
   )

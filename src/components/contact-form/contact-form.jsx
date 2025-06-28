@@ -4,7 +4,7 @@ import { sendEmail } from "@/app/actions/contact";
 import Image from "next/image";
 import style from "./contact-form.module.scss";
 
-async function ContactForm({ noMarginTop = false }) {
+async function ContactForm({ noMarginTop = false, isContactPage = false }) {
   return (
     <section className={style.contact__form}>
       <Image
@@ -23,7 +23,11 @@ async function ContactForm({ noMarginTop = false }) {
           <ContactFormClient sendEmail={sendEmail} />
         </div>
         <div className={style.contact__texts}>
-          <h2 className={style.contact__title}>Te brindamos asesoría</h2>
+          {isContactPage ? (
+            <h1 className={style.contact__title}>Te brindamos asesoría</h1>
+          ) : (
+            <h2 className={style.contact__title}>Te brindamos asesoría</h2>
+          )}
           <p>Para escoger la mejor opción según tu necesidad</p>
         </div>
       </div>

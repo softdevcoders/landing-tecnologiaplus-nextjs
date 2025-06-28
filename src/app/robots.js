@@ -3,25 +3,34 @@ export default function robots() {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: [
+          '/',
+          '/_next/image*',
+          '/_next/static/images/*',
+          '/_next/static/media/*',
+          '/blog/*?page=*'
+        ],
         disallow: [
           '/api/',
-          '/_next/',
-          '/static/',
+          '/_next/static/development/*',
+          '/_next/static/webpack/*',
+          '/_next/static/chunks/*',
           '/.env',
           '/.git',
           '/node_modules/',
-          '/_next/static/development/',
-          '/_next/static/webpack/',
           '/_error',
           '/404',
           '/500',
-          '/*?*'  // Clean Parameters
+          '/*?*',
+          '/*?*&*'
         ]
       },
       {
         userAgent: 'Mediapartners-Google',
-        allow: '/',
+        allow: [
+          '/',
+          '/blog/*?page=*'
+        ],
       },
       {
         userAgent: 'MJ12bot',
