@@ -5,8 +5,9 @@ function LogosSection() {
 
   return (
     <NuestrosClientes 
-      title="Algunos de nuestros clientes"
+      title="Algunos clientes"
       logos={logosLocalizadores}
+      isVerMasView={true}
     />
   );
 }

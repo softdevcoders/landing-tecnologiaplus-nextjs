@@ -3,8 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3rem 1rem;
+  padding: 3rem 5%;
+  
   overflow: hidden;
+
+  &.nuestros__clientes__section__ver__mas {
+    gap: 1rem;
+    padding: 2rem 5% 4.5rem;
+  }
   
 
   .nuestros__clientes__title {
@@ -12,6 +18,11 @@
     font-weight: 900;
     text-align: center;
     color: #606060;
+    width: 100%;
+
+    &.nuestros__clientes__title__ver__mas {
+      font-weight: 700;
+    }
   }
 
   .nuestros__clientes__description {
@@ -38,13 +49,6 @@
 
 @media (min-width: 768px) {
   .nuestros__clientes__section {
-    padding: 5rem 3rem;
-    gap: 1rem;
-
-    .nuestros__clientes__title {
-      font-size: 2.5rem;
-    }
-
     .nuestros__clientes__description {
       font-size: 1.5rem;
     }
@@ -69,6 +73,29 @@
       .nuestros__clientes__background_gradient_right {
         right: 0;
         background: linear-gradient(to left, white 20%, rgba(255, 255, 255, 0) 100%);
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .nuestros__clientes__section {
+    padding: 3rem;
+
+    &.nuestros__clientes__section__ver__mas {
+      gap: 3rem;
+      padding: 2rem 5% 3rem;
+    }
+
+    .nuestros__clientes__title {
+      font-size: 2.5rem;
+
+      &.nuestros__clientes__title__ver__mas {
+        color: #000;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: left;
       }
     }
   }

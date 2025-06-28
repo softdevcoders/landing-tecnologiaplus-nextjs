@@ -1921,7 +1921,7 @@ const dispensadorDeTicketsPosts = [
     "date": "2024-06-26T09:17:38",
     "modified": "2025-05-22T20:45:03",
     "slug": "mejora-la-atencion-en-tu-negocio-con-un-despachador-de-tickets",
-    "current_link": `${routes.blog.children.dispensadorDeTickets.url}/mejora-la-atencion-en-tu-negocio-con-un-despachador-de-tickets/`,
+    "current_link": `${routes.blog.children.dispensadorDeTickets.url}/mejora-la-atencion-en-tu-negocio-con-un-despachador-de-tickets`,
     "previous_link": [
         "/blog/dispensador-de-tickets/mejora-la-atencion-en-tu-negocio-con-un-despachador-de-tickets/"
     ],

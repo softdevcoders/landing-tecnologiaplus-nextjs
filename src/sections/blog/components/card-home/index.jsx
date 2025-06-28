@@ -27,9 +27,11 @@ const CardHome = ({ post }) => {
               {cleanText(post.title.rendered)}
           </h2>
         </Link>
-        <p className={style.blogCard__excerpt}>
-          {cleanText(post.excerpt.rendered)}
-        </p>
+        <Link href={post.current_link}>
+          <p className={style.blogCard__excerpt}>
+            {cleanText(post.excerpt.rendered)}
+          </p>
+        </Link>
         <div className={style.blogCard__footer}>
           <time className={style.blogCard__date}>{formatDate(post.date)}</time>
           <LinkButton href={post.current_link} title={`Leer más sobre ${post.title.rendered}`} className={style.blogCard__button}>

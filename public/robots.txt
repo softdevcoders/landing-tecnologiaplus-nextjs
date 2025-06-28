@@ -1,6 +1,26 @@
-# Allow all robots complete access
+# Allow all web crawlers
 User-agent: *
 Allow: /
+
+# Sitemap location
+Sitemap: https://tecnologiaplus.com/sitemap.xml
+
+# Common paths to disallow
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow Google AdSense bot specifically
+User-agent: Mediapartners-Google
+Allow: /
+
+# Block common bad bots
+User-agent: MJ12bot
+Disallow: /
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
 
 # Block access to sensitive paths
 Disallow: /.env
@@ -20,6 +40,3 @@ Host: https://tecnologiaplus.com
 
 # Crawl-delay
 Crawl-delay: 10
-
-# Sitemaps
-Sitemap: https://tecnologiaplus.com/sitemap.xml

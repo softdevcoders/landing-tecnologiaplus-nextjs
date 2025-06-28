@@ -103,7 +103,13 @@ function HomeProductsSection() {
             ) : (
               <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
             )}
-            <p className={style.productsSection__cardDescription}>{product.description}</p>
+            {product.link ? (
+              <Link href={product.link}> 
+                <p className={style.productsSection__cardDescription}>{product.description}</p>
+              </Link>
+            ) : ( 
+              <p className={style.productsSection__cardDescription}>{product.description}</p>
+            )}
             {product.link ? (
               <Link title={`Ver más sobre ${product.title}`}  href={product.link}>
                 <Image

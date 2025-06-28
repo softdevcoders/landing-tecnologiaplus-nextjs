@@ -1,0 +1,164 @@
+# Tecnología Plus - Información del Sitio
+
+## Descripción General
+Tecnología Plus es una empresa colombiana especializada en soluciones tecnológicas para la gestión de turnos, llamado de enfermería y atención al cliente. Ofrecemos productos y servicios que mejoran la eficiencia operativa y la experiencia del cliente.
+
+## Landings y Productos Principales
+
+### 1. Sistema de Turnos (TurnoMaster)
+- URL Completa: https://tecnologiaplus.com/sistema-de-turnos-turnomaster
+- Sistema completo de gestión de turnos
+- Software profesional para control de filas
+- Ideal para bancos, clínicas y entidades gubernamentales
+- Productos y características:
+  * Sistema de turnos profesional
+  * Software de gestión TurnoMaster
+  * Módulos de atención
+  * Pantallas de llamado
+  * Reportes y estadísticas
+  * Integración con sistemas existentes
+
+### 2. Turnero Express (TurnoExpress)
+- URL Completa: https://tecnologiaplus.com/turnero-turnoexpress
+- Solución rápida y económica para gestión de turnos
+- Productos:
+  * Turnero T1-B: https://tecnologiaplus.com/turnero-turnoexpress/turnero-t1-b
+  * Turnero T1-N: https://tecnologiaplus.com/turnero-turnoexpress/turnero-t1-n
+  * Turnero T3 módulo turno: https://tecnologiaplus.com/turnero-turnoexpress/turnero-t3-modulo-turno
+  * Turnero fila única supermercados: https://tecnologiaplus.com/turnero-turnoexpress/turnero-fila-unica-supermercados
+  * Turnero Transformer: https://tecnologiaplus.com/turnero-turnoexpress/turnero-transformer
+
+### 3. Llamado de Enfermería (CuidaMaster)
+- URL Completa: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster
+- Productos:
+  * Llamador E1 para cuello: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello
+  * Llamador E2 blanco: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/llamador-e2-blanco
+  * Llamador EX1: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/llamador-ex1
+  * Pantalla T1-B: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/pantalla-t1-b
+  * Pantalla T6: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/pantalla-t6
+  * Reloj receptor de llamados: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados
+  * Alarma de luz: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/alarma-de-luz
+
+### 4. Llamadores de Meseros
+- URL Completa: https://tecnologiaplus.com/llamadores-de-meseros
+- Productos:
+  * Llamador de meseros E2-N con tecla pagar: https://tecnologiaplus.com/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar
+  * Llamador de meseros E2-B: https://tecnologiaplus.com/llamadores-de-meseros/llamador-de-meseros-e2-b
+  * Control numérico: https://tecnologiaplus.com/llamadores-de-meseros/control-numerico
+  * Hablador de mesa: https://tecnologiaplus.com/llamadores-de-meseros/hablador-de-mesa
+  * Pantalla T1-B: https://tecnologiaplus.com/llamadores-de-meseros/pantalla-t1-b
+  * Pantalla T6: https://tecnologiaplus.com/llamadores-de-meseros/pantalla-t6
+  * Reloj receptor de llamados: https://tecnologiaplus.com/llamadores-de-meseros/reloj-receptor-de-llamados
+
+### 5. Calificador de Servicio (OpinaMaster)
+- URL Completa: https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster
+- Productos:
+  * Calificador de servicio: https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster/calificador-de-servicio
+  * Aviso de pared para calificar servicio: https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio
+- Características:
+  * Calificación en tiempo real
+  * Reportes estadísticos
+  * Integración con sistemas existentes
+  * Personalización de preguntas
+  * Dashboard administrativo
+
+### 6. Dispensador de Tickets
+- URL Completa: https://tecnologiaplus.com/dispensador-de-tickets
+- Productos:
+  * Dispensador de tickets caracol: https://tecnologiaplus.com/dispensador-de-tickets/dispensador-de-tickets-caracol
+  * Accesorios y repuestos
+
+### 7. Encuesta Virtual OpinaMaster
+- URL Completa: https://tecnologiaplus.com/encuesta-virtual-opinamaster
+- Características:
+  * Sistema digital de encuestas
+  * Solución en la nube
+  * Personalización de preguntas
+  * Reportes en tiempo real
+  * Integración con sistemas existentes
+
+### 8. Localizadores para Restaurantes
+- URL Completa: https://tecnologiaplus.com/localizadores-para-restaurantes
+- Productos:
+  * Localizadores CIR-C2: https://tecnologiaplus.com/localizadores-para-restaurantes/localizadores-cir-c2
+  * Localizadores REC-V3: https://tecnologiaplus.com/localizadores-para-restaurantes/localizadores-rec-v3
+  * Base cargadora
+  * Accesorios
+
+### 9. Rollos de Fichos para Turnos
+- URL Completa: https://tecnologiaplus.com/rollos-de-fichos-para-turnos
+- Productos:
+  * Rollos de turnos: https://tecnologiaplus.com/rollos-de-fichos-para-turnos/rollos-de-turnos
+  * Diferentes tamaños y presentaciones
+
+### 10. Rollos de Papel Térmico
+- URL Completa: https://tecnologiaplus.com/rollos-de-papel-termico
+- Productos:
+  * Rollos térmicos: https://tecnologiaplus.com/rollos-de-papel-termico/rollos-termicos
+  * Diferentes medidas disponibles
+
+## Secciones Principales
+- Inicio: https://tecnologiaplus.com
+- Blog: https://tecnologiaplus.com/blog
+  * Artículos técnicos
+  * Guías de uso
+  * Casos de éxito
+  * Noticias del sector
+- Contacto: https://tecnologiaplus.com/contacto
+
+## Información de Contacto
+- Teléfono: (+57) 316 468 2034
+- Teléfono adicional: (+57) 322 734 79 71
+- Email: ventas@tecnologiaplus.com
+- Ubicación: Colombia
+- Redes Sociales:
+  * Facebook: https://www.facebook.com/tecnologiapluscolombia
+  * Instagram: https://www.instagram.com/tecnologiapluscolombia
+  * YouTube: https://www.youtube.com/channel/UCPho92vfQwC24X8Y3eI8Dvg
+
+## Industrias que Atendemos
+- Sector Salud
+  * Hospitales
+  * Clínicas
+  * Centros médicos
+  * Hogares geriátricos
+- Sector Comercial
+  * Restaurantes
+  * Supermercados
+  * Bancos
+  * Retail
+- Sector Público
+  * Entidades gubernamentales
+  * Oficinas de atención al ciudadano
+  * Bibliotecas
+  * Universidades
+
+## Características Técnicas
+- Productos inalámbricos y cableados
+- Alcance de señal hasta 50 metros
+- Resistentes al agua (productos seleccionados)
+- Pantallas LED de alta visibilidad
+- Baterías de larga duración
+- Software personalizable
+- Integración con sistemas existentes
+- Soporte técnico especializado
+
+## Notas para AI
+- Este sitio contiene 10 landings principales, cada una con sus productos específicos
+- Los productos están categorizados por industria y caso de uso
+- El contenido se actualiza regularmente con nuevos productos y artículos del blog
+- Cada producto tiene su propia landing page con especificaciones detalladas
+- Los precios no se muestran en el sitio, se requiere contacto directo
+- El sitio está optimizado para SEO y accesibilidad
+- Contenido disponible en español
+- Enfoque en el mercado colombiano y latinoamericano
+
+## Ventajas Competitivas
+- Más de 10 años de experiencia
+- Productos de fabricación propia
+- Servicio técnico especializado
+- Garantía en todos los productos
+- Instalación y capacitación incluida
+- Soporte post-venta
+- Soluciones personalizadas
+- Tecnología de última generación 

@@ -93,13 +93,13 @@ const defaultProducts = [
   },
 ];
 
-function RelatedProducts({ productsKeys = [] }) {
+function RelatedProducts({ productsKeys = [], isVerMasView = false }) {
   const filteredProducts = productsKeys.map((key) => defaultProducts.find((product) => product.category_key === key));  
 
   return (
     <section className={style.related__products}>
       <div className={style.related__products__container}>
-        <h2 className={style.related__products__title}>Productos similares</h2>
+        <h2 className={`${style.related__products__title} ${isVerMasView ? style.related__products__title__ver__mas : ""}`}>Productos similares</h2>
         <div className={style.swiper__container}>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -120,18 +120,24 @@ function RelatedProducts({ productsKeys = [] }) {
               >
                 <div className={style.swiper__slide__card}>
                   <div className={`${style.swiper__slide__card__info} ${product.shouldImageBeAtTheBottom ? style.swiper__slide__card__info__image__at__bottom : ""}`}>
-                    <h3 className={style.swiper__slide__card__info__title}>{product.name}</h3>
-                    <p className={style.swiper__slide__card__info__description}>{product.description}</p>
-                    <div className={style.swiper__slide__card__info__img__container}>
-                      <img
-                        width={320}
-                        height={230}
-                        src={product.img}
-                        alt={`imagen de ${product.name}`}
-                        className={`${style.swiper__slide__card__info__img} ${product.customClass ? product.customClass : ""}`}
-                        loading="lazy"
-                      />
-                    </div>
+                    <Link href={product.link}> 
+                      <h3 className={style.swiper__slide__card__info__title}>{product.name}</h3>
+                    </Link>
+                    <Link href={product.link}> 
+                      <p className={style.swiper__slide__card__info__description}>{product.description}</p>
+                    </Link>
+                    <Link href={product.link}> 
+                      <div className={style.swiper__slide__card__info__img__container}>
+                        <img
+                          width={320} 
+                          height={230}
+                          src={product.img}
+                          alt={`imagen de ${product.name}`}
+                          className={`${style.swiper__slide__card__info__img} ${product.customClass ? product.customClass : ""}`}
+                            loading="lazy"
+                        />
+                      </div>
+                    </Link>
                     <p className={style.swiper__slide__card__info__selling__counter}>{product.sold}</p>
                   </div>
                   <Link className={style.swiper__slide__card__btn} href={product.link}>
@@ -141,7 +147,7 @@ function RelatedProducts({ productsKeys = [] }) {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </div> 
       </div>
       <div className={style.related__products__specs}>
         <ul className={style.related__products__specs__list}>
