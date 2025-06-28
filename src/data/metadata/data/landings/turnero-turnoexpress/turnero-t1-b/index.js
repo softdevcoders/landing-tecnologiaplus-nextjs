@@ -4,7 +4,7 @@ import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 const title = "Turnero T1-B: Solución Compacta en Salas de Espera";
 const description = "Turnero inalámbrico de bajo costo, ideal para zonas de espera pequeñas. Llama turnos en orden y aleatorios. Fácil instalación y uso. ¡Cotiza ahora!";
 const keywords = ["Turnero"];
-const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.turneroTurnoexpress.url}`;
+const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.turneroTurnoexpress.children.turneroT1B.url}`;
 
 export const metadata = {
   title: {
