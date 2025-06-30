@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
     
     return {
       title: {
-        absolute: `${post?.metadata?.title} | TecnologiaPlus`
+        absolute: post?.metadata?.title
       },
       keywords: post?.metadata?.keywords,
       description: post?.metadata?.description,
