@@ -283,6 +283,7 @@ const nextConfig = {
       { source: '/rollos-de-turno', destination: '/rollos-de-fichos-para-turnos', permanent: true },
       { source: '/dispensador-de-tiquetes', destination: '/dispensador-de-tickets', permanent: true },
       { source: '/software-para-turnos', destination: '/sistema-de-turnos-turnomaster', permanent: true },
+      { source: '/rollos-termicos', destination: '/rollos-de-papel-termico', permanent: true },
     ];
   },
   experimental: {
