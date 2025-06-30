@@ -1459,7 +1459,7 @@ const turneroTurnomasterPosts = [
         "/que-es-un-sistema-de-espera-inteligente-y-como-funciona"
     ],
     "metadata": {
-        "title": "¿Qué es un sistema de espera inteligente y cómo funciona?",
+        "title": "Sistema de espera inteligente: qué es y cómo funciona",
         "description": "Optimiza tu negocio con un sistema de espera inteligente de Tecnología Plus. Reduce colas, agiliza la gestión y mejora la atención al cliente ¡Contactanos!",
         "keywords": [
             "Sistema de espera inteligente",
