@@ -77,6 +77,33 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Redirigir HTTP a HTTPS de manera segura
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http'
+          }
+        ],
+        permanent: true,
+        destination: 'https://tecnologiaplus.com/:path*',
+        basePath: false
+      },
+      // Redirigir www a non-www de manera segura
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.tecnologiaplus.com'
+          }
+        ],
+        permanent: true,
+        destination: 'https://tecnologiaplus.com/:path*',
+        basePath: false
+      },
       { source: '/calificadores-de-servicio', destination: '/calificador-de-servicio-al-cliente-opinamaster', permanent: true },
       { source: '/software-de-turnos', destination: '/sistema-de-turnos-turnomaster', permanent: true },
       { source: '/integrar-sistema-de-espera-inteligente-con-software-de-gestion', destination: '/blog/sistema-de-turnos/integrar-sistema-espera-software-gestion-facturacion', permanent: true },
