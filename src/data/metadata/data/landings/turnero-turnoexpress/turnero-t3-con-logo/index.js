@@ -1,8 +1,8 @@
 import { routes } from "@/config/routes";
 import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 
-const title = "Turnero T3 con logo - Resalta tú Marca";
-const description = "Turnero digital: Somos fabricantes. Acelera la atención al cliente y moderniza tu negocio. ¡Solicita una asesoria ahora!";
+const title = "Turnero T3 con logo | Fabricantes de turneros digitales";
+const description = "Turnero T3 con logo. Somos fabricantes de turneros digitales. Resalta tu marca, organiza tus filas y ofrece una experiencia profesional.";
 const keywords = ["Turnero T3 con Logo"];
 const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.turneroTurnoexpress.children.turneroT3ConLogo.url}`;
 
