@@ -284,6 +284,7 @@ const nextConfig = {
       { source: '/dispensador-de-tiquetes', destination: '/dispensador-de-tickets', permanent: true },
       { source: '/software-para-turnos', destination: '/sistema-de-turnos-turnomaster', permanent: true },
       { source: '/rollos-termicos', destination: '/rollos-de-papel-termico', permanent: true },
+      { source: '/blog/turnero-turnoexpress/sistema-espera-inteligente-como-funciona', destination: '/blog/sistema-de-turnos/sistema-espera-inteligente-como-funciona', permanent: true },
     ];
   },
   experimental: {
