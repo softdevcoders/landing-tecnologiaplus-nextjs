@@ -405,7 +405,7 @@ const llamadoresDeMeserosPosts = [
         "/como-mejorar-la-administracion-de-restaurantes"
     ],
     "metadata": {
-        "title": "¿Cómo mejorar la administración de restaurantes?",
+        "title": "Mejora la administración de restaurantes fácilmente",
         "description": "Mejora la administración de tu restaurante con servicio de calidad, operaciones eficientes y tecnología innovadora. ¡Optimiza tu negocio hoy!",
         "keywords": [
             "Administración de restaurantes",
@@ -438,7 +438,7 @@ const llamadoresDeMeserosPosts = [
     ],
     "metadata": {
         "title": "Llamadores de Meseros - Transforma la atención al cliente",
-        "description": "Descubre cómo los llamadores de meseros de Tecnología Plus mejoran el servicio, aumentan propinas y optimizan tu restaurante. ¡Eleva tu nivel hoy!",
+        "description": "Transforma la atención al cliente con llamadores de meseros. Somos fabricantes. Agiliza tu servicio y resalta la experiencia en tu restaurante.",
         "keywords": [
             "Llamadores de Meseros",
         ]
@@ -469,7 +469,7 @@ const llamadoresDeMeserosPosts = [
         "/timbres-de-mesa-para-tu-restaurante"
     ],
     "metadata": {
-        "title": "¿Cómo mejorar el servicio en un restaurante?",
+        "title": "Mejora el servicio en tu restaurante con soluciones",
         "description": "Mejora el servicio en tu restaurante con tecnología: reservas online, llamadores, pedidos por tabletas y más. Optimiza la experiencia del cliente.",
         "keywords": [
             "Mejora el servicio en tu restaurante",
@@ -1416,12 +1416,12 @@ const turneroTurnoexpressPosts = [
 ]
 
 const turneroTurnomasterPosts = [
- {
+  {
     "id": 10106,
     "date": "2024-07-16T09:45:45",
     "modified": "2025-05-16T09:28:10",
     "slug": "reducir-tiempo-espera-gestion-turnos",
-    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/reducir-tiempo-espera-gestion-turnos`,
+    "current_link": `${routes.blog.children.sistemasDeTurnosTurnomaster.url}/reducir-tiempo-espera-gestion-turnos`,
     "previous_link": [
         "/sistema-de-turnos-como-reducir-tiempo-de-espera-de-tus-clientes"
     ],
@@ -1454,7 +1454,7 @@ const turneroTurnomasterPosts = [
     "date": "2024-05-21T11:42:50",
     "modified": "2025-05-16T09:29:33",
     "slug": "sistema-espera-inteligente-como-funciona",
-    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/sistema-espera-inteligente-como-funciona`,
+    "current_link": `${routes.blog.children.sistemasDeTurnosTurnomaster.url}/sistema-espera-inteligente-como-funciona`,
     "previous_link": [
         "/que-es-un-sistema-de-espera-inteligente-y-como-funciona"
     ],
@@ -1487,7 +1487,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-11-03T08:36:18",
     "modified": "2025-05-16T09:33:32",
     "slug": "mejor-sistema-turnos-inalambrico-drogueria",
-    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/mejor-sistema-turnos-inalambrico-drogueria`,
+    "current_link": `${routes.blog.children.sistemasDeTurnosTurnomaster.url}/mejor-sistema-turnos-inalambrico-drogueria`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/sistema-de-turnos-inalambrico-para-tu-drogueria"
     ],
@@ -1520,7 +1520,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-11-03T08:20:05",
     "modified": "2025-05-16T09:34:34",
     "slug": "pantalla-de-turnos-plan-eficaz-equipo",
-    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/pantalla-de-turnos-plan-eficaz-equipo`,
+    "current_link": `${routes.blog.children.sistemasDeTurnosTurnomaster.url}/pantalla-de-turnos-plan-eficaz-equipo`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/pantalla-de-turnos-como-crear-un-plan-de-manejo-de-turnos-para-tu-equipo/"
     ],
@@ -1553,7 +1553,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-07-19T09:51:45",
    "modified": "2025-05-16T09:38:08",
     "slug": "mejor-software-turnos-negocio",
-    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/mejor-software-turnos-negocio`,
+    "current_link": `${routes.blog.children.sistemasDeTurnosTurnomaster.url}/mejor-software-turnos-negocio`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/como-elegir-el-mejor-software-de-turnos"
     ],
@@ -1586,7 +1586,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-07-12T14:21:00",
     "modified": "2025-05-16T09:38:50",
     "slug": "mejorar-gestion-filas",
-    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/mejorar-gestion-filas`,
+    "current_link": `${routes.blog.children.sistemasDeTurnosTurnomaster.url}/mejorar-gestion-filas`,
     "previous_link": [
         "/blog/turnero-turnoexpress/como-mejorar-la-gestion-de-filas/"
     ],
@@ -1619,7 +1619,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-06-12T14:16:00",
     "modified": "2025-05-16T09:40:10",
     "slug": "importancia-sistema-turnos-negocios-beneficios",
-    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/importancia-sistema-turnos-negocios-beneficios`,
+    "current_link": `${routes.blog.children.sistemasDeTurnosTurnomaster.url}/importancia-sistema-turnos-negocios-beneficios`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/por-que-implementar-un-sistema-de-turnos"
     ],
@@ -1652,12 +1652,12 @@ const turneroTurnomasterPosts = [
     "date": "2020-10-28T14:20:13",
     "modified": "2025-05-16T09:40:38",
     "slug": "5-ventajas-software-turnos",
-    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/5-ventajas-software-turnos`,
+    "current_link": `${routes.blog.children.sistemasDeTurnosTurnomaster.url}/5-ventajas-software-turnos`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/5-ventajas-del-software-de-turnos/"
     ],
     "metadata": {
-        "title": "5 Ventajas del software de turnos",
+        "title": "5 ventajas clave de usar software de turnos",
         "description": "¿Sabes qué es un software para turnos? Aquí te mostramos 5 ventajas de usar esta herramienta para optimizar la gestión de tus clientes.",
         "keywords": [
             "Ventajas del software de turnos",
@@ -1685,12 +1685,12 @@ const turneroTurnomasterPosts = [
     "date": "2020-10-28T14:18:20",
     "modified": "2025-05-16T09:41:02",
     "slug": "organizar-filas-turnero-digital",
-    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/organizar-filas-turnero-digital`,
+    "current_link": `${routes.blog.children.sistemasDeTurnosTurnomaster.url}/organizar-filas-turnero-digital`,
     "previous_link": [
         "/blog/turnero-turnoexpress/como-organizar-las-filas/"
     ],
     "metadata": {
-        "title": "¿Cómo organizar las filas con ayuda de un turnero digital?",
+        "title": "Organiza filas fácil con un turnero digital eficaz",
         "description": "Optimiza las filas en tu empresa con un turnero digital. Descubre qué es y los beneficios que ofrece este sistema de gestión de turnos.",
         "keywords": [
             "Cómo organizar las filas",
@@ -1718,7 +1718,7 @@ const turneroTurnomasterPosts = [
     "date": "2023-11-06T07:15:32",
     "modified": "2025-05-16T09:33:18",
     "slug": "integrar-sistema-espera-software-gestion-facturacion",
-    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/integrar-sistema-espera-software-gestion-facturacion`,
+    "current_link": `${routes.blog.children.sistemasDeTurnosTurnomaster.url}/integrar-sistema-espera-software-gestion-facturacion`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/como-integrar-un-sistema-de-espera-con-software-de-gestion-o-facturacion/"
     ],
@@ -1751,7 +1751,7 @@ const turneroTurnomasterPosts = [
     "date": "2024-08-08T10:55:25",
     "modified": "2025-05-16T09:27:15",
     "slug": "facilitar-transicion-software-gestion-turnos",
-    "current_link": `${routes.blog.children.turneroTurnoexpress.url}/facilitar-transicion-software-gestion-turnos`,
+    "current_link": `${routes.blog.children.sistemasDeTurnosTurnomaster.url}/facilitar-transicion-software-gestion-turnos`,
     "previous_link": [
         "/blog/sistema-de-turnos-turnomaster/software-de-turnos-como-facilitar-la-transicion/",
     ],
@@ -1860,7 +1860,7 @@ const dispensadorDeTicketsPosts = [
         "/blog/dispensador-de-tickets/deberias-tener-un-dispensador-de-turnos-en-tu-negocio/"
     ],
     "metadata": {
-        "title": "¿Deberías tener un dispensador de turnos en tu negocio?",
+        "title": "¿Necesitas un Dispensador de Turnos en tu negocio?",
         "description": "Descubre los beneficios de tener un dispensador de turnos en tu negocio para mejorar la organización y la experiencia del cliente. Recibe asesoria personalizada",
         "keywords": [
             "dispensador de turnos",
