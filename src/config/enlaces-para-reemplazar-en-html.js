@@ -29,7 +29,7 @@ export const enlacesParaReemplazar = [
   },
   {
     "previous": "https://tecnologiaplus.com/calificadores-de-servicio-la-herramienta-clave-para-la-retroalimentacion-del-cliente/",
-    "current": "/blog/calificador-de-servicio-al-cliente/herramienta-retroalimentacion-cliente"
+    "current": "/blog/calificador-de-servicio-al-cliente/herramienta-retroalimentacion-cliente/"
   },
   {
     "previous": "https://tecnologiaplus.com/como-elegir-el-mejor-software-de-turnos/",
