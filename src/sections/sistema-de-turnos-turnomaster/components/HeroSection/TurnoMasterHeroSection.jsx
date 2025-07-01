@@ -20,7 +20,7 @@ function HeroSection() {
         {/* Seccion de Texto */}
         <>
           <LandingHeroPortadaContentText className={`${stylesDefault.content__text__mobile}`}>
-            <LandingHeroPortadaContentTextTitle className={style.content__text__title__mobile__custom}>
+            <LandingHeroPortadaContentTextTitle isMobile={true} className={style.content__text__title__mobile__custom}>
               {landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.mobile.text.title}
             </LandingHeroPortadaContentTextTitle>
             <LandingHeroPortadaContentTextDescription className={style.content__text__description__mobile__custom}>

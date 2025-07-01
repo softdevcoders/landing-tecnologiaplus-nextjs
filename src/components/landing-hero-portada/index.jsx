@@ -65,13 +65,23 @@ export const LandingHeroPortadaContentText = ({children, className = ""}) => {
   ) 
 }
 
-export const LandingHeroPortadaContentTextTitle = ({className = "", children}) => {
+export const LandingHeroPortadaContentTextTitle = ({className = "", isMobile = false, children}) => {
   return (
-    <h1 
-      className={`${styles.content__text__title} ${className}`}
-      dangerouslySetInnerHTML={{__html: children}}
-    />
-  ) 
+    // Se hace esto para que SEO no tome dos h1 en la misma pagina.
+    <>
+      {isMobile ? (  
+        <h2 
+          className={`${styles.content__text__title} ${className}`}
+          dangerouslySetInnerHTML={{__html: children}}
+        />
+      ) : (
+        <h1 
+          className={`${styles.content__text__title} ${className}`}
+          dangerouslySetInnerHTML={{__html: children}}
+        />
+      )}
+    </>
+  )
 }
 
 export const LandingHeroPortadaContentTextSubTitle = ({className = "", children}) => {
