@@ -12,7 +12,6 @@ test.js
 # next.js
 /.next/
 /out/
-*.conf
 
 # production
 /build
