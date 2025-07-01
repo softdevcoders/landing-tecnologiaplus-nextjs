@@ -8,6 +8,7 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  trailingSlash: true,
   images: {
     domains: ['res.cloudinary.com', 'i.ytimg.com', '31.97.14.208', 'tecnologiaplus.com'],
     formats: ['image/avif', 'image/webp'],
