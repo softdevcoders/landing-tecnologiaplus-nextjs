@@ -12,8 +12,11 @@ const LandingHero = (props) => {
     images, 
     imageTextColumn, 
     customTemplate = false,
-    templateName = null 
+    templateName = null,
+    isFirstSlide = false 
   } = props;
+  
+  const HeadingTag = isFirstSlide ? 'h1' : 'h2';
   
   return (
     <div className={styles.landing_hero__container}>
@@ -38,7 +41,7 @@ const LandingHero = (props) => {
           {title && subTitle && (
             <>
               {Array.isArray(title) && (
-                <h1 className={styles.landing_hero__content__text__title}>
+                <HeadingTag className={styles.landing_hero__content__text__title}>
                   {title.map((item, index) => (
                     <span 
                       key={index} 
@@ -46,10 +49,10 @@ const LandingHero = (props) => {
                       dangerouslySetInnerHTML={{ __html: item.text }} 
                     />
                   ))}
-                </h1>
+                </HeadingTag>
               )}
               {!Array.isArray(title) && (
-                <h1 
+                <HeadingTag 
                   className={styles.landing_hero__content__text__title}
                   dangerouslySetInnerHTML={{ __html: title }} 
                 />
@@ -62,7 +65,7 @@ const LandingHero = (props) => {
           {title && !subTitle && (
             <>
               {Array.isArray(title) && (
-                <h1 className={styles.landing_hero__content__text__title}>
+                <HeadingTag className={styles.landing_hero__content__text__title}>
                   {title.map((item, index) => (
                     <span 
                       key={index} 
@@ -70,10 +73,10 @@ const LandingHero = (props) => {
                       dangerouslySetInnerHTML={{ __html: item.text }} 
                     />
                   ))}
-                </h1>
+                </HeadingTag>
               )}
               {!Array.isArray(title) && (
-                <h1 
+                <HeadingTag 
                   className={styles.landing_hero__content__text__title}
                   dangerouslySetInnerHTML={{ __html: title }} 
                 />

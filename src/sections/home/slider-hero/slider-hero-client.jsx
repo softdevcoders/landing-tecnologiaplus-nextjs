@@ -81,6 +81,7 @@ export default function SliderHero({ styles, items }) {
                 {...({
                   ...items[key].informationHome,
                   title: items[key].informationHome.title,
+                  isFirstSlide: index === 0
                 })} 
               />
             </div>
