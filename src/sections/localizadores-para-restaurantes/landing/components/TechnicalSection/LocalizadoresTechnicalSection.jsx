@@ -1,27 +1,150 @@
+"use client";
 import styles from './LocalizadoresTechnicalSection.module.scss';
+import Accordion from '@/components/ui/accordion/Accordion';
 
 function LocalizadoresTechnicalSection() {
+  const specifications = [
+    {
+      title: "Especificaciones del Localizador",
+      content: `Características físicas y técnicas detalladas de nuestros localizadores:
+
+Dimensiones y construcción:
+• Tamaño: 85mm x 55mm x 8mm
+• Peso: 45g con batería
+• Material: Policarbonato grado médico
+• Resistencia: IP54 (polvo y salpicaduras)
+• Acabado: Antimicrobiano y anti-UV
+
+Pantalla y controles:
+• Pantalla OLED 1.3"
+• Resolución: 128 x 64 píxeles
+• Brillo: 500 nits
+• Ángulo de visión: 160°
+• Controles táctiles capacitivos
+
+Sistema electrónico:
+• Procesador: ARM Cortex-M4
+• Memoria: 256KB RAM
+• Flash: 1MB
+• Acelerómetro de 3 ejes
+• Sensor de temperatura integrado`
+    },
+    {
+      title: "Sistema de Comunicación",
+      content: `Detalles técnicos del sistema de comunicación inalámbrica:
+
+Tecnología RF:
+• Frecuencia: 433/868/915 MHz
+• Potencia: 10mW ajustable
+• Sensibilidad: -110dBm
+• Modulación: GFSK/FSK
+• Ancho de banda: 100kHz
+
+Características de transmisión:
+• Alcance: 200m en espacio abierto
+• Latencia: <100ms
+• Tasa de datos: 250kbps
+• Encriptación: AES-256
+• FHSS (Frequency Hopping)
+
+Gestión de interferencias:
+• Detección automática de canal
+• Salto adaptativo de frecuencia
+• Corrección de errores FEC
+• Filtrado de ruido digital
+• Redundancia de datos`
+    },
+    {
+      title: "Sistema de Alimentación",
+      content: `Especificaciones detalladas del sistema de alimentación y carga:
+
+Batería:
+• Tipo: Li-Po 3.7V
+• Capacidad: 1000mAh
+• Tiempo de operación: 72h
+• Ciclos de vida: >1000
+• Protección de sobrecarga
+
+Sistema de carga:
+• Voltaje de entrada: 5V DC
+• Corriente de carga: 500mA
+• Tiempo de carga: 2 horas
+• Eficiencia: >90%
+• Protección térmica
+
+Base de carga:
+• Capacidad: 20 unidades
+• Contactos: Oro 24K
+• Alineación magnética
+• LED indicador por unidad
+• Protección contra cortocircuitos`
+    },
+    {
+      title: "Software de Gestión",
+      content: `Características técnicas del software de administración:
+
+Arquitectura del sistema:
+• Backend: Node.js/Express
+• Base de datos: PostgreSQL
+• Cache: Redis
+• WebSocket para tiempo real
+• API RESTful documentada
+
+Capacidades del sistema:
+• Usuarios simultáneos: 100+
+• Dispositivos por sistema: 500+
+• Tiempo de respuesta: <50ms
+• Disponibilidad: 99.9%
+• Backup automático
+
+Seguridad:
+• Autenticación JWT
+• HTTPS/TLS 1.3
+• Cifrado de datos en reposo
+• Logs de auditoría
+• Copias de seguridad cifradas`
+    },
+    {
+      title: "Integración y Conectividad",
+      content: `Especificaciones de integración con sistemas externos:
+
+Protocolos soportados:
+• HTTP/HTTPS
+• WebSocket
+• MQTT
+• TCP/IP
+• Bluetooth LE 5.0
+
+APIs disponibles:
+• REST API completa
+• WebHooks
+• Streaming de eventos
+• GraphQL (opcional)
+• SDK para desarrollo
+
+Integraciones nativas:
+• Sistemas POS principales
+• Gestión de cocina
+• CRM y fidelización
+• Analytics y BI
+• Plataformas de delivery`
+    }
+  ];
+
   return (
     <section className={styles.technical__section}>
       <div className={styles.technical__container}>
         <h2 className={styles.technical__title}>Especificaciones Técnicas</h2>
-        <div className={styles.technical__content}>
-          <div className={styles.technical__text}>
-            <h3>Sistema de Alimentación y Gestión de Energía</h3>
-            <p>
-              Los localizadores utilizan baterías de litio-polímero de alta densidad de 3.7V/1200mAh con tecnología de carga rápida inteligente. El sistema de gestión de energía incluye un microprocesador dedicado que monitorea en tiempo real el voltaje, corriente y temperatura, implementando protección contra sobrecarga, sobredescarga y cortocircuito. La base de carga múltiple opera a 12V/2A con capacidad para 20 unidades, incorporando un sistema de balanceo de carga que optimiza la distribución de corriente. El consumo en modo activo es de 50mA, reduciéndose a 0.1mA en modo de espera, lo que permite una autonomía de hasta 72 horas de uso continuo o 30 días en standby.
-            </p>
-
-            <h3>Arquitectura de Comunicación RF</h3>
-            <p>
-              El sistema opera en la banda ISM de 433.05-434.79 MHz utilizando modulación GFSK con corrección de errores FEC y salto de frecuencia adaptativo. La potencia de transmisión es ajustable entre 0dBm y +20dBm, con una sensibilidad de recepción de -118dBm. El protocolo de comunicación propietario implementa encriptación AES-128 y utiliza un esquema TDMA optimizado que permite hasta 500 dispositivos por red con latencia inferior a 50ms. La tasa de transferencia de datos es de 100kbps con un alcance efectivo de 200 metros en línea de vista y 100 metros con obstáculos, manteniendo una tasa de error de paquetes inferior al 0.01%.
-            </p>
-
-            <h3>Especificaciones Mecánicas y Ambientales</h3>
-            <p>
-              La carcasa está fabricada en policarbonato grado médico con clasificación IP54 (IEC 60529) y certificación UL94 V-0 para retardancia de llama. Las dimensiones son 95mm x 65mm x 18mm con un peso de 120g ±5g. La pantalla OLED de 0.96" tiene una resolución de 128x64 píxeles con ángulo de visión de 160° y vida útil de 50,000 horas. El motor de vibración de precisión genera 1.2G de fuerza a 12000 RPM con 10 patrones programables. El rango de temperatura operativa es de 0°C a 50°C con humedad relativa de hasta 90% sin condensación. Los botones táctiles capacitivos están sellados con clasificación IP67 y tienen una vida útil certificada de 1 millón de ciclos.
-            </p>
-          </div>
+        <div className={styles.technical__list}>
+          {specifications.map((spec, index) => (
+            <Accordion key={index} title={spec.title}>
+              <div className={styles.technical__content}>
+                {spec.content.split('\n\n').map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
+            </Accordion>
+          ))}
         </div>
       </div>
     </section>

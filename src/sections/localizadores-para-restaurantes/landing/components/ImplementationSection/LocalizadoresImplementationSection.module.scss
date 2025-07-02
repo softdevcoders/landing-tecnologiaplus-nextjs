@@ -1,38 +1,35 @@
 .implementation__section {
-  padding: 5rem 1rem;
+  padding: 4rem 0;
   background-color: #fff;
 
   .implementation__container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
+  }
 
-    .implementation__title {
-      text-align: center;
-      color: #606060;
-      font-size: 2rem;
-      font-weight: 900;
-      margin-bottom: 3rem;
-    }
+  .implementation__title {
+    text-align: center;
+    color: #6f3bb4;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
 
-    .implementation__content {
-      .implementation__text {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
+  .implementation__list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
-        h3 {
-          color: #6f3bb4;
-          font-size: 1.5rem;
-          font-weight: 700;
-          margin-bottom: 1rem;
-        }
+  .implementation__content {
+    padding: 1.5rem;
+    color: #606060;
+    line-height: 1.6;
 
-        p {
-          color: #606060;
-          font-size: 1rem;
-          line-height: 1.6;
-          margin-bottom: 2rem;
-        }
+    p {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
