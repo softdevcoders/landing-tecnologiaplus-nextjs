@@ -45,7 +45,7 @@ export const enlacesParaReemplazar = [
   },
   {
     "previous": "https://tecnologiaplus.com/como-mejorar-la-gestion-de-filas/",
-    "current": "/blog/turnero/mejorar-gestion-filas/"
+    "current": "/blog/sistema-de-turnos/mejorar-gestion-filas/"
   },
   {
     "previous": "https://tecnologiaplus.com/contacto/",
