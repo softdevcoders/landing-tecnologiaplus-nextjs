@@ -1,0 +1,39 @@
+.technical__section {
+  padding: 5rem 1rem;
+  background-color: #f9f9f9;
+
+  .technical__container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .technical__title {
+      text-align: center;
+      color: #606060;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 3rem;
+    }
+
+    .technical__content {
+      .technical__text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        h3 {
+          color: #6f3bb4;
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          color: #606060;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+} 

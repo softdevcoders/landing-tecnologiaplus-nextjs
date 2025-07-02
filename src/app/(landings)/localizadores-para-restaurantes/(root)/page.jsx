@@ -6,6 +6,11 @@ import LocalizadoresIndustriesSection from "@/sections/localizadores-para-restau
 import LocalizadoresProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/ProductsSection/LocalizadoresProductsSection";
 import LocalizadoresRelatedProducts from "@/sections/localizadores-para-restaurantes/landing/components/RelatedProducts/LocalizadoresRelatedProducts";
 import LocalizadoresSecondaryProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/SecondaryProductsSection/LocalizadoresSecondaryProductsSection";
+import LocalizadoresFaqSection from "@/sections/localizadores-para-restaurantes/landing/components/FaqSection/LocalizadoresFaqSection";
+import LocalizadoresImplementationSection from "@/sections/localizadores-para-restaurantes/landing/components/ImplementationSection/LocalizadoresImplementationSection";
+import LocalizadoresCompetitiveSection from "@/sections/localizadores-para-restaurantes/landing/components/CompetitiveSection/LocalizadoresCompetitiveSection";
+import LocalizadoresSuccessSection from "@/sections/localizadores-para-restaurantes/landing/components/SuccessSection/LocalizadoresSuccessSection";
+import LocalizadoresTechnicalSection from "@/sections/localizadores-para-restaurantes/landing/components/TechnicalSection/LocalizadoresTechnicalSection";
 
 export async function generateMetadata() {
   const { 'localizadores-para-restaurantes': { root: metadata } } = getMetadata('landings');
@@ -16,11 +21,18 @@ export default function LocalizadoresLanding() {
   return (
     <>
       <LocalizadoresHeroSection />
-      <LocalizadoresClientsSection />
+      {/* <LocalizadoresClientsSection /> */}
       <LocalizadoresProductsSection />
       <LocalizadoresBenefitsSection />
       <LocalizadoresSecondaryProductsSection />
       <LocalizadoresIndustriesSection />
+      {/* New sections */}
+      <LocalizadoresFaqSection />
+      <LocalizadoresImplementationSection />
+      <LocalizadoresCompetitiveSection />
+      <LocalizadoresSuccessSection />
+      <LocalizadoresTechnicalSection />
+      {/* End new sections */}
       <LocalizadoresRelatedProducts />
     </>
   );
