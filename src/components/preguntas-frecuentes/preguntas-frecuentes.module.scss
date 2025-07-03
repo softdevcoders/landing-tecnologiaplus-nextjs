@@ -1,0 +1,106 @@
+.faq__section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+
+  @media (min-width: 768px) {
+    padding: 4rem 4rem 9rem 4rem;
+  }
+
+  .faq__title {
+    /* Fallback para navegadores que no soportan text-wrap: balance */
+    text-wrap: balance;
+    
+    /* Fallback para navegadores que no soportan gradientes */
+    color: #00bdff;
+    
+    /* Soporte para diferentes navegadores */
+    background: linear-gradient(0deg, #00bdff 20%, #ac00ff 70%);
+    background: -webkit-linear-gradient(0deg, #00bdff 20%, #ac00ff 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: transparent;
+    
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    display: inline-block;
+    width: fit-content;
+    
+    /* Mejora de renderizado en dispositivos móviles */
+    @media (min-width: 768px) {
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+  }
+
+  .faq__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    .accordion {
+      width: 100%;
+      
+      .accordion__header {
+        width: 100%;
+        max-width: 1000px;
+        padding: 0.75rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #e0e0e0;
+        cursor: pointer;
+    
+        .accordion__title {
+          margin: 0;
+          text-align: left;
+          font-size: 1rem;
+          font-weight: 600;
+          color: #a0a0a0;
+    
+          @media (min-width: 768px) {
+            font-size: 1.2rem;
+          }
+        }
+    
+        .accordion__icon {
+          font-size: 1.5rem;
+          color: #606060;
+          font-weight: 300;
+          transition: transform 0.3s ease;
+        }
+    
+        &.open .accordion__icon {
+          transform: rotate(180deg);
+        }
+      }
+    
+      .accordion__content {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        color: #a0a0a0;
+        transition: padding .2s ease-out, max-height .2s ease-out;
+        font-size: 0.8rem;
+        text-align: justify;
+    
+        @media (min-width: 768px) {
+          font-size: 1rem;
+        }
+    
+        &.open {
+          max-height: 2000px;
+          padding: 0.75rem 0;
+          transition: padding .2s ease-in, max-height .2s ease-in;
+        }
+      }
+    } 
+  }
+} 
