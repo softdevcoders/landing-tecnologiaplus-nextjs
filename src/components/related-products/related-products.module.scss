@@ -417,8 +417,46 @@
   .slider {
     position: relative;
     padding-inline: 2rem;
+    width: 100%;
+    overflow: hidden;
 
-    // Navigation buttons
+    .viewport {
+      width: 100%;
+      overflow: hidden;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      touch-action: pan-y;
+    }
+
+    .slide {
+      position: relative;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      min-width: 0;
+      padding: 0 0.5rem;
+
+      @media (min-width: 868px) {
+        -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+      }
+
+      @media (min-width: 1250px) {
+        -webkit-flex: 0 0 33.333333%;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+      }
+    }
+
     button {
       position: absolute;
       background-color: #ffffffb3;
@@ -430,6 +468,7 @@
       top: 50%;
       cursor: pointer;
       transition: all 0.3s ease;
+      z-index: 1;
 
       &:first-of-type {
         left: 2rem;

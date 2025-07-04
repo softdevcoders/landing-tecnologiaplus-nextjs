@@ -98,12 +98,13 @@ export default function RelatedProductsCarousel({ products }) {
   return (
     <div className={style.slider}>
       <div className={style.viewport} ref={emblaRef}>
-        {products.map((product, index) => (
-          <ProductCard 
-            key={index} 
-            product={product} 
-          />
-        ))}
+        <div className={style.container}>
+          {products.map((product, index) => (
+            <div key={index} className={style.slide}>
+              <ProductCard product={product} />
+            </div>
+          ))}
+        </div>
       </div>
       <button 
         onClick={scrollPrev}
