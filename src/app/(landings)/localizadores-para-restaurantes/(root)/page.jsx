@@ -21,8 +21,8 @@ export default function LocalizadoresLanding() {
       <LocalizadoresBenefitsSection />
       <LocalizadoresSecondaryProductsSection />
       <LocalizadoresIndustriesSection />
-      <LocalizadoresPreguntasFrecuentes />
       <LocalizadoresRelatedProducts />
+      <LocalizadoresPreguntasFrecuentes />
     </>
   );
 }
