@@ -96,22 +96,23 @@ const defaultProducts = [
 function RelatedProducts({ productsKeys = [], isVerMasView = false }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
-    duration: 30,
-    dragFree: false,
-    containScroll: 'trimSnaps',
-    skipSnaps: false,
-    inViewThreshold: 0.7,
-    align: 'center',
-    watchDrag: true,
-    speed: 10,
+    align: 'start',
     slidesToScroll: 1,
+    containScroll: 'trimSnaps',
+    dragFree: false,
+    watchDrag: true,
     breakpoints: {
-      '(max-width: 768px)': { 
-        dragFree: false,
-        containScroll: 'keepSnaps',
-        speed: 15,
-        skipSnaps: false,
-        watchDrag: true
+      '(min-width: 1250px)': { 
+        slidesToScroll: 3,
+        containScroll: 'keepSnaps'
+      },
+      '(min-width: 868px)': { 
+        slidesToScroll: 2,
+        containScroll: 'keepSnaps'
+      },
+      '(max-width: 867px)': { 
+        slidesToScroll: 1,
+        containScroll: 'keepSnaps'
       }
     }
   });
