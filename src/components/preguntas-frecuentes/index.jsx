@@ -42,7 +42,7 @@ function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
               }}
             >
               <h3>{faq.question}</h3>
-              <span>{openAccordion === index ? '-' : '+'}</span>
+              <span>⌃</span>
             </button>
             <div data-open={index === openAccordion}>
               {faq.answer}
@@ -52,7 +52,7 @@ function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
       </div>
       {hasMoreQuestions && (
         <button onClick={handleToggleQuestions}>
-          {showAllQuestions ? 'Ver menos preguntas' : `Ver ${preguntasFrecuentes.length - initialQuestionsCount} preguntas más`}
+          {showAllQuestions ? 'Menos preguntas' : 'Más preguntas'}
         </button>
       )}
     </section>

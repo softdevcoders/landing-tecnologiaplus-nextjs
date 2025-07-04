@@ -87,14 +87,15 @@
         }
     
         span {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
           color: #606060;
           font-weight: 300;
+          transform: rotate(180deg);
           transition: transform 0.3s ease;
         }
     
         &[data-open="true"] span {
-          transform: rotate(180deg);
+          transform: rotate(0deg);
         }
       }
     
@@ -141,5 +142,13 @@
     text-decoration-skip-ink: none;
     background: none;
     border: none;
+
+    > span {
+      transform: rotate(180deg);
+
+      &[data-show="true"] {
+        transform: rotate(0deg);
+      }
+    }
   }
 } 
