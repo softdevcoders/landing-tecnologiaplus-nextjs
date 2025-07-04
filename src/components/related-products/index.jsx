@@ -96,12 +96,10 @@ export default function RelatedProducts({ productsKeys = [], isVerMasView = fals
 
   return (
     <section className={style.related__products}>
-      <div className={style.related__products__container}>
-        <h2 className={`${style.related__products__title} ${isVerMasView ? style.related__products__title__ver__mas : ""}`}>
-          Productos similares
-        </h2>
-        <RelatedProductsCarousel products={filteredProducts} />
-      </div>
+      <h2 data-is-ver-mas={isVerMasView}>
+        Productos similares
+      </h2>
+      <RelatedProductsCarousel products={filteredProducts} />
       <ProductSpecs />
     </section>
   );

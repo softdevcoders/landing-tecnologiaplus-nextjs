@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import style from './related-products.module.scss';
 import ProductCard from './product-card';
+import { ArrowLeft, ArrowRight } from '@/components/ui/icons';
 
 export default function RelatedProductsCarousel({ products }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
@@ -30,8 +31,6 @@ export default function RelatedProductsCarousel({ products }) {
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
   const [slidesInView, setSlidesInView] = useState(1);
   
   const calculateSlides = useCallback(() => {
@@ -81,8 +80,6 @@ export default function RelatedProductsCarousel({ products }) {
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(Math.floor(emblaApi.selectedScrollSnap() / slidesInView));
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
   }, [emblaApi, slidesInView]);
 
   useEffect(() => {
@@ -101,46 +98,34 @@ export default function RelatedProductsCarousel({ products }) {
   return (
     <div className={style.slider}>
       <div className={style.viewport} ref={emblaRef}>
-        <div className={style.container}>
-          {products.map((product, index) => (
-            <div 
-              key={index} 
-              className={style.slide}
-              role="group"
-              aria-roledescription="slide"
-              aria-label={`${index + 1} of ${products.length}`}
-            >
-              <ProductCard product={product} />
-            </div>
-          ))}
-        </div>
+        {products.map((product, index) => (
+          <ProductCard 
+            key={index} 
+            product={product} 
+          />
+        ))}
       </div>
       <button 
-        className={style.prev} 
         onClick={scrollPrev}
-        disabled={!canScrollPrev}
-        aria-label="Previous slide"
+        aria-label="Anterior producto"
       >
-        <span className={style.prev__icon} />
+        <ArrowLeft />
       </button>
       <button 
-        className={style.next} 
         onClick={scrollNext}
-        disabled={!canScrollNext}
-        aria-label="Next slide"
+        aria-label="Siguiente producto"
       >
-        <span className={style.next__icon} />
+        <ArrowRight />
       </button>
-      <div 
-        className={style.bullets}
+      <div
         role="tablist"
-        aria-label="Choose slide to display"
+        aria-label="Selecciona el producto a mostrar"
       >
         {slideIndexes.map((index) => (
           <span
             key={index}
             role="tab"
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={`Ir al producto ${index + 1}`}
             aria-selected={index === selectedIndex}
             className={style.bullet}
             onClick={() => scrollTo(index)}
