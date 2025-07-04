@@ -1,7 +1,7 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import useEmblaCarousel from 'embla-carousel-react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import style from "./related-products.module.scss";
@@ -94,60 +94,152 @@ const defaultProducts = [
 ];
 
 function RelatedProducts({ productsKeys = [], isVerMasView = false }) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    duration: 30,
+    dragFree: false,
+    containScroll: 'trimSnaps',
+    skipSnaps: false,
+    inViewThreshold: 0.7,
+    align: 'center',
+    watchDrag: true,
+    speed: 10,
+    slidesToScroll: 1,
+    breakpoints: {
+      '(max-width: 768px)': { 
+        dragFree: false,
+        containScroll: 'keepSnaps',
+        speed: 15,
+        skipSnaps: false,
+        watchDrag: true
+      }
+    }
+  });
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const scrollTo = useCallback((index) => {
+    if (emblaApi) emblaApi.scrollTo(index);
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onSelect();
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
+
+    return () => {
+      emblaApi.off('select', onSelect);
+      emblaApi.off('reInit', onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
   const filteredProducts = productsKeys.map((key) => defaultProducts.find((product) => product.category_key === key));  
 
   return (
     <section className={style.related__products}>
       <div className={style.related__products__container}>
         <h2 className={`${style.related__products__title} ${isVerMasView ? style.related__products__title__ver__mas : ""}`}>Productos similares</h2>
-        <div className={style.swiper__container}>
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={0}
-            loop={true}
-            pagination={{ clickable: true }}
-            navigation
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              868: { slidesPerView: 2 },
-              1250: { slidesPerView: 3 },
-            }}
-          >
-            {filteredProducts.map((product, index) => (
-              <SwiperSlide
-                key={index}
-                className={style.swiper__slide}
-              >
-                <div className={style.swiper__slide__card}>
-                  <div className={`${style.swiper__slide__card__info} ${product.shouldImageBeAtTheBottom ? style.swiper__slide__card__info__image__at__bottom : ""}`}>
-                    <Link href={product.link}> 
-                      <h3 className={style.swiper__slide__card__info__title}>{product.name}</h3>
-                    </Link>
-                    <Link href={product.link}> 
-                      <p className={style.swiper__slide__card__info__description}>{product.description}</p>
-                    </Link>
-                    <Link href={product.link}> 
-                      <div className={style.swiper__slide__card__info__img__container}>
-                        <img
-                          width={320} 
-                          height={230}
-                          src={product.img}
-                          alt={`imagen de ${product.name}`}
-                          className={`${style.swiper__slide__card__info__img} ${product.customClass ? product.customClass : ""}`}
+        <div className={style.slider}>
+          <div className={style.viewport} ref={emblaRef}>
+            <div className={style.container}>
+              {filteredProducts.map((product, index) => (
+                <div 
+                  key={index} 
+                  className={style.slide}
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label={`${index + 1} of ${filteredProducts.length}`}
+                >
+                  <div className={style.swiper__slide__card}>
+                    <div className={`${style.swiper__slide__card__info} ${product.shouldImageBeAtTheBottom ? style.swiper__slide__card__info__image__at__bottom : ""}`}>
+                      <Link href={product.link}> 
+                        <h3 className={style.swiper__slide__card__info__title}>{product.name}</h3>
+                      </Link>
+                      <Link href={product.link}> 
+                        <p className={style.swiper__slide__card__info__description}>{product.description}</p>
+                      </Link>
+                      <Link href={product.link}> 
+                        <div className={style.swiper__slide__card__info__img__container}>
+                          <img
+                            width={320} 
+                            height={230}
+                            src={product.img}
+                            alt={`imagen de ${product.name}`}
+                            className={`${style.swiper__slide__card__info__img} ${product.customClass ? product.customClass : ""}`}
                             loading="lazy"
-                        />
-                      </div>
+                          />
+                        </div>
+                      </Link>
+                      <p className={style.swiper__slide__card__info__selling__counter}>{product.sold}</p>
+                    </div>
+                    <Link className={style.swiper__slide__card__btn} href={product.link}>
+                      Ver más
                     </Link>
-                    <p className={style.swiper__slide__card__info__selling__counter}>{product.sold}</p>
                   </div>
-                  <Link className={style.swiper__slide__card__btn} href={product.link}>
-                    Ver más
-                  </Link>
                 </div>
-              </SwiperSlide>
+              ))}
+            </div>
+          </div>
+          <button 
+            className={style.prev} 
+            onClick={scrollPrev}
+            disabled={!canScrollPrev}
+            aria-label="Previous slide"
+          >
+            <span className={style.prev__icon} />
+          </button>
+          <button 
+            className={style.next} 
+            onClick={scrollNext}
+            disabled={!canScrollNext}
+            aria-label="Next slide"
+          >
+            <span className={style.next__icon} />
+          </button>
+          <div 
+            className={style.bullets}
+            role="tablist"
+            aria-label="Choose slide to display"
+          >
+            {filteredProducts.map((_, index) => (
+              <span
+                key={index}
+                role="tab"
+                aria-label={`Go to slide ${index + 1}`}
+                aria-selected={index === selectedIndex}
+                className={style.bullet}
+                onClick={() => scrollTo(index)}
+                data-selected={index === selectedIndex}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    scrollTo(index);
+                  }
+                }}
+              />
             ))}
-          </Swiper>
-        </div> 
+          </div>
+        </div>
       </div>
       <div className={style.related__products__specs}>
         <ul className={style.related__products__specs__list}>

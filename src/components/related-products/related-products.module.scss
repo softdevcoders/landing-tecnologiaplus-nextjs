@@ -1,303 +1,296 @@
 .related__products {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 4rem 0;
+  background-color: #f5f5f5;
 
-  .related__products__container {
-    display: flex;
-    flex-direction: column;
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+
+    &__ver__mas {
+      text-align: left;
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 3rem;
+
+  .viewport {
     width: 100%;
-    padding: 3rem 2rem;
-    background-color: #f4f4f4;
-    gap: 3rem;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
 
-    &.related__products__container__ver__mas {
-      padding: 3rem 5%;
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: pan-y pinch-zoom;
+  }
+
+  .slide {
+    position: relative;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: 0 1rem;
+    will-change: transform;
+
+    @media (min-width: 868px) {
+      flex: 0 0 50%;
     }
 
-    .related__products__title {
-      font-size: 1.5rem;
-      font-weight: 900;
-      line-height: 1.2;
-      color: #606060;
-      width: 100%;
-      text-align: center;
-
-      &.related__products__title__ver__mas {
-        font-weight: 700;
-      }
-    }
-
-    .swiper__container {
-      width: 100%;
-      max-width: 85rem;
-      margin: 0 auto;
-
-      .swiper__slide {
-        width: 100%;
-        margin: 0 auto;
-
-        .swiper__slide__card {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 0.5rem;
-          width: 290px;
-
-          .swiper__slide__card__info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background-color: #fff;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            height: 23.75rem;
-            width: 100%;
-            gap: 0.75rem;
-
-            .swiper__slide__card__info__title {
-              color: #606060;
-              text-align: center;
-              font-weight: 700;
-              line-height: 1.2;
-              font-size: 1.25rem;
-              margin: 0;
-            }
-  
-            .swiper__slide__card__info__description {
-              text-align: center;
-              color: #606060;
-              font-weight: 400;
-              line-height: 1.2;
-              font-size: 1rem;
-              margin: 0;
-            }
-  
-            .swiper__slide__card__info__img__container {
-              width: 100%;
-              height: 200px;
-
-              .swiper__slide__card__info__img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-              }
-
-              .turnomaster__img__custom {
-                -webkit-transform: translate(-22px, 70px) scale(1.3);
-                -ms-transform: translate(-22px, 70px) scale(1.3);
-                transform: translate(-22px, 70px) scale(1.3);
-              }
-
-              .llamadores__img__custom {
-                -webkit-transform: translate(-7px, -8px) scale(1.15);
-                -ms-transform: translate(-7px, -8px) scale(1.15);
-                transform: translate(-7px, -8px) scale(1.15);
-              }
-            }
-  
-            .swiper__slide__card__info__selling__counter {
-              color: #6f3bb4;
-              font-size: 1rem;
-              font-weight: 600;
-              margin: 0;
-            }
-          }
-  
-          .swiper__slide__card__btn {
-            background: #6f3bb4;
-            color: #fff;
-            border-radius: 2rem;
-            padding: .2rem 1rem;
-            font-weight: 600;
-            font-size: 1rem;
-          }
-        }
-      }
-
-      /* Swiper - Carousel */
-
-      :global(.swiper-slide) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: max-content;
-      }
-      :global(.swiper-button-next),
-      :global(.swiper-button-prev) {
-        color: #5f5f5f;
-        font-weight: bold;
-        background-color: rgba(255, 255, 255, 0.7);
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        transition: all 0.2s ease;
-        
-        &:after {
-          font-size: 15px;
-        }
-      }
-
-      :global(.swiper-button-next)::after,
-      :global(.swiper-button-prev)::after {
-        font-size: 15px;
-      }
-
-      :global(.swiper-button-next) {
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      :global(.swiper-button-prev) {
-        top: 50%; 
-        left: 5px;
-        transform: translateY(-50%);
-      }
-
-      :global(.swiper-pagination) {
-        margin-top: 40px;
-        position: relative;
-      }
-
-      :global(.swiper-pagination-bullet) {
-        background-color: #aeaeae;
-        width: 12px;
-        height: 12px;
-        opacity: 1;
-      }
-
-      :global(.swiper-pagination-bullet-active) {
-        background-color: #5f5f5f;
-      }
-
-      /* Fin Swiper - Carousel */
+    @media (min-width: 1250px) {
+      flex: 0 0 33.33%;
     }
   }
 
-  .related__products__specs {
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 30px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 10;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    background-color: #6f3bb4;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
-    width: 100%;
 
-    .related__products__specs__list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: #ccc;
+    }
+
+    &:not(:disabled):hover {
+      background-color: #5a2f94;
+    }
+  }
+
+  .prev {
+    left: 8px;
+
+    @media (min-width: 769px) {
+      left: 10px;
+    }
+
+    &__icon::before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg);
+      margin-left: 4px;
+    }
+  }
+
+  .next {
+    right: 8px;
+
+    @media (min-width: 769px) {
+      right: 10px;
+    }
+
+    &__icon::before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid currentColor;
+      border-top: 2px solid currentColor;
+      transform: rotate(45deg);
+      margin-right: 4px;
+    }
+  }
+
+  .bullets {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
+    padding: 10px;
+
+    .bullet {
+      width: 1rem;
+      height: 1rem;
+      padding: 0;
+      margin: 0;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.2);
+      border: none;
+      cursor: pointer;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      touch-action: manipulation;
+
+      &:active {
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      &[data-selected="true"] {
+        background: #6f3bb4;
+      }
+
+      @media (min-width: 769px) {
+        width: 1.1rem;
+        height: 1.1rem;
+
+        @media (hover: hover) {
+          &:hover {
+            background: rgba(0, 0, 0, 0.4);
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper__slide__card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__info {
+    padding: 1.5rem;
+    flex: 1;
+
+    &__title {
+      font-size: 1.25rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    &__description {
+      color: #666;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    &__img__container {
+      position: relative;
+      width: 100%;
+      margin-bottom: 1rem;
+      
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    }
+
+    &__selling__counter {
+      color: #888;
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background: #0056b3;
+    }
+  }
+}
+
+.related__products__specs {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    &__item {
+      display: flex;
+      align-items: center;
       gap: 1rem;
 
-      .related__products__specs__list__item {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 1rem;
-        width: 100%;
-
-        .related__products__specs__list__item__icon {
-          min-width: 30px;
-          height: 34px;
-
-          .related__products__specs__list__item__icon__img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-          }
+      &__icon {
+        width: 30px;
+        height: 30px;
+        
+        &__img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
         }
-        .related__products__specs__list__item__text {
-          font-size: 0.875rem;
-          font-weight: 600;
-          line-height: 1.2;
-          color: #606060;
-          margin: 0;
-        }
+      }
+
+      &__text {
+        color: #666;
+        font-size: 0.9rem;
       }
     }
   }
 }
 
-@media (min-width: 768px) {
-  .related__products {
-    .related__products__container {
-      .swiper__container {
-        .swiper__slide {
-          .swiper__slide__card {
-            width: 360px;
-
-            .swiper__slide__card__info {
-              .swiper__slide__card__info__img__container {
-                .turnomaster__img__custom {
-                  -webkit-transform: translate(-24px, 44px) scale(1.3);
-                  -ms-transform: translate(-24px, 44px) scale(1.3);
-                  transform: translate(-24px, 44px) scale(1.3);
-                }
-  
-                .llamadores__img__custom {
-                  -webkit-transform: translate(-24px, -5px) scale(1.3);
-                  -ms-transform: translate(-24px, -5px) scale(1.3);
-                  transform: translate(-24px, -5px) scale(1.3);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .related__products__specs {
-      padding-bottom: 5rem;
-    }
-  }
+// Custom classes for specific product images
+.turnomaster__img__custom {
+  // Add specific styles if needed
 }
 
-@media (min-width: 1024px) {
-  .related__products {
-    .related__products__container {
-      padding: 3rem 5%;
-
-      .related__products__title {
-        font-size: 2.5rem;
-
-        &.related__products__title__ver__mas {
-          color: #000;
-          font-size: 2rem;
-          font-weight: 700;
-          line-height: 1;
-          text-align: left;
-        }
-      }
-    }
-
-    .related__products__specs {
-      padding-bottom: 10rem;
-
-      .related__products__specs__list {
-        grid-template-columns: repeat(4, 1fr);
-
-        .related__products__specs__list__item {
-          justify-content: center;
-
-          .related__products__specs__list__item__text {
-            font-size: 1rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1250px) {
-  .related__products {
-    .related__products__container {
-      .swiper__container {
-        :global(.swiper-button-next),
-        :global(.swiper-button-prev) {
-          display: none !important;
-        }
-      }
-    }
-  }
+.llamadores__img__custom {
+  // Add specific styles if needed
 }
