@@ -1,18 +1,34 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styles from './preguntas-frecuentes.module.scss';
 
 function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
   const [openAccordion, setOpenAccordion] = useState(null);
   const [showAllQuestions, setShowAllQuestions] = useState(false);
+  const titleRef = useRef(null);
 
   const initialQuestionsCount = 5;
   const hasMoreQuestions = preguntasFrecuentes.length > initialQuestionsCount;
 
+  const handleToggleQuestions = () => {
+    setShowAllQuestions(!showAllQuestions);
+    if (showAllQuestions) {
+      const yOffset = -100;
+      const element = titleRef.current;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth',
+        duration: 2000
+      });
+    }
+  };
+
   return (
     <section className={styles.s}>
-      <h2>Preguntas Frecuentes</h2>
+      <h2 ref={titleRef}>Preguntas Frecuentes</h2>
       <div data-show={showAllQuestions}>
         {preguntasFrecuentes.map((faq, index) => (
           <div 
@@ -35,7 +51,7 @@ function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
         ))}
       </div>
       {hasMoreQuestions && (
-        <button onClick={() => setShowAllQuestions(!showAllQuestions)}>
+        <button onClick={handleToggleQuestions}>
           {showAllQuestions ? 'Ver menos preguntas' : `Ver ${preguntasFrecuentes.length - initialQuestionsCount} preguntas más`}
         </button>
       )}
