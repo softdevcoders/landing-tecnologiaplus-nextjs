@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 
 export default function InfiniteSlider({ logos, speed = 60 }) {
   // Triplicamos los logos para asegurar una transición más suave
-  const duplicated = [...logos, ...logos, ...logos];
+  const duplicated = [...logos, ...logos];
 
   // Referencia al track que se anima
   const trackRef = useRef(null);

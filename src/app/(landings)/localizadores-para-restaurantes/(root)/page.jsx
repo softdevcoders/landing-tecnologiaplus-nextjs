@@ -16,13 +16,13 @@ export default function LocalizadoresLanding() {
   return (
     <>
       <LocalizadoresHeroSection />
-      {/* <LocalizadoresClientsSection /> */}
+      <LocalizadoresClientsSection />
       <LocalizadoresProductsSection />
       <LocalizadoresBenefitsSection />
       <LocalizadoresSecondaryProductsSection />
       <LocalizadoresIndustriesSection />
       <LocalizadoresPreguntasFrecuentes />
-      {/* <LocalizadoresRelatedProducts /> */}
+      <LocalizadoresRelatedProducts />
     </>
   );
 }
