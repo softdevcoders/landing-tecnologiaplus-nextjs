@@ -45,6 +45,7 @@
       width: 100%;
 
       &[data-hidden="true"] {
+        display: none;
         height: 0;
         margin: 0;
         padding: 0;
@@ -119,6 +120,7 @@
     }
 
     &[data-show="true"] > div[data-hidden="true"] {
+      display: block;
       height: auto;
       opacity: 1;
       margin: initial;
