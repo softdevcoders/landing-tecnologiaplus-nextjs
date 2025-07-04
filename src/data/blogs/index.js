@@ -2398,8 +2398,8 @@ const calificadorDeServicioAlCliente = [
     "id": 10727,
     "date": "2025-06-13T15:15:01",
     "modified": "2025-06-13T15:15:01",
-    "slug": "calificador-de-servicio-al-cliente-opinamaster",
-    "current_link": `${routes.blog.children.calificadorDeServicioAlClienteOpinamaster.url}/calificador-de-servicio-al-cliente-opinamaster`,
+    "slug": "como-calificar-el-servicio-al-cliente-preguntas-personalizadas",
+    "current_link": `${routes.blog.children.calificadorDeServicioAlClienteOpinamaster.url}/como-calificar-el-servicio-al-cliente-preguntas-personalizadas`,
     "previous_link": [
         "/calificador-de-servicio-al-cliente/por-que-usar-calificadores-de-servicio"
     ],
