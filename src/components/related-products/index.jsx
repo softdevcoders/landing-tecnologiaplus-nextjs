@@ -120,6 +120,42 @@ function RelatedProducts({ productsKeys = [], isVerMasView = false }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [slidesInView, setSlidesInView] = useState(1);
+
+  const filteredProducts = productsKeys.map((key) => defaultProducts.find((product) => product.category_key === key));
+  
+  // Calculate total number of slides based on window width
+  const calculateSlides = useCallback(() => {
+    if (typeof window === 'undefined') return [];
+    
+    const totalProducts = filteredProducts.length;
+    let itemsPerSlide = 1; // default for mobile
+
+    if (window.innerWidth >= 1250) {
+      itemsPerSlide = 3;
+    } else if (window.innerWidth >= 868) {
+      itemsPerSlide = 2;
+    }
+
+    setSlidesInView(itemsPerSlide);
+    const totalSlides = Math.ceil(totalProducts / itemsPerSlide);
+    return Array.from({ length: totalSlides }, (_, i) => i);
+  }, [filteredProducts.length]);
+
+  const [slideIndexes, setSlideIndexes] = useState([]);
+
+  useEffect(() => {
+    const updateSlides = () => {
+      setSlideIndexes(calculateSlides());
+    };
+
+    updateSlides();
+    window.addEventListener('resize', updateSlides);
+
+    return () => {
+      window.removeEventListener('resize', updateSlides);
+    };
+  }, [calculateSlides]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -130,15 +166,15 @@ function RelatedProducts({ productsKeys = [], isVerMasView = false }) {
   }, [emblaApi]);
 
   const scrollTo = useCallback((index) => {
-    if (emblaApi) emblaApi.scrollTo(index);
-  }, [emblaApi]);
+    if (emblaApi) emblaApi.scrollTo(index * slidesInView);
+  }, [emblaApi, slidesInView]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
+    setSelectedIndex(Math.floor(emblaApi.selectedScrollSnap() / slidesInView));
     setCanScrollPrev(emblaApi.canScrollPrev());
     setCanScrollNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
+  }, [emblaApi, slidesInView]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -152,8 +188,6 @@ function RelatedProducts({ productsKeys = [], isVerMasView = false }) {
       emblaApi.off('reInit', onSelect);
     };
   }, [emblaApi, onSelect]);
-
-  const filteredProducts = productsKeys.map((key) => defaultProducts.find((product) => product.category_key === key));  
 
   return (
     <section className={style.related__products}>
@@ -221,7 +255,7 @@ function RelatedProducts({ productsKeys = [], isVerMasView = false }) {
             role="tablist"
             aria-label="Choose slide to display"
           >
-            {filteredProducts.map((_, index) => (
+            {slideIndexes.map((index) => (
               <span
                 key={index}
                 role="tab"
