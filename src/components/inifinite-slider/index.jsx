@@ -41,24 +41,16 @@ export default function InfiniteSlider({ logos, speed = 60 }) {
   }, [logos, speed]);
 
   return (
-    <div className={styles.slider}>
-      <div className={styles.sliderTrack} ref={trackRef}>
-        {duplicated.map((logo, idx) => (
-          <div key={`${logo.src}-${idx}`} className={styles.slide}>
-            <Image
-              src={logo.src}
-              alt={logo.alt}
-              width={130}
-              height={50}
-              style={{
-                objectFit: 'contain',
-                width: '130px',
-                height: '50px',
-              }}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
+    <section className={styles.infiniteSlider} ref={trackRef}>
+      {duplicated.map((logo, idx) => (
+        <Image
+          key={`${logo.src}-${idx}`}
+          src={logo.src}
+          alt={logo.alt}
+          width={130}
+          height={50}
+        />
+      ))}
+    </section>
   );
 }

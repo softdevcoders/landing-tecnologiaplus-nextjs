@@ -22,7 +22,7 @@ export default function LocalizadoresLanding() {
       <LocalizadoresSecondaryProductsSection />
       <LocalizadoresIndustriesSection />
       <LocalizadoresPreguntasFrecuentes />
-      <LocalizadoresRelatedProducts />
+      {/* <LocalizadoresRelatedProducts /> */}
     </>
   );
 }
