@@ -1,9 +1,9 @@
 // Styles
 import "@/styles/critical.scss";
 import "@/styles/main.scss";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { GoogleTagManager } from '@next/third-parties/google'
 
 import { Bebas_Neue, Montserrat, Archivo_Black } from 'next/font/google'

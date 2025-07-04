@@ -1,7 +1,7 @@
 'use client';
-import Image from 'next/image';
 import styles from './infinite-slider.module.scss';
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 export default function InfiniteSlider({ logos, speed = 60 }) {
   // Triplicamos los logos para asegurar una transición más suave
@@ -21,10 +21,7 @@ export default function InfiniteSlider({ logos, speed = 60 }) {
       // Se anima hasta -50% del ancho total
       const travelDistance = trackWidth * 0.5; // px
       const duration = travelDistance / speed; // segundos
-
-      // Aplicamos la duración tanto para prefijos webkit como estándar
-      track.style.animationDuration = `${duration}s`;
-      track.style.webkitAnimationDuration = `${duration}s`;
+      track.style.setProperty('--slider-duration', `${duration}s`);
     };
 
     updateDuration();
