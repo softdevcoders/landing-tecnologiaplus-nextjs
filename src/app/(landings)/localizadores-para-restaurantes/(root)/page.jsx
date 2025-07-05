@@ -6,7 +6,8 @@ import LocalizadoresIndustriesSection from "@/sections/localizadores-para-restau
 import LocalizadoresProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/ProductsSection/LocalizadoresProductsSection";
 import LocalizadoresRelatedProducts from "@/sections/localizadores-para-restaurantes/landing/components/RelatedProducts/LocalizadoresRelatedProducts";
 import LocalizadoresSecondaryProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/SecondaryProductsSection/LocalizadoresSecondaryProductsSection";
-// import LocalizadoresPreguntasFrecuentes from "@/sections/localizadores-para-restaurantes/landing/components/PreguntasFrecuentes";
+import LocalizadoresPreguntasFrecuentes from "@/sections/localizadores-para-restaurantes/landing/components/PreguntasFrecuentes";
+
 export async function generateMetadata() {
   const { 'localizadores-para-restaurantes': { root: metadata } } = getMetadata('landings');
   return metadata;
@@ -21,8 +22,8 @@ export default function LocalizadoresLanding() {
       <LocalizadoresBenefitsSection />
       <LocalizadoresSecondaryProductsSection />
       <LocalizadoresIndustriesSection />
-      {/* <LocalizadoresPreguntasFrecuentes /> */}
       <LocalizadoresRelatedProducts />
+      <LocalizadoresPreguntasFrecuentes />
     </>
   );
 }

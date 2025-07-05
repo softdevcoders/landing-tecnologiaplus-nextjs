@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import styles from './preguntas-frecuentes.module.scss';
+import { ArrowDown, ArrowUp } from '../ui/icons';
 
 function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
   const [openAccordion, setOpenAccordion] = useState(null);
@@ -53,6 +54,7 @@ function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
       {hasMoreQuestions && (
         <button onClick={handleToggleQuestions}>
           {showAllQuestions ? 'Menos preguntas' : 'Más preguntas'}
+          {showAllQuestions ? <ArrowUp size={16} /> : <ArrowDown size={16} />}
         </button>
       )}
     </section>
