@@ -295,13 +295,14 @@ const nextConfig = {
       'react-icons',
       'lodash',
     ],
-    turbo: process.env.TURBO === 'true',
+  },
+  // Configuración del compilador SWC para optimizar para navegadores modernos
+  compiler: {
+    // Remover consoles en producción para optimizar el bundle
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   // Enable source maps in production
   productionBrowserSourceMaps: false,
-  // Optimizaciones generales
-  optimizeFonts: true,
-  swcMinify: true,
   // Configuración de caché
   onDemandEntries: {
     maxInactiveAge: 60 * 60 * 1000, // 1 hora

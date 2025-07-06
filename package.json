@@ -55,5 +55,22 @@
     "swc-loader": "^0.2.6",
     "url-loader": "^4.1.1"
   },
+  "browserslist": {
+    "production": [
+      "chrome >= 91",
+      "firefox >= 90",
+      "safari >= 14",
+      "edge >= 91",
+      "not ie 11",
+      "not op_mini all",
+      "not android 4.4.3-4.4.4",
+      "not samsung 4"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "packageManager": "pnpm@10.8.1"
 }
