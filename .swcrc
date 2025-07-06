@@ -1,0 +1,42 @@
+{
+  "jsc": {
+    "target": "es2022",
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true,
+      "decorators": true,
+      "dynamicImport": true
+    },
+    "transform": {
+      "react": {
+        "runtime": "automatic"
+      }
+    },
+    "experimental": {
+      "keepImportAssertions": true
+    }
+  },
+  "env": {
+    "targets": {
+      "chrome": "91",
+      "firefox": "90",
+      "safari": "14",
+      "edge": "91",
+      "ios": "14",
+      "android": "91"
+    },
+    "mode": "usage",
+    "coreJs": false,
+    "shippedProposals": true
+  },
+  "module": {
+    "type": "es6",
+    "strict": true,
+    "strictMode": true,
+    "lazy": false,
+    "noInterop": false
+  },
+  "minify": true,
+  "sourceMaps": true,
+  "inlineSourcesContent": false
+} 
