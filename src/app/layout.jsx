@@ -5,6 +5,7 @@ import "@/styles/main.scss";
 // import "swiper/css/navigation";
 // import "swiper/css/pagination";
 import { GoogleTagManager } from '@next/third-parties/google'
+import ResourceHints from '@/components/resource-hints'
 
 import { Bebas_Neue, Montserrat, Archivo_Black } from 'next/font/google'
 import { SHOULD_ROBOTS_INDEX } from "@/data/metadata/config";
@@ -30,15 +31,25 @@ const archivo_black = Archivo_Black({
   variable: '--font-archivo-black',
 })
 
+// Generate metadata for better preconnect handling
+export async function generateMetadata() {
+  return {
+    other: {
+      // Force preconnect hints to be processed early
+      'preconnect-0': 'https://res.cloudinary.com',
+      'preconnect-1': 'https://fonts.googleapis.com',
+      'preconnect-2': 'https://fonts.gstatic.com',
+    },
+  };
+}
+
 export default function RootLayout({ children }) {
 
   return (
     <html lang="es" className={`${montserrat.className} ${bebas.className} ${archivo_black.variable} ${montserrat.variable} ${bebas.variable}`}>
       <head>
-        {/* Preconnect for CDN & Google Fonts */}
-        <link rel="preconnect" href="https://res.cloudinary.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Critical resource hints - processed first for maximum performance */}
+        <ResourceHints />
 
         {/* Security Headers */}
         {/* <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
