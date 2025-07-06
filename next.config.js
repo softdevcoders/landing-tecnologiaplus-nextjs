@@ -47,8 +47,16 @@ const nextConfig = {
         splitChunks: {
           chunks: 'all',
           minSize: 20000,
-          maxSize: 50000,
+          maxSize: 100000, // Increased to reduce CSS chunking
           cacheGroups: {
+            // Combine all CSS into fewer chunks
+            styles: {
+              name: 'styles',
+              test: /\.(css|scss|sass)$/,
+              chunks: 'all',
+              enforce: true,
+              priority: 30,
+            },
             swiper: {
               test: /[\\/]node_modules[\\/]swiper[\\/]/,
               name: 'swiper',
@@ -72,6 +80,9 @@ const nextConfig = {
       ...(config.resolve.alias || {}),
       'swiper/react': path.resolve(__dirname, 'src/components/ui/SwiperDynamic'),
     };
+
+    // Optimize CSS loading in production - Next.js handles this automatically
+    // Additional CSS optimization is handled by the splitChunks configuration above
 
     // You can customize webpack configuration here
     return config;
@@ -300,6 +311,8 @@ const nextConfig = {
   compiler: {
     // Remover consoles en producción para optimizar el bundle
     removeConsole: process.env.NODE_ENV === 'production',
+    // Minify CSS
+    styledComponents: true,
   },
   // Enable source maps in production
   productionBrowserSourceMaps: false,
