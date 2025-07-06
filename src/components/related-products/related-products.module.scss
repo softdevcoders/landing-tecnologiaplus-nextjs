@@ -5,6 +5,11 @@
   width: 100%;
   display: flex;
 
+  // Sacar cuando se agregue el componente de preguntas frecuentes
+  @media (min-width: 1024px) {
+    margin-bottom: 7rem;
+  }
+
   h2 {
     color: #606060;
     text-align: center;
