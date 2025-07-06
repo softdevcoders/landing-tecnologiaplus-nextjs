@@ -3,9 +3,9 @@
 import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import styles from "@/styles/ProductGallery.module.scss";
 import TinesPreguntasButton from "@/components/tines-preguntas-button";   
 import BackButton from "@/components/back-button";
