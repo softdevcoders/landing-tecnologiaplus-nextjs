@@ -9,6 +9,17 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   trailingSlash: true,
+  
+  // Configuración del compilador SWC para optimizar para navegadores modernos
+  compiler: {
+    // Remover consoles en producción para optimizar el bundle
+    removeConsole: process.env.NODE_ENV === 'production',
+    // Minify CSS
+    styledComponents: true,
+  },
+  
+  // SWC está habilitado por defecto en Next.js 15
+  
   images: {
     domains: ['res.cloudinary.com', 'i.ytimg.com', '31.97.14.208', 'tecnologiaplus.com'],
     formats: ['image/avif', 'image/webp'],
@@ -39,7 +50,37 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60 * 60 * 24 * 7,
   },
+  
   webpack: (config, { dev, isServer }) => {
+    // Configurar para navegadores modernos - evitar polyfills innecesarios
+    if (!dev && !isServer) {
+      // Deshabilitar polyfills específicos que ya son soportados por navegadores modernos
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        // Evitar polyfills para características ES6+ ya soportadas
+        'core-js/modules/es.array.at': false,
+        'core-js/modules/es.array.flat': false,
+        'core-js/modules/es.array.flat-map': false,
+        'core-js/modules/es.object.from-entries': false,
+        'core-js/modules/es.object.has-own': false,
+        'core-js/modules/es.string.trim-end': false,
+        'core-js/modules/es.string.trim-start': false,
+      };
+      
+      // Configurar para usar características nativas de navegadores modernos
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        // Mapear a implementaciones nativas cuando sea posible
+        'core-js/stable/array/at': 'core-js/stable/array/at',
+        'core-js/stable/array/flat': 'core-js/stable/array/flat',
+        'core-js/stable/array/flat-map': 'core-js/stable/array/flat-map',
+        'core-js/stable/object/from-entries': 'core-js/stable/object/from-entries',
+        'core-js/stable/object/has-own': 'core-js/stable/object/has-own',
+        'core-js/stable/string/trim-end': 'core-js/stable/string/trim-end',
+        'core-js/stable/string/trim-start': 'core-js/stable/string/trim-start',
+      };
+    }
+
     // Optimizaciones específicas para Swiper
     if (!isServer) {
       config.optimization = {
@@ -306,13 +347,6 @@ const nextConfig = {
       'react-icons',
       'lodash',
     ],
-  },
-  // Configuración del compilador SWC para optimizar para navegadores modernos
-  compiler: {
-    // Remover consoles en producción para optimizar el bundle
-    removeConsole: process.env.NODE_ENV === 'production',
-    // Minify CSS
-    styledComponents: true,
   },
   // Enable source maps in production
   productionBrowserSourceMaps: false,
