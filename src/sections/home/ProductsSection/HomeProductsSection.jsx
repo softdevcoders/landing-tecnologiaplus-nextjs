@@ -97,21 +97,14 @@ function HomeProductsSection() {
         {products.map((product, index) => (
           <div key={index} className={style.productsSection__card}>
             {product.link ? (
-              <Link title={`Ver más sobre ${product.title}`} href={product.link}>
+              <Link 
+                href={product.link}
+                className={style.productsSection__cardLink}
+                title={`Ver más sobre ${product.title}`}
+                aria-label={`Ver más información sobre ${product.title}: ${product.description}`}
+              >
                 <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
-              </Link>
-            ) : (
-              <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
-            )}
-            {product.link ? (
-              <Link href={product.link}> 
                 <p className={style.productsSection__cardDescription}>{product.description}</p>
-              </Link>
-            ) : ( 
-              <p className={style.productsSection__cardDescription}>{product.description}</p>
-            )}
-            {product.link ? (
-              <Link title={`Ver más sobre ${product.title}`}  href={product.link}>
                 <Image
                   src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${product.imageSrc}`}
                   alt={product.altText}
@@ -125,15 +118,19 @@ function HomeProductsSection() {
                   `}
                 />
               </Link>
-              ) : (
-              <Image
-                src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${product.imageSrc}`}
-                alt={product.altText}
-                width={463}
-                height={350}
-                sizes="(max-width: 768px) 316px, 600px"
-                className={style.productsSection__cardImage}
-              />
+            ) : (
+              <div className={style.productsSection__cardContent}>
+                <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
+                <p className={style.productsSection__cardDescription}>{product.description}</p>
+                <Image
+                  src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${product.imageSrc}`}
+                  alt={product.altText}
+                  width={463}
+                  height={350}
+                  sizes="(max-width: 768px) 316px, 600px"
+                  className={style.productsSection__cardImage}
+                />
+              </div>
             )}
             {product.link && (
               <div className={style.productsSection__cardBtn}>
