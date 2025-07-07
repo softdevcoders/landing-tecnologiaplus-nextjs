@@ -1,7 +1,13 @@
 import { routes } from "@/config/routes";
 import { getPosts } from "@/request/server/posts/get-posts";
+import { SHOULD_ROBOTS_INDEX } from "@/data/metadata/config";
 
 export default async function sitemap() {
+  // Si no se debe indexar (staging), retornar sitemap vacío
+  if (!SHOULD_ROBOTS_INDEX) {
+    return [];
+  }
+
   const links = [];
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tecnologiaplus.com';
   const posts = getPosts({ allPosts: true });
