@@ -34,7 +34,7 @@ export const landingHeros = {
         src: "1_zjvtlb.png",
         alt: "Localizadores para clientes",
         className: styles.landing_hero__content__image_mobile,
-        width: 350,
+        width: 600,
         fetchPriority: "high",
       },{
         src: "1_zjvtlb.png",
@@ -57,7 +57,7 @@ export const landingHeros = {
         image: {
           src: "1_zjvtlb.png",
           alt: "Localizadores para clientes",
-          width: 350,
+          width: 500,
           height: 550
         }
       },
@@ -83,7 +83,7 @@ export const landingHeros = {
         src: "3_j5shgh.png",
         alt: "Llamador de meseros",
         className: styles.landing_hero__content__image_mobile,
-        width: 350,
+        width: 800,
       },{
         src: "3_j5shgh.png",
         alt: "Llamador de meseros",
@@ -105,7 +105,7 @@ export const landingHeros = {
         image: {
           src: "3_j5shgh.png",
           alt: "Llamador de meseros",
-          width: 350,
+          width: 500,
           height: 553
         }
       },
@@ -133,7 +133,7 @@ export const landingHeros = {
         src: "website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/pp65ihdvnzxx3arig8yj",
         alt: "Llamado de enfermería",
         className: styles.landing_hero__content__image_mobile,
-        width: 350,
+        width: 800,
       },{
         src: "website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
         alt: "Llamado de enfermería",
@@ -160,7 +160,7 @@ export const landingHeros = {
         image: {
           src: "website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/pp65ihdvnzxx3arig8yj",
           alt: "Llamado de enfermería",
-          width: 350,
+          width: 500,
           height: 553
         }
       },
@@ -198,7 +198,7 @@ export const landingHeros = {
         src: "website-v2/images/landings/sistema-de-turnos-turnomaster/landings/trdh4recmp6uwwa8ux71",
         alt: "Sistema de turnos de espera",
         className: styles.landing_hero__content__image_mobile,
-        width: 350,
+        width: 800,
       },{
         src: "13_adjkab.png",
         alt: "Sistema de turnos de espera",
@@ -225,7 +225,7 @@ export const landingHeros = {
         image: {
           src: "website-v2/images/landings/sistema-de-turnos-turnomaster/landings/trdh4recmp6uwwa8ux71",
           alt: "Sistema de turnos de espera",
-          width: 350,
+          width: 600,
           height: 521
         }
       },
@@ -252,7 +252,7 @@ export const landingHeros = {
         src: "website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
         alt: "Turnero digital",
         className: styles.landing_hero__content__image_mobile,
-        width: 350,
+        width: 800,
       },{
         src: "website-v2/images/landings/turnero-turnoexpress/landings/uv4swpdtp8jpg35dclbh",
         alt: "Turnero digital",
@@ -280,7 +280,7 @@ export const landingHeros = {
         image: {
           src: "website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
           alt: "Turnero digital",
-          width: 350,
+          width: 500,
           height: 541
         }
       },
@@ -307,7 +307,7 @@ export const landingHeros = {
         src: "website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
         alt: "Dispensador de tickets",
         className: styles.landing_hero__content__image_mobile,
-        width: 350,
+        width: 800,
       },{
         src: "website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
         alt: "Dispensador de tickets",
@@ -335,7 +335,7 @@ export const landingHeros = {
         image: {
           src: "website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
           alt: "Dispensador de tickets",
-          width: 350,
+          width: 500,
           height: 557
         },
         button: {
@@ -376,7 +376,7 @@ export const landingHeros = {
         src: "website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
         alt: "Rollos de turnos",
         className: styles.landing_hero__content__image_mobile,
-        width: 350,
+        width: 800,
       },{
         src: "website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
         alt: "Rollos de turnos",
@@ -404,7 +404,7 @@ export const landingHeros = {
         image: {
           src: "website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
           alt: "Rollos de turnos",
-          width: 350,
+          width: 500,
           height: 447
         },
         button: {
@@ -444,7 +444,7 @@ export const landingHeros = {
         src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
         alt: "Rollos de turnos",
         className: styles.landing_hero__content__image_mobile,
-        width: 350,
+        width: 800,
       },{
         src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
         alt: "Rollos de turnos",
@@ -466,7 +466,7 @@ export const landingHeros = {
         image: {
           src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
           alt: "Rollos de turnos",
-          width: 350,
+          width: 500,
           height: 361
         },
         button: {
@@ -500,7 +500,7 @@ export const landingHeros = {
         src: "website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/zmdy9nvzeoetrit2w95n",
         alt: "Rollos de turnos",
         className: styles.landing_hero__content__image_mobile,  
-        width: 350,
+        width: 800,
       },{
         src: "website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/epg4efgegtcqvxyfdsbe",
         alt: "Rollos de turnos",
@@ -527,7 +527,7 @@ export const landingHeros = {
         image: {
           src: "website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/zmdy9nvzeoetrit2w95n",
           alt: "Calificador de servicio",
-          width: 350,
+          width: 600,
           height: 692
         }
       },
@@ -557,7 +557,7 @@ export const landingHeros = {
         src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
         alt: "Rollos de turnos",
         className: styles.landing_hero__content__image_mobile,
-        width: 350,
+        width: 800,
       },{
         src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/ubbkhbpquh0tquaz8xwl",
         alt: "Rollos de turnos",
@@ -584,7 +584,7 @@ export const landingHeros = {
         image: {
           src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
           alt: "Encuesta virtual",
-          width: 350,
+          width: 600,
           height: 603
         }
       },
