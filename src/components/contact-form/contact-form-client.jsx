@@ -50,7 +50,7 @@ const ContactFormClient = ({ sendEmail }) => {
           <h2>¡Mensaje enviado!</h2>
         </div>
         <p>
-          Gracias. Nos pondremos en contacto contigo lo antes posible.
+         Te vamos a contactar en máximo 2 horas hábiles, de lunes a viernes 8 a 5 pm.
         </p>
       </div>
     );
