@@ -128,39 +128,37 @@ const nextConfig = {
     // You can customize webpack configuration here
     return config;
   },
-  async redirects() {
-    return [
-      // Redirigir HTTP a HTTPS de manera segura
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'header',
-            key: 'x-forwarded-proto',
-            value: 'http'
-          }
-        ],
-        permanent: false,
-        statusCode: 301,
-        destination: 'https://tecnologiaplus.com/:path*',
-        basePath: false
-      },
-      // Redirigir www a non-www de manera segura
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.tecnologiaplus.com'
-          }
-        ],
-        permanent: false,
-        statusCode: 301,
-        destination: 'https://tecnologiaplus.com/:path*',
-        basePath: false
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     // Redirigir HTTP a HTTPS de manera segura
+  //     {
+  //       source: '/:path*',
+  //       has: [
+  //         {
+  //           type: 'header',
+  //           key: 'x-forwarded-proto',
+  //           value: 'http'
+  //         }
+  //       ],
+  //       permanent: true,
+  //       destination: 'https://tecnologiaplus.com/:path*',
+  //       basePath: false
+  //     },
+  //     // Redirigir www a non-www de manera segura
+  //     {
+  //       source: '/:path*',
+  //       has: [
+  //         {
+  //           type: 'host',
+  //           value: 'www.tecnologiaplus.com'
+  //         }
+  //       ],
+  //       permanent: true,
+  //       destination: 'https://tecnologiaplus.com/:path*',
+  //       basePath: false
+  //     },
+  //   ];
+  // },
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
