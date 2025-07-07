@@ -140,7 +140,7 @@ const nextConfig = {
             value: 'http'
           }
         ],
-        permanent: true,
+        permanent: false,
         statusCode: 301,
         destination: 'https://tecnologiaplus.com/:path*',
         basePath: false
@@ -154,7 +154,7 @@ const nextConfig = {
             value: 'www.tecnologiaplus.com'
           }
         ],
-        permanent: true,
+        permanent: false,
         statusCode: 301,
         destination: 'https://tecnologiaplus.com/:path*',
         basePath: false
