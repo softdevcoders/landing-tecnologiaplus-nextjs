@@ -5,7 +5,6 @@ import "@/styles/main.scss";
 // import "swiper/css/navigation";
 // import "swiper/css/pagination";
 // import { GoogleTagManager } from '@next/third-parties/google'
-import Script from "next/script";
 import ResourceHints from '@/components/resource-hints'
 
 import { Bebas_Neue, Montserrat, Archivo_Black } from 'next/font/google'
@@ -77,27 +76,21 @@ export default function RootLayout({ children }) {
         {/* Additional meta tags */}
         <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         {SHOULD_ROBOTS_INDEX && (
-          <>
-            {/* Google Tag Manager script (head) */}
-            <Script
-              id="gtm-script"
-              strategy="lazyOnload"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                  })(window,document,'script','dataLayer','GTM-P8J6LTX');
-                `,
-              }}
-            />
-          </>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-P8J6LTX');
+              `,
+            }}
+          />
         )}
       </head>
       <body>
         {/* {SHOULD_ROBOTS_INDEX && <GoogleTagManager gtmId="GTM-P8J6LTX" />} */}
-        {children}
         {SHOULD_ROBOTS_INDEX && (
           <noscript>
             <iframe
@@ -108,6 +101,7 @@ export default function RootLayout({ children }) {
             ></iframe>
           </noscript>
         )}
+        {children}
       </body>
     </html>
   );
