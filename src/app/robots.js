@@ -1,4 +1,23 @@
+import { SHOULD_ROBOTS_INDEX } from "@/data/metadata/config";
+
 export default function robots() {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tecnologiaplus.com';
+
+  if (!SHOULD_ROBOTS_INDEX) {
+    // Para staging: bloquear toda indexación
+    return {
+      rules: [
+        {
+          userAgent: '*',
+          disallow: ['/'],
+        }
+      ],
+      sitemap: `${baseUrl}/sitemap.xml`,
+      host: baseUrl,
+    }
+  }
+
+  // Para producción: configuración actual
   return {
     rules: [
       {
@@ -44,8 +63,8 @@ export default function robots() {
         disallow: ['/', '*'],
       }
     ],
-    sitemap: 'https://tecnologiaplus.com/sitemap.xml',
-    host: 'https://tecnologiaplus.com',
+    sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
     crawlDelay: 10
   }
 } 
