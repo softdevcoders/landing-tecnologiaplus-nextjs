@@ -162,7 +162,7 @@ export async function sendEmail(formData) {
                         <table role="presentation" cellpadding="0" cellspacing="0" style="width: 100%;">
                           <tr>
                             <td style="width: 50%;">
-                              <h1 style="margin: 0; font-family: Arial, sans-serif; font-size: 24px; font-weight: 500; color: white;">Confirmación de mensaje</h1>
+                              <h1 style="margin: 0; font-family: Arial, sans-serif; font-size: 24px; font-weight: 500; color: white;">Mensaje recibido</h1>
                             </td>
                             <td style="width: 50%; text-align: right;">
                               <img src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1749921675/website-v2/logos/logo-email-template/cqwf2nljlutt3iucwsjp.png" alt="Tecnología Plus" style="max-width: 200px; height: auto;" />
