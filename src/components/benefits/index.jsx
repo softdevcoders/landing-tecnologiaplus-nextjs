@@ -1,7 +1,7 @@
 import Image from "next/image";
 import style from "./benefits.module.scss";
 
-function BenefitsSection({ benefits, title, className = "" }) {
+function BenefitsSection({ benefits, title, className = "", isHome = false }) {
   return (
     <section className={`${style.benefits__section} ${className}`}>
       <Image
@@ -12,11 +12,23 @@ function BenefitsSection({ benefits, title, className = "" }) {
         height={1000}
       />
       <div className={style.benefits__content}>
-        {title && (
-          <h2
-            dangerouslySetInnerHTML={{ __html: title }}
-            className={style.benefits__title}
-          />
+        {title && isHome && (
+          <div className={style.benefits__title_container}>
+            <h2
+              dangerouslySetInnerHTML={{ __html: title }}
+              className={style.benefits__title}
+            />
+            {isHome && (
+              <Image
+                width={1140}
+                height={109}
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738960600/texto_2x-8_sklhxz"
+                alt="imagen que dice Nuestros clientes"
+                sizes="50vw"
+                className={style.benefits__image}
+              />
+            )}
+          </div>
         )}
         <ul className={style.benefits__container_list}>
           {benefits.map((benefit, index) => (
