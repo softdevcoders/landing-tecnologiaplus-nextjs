@@ -12,7 +12,7 @@ function BenefitsSection({ benefits, title, className = "", isHome = false }) {
         height={1000}
       />
       <div className={style.benefits__content}>
-        {title && isHome && (
+        {title && (
           <div className={style.benefits__title_container}>
             <h2
               dangerouslySetInnerHTML={{ __html: title }}
