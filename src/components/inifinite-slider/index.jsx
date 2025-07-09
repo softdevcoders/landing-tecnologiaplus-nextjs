@@ -1,7 +1,6 @@
 'use client';
 import styles from './infinite-slider.module.scss';
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
 
 export default function InfiniteSlider({ logos, speed = 60 }) {
   // Triplicamos los logos para asegurar una transición más suave
@@ -40,12 +39,11 @@ export default function InfiniteSlider({ logos, speed = 60 }) {
   return (
     <section className={styles.infiniteSlider} ref={trackRef}>
       {duplicated.map((logo, idx) => (
-        <Image
+        <img
           key={`${logo.src}-${idx}`}
           src={logo.src}
           alt={logo.alt}
-          width={130}
-          height={50}
+          loading="lazy"
         />
       ))}
     </section>

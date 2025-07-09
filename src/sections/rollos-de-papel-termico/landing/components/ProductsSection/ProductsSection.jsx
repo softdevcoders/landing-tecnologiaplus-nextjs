@@ -1,5 +1,6 @@
 import Image from "next/image";
 import style from "./ProductsSection.module.scss";
+import ToggleTextContent from "@/components/toggle-text-content";
 
 function ProductsSection() {
   return (
@@ -7,24 +8,21 @@ function ProductsSection() {
       <h2 className={style.products__title}>Rollos para impresora térmica</h2>
       <div className={style.products__container}>
         <Image
-          width={396}
-          height={352}
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349920/image-1_1_ljyxis_qdsmdq.webp"
+          width={1022}
+          height={909}
+          sizes="(max-width: 768px) 80vw, (max-width: 1024px) 60vw, (max-width: 1400px) 35vw, 20vw"
+          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349920/image-1_1_ljyxis_qdsmdq"
           alt="Rollos Térmicos blancos"
         />
         <Image
-          width={480}
-          height={352}
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/Recurso-13_2x-8_1_suitny_l91ptd.webp"
+          width={1237}
+          height={908}
+          sizes="(max-width: 768px) 80vw, (max-width: 1024px) 60vw, (max-width: 1400px) 35vw, 25vw"
+          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/Recurso-13_2x-8_1_suitny_l91ptd"
           alt="rollos de papel termico para impresoras"
         />
       </div>
-      <input
-        type="checkbox"
-        id="toggleText"
-        className={style.toggle__checkbox}
-      />
-      <p>
+      <ToggleTextContent>
         En Tecnología Plus, somos fabricantes especializados en rollos térmicos
         de alta calidad, diseñados para satisfacer las necesidades de impresión
         de todo tipo de negocios. Nuestros productos destacan por su precisión,
@@ -34,8 +32,7 @@ function ProductsSection() {
         Plus y experimenta la diferencia que solo los expertos pueden ofrecer.
         ¡Contacta con nosotros y descubre cómo podemos ser tu mejor aliado en
         impresión térmica!
-      </p>
-      <label htmlFor="toggleText" className={style.toggle__label}></label>
+      </ToggleTextContent>
     </section>
   );
 }
