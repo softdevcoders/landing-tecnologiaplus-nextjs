@@ -1,40 +1,26 @@
 'use client';
 import styles from './infinite-slider.module.scss';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-export default function InfiniteSlider({ logos, speed = 40 }) {
-  // Estado para controlar los logos duplicados (solo en cliente)
-  const [displayedLogos, setDisplayedLogos] = useState(logos);
-  
+export default function InfiniteSlider({ logos, speed = 60 }) {
+  // Triplicamos los logos para asegurar una transición más suave
+  const duplicated = [...logos, ...logos];
+
   // Referencia al track que se anima
   const trackRef = useRef(null);
 
-  // Efecto para duplicar los logos solo en el cliente después del primer render
-  useEffect(() => {
-    setDisplayedLogos([...logos, ...logos, ...logos]);
-  }, [logos]);
-
-  // Ajustamos la duración de la animación en función del tamaño del track y viewport
+  // Ajustamos la duración de la animación en función del tamaño del track
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
 
+    // Velocidad deseada en píxeles por segundo (recibida por prop `speed`)
     const updateDuration = () => {
       const trackWidth = track.scrollWidth;
-      const viewportWidth = window.innerWidth;
-      
-      // Ajustamos la velocidad según el viewport
-      let adjustedSpeed = speed;
-      if (viewportWidth >= 1024) {
-        adjustedSpeed = speed * 1.2; // 20% más rápido en desktop
-      } else if (viewportWidth >= 768) {
-        adjustedSpeed = speed * 1.1; // 10% más rápido en tablet
-      }
-
       // Se anima hasta -50% del ancho total
       const travelDistance = trackWidth * 0.5; // px
-      const duration = travelDistance / adjustedSpeed; // segundos
+      const duration = travelDistance / speed; // segundos
       track.style.setProperty('--slider-duration', `${duration}s`);
     };
 
@@ -49,11 +35,11 @@ export default function InfiniteSlider({ logos, speed = 40 }) {
       resizeObserver.disconnect();
       window.removeEventListener('resize', updateDuration);
     };
-  }, [displayedLogos, speed]);
+  }, [logos, speed]);
 
   return (
     <section className={styles.infiniteSlider} ref={trackRef}>
-      {displayedLogos.map((logo, idx) => (
+      {duplicated.map((logo, idx) => (
         <Image
           key={`${logo.src}-${idx}`}
           src={logo.src}
