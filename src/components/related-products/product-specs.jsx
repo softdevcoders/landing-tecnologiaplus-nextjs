@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import style from './related-products.module.scss';
 
 export default function ProductSpecs() {
   return (

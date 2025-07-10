@@ -6,7 +6,11 @@
   display: flex;
 
   &.addMarginBottom {
-    margin-bottom: 7rem;
+    margin-bottom: 0;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 6rem;
+    }
   }
 
   h2 {
