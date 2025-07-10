@@ -89,13 +89,13 @@ const defaultProducts = [
   },
 ];
 
-export default function RelatedProducts({ productsKeys = [], isVerMasView = false }) {
+export default function RelatedProducts({ productsKeys = [], isVerMasView = false, addMarginBottom = true }) {
   const filteredProducts = productsKeys.map((key) => 
     defaultProducts.find((product) => product.category_key === key)
   );
 
   return (
-    <section className={style.related__products}>
+    <section className={`${style.related__products} ${addMarginBottom ? style.addMarginBottom : ''}`}>
       <h2 data-is-ver-mas={isVerMasView}>
         Productos similares
       </h2>

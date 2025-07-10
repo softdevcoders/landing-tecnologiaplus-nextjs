@@ -147,7 +147,7 @@ function ProductGallery() {
             Turnero digital T1N con pantalla personalizable que permite
             proyectar la imagen corporativa mientras se hace el llamado de
             turnos. Uso frecuente en sector salud, gastronomía y oficinas de
-            servicio. Este llamador de turnos es inalámbrica y compatible con
+            servicio. Este llamador de turnos es inalámbrico y compatible con
             varias opciones de controles, lo cual permite adaptarse a distintas
             formas de gestionar filas.
           </p>

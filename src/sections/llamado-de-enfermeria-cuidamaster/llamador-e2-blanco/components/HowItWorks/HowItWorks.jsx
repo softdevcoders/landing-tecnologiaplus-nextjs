@@ -12,8 +12,8 @@ function HowItWorks() {
             alt="paciente presionando botón para llamar a la enfermera"
           />
           <p>
-            1. Presiona el botón para <br className={styles.hide__on__mobile} />
-            <br />
+            1. Presiona el botón para 
+            <br className={styles.hide__on__mobile} />
             llamar la enfermera
           </p>
         </div>

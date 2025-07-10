@@ -162,7 +162,7 @@ export async function sendEmail(formData) {
                         <table role="presentation" cellpadding="0" cellspacing="0" style="width: 100%;">
                           <tr>
                             <td style="width: 50%;">
-                              <h1 style="margin: 0; font-family: Arial, sans-serif; font-size: 24px; font-weight: 500; color: white;">Confirmación de mensaje</h1>
+                              <h1 style="margin: 0; font-family: Arial, sans-serif; font-size: 24px; font-weight: 500; color: white;">Mensaje recibido</h1>
                             </td>
                             <td style="width: 50%; text-align: right;">
                               <img src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1749921675/website-v2/logos/logo-email-template/cqwf2nljlutt3iucwsjp.png" alt="Tecnología Plus" style="max-width: 200px; height: auto;" />
@@ -178,9 +178,9 @@ export async function sendEmail(formData) {
                         <table role="presentation" cellpadding="0" cellspacing="0" style="width: 100%;">
                           <tr>
                             <td>
-                              <p style="margin: 0 0 20px 0; font-family: Arial, sans-serif; font-size: 18px; color: #333333;">Estimado/a ${sanitizedData.name},</p>
-                              <p style="margin: 0 0 20px 0; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333333;">Queremos agradecerte por contactarnos. Tu mensaje ha sido recibido con éxito y pronto nos pondremos en contacto contigo.</p>
-                              <p style="margin: 0; font-family: Arial, sans-serif; font-size: 16px; color: #333333;">Gracias por confiar en nosotros.</p>
+                              <p style="margin: 0 0 20px 0; font-family: Arial, sans-serif; font-size: 18px; color: #333333;">Hola ${sanitizedData.name},</p>
+                              <p style="margin: 0 0 20px 0; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333333;">Gracias por tu confianza.</p>
+                              <p style="margin: 0; font-family: Arial, sans-serif; font-size: 16px; color: #333333;">Una asesora te va a contactar para ofrecerte una solución que se ajuste a tu necesidad.</p>
                             </td>
                           </tr>
                         </table>
