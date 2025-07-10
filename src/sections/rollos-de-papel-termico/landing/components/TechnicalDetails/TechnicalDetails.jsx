@@ -144,7 +144,7 @@ const features = [
     height: 115,
   },
   { 
-    label: "Tipo de uso:<br /> paraimpresora térmica",
+    label: "Tipo de uso:<br /> para impresora térmica",
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349922/mklyxhubukpeobmbjxso_swt54w",
     alt: "icono de rollos termicos impresora",
     width: 143,
