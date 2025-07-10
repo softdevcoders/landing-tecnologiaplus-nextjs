@@ -1,7 +1,7 @@
 import Image from "next/image";
 import style from "./benefits.module.scss";
 
-function BenefitsSection({ benefits, title, className = "", isHome = false }) {
+function BenefitsSection({ benefits, title, className = "", isHome = false, isEncuestaVirtual = false }) {
   return (
     <section className={`${style.benefits__section} ${className}`}>
       <Image
@@ -30,23 +30,45 @@ function BenefitsSection({ benefits, title, className = "", isHome = false }) {
             )}
           </div>
         )}
-        <ul className={style.benefits__container_list}>
-          {benefits.map((benefit, index) => (
-            <li 
-              className={`${style.benefits__item} ${benefit.description ? style.benefits__item_two_rows : ""}`} 
-              key={index}>
-              <Image
-                width={benefit.width}
-                height={benefit.height}
-                src={benefit.icon}
-                alt={benefit.alt}
-                sizes="100vw"
-              />
-              <h3>{benefit.title}</h3>
-              {benefit.description && <p>{benefit.description}</p>} 
-            </li>
-          ))}
-        </ul>
+        {isEncuestaVirtual ? (
+          <ul className={style.benefits__container_list_encuesta_virtual}>
+            {benefits.map((benefit, index) => (
+              <li 
+                className={style.benefits__item}
+                key={index}
+              >
+                <Image
+                  width={benefit.width}
+                  height={benefit.height}
+                  src={benefit.icon}
+                  alt={benefit.alt}
+                  sizes="(max-width: 768px) 40vw, (max-width: 1200px) 30vw, 20vw"
+                />
+                <h3
+                  dangerouslySetInnerHTML={{ __html: benefit.title }}
+                />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <ul className={style.benefits__container_list}>
+            {benefits.map((benefit, index) => (
+              <li 
+                className={`${style.benefits__item} ${benefit.description ? style.benefits__item_two_rows : ""}`} 
+                key={index}>
+                <Image
+                  width={benefit.width}
+                  height={benefit.height}
+                  src={benefit.icon}
+                  alt={benefit.alt}
+                  sizes="100vw"
+                />
+                <h3>{benefit.title}</h3>
+                {benefit.description && <p>{benefit.description}</p>} 
+              </li>
+            ))}
+          </ul>
+        )} 
       </div>
     </section>
   );
