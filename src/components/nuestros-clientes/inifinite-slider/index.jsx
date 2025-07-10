@@ -46,7 +46,7 @@ export default function InfiniteSlider({ logos, speed = 60 }) {
           width={130}
           height={50}
           loading="eager"
-          priority={idx < logos.length}
+          priority={`${idx < logos.length}`}
         />
       ))}
     </section>

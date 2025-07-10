@@ -1,5 +1,5 @@
 import style from "./nuestros-clientes.module.scss";
-import InfiniteSlider from "@/components/inifinite-slider";
+import InfiniteSlider from "@/components/nuestros-clientes/inifinite-slider";
 
 function NuestrosClientes({ title, description, logos, isVerMasView = false }) {
 

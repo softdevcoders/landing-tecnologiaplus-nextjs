@@ -1,56 +1,35 @@
-import Image from "next/image";
-import style from "./DispensadorTiquetesBenefitsSection.module.scss";
+import BenefitsSection from "@/components/benefits";
+
+const benefits = [
+  {
+    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750350354/2_wtupum",
+    title: "Control total de los turnos.",
+    description: "Permite a tu equipo ofrecer mejor servicio.",
+    width: 183,
+    height: 183,
+    alt: "Icono de Control total de los turnos",
+  },
+  {
+    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750350353/1_fgaw9h",
+    title: "Elimina filas evitando largas esperas",
+    description: "y mejorando la organización del servicio.",
+    width: 155,
+    height: 154,
+    alt: "Icono de Elimina filas evitando largas esperas",
+  },
+  {
+    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738424675/icono_3_2x-8_qsgnsv",
+    title: "Mejor experiencia de servicio",
+    description: "porque tus clientes lo merecen.",
+    width: 155,
+    height: 155,
+    alt: "icono de tipos de cara feliz", 
+  }
+];
 
 function DispensadorTiquetesBenefitsSection() {
   return (
-    <section className={style.benefits__section}>
-      <h2 className={style.benefits__title}>
-        BENEFICIOS
-        <br />
-        DESTACADOS
-      </h2>
-      <ul>
-        <li>
-          <Image
-            width={70}
-            height={70}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750350354/2_wtupum.png"
-            alt="icono de agilidad en turnos"
-          />
-          <div>
-            Control total de los turnos.{" "}
-            <br className={style.hide__on__mobile} />
-            <span>Permite a tu equipo ofrecer mejor servicio.</span>
-          </div>
-        </li>
-        <li>
-          <Image
-            width={70}
-            height={70}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750350353/1_fgaw9h.png"
-            alt="icono de reloj y dinero"
-          />
-          <div>
-            Elimina filas evitando largas esperas{" "}
-            <br className={style.hide__on__mobile} />
-            <span>y mejorando la organización del servicio.</span>
-          </div>
-        </li>
-        <li>
-          <Image
-            width={70}
-            height={70}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738424675/icono_3_2x-8_qsgnsv.webp"
-            alt="icono de tipos de cara feliz"
-          />
-          <div>
-            Mejor experiencia de servicio{" "}
-            <br className={style.hide__on__mobile} />
-            <span>porque tus clientes lo merecen.</span>
-          </div>
-        </li>
-      </ul>
-    </section>
+    <BenefitsSection benefits={benefits} title="BENEFICIOS<br />DESTACADOS" />
   );
 }
 
