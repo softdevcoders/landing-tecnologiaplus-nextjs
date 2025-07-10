@@ -1,72 +1,154 @@
 .benefits__section {
-  background-color: #f4f4f4;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: -50px;
+  margin-bottom: 4rem;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 4rem 2rem;
 
-  &.padding__inline {
-    padding-inline: 1rem;
+  @media (min-width: 1024px) {
+    margin-top: -75px;
   }
 
-  &.overlay__white {
-    background-color: #fff;
+  .benefits__background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
   }
 
-  &.no__padding__top {
-    padding-top: 3rem;
-  }
-
-  .benefits__container {
+  .benefits__content {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    overflow: hidden;
-    z-index: 2;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+    z-index: 1;
 
-    &.margin__top__overlay {
-      margin-top: -7rem;
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: space-evenly;
     }
 
-    .benefits__background_container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    .benefits__title_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
 
-      .benefits__background_image {
+      .benefits__title {
+        background: linear-gradient(90deg, #00afff, #9810ff);
+        -webkit-text-fill-color: #0000;
+        text-align: center;
+        -webkit-background-clip: text;
+        font-size: clamp(16px, 10vw, 3.25rem);
+        font-weight: 900;
+        line-height: 1.2;
+        display: inline-block;
         width: 100%;
-        height: 100%;
+        max-width: 40rem;
+
+        @media (min-width: 1024px) {
+          font-size: 4rem;
+        }
+      }
+
+      .benefits__image {
+        width: 100%;
+        max-width: 30rem;
+        height: auto;
         object-fit: cover;
       }
     }
 
-    .benefits__content {
-      position: relative;
+    .benefits__container_list { 
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      row-gap: 2rem;
       width: 100%;
-    }
-  }
-}
+      max-width: 45rem;
 
-@media (min-width: 1200px) {
-  .benefits__section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-
-    &.padding__inline {
-      padding-inline: 3rem;
-    }
-
-    &.no__padding__top {
-      padding-top: 3rem;
-    }
-
-    .benefits__container {
-      &.margin__top__overlay {
-        margin-top: -7rem;
+      @media (min-width: 1024px) {
+        row-gap: 2rem;
       }
-    } 
+
+      .benefits__item {
+        display: grid;
+        grid-template-areas: "icon title";
+        grid-template-columns: 70px 1fr;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem;
+
+        &_two_rows {
+          grid-template-areas: "icon title" "icon description";
+          grid-template-columns: 70px 1fr;
+          grid-template-rows: auto 1fr;
+
+          > h3 {
+            font-size: 1.625rem;
+
+            @media (min-width: 1024px) {
+              font-size: 1.8rem;
+            }
+          }
+        }
+
+        @media (min-width: 1024px) {
+          column-gap: 2rem;
+        }
+
+        > img {
+          grid-area: icon;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+
+        > h3 {
+          grid-area: title;
+          font-size: 1.25rem;
+          font-weight: 700;
+          margin-bottom: 0;
+          color: #fff;
+          font-weight: 400;
+          line-height: 1.2;
+
+          @media (min-width: 1024px) {
+            font-size: 2rem;
+          }
+        }
+
+        > p {
+          grid-area: description;
+          font-size: 1.2rem;
+          font-weight: 400;
+          margin-bottom: 0;
+          color: #fff;
+          font-weight: 400;
+          font-size: 1.125rem;
+          line-height: 1.2;
+
+          @media (min-width: 1024px) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
   }
 }
