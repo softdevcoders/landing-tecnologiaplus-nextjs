@@ -61,7 +61,7 @@ function BenefitsSection({ benefits, title, className = "", isHome = false, isEn
                   height={benefit.height}
                   src={benefit.icon}
                   alt={benefit.alt}
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 10vw, 10vw"
                 />
                 <h3>{benefit.title}</h3>
                 {benefit.description && <p>{benefit.description}</p>} 
