@@ -46,6 +46,8 @@ export default function InfiniteSlider({ logos, speed = 60 }) {
           alt={logo.alt}
           width={130}
           height={50}
+          loading="eager"
+          priority={idx < logos.length}
         />
       ))}
     </section>
