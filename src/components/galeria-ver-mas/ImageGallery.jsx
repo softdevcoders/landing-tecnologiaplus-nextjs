@@ -8,18 +8,31 @@ import { ArrowBack, ArrowForward } from "@/components/ui/icons";
 
 const ImageGallery = ({ images = [] }) => {
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel({ loop: true });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: "keepSnaps",
     dragFree: true,
-    axis: 'y',
+    axis: isMobile ? 'x' : 'y',
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
 
   useEffect(() => {
     if (!emblaMainApi || !emblaThumbsApi) return;
 
-    emblaMainApi.on('select', () => {
+    const onSelect = () => {
       setSelectedIndex(emblaMainApi.selectedScrollSnap());
       const thumbs = emblaThumbsApi.scrollSnapList();
       const targetIndex = Math.min(
@@ -27,8 +40,42 @@ const ImageGallery = ({ images = [] }) => {
         emblaMainApi.selectedScrollSnap()
       );
       emblaThumbsApi.scrollTo(targetIndex);
-    });
+    };
+
+    const onThumbsScroll = () => {
+      setCanScrollPrev(!emblaThumbsApi.canScrollPrev());
+      setCanScrollNext(!emblaThumbsApi.canScrollNext());
+    };
+
+    emblaMainApi.on('select', onSelect);
+    emblaThumbsApi.on('scroll', onThumbsScroll);
+    emblaThumbsApi.on('reInit', onThumbsScroll);
+
+    // Inicializar estados
+    onSelect();
+    onThumbsScroll();
+
+    return () => {
+      emblaMainApi.off('select', onSelect);
+      emblaThumbsApi.off('scroll', onThumbsScroll);
+      emblaThumbsApi.off('reInit', onThumbsScroll);
+    };
   }, [emblaMainApi, emblaThumbsApi]);
+
+  // Reinicializar el carrusel cuando cambia la orientación
+  useEffect(() => {
+    if (emblaThumbsApi) {
+      emblaThumbsApi.reInit();
+    }
+  }, [isMobile, emblaThumbsApi]);
+
+  const scrollThumbsPrev = useCallback(() => {
+    if (emblaThumbsApi) emblaThumbsApi.scrollPrev();
+  }, [emblaThumbsApi]);
+
+  const scrollThumbsNext = useCallback(() => {
+    if (emblaThumbsApi) emblaThumbsApi.scrollNext();
+  }, [emblaThumbsApi]);
 
   const scrollPrev = useCallback(() => {
     if (emblaMainApi) emblaMainApi.scrollPrev();
@@ -55,30 +102,57 @@ const ImageGallery = ({ images = [] }) => {
       {/* Miniaturas */}
       {images.length > 1 && (
         <div className={styles.thumbs}>
-          <div className={styles.viewport} ref={emblaThumbsRef}>
-            <div className={styles.container}>
-              {images.map((image, index) => (
-                <button
-                  key={index}
-                  className={`${styles.thumb} ${
-                    index === selectedIndex ? styles.selected : ''
-                  }`}
-                  onClick={() => onThumbClick(index)}
-                  type="button"
-                  aria-label={`Ir a imagen ${index + 1}`}
-                >
-                  <Image
-                    src={image.src}
-                    alt=""
-                    fill
-                    sizes="100px"
-                    style={{ objectFit: 'cover' }}
-                    loading="lazy"
-                    aria-hidden="true"
-                  />
-                </button>
-              ))}
+          <div className={styles.thumbsTrack}>
+            <div className={styles.viewport} ref={emblaThumbsRef}>
+              <div className={styles.container}>
+                {images.map((image, index) => (
+                  <button
+                    key={index}
+                    className={`${styles.thumb} ${
+                      index === selectedIndex ? styles.selected : ''
+                    }`}
+                    onClick={() => onThumbClick(index)}
+                    type="button"
+                    aria-label={`Ir a imagen ${index + 1}`}
+                  >
+                    <Image
+                      src={image.src}
+                      alt=""
+                      fill
+                      sizes="100px"
+                      style={{ objectFit: 'cover' }}
+                      loading="lazy"
+                      aria-hidden="true"
+                    />
+                  </button>
+                ))}
+              </div>
             </div>
+
+            {/* Botones de navegación para thumbnails */}
+            {images.length > 5 && (
+              <>
+                <button
+                  className={`${styles.thumbNavButton} ${styles.prev} ${!canScrollPrev ? styles.hidden : ''}`}
+                  onClick={scrollThumbsPrev}
+                  aria-label="Miniaturas anteriores"
+                  type="button"
+                  disabled={!canScrollPrev}
+                >
+                  <ArrowBack aria-hidden="true" />
+                </button>
+                
+                <button
+                  className={`${styles.thumbNavButton} ${styles.next} ${!canScrollNext ? styles.hidden : ''}`}
+                  onClick={scrollThumbsNext}
+                  aria-label="Miniaturas siguientes"
+                  type="button"
+                  disabled={!canScrollNext}
+                >
+                  <ArrowForward aria-hidden="true" />
+                </button>
+              </>
+            )}
           </div>
         </div>
       )}
