@@ -29,6 +29,16 @@ const ImageGallery = ({ images = [] }) => {
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
 
+  const updateScrollButtons = useCallback(() => {
+    if (!emblaThumbsApi) return;
+    
+    const scrollSnaps = emblaThumbsApi.scrollSnapList();
+    const currentIndex = emblaThumbsApi.selectedScrollSnap();
+    
+    setCanScrollPrev(currentIndex > 0);
+    setCanScrollNext(currentIndex < scrollSnaps.length - 1);
+  }, [emblaThumbsApi]);
+
   useEffect(() => {
     if (!emblaMainApi || !emblaThumbsApi) return;
 
@@ -40,42 +50,47 @@ const ImageGallery = ({ images = [] }) => {
         emblaMainApi.selectedScrollSnap()
       );
       emblaThumbsApi.scrollTo(targetIndex);
-    };
-
-    const onThumbsScroll = () => {
-      setCanScrollPrev(!emblaThumbsApi.canScrollPrev());
-      setCanScrollNext(!emblaThumbsApi.canScrollNext());
+      updateScrollButtons();
     };
 
     emblaMainApi.on('select', onSelect);
-    emblaThumbsApi.on('scroll', onThumbsScroll);
-    emblaThumbsApi.on('reInit', onThumbsScroll);
+    emblaThumbsApi.on('select', updateScrollButtons);
+    emblaThumbsApi.on('scroll', updateScrollButtons);
+    emblaThumbsApi.on('reInit', updateScrollButtons);
 
     // Inicializar estados
     onSelect();
-    onThumbsScroll();
+    updateScrollButtons();
 
     return () => {
       emblaMainApi.off('select', onSelect);
-      emblaThumbsApi.off('scroll', onThumbsScroll);
-      emblaThumbsApi.off('reInit', onThumbsScroll);
+      emblaThumbsApi.off('select', updateScrollButtons);
+      emblaThumbsApi.off('scroll', updateScrollButtons);
+      emblaThumbsApi.off('reInit', updateScrollButtons);
     };
-  }, [emblaMainApi, emblaThumbsApi]);
+  }, [emblaMainApi, emblaThumbsApi, updateScrollButtons]);
 
   // Reinicializar el carrusel cuando cambia la orientación
   useEffect(() => {
     if (emblaThumbsApi) {
       emblaThumbsApi.reInit();
+      updateScrollButtons();
     }
-  }, [isMobile, emblaThumbsApi]);
+  }, [isMobile, emblaThumbsApi, updateScrollButtons]);
 
   const scrollThumbsPrev = useCallback(() => {
-    if (emblaThumbsApi) emblaThumbsApi.scrollPrev();
-  }, [emblaThumbsApi]);
+    if (emblaThumbsApi) {
+      emblaThumbsApi.scrollPrev();
+      updateScrollButtons();
+    }
+  }, [emblaThumbsApi, updateScrollButtons]);
 
   const scrollThumbsNext = useCallback(() => {
-    if (emblaThumbsApi) emblaThumbsApi.scrollNext();
-  }, [emblaThumbsApi]);
+    if (emblaThumbsApi) {
+      emblaThumbsApi.scrollNext();
+      updateScrollButtons();
+    }
+  }, [emblaThumbsApi, updateScrollButtons]);
 
   const scrollPrev = useCallback(() => {
     if (emblaMainApi) emblaMainApi.scrollPrev();
@@ -137,7 +152,6 @@ const ImageGallery = ({ images = [] }) => {
                   onClick={scrollThumbsPrev}
                   aria-label="Miniaturas anteriores"
                   type="button"
-                  disabled={!canScrollPrev}
                 >
                   <ArrowBack aria-hidden="true" />
                 </button>
@@ -147,7 +161,6 @@ const ImageGallery = ({ images = [] }) => {
                   onClick={scrollThumbsNext}
                   aria-label="Miniaturas siguientes"
                   type="button"
-                  disabled={!canScrollNext}
                 >
                   <ArrowForward aria-hidden="true" />
                 </button>
