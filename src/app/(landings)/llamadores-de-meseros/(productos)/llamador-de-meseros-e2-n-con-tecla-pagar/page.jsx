@@ -30,6 +30,26 @@ const verMasInformacion = {
     {
       src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he.webp",
       alt: "Imagen del producto"
+    },
+    {
+      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq.webp",
+      alt: "Imagen del producto"
+    },
+    {
+      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039882/5_4x-8_wzjgam.webp",
+      alt: "Imagen del producto"
+    },
+    {
+      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/7_4x-8_1_saux20.webp",
+      alt: "Imagen del producto"
+    },
+    {
+      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/3_4x-8_wiiwjz.webp",
+      alt: "Imagen del producto"
+    },
+    {
+      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he.webp",
+      alt: "Imagen del producto"
     }
   ]
 }
