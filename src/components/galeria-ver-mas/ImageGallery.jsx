@@ -23,6 +23,7 @@ const ImageGallery = ({ images = [] }) => {
     containScroll: "keepSnaps",
     dragFree: true,
     axis: isMobile ? 'x' : 'y',
+    watchDrag: false // Deshabilitamos el drag para permitir scroll nativo
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -38,6 +39,33 @@ const ImageGallery = ({ images = [] }) => {
     setCanScrollPrev(currentIndex > 0);
     setCanScrollNext(currentIndex < scrollSnaps.length - 1);
   }, [emblaThumbsApi]);
+
+  // Manejador del scroll del mouse
+  useEffect(() => {
+    if (!emblaThumbsRef.current) return;
+
+    const handleWheel = (event) => {
+      event.preventDefault();
+      if (!emblaThumbsApi) return;
+
+      const delta = isMobile ? event.deltaX : event.deltaY;
+      const scrollDirection = delta > 0 ? 1 : -1;
+      
+      // Ajustamos la sensibilidad del scroll
+      const scrollMultiplier = 1.5;
+      emblaThumbsApi.scrollTo(
+        emblaThumbsApi.selectedScrollSnap() + (scrollDirection * scrollMultiplier)
+      );
+      updateScrollButtons();
+    };
+
+    const element = emblaThumbsRef.current;
+    element.addEventListener('wheel', handleWheel, { passive: false });
+
+    return () => {
+      element.removeEventListener('wheel', handleWheel);
+    };
+  }, [emblaThumbsApi, emblaThumbsRef, isMobile, updateScrollButtons]);
 
   useEffect(() => {
     if (!emblaMainApi || !emblaThumbsApi) return;
@@ -108,6 +136,11 @@ const ImageGallery = ({ images = [] }) => {
     [emblaMainApi, emblaThumbsApi]
   );
 
+  const scrollDots = useCallback((index) => {
+    if (!emblaMainApi || !emblaThumbsApi) return;
+    emblaMainApi.scrollTo(index);
+  }, [emblaMainApi, emblaThumbsApi]);
+
   if (!images || images.length === 0) {
     return null;
   }
@@ -118,7 +151,7 @@ const ImageGallery = ({ images = [] }) => {
       {images.length > 1 && (
         <div className={styles.thumbs}>
           <div className={styles.thumbsTrack}>
-            <div className={styles.viewport} ref={emblaThumbsRef}>
+            <div className={`${styles.viewport} ${styles.scrollable}`} ref={emblaThumbsRef}>
               <div className={styles.container}>
                 {images.map((image, index) => (
                   <button
@@ -213,6 +246,21 @@ const ImageGallery = ({ images = [] }) => {
             </>
           )}
         </div>
+
+        {/* Bullets */}
+        {images.length > 1 && (
+          <div className={styles.bullets}>
+            {images.map((_, index) => (
+              <button
+                key={index}
+                className={`${styles.bullet} ${index === selectedIndex ? styles.active : ''}`}
+                onClick={() => scrollDots(index)}
+                aria-label={`Ir a imagen ${index + 1}`}
+                type="button"
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
