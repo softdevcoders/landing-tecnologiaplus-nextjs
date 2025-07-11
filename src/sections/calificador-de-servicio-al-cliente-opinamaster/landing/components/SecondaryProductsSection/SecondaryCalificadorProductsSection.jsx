@@ -22,7 +22,7 @@ function SecondaryCalificadorProductsSection() {
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738596106/Estadi%CC%81sticas_2x-8_dlqi3u"
           width={1823}
           height={1083}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
           alt="Estadísticas en base a los resultados del calificador de servicio"
         />
       </div>
