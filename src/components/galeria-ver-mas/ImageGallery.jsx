@@ -300,7 +300,6 @@ const ImageGallery = ({ images = [] }) => {
                         transform: isZoomed ? `scale(${1.75}) translate(-${zoomPosition.x}%, -${zoomPosition.y}%)` : 'none',
                         transformOrigin: '0 0'
                       }}
-                      quality={85}
                     />
                   </div>
                 </div>
