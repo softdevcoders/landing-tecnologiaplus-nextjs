@@ -1,14 +1,20 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "./galeria-ver-mas.module.scss";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
 
 const ImageGallery = ({ images = [] }) => {
-  const [emblaMainRef, emblaMainApi] = useEmblaCarousel({ loop: true });
+  const [emblaMainRef, emblaMainApi] = useEmblaCarousel({ 
+    loop: true,
+    dragFree: true 
+  });
   const [isMobile, setIsMobile] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
+  const imageRef = useRef(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -141,6 +147,66 @@ const ImageGallery = ({ images = [] }) => {
     emblaMainApi.scrollTo(index);
   }, [emblaMainApi, emblaThumbsApi]);
 
+  // Reset zoom when changing images
+  useEffect(() => {
+    setIsZoomed(false);
+    setZoomPosition({ x: 50, y: 50 });
+  }, [selectedIndex]);
+
+  // Controlar el comportamiento del carrusel cuando se hace zoom
+  useEffect(() => {
+    if (!emblaMainApi) return;
+
+    if (isZoomed) {
+      emblaMainApi.reInit({ dragFree: false });
+    } else {
+      emblaMainApi.reInit({ dragFree: true });
+    }
+  }, [isZoomed, emblaMainApi]);
+
+  const handleImageClick = () => {
+    setIsZoomed(!isZoomed);
+  };
+
+  const calculateZoomPosition = (clientX, clientY, rect) => {
+    // Calculamos la posición relativa del cursor en la imagen (0-1)
+    const relativeX = (clientX - rect.left) / rect.width;
+    const relativeY = (clientY - rect.top) / rect.height;
+
+    const zoomLevel = 1.75;
+    
+    // Calculamos el rango máximo para asegurar que podemos llegar a todos los bordes
+    // Para un zoom de 1.75x, necesitamos movernos un 75% del tamaño de la imagen
+    const maxOffset = (zoomLevel - 1) * 100;
+    
+    // Ajustamos la posición para que 0.5 (centro) corresponda al 50% del movimiento
+    const x = relativeX * maxOffset;
+    const y = relativeY * maxOffset;
+
+    return {
+      x: Math.max(0, Math.min(maxOffset, x)),
+      y: Math.max(0, Math.min(maxOffset, y))
+    };
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isZoomed || !imageRef.current) return;
+    
+    const rect = imageRef.current.getBoundingClientRect();
+    const newPosition = calculateZoomPosition(e.clientX, e.clientY, rect);
+    setZoomPosition(newPosition);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isZoomed || !imageRef.current) return;
+    e.preventDefault();
+    
+    const touch = e.touches[0];
+    const rect = imageRef.current.getBoundingClientRect();
+    const newPosition = calculateZoomPosition(touch.clientX, touch.clientY, rect);
+    setZoomPosition(newPosition);
+  };
+
   if (!images || images.length === 0) {
     return null;
   }
@@ -169,7 +235,6 @@ const ImageGallery = ({ images = [] }) => {
                       fill
                       sizes="100px"
                       style={{ objectFit: 'cover' }}
-                      loading="lazy"
                       aria-hidden="true"
                     />
                   </button>
@@ -209,22 +274,41 @@ const ImageGallery = ({ images = [] }) => {
           <div className={styles.container}>
             {images.map((image, index) => (
               <div className={styles.slide} key={index}>
-                <div className={styles.imageWrapper}>
-                  <Image
-                    src={image.src}
-                    alt={image.alt || `Imagen ${index + 1}`}
-                    fill
-                    priority={index === 0}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 800px"
-                    style={{ objectFit: 'contain' }}
-                    quality={85}
-                  />
+                <div 
+                  ref={index === selectedIndex ? imageRef : null}
+                  className={`${styles.imageWrapper} ${isZoomed && index === selectedIndex ? styles.zoomedWrapper : ''}`}
+                  onClick={handleImageClick}
+                  onMouseMove={handleMouseMove}
+                  onTouchMove={handleTouchMove}
+                  style={
+                    isZoomed && index === selectedIndex
+                      ? {
+                          cursor: 'zoom-out'
+                        }
+                      : { cursor: 'zoom-in' }
+                  }
+                >
+                  <div className={styles.imageContainer}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt || `Imagen ${index + 1}`}
+                      fill
+                      priority={index === 0}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 800px"
+                      style={{ 
+                        objectFit: 'contain',
+                        transform: isZoomed ? `scale(${1.75}) translate(-${zoomPosition.x}%, -${zoomPosition.y}%)` : 'none',
+                        transformOrigin: '0 0'
+                      }}
+                      quality={85}
+                    />
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {images.length > 1 && (
+          {images.length > 1 && !isZoomed && (
             <>
               <button
                 className={`${styles.navButton} ${styles.prev}`}
@@ -248,7 +332,7 @@ const ImageGallery = ({ images = [] }) => {
         </div>
 
         {/* Bullets */}
-        {images.length > 1 && (
+        {images.length > 1 && !isZoomed && (
           <div className={styles.bullets}>
             {images.map((_, index) => (
               <button

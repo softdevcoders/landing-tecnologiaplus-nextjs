@@ -26,6 +26,27 @@
 
   .viewport {
     margin-bottom: 2rem; // Espacio para los bullets
+    
+    &.zoomed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.9);
+      margin: 0;
+      border-radius: 0;
+
+      .container {
+        height: 100vh;
+      }
+
+      .slide {
+        padding: 0;
+        height: 100vh;
+      }
+    }
   }
 }
 
@@ -124,6 +145,39 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &.zoomedWrapper {
+    .imageContainer {
+      transform: scale(1.75); // Reducimos el zoom de 2.5 a 1.75
+      transition: transform 0.3s ease;
+      transform-origin: 0 0;
+    }
+
+    &:hover {
+      cursor: zoom-out;
+    }
+  }
+
+  &:not(.zoomedWrapper):hover {
+    cursor: zoom-in;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  will-change: transform;
+
+  img {
+    transition: object-position 0s linear !important;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-origin: 0 0; // Cambiamos el origen de la transformación
+  }
 }
 
 .navButton {
