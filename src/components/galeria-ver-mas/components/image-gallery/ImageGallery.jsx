@@ -9,7 +9,7 @@ import ImageIndicators from "../image-indicators";
 import { useMainCarousel } from "../../hooks/useMainCarousel";
 import { useGalleryState } from "../../hooks/useGalleryState";
 
-const ImageGallery = ({ images = [], fallbackImages = [] }) => {
+const ImageGallery = ({ images = [], fallbackImages = [], productTitle = '' }) => {
   const {
     displayImages,
     isMobile,
@@ -54,6 +54,8 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
         selectedIndex={selectedIndex}
         onThumbClick={handleThumbClick}
         isMobile={isMobile}
+        productTitle={productTitle}
+        selectedColor={colorContext?.getSelectedColor()?.name || ''}
       />
 
       <div className={styles.mainCarousel}>
@@ -70,6 +72,9 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
                   index={index}
                   isSelected={index === selectedIndex}
                   priority={index === 0}
+                  productTitle={productTitle}
+                  selectedColor={colorContext?.getSelectedColor()?.name || ''}
+                  isMobile={isMobile}
                 />
               </div>
             ))}

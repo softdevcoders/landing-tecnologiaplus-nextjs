@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useMemo, useRef } from 'react';
-import Image from "next/image";
+import ImageLoader from "../image-loader";
+import { generateImageAlt, shouldUsePriority, getOptimizedSizes, generateBlurDataURL } from "../../utils/imageUtils";
 import styles from "./zoomable-image.module.scss";
 
 const ZoomableImage = ({
@@ -12,7 +13,10 @@ const ZoomableImage = ({
   onZoomPositionChange,
   index,
   isSelected,
-  priority = false
+  priority = false,
+  productTitle = '',
+  selectedColor = '',
+  isMobile = false
 }) => {
   const imageRef = useRef(null);
 
@@ -64,6 +68,24 @@ const ZoomableImage = ({
     transformOrigin: '0 0'
   }), [isZoomed, zoomPosition.x, zoomPosition.y]);
 
+  // Generar alt text descriptivo
+  const altText = useMemo(() => 
+    generateImageAlt(image, index, productTitle, selectedColor), 
+    [image, index, productTitle, selectedColor]
+  );
+
+  // Determinar si usar priority
+  const usePriority = useMemo(() => 
+    priority || shouldUsePriority(index, 0, 1), 
+    [priority, index]
+  );
+
+  // Optimizar sizes
+  const optimizedSizes = useMemo(() => 
+    getOptimizedSizes('main', isMobile), 
+    [isMobile]
+  );
+
   return (
     <div 
       ref={isSelected ? imageRef : null}
@@ -78,13 +100,15 @@ const ZoomableImage = ({
       }
     >
       <div className={styles.imageContainer}>
-        <Image
+        <ImageLoader
           src={image.src}
-          alt={image.alt || `Imagen ${index + 1}`}
+          alt={altText}
           fill
-          priority={priority}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 800px"
+          priority={usePriority}
+          sizes={optimizedSizes}
           style={zoomStyles}
+          blurDataURL={generateBlurDataURL()}
+          placeholder="blur"
         />
       </div>
     </div>

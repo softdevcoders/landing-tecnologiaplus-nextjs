@@ -27,6 +27,7 @@ const GaleriaVerMas = ({ verMasInformacion = defaultProps }) => {
       <GalleryWrapper 
         images={images}
         fallbackImages={images}
+        productTitle={title}
       />
 
       <InfoContainer 

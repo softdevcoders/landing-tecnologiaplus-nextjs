@@ -1,16 +1,19 @@
 "use client";
 
 import { useCallback, useEffect, useState } from 'react';
-import Image from "next/image";
+import ImageLoader from "../image-loader";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
+import { generateThumbnailAlt, getOptimizedSizes, generateBlurDataURL } from "../../utils/imageUtils";
 import styles from "./thumbnails.module.scss";
 
 const Thumbnails = ({ 
   images, 
   selectedIndex, 
   onThumbClick,
-  isMobile 
+  isMobile,
+  productTitle = '',
+  selectedColor = ''
 }) => {
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: "keepSnaps",
@@ -110,13 +113,15 @@ const Thumbnails = ({
                 type="button"
                 aria-label={`Ir a imagen ${index + 1}`}
               >
-                <Image
+                <ImageLoader
                   src={image.src}
-                  alt=""
+                  alt={generateThumbnailAlt(image, index, productTitle, selectedColor)}
                   fill
-                  sizes="100px"
+                  sizes={getOptimizedSizes('thumbnail', isMobile)}
                   style={{ objectFit: 'cover' }}
-                  aria-hidden="true"
+                  priority={false}
+                  blurDataURL={generateBlurDataURL()}
+                  placeholder="blur"
                 />
               </button>
             ))}
