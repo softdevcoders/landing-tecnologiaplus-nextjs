@@ -1,5 +1,3 @@
-"use client";
-
 import ImageGallery from "../image-gallery";
 import styles from "./gallery-wrapper.module.scss";
 

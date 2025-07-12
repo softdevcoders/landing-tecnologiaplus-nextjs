@@ -1,10 +1,10 @@
 "use client";
 
 import { useCallback, useState, useEffect, useMemo } from 'react';
-import { useProductColor } from '@/contexts/ProductColorContext';
+import { useProductColorSafe } from '@/contexts/ProductColorContext';
 
 export const useGalleryState = (images = [], fallbackImages = []) => {
-  const colorContext = useProductColor();
+  const colorContext = useProductColorSafe();
   const [isMobile, setIsMobile] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
 

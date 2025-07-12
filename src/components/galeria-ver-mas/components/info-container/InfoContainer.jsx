@@ -1,5 +1,3 @@
-"use client";
-
 import ColorSelector from "@/components/color-selector";
 import styles from "./info-container.module.scss";
 

@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./galeria-ver-mas.module.scss";
 import GalleryWrapper from "./components/gallery-wrapper";
 import InfoContainer from "./components/info-container";

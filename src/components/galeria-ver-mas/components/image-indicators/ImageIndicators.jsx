@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./image-indicators.module.scss";
 
 const ImageIndicators = ({ 
