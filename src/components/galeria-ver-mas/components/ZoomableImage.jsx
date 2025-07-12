@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useRef } from 'react';
 import Image from "next/image";
-import styles from "../galeria-ver-mas.module.scss";
+import styles from "../image-gallery.module.scss";
 
 const ZoomableImage = ({
   image,
