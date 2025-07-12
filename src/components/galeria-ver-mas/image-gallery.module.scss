@@ -19,7 +19,7 @@
     order: 1;
     width: 80px;
     flex-shrink: 0;
-    height: 300px;
+    height: max(500px, 70vh);
   }
 }
 
@@ -29,7 +29,7 @@
   overflow: hidden;
 
   @media (min-width: 768px) {
-    height: 300px;
+    height: max(500px, 70vh);
   }
 
   &:hover .thumbNavButton {
@@ -197,7 +197,7 @@
   border-radius: 8px;
   margin-bottom: 2rem;
   padding: 0;
-  aspect-ratio: 16/9;
+  height: max(500px, 70vh);
 }
 
 .mainCarousel .container {
