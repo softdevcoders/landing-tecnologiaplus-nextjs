@@ -1,8 +1,8 @@
 "use client";
 
 import styles from "./galeria-ver-mas.module.scss";
-import GalleryWrapper from "./components/GalleryWrapper";
-import InfoContainer from "./components/InfoContainer";
+import GalleryWrapper from "./components/gallery-wrapper";
+import InfoContainer from "./components/info-container";
 import { ProductColorProvider } from "@/contexts/ProductColorContext";
 
 const defaultProps = {

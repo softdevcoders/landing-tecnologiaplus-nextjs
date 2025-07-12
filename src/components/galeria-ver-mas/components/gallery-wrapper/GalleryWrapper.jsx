@@ -1,6 +1,6 @@
 "use client";
 
-import ImageGallery from "../ImageGallery";
+import ImageGallery from "../../ImageGallery";
 import styles from "./gallery-wrapper.module.scss";
 
 const GalleryWrapper = ({ images, fallbackImages }) => {

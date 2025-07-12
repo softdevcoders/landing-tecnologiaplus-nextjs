@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-import styles from "./components/image-gallery.module.scss";
+import styles from "./components/image-gallery/image-gallery.module.scss";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
-import Thumbnails from "./components/Thumbnails";
-import ZoomableImage from "./components/ZoomableImage";
-import ImageIndicators from "./components/ImageIndicators";
+import Thumbnails from "./components/thumbnails";
+import ZoomableImage from "./components/zoomable-image";
+import ImageIndicators from "./components/image-indicators";
 import { useMainCarousel } from "./hooks/useMainCarousel";
 import { useGalleryState } from "./hooks/useGalleryState";
 
