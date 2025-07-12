@@ -7,7 +7,6 @@ import styles from "./image-loader.module.scss";
 const ImageLoader = ({
   src,
   alt,
-  fill = false,
   width,
   height,
   priority = false,
@@ -61,12 +60,13 @@ const ImageLoader = ({
       <Image
         src={src}
         alt={alt}
-        fill={fill}
         width={width}
         height={height}
         priority={priority}
         sizes={sizes}
         style={{
+          width: '100%',
+          height: 'auto',
           ...style,
           opacity: isLoading ? 0 : 1,
           transition: 'opacity 0.3s ease-in-out'

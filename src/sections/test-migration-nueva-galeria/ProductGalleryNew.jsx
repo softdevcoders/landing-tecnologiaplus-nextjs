@@ -10,24 +10,34 @@ function ProductGalleryNew() {
     // Imágenes principales (fallback)
     images: [
       {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq.webp",
-        alt: "Llamador de meseros E2-N vista principal"
+        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq",
+        alt: "Llamador de meseros E2-N vista principal",
+        width: 1381,
+        height: 1442
       },
       {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039882/5_4x-8_wzjgam.webp",
-        alt: "Llamador de meseros E2-N vista lateral"
+        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039882/5_4x-8_wzjgam",
+        alt: "Llamador de meseros E2-N vista lateral",
+        width: 1381,
+        height: 1442
       },
       {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/7_4x-8_1_saux20.webp",
-        alt: "Llamador de meseros E2-N vista detalle"
+        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/7_4x-8_1_saux20",
+        alt: "Llamador de meseros E2-N vista detalle",
+        width: 1381,
+        height: 1443
       },
       {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/3_4x-8_wiiwjz.webp",
-        alt: "Llamador de meseros E2-N vista uso"
+        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/3_4x-8_wiiwjz",
+        alt: "Llamador de meseros E2-N vista uso",
+        width: 1381,
+        height: 1442
       },
       {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he.webp",
-        alt: "Llamador de meseros E2-N medidas"
+        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he",
+        alt: "Llamador de meseros E2-N medidas",
+        width: 1385,
+        height: 1090
       }
     ],
     
@@ -39,52 +49,76 @@ function ProductGalleryNew() {
         hex: "#000000",
         images: [
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039510/Frame_2_5_fznqyt.webp",
-            alt: "Llamador de meseros E2-N color negro"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039510/Frame_2_5_fznqyt",
+            alt: "Llamador de meseros E2-N color negro",
+            width: 1381,
+            height: 1442
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq.webp",
-            alt: "Llamador de meseros E2-N negro vista principal"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq",
+            alt: "Llamador de meseros E2-N negro vista principal",
+            width: 1381,
+            height: 1442
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039882/5_4x-8_wzjgam.webp",
-            alt: "Llamador de meseros E2-N negro vista lateral"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039882/5_4x-8_wzjgam",
+            alt: "Llamador de meseros E2-N negro vista lateral",
+            width: 1381,
+            height: 1442
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he.webp",
-            alt: "Llamador de meseros E2-N negro medidas"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he",
+            alt: "Llamador de meseros E2-N negro medidas",
+            width: 1385,
+            height: 1090
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039510/Frame_2_5_fznqyt.webp",
-            alt: "Llamador de meseros E2-N color negro"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039510/Frame_2_5_fznqyt",
+            alt: "Llamador de meseros E2-N color negro",
+            width: 1381,
+            height: 1442
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq.webp",
-            alt: "Llamador de meseros E2-N negro vista principal"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq",
+            alt: "Llamador de meseros E2-N negro vista principal",
+            width: 1381,
+            height: 1442
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039882/5_4x-8_wzjgam.webp",
-            alt: "Llamador de meseros E2-N negro vista lateral"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039882/5_4x-8_wzjgam",
+            alt: "Llamador de meseros E2-N negro vista lateral",
+            width: 1381,
+            height: 1442
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he.webp",
-            alt: "Llamador de meseros E2-N negro medidas"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he",
+            alt: "Llamador de meseros E2-N negro medidas",
+            width: 1385,
+            height: 1090
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039510/Frame_2_5_fznqyt.webp",
-            alt: "Llamador de meseros E2-N color negro"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039510/Frame_2_5_fznqyt",
+            alt: "Llamador de meseros E2-N color negro",
+            width: 1381,
+            height: 1442
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq.webp",
-            alt: "Llamador de meseros E2-N negro vista principal"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq",
+            alt: "Llamador de meseros E2-N negro vista principal",
+            width: 1381,
+            height: 1442
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039882/5_4x-8_wzjgam.webp",
-            alt: "Llamador de meseros E2-N negro vista lateral"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039882/5_4x-8_wzjgam",
+            alt: "Llamador de meseros E2-N negro vista lateral",
+            width: 1381,
+            height: 1442
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he.webp",
-            alt: "Llamador de meseros E2-N negro medidas"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he",
+            alt: "Llamador de meseros E2-N negro medidas",
+            width: 1385,
+            height: 1090
           }
         ]
       },
@@ -94,20 +128,28 @@ function ProductGalleryNew() {
         hex: "#FFFFFF",
         images: [
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039509/Frame_2_6_qar5li.webp",
-            alt: "Llamador de meseros E2-N color blanco"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039509/Frame_2_6_qar5li",
+            alt: "Llamador de meseros E2-N color blanco",
+            width: 1381,
+            height: 1442
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/7_4x-8_1_saux20.webp",
-            alt: "Llamador de meseros E2-N blanco vista detalle"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/7_4x-8_1_saux20",
+            alt: "Llamador de meseros E2-N blanco vista detalle",
+            width: 1381,
+            height: 1443
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/3_4x-8_wiiwjz.webp",
-            alt: "Llamador de meseros E2-N blanco vista uso"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/3_4x-8_wiiwjz",
+            alt: "Llamador de meseros E2-N blanco vista uso",
+            width: 1381,
+            height: 1442
           },
           {
-            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he.webp",
-            alt: "Llamador de meseros E2-N blanco medidas"
+            src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he",
+            alt: "Llamador de meseros E2-N blanco medidas",
+            width: 1385,
+            height: 1090
           }
         ]
       }

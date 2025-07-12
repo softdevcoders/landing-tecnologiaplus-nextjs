@@ -116,7 +116,8 @@ const Thumbnails = ({
                 <ImageLoader
                   src={image.src}
                   alt={generateThumbnailAlt(image, index, productTitle, selectedColor)}
-                  fill
+                  width={image.width}
+                  height={image.height}
                   sizes={getOptimizedSizes('thumbnail', isMobile)}
                   style={{ objectFit: 'cover' }}
                   priority={false}

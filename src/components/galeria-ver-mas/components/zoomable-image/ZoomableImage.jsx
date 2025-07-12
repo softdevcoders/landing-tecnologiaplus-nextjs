@@ -103,7 +103,8 @@ const ZoomableImage = ({
         <ImageLoader
           src={image.src}
           alt={altText}
-          fill
+          width={image.width}
+          height={image.height}
           priority={usePriority}
           sizes={optimizedSizes}
           style={zoomStyles}
