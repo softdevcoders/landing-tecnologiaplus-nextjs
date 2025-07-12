@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import styles from "./image-gallery.module.scss";
+import styles from "./components/image-gallery.module.scss";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
 import Thumbnails from "./components/Thumbnails";
 import ZoomableImage from "./components/ZoomableImage";

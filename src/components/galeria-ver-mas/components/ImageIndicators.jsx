@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../image-gallery.module.scss";
+import styles from "./image-indicators.module.scss";
 
 const ImageIndicators = ({ 
   totalImages, 

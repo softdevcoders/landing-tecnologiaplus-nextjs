@@ -1,0 +1,38 @@
+.bullets {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &.active {
+    background: var(--primary-color, #007bff);
+    transform: scale(1.2);
+  }
+
+  @media (min-width: 768px) {
+    width: 8px;
+    height: 8px;
+  }
+} 

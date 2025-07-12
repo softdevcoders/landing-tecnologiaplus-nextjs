@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
-import styles from "../image-gallery.module.scss";
+import styles from "./thumbnails.module.scss";
 
 const Thumbnails = ({ 
   images, 
