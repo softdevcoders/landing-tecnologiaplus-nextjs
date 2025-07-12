@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState, useRef, useContext } from "react";
+import { useCallback, useEffect, useState, useRef, useContext, useMemo } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "./galeria-ver-mas.module.scss";
@@ -8,23 +8,18 @@ import { ArrowBack, ArrowForward } from "@/components/ui/icons";
 import { ProductColorContext } from "@/contexts/ProductColorContext";
 
 const ImageGallery = ({ images = [], fallbackImages = [] }) => {
-  // Usar el contexto de colores de forma segura (sin lanzar error)
   const colorContext = useContext(ProductColorContext);
 
-  // Determinar qué imágenes usar
-  const getImagesToDisplay = () => {
+  // Memoizar las imágenes a mostrar
+  const displayImages = useMemo(() => {
     if (colorContext) {
       const colorImages = colorContext.getImagesForSelectedColor();
-      // Si hay imágenes del color seleccionado, usarlas
       if (colorImages.length > 0) {
         return colorImages;
       }
     }
-    // Si no hay contexto o no hay imágenes del color, usar las imágenes directas o fallback
     return images.length > 0 ? images : fallbackImages;
-  };
-
-  const displayImages = getImagesToDisplay();
+  }, [colorContext, images, fallbackImages]);
 
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel({ 
     loop: true,
@@ -35,14 +30,15 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
   const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
   const imageRef = useRef(null);
 
+  const checkMobile = useCallback(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  }, [checkMobile]);
 
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: "keepSnaps",
@@ -67,24 +63,22 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
     setCanScrollNext(currentIndex < scrollSnaps.length - 1);
   }, [emblaThumbsApi]);
 
-  // Manejador del scroll del mouse
+  const handleWheel = useCallback((event) => {
+    event.preventDefault();
+    if (!emblaThumbsApi) return;
+
+    const delta = isMobile ? event.deltaX : event.deltaY;
+    const scrollDirection = delta > 0 ? 1 : -1;
+    
+    const scrollMultiplier = 1.5;
+    emblaThumbsApi.scrollTo(
+      emblaThumbsApi.selectedScrollSnap() + (scrollDirection * scrollMultiplier)
+    );
+    updateScrollButtons();
+  }, [emblaThumbsApi, isMobile, updateScrollButtons]);
+
   useEffect(() => {
     if (!emblaThumbsRef.current) return;
-
-    const handleWheel = (event) => {
-      event.preventDefault();
-      if (!emblaThumbsApi) return;
-
-      const delta = isMobile ? event.deltaX : event.deltaY;
-      const scrollDirection = delta > 0 ? 1 : -1;
-      
-      // Ajustamos la sensibilidad del scroll
-      const scrollMultiplier = 1.5;
-      emblaThumbsApi.scrollTo(
-        emblaThumbsApi.selectedScrollSnap() + (scrollDirection * scrollMultiplier)
-      );
-      updateScrollButtons();
-    };
 
     const element = emblaThumbsRef.current;
     element.addEventListener('wheel', handleWheel, { passive: false });
@@ -92,28 +86,29 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
     return () => {
       element.removeEventListener('wheel', handleWheel);
     };
-  }, [emblaThumbsApi, emblaThumbsRef, isMobile, updateScrollButtons]);
+  }, [emblaThumbsRef, handleWheel]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaMainApi || !emblaThumbsApi) return;
+    
+    setSelectedIndex(emblaMainApi.selectedScrollSnap());
+    const thumbs = emblaThumbsApi.scrollSnapList();
+    const targetIndex = Math.min(
+      thumbs.length - 1,
+      emblaMainApi.selectedScrollSnap()
+    );
+    emblaThumbsApi.scrollTo(targetIndex);
+    updateScrollButtons();
+  }, [emblaMainApi, emblaThumbsApi, updateScrollButtons]);
 
   useEffect(() => {
     if (!emblaMainApi || !emblaThumbsApi) return;
-
-    const onSelect = () => {
-      setSelectedIndex(emblaMainApi.selectedScrollSnap());
-      const thumbs = emblaThumbsApi.scrollSnapList();
-      const targetIndex = Math.min(
-        thumbs.length - 1,
-        emblaMainApi.selectedScrollSnap()
-      );
-      emblaThumbsApi.scrollTo(targetIndex);
-      updateScrollButtons();
-    };
 
     emblaMainApi.on('select', onSelect);
     emblaThumbsApi.on('select', updateScrollButtons);
     emblaThumbsApi.on('scroll', updateScrollButtons);
     emblaThumbsApi.on('reInit', updateScrollButtons);
 
-    // Inicializar estados
     onSelect();
     updateScrollButtons();
 
@@ -123,9 +118,8 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
       emblaThumbsApi.off('scroll', updateScrollButtons);
       emblaThumbsApi.off('reInit', updateScrollButtons);
     };
-  }, [emblaMainApi, emblaThumbsApi, updateScrollButtons]);
+  }, [emblaMainApi, emblaThumbsApi, onSelect, updateScrollButtons]);
 
-  // Reinicializar el carrusel cuando cambia la orientación
   useEffect(() => {
     if (emblaThumbsApi) {
       emblaThumbsApi.reInit();
@@ -133,54 +127,50 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
     }
   }, [isMobile, emblaThumbsApi, updateScrollButtons]);
 
-  // Reinicializar cuando cambien las imágenes (por ejemplo, cambio de color)
+  const resetGalleryState = useCallback(() => {
+    setSelectedIndex(0);
+    setIsZoomed(false);
+    setZoomPosition({ x: 50, y: 50 });
+  }, []);
+
   useEffect(() => {
     if (emblaMainApi) {
       emblaMainApi.reInit();
-      setSelectedIndex(0);
-      setIsZoomed(false);
-      setZoomPosition({ x: 50, y: 50 });
+      resetGalleryState();
     }
     if (emblaThumbsApi) {
       emblaThumbsApi.reInit();
       updateScrollButtons();
     }
-  }, [displayImages, emblaMainApi, emblaThumbsApi, updateScrollButtons]);
+  }, [displayImages, emblaMainApi, emblaThumbsApi, updateScrollButtons, resetGalleryState]);
 
-  // Reinicializar cuando cambie el color seleccionado
   useEffect(() => {
-    if (colorContext && colorContext.selectedColor) {
-      setSelectedIndex(0);
-      setIsZoomed(false);
-      setZoomPosition({ x: 50, y: 50 });
+    if (colorContext?.selectedColor) {
+      resetGalleryState();
     }
-  }, [colorContext?.selectedColor]);
+  }, [colorContext?.selectedColor, resetGalleryState]);
 
   const scrollThumbsPrev = useCallback(() => {
-    if (emblaThumbsApi) {
-      // Calculamos el número de thumbnails visibles
-      const viewportSize = emblaThumbsApi.scrollSnapList().length;
-      const currentIndex = emblaThumbsApi.selectedScrollSnap();
-      
-      // Movemos por bloques completos
-      const targetIndex = Math.max(0, currentIndex - Math.floor(viewportSize / 2));
-      emblaThumbsApi.scrollTo(targetIndex);
-      updateScrollButtons();
-    }
+    if (!emblaThumbsApi) return;
+    
+    const viewportSize = emblaThumbsApi.scrollSnapList().length;
+    const currentIndex = emblaThumbsApi.selectedScrollSnap();
+    const targetIndex = Math.max(0, currentIndex - Math.floor(viewportSize / 2));
+    
+    emblaThumbsApi.scrollTo(targetIndex);
+    updateScrollButtons();
   }, [emblaThumbsApi, updateScrollButtons]);
 
   const scrollThumbsNext = useCallback(() => {
-    if (emblaThumbsApi) {
-      // Calculamos el número de thumbnails visibles
-      const viewportSize = emblaThumbsApi.scrollSnapList().length;
-      const currentIndex = emblaThumbsApi.selectedScrollSnap();
-      const maxIndex = emblaThumbsApi.scrollSnapList().length - 1;
-      
-      // Movemos por bloques completos
-      const targetIndex = Math.min(maxIndex, currentIndex + Math.floor(viewportSize / 2));
-      emblaThumbsApi.scrollTo(targetIndex);
-      updateScrollButtons();
-    }
+    if (!emblaThumbsApi) return;
+    
+    const viewportSize = emblaThumbsApi.scrollSnapList().length;
+    const currentIndex = emblaThumbsApi.selectedScrollSnap();
+    const maxIndex = emblaThumbsApi.scrollSnapList().length - 1;
+    const targetIndex = Math.min(maxIndex, currentIndex + Math.floor(viewportSize / 2));
+    
+    emblaThumbsApi.scrollTo(targetIndex);
+    updateScrollButtons();
   }, [emblaThumbsApi, updateScrollButtons]);
 
   const scrollPrev = useCallback(() => {
@@ -191,52 +181,36 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
     if (emblaMainApi) emblaMainApi.scrollNext();
   }, [emblaMainApi]);
 
-  const onThumbClick = useCallback(
-    (index) => {
-      if (!emblaMainApi || !emblaThumbsApi) return;
-      emblaMainApi.scrollTo(index);
-    },
-    [emblaMainApi, emblaThumbsApi]
-  );
+  const onThumbClick = useCallback((index) => {
+    if (!emblaMainApi || !emblaThumbsApi) return;
+    emblaMainApi.scrollTo(index);
+  }, [emblaMainApi, emblaThumbsApi]);
 
   const scrollDots = useCallback((index) => {
     if (!emblaMainApi || !emblaThumbsApi) return;
     emblaMainApi.scrollTo(index);
   }, [emblaMainApi, emblaThumbsApi]);
 
-  // Reset zoom when changing images
   useEffect(() => {
     setIsZoomed(false);
     setZoomPosition({ x: 50, y: 50 });
   }, [selectedIndex]);
 
-  // Controlar el comportamiento del carrusel cuando se hace zoom
   useEffect(() => {
     if (!emblaMainApi) return;
-
-    if (isZoomed) {
-      emblaMainApi.reInit({ dragFree: false });
-    } else {
-      emblaMainApi.reInit({ dragFree: true });
-    }
+    emblaMainApi.reInit({ dragFree: !isZoomed });
   }, [isZoomed, emblaMainApi]);
 
-  const handleImageClick = () => {
-    setIsZoomed(!isZoomed);
-  };
+  const handleImageClick = useCallback(() => {
+    setIsZoomed(prev => !prev);
+  }, []);
 
-  const calculateZoomPosition = (clientX, clientY, rect) => {
-    // Calculamos la posición relativa del cursor en la imagen (0-1)
+  const calculateZoomPosition = useCallback((clientX, clientY, rect) => {
     const relativeX = (clientX - rect.left) / rect.width;
     const relativeY = (clientY - rect.top) / rect.height;
-
     const zoomLevel = 1.75;
-    
-    // Calculamos el rango máximo para asegurar que podemos llegar a todos los bordes
-    // Para un zoom de 1.75x, necesitamos movernos un 75% del tamaño de la imagen
     const maxOffset = (zoomLevel - 1) * 100;
     
-    // Ajustamos la posición para que 0.5 (centro) corresponda al 50% del movimiento
     const x = relativeX * maxOffset;
     const y = relativeY * maxOffset;
 
@@ -244,17 +218,17 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
       x: Math.max(0, Math.min(maxOffset, x)),
       y: Math.max(0, Math.min(maxOffset, y))
     };
-  };
+  }, []);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = useCallback((e) => {
     if (!isZoomed || !imageRef.current) return;
     
     const rect = imageRef.current.getBoundingClientRect();
     const newPosition = calculateZoomPosition(e.clientX, e.clientY, rect);
     setZoomPosition(newPosition);
-  };
+  }, [isZoomed, calculateZoomPosition]);
 
-  const handleTouchMove = (e) => {
+  const handleTouchMove = useCallback((e) => {
     if (!isZoomed || !imageRef.current) return;
     e.preventDefault();
     
@@ -262,15 +236,21 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
     const rect = imageRef.current.getBoundingClientRect();
     const newPosition = calculateZoomPosition(touch.clientX, touch.clientY, rect);
     setZoomPosition(newPosition);
-  };
+  }, [isZoomed, calculateZoomPosition]);
 
   if (!displayImages || displayImages.length === 0) {
     return null;
   }
 
+  // Memoizar los estilos de zoom
+  const zoomStyles = useMemo(() => ({
+    objectFit: 'contain',
+    transform: isZoomed ? `scale(${1.75}) translate(-${zoomPosition.x}%, -${zoomPosition.y}%)` : 'none',
+    transformOrigin: '0 0'
+  }), [isZoomed, zoomPosition.x, zoomPosition.y]);
+
   return (
     <div className={styles.gallery}>
-      {/* Miniaturas */}
       {displayImages.length > 1 && (
         <div className={styles.thumbs}>
           <div className={styles.thumbsTrack}>
@@ -299,7 +279,6 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
               </div>
             </div>
 
-            {/* Botones de navegación para thumbnails */}
             {displayImages.length > 5 && (
               <>
                 <button
@@ -325,7 +304,6 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
         </div>
       )}
 
-      {/* Carrusel principal */}
       <div className={styles.mainCarousel}>
         <div className={styles.viewport} ref={emblaMainRef}>
           <div className={styles.container}>
@@ -339,9 +317,7 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
                   onTouchMove={handleTouchMove}
                   style={
                     isZoomed && index === selectedIndex
-                      ? {
-                          cursor: 'zoom-out'
-                        }
+                      ? { cursor: 'zoom-out' }
                       : { cursor: 'zoom-in' }
                   }
                 >
@@ -352,11 +328,7 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
                       fill
                       priority={index === 0}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 800px"
-                      style={{ 
-                        objectFit: 'contain',
-                        transform: isZoomed ? `scale(${1.75}) translate(-${zoomPosition.x}%, -${zoomPosition.y}%)` : 'none',
-                        transformOrigin: '0 0'
-                      }}
+                      style={zoomStyles}
                     />
                   </div>
                 </div>
@@ -387,7 +359,6 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
           )}
         </div>
 
-        {/* Bullets */}
         {displayImages.length > 1 && !isZoomed && (
           <div className={styles.bullets}>
             {displayImages.map((_, index) => (
