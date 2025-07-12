@@ -1,5 +1,3 @@
-"use client";
-
 import GaleriaVerMas from '@/components/galeria-ver-mas/GaleriaVerMas';
 import TinesPreguntasButton from "@/components/tines-preguntas-button";
 import BackButton from "@/components/back-button";
