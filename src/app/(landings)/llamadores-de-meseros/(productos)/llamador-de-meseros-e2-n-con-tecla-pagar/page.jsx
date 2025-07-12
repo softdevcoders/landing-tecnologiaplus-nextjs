@@ -4,7 +4,6 @@ import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/lla
 import HowItWorks from "@/sections/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar/components/HowItWorks/HowItWorks";
 import ProductGallerySelected from "@/sections/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar/components/ProductGallery/ProductGallerySelected";
 import getMetadata from "@/request/server/metadata/get-metadata";
-import { GaleriaVerMas } from "@/components/galeria-ver-mas";
 
 const verMasInformacion = {
 
@@ -62,10 +61,7 @@ export async function generateMetadata() {
 export default function VerMasMeserosLlamadorV2n() {
   return (
     <>
-      {/* <ProductGallerySelected /> */}
-      <GaleriaVerMas
-        verMasInformacion={verMasInformacion}
-      />
+      <ProductGallerySelected />
       <TechnicalSheet />
       <HowItWorks />
       <LlamadorMeserosClientsSection />

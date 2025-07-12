@@ -1,4 +1,4 @@
-import ProductGalleryNew from '@/sections/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar/components/ProductGallery/ProductGalleryNew';
+import ProductGalleryNew from '@/sections/test-migration-nueva-galeria/ProductGalleryNew'; 
 
 const TestMigration = () => {
   return (
