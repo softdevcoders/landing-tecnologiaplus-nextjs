@@ -120,6 +120,7 @@ function ProductGalleryNew() {
   return (
     <section className={styles.hero}>
       <div style={{ padding: '20px 0' }}>
+        {/* Usar el nuevo componente GaleriaVerMas */}
         <GaleriaVerMas verMasInformacion={productInfo} />
       </div>
     </section>
