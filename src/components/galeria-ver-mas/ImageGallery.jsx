@@ -1,100 +1,47 @@
 "use client";
 
-import { useCallback, useEffect, useState, useContext, useMemo } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import { useEffect } from "react";
 import styles from "./galeria-ver-mas.module.scss";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
-import { ProductColorContext } from "@/contexts/ProductColorContext";
 import Thumbnails from "./components/Thumbnails";
 import ZoomableImage from "./components/ZoomableImage";
 import ImageIndicators from "./components/ImageIndicators";
+import { useMainCarousel } from "./hooks/useMainCarousel";
+import { useGalleryState } from "./hooks/useGalleryState";
 
 const ImageGallery = ({ images = [], fallbackImages = [] }) => {
-  const colorContext = useContext(ProductColorContext);
+  const {
+    displayImages,
+    isMobile,
+    zoomPosition,
+    setZoomPosition,
+    resetGalleryState,
+    colorContext
+  } = useGalleryState(images, fallbackImages);
 
-  const displayImages = useMemo(() => {
-    if (colorContext) {
-      const colorImages = colorContext.getImagesForSelectedColor();
-      if (colorImages.length > 0) {
-        return colorImages;
-      }
-    }
-    return images.length > 0 ? images : fallbackImages;
-  }, [colorContext, images, fallbackImages]);
-
-  const [emblaMainRef, emblaMainApi] = useEmblaCarousel({ 
-    loop: true,
-    dragFree: true 
-  });
-
-  const [isMobile, setIsMobile] = useState(false);
-  const [isZoomed, setIsZoomed] = useState(false);
-  const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const checkMobile = useCallback(() => {
-    setIsMobile(window.innerWidth < 768);
-  }, []);
-
-  // Callback para actualizar el índice seleccionado cuando cambia el carrusel
-  const onSelect = useCallback(() => {
-    if (!emblaMainApi) return;
-    setSelectedIndex(emblaMainApi.selectedScrollSnap());
-  }, [emblaMainApi]);
-
-  // Efecto para manejar el responsive y detectar dispositivos móviles
-  useEffect(() => {
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, [checkMobile]);
-
-  // Efecto para sincronizar el índice seleccionado con el carrusel principal
-  useEffect(() => {
-    if (!emblaMainApi) return;
-    emblaMainApi.on('select', onSelect);
-    onSelect(); // Inicializar el estado
-    return () => emblaMainApi.off('select', onSelect);
-  }, [emblaMainApi, onSelect]);
-
-  const resetGalleryState = useCallback(() => {
-    setSelectedIndex(0);
-    setIsZoomed(false);
-    setZoomPosition({ x: 50, y: 50 });
-  }, []);
+  const {
+    emblaMainRef,
+    selectedIndex,
+    isZoomed,
+    setIsZoomed,
+    scrollPrev,
+    scrollNext,
+    scrollTo: handleThumbClick,
+    reInitCarousel
+  } = useMainCarousel();
 
   // Efecto para reiniciar el estado cuando cambian las imágenes
   useEffect(() => {
-    if (emblaMainApi) {
-      emblaMainApi.reInit();
-      resetGalleryState();
-    }
-  }, [displayImages, emblaMainApi, resetGalleryState]);
+    reInitCarousel();
+    resetGalleryState(setIsZoomed, () => {});
+  }, [displayImages, reInitCarousel, resetGalleryState, setIsZoomed]);
 
   // Efecto para reiniciar el estado cuando cambia el color seleccionado
   useEffect(() => {
     if (colorContext?.selectedColor) {
-      resetGalleryState();
+      resetGalleryState(setIsZoomed, () => {});
     }
-  }, [colorContext?.selectedColor, resetGalleryState]);
-
-  const scrollPrev = useCallback(() => {
-    if (emblaMainApi) emblaMainApi.scrollPrev();
-  }, [emblaMainApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaMainApi) emblaMainApi.scrollNext();
-  }, [emblaMainApi]);
-
-  const handleThumbClick = useCallback((index) => {
-    if (emblaMainApi) emblaMainApi.scrollTo(index);
-  }, [emblaMainApi]);
-
-  // Efecto para actualizar el comportamiento del carrusel según el estado del zoom
-  useEffect(() => {
-    if (!emblaMainApi) return;
-    emblaMainApi.reInit({ dragFree: !isZoomed });
-  }, [isZoomed, emblaMainApi]);
+  }, [colorContext?.selectedColor, resetGalleryState, setIsZoomed]);
 
   if (!displayImages || displayImages.length === 0) {
     return null;
