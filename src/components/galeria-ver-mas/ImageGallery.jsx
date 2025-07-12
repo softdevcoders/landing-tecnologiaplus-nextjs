@@ -46,9 +46,11 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
 
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: "keepSnaps",
-    dragFree: true,
+    dragFree: false,
     axis: isMobile ? 'x' : 'y',
-    watchDrag: false // Deshabilitamos el drag para permitir scroll nativo
+    watchDrag: false,
+    skipSnaps: false,
+    align: 'start'
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -156,14 +158,27 @@ const ImageGallery = ({ images = [], fallbackImages = [] }) => {
 
   const scrollThumbsPrev = useCallback(() => {
     if (emblaThumbsApi) {
-      emblaThumbsApi.scrollPrev();
+      // Calculamos el número de thumbnails visibles
+      const viewportSize = emblaThumbsApi.scrollSnapList().length;
+      const currentIndex = emblaThumbsApi.selectedScrollSnap();
+      
+      // Movemos por bloques completos
+      const targetIndex = Math.max(0, currentIndex - Math.floor(viewportSize / 2));
+      emblaThumbsApi.scrollTo(targetIndex);
       updateScrollButtons();
     }
   }, [emblaThumbsApi, updateScrollButtons]);
 
   const scrollThumbsNext = useCallback(() => {
     if (emblaThumbsApi) {
-      emblaThumbsApi.scrollNext();
+      // Calculamos el número de thumbnails visibles
+      const viewportSize = emblaThumbsApi.scrollSnapList().length;
+      const currentIndex = emblaThumbsApi.selectedScrollSnap();
+      const maxIndex = emblaThumbsApi.scrollSnapList().length - 1;
+      
+      // Movemos por bloques completos
+      const targetIndex = Math.min(maxIndex, currentIndex + Math.floor(viewportSize / 2));
+      emblaThumbsApi.scrollTo(targetIndex);
       updateScrollButtons();
     }
   }, [emblaThumbsApi, updateScrollButtons]);
