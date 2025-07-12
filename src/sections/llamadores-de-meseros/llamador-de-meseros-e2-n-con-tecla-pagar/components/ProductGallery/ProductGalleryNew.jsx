@@ -121,18 +121,9 @@ function ProductGalleryNew() {
 
   return (
     <section className={styles.hero}>
-      <div className={styles.action__nav}>
-        <BackButton /> 
-      </div>
-
       <div style={{ padding: '20px 0' }}>
         {/* Usar el nuevo componente GaleriaVerMas */}
         <GaleriaVerMas verMasInformacion={productInfo} />
-        
-        {/* Botón de contacto */}
-        <div className={styles.container__contact__info} style={{ marginTop: '20px', textAlign: 'center' }}>
-          <TinesPreguntasButton styles={styles} />
-        </div>
       </div>
     </section>
   );

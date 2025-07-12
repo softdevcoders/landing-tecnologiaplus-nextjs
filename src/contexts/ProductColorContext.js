@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useMemo, useCallback } from 'react';
 
 export const ProductColorContext = createContext();
 
@@ -12,49 +12,46 @@ export const useProductColor = () => {
   return context;
 };
 
-// Hook seguro que no lanza error si no está dentro del provider
 export const useProductColorSafe = () => {
   const context = useContext(ProductColorContext);
-  return context; // Retorna null si no está dentro del provider
+  return context;
 };
 
 export const ProductColorProvider = ({ children, colors = [], defaultColor = null }) => {
   const [selectedColor, setSelectedColor] = useState(defaultColor || colors[0]?.id || null);
   const [availableColors, setAvailableColors] = useState(colors);
 
-  // Efecto para resetear el color seleccionado cuando cambian los colores disponibles
   useEffect(() => {
     if (colors.length > 0) {
       setAvailableColors(colors);
       
-      // Si no hay un color seleccionado o el color seleccionado no está disponible
       if (!selectedColor || !colors.find(color => color.id === selectedColor)) {
         setSelectedColor(defaultColor || colors[0]?.id || null);
       }
     }
   }, [colors, defaultColor, selectedColor]);
 
-  const selectColor = (colorId) => {
+  const selectColor = useCallback((colorId) => {
     const colorExists = availableColors.find(color => color.id === colorId);
     if (colorExists) {
       setSelectedColor(colorId);
     }
-  };
+  }, [availableColors]);
 
-  const getSelectedColor = () => {
+  const getSelectedColor = useCallback(() => {
     return availableColors.find(color => color.id === selectedColor) || null;
-  };
+  }, [availableColors, selectedColor]);
 
-  const getImagesForSelectedColor = () => {
+  const getImagesForSelectedColor = useCallback(() => {
     const selectedColorObj = getSelectedColor();
     return selectedColorObj?.images || [];
-  };
+  }, [getSelectedColor]);
 
-  const hasMultipleColors = () => {
+  const hasMultipleColors = useCallback(() => {
     return availableColors.length > 1;
-  };
+  }, [availableColors]);
 
-  const value = {
+  const value = useMemo(() => ({
     selectedColor,
     availableColors,
     selectColor,
@@ -62,7 +59,14 @@ export const ProductColorProvider = ({ children, colors = [], defaultColor = nul
     getImagesForSelectedColor,
     hasMultipleColors,
     setAvailableColors
-  };
+  }), [
+    selectedColor,
+    availableColors,
+    selectColor,
+    getSelectedColor,
+    getImagesForSelectedColor,
+    hasMultipleColors
+  ]);
 
   return (
     <ProductColorContext.Provider value={value}>
