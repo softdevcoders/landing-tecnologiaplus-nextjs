@@ -1,4 +1,4 @@
-import ColorSelector from "@/components/color-selector";
+import ColorSelector from "../color-selector";
 import styles from "./info-container.module.scss";
 
 const InfoContainer = ({ title, description }) => {
