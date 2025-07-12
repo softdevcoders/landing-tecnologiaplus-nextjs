@@ -1,0 +1,159 @@
+.colorSelector {
+  margin-bottom: 1.5rem;
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    
+    .title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+    
+    .selectedColorName {
+      font-size: 0.875rem;
+      color: #666;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+  }
+  
+  .colorGrid {
+    display: grid;
+    gap: 0.75rem;
+    
+    // Tamaños diferentes para el selector
+    &.small {
+      grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+      gap: 0.5rem;
+      
+      .colorOption {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    
+    &.medium {
+      grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+      gap: 0.75rem;
+      
+      .colorOption {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    
+    &.large {
+      grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+      gap: 1rem;
+      
+      .colorOption {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+  
+  .colorOption {
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    
+    // Sombra sutil por defecto
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    }
+    
+    &.selected {
+      border-color: #007bff;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+      transform: scale(1.05);
+    }
+    
+    // Para colores muy claros, agregar un borde sutil
+    &[style*="white"],
+    &[style*="#fff"],
+    &[style*="#ffffff"],
+    &[style*="rgb(255, 255, 255)"] {
+      border: 2px solid #e0e0e0;
+      
+      &.selected {
+        border-color: #007bff;
+      }
+    }
+    
+    .selectedIndicator {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: 60%;
+      color: white;
+      
+      // Agregar un fondo semi-transparente para mejor visibilidad
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      svg {
+        width: 70%;
+        height: 70%;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .colorSelector {
+    .colorGrid {
+      &.small {
+        grid-template-columns: repeat(auto-fit, minmax(28px, 1fr));
+        
+        .colorOption {
+          width: 28px;
+          height: 28px;
+        }
+      }
+      
+      &.medium {
+        grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
+        
+        .colorOption {
+          width: 36px;
+          height: 36px;
+        }
+      }
+      
+      &.large {
+        grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+        
+        .colorOption {
+          width: 44px;
+          height: 44px;
+        }
+      }
+    }
+  }
+} 

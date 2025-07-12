@@ -1,12 +1,31 @@
 "use client";
 
-import { useCallback, useEffect, useState, useRef } from "react";
+import { useCallback, useEffect, useState, useRef, useContext } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "./galeria-ver-mas.module.scss";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
+import { ProductColorContext } from "@/contexts/ProductColorContext";
 
-const ImageGallery = ({ images = [] }) => {
+const ImageGallery = ({ images = [], fallbackImages = [] }) => {
+  // Usar el contexto de colores de forma segura (sin lanzar error)
+  const colorContext = useContext(ProductColorContext);
+
+  // Determinar qué imágenes usar
+  const getImagesToDisplay = () => {
+    if (colorContext) {
+      const colorImages = colorContext.getImagesForSelectedColor();
+      // Si hay imágenes del color seleccionado, usarlas
+      if (colorImages.length > 0) {
+        return colorImages;
+      }
+    }
+    // Si no hay contexto o no hay imágenes del color, usar las imágenes directas o fallback
+    return images.length > 0 ? images : fallbackImages;
+  };
+
+  const displayImages = getImagesToDisplay();
+
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel({ 
     loop: true,
     dragFree: true 
@@ -112,6 +131,29 @@ const ImageGallery = ({ images = [] }) => {
     }
   }, [isMobile, emblaThumbsApi, updateScrollButtons]);
 
+  // Reinicializar cuando cambien las imágenes (por ejemplo, cambio de color)
+  useEffect(() => {
+    if (emblaMainApi) {
+      emblaMainApi.reInit();
+      setSelectedIndex(0);
+      setIsZoomed(false);
+      setZoomPosition({ x: 50, y: 50 });
+    }
+    if (emblaThumbsApi) {
+      emblaThumbsApi.reInit();
+      updateScrollButtons();
+    }
+  }, [displayImages, emblaMainApi, emblaThumbsApi, updateScrollButtons]);
+
+  // Reinicializar cuando cambie el color seleccionado
+  useEffect(() => {
+    if (colorContext && colorContext.selectedColor) {
+      setSelectedIndex(0);
+      setIsZoomed(false);
+      setZoomPosition({ x: 50, y: 50 });
+    }
+  }, [colorContext?.selectedColor]);
+
   const scrollThumbsPrev = useCallback(() => {
     if (emblaThumbsApi) {
       emblaThumbsApi.scrollPrev();
@@ -207,19 +249,19 @@ const ImageGallery = ({ images = [] }) => {
     setZoomPosition(newPosition);
   };
 
-  if (!images || images.length === 0) {
+  if (!displayImages || displayImages.length === 0) {
     return null;
   }
 
   return (
     <div className={styles.gallery}>
       {/* Miniaturas */}
-      {images.length > 1 && (
+      {displayImages.length > 1 && (
         <div className={styles.thumbs}>
           <div className={styles.thumbsTrack}>
             <div className={`${styles.viewport} ${styles.scrollable}`} ref={emblaThumbsRef}>
               <div className={styles.container}>
-                {images.map((image, index) => (
+                {displayImages.map((image, index) => (
                   <button
                     key={index}
                     className={`${styles.thumb} ${
@@ -243,7 +285,7 @@ const ImageGallery = ({ images = [] }) => {
             </div>
 
             {/* Botones de navegación para thumbnails */}
-            {images.length > 5 && (
+            {displayImages.length > 5 && (
               <>
                 <button
                   className={`${styles.thumbNavButton} ${styles.prev} ${!canScrollPrev ? styles.hidden : ''}`}
@@ -272,7 +314,7 @@ const ImageGallery = ({ images = [] }) => {
       <div className={styles.mainCarousel}>
         <div className={styles.viewport} ref={emblaMainRef}>
           <div className={styles.container}>
-            {images.map((image, index) => (
+            {displayImages.map((image, index) => (
               <div className={styles.slide} key={index}>
                 <div 
                   ref={index === selectedIndex ? imageRef : null}
@@ -307,7 +349,7 @@ const ImageGallery = ({ images = [] }) => {
             ))}
           </div>
 
-          {images.length > 1 && !isZoomed && (
+          {displayImages.length > 1 && !isZoomed && (
             <>
               <button
                 className={`${styles.navButton} ${styles.prev}`}
@@ -331,9 +373,9 @@ const ImageGallery = ({ images = [] }) => {
         </div>
 
         {/* Bullets */}
-        {images.length > 1 && !isZoomed && (
+        {displayImages.length > 1 && !isZoomed && (
           <div className={styles.bullets}>
-            {images.map((_, index) => (
+            {displayImages.map((_, index) => (
               <button
                 key={index}
                 className={`${styles.bullet} ${index === selectedIndex ? styles.active : ''}`}
