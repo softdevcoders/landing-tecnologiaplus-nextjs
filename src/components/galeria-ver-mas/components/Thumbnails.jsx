@@ -27,12 +27,23 @@ const Thumbnails = ({
   const updateScrollButtons = useCallback(() => {
     if (!emblaThumbsApi) return;
     
-    const scrollSnaps = emblaThumbsApi.scrollSnapList();
-    const currentIndex = emblaThumbsApi.selectedScrollSnap();
-    
-    setCanScrollPrev(currentIndex > 0);
-    setCanScrollNext(currentIndex < scrollSnaps.length - 1);
+    setCanScrollPrev(emblaThumbsApi.canScrollPrev());
+    setCanScrollNext(emblaThumbsApi.canScrollNext());
   }, [emblaThumbsApi]);
+
+  // Efecto para inicializar y manejar cambios en el carrusel
+  useEffect(() => {
+    if (!emblaThumbsApi) return;
+
+    updateScrollButtons();
+    emblaThumbsApi.on('select', updateScrollButtons);
+    emblaThumbsApi.on('reInit', updateScrollButtons);
+
+    return () => {
+      emblaThumbsApi.off('select', updateScrollButtons);
+      emblaThumbsApi.off('reInit', updateScrollButtons);
+    };
+  }, [emblaThumbsApi, updateScrollButtons]);
 
   const handleWheel = useCallback((event) => {
     event.preventDefault();
@@ -41,12 +52,12 @@ const Thumbnails = ({
     const delta = isMobile ? event.deltaX : event.deltaY;
     const scrollDirection = delta > 0 ? 1 : -1;
     
-    const scrollMultiplier = 1.5;
-    emblaThumbsApi.scrollTo(
-      emblaThumbsApi.selectedScrollSnap() + (scrollDirection * scrollMultiplier)
-    );
-    updateScrollButtons();
-  }, [emblaThumbsApi, isMobile, updateScrollButtons]);
+    if (scrollDirection > 0 && emblaThumbsApi.canScrollNext()) {
+      emblaThumbsApi.scrollNext();
+    } else if (scrollDirection < 0 && emblaThumbsApi.canScrollPrev()) {
+      emblaThumbsApi.scrollPrev();
+    }
+  }, [emblaThumbsApi, isMobile]);
 
   // Efecto para manejar el scroll del mouse en las miniaturas
   useEffect(() => {
@@ -61,37 +72,28 @@ const Thumbnails = ({
   }, [emblaThumbsRef, handleWheel]);
 
   const scrollThumbsPrev = useCallback(() => {
-    if (!emblaThumbsApi) return;
-    
-    const viewportSize = emblaThumbsApi.scrollSnapList().length;
-    const currentIndex = emblaThumbsApi.selectedScrollSnap();
-    const targetIndex = Math.max(0, currentIndex - Math.floor(viewportSize / 2));
-    
-    emblaThumbsApi.scrollTo(targetIndex);
-    updateScrollButtons();
-  }, [emblaThumbsApi, updateScrollButtons]);
+    if (emblaThumbsApi && emblaThumbsApi.canScrollPrev()) {
+      emblaThumbsApi.scrollPrev();
+    }
+  }, [emblaThumbsApi]);
 
   const scrollThumbsNext = useCallback(() => {
-    if (!emblaThumbsApi) return;
-    
-    const viewportSize = emblaThumbsApi.scrollSnapList().length;
-    const currentIndex = emblaThumbsApi.selectedScrollSnap();
-    const maxIndex = emblaThumbsApi.scrollSnapList().length - 1;
-    const targetIndex = Math.min(maxIndex, currentIndex + Math.floor(viewportSize / 2));
-    
-    emblaThumbsApi.scrollTo(targetIndex);
-    updateScrollButtons();
-  }, [emblaThumbsApi, updateScrollButtons]);
+    if (emblaThumbsApi && emblaThumbsApi.canScrollNext()) {
+      emblaThumbsApi.scrollNext();
+    }
+  }, [emblaThumbsApi]);
 
   // Efecto para reinicializar el carrusel de miniaturas cuando cambia la orientación
   useEffect(() => {
     if (emblaThumbsApi) {
       emblaThumbsApi.reInit();
-      updateScrollButtons();
     }
-  }, [isMobile, emblaThumbsApi, updateScrollButtons]);
+  }, [isMobile, emblaThumbsApi]);
 
   if (images.length <= 1) return null;
+
+  // Mostrar botones si hay más de 3 imágenes en móvil o más de 5 en desktop
+  const shouldShowButtons = isMobile ? images.length > 3 : images.length > 5;
 
   return (
     <div className={styles.thumbs}>
@@ -121,7 +123,7 @@ const Thumbnails = ({
           </div>
         </div>
 
-        {images.length > 5 && (
+        {shouldShowButtons && (
           <>
             <button
               className={`${styles.thumbNavButton} ${styles.prev} ${!canScrollPrev ? styles.hidden : ''}`}

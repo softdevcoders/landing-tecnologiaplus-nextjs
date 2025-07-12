@@ -19,6 +19,7 @@
     order: 1;
     width: 80px;
     flex-shrink: 0;
+    height: 100%;
   }
 }
 
@@ -28,7 +29,12 @@
   overflow: hidden;
 
   @media (min-width: 768px) {
-    height: 400px;
+    height: 100%;
+  }
+
+  &:hover .thumbNavButton {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -43,35 +49,16 @@
   }
 
   &.scrollable {
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+    overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     
     &::-webkit-scrollbar {
-      height: 6px;
-    }
-    
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.3);
-      border-radius: 3px;
-      
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-      }
+      display: none;
     }
 
     @media (min-width: 768px) {
-      overflow-y: auto;
-      overflow-x: hidden;
-
-      &::-webkit-scrollbar {
-        width: 6px;
-      }
+      overflow: hidden;
     }
   }
 
@@ -97,21 +84,23 @@
 
 .thumbNavButton {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid #e0e0e0;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  transition: all 0.2s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   top: 50%;
   transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
 
   svg {
     width: 14px;
@@ -122,12 +111,14 @@
   &:hover:not(:disabled) {
     background: white;
     transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   &:disabled,
   &.hidden {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
   }
 
   &.prev {
@@ -206,6 +197,7 @@
   border-radius: 8px;
   margin-bottom: 2rem;
   padding: 0;
+  aspect-ratio: 4/3;
 }
 
 .mainCarousel .container {
@@ -215,7 +207,7 @@
   -webkit-tap-highlight-color: transparent;
   touch-action: pan-x pinch-zoom;
   gap: 0;
-  height: auto;
+  height: 100%;
   transition: none;
 
   @media (min-width: 768px) {
