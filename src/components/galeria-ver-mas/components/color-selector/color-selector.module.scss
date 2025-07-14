@@ -1,159 +1,65 @@
 .colorSelector {
-  margin-bottom: 1.5rem;
+  margin: 1rem 0;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.colorList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.colorButton {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
   
-  .header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.75rem;
-    gap: 1rem;
-    
-    .title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #333;
-      margin: 0;
-    }
-    
-    .selectedColorName {
-      font-size: 0.875rem;
-      color: #666;
-      font-weight: 500;
-      text-transform: capitalize;
-    }
+  &:hover {
+    transform: scale(1.1);
   }
   
-  .colorGrid {
-    display: grid;
-    gap: 0.75rem;
-    
-    // Tamaños diferentes para el selector
-    &.small {
-      grid-template-columns: repeat(auto-fit, 32px);
-      gap: 0.5rem;
-      
-      .colorOption {
-        width: 32px;
-        height: 32px;
-      }
-    }
-    
-    &.medium {
-      grid-template-columns: repeat(auto-fit, 40px);
-      gap: 0.75rem;
-      
-      .colorOption {
-        width: 40px;
-        height: 40px;
-      }
-    }
-    
-    &.large {
-      grid-template-columns: repeat(auto-fit, 48px);
-      gap: 1rem;
-      
-      .colorOption {
-        width: 48px;
-        height: 48px;
-      }
-    }
-  }
-  
-  .colorOption {
-    position: relative;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f0f0;
-    
-    // Sombra sutil por defecto
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    }
-    
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-    }
-    
-    &.selected {
-      border-color: #007bff;
-      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
-      transform: scale(1.05);
-    }
-    
-    // Para colores muy claros, agregar un borde sutil
-    &[style*="white"],
-    &[style*="#fff"],
-    &[style*="#ffffff"],
-    &[style*="rgb(255, 255, 255)"] {
-      border: 2px solid #e0e0e0;
-      
-      &.selected {
-        border-color: #007bff;
-      }
-    }
-    
-    .selectedIndicator {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60%;
-      height: 60%;
-      color: white;
-      
-      // Agregar un fondo semi-transparente para mejor visibilidad
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      svg {
-        width: 70%;
-        height: 70%;
-      }
-    }
+  &.selected {
+    border-color: #333;
   }
 }
 
-// Responsive design
-@media (max-width: 768px) {
-  .colorSelector {
-    .colorGrid {
-      &.small {
-        grid-template-columns: repeat(auto-fit, 28px);
-        
-        .colorOption {
-          width: 28px;
-          height: 28px;
-        }
-      }
-      
-      &.medium {
-        grid-template-columns: repeat(auto-fit, 36px);
-        
-        .colorOption {
-          width: 36px;
-          height: 36px;
-        }
-      }
-      
-      &.large {
-        grid-template-columns: repeat(auto-fit, 44px);
-        
-        .colorOption {
-          width: 44px;
-          height: 44px;
-        }
-      }
-    }
+.colorName {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  color: #666;
+}
+
+// Tamaños
+.small {
+  .colorButton {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.medium {
+  .colorButton {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.large {
+  .colorButton {
+    width: 40px;
+    height: 40px;
   }
 } 

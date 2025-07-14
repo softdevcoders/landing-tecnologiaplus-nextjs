@@ -3,21 +3,33 @@
 import { useCallback, useState, useEffect, useMemo } from 'react';
 import { useProductColorSafe } from '@/contexts/ProductColorContext';
 
-export const useGalleryState = (images = [], fallbackImages = []) => {
+export const useGalleryState = (media = [], colors = [], hasColors = false) => {
   const colorContext = useProductColorSafe();
   const [isMobile, setIsMobile] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
 
-  // Memoizar las imágenes a mostrar
-  const displayImages = useMemo(() => {
-    if (colorContext) {
-      const colorImages = colorContext.getImagesForSelectedColor();
-      if (colorImages.length > 0) {
-        return colorImages;
-      }
+  // Ordenar los medios: videos primero, luego imágenes (solo si no hay colores)
+  const sortMedia = useCallback((mediaItems) => {
+    if (!mediaItems || mediaItems.length === 0) return [];
+    
+    return [...mediaItems].sort((a, b) => {
+      if (a.type === 'video' && b.type !== 'video') return -1;
+      if (a.type !== 'video' && b.type === 'video') return 1;
+      return 0;
+    });
+  }, []);
+
+  // Memoizar los items a mostrar
+  const displayMediaItems = useMemo(() => {
+    if (hasColors && colorContext) {
+      // Obtener los medios del color seleccionado
+      const selectedColor = colorContext.getSelectedColor();
+      return selectedColor?.media || [];
     }
-    return images.length > 0 ? images : fallbackImages;
-  }, [colorContext, images, fallbackImages]);
+
+    // Para items sin color, ordenamos con los videos primero
+    return sortMedia(media);
+  }, [colorContext, media, hasColors, sortMedia]);
 
   const checkMobile = useCallback(() => {
     setIsMobile(window.innerWidth < 768);
@@ -37,7 +49,7 @@ export const useGalleryState = (images = [], fallbackImages = []) => {
   }, []);
 
   return {
-    displayImages,
+    displayMediaItems,
     isMobile,
     zoomPosition,
     setZoomPosition,

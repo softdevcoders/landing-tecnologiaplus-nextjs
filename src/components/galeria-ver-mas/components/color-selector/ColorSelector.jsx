@@ -1,69 +1,44 @@
 "use client";
 
-import React, { useContext } from 'react';
-import { ProductColorContext } from '@/contexts/ProductColorContext';
+import { useProductColor } from '@/contexts/ProductColorContext';
 import styles from './color-selector.module.scss';
 
-const ColorSelector = ({ 
+const ColorSelector = ({
   title = "Colores disponibles",
   showColorName = true,
   size = "medium" // small, medium, large
 }) => {
-  const colorContext = useContext(ProductColorContext);
+  const colorContext = useProductColor();
   
   // Si no hay contexto, no mostrar nada
   if (!colorContext) {
     return null;
   }
-  
-  const { 
-    selectedColor, 
-    availableColors, 
-    selectColor, 
-    getSelectedColor,
-    hasMultipleColors 
-  } = colorContext;
 
-  // No mostrar el selector si no hay múltiples colores
-  if (!hasMultipleColors()) {
+  const { colors, selectedColor, setSelectedColor } = colorContext;
+
+  // Si no hay colores, no mostrar nada
+  if (!colors || colors.length === 0) {
     return null;
   }
 
-  const selectedColorObj = getSelectedColor();
-
   return (
     <div className={styles.colorSelector}>
-      <div className={styles.header}>
-        <h3 className={styles.title}>{title}</h3>
-        {showColorName && selectedColorObj && (
-          <span className={styles.selectedColorName}>
-            {selectedColorObj.name}
-          </span>
-        )}
-      </div>
+      {title && <h3 className={styles.title}>{title}</h3>}
       
-      <div className={`${styles.colorGrid} ${styles[size]}`}>
-        {availableColors.map((color) => (
+      <div className={`${styles.colorList} ${styles[size]}`}>
+        {colors.map((color) => (
           <button
             key={color.id}
-            className={`${styles.colorOption} ${
-              selectedColor === color.id ? styles.selected : ''
-            }`}
-            onClick={() => selectColor(color.id)}
-            style={{
-              backgroundColor: color.hex || color.value,
-              backgroundImage: color.gradient ? `linear-gradient(${color.gradient})` : undefined
-            }}
+            className={`${styles.colorButton} ${selectedColor === color.id ? styles.selected : ''}`}
+            onClick={() => setSelectedColor(color.id)}
+            style={{ backgroundColor: color.value }}
             title={color.name}
             aria-label={`Seleccionar color ${color.name}`}
+            aria-pressed={selectedColor === color.id}
           >
-            {/* Indicador de selección */}
-            {selectedColor === color.id && (
-              <div className={styles.selectedIndicator}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
+            {showColorName && (
+              <span className={styles.colorName}>{color.name}</span>
             )}
           </button>
         ))}

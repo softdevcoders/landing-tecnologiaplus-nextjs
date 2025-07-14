@@ -1,76 +1,51 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, useMemo, useCallback } from 'react';
+import { createContext, useContext, useState, useCallback } from 'react';
 
 export const ProductColorContext = createContext();
 
-export const useProductColor = () => {
-  const context = useContext(ProductColorContext);
-  if (!context) {
-    throw new Error('useProductColor must be used within a ProductColorProvider');
-  }
-  return context;
-};
-
-export const useProductColorSafe = () => {
-  const context = useContext(ProductColorContext);
-  return context;
-};
-
 export const ProductColorProvider = ({ children, colors = [], defaultColor = null }) => {
-  const [selectedColor, setSelectedColor] = useState(defaultColor || colors[0]?.id || null);
-  const [availableColors, setAvailableColors] = useState(colors);
-
-  useEffect(() => {
-    if (colors.length > 0) {
-      setAvailableColors(colors);
-      
-      if (!selectedColor || !colors.find(color => color.id === selectedColor)) {
-        setSelectedColor(defaultColor || colors[0]?.id || null);
-      }
-    }
-  }, [colors, defaultColor, selectedColor]);
-
-  const selectColor = useCallback((colorId) => {
-    const colorExists = availableColors.find(color => color.id === colorId);
-    if (colorExists) {
-      setSelectedColor(colorId);
-    }
-  }, [availableColors]);
+  const [selectedColor, setSelectedColor] = useState(() => {
+    if (!colors || colors.length === 0) return null;
+    return defaultColor || colors[0].id;
+  });
 
   const getSelectedColor = useCallback(() => {
-    return availableColors.find(color => color.id === selectedColor) || null;
-  }, [availableColors, selectedColor]);
+    if (!selectedColor || !colors) return null;
+    return colors.find(color => color.id === selectedColor);
+  }, [selectedColor, colors]);
 
-  const getImagesForSelectedColor = useCallback(() => {
-    const selectedColorObj = getSelectedColor();
-    return selectedColorObj?.images || [];
-  }, [getSelectedColor]);
+  const getMediaForSelectedColor = useCallback((colors = []) => {
+    if (!selectedColor || !colors) return [];
+    
+    const selectedColorData = colors.find(color => color.id === selectedColor);
+    return selectedColorData?.media || [];
+  }, [selectedColor]);
 
-  const hasMultipleColors = useCallback(() => {
-    return availableColors.length > 1;
-  }, [availableColors]);
-
-  const value = useMemo(() => ({
+  const value = {
+    colors,
     selectedColor,
-    availableColors,
-    selectColor,
+    setSelectedColor,
     getSelectedColor,
-    getImagesForSelectedColor,
-    hasMultipleColors,
-    setAvailableColors
-  }), [
-    selectedColor,
-    availableColors,
-    selectColor,
-    getSelectedColor,
-    getImagesForSelectedColor,
-    hasMultipleColors
-  ]);
+    getMediaForSelectedColor
+  };
 
   return (
     <ProductColorContext.Provider value={value}>
       {children}
     </ProductColorContext.Provider>
   );
+};
+
+export const useProductColorSafe = () => {
+  const context = useContext(ProductColorContext);
+  return context || null;
+};
+
+export const useProductColor = () => {
+  const context = useContext(ProductColorContext);
+  if (!context) {
+    throw new Error('useProductColor debe usarse dentro de un ProductColorProvider');
+  }
+  return context;
 }; 

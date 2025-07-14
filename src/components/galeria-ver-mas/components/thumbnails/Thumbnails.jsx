@@ -1,109 +1,80 @@
 "use client";
 
 import { useCallback, useEffect, useState } from 'react';
-import ImageLoader from "../image-loader";
-import useEmblaCarousel from "embla-carousel-react";
-import { ArrowBack, ArrowForward } from "@/components/ui/icons";
-import { generateThumbnailAlt, getOptimizedSizes, generateBlurDataURL } from "../../utils/imageUtils";
-import styles from "./thumbnails.module.scss";
+import useEmblaCarousel from 'embla-carousel-react';
+import { ArrowBack, ArrowForward } from '@/components/ui/icons';
+import ImageLoader from '../image-loader';
+import { generateThumbnailAlt, getOptimizedSizes, generateBlurDataURL } from '../../utils/imageUtils';
+import styles from './thumbnails.module.scss';
 
-const Thumbnails = ({ 
-  images, 
-  selectedIndex, 
+const Thumbnails = ({
+  mediaItems = [],
+  selectedIndex,
   onThumbClick,
-  isMobile,
+  isMobile = false,
   productTitle = '',
   selectedColor = ''
 }) => {
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
-    containScroll: "keepSnaps",
-    dragFree: false,
-    axis: isMobile ? 'x' : 'y',
-    watchDrag: false,
-    skipSnaps: false,
-    align: 'start'
+    containScroll: 'keepSnaps',
+    dragFree: true,
+    axis: isMobile ? 'x' : 'y'
   });
 
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [shouldShowButtons, setShouldShowButtons] = useState(false);
 
-  const updateScrollButtons = useCallback(() => {
+  const onThumbsSelect = useCallback(() => {
     if (!emblaThumbsApi) return;
-    
+
     setCanScrollPrev(emblaThumbsApi.canScrollPrev());
     setCanScrollNext(emblaThumbsApi.canScrollNext());
   }, [emblaThumbsApi]);
 
-  // Efecto para inicializar y manejar cambios en el carrusel
-  useEffect(() => {
-    if (!emblaThumbsApi) return;
-
-    updateScrollButtons();
-    emblaThumbsApi.on('select', updateScrollButtons);
-    emblaThumbsApi.on('reInit', updateScrollButtons);
-
-    return () => {
-      emblaThumbsApi.off('select', updateScrollButtons);
-      emblaThumbsApi.off('reInit', updateScrollButtons);
-    };
-  }, [emblaThumbsApi, updateScrollButtons]);
-
-  const handleWheel = useCallback((event) => {
-    event.preventDefault();
-    if (!emblaThumbsApi) return;
-
-    const delta = isMobile ? event.deltaX : event.deltaY;
-    const scrollDirection = delta > 0 ? 1 : -1;
-    
-    if (scrollDirection > 0 && emblaThumbsApi.canScrollNext()) {
-      emblaThumbsApi.scrollNext();
-    } else if (scrollDirection < 0 && emblaThumbsApi.canScrollPrev()) {
-      emblaThumbsApi.scrollPrev();
-    }
-  }, [emblaThumbsApi, isMobile]);
-
-  // Efecto para manejar el scroll del mouse en las miniaturas
-  useEffect(() => {
-    if (!emblaThumbsRef.current) return;
-
-    const element = emblaThumbsRef.current;
-    element.addEventListener('wheel', handleWheel, { passive: false });
-
-    return () => {
-      element.removeEventListener('wheel', handleWheel);
-    };
-  }, [emblaThumbsRef, handleWheel]);
-
   const scrollThumbsPrev = useCallback(() => {
-    if (emblaThumbsApi && emblaThumbsApi.canScrollPrev()) {
-      emblaThumbsApi.scrollPrev();
-    }
+    if (emblaThumbsApi) emblaThumbsApi.scrollPrev();
   }, [emblaThumbsApi]);
 
   const scrollThumbsNext = useCallback(() => {
-    if (emblaThumbsApi && emblaThumbsApi.canScrollNext()) {
-      emblaThumbsApi.scrollNext();
-    }
+    if (emblaThumbsApi) emblaThumbsApi.scrollNext();
   }, [emblaThumbsApi]);
 
-  // Efecto para reinicializar el carrusel de miniaturas cuando cambia la orientación
   useEffect(() => {
-    if (emblaThumbsApi) {
-      emblaThumbsApi.reInit();
-    }
-  }, [isMobile, emblaThumbsApi]);
+    if (!emblaThumbsApi) return;
 
-  if (images.length <= 1) return null;
+    emblaThumbsApi.on('select', onThumbsSelect);
+    emblaThumbsApi.on('reInit', onThumbsSelect);
+    onThumbsSelect();
 
-  // Mostrar botones si hay más de 3 imágenes en móvil o más de 5 en desktop
-  const shouldShowButtons = isMobile ? images.length > 3 : images.length > 5;
+    return () => {
+      emblaThumbsApi.off('select', onThumbsSelect);
+      emblaThumbsApi.off('reInit', onThumbsSelect);
+    };
+  }, [emblaThumbsApi, onThumbsSelect]);
+
+  useEffect(() => {
+    if (!emblaThumbsApi) return;
+
+    emblaThumbsApi.reInit({
+      axis: isMobile ? 'x' : 'y'
+    });
+
+    // Mostrar botones solo si hay scroll disponible
+    const hasOverflow = emblaThumbsApi.scrollSnapList().length > (isMobile ? 4 : 6);
+    setShouldShowButtons(hasOverflow);
+  }, [emblaThumbsApi, isMobile]);
+
+  if (!mediaItems || mediaItems.length === 0) {
+    return null;
+  }
 
   return (
     <div className={styles.thumbs}>
       <div className={styles.thumbsTrack}>
         <div className={`${styles.viewport} ${styles.scrollable}`} ref={emblaThumbsRef}>
           <div className={styles.container}>
-            {images.map((image, index) => (
+            {mediaItems.map((item, index) => (
               <button
                 key={index}
                 className={`${styles.thumb} ${
@@ -111,19 +82,33 @@ const Thumbnails = ({
                 }`}
                 onClick={() => onThumbClick(index)}
                 type="button"
-                aria-label={`Ir a imagen ${index + 1}`}
+                aria-label={`Ir a ${item.type === 'video' ? 'video' : 'imagen'} ${index + 1}`}
               >
-                <ImageLoader
-                  src={image.src}
-                  alt={generateThumbnailAlt(image, index, productTitle, selectedColor)}
-                  width={image.width}
-                  height={image.height}
-                  sizes={getOptimizedSizes('thumbnail', isMobile)}
-                  style={{ objectFit: 'contain' }}
-                  priority={false}
-                  blurDataURL={generateBlurDataURL()}
-                  placeholder="blur"
-                />
+                {item.type === 'video' ? (
+                  <ImageLoader
+                    src={item.thumbnail || `https://i.ytimg.com/vi/${item.videoId}/mqdefault.jpg`}
+                    alt={`Vista previa del video ${index + 1}`}
+                    width={320}
+                    height={180}
+                    sizes={getOptimizedSizes('thumbnail', isMobile)}
+                    style={{ objectFit: 'contain' }}
+                    priority={false}
+                    blurDataURL={generateBlurDataURL()}
+                    placeholder="blur"
+                  />
+                ) : (
+                  <ImageLoader
+                    src={item.src}
+                    alt={generateThumbnailAlt(item, index, productTitle, selectedColor)}
+                    width={item.width}
+                    height={item.height}
+                    sizes={getOptimizedSizes('thumbnail', isMobile)}
+                    style={{ objectFit: 'contain' }}
+                    priority={false}
+                    blurDataURL={generateBlurDataURL()}
+                    placeholder="blur"
+                  />
+                )}
               </button>
             ))}
           </div>

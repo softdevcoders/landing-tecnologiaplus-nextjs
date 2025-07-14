@@ -1,12 +1,13 @@
 import ImageGallery from "../image-gallery";
 import styles from "./gallery-wrapper.module.scss";
 
-const GalleryWrapper = ({ images, fallbackImages, productTitle = '' }) => {
+const GalleryWrapper = ({ media = [], colors = [], hasColors = false, productTitle = '' }) => {
   return (
     <div className={styles.galleryWrapper}>
       <ImageGallery 
-        images={images}
-        fallbackImages={fallbackImages}
+        mediaItems={media}
+        colors={colors}
+        hasColors={hasColors}
         productTitle={productTitle}
       />
     </div>

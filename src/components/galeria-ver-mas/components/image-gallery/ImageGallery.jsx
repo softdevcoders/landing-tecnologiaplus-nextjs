@@ -5,19 +5,20 @@ import styles from "./image-gallery.module.scss";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
 import Thumbnails from "../thumbnails";
 import ZoomableImage from "../zoomable-image";
+import VideoPlayer from "../video-player/VideoPlayer";
 import ImageIndicators from "../image-indicators";
 import { useMainCarousel } from "../../hooks/useMainCarousel";
 import { useGalleryState } from "../../hooks/useGalleryState";
 
-const ImageGallery = ({ images = [], fallbackImages = [], productTitle = '' }) => {
+const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, productTitle = '' }) => {
   const {
-    displayImages,
+    displayMediaItems,
     isMobile,
     zoomPosition,
     setZoomPosition,
     resetGalleryState,
     colorContext
-  } = useGalleryState(images, fallbackImages);
+  } = useGalleryState(mediaItems, colors, hasColors);
 
   const {
     emblaMainRef,
@@ -30,11 +31,11 @@ const ImageGallery = ({ images = [], fallbackImages = [], productTitle = '' }) =
     reInitCarousel
   } = useMainCarousel();
 
-  // Efecto para reiniciar el estado cuando cambian las imágenes
+  // Efecto para reiniciar el estado cuando cambian los items
   useEffect(() => {
     reInitCarousel();
     resetGalleryState(setIsZoomed, () => {});
-  }, [displayImages, reInitCarousel, resetGalleryState, setIsZoomed]);
+  }, [displayMediaItems, reInitCarousel, resetGalleryState, setIsZoomed]);
 
   // Efecto para reiniciar el estado cuando cambia el color seleccionado
   useEffect(() => {
@@ -43,14 +44,14 @@ const ImageGallery = ({ images = [], fallbackImages = [], productTitle = '' }) =
     }
   }, [colorContext?.selectedColor, resetGalleryState, setIsZoomed]);
 
-  if (!displayImages || displayImages.length === 0) {
+  if (!displayMediaItems || displayMediaItems.length === 0) {
     return null;
   }
 
   return (
     <div className={styles.gallery}>
       <Thumbnails
-        images={displayImages}
+        mediaItems={displayMediaItems}
         selectedIndex={selectedIndex}
         onThumbClick={handleThumbClick}
         isMobile={isMobile}
@@ -61,55 +62,34 @@ const ImageGallery = ({ images = [], fallbackImages = [], productTitle = '' }) =
       <div className={styles.mainCarousel}>
         <div className={styles.viewport} ref={emblaMainRef}>
           <div className={styles.container}>
-            {displayImages.map((image, index) => (
+            {displayMediaItems.map((item, index) => (
               <div className={styles.slide} key={index}>
-                <ZoomableImage
-                  image={image}
-                  isZoomed={isZoomed}
-                  zoomPosition={zoomPosition}
-                  onZoomChange={setIsZoomed}
-                  onZoomPositionChange={setZoomPosition}
-                  index={index}
-                  isSelected={index === selectedIndex}
-                  priority={index === 0}
-                  productTitle={productTitle}
-                  selectedColor={colorContext?.getSelectedColor()?.name || ''}
-                  isMobile={isMobile}
-                />
+                {item.type === 'video' ? (
+                  <div className={styles.videoWrapper}>
+                    <VideoPlayer
+                      video={item}
+                      title={`${productTitle} - Video ${index + 1}`}
+                    />
+                  </div>
+                ) : (
+                  <ZoomableImage
+                    image={item}
+                    isZoomed={isZoomed}
+                    zoomPosition={zoomPosition}
+                    onZoomChange={setIsZoomed}
+                    onZoomPositionChange={setZoomPosition}
+                    index={index}
+                    isSelected={index === selectedIndex}
+                    priority={index === 0}
+                    productTitle={productTitle}
+                    selectedColor={colorContext?.getSelectedColor()?.name || ''}
+                    isMobile={isMobile}
+                  />
+                )}
               </div>
             ))}
           </div>
-
-          {displayImages.length > 1 && !isZoomed && (
-            <>
-              <button
-                className={`${styles.navButton} ${styles.prev}`}
-                onClick={scrollPrev}
-                aria-label="Imagen anterior"
-                type="button"
-              >
-                <ArrowBack aria-hidden="true" />
-              </button>
-              
-              <button
-                className={`${styles.navButton} ${styles.next}`}
-                onClick={scrollNext}
-                aria-label="Siguiente imagen"
-                type="button"
-              >
-                <ArrowForward aria-hidden="true" />
-              </button>
-            </>
-          )}
         </div>
-
-        {!isZoomed && (
-          <ImageIndicators
-            totalImages={displayImages.length}
-            selectedIndex={selectedIndex}
-            onSelect={handleThumbClick}
-          />
-        )}
       </div>
     </div>
   );
