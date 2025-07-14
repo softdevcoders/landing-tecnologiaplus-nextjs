@@ -66,7 +66,7 @@ const ImageLoader = ({
         sizes={sizes}
         style={{
           width: '100%',
-          height: 'auto',
+          height: '100%',
           ...style,
           opacity: isLoading ? 0 : 1,
           transition: 'opacity 0.3s ease-in-out'

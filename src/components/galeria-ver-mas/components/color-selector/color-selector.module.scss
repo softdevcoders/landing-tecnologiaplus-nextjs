@@ -3,9 +3,9 @@
   
   .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 0.75rem;
+    gap: 1rem;
     
     .title {
       font-size: 1rem;
@@ -28,7 +28,7 @@
     
     // Tamaños diferentes para el selector
     &.small {
-      grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+      grid-template-columns: repeat(auto-fit, 32px);
       gap: 0.5rem;
       
       .colorOption {
@@ -38,7 +38,7 @@
     }
     
     &.medium {
-      grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+      grid-template-columns: repeat(auto-fit, 40px);
       gap: 0.75rem;
       
       .colorOption {
@@ -48,7 +48,7 @@
     }
     
     &.large {
-      grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+      grid-template-columns: repeat(auto-fit, 48px);
       gap: 1rem;
       
       .colorOption {
@@ -129,7 +129,7 @@
   .colorSelector {
     .colorGrid {
       &.small {
-        grid-template-columns: repeat(auto-fit, minmax(28px, 1fr));
+        grid-template-columns: repeat(auto-fit, 28px);
         
         .colorOption {
           width: 28px;
@@ -138,7 +138,7 @@
       }
       
       &.medium {
-        grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
+        grid-template-columns: repeat(auto-fit, 36px);
         
         .colorOption {
           width: 36px;
@@ -147,7 +147,7 @@
       }
       
       &.large {
-        grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+        grid-template-columns: repeat(auto-fit, 44px);
         
         .colorOption {
           width: 44px;
