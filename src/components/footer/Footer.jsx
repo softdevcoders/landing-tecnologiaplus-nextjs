@@ -343,7 +343,7 @@ const Footer = () => {
       {/* Logo */}
       <div className={styles.footer__bottom}>
         <Image
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350028/Tplus_en_blanco_2x-8_uokdmv_zoykmd.webp"
+          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350028/Tplus_en_blanco_2x-8_uokdmv_zoykmd"
           alt="Logo de Tecnología Plus"
           width={762}
           height={114}
