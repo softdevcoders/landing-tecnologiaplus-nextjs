@@ -106,11 +106,16 @@ export const getOptimizedSizes = (context = 'main', isMobile = false) => {
       return isMobile 
         ? '100vw' 
         : '(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 800px';
+
+    case 'color-selector':
+      return isMobile 
+        ? '60px' 
+        : '(max-width: 768px) 60px, 95px';
     
     case 'thumbnail':
       return isMobile 
-        ? '80px' 
-        : '(max-width: 768px) 80px, 100px';
+        ? '60px' 
+        : '(max-width: 768px) 60px, 95px';
     
     default:
       return '100vw';

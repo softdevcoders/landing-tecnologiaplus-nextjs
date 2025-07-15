@@ -6,7 +6,7 @@ import { generateThumbnailAlt, getOptimizedSizes, generateBlurDataURL } from "..
 import styles from './color-selector.module.scss';
 
 const ColorSelector = ({
-  title = "Imágenes disponibles",
+  title = "Elige el color",
   showLabel = true,
   size = "medium", // small, medium, large
   productTitle = ''
@@ -32,7 +32,7 @@ const ColorSelector = ({
       <div className={`${styles.imageList} ${styles[size]}`}>
         {colors.map((item) => {
           // Tomamos la primera imagen del color como miniatura
-          const thumbnail = item.media[0];
+          const thumbnail = item.thumbnail;
           if (!thumbnail) return null;
 
           return (
@@ -46,10 +46,10 @@ const ColorSelector = ({
               <div className={styles.imageWrapper}>
                 <ImageLoader
                   src={thumbnail.src}
-                  alt={generateThumbnailAlt(thumbnail, 0, productTitle, item.name)}
+                  alt={thumbnail.alt}
                   width={thumbnail.width}
                   height={thumbnail.height}
-                  sizes={getOptimizedSizes('thumbnail', false)}
+                  sizes={getOptimizedSizes('color-selector', false)}
                   style={{ objectFit: 'cover' }}
                   priority={false}
                   blurDataURL={generateBlurDataURL()}

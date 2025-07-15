@@ -8,7 +8,12 @@ function ProductGalleryNew() {
       {
         id: "negro",
         name: "Negro",
-        value: "#000000",
+        thumbnail: {
+          src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq',
+          alt: 'Llamador de meseros E2-N negro vista principal',
+          width: 1381,
+          height: 1442
+        },
         media: [
           {
             type: 'video',
@@ -76,7 +81,12 @@ function ProductGalleryNew() {
       {
         id: "blanco",
         name: "Blanco",
-        value: "#FFFFFF",
+        thumbnail: {
+          src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq',
+          alt: 'Llamador de meseros E2-N negro vista principal',
+          width: 1381,
+          height: 1442
+        },
         media: [
           {
             type: 'video',
