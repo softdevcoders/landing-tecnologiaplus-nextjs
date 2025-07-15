@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react';
 import styles from './preguntas-frecuentes.module.scss';
-import { ArrowDown, ArrowUp } from '../ui/icons';
 
 function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
   const [openAccordion, setOpenAccordion] = useState(null);
@@ -27,34 +26,59 @@ function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
     }
   };
 
+  const handleAccordionToggle = (index, isOpen) => {
+    setOpenAccordion(isOpen ? index : (openAccordion === index ? null : openAccordion));
+  };
+
   return (
-    <section className={styles.s}>
-      <h2 ref={titleRef}>Preguntas Frecuentes</h2>
-      <div data-show={showAllQuestions}>
+    <section 
+      className={styles.s} 
+      aria-label="Preguntas Frecuentes"
+    >
+      <h2 ref={titleRef} itemProp="name">Preguntas Frecuentes</h2>        
+      <div 
+        className={styles.faqContainer} 
+        data-show={showAllQuestions}
+      >
         {preguntasFrecuentes.map((faq, index) => (
-          <div 
+          <details
             key={index}
+            className={styles.faqItem}
             data-hidden={index >= initialQuestionsCount}
+            open={index === openAccordion}
+            onToggle={(e) => handleAccordionToggle(index, e.target.open)}
           >
-            <button
-              data-open={index === openAccordion}
-              onClick={() => {
-                setOpenAccordion(openAccordion === index ? null : index);
+            <summary 
+              className={styles.faqQuestion}
+              onClick={(e) => {
+                e.preventDefault();
+                handleAccordionToggle(index, index !== openAccordion);
               }}
             >
-              <h3>{faq.question}</h3>
-              <span>⌃</span>
-            </button>
-            <div data-open={index === openAccordion}>
-              {faq.answer}
-            </div>
-          </div>
+              <h3 dangerouslySetInnerHTML={{ __html: faq.question }} />
+              <span aria-hidden="true">⌃</span>
+            </summary>
+            <div 
+              className={styles.faqAnswer}
+              dangerouslySetInnerHTML={{ __html: faq.answer }}
+            />
+          </details>
         ))}
       </div>
+      
       {hasMoreQuestions && (
-        <button onClick={handleToggleQuestions}>
-          {showAllQuestions ? 'Menos preguntas' : 'Más preguntas'}
-          {showAllQuestions ? <ArrowUp size={16} /> : <ArrowDown size={16} />}
+        <button 
+          onClick={handleToggleQuestions}
+          className={styles.toggleButton}
+          aria-expanded={showAllQuestions}
+          aria-controls="faq-container"
+        >
+          <span>
+            {showAllQuestions ? 'Menos preguntas' : 'Más preguntas'}
+          </span>
+          <span aria-hidden="true" className={styles.arrow}>
+            ⌃
+          </span>
         </button>
       )}
     </section>
