@@ -1,12 +1,15 @@
 "use client";
 
 import { useProductColor } from '@/contexts/ProductColorContext';
+import ImageLoader from '../image-loader';
+import { generateThumbnailAlt, getOptimizedSizes, generateBlurDataURL } from "../../utils/imageUtils";
 import styles from './color-selector.module.scss';
 
 const ColorSelector = ({
-  title = "Colores disponibles",
-  showColorName = true,
-  size = "medium" // small, medium, large
+  title = "Imágenes disponibles",
+  showLabel = true,
+  size = "medium", // small, medium, large
+  productTitle = ''
 }) => {
   const colorContext = useProductColor();
   
@@ -23,25 +26,42 @@ const ColorSelector = ({
   }
 
   return (
-    <div className={styles.colorSelector}>
+    <div className={styles.imageSelector}>
       {title && <h3 className={styles.title}>{title}</h3>}
       
-      <div className={`${styles.colorList} ${styles[size]}`}>
-        {colors.map((color) => (
-          <button
-            key={color.id}
-            className={`${styles.colorButton} ${selectedColor === color.id ? styles.selected : ''}`}
-            onClick={() => setSelectedColor(color.id)}
-            style={{ backgroundColor: color.value }}
-            title={color.name}
-            aria-label={`Seleccionar color ${color.name}`}
-            aria-pressed={selectedColor === color.id}
-          >
-            {showColorName && (
-              <span className={styles.colorName}>{color.name}</span>
-            )}
-          </button>
-        ))}
+      <div className={`${styles.imageList} ${styles[size]}`}>
+        {colors.map((item) => {
+          // Tomamos la primera imagen del color como miniatura
+          const thumbnail = item.media[0];
+          if (!thumbnail) return null;
+
+          return (
+            <button
+              key={item.id}
+              className={`${styles.imageButton} ${selectedColor === item.id ? styles.selected : ''}`}
+              onClick={() => setSelectedColor(item.id)}
+              aria-label={`Seleccionar ${item.name}`}
+              aria-pressed={selectedColor === item.id}
+            >
+              <div className={styles.imageWrapper}>
+                <ImageLoader
+                  src={thumbnail.src}
+                  alt={generateThumbnailAlt(thumbnail, 0, productTitle, item.name)}
+                  width={thumbnail.width}
+                  height={thumbnail.height}
+                  sizes={getOptimizedSizes('thumbnail', false)}
+                  style={{ objectFit: 'cover' }}
+                  priority={false}
+                  blurDataURL={generateBlurDataURL()}
+                  placeholder="blur"
+                />
+              </div>
+              {showLabel && (
+                <span className={styles.imageLabel}>{item.name}</span>
+              )}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

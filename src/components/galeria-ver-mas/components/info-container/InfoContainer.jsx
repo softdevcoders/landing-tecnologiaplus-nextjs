@@ -7,11 +7,11 @@ const InfoContainer = ({ title, description }) => {
       {title && <h2 className={styles.title}>{title}</h2>}
       
       <ColorSelector 
-        title="Colores disponibles"
-        showColorName={true}
+        title="Imágenes disponibles"
+        showLabel={true}
         size="medium"
+        productTitle={title}
       />
-      
       {description && <p className={styles.description}>{description}</p>}
     </div>
   );
