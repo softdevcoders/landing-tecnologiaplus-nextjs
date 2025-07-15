@@ -21,14 +21,21 @@ export const useGalleryState = (media = [], colors = [], hasColors = false) => {
 
   // Memoizar los items a mostrar
   const displayMediaItems = useMemo(() => {
+    console.log('useGalleryState - hasColors:', hasColors, 'colorContext:', colorContext);
+    
     if (hasColors && colorContext) {
       // Obtener los medios del color seleccionado
       const selectedColor = colorContext.getSelectedColor();
-      return selectedColor?.media || [];
+      console.log('useGalleryState - selectedColor:', selectedColor);
+      const mediaItems = selectedColor?.media || [];
+      console.log('useGalleryState - mediaItems from color:', mediaItems);
+      return mediaItems;
     }
 
     // Para items sin color, ordenamos con los videos primero
-    return sortMedia(media);
+    const sortedMedia = sortMedia(media);
+    console.log('useGalleryState - sortedMedia (no colors):', sortedMedia);
+    return sortedMedia;
   }, [colorContext, media, hasColors, sortMedia]);
 
   const checkMobile = useCallback(() => {

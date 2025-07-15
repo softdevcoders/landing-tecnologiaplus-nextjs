@@ -15,6 +15,7 @@ const ColorSelector = ({
   
   // Si no hay contexto, no mostrar nada
   if (!colorContext) {
+    console.log('ColorSelector - No hay contexto de color');
     return null;
   }
 
@@ -22,8 +23,11 @@ const ColorSelector = ({
 
   // Si no hay colores, no mostrar nada
   if (!colors || colors.length === 0) {
+    console.log('ColorSelector - No hay colores disponibles');
     return null;
   }
+
+  console.log('ColorSelector - Renderizando selector con:', { colors, selectedColor });
 
   return (
     <div className={styles.imageSelector}>
@@ -31,26 +35,43 @@ const ColorSelector = ({
       
       <div className={`${styles.imageList} ${styles[size]}`}>
         {colors.map((item) => {
-          // Tomamos la primera imagen del color como miniatura
-          const thumbnail = item.thumbnail;
-          if (!thumbnail) return null;
+          console.log('ColorSelector - Procesando item:', item);
+          
+          // Usar thumbnail dedicado si existe, sino buscar en media
+          let thumbnail;
+          if (item.thumbnail) {
+            thumbnail = item.thumbnail;
+            console.log('ColorSelector - Usando thumbnail dedicado:', thumbnail);
+          } else if (item.media && item.media.length > 0) {
+            // Buscar la primera imagen en el array de media
+            thumbnail = item.media.find(media => media.type === 'image');
+            console.log('ColorSelector - Usando primera imagen de media:', thumbnail);
+          }
+          
+          if (!thumbnail) {
+            console.log('ColorSelector - No hay thumbnail disponible para:', item.name);
+            return null;
+          }
 
           return (
             <button
               key={item.id}
               className={`${styles.imageButton} ${selectedColor === item.id ? styles.selected : ''}`}
-              onClick={() => setSelectedColor(item.id)}
+              onClick={() => {
+                console.log('ColorSelector - Seleccionando color:', item.id);
+                setSelectedColor(item.id);
+              }}
               aria-label={`Seleccionar ${item.name}`}
               aria-pressed={selectedColor === item.id}
             >
               <div className={styles.imageWrapper}>
                 <ImageLoader
                   src={thumbnail.src}
-                  alt={thumbnail.alt}
+                  alt={generateThumbnailAlt(thumbnail, 0, productTitle, item.name)}
                   width={thumbnail.width}
                   height={thumbnail.height}
                   sizes={getOptimizedSizes('color-selector', false)}
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: 'contain' }}
                   priority={false}
                   blurDataURL={generateBlurDataURL()}
                   placeholder="blur"

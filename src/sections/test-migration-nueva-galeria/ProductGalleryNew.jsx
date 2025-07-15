@@ -82,7 +82,7 @@ function ProductGalleryNew() {
         id: "blanco",
         name: "Blanco",
         thumbnail: {
-          src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq',
+          src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741638695/Frame_1_60_sl57gi',
           alt: 'Llamador de meseros E2-N negro vista principal',
           width: 1381,
           height: 1442
@@ -91,39 +91,18 @@ function ProductGalleryNew() {
           {
             type: 'video',
             url: 'https://res.cloudinary.com/ddqh0mkx9/video/upload/v1743040123/Frame_1_9_tdu2he',
-            thumbnail: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he'
+            thumbnail: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741638695/Frame_1_60_sl57gi'
           },
           {
             type: 'image',
-            src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq',
+            src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741638695/Frame_1_60_sl57gi',
             alt: 'Llamador de meseros E2-N negro vista principal',
             width: 1381,
             height: 1442
           },
           {
             type: 'image',
-            src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq',
-            alt: 'Llamador de meseros E2-N negro vista principal',
-            width: 1381,
-            height: 1442
-          },
-          {
-            type: 'image',
-            src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq',
-            alt: 'Llamador de meseros E2-N negro vista principal',
-            width: 1381,
-            height: 1442
-          },
-          {
-            type: 'image',
-            src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq',
-            alt: 'Llamador de meseros E2-N negro vista principal',
-            width: 1381,
-            height: 1442
-          },
-          {
-            type: 'image',
-            src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743039883/6_4x-8_1_jbkzeq',
+            src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741638695/Frame_1_60_sl57gi',
             alt: 'Llamador de meseros E2-N negro vista principal',
             width: 1381,
             height: 1442
