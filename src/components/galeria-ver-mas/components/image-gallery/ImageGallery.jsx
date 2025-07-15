@@ -50,14 +50,17 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
 
   return (
     <div className={styles.gallery}>
-      <Thumbnails
-        mediaItems={displayMediaItems}
-        selectedIndex={selectedIndex}
-        onThumbClick={handleThumbClick}
-        isMobile={isMobile}
-        productTitle={productTitle}
-        selectedColor={colorContext?.getSelectedColor()?.name || ''}
-      />
+      {/* Solo renderizar thumbnails en tablet/desktop */}
+      {!isMobile && (
+        <Thumbnails
+          mediaItems={displayMediaItems}
+          selectedIndex={selectedIndex}
+          onThumbClick={handleThumbClick}
+          isMobile={isMobile}
+          productTitle={productTitle}
+          selectedColor={colorContext?.getSelectedColor()?.name || ''}
+        />
+      )}
 
       <div className={styles.mainCarousel}>
         <div className={styles.viewport} ref={emblaMainRef}>

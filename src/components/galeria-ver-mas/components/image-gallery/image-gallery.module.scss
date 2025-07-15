@@ -18,9 +18,11 @@
   background: var(--gallery-bg, #f8f8f8);
   border-radius: 8px;
   flex: 1;
+  width: 100%; // Asegurar que ocupe todo el ancho en móvil
 
   @media (min-width: 768px) {
     order: 2;
+    width: auto; // Volver al tamaño automático en tablet/desktop
   }
 
   &:hover {

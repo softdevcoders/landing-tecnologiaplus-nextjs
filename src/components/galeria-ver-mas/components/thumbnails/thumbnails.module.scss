@@ -2,8 +2,10 @@
   order: 2;
   width: 100%;
   height: 100%;
+  display: none; // Ocultar en móvil
 
   @media (min-width: 768px) {
+    display: block; // Mostrar en tablet/desktop
     order: 1;
     width: 80px;
     flex-shrink: 0;
