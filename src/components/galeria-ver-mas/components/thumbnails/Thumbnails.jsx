@@ -17,7 +17,9 @@ const Thumbnails = ({
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: 'keepSnaps',
     dragFree: true,
-    axis: 'y'
+    axis: 'y',
+    speed: 10,
+    skipSnaps: true
   });
 
   const [canScrollPrev, setCanScrollPrev] = useState(false);
@@ -31,11 +33,13 @@ const Thumbnails = ({
   }, [emblaThumbsApi]);
 
   const scrollThumbsPrev = useCallback(() => {
-    if (emblaThumbsApi) emblaThumbsApi.scrollPrev();
+    if (!emblaThumbsApi) return;
+    emblaThumbsApi.scrollTo(emblaThumbsApi.selectedScrollSnap() - 2);
   }, [emblaThumbsApi]);
 
   const scrollThumbsNext = useCallback(() => {
-    if (emblaThumbsApi) emblaThumbsApi.scrollNext();
+    if (!emblaThumbsApi) return;
+    emblaThumbsApi.scrollTo(emblaThumbsApi.selectedScrollSnap() + 2);
   }, [emblaThumbsApi]);
 
   useEffect(() => {
