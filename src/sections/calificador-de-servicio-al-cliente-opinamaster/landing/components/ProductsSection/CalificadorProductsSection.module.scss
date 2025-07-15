@@ -1,104 +1,135 @@
-@use "@/styles/components/productsSection" as *;
-@use "@/styles/base/mixins" as *;
-
 .products__section {
-  padding-bottom: 8.5rem;
-  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  background: #f4f4f4;
+  padding: 6rem 1rem 4rem;
 
-  > p {
-    font-size: 1rem;
-    color: #606060;
-    font-weight: 400;
-    text-align: center;
-    max-width: 1250px;
-    line-height: 1.2;
-    text-wrap: balance;
+  @media (min-width: 1024px) {
+    padding-bottom: 8rem;
   }
 
   .products__container {
-    margin-bottom: 0;
-    gap: 4rem;
-    img {
-      height: 500px;
-      padding: 1rem;
-      object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
 
-      @include respond-to-max("laptop") {
-        width: 100%;
-        height: auto;
-      }
-      @include respond-to-max("tablet") {
-        width: 100%;
-        height: auto;
-      }
+    @media (min-width: 1250px) {
+      flex-direction: row;
     }
 
-    .img__desktop {
-      display: block;
-      @include respond-to-max("laptop") {
-        display: none;
-      }
-    }
-
-    .img__mobile {
-      display: none;
-      max-width: 500px;
-      @include respond-to-max("laptop") {
-        display: block;
-      }
-    }
-
-    .btn__container {
-      position: relative;
-      left: 70px;
-      top: -125px;
-
+    .product__item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
-      width: max-content;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      gap: 1rem;
+      max-width: 31.25rem;
 
-      .selling__counter {
-        color: #6f3bb4;
-        font-size: 1rem;
-        font-weight: 600;
-        @include respond-to-max("laptop") {
-          font-size: 1.2rem;
-        }
+      @media (min-width: 1250px) {
+        max-width: 40rem;
       }
-      .card__btn {
-        cursor: pointer;
-        font-weight: 600;
-        background: #6f3bb4;
-        width: max-content;
-        color: #fff;
-        font-size: 1rem;
-        padding: 0.2rem 1rem;
-        border-radius: 2rem;
-        -webkit-border-radius: 2rem;
-        -moz-border-radius: 2rem;
-        -ms-border-radius: 2rem;
-        -o-border-radius: 2rem;
 
-        @include respond-to-max("laptop") {
-          font-size: 1.2rem;
-          padding: 0.5rem 3rem;
+      .image__mobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        @media (min-width: 1250px) {
+          display: none;
         }
       }
 
-      @include respond-to-max("laptop") {
-        position: static;
-        margin: 2rem auto 1rem;
+      .image__desktop {
+        display: none;
+        @media (min-width: 1250px) {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .btn__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        gap: 1rem;
+
+        @media (min-width: 1250px) {
+          position: absolute;
+        }
+
+        p {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: #6f3bb4;
+          margin: 0;
+
+          @media (min-width: 1250px) {
+            font-size: 1rem;
+          }
+        }
+
+        a {
+          cursor: pointer;
+          font-weight: 600;
+          background: #6f3bb4;
+          width: max-content;
+          color: #fff;
+          font-size: 1.2rem;
+          padding: .5rem 3rem;
+          border-radius: 2rem;
+
+          @media (min-width: 1250px) {
+            font-size: 1rem;
+            padding: .2rem 1rem;
+          }
+        }
       }
     }
 
-    .product__item:nth-child(2) .btn__container {
-      left: 25vw;
-      top: -100px;
+    .product__item:first-child {
+      .image__mobile {
+        max-width: 35rem;
+      }
 
-      @include respond-to-max("laptop") {
-        margin-bottom: 2rem;
+      .image__desktop {
+        max-width: 40rem;
+      }
+
+      .btn__container {
+        @media (min-width: 1250px) {
+          left: 3.5rem;
+          bottom: 5rem;
+        }
+      }
+    }
+
+    .product__item:last-child {
+      .image__mobile {
+        max-width: 35rem;
+      }
+
+      .image__desktop {
+        max-width: 30rem;
+      }
+      
+      .btn__container {
+        @media (min-width: 1250px) {
+          right: 5rem;
+          bottom: 3rem;
+        }
       }
     }
   }

@@ -1,57 +1,37 @@
-import Image from "next/image";
-import style from "./BenefitsSection.module.scss";
+import BenefitsSection from "@/components/benefits";
 
-function BenefitsSection() {
+const benefits = [
+  {
+    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750350355/5_ozfta1",
+    title: "Variedad en tamaños y medidas:",
+    description: "perfectos para tickets, recibos y más.",
+    width: 183,
+    height: 183,
+    alt: "Icono de Garantía",
+  },
+  {
+    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/rijkjjxwhpa9hbvnj8ga_i2qgeg",
+    title: "Alta calidad de impresión:",
+    description: "Textos y gráficos claros en cada ticket.",
+    width: 155,
+    height: 154,
+    alt: "Icono de Garantía",
+  },
+  {
+    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349924/u2v3b0ngu177bi5byxcv_yckaaq",
+    title: "Compatibilidad:",
+    description: "Con impresoras térmicas multimarcas.",
+    width: 155,
+    height: 155,
+    alt: "Icono de Garantía",
+  }
+];
+
+function RollosTermicosBenefitsSection() {
   return (
-    <section className={style.benefits__section}>
-      <h2 className={style.benefits__title}>
-        BENEFICIOS
-        <br />
-        DESTACADOS
-      </h2>
-      <ul>
-        <li>
-          <Image
-            width={70}
-            height={70}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750350355/5_ozfta1.png"
-            alt="Icono de Garantía"
-          />
-          <div>
-            Variedad en tamaños y medidas:
-            <br />
-            <span>perfectos para tickets, recibos y más.</span>
-          </div>
-        </li>
-        <li>
-          <Image
-            width={70}
-            height={70}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/rijkjjxwhpa9hbvnj8ga_i2qgeg.webp"
-            alt="icono de calendario"
-          />
-          <div>
-            Alta calidad de impresión:
-            <br />
-            <span>Textos y gráficos claros en cada ticket.</span>
-          </div>
-        </li>
-        <li>
-          <Image
-            width={70}
-            height={70}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349924/u2v3b0ngu177bi5byxcv_yckaaq.webp"
-            alt="icono de verificación completada"
-          />
-          <div>
-            Compatibilidad:
-            <br />
-            <span>Con impresoras térmicas multimarcas.</span>
-          </div>
-        </li>
-      </ul>
-    </section>
+    <BenefitsSection benefits={benefits} title="BENEFICIOS<br />DESTACADOS" />
   );
 }
 
-export default BenefitsSection;
+export default RollosTermicosBenefitsSection;
+

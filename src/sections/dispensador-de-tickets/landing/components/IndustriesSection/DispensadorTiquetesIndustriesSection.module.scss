@@ -1,13 +1,8 @@
-@use "@/styles/components/industriesSection" as *;
-@use "@/styles/base/mixins" as *;
+.industries__section__title {
+  font-size: 1.625rem !important;
+  text-transform: none !important;
 
-.industries__section {
-  h2 {
-    text-transform: none;
-    font-size: 1.8rem;
-
-    @include respond-to-max("laptop") {
-      font-size: clamp(16px, 5vw, 30px);
-    }
+  @media (min-width: 1024px) {
+    font-size: 1.875rem !important;
   }
 }

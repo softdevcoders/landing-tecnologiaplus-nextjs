@@ -10,14 +10,14 @@
   animation: scroll var(--slider-duration) linear infinite;
   will-change: transform;
   transform: translateZ(0);
-  column-gap: 2rem;
+  column-gap: 5rem;
 
   @media (min-width: 768px) {
-    column-gap: 3rem;
+    animation: scroll 50s linear infinite;
   }
 
   @media (min-width: 1024px) {
-    column-gap: 5rem;
+    animation: scroll 40s linear infinite;
   }
 
   img {
