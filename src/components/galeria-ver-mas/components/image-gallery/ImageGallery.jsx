@@ -7,6 +7,7 @@ import Thumbnails from "../thumbnails";
 import ZoomableImage from "../zoomable-image";
 import VideoPlayer from "../video-player/VideoPlayer";
 import ImageIndicators from "../image-indicators";
+import ActionButtons from "../action-buttons/ActionButtons";
 import { useMainCarousel } from "../../hooks/useMainCarousel";
 import { useGalleryState } from "../../hooks/useGalleryState";
 
@@ -122,6 +123,15 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
             totalImages={displayMediaItems.length}
             selectedIndex={selectedIndex}
             onSelect={handleThumbClick}
+          />
+        )}
+
+        {/* Botones de acción */}
+        {!isZoomed && (
+          <ActionButtons
+            mediaItems={displayMediaItems}
+            productTitle={productTitle}
+            selectedColor={colorContext?.getSelectedColor()?.name || ''}
           />
         )}
       </div>

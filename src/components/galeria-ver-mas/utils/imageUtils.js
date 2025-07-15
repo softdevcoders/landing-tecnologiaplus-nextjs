@@ -117,6 +117,9 @@ export const getOptimizedSizes = (context = 'main', isMobile = false) => {
         ? '60px' 
         : '(max-width: 768px) 60px, 95px';
     
+    case 'gallery-modal':
+      return '(max-width: 768px) 250px, (max-width: 1024px) 300px, 350px';
+    
     default:
       return '100vw';
   }

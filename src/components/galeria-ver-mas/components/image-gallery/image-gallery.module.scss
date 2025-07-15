@@ -25,7 +25,8 @@
 
   &:hover {
     .navButton,
-    :global(.bullets) {
+    :global(.bullets),
+    :global(.actionButtons) {
       opacity: 1;
       visibility: visible;
     }
