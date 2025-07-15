@@ -19,7 +19,8 @@ const Thumbnails = ({
     dragFree: true,
     axis: 'y',
     speed: 10,
-    skipSnaps: true
+    skipSnaps: true,
+    watchDrag: false
   });
 
   const [canScrollPrev, setCanScrollPrev] = useState(false);
@@ -42,8 +43,35 @@ const Thumbnails = ({
     emblaThumbsApi.scrollTo(emblaThumbsApi.selectedScrollSnap() + 2);
   }, [emblaThumbsApi]);
 
+  const handleWheel = useCallback((event) => {
+    if (!emblaThumbsApi) return;
+    
+    // Prevenir el comportamiento por defecto si estamos en los límites del scroll
+    if (
+      (event.deltaY < 0 && !canScrollPrev) ||
+      (event.deltaY > 0 && !canScrollNext)
+    ) {
+      event.preventDefault();
+    }
+    
+    // Ajustar la sensibilidad del scroll
+    const scrollMultiplier = 1.5;
+    const scrollDistance = event.deltaY * scrollMultiplier;
+    
+    emblaThumbsApi.scrollTo(
+      emblaThumbsApi.scrollProgress() * 
+      emblaThumbsApi.scrollSnapList().length + 
+      scrollDistance / 100
+    );
+  }, [emblaThumbsApi, canScrollPrev, canScrollNext]);
+
   useEffect(() => {
     if (!emblaThumbsApi) return;
+
+    const viewport = emblaThumbsRef.current;
+    if (viewport) {
+      viewport.addEventListener('wheel', handleWheel, { passive: false });
+    }
 
     emblaThumbsApi.on('select', onThumbsSelect);
     emblaThumbsApi.on('reInit', onThumbsSelect);
@@ -54,10 +82,13 @@ const Thumbnails = ({
     setShouldShowButtons(hasOverflow);
 
     return () => {
+      if (viewport) {
+        viewport.removeEventListener('wheel', handleWheel);
+      }
       emblaThumbsApi.off('select', onThumbsSelect);
       emblaThumbsApi.off('reInit', onThumbsSelect);
     };
-  }, [emblaThumbsApi, onThumbsSelect]);
+  }, [emblaThumbsApi, onThumbsSelect, emblaThumbsRef, handleWheel]);
 
   if (!mediaItems || mediaItems.length === 0) {
     return null;
