@@ -4,6 +4,7 @@ import { useState } from 'react';
 import GalleryModal from '../gallery-modal/GalleryModal';
 import VideoModal from '../video-modal/VideoModal';
 import styles from './action-buttons.module.scss';
+import Image from 'next/image';
 
 const ActionButtons = ({ 
   mediaItems = [], 
@@ -17,16 +18,10 @@ const ActionButtons = ({
   const hasImages = mediaItems.some(item => item.type === 'image');
   const hasVideo = mediaItems.some(item => item.type === 'video');
 
-  // Debug: mostrar en consola si hay contenido
-  console.log('ActionButtons - hasImages:', hasImages, 'hasVideo:', hasVideo, 'mediaItems:', mediaItems);
-
   // No mostrar botones si no hay contenido
   if (!hasImages && !hasVideo) {
-    console.log('ActionButtons - No content available');
     return null;
   }
-
-  console.log('ActionButtons - Rendering buttons');
 
   return (
     <>
@@ -38,8 +33,14 @@ const ActionButtons = ({
             type="button"
             aria-label="Ver galería completa"
           >
-            <span className={styles.buttonIcon}>🖼️</span>
-            <span className={styles.buttonText}>Ver galería completa</span>
+            <Image
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1752604707/ver-todas_ublus1.svg" 
+              alt="Ver galería completa icon" 
+              className={styles.buttonIcon}
+              width={23} 
+              height={21} 
+            />
+            <span className={styles.buttonText}>Ver todas</span>
           </button>
         )}
         
@@ -50,7 +51,13 @@ const ActionButtons = ({
             type="button"
             aria-label="Ver video 360°"
           >
-            <span className={styles.buttonIcon}>🎥</span>
+            <Image
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1752604706/360_a9buqj.svg" 
+              alt="Ver galería completa icon" 
+              className={styles.buttonIcon}
+              width={32} 
+              height={23} 
+            />
             <span className={styles.buttonText}>Video 360°</span>
           </button>
         )}
