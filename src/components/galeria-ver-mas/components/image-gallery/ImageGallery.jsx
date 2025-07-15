@@ -90,6 +90,28 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
             ))}
           </div>
         </div>
+
+        {/* Botones de navegación */}
+        {displayMediaItems.length > 1 && !isZoomed && (
+          <>
+            <button
+              className={`${styles.navButton} ${styles.prev}`}
+              onClick={scrollPrev}
+              aria-label="Imagen anterior"
+              type="button"
+            >
+              <ArrowBack aria-hidden="true" />
+            </button>
+            <button
+              className={`${styles.navButton} ${styles.next}`}
+              onClick={scrollNext}
+              aria-label="Imagen siguiente"
+              type="button"
+            >
+              <ArrowForward aria-hidden="true" />
+            </button>
+          </>
+        )}
       </div>
     </div>
   );

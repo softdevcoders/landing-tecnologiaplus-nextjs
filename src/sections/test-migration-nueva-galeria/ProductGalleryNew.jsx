@@ -1,5 +1,4 @@
 import GaleriaVerMas from '@/components/galeria-ver-mas/GaleriaVerMas';
-import styles from "@/styles/ProductGallery.module.scss";
 
 function ProductGalleryNew() {
   const productInfo = {
