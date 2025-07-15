@@ -5,25 +5,33 @@
   transform: translateX(-50%);
   display: flex;
   gap: 0.5rem;
-  padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 1rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2rem;
   backdrop-filter: blur(4px);
   z-index: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+
+  @media (min-width: 768px) {
+    bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+  }
 }
 
 .bullet {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   padding: 0;
   border: none;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
   }
 
   &.active {
@@ -32,7 +40,7 @@
   }
 
   @media (min-width: 768px) {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
   }
 } 
