@@ -85,6 +85,7 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
                     <VideoPlayer
                       video={item}
                       title={`${productTitle} - Video ${index + 1}`}
+                      isActive={index === selectedIndex}
                     />
                   </div>
                 ) : (
