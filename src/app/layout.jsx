@@ -44,6 +44,8 @@ export async function generateMetadata() {
 }
 
 export default function RootLayout({ children }) {
+  // Solo aplicar upgrade-insecure-requests si la base URL usa HTTPS
+  const shouldUpgradeInsecureRequests = process.env.NEXT_PUBLIC_BASE_URL?.startsWith('https://');
 
   return (
     <html lang="es" className={`${montserrat.className} ${bebas.className} ${archivo_black.variable} ${montserrat.variable} ${bebas.variable}`}>
@@ -73,8 +75,10 @@ export default function RootLayout({ children }) {
         <meta name="format-detection" content="telephone=no" />
         <meta name="google" content="notranslate" />
 
-        {/* Additional meta tags */}
-        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        {/* Content Security Policy - Solo upgrade a HTTPS si la base URL lo usa */}
+        {shouldUpgradeInsecureRequests && (
+          <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        )}
         {SHOULD_ROBOTS_INDEX && (
           <script
             dangerouslySetInnerHTML={{
