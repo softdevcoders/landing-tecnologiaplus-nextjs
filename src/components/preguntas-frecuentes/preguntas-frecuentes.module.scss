@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   row-gap: 0.5rem;
-  padding: 4rem 2rem 2rem ;
+  padding: 4rem 2rem 2rem;
   background-color: #f4f4f4;
   margin-bottom: 2rem;
 
@@ -38,96 +38,18 @@
     }
   }
 
-  > div {
+  .faqContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     margin-bottom: 1rem;
     gap: 1rem;
+    width: 100%;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
 
-    > div {
-      width: 100%;
-
-      &[data-hidden="true"] {
-        display: none;
-        height: 0;
-        margin: 0;
-        padding: 0;
-        opacity: 0;
-        overflow: hidden;
-        -webkit-transition: all 0.3s ease-out;
-        -moz-transition: all 0.3s ease-out;
-        -o-transition: all 0.3s ease-out;
-        transition: all 0.3s ease-out;
-      }
-
-      button {
-        width: 100%;
-        max-width: 1000px;
-        padding: 0.5rem 2rem 0.5rem 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        column-gap: 1rem;
-        border-bottom: 1px solid #e0e0e0;
-        cursor: pointer;
-        background: none;
-        border-bottom: 1px solid #e0e0e0;
-
-        @media (min-width: 768px) {
-          padding: 0.5rem 2rem 0.5rem 0;
-        }
-    
-        h3 {
-          margin: 0;
-          text-align: left;
-          font-size: 1rem;
-          font-weight: 600;
-          color: #a0a0a0;
-    
-          @media (min-width: 768px) {
-            font-size: 1.2rem;
-          }
-        }
-    
-        span {
-          font-size: 1.2rem;
-          color: #606060;
-          font-weight: 300;
-          transform: rotate(180deg);
-          transition: transform 0.3s ease;
-        }
-    
-        &[data-open="true"] span {
-          transform: rotate(0deg);
-        }
-      }
-    
-      > div {
-        max-height: 0;
-        overflow: hidden;
-        padding: 0;
-        color: #a0a0a0;
-        transition: padding .2s ease-out, max-height .2s ease-out;
-        font-size: 0.8rem;
-        text-align: justify;
-    
-        @media (min-width: 768px) {
-          font-size: 1rem;
-        }
-    
-        &[data-open="true"] {
-          max-height: 2000px;
-          padding: 0.75rem 0;
-          transition: padding .2s ease-in, max-height .2s ease-in;
-        }
-      }
-    }
-
-    &[data-show="true"] > div[data-hidden="true"] {
+    &[data-show="true"] .faqItem[data-hidden="true"] {
       display: block;
       height: auto;
       opacity: 1;
@@ -136,7 +58,87 @@
     }
   }
 
-  > button {
+  .faqItem {
+    width: 100%;
+    max-width: 1000px;
+    border: none;
+    padding: 0;
+
+    &[data-hidden="true"] {
+      display: none;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-out;
+    }
+
+    // Eliminar los estilos por defecto del details
+    &:not([open]) .faqAnswer {
+      display: none;
+    }
+  }
+
+  .faqQuestion {
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    list-style: none;
+
+    // Eliminar el triángulo por defecto del summary
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      padding: 0.5rem 2rem 0.5rem 0;
+    }
+
+    h3 {
+      margin: 0;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #a0a0a0;
+
+      @media (min-width: 768px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    span {
+      font-size: 1.2rem;
+      color: #606060;
+      font-weight: 300;
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .faqItem[open] .faqQuestion span {
+    transform: rotate(0deg);
+  }
+
+  .faqAnswer {
+    padding: 0.75rem 0;
+    color: #a0a0a0;
+    font-size: 0.8rem;
+    text-align: justify;
+    animation: slideDown 0.2s ease-out;
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  .toggleButton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,9 +150,28 @@
     border: none;
     border-bottom: 0.1em solid #606060;
     padding-bottom: 0.1em;
+    gap: 0.5rem;
 
-    svg {
-      margin-left: 0.5rem;
+    .arrow {
+      font-size: 1.2rem;
+      transform: rotate(180deg);
+      display: inline-block;
+      transition: transform 0.3s ease;
     }
+
+    &[aria-expanded="true"] .arrow {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 } 
