@@ -4,7 +4,8 @@ import { useState } from 'react';
 import GalleryModal from '../gallery-modal/GalleryModal';
 import VideoModal from '../video-modal/VideoModal';
 import styles from './action-buttons.module.scss';
-import Image from 'next/image';
+import Arrows360 from '@/components/ui/icons/arrows-360';
+import Gallery from '@/components/ui/icons/gallery';
 
 const ActionButtons = ({ 
   mediaItems = [], 
@@ -37,13 +38,7 @@ const ActionButtons = ({
             type="button"
             aria-label="Ver galería completa"
           >
-            <Image
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1752604707/ver-todas_ublus1.svg" 
-              alt="Ver galería completa icon" 
-              className={styles.buttonIcon}
-              width={23} 
-              height={21} 
-            />
+            <Gallery color={hasDarkBackground ? '#000' : '#fff'} />
             <span className={styles.buttonText}>Ver todas</span>
           </button>
         )}
@@ -55,13 +50,7 @@ const ActionButtons = ({
             type="button"
             aria-label="Ver video 360°"
           >
-            <Image
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1752604706/360_a9buqj.svg" 
-              alt="Ver galería completa icon" 
-              className={styles.buttonIcon}
-              width={32} 
-              height={23} 
-            />
+            <Arrows360 color={hasDarkBackground ? '#000' : '#fff'} />
             <span className={styles.buttonText}>360°</span>
           </button>
         )}

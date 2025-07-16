@@ -53,6 +53,9 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
     selectedColor: colorContext?.selectedColor 
   });
 
+  // Verificar si el item actual tiene fondo oscuro
+  const hasDarkBackground = currentMediaItem?.darkBackground || false;
+
   if (!displayMediaItems || displayMediaItems.length === 0) {
     console.log('ImageGallery - No media items to display');
     return null;
@@ -108,7 +111,7 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
         {displayMediaItems.length > 1 && !isZoomed && (
           <>
             <button
-              className={`${styles.navButton} ${styles.prev}`}
+              className={`${styles.navButton} ${styles.prev} ${hasDarkBackground ? styles.darkNav : ''}`}
               onClick={scrollPrev}
               aria-label="Imagen anterior"
               type="button"
@@ -116,7 +119,7 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
               <ArrowBack aria-hidden="true" />
             </button>
             <button
-              className={`${styles.navButton} ${styles.next}`}
+              className={`${styles.navButton} ${styles.next} ${hasDarkBackground ? styles.darkNav : ''}`}
               onClick={scrollNext}
               aria-label="Imagen siguiente"
               type="button"
@@ -132,6 +135,7 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
             totalImages={displayMediaItems.length}
             selectedIndex={selectedIndex}
             onSelect={handleThumbClick}
+            currentMediaItem={currentMediaItem}
           />
         )}
 

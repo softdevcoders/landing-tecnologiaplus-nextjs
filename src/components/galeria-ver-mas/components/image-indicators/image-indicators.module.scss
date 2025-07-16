@@ -12,6 +12,11 @@
     bottom: 1.5rem;
     padding: 0.75rem 1rem;
   }
+
+  /* Estilos para fondo oscuro */
+  &.darkBullets {
+    // Puedes agregar estilos específicos para el contenedor si es necesario
+  }
 }
 
 .bullet {
@@ -31,6 +36,22 @@
   &.active {
     background: var(--primary-color, #2e2e2e); 
     transform: scale(1.2);
+  }
+
+  /* Estilos para bullets cuando el fondo es oscuro */
+  &.darkBullet {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.4);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.6);
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+
+    &.active {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(255, 255, 255, 1);
+    }
   }
 
   @media (min-width: 768px) {
