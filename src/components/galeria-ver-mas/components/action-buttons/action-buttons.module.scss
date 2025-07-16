@@ -23,6 +23,11 @@
     opacity: 1;
     visibility: visible;
   }
+
+  /* Estilos para fondo oscuro */
+  &.darkBackground {
+    // Puedes agregar estilos específicos para el contenedor si es necesario
+  }
 }
 
 .actionButton {
@@ -56,6 +61,20 @@
     min-width: 140px;
     padding: 0.625rem 0.875rem;
     font-size: 0.8rem;
+  }
+
+  /* Estilos para botones cuando el fondo es oscuro */
+  &.darkButton {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+
+    
+
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
+    }
   }
 }
 

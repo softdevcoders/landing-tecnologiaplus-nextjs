@@ -3,7 +3,7 @@
 import { useCallback, useState, useEffect, useMemo } from 'react';
 import { useProductColorSafe } from '@/contexts/ProductColorContext';
 
-export const useGalleryState = (media = [], colors = [], hasColors = false) => {
+export const useGalleryState = (media = [], colors = [], hasColors = false, selectedIndex = 0) => {
   const colorContext = useProductColorSafe();
   const [isMobile, setIsMobile] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
@@ -38,6 +38,12 @@ export const useGalleryState = (media = [], colors = [], hasColors = false) => {
     return sortedMedia;
   }, [colorContext, media, hasColors, sortMedia]);
 
+  // Obtener el item actual basado en el índice seleccionado
+  const currentMediaItem = useMemo(() => {
+    if (!displayMediaItems || displayMediaItems.length === 0) return null;
+    return displayMediaItems[selectedIndex] || null;
+  }, [displayMediaItems, selectedIndex]);
+
   const checkMobile = useCallback(() => {
     setIsMobile(window.innerWidth < 768);
   }, []);
@@ -57,6 +63,7 @@ export const useGalleryState = (media = [], colors = [], hasColors = false) => {
 
   return {
     displayMediaItems,
+    currentMediaItem,
     isMobile,
     zoomPosition,
     setZoomPosition,

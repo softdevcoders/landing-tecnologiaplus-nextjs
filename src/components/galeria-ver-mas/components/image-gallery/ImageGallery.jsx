@@ -13,15 +13,6 @@ import { useGalleryState } from "../../hooks/useGalleryState";
 
 const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, productTitle = '' }) => {
   const {
-    displayMediaItems,
-    isMobile,
-    zoomPosition,
-    setZoomPosition,
-    resetGalleryState,
-    colorContext
-  } = useGalleryState(mediaItems, colors, hasColors);
-
-  const {
     emblaMainRef,
     selectedIndex,
     isZoomed,
@@ -31,6 +22,16 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
     scrollTo: handleThumbClick,
     reInitCarousel
   } = useMainCarousel();
+
+  const {
+    displayMediaItems,
+    currentMediaItem,
+    isMobile,
+    zoomPosition,
+    setZoomPosition,
+    resetGalleryState,
+    colorContext
+  } = useGalleryState(mediaItems, colors, hasColors, selectedIndex);
 
   // Efecto para reiniciar el estado cuando cambian los items
   useEffect(() => {
@@ -138,6 +139,7 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
         {!isZoomed && (
           <ActionButtons
             mediaItems={displayMediaItems}
+            currentMediaItem={currentMediaItem}
             productTitle={productTitle}
             selectedColor={colorContext?.getSelectedColor()?.name || ''}
           />

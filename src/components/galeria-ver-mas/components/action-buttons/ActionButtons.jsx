@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 const ActionButtons = ({ 
   mediaItems = [], 
+  currentMediaItem = null,
   productTitle = '', 
   selectedColor = '' 
 }) => {
@@ -18,6 +19,9 @@ const ActionButtons = ({
   const hasImages = mediaItems.some(item => item.type === 'image');
   const hasVideo = mediaItems.some(item => item.type === 'video');
 
+  // Verificar si el item actual tiene fondo oscuro
+  const hasDarkBackground = currentMediaItem?.darkBackground || false;
+
   // No mostrar botones si no hay contenido
   if (!hasImages && !hasVideo) {
     return null;
@@ -25,10 +29,10 @@ const ActionButtons = ({
 
   return (
     <>
-      <div className={styles.actionButtons}>
+      <div className={`${styles.actionButtons} ${hasDarkBackground ? styles.darkBackground : ''}`}>
         {hasImages && (
           <button
-            className={styles.actionButton}
+            className={`${styles.actionButton} ${hasDarkBackground ? styles.darkButton : ''}`}
             onClick={() => setIsGalleryModalOpen(true)}
             type="button"
             aria-label="Ver galería completa"
@@ -46,7 +50,7 @@ const ActionButtons = ({
         
         {hasVideo && (
           <button
-            className={styles.actionButton}
+            className={`${styles.actionButton} ${hasDarkBackground ? styles.darkButton : ''}`}
             onClick={() => setIsVideoModalOpen(true)}
             type="button"
             aria-label="Ver video 360°"
@@ -58,7 +62,7 @@ const ActionButtons = ({
               width={32} 
               height={23} 
             />
-            <span className={styles.buttonText}>Video 360°</span>
+            <span className={styles.buttonText}>360°</span>
           </button>
         )}
       </div>
