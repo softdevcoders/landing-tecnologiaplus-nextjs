@@ -49,6 +49,8 @@ const ZoomableImage = ({
   // Manejador memoizado para el movimiento táctil durante el zoom
   const handleTouchMove = useCallback((e) => {
     if (!isZoomed || !imageRef.current) return;
+    
+    // Prevenir scroll del navegador completamente
     e.preventDefault();
     e.stopPropagation();
     
@@ -61,15 +63,32 @@ const ZoomableImage = ({
   // Manejador para prevenir eventos de drag cuando está en zoom
   const handleTouchStart = useCallback((e) => {
     if (isZoomed) {
+      e.preventDefault();
       e.stopPropagation();
     }
   }, [isZoomed]);
 
   const handleTouchEnd = useCallback((e) => {
     if (isZoomed) {
+      e.preventDefault();
       e.stopPropagation();
     }
   }, [isZoomed]);
+
+  // Manejador para cancelación de touch
+  const handleTouchCancel = useCallback((e) => {
+    if (isZoomed) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }, [isZoomed]);
+
+  // Manejador específico para cerrar zoom
+  const handleCloseZoom = useCallback((e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onZoomChange(false);
+  }, [onZoomChange]);
 
   // Manejador memoizado para alternar el estado del zoom
   const handleImageClick = useCallback((e) => {
@@ -111,12 +130,27 @@ const ZoomableImage = ({
       onTouchMove={handleTouchMove}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleTouchCancel}
       style={
         isZoomed && isSelected
           ? { cursor: 'zoom-out' }
           : { cursor: 'zoom-in' }
       }
     >
+      {/* Botón de cerrar zoom */}
+      {isZoomed && isSelected && (
+        <button
+          className={styles.closeZoomButton}
+          onClick={handleCloseZoom}
+          onTouchEnd={handleCloseZoom}
+          aria-label="Cerrar zoom"
+          type="button"
+        >
+          <span className={styles.closeZoomIcon}>✕</span>
+          <span className={styles.closeZoomText}>Cerrar zoom</span>
+        </button>
+      )}
+
       <div className={styles.imageContainer}>
         <ImageLoader
           src={image.src}

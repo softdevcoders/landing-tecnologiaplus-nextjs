@@ -13,7 +13,55 @@
     cursor: zoom-out;
     overflow: visible;
     z-index: 10;
-    touch-action: pan-x pan-y pinch-zoom;
+    touch-action: none;
+  }
+}
+
+.closeZoomButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 20;
+  height: 40px;
+  padding: 0 1.5rem 0 1rem;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  touch-action: manipulation;
+  white-space: nowrap;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @media (max-width: 767px) {
+    height: 36px;
+    padding: 0 1.25rem 0 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+.closeZoomIcon {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1;
+
+  @media (max-width: 767px) {
+    font-size: 1.1rem;
   }
 }
 
