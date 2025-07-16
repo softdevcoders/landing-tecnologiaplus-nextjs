@@ -39,6 +39,7 @@ const ZoomableImage = ({
   // Manejador memoizado para el movimiento del mouse durante el zoom
   const handleMouseMove = useCallback((e) => {
     if (!isZoomed || !imageRef.current) return;
+    e.stopPropagation();
     
     const rect = imageRef.current.getBoundingClientRect();
     const newPosition = calculateZoomPosition(e.clientX, e.clientY, rect);
@@ -49,6 +50,7 @@ const ZoomableImage = ({
   const handleTouchMove = useCallback((e) => {
     if (!isZoomed || !imageRef.current) return;
     e.preventDefault();
+    e.stopPropagation();
     
     const touch = e.touches[0];
     const rect = imageRef.current.getBoundingClientRect();
@@ -56,8 +58,22 @@ const ZoomableImage = ({
     onZoomPositionChange(newPosition);
   }, [isZoomed, calculateZoomPosition, onZoomPositionChange]);
 
+  // Manejador para prevenir eventos de drag cuando está en zoom
+  const handleTouchStart = useCallback((e) => {
+    if (isZoomed) {
+      e.stopPropagation();
+    }
+  }, [isZoomed]);
+
+  const handleTouchEnd = useCallback((e) => {
+    if (isZoomed) {
+      e.stopPropagation();
+    }
+  }, [isZoomed]);
+
   // Manejador memoizado para alternar el estado del zoom
-  const handleImageClick = useCallback(() => {
+  const handleImageClick = useCallback((e) => {
+    e.stopPropagation();
     onZoomChange(!isZoomed);
   }, [isZoomed, onZoomChange]);
 
@@ -93,6 +109,8 @@ const ZoomableImage = ({
       onClick={handleImageClick}
       onMouseMove={handleMouseMove}
       onTouchMove={handleTouchMove}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
       style={
         isZoomed && isSelected
           ? { cursor: 'zoom-out' }

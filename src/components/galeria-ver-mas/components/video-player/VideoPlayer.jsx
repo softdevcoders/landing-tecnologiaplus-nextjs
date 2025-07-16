@@ -16,6 +16,7 @@ const VideoPlayer = ({ video }) => {
         className={styles.videoElement}
         playsInline
         controlsList="nodownload"
+        disablePictureInPicture
         onContextMenu={handleContextMenu}
       >
         <source src={video.url} type="video/mp4" />

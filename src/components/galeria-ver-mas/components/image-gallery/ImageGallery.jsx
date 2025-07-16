@@ -126,13 +126,13 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
         )}
 
         {/* Indicadores de imagen */}
-        {/* {displayMediaItems.length > 1 && !isZoomed && (
+        {displayMediaItems.length > 1 && !isZoomed && (
           <ImageIndicators
             totalImages={displayMediaItems.length}
             selectedIndex={selectedIndex}
             onSelect={handleThumbClick}
           />
-        )} */}
+        )}
 
         {/* Botones de acción */}
         {!isZoomed && (

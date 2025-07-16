@@ -23,12 +23,14 @@
     width: auto;
   }
 
-  &:hover {
-    .navButton,
-    :global(.bullets),
-    :global(.actionButtons) {
-      opacity: 1;
-      visibility: visible;
+  @media (min-width: 1024px) {
+    &:hover {
+      .navButton,
+      :global(.bullets),
+      :global(.actionButtons) {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 }
@@ -43,12 +45,17 @@
 .container {
   display: flex;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
-  touch-action: pan-x pinch-zoom;
+  touch-action: pan-y pinch-zoom;
   gap: 0;
   height: 100%;
   transition: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 
   @media (min-width: 768px) {
     touch-action: pan-y pinch-zoom;
@@ -61,6 +68,7 @@
   min-width: 100%;
   height: 100%;
   flex: 0 0 100%;
+  will-change: transform;
 }
 
 .videoWrapper {
@@ -96,8 +104,16 @@
   justify-content: center;
   padding: 0;
   transition: all 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
+
+  @media (max-width: 1023px) {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (min-width: 1024px) {
+    opacity: 0;
+    visibility: hidden;
+  }
 
   svg {
     width: 16px;
