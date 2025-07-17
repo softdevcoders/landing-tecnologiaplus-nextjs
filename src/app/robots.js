@@ -17,30 +17,71 @@ export default function robots() {
     }
   }
 
-  // Para producción: configuración actual
+  // Para producción: configuración óptima
   return {
     rules: [
       {
         userAgent: '*',
         allow: [
           '/',
-          '/_next/static/chunks/*',
-          '/_next/static/css/*',
-          '/_next/static/media/*',
-          '/_next/image*',
-          '/_next/static/[^/]+/*',
-          '/blog/*'
+          '/blog/*',
+          '/contacto/',
+          '/localizadores-para-restaurantes/*',
+          '/llamadores-de-meseros/*',
+          '/llamado-de-enfermeria-cuidamaster/*',
+          '/sistema-de-turnos-turnomaster/*',
+          '/turnero-turnoexpress/*',
+          '/dispensador-de-tickets/*',
+          '/rollos-de-fichos-para-turnos/*',
+          '/rollos-de-papel-termico/*',
+          '/calificador-de-servicio-al-cliente-opinamaster/*',
+          '/encuesta-virtual-opinamaster/*'
         ],
         disallow: [
           '/api/',
-          '/_next/static/development/*',
-          '/_next/static/webpack/*',
+          '/_next/',
+          '/_vercel/',
           '/.env',
-          '/.git',
+          '/.git/',
           '/node_modules/',
           '/_error',
           '/404',
-          '/500'
+          '/500',
+          '/test-migration/',
+          '/manifest.json',
+          '/favicon.ico'
+        ]
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: [
+          '/',
+          '/blog/*',
+          '/contacto/',
+          '/localizadores-para-restaurantes/*',
+          '/llamadores-de-meseros/*',
+          '/llamado-de-enfermeria-cuidamaster/*',
+          '/sistema-de-turnos-turnomaster/*',
+          '/turnero-turnoexpress/*',
+          '/dispensador-de-tickets/*',
+          '/rollos-de-fichos-para-turnos/*',
+          '/rollos-de-papel-termico/*',
+          '/calificador-de-servicio-al-cliente-opinamaster/*',
+          '/encuesta-virtual-opinamaster/*'
+        ],
+        disallow: [
+          '/api/',
+          '/_next/',
+          '/_vercel/',
+          '/.env',
+          '/.git/',
+          '/node_modules/',
+          '/_error',
+          '/404',
+          '/500',
+          '/test-migration/',
+          '/manifest.json',
+          '/favicon.ico'
         ]
       },
       {
@@ -49,6 +90,12 @@ export default function robots() {
           '/',
           '/blog/*'
         ],
+        disallow: [
+          '/_next/',
+          '/api/',
+          '/manifest.json',
+          '/favicon.ico'
+        ]
       },
       {
         userAgent: 'MJ12bot',
