@@ -4,6 +4,7 @@ import { ROBOTS_CONFIG, LOGO_METADATA } from "@/data/metadata/config";
 import { notFound } from "next/navigation";
 import { generateImageVariants, generateImageAltText } from "@/lib/optimizedImageServer";
 import { cleanText } from "@/lib/clean-text";
+import { routes } from "@/config/routes";
 
 export const dynamic = "force-static";
 
@@ -58,7 +59,7 @@ export async function generateMetadata({ params }) {
         authors: ['Tecnología Plus'],
         publishedTime: publishedDate,
         modifiedTime: modifiedDate,
-        section: post?.categories?.[0] || 'Blog',
+        section: `${Object.values(routes.blog.children).find(child => child.category_key === post?.categories?.[0])?.label} - Blog` || 'Blog',
         tags: post?.metadata?.keywords || [],
       },
       twitter: {

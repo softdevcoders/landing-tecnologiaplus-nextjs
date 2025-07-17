@@ -111,7 +111,7 @@ export function generateImageAltText(title, category, brand = "Tecnología Plus"
   const cleanTitle = title.replace(/<[^>]*>/g, '').trim();
   
   if (category) {
-    return `${cleanTitle} - ${category} | ${brand}`;
+    return `${cleanTitle} | ${brand}`;
   }
   
   return `${cleanTitle} | ${brand}`;
