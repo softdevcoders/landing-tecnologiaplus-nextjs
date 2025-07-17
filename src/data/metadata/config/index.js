@@ -9,7 +9,7 @@ export const ROBOTS_CONFIG = {
   googleBot: {
     index: SHOULD_ROBOTS_INDEX,
     follow: SHOULD_ROBOTS_INDEX,
-    noimageindex: true,
+    noimageindex: false, // Cambio: false permite indexación de imágenes
     "max-video-preview": -1,
     "max-image-preview": "large",
     "max-snippet": -1,

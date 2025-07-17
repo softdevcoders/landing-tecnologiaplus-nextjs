@@ -6,14 +6,27 @@ import CarRelated from "@/sections/blog/components/card-related";
 import Link from "next/link";
 import { routes } from "@/config/routes";
 import Image from "next/image";
+import ArticleSchema from "@/components/schema/ArticleSchema";
+import { generateImageVariants, generateImageAltText, generateImageSizes } from "@/lib/optimizedImageServer";
 
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
   const message = `Hola, te comparto este artículo: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}/`;
   const whatsappLink = `https://wa.me/573164682034?text=Hola, vengo del artículo "${post.title.rendered}" y quiero más información.`;
 
+  // Generar variantes de imagen optimizadas
+  const imageVariants = generateImageVariants(post.images[0]);
+  const imageAltText = generateImageAltText(post.title.rendered, post?.categories?.[0]);
+
   return (
-    <main className={style.blogPostView__container}>
+    <>
+      {/* Schema.org structured data */}
+      <ArticleSchema 
+        post={post} 
+        baseUrl={process.env.NEXT_PUBLIC_BASE_URL} 
+      />
+      
+      <main className={style.blogPostView__container}>
       <article itemScope itemType="https://schema.org/BlogPosting" className={style.blogPostView__article}>
         <header className={style.blogPostView__header}>
           <h1 itemProp="headline" className={style.blogPostView__title}>{post.title.rendered}</h1>
@@ -22,11 +35,14 @@ const PostView = ({ post }) => {
         <div itemProp="articleBody" className={style.blogPostView__content}>
           <div className={style.blogPostView__imageContainer}>
             <Image
-              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${post.images[0]}`} 
-              alt={post.title.rendered}
+              src={imageVariants?.articleHero} 
+              alt={imageAltText}
               width={1200}
-              height={630}
+              height={675}
               className={style.blogPostView__image}
+              priority={true}
+              sizes={generateImageSizes(1200)}
+              itemProp="image"
             />
           </div>
           <div 
@@ -90,6 +106,7 @@ const PostView = ({ post }) => {
         </ul>
       </aside>
     </main>
+   </>
   );
 }
 
