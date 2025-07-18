@@ -35,11 +35,13 @@ export default function robots() {
           '/rollos-de-fichos-para-turnos/*',
           '/rollos-de-papel-termico/*',
           '/calificador-de-servicio-al-cliente-opinamaster/*',
-          '/encuesta-virtual-opinamaster/*'
+          '/encuesta-virtual-opinamaster/*',
+          '/_next/image/*',
+          '/_next/static/*'
         ],
         disallow: [
           '/api/',
-          '/_next/',
+          '/_next/data/*',
           '/_vercel/',
           '/.env',
           '/.git/',
@@ -67,11 +69,13 @@ export default function robots() {
           '/rollos-de-fichos-para-turnos/*',
           '/rollos-de-papel-termico/*',
           '/calificador-de-servicio-al-cliente-opinamaster/*',
-          '/encuesta-virtual-opinamaster/*'
+          '/encuesta-virtual-opinamaster/*',
+          '/_next/image/*',
+          '/_next/static/*'
         ],
         disallow: [
           '/api/',
-          '/_next/',
+          '/_next/data/*',
           '/_vercel/',
           '/.env',
           '/.git/',
@@ -90,7 +94,6 @@ export default function robots() {
           '/',
         ],
         disallow: [
-          '/_next/',
           '/api/',
           '/manifest.json',
           '/favicon.ico'
