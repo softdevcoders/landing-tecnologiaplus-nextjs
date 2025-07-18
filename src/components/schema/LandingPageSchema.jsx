@@ -196,19 +196,22 @@ function generateWebPageSchema({
   const optimizedImage = primaryImageUrl ? 
     generateOptimizedImageVariants(primaryImageUrl, name) : null;
 
+  const imageData = optimizedImage ? {
+    "@type": "ImageObject",
+    "url": optimizedImage.openGraph.url,
+    "width": optimizedImage.openGraph.width,
+    "height": optimizedImage.openGraph.height,
+    "caption": name,
+  } : undefined;
+
   return {
     "@context": "https://schema.org",
     "@type": isProductPage ? "ItemPage" : "WebPage",
     "name": cleanText(name),
     "description": cleanText(description),
     "url": `${url}/`,
-    "primaryImageOfPage": optimizedImage ? {
-      "@type": "ImageObject",
-      "url": optimizedImage.openGraph.url,
-      "width": optimizedImage.openGraph.width,
-      "height": optimizedImage.openGraph.height,
-      "caption": name,
-    } : undefined,
+    "image": imageData, // Propiedad estándar que Google reconoce mejor
+    "primaryImageOfPage": imageData, // Propiedad específica para WebPage
     "keywords": keywords.join(", "),
     "inLanguage": "es-ES",
     "isPartOf": {

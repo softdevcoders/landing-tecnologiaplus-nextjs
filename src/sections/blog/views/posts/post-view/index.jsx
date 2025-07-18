@@ -16,7 +16,6 @@ const PostView = ({ post }) => {
 
   // Generar variantes de imagen optimizadas
   const imageVariants = generateImageVariants(post.images[0]);
-  const imageAltText = generateImageAltText(post.title.rendered, post?.categories?.[0]);
 
   return (
     <>
@@ -34,14 +33,11 @@ const PostView = ({ post }) => {
 
         <div itemProp="articleBody" className={style.blogPostView__content}>
           <div className={style.blogPostView__imageContainer}>
-            <Image
-              src={imageVariants?.articleHero} 
-              alt={imageAltText}
-              width={1200}
-              height={675}
+            <img
+              src={`${imageVariants?.original}.jpeg`} 
+              alt={`Imagen de ${post?.metadata?.title}`}
               className={style.blogPostView__image}
-              priority={true}
-              sizes={generateImageSizes(1200)}
+              loading="eager"
               itemProp="image"
             />
           </div>
