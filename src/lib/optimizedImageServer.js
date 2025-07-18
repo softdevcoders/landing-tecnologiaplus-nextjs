@@ -93,7 +93,8 @@ export function generateImageVariants(imageId) {
     twitterCard: `${CLOUDINARY_BASE_URL}/${baseTransformations},w_1200,h_628/${imageId}`,
     articleHero: `${CLOUDINARY_BASE_URL}/${baseTransformations},w_1200,h_675/${imageId}`,
     cardThumbnail: `${CLOUDINARY_BASE_URL}/${baseTransformations},w_400,h_225/${imageId}`,
-    original: `${CLOUDINARY_BASE_URL}/${baseTransformations}/${imageId}`
+    original: `${CLOUDINARY_BASE_URL}/${baseTransformations}/${imageId}`,
+    originalReal: `${CLOUDINARY_BASE_URL}/${imageId}`
   };
 }
 
@@ -173,10 +174,11 @@ export function generateImageStructuredData(imageId, title, description) {
   
   return {
     "@type": "ImageObject",
-    "url": variants.original,
+    "url": `${variants.original}.jpeg` ,
     "width": 1200,
     "height": 675,
-    "description": description || title, // Usar descripción de marketing o título como fallback
+    "description": `Imagen de ${title}`,
+    "caption": title,
     "encodingFormat": "image/jpeg"
   };
 } 

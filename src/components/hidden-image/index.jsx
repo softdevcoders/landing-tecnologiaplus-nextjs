@@ -10,6 +10,7 @@ const HiddenImage = ({ url, alt, width, height, unoptimized = true }) => {
       style={{ display: 'none' }}
       loading="eager"
       unoptimized={unoptimized} 
+      itemProp="image"
     />
   );
 };

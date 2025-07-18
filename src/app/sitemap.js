@@ -81,7 +81,7 @@ export default async function sitemap() {
         const baseTransformations = "f_auto,q_auto,c_fill,g_auto";
         
         // Next.js 15 no soporta title y caption en images, usamos solo URL
-        sitemapEntry.images = [`${CLOUDINARY_BASE_URL}/${baseTransformations},w_1200,h_630/${mainImage}`];
+        sitemapEntry.images = [`${CLOUDINARY_BASE_URL}/${baseTransformations}/${mainImage}.jpeg`];
       }
 
       links.push(sitemapEntry);
