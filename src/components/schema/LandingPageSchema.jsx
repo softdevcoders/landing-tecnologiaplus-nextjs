@@ -190,6 +190,7 @@ function generateWebPageSchema({
   description,
   url,
   primaryImageUrl,
+  keywords = []
 }) {
   const optimizedImage = primaryImageUrl ? 
     generateOptimizedImageVariants(primaryImageUrl, name) : null;
@@ -218,6 +219,21 @@ function generateWebPageSchema({
       "name": "Tecnología Plus",
       "url": BASE_URL
     },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "COP",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "priceCurrency": "COP",
+      },
+      "seller": {
+        "@type": "Organization",
+        "name": "Tecnología Plus",
+        "url": BASE_URL
+      }
+    },
+    "keywords": keywords.join(", ")
   };
 }
 
