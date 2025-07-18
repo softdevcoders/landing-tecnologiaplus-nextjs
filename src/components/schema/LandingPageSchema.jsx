@@ -205,29 +205,32 @@ function generateWebPageSchema({
 
   return {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": cleanText(name),
+    "@type": "Article",
+    "headline": cleanText(name),
     "description": cleanText(description),
     "url": `${url}/`,
     "image": imageData, // Propiedad estándar que Google reconoce mejor
-    "brand": {
-      "@type": "Brand",
-      "name": "Tecnología Plus"
-    },
-    "manufacturer": {
+    "author": {
       "@type": "Organization",
       "name": "Tecnología Plus",
       "url": BASE_URL
     },
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "COP",
-      "seller": {
-        "@type": "Organization",
-        "name": "Tecnología Plus",
-        "url": BASE_URL
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tecnología Plus",
+      "url": BASE_URL,
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747675231/website-v2/logos/so7xgqia3ntpj1hqlpsk.png",
+        "width": 192,
+        "height": 192
       }
+    },
+    "datePublished": "2024-01-15T08:00:00+00:00",
+    "dateModified": new Date().toISOString(),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${url}/`
     },
     "keywords": keywords.join(", ")
   };
