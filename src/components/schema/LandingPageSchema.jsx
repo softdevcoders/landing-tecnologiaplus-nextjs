@@ -223,10 +223,6 @@ function generateWebPageSchema({
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
       "priceCurrency": "COP",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "priceCurrency": "COP",
-      },
       "seller": {
         "@type": "Organization",
         "name": "Tecnología Plus",
