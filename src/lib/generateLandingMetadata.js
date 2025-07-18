@@ -23,7 +23,7 @@ const LOGO_OPTIMIZED = {
  * @param {Object} options - Opciones de personalización
  * @returns {Object} Metadatos mejorados
  */
-export function generateLandingMetadata(originalMetadata, options = {}) {
+export function _generateLandingMetadata(originalMetadata, options = {}) {
   const {
     primaryImage = null,
     productImages = [],
