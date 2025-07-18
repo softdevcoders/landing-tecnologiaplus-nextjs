@@ -47,7 +47,7 @@ export function generateLandingMetadata(config) {
     description,
     keywords,
     url,
-    image,
+    image = null,
     category = "Sistemas de Autoservicio",
     productInfo = null
   } = config;
@@ -57,10 +57,13 @@ export function generateLandingMetadata(config) {
   const baseTransformations = "f_auto,q_auto,c_fill,g_auto";
   const altText = `${title}`;
   
-  const mainImage = {
+  const mainImage = image ? {
     url: `${CLOUDINARY_BASE_URL}/${baseTransformations},w_1200,h_630${image}`,
     width: 1200,
     height: 630,
+    alt: altText
+  } : {
+    ...DEFAULT_LOGO_IMAGE,
     alt: altText
   };
 
@@ -97,7 +100,7 @@ export function generateLandingMetadata(config) {
       type: COMPANY_INFO.type,
       images: {
         ...mainImage,
-        url: mainImage.url.replace('w_1200,h_630', 'w_1200,h_628'),
+        url: image ? mainImage.url.replace('w_1200,h_630', 'w_1200,h_628') : mainImage.url,
       },
       card: "summary_large_image",
     },
