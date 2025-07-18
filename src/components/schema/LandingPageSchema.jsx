@@ -190,8 +190,6 @@ function generateWebPageSchema({
   description,
   url,
   primaryImageUrl,
-  isProductPage = false,
-  keywords = []
 }) {
   const optimizedImage = primaryImageUrl ? 
     generateOptimizedImageVariants(primaryImageUrl, name) : null;
@@ -206,20 +204,20 @@ function generateWebPageSchema({
 
   return {
     "@context": "https://schema.org",
-    "@type": isProductPage ? "ItemPage" : "WebPage",
+    "@type": "Product",
     "name": cleanText(name),
     "description": cleanText(description),
     "url": `${url}/`,
     "image": imageData, // Propiedad estándar que Google reconoce mejor
-    // "primaryImageOfPage": imageData, // Propiedad específica para WebPage
-    "keywords": keywords.join(", "),
-    "inLanguage": "es-ES",
-    "isPartOf": {
-      "@type": "WebSite",
+    "brand": {
+      "@type": "Brand",
+      "name": "Tecnología Plus"
+    },
+    "manufacturer": {
+      "@type": "Organization",
       "name": "Tecnología Plus",
       "url": BASE_URL
     },
-    "publisher": ORGANIZATION_DATA
   };
 }
 
