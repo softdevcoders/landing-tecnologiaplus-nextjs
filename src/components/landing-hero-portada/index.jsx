@@ -53,6 +53,7 @@ export const LandingHeroPortadaContentImageImg = ({ image, className = "" }) => 
       loading="eager"
       fetchPriority="high"
       priority
+      unoptimized={true}
     />
   )
 }
