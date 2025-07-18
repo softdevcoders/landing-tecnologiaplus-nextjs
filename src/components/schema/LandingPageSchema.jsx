@@ -27,63 +27,63 @@ const ORGANIZATION_DATA = {
     "height": 192
   },
   "description": "Fabricantes expertos en sistemas de autoservicio, turnos y gestión de filas para restaurantes, hospitales y centros comerciales.",
-  "email": "ventas@tecnologiaplus.com",
-  "address": [
-    {
-      "@type": "PostalAddress",
-      "addressCountry": "CO",
-      "addressLocality": "Bogotá",
-      "streetAddress": "Cra 19 # 82-85 oficina 401",
-      "addressRegion": "Bogotá D.C."
-    },
-    {
-      "@type": "PostalAddress",
-      "addressCountry": "CO",
-      "addressLocality": "Medellín",
-      "streetAddress": "El Poblado edificio Oceanía",
-      "addressRegion": "Antioquia"
-    },
-    {
-      "@type": "PostalAddress",
-      "addressCountry": "PE",
-      "addressLocality": "Lima",
-      "addressRegion": "Lima"
-    }
-  ],
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "contactType": "sales",
-      "availableLanguage": ["Spanish"],
-      "telephone": ["+573164682034", "+573227347971"],
-      "areaServed": "CO",
-      "contactOption": "TollFree"
-    },
-    {
-      "@type": "ContactPoint",
-      "contactType": "sales",
-      "availableLanguage": ["Spanish"],
-      "telephone": "+51976270171",
-      "areaServed": "PE",
-      "contactOption": "TollFree"
-    }
-  ],
-  "areaServed": [
-    {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": "4.6097",
-        "longitude": "-74.0817"
-      },
-      "description": "Colombia - Cobertura nacional"
-    },
-    {
-      "@type": "Country",
-      "name": "Peru"
-    }
-  ],
-  "serviceArea": ["Colombia", "Peru", "Latin America"]
+  // "email": "ventas@tecnologiaplus.com",
+  // "address": [
+  //   {
+  //     "@type": "PostalAddress",
+  //     "addressCountry": "CO",
+  //     "addressLocality": "Bogotá",
+  //     "streetAddress": "Cra 19 # 82-85 oficina 401",
+  //     "addressRegion": "Bogotá D.C."
+  //   },
+  //   {
+  //     "@type": "PostalAddress",
+  //     "addressCountry": "CO",
+  //     "addressLocality": "Medellín",
+  //     "streetAddress": "El Poblado edificio Oceanía",
+  //     "addressRegion": "Antioquia"
+  //   },
+  //   {
+  //     "@type": "PostalAddress",
+  //     "addressCountry": "PE",
+  //     "addressLocality": "Lima",
+  //     "addressRegion": "Lima"
+  //   }
+  // ],
+  // "contactPoint": [
+  //   {
+  //     "@type": "ContactPoint",
+  //     "contactType": "sales",
+  //     "availableLanguage": ["Spanish"],
+  //     "telephone": ["+573164682034", "+573227347971"],
+  //     "areaServed": "CO",
+  //     "contactOption": "TollFree"
+  //   },
+  //   {
+  //     "@type": "ContactPoint",
+  //     "contactType": "sales",
+  //     "availableLanguage": ["Spanish"],
+  //     "telephone": "+51976270171",
+  //     "areaServed": "PE",
+  //     "contactOption": "TollFree"
+  //   }
+  // ],
+  // "areaServed": [
+  //   {
+  //     "@type": "GeoCircle",
+  //     "geoMidpoint": {
+  //       "@type": "GeoCoordinates",
+  //       "latitude": "4.6097",
+  //       "longitude": "-74.0817"
+  //     },
+  //     "description": "Colombia - Cobertura nacional"
+  //   },
+  //   {
+  //     "@type": "Country",
+  //     "name": "Peru"
+  //   }
+  // ],
+  // "serviceArea": ["Colombia", "Peru", "Latin America"]
 };
 
 /**
@@ -211,7 +211,7 @@ function generateWebPageSchema({
     "description": cleanText(description),
     "url": `${url}/`,
     "image": imageData, // Propiedad estándar que Google reconoce mejor
-    "primaryImageOfPage": imageData, // Propiedad específica para WebPage
+    // "primaryImageOfPage": imageData, // Propiedad específica para WebPage
     "keywords": keywords.join(", "),
     "inLanguage": "es-ES",
     "isPartOf": {
