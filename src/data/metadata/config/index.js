@@ -55,7 +55,7 @@ export function generateLandingMetadata(config) {
    
   const CLOUDINARY_BASE_URL = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`;
   const baseTransformations = "f_auto,q_auto,c_fill,g_auto";
-  const altText = `${title} - ${category} | Tecnología Plus`;
+  const altText = `${title}`;
   
   const mainImage = {
     url: `${CLOUDINARY_BASE_URL}/${baseTransformations},w_1200,h_630${image}`,

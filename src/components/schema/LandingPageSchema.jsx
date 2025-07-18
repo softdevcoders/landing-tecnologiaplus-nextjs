@@ -206,7 +206,8 @@ function generateWebPageSchema({
       "@type": "ImageObject",
       "url": optimizedImage.openGraph.url,
       "width": optimizedImage.openGraph.width,
-      "height": optimizedImage.openGraph.height
+      "height": optimizedImage.openGraph.height,
+      "caption": name,
     } : undefined,
     "keywords": keywords.join(", "),
     "inLanguage": "es-ES",

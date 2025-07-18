@@ -39,7 +39,7 @@ export function generateOptimizedImageVariants(imageUrl, title, customAlt = null
   return {
     // OpenGraph (Facebook, WhatsApp, LinkedIn) - 1200x630 (ratio 1.91:1)
     openGraph: {
-      url: `${CLOUDINARY_BASE_URL}/${baseTransformations},w_1200,h_630/${imageUrl}`,
+      url: `${CLOUDINARY_BASE_URL}/${baseTransformations},w_1200,h_630${imageUrl}`,
       width: 1200,
       height: 630,
       alt: altText

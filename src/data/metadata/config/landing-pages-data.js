@@ -117,7 +117,7 @@ export const PRODUCT_INFO = {
  */
 export function getLandingPageConfig(landingKey, pageKey = 'root') {
   return {
-    image: LANDING_IMAGES[landingKey]?.[pageKey] || [],
+    image: LANDING_IMAGES[landingKey]?.[pageKey] || null,
     category: LANDING_CATEGORIES[landingKey] || "Sistemas de Autoservicio",
     productInfo: PRODUCT_INFO[landingKey]?.[pageKey] || null
   };
