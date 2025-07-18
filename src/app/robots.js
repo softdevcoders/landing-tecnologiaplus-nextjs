@@ -88,7 +88,6 @@ export default function robots() {
         userAgent: 'Mediapartners-Google',
         allow: [
           '/',
-          '/blog/*'
         ],
         disallow: [
           '/_next/',
