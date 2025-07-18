@@ -5,17 +5,17 @@
   transform: translateX(-50%);
   display: flex;
   gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 2rem;
-  backdrop-filter: blur(4px);
   z-index: 1;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease;
 
   @media (min-width: 768px) {
     bottom: 1.5rem;
     padding: 0.75rem 1rem;
+  }
+
+  /* Estilos para fondo oscuro */
+  &.darkBullets {
+    // Puedes agregar estilos específicos para el contenedor si es necesario
   }
 }
 
@@ -23,20 +23,35 @@
   width: 8px;
   height: 8px;
   padding: 0;
-  border: none;
+  border: 1px solid #000000;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
+  background: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.4);
     transform: scale(1.1);
   }
 
   &.active {
     background: var(--primary-color, #2e2e2e); 
     transform: scale(1.2);
+  }
+
+  /* Estilos para bullets cuando el fondo es oscuro */
+  &.darkBullet {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.4);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.6);
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+
+    &.active {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(255, 255, 255, 1);
+    }
   }
 
   @media (min-width: 768px) {

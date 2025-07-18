@@ -6,7 +6,20 @@ import useEmblaCarousel from "embla-carousel-react";
 export const useMainCarousel = () => {
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel({ 
     loop: true,
-    dragFree: true 
+    dragFree: false,
+    containScroll: "keepSnaps",
+    align: "center",
+    skipSnaps: false,
+    slidesToScroll: 1,
+    speed: 10,
+    breakpoints: {
+      '(max-width: 768px)': { 
+        dragFree: false,
+        containScroll: 'keepSnaps',
+        speed: 15,
+        skipSnaps: false
+      }
+    }
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -26,23 +39,66 @@ export const useMainCarousel = () => {
     return () => emblaMainApi.off('select', onSelect);
   }, [emblaMainApi, onSelect]);
 
-  // Efecto para actualizar el comportamiento del carrusel según el estado del zoom
+  // Efecto para desactivar drag cuando está en zoom
   useEffect(() => {
     if (!emblaMainApi) return;
-    emblaMainApi.reInit({ dragFree: !isZoomed });
+    
+    if (isZoomed) {
+      // Desactivar drag cuando está en zoom
+      emblaMainApi.reInit({ 
+        loop: true,
+        dragFree: false,
+        containScroll: "keepSnaps",
+        align: "center",
+        skipSnaps: false,
+        slidesToScroll: 1,
+        speed: 10,
+        watchDrag: false,
+        breakpoints: {
+          '(max-width: 768px)': { 
+            dragFree: false,
+            containScroll: 'keepSnaps',
+            speed: 15,
+            skipSnaps: false,
+            watchDrag: false
+          }
+        }
+      });
+    } else {
+      // Reactivar drag cuando no está en zoom
+      emblaMainApi.reInit({ 
+        loop: true,
+        dragFree: false,
+        containScroll: "keepSnaps",
+        align: "center",
+        skipSnaps: false,
+        slidesToScroll: 1,
+        speed: 10,
+        watchDrag: true,
+        breakpoints: {
+          '(max-width: 768px)': { 
+            dragFree: false,
+            containScroll: 'keepSnaps',
+            speed: 15,
+            skipSnaps: false,
+            watchDrag: true
+          }
+        }
+      });
+    }
   }, [isZoomed, emblaMainApi]);
 
   const scrollPrev = useCallback(() => {
-    if (emblaMainApi) emblaMainApi.scrollPrev();
-  }, [emblaMainApi]);
+    if (emblaMainApi && !isZoomed) emblaMainApi.scrollPrev();
+  }, [emblaMainApi, isZoomed]);
 
   const scrollNext = useCallback(() => {
-    if (emblaMainApi) emblaMainApi.scrollNext();
-  }, [emblaMainApi]);
+    if (emblaMainApi && !isZoomed) emblaMainApi.scrollNext();
+  }, [emblaMainApi, isZoomed]);
 
   const scrollTo = useCallback((index) => {
-    if (emblaMainApi) emblaMainApi.scrollTo(index);
-  }, [emblaMainApi]);
+    if (emblaMainApi && !isZoomed) emblaMainApi.scrollTo(index);
+  }, [emblaMainApi, isZoomed]);
 
   const reInitCarousel = useCallback(() => {
     if (emblaMainApi) {

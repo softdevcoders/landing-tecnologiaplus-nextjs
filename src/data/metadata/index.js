@@ -1,4 +1,6 @@
 import { metadata as defaultMetadata } from '@/data/metadata/data/default';
+
+// Blog principal y categorías
 import { metadata as blog } from '@/data/metadata/data/blog/root';
 import { metadata as calificadorDeServicioAlClienteOpinamaster } from '@/data/metadata/data/blog/calificador-de-servicio-al-cliente-opinamaster';
 import { metadata as dispensadorDeTickets } from '@/data/metadata/data/blog/dispensador-de-tickets';
@@ -10,36 +12,56 @@ import { metadata as rollosDeFichosParaTurnos } from '@/data/metadata/data/blog/
 import { metadata as rollosDePapelTermico } from '@/data/metadata/data/blog/rollos-de-papel-termico';
 import { metadata as sistemasDeTurnosTurnomaster } from '@/data/metadata/data/blog/sistema-de-turnos-turnomaster';
 import { metadata as turneroTurnoexpress } from '@/data/metadata/data/blog/turnero-turnoexpress';
+
+// Contacto
 import { metadata as contact } from '@/data/metadata/data/contacto';
+
+// Home
 import { metadata as home } from '@/data/metadata/data/home';
+
+// Landings
 import { metadata as turneroTurnoexpressLanding } from '@/data/metadata/data/landings/turnero-turnoexpress/root';
 import { metadata as rollosDePapelTermicoLanding } from '@/data/metadata/data/landings/rollos-de-papel-termico/root';
 import { metadata as calificadorDeServicioAlClienteOpinamasterLanding } from '@/data/metadata/data/landings/calificador-de-servicio-al-cliente-opinamaster/root';
 import { metadata as llamadoDeEnfermeriaCuidamasterLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/root';
-import { metadata as llamadoDeEnfermeriaCuidamasterAlarmaDeLuzLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/alarma-de-luz';
 import { metadata as localizadoresParaRestaurantesLanding } from '@/data/metadata/data/landings/localizadores-para-restaurantes/root';
-import { metadata as localizadoresParaRestaurantesLandingLocalizadoresRecV3 } from '@/data/metadata/data/landings/localizadores-para-restaurantes/localizadores-rec-v3';
-import { metadata as localizadoresParaRestaurantesLandingLocalizadoresCirC2 } from '@/data/metadata/data/landings/localizadores-para-restaurantes/localizadores-cir-c2';
 import { metadata as rollosDeFichosParaTurnosLanding } from '@/data/metadata/data/landings/rollos-de-fichos-para-turnos/root';
-import { metadata as dispensadorDeTicketsLanding } from '@/data/metadata/data/landings/dispensador-de-tickets/root';
 import { metadata as llamadoresDeMeserosLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/root';
+import { metadata as dispensadorDeTicketsLanding } from '@/data/metadata/data/landings/dispensador-de-tickets/root';
 import { metadata as sistemasDeTurnosTurnomasterLanding } from '@/data/metadata/data/landings/sistema-de-turnos-turnomaster/root';
 import { metadata as encuestaVirtualOpinamasterLanding } from '@/data/metadata/data/landings/encuesta-virtual-opinamaster/root';
+
+// Localizadores para restaurantes
+import { metadata as localizadoresParaRestaurantesLandingLocalizadoresRecV3 } from '@/data/metadata/data/landings/localizadores-para-restaurantes/localizadores-rec-v3';
+import { metadata as localizadoresParaRestaurantesLandingLocalizadoresCirC2 } from '@/data/metadata/data/landings/localizadores-para-restaurantes/localizadores-cir-c2';
+
+// Llamado de enfermería
+import { metadata as llamadoDeEnfermeriaCuidamasterAlarmaDeLuzLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/alarma-de-luz';
 import { metadata as llamadoDeEnfermeriaCuidamasterLlamadorE1ParaCuelloLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello';
 import { metadata as llamadoDeEnfermeriaCuidamasterLlamadorE2BlancoLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/llamador-e2-blanco';
 import { metadata as llamadoDeEnfermeriaCuidamasterLlamadorEx1Landing } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/llamador-ex1';
 import { metadata as llamadoDeEnfermeriaCuidamasterPantallaT1BLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/pantalla-t1-b';
 import { metadata as llamadoDeEnfermeriaCuidamasterPantallaT6Landing } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/pantalla-t6';
 import { metadata as llamadoDeEnfermeriaCuidamasterRelojReceptorDeLlamadosLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados';
+
+// Rollos de papel térmico
 import { metadata as rollosDePapelTermicoLandingRollosTermicos } from '@/data/metadata/data/landings/rollos-de-papel-termico/rollos-termicos';
+
+// Dispensador de tickets
 import { metadata as dispensadorDeTicketsLandingDispensadorDeTicketsCaracol } from '@/data/metadata/data/landings/dispensador-de-tickets/dispensador-de-tickets-caracol';
+
+// Turnero Turnoexpress
 import { metadata as turneroTurnoexpressLandingTurneroFilaUnicaSupermercados } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-fila-unica-supermercados';
 import { metadata as turneroTurnoexpressLandingTurneroT1B } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-t1-b';
 import { metadata as turneroTurnoexpressLandingTurneroT1N } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-t1-n';
 import { metadata as turneroTurnoexpressLandingTurneroT3ModuloTurno } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-t3-modulo-turno';
 import { metadata as turneroTurnoexpressLandingTurneroTransformer } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-transformer';
+
+// Calificador de servicio al cliente
 import { metadata as calificadorDeServicioAlClienteOpinamasterLandingCalificadorDeServicio } from '@/data/metadata/data/landings/calificador-de-servicio-al-cliente-opinamaster/calificador-de-servicio';
 import { metadata as calificadorDeServicioAlClienteOpinamasterLandingAvisoDeParedParaCalificarServicio } from '@/data/metadata/data/landings/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio';
+
+// Llamadores de meseros
 import { metadata as llamadoresDeMeserosLandingHabladorDeMesa } from '@/data/metadata/data/landings/llamadores-de-meseros/hablador-de-mesa';
 import { metadata as llamadoresDeMeserosLandingControlNumerico } from '@/data/metadata/data/landings/llamadores-de-meseros/control-numerico';
 import { metadata as llamadoresDeMeserosLandingRelojReceptorDeLlamados } from '@/data/metadata/data/landings/llamadores-de-meseros/reloj-receptor-de-llamados';
@@ -47,6 +69,8 @@ import { metadata as llamadoresDeMeserosLandingPantallaT1BLanding } from '@/data
 import { metadata as llamadoresDeMeserosLandingPantallaT6Landing } from '@/data/metadata/data/landings/llamadores-de-meseros/pantalla-t6';
 import { metadata as llamadoresDeMeserosLandingLlamadorDeMeserosE2BLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/llamador-de-meseros-e2-b';
 import { metadata as llamadoresDeMeserosLandingLlamadorDeMeserosE2NConTeclaPagarLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar';
+
+// Rollos de fichos para turnos
 import { metadata as rollosDeFichosParaTurnosLandingRollosDeTurnos } from '@/data/metadata/data/landings/rollos-de-fichos-para-turnos/rollos-de-turnos';
 import { metadata as turneroTurnoexpressLandingTurneroT3ConLogo } from '@/data/metadata/data/landings/turnero-turnoexpress/turnero-t3-con-logo';
   

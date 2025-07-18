@@ -73,7 +73,11 @@ const GalleryModal = ({
                 width={item.width}
                 height={item.height}
                 sizes={getOptimizedSizes('gallery-modal', false)}
-                style={{ objectFit: 'contain' }}
+                style={{ 
+                  objectFit: 'cover',
+                  width: '100%',
+                  height: '100%'
+                }}
                 priority={index < 6}
                 blurDataURL={generateBlurDataURL()}
                 placeholder="blur"
