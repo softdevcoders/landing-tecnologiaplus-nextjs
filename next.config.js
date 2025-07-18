@@ -177,16 +177,6 @@ const nextConfig = {
   // Headers de seguridad actualizados
   async headers() {
     return [
-      // Bloquear indexación de archivos _next
-      {
-        source: '/_next/:path*',
-        headers: [
-          {
-            key: 'X-Robots-Tag',
-            value: 'noindex, nofollow, nosnippet, noarchive, noimageindex'
-          }
-        ]
-      },
       {
         source: '/:path*',
         has: [
