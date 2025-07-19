@@ -177,24 +177,9 @@ const nextConfig = {
   // Headers de seguridad actualizados
   async headers() {
     return [
-      // Bloquear indexación de archivos _next
-      {
-        source: '/_next/:path*',
-        headers: [
-          {
-            key: 'X-Robots-Tag',
-            value: 'noindex, nofollow, nosnippet, noarchive, noimageindex'
-          }
-        ]
-      },
+      // Aplicar HSTS y otros headers de seguridad a todos los dominios
       {
         source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.tecnologiaplus.com'
-          }
-        ],
         headers: [
           {
             key: 'Strict-Transport-Security',
