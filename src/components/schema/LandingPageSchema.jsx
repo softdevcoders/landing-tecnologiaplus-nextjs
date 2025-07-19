@@ -106,7 +106,7 @@ function generateBreadcrumbs(landingCategory, productSlug = null) {
       "@type": "ListItem",
       "position": 2,
       "name": categoryRoute.label,
-      "item": `${BASE_URL}${categoryRoute.url}`
+      "item": `${BASE_URL}${categoryRoute.url}/`
     });
 
     // Si es un producto específico, añadir el breadcrumb del producto
@@ -115,7 +115,7 @@ function generateBreadcrumbs(landingCategory, productSlug = null) {
         "@type": "ListItem",
         "position": 3,
         "name": categoryRoute.children[productSlug].name,
-        "item": `${BASE_URL}${categoryRoute.children[productSlug].url}`
+        "item": `${BASE_URL}${categoryRoute.children[productSlug].url}/`
       });
     }
   }
