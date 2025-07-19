@@ -189,19 +189,33 @@ function generateWebPageSchema({
   name,
   description,
   url,
-  primaryImageUrl,
+  primaryImage,
   keywords = []
 }) {
-  const optimizedImage = primaryImageUrl ? 
-    generateOptimizedImageVariants(primaryImageUrl, name) : null;
+  let imageData = null;
 
-  const imageData = optimizedImage ? {
-    "@type": "ImageObject",
-    "url": optimizedImage.openGraph.url,
-    "width": optimizedImage.openGraph.width,
-    "height": optimizedImage.openGraph.height,
-    "caption": name,
-  } : undefined;
+  // Si la imagen es un objeto, usar los datos proporcionados
+  if(typeof primaryImage === 'object' && primaryImage !== null) {
+    imageData = {
+      "@type": "ImageObject",
+      "url": primaryImage.url,
+      "width": primaryImage.width,
+      "height": primaryImage.height,
+      "caption": primaryImage.alt,
+    }
+  }
+
+  // Si la imagen es una URL, generar las variantes optimizadas
+  if(typeof primaryImage === 'string' && primaryImage !== null) {
+    const optimizedImage = generateOptimizedImageVariants(primaryImage, name);
+    imageData = {
+      "@type": "ImageObject",
+      "url": optimizedImage.openGraph.url,
+      "width": optimizedImage.openGraph.width,
+      "height": optimizedImage.openGraph.height,
+      "caption": name,
+    }
+  }
 
   return {
     "@context": "https://schema.org",
@@ -271,7 +285,7 @@ export default function LandingPageSchema({
     name: pageTitle,
     description: pageDescription,
     url: pageUrl,
-    primaryImageUrl: primaryImage,
+    primaryImage,
     isProductPage: !!productData,
     keywords
   }));

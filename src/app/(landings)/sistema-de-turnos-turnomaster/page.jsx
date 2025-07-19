@@ -6,6 +6,7 @@ import TurnoMasterIndustriesSection from "@/sections/sistema-de-turnos-turnomast
 import TurnoMasterProductsSection from "@/sections/sistema-de-turnos-turnomaster/components/ProductsSection/TurnoMasterProductsSection";
 import TurnoMasterRelatedProducts from "@/sections/sistema-de-turnos-turnomaster/components/RelatedProducts/TurnoMasterRelatedProducts";
 import SecondaryTurnoMasterProductsSection from "@/sections/sistema-de-turnos-turnomaster/components/SecondaryProductsSection/SecondaryTurnoMasterProductsSection";
+import LandingPageSchema from "@/components/schema/LandingPageSchema";
 
 export async function generateMetadata() {
   const { 'sistema-de-turnos-turnomaster': { root: metadata } } = getMetadata('landings');
@@ -13,8 +14,20 @@ export async function generateMetadata() {
 }
 
 export default function TurnoMasterLanding() {
+  const { 'sistema-de-turnos-turnomaster': { root: metadata } } = getMetadata('landings');
+
   return (
     <>
+      {/* Schema.org optimizado para SEO usando datos centralizados */}
+      <LandingPageSchema
+        pageTitle={metadata.title.absolute}
+        pageDescription={metadata.description}
+        pageUrl={metadata.alternates.canonical}
+        keywords={Array.isArray(metadata.keywords) ? metadata.keywords : [metadata.keywords]}
+        landingCategory="sistemasDeTurnosTurnomaster"
+        primaryImage={metadata.seoImages?.primary}
+        productImages={metadata.seoImages?.gallery || []}
+      />
       <TurnoMasterHeroSection />
       <TurnoMasterClientsSection />
       <TurnoMasterProductsSection />

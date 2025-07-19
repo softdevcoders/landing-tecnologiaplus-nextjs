@@ -37,10 +37,12 @@ export default async function sitemap() {
           const landingConfig = getLandingPageConfig(landingKey, 'root');
           
           let images = null;
-          if (landingConfig.image) {
+
+          if (typeof landingConfig.image === 'object' && landingConfig.image !== null) {
+            images = [landingConfig?.image?.url || null];
+          } else if (typeof landingConfig.image === 'string' && landingConfig.image !== null) {
             const CLOUDINARY_BASE_URL = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`;
-            const baseTransformations = "f_auto,q_auto,c_fill,g_auto";
-            images = [`${CLOUDINARY_BASE_URL}/${baseTransformations},w_1200,h_630${landingConfig.image}`];
+            images = [`${CLOUDINARY_BASE_URL}/f_auto,q_auto,c_fill,g_auto,w_1200,h_630${landingConfig.image}`];
           }
 
           links.push({ 

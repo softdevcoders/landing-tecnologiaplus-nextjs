@@ -442,12 +442,12 @@ export const landingHeros = {
       description: "Para tickets, facturas y más.",
       images: [{
         src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
-        alt: "Rollos de turnos",
+        alt: "Rollos termicos",
         className: styles.landing_hero__content__image_mobile,
         width: 350,
       },{
         src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
-        alt: "Rollos de turnos",
+        alt: "Rollos termicos",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
@@ -465,7 +465,7 @@ export const landingHeros = {
         },
         image: {
           src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
-          alt: "Rollos de turnos",
+          alt: "Rollos termicos",
           width: 350,
           height: 361
         },
@@ -481,7 +481,7 @@ export const landingHeros = {
         },
         image: {
           src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
-          alt: "Rollos de turnos",
+          alt: "Rollos termicos",
           width: 900,
           height: 649
         },
@@ -498,12 +498,12 @@ export const landingHeros = {
       description: "Escucha a tus clientes.",
       images: [{
         src: "website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/zmdy9nvzeoetrit2w95n",
-        alt: "Rollos de turnos",
+        alt: "Calificador de servicio",
         className: styles.landing_hero__content__image_mobile,  
         width: 350,
       },{
         src: "website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/epg4efgegtcqvxyfdsbe",
-        alt: "Rollos de turnos",
+        alt: "Calificador de servicio",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
@@ -555,12 +555,12 @@ export const landingHeros = {
       templateName: templateNames.ENCUESTA_VIRTUAL_OPINAMASTER_HOME,
       images: [{
         src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
-        alt: "Rollos de turnos",
+        alt: "Encuesta virtual",
         className: styles.landing_hero__content__image_mobile,
         width: 350,
       },{
         src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/ubbkhbpquh0tquaz8xwl",
-        alt: "Rollos de turnos",
+        alt: "Encuesta virtual",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
