@@ -1,7 +1,6 @@
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import { landingHeros } from "@/config/landing-heros";
-import ResponsiveImage from "@/components/ui/responsive-image";
 import Image from "next/image";
 
 export const LandingHeroPortadaContainer = ({ className = "", children }) => {
@@ -10,18 +9,18 @@ export const LandingHeroPortadaContainer = ({ className = "", children }) => {
       <Image 
         {...landingHeros.background.images}
         className={`${styles.background} ${styles.background__desktop}`} 
-        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.background.images.width}/${landingHeros.background.images.src}`}
+        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.background.images.width},q_30,f_webp/${landingHeros.background.images.src}`}
         loading="eager"
         fetchPriority="high"
-        priority
+        unoptimized={true}
       />
       <Image 
         {...landingHeros.backgroundMobilePortada.images}
         className={`${styles.background} ${styles.background__mobile}`} 
-        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.backgroundMobilePortada.images.width}/${landingHeros.backgroundMobilePortada.images.src}`}
+        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.backgroundMobilePortada.images.width},q_80,f_webp/${landingHeros.backgroundMobilePortada.images.src}`}
         loading="eager"
         fetchPriority="high"
-        priority
+        unoptimized={true}
       />
       {children}
     </div>

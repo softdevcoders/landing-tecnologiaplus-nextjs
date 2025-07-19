@@ -12,8 +12,7 @@ export const landingHeros = {
     images: {
       src: "website-v2/images/landings/backgrounds/nqz3myqzqgttlqfepepu",
       alt: "Background Image for Slider Hero",
-      loading: "lazy",
-      width: 1920,
+      width: 900,
       height: 1080,
     },
   },
@@ -21,7 +20,6 @@ export const landingHeros = {
     images: {
       src: "v1745272277/Fondo_3x-8_yjkwov.webp",
       alt: "Background Image for Slider Hero",
-      loading: "lazy",
       width: 200,
       height: 200,
     },
