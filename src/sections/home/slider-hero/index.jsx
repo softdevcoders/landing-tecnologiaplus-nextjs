@@ -1,9 +1,6 @@
-'use client';
-
 import { landingHeros } from "@/config/landing-heros";
 import SliderHeroClient from "./slider-hero-client";
 import styles from "./slider-hero.module.scss";
-import Image from "next/image";
 
 export default function SliderHero() {
   const { background, backgroundMobilePortada, ...restLandings } = landingHeros

@@ -55,7 +55,7 @@ export const landingHeros = {
           description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
         },
         image: {
-          src: "1_zjvtlb.png",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_475/1_zjvtlb",
           alt: "Localizadores para clientes",
           width: 350,
           height: 550
@@ -67,7 +67,7 @@ export const landingHeros = {
           description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
         },
         image: {
-          src: "1_zjvtlb.png",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,q_80,f_webp,w_730/1_zjvtlb",
           alt: "Localizadores para clientes",
           width: 1500,
           height: 701
@@ -103,7 +103,7 @@ export const landingHeros = {
           description: "Silencioso y de largo alcance",
         },
         image: {
-          src: "3_j5shgh.png",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_475/3_j5shgh",
           alt: "Llamador de meseros",
           width: 350,
           height: 553
@@ -115,7 +115,7 @@ export const landingHeros = {
           description: "Silencioso y de largo alcance.",
         },
         image: {
-          src: "3_j5shgh.png",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_900/3_j5shgh",
           alt: "Llamador de meseros",
           width: 900,
           height: 500
@@ -158,7 +158,7 @@ export const landingHeros = {
           subTitle: "Conecta al paciente con </b> el personal de salud.",
         },
         image: {
-          src: "website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/pp65ihdvnzxx3arig8yj",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/pp65ihdvnzxx3arig8yj",
           alt: "Llamado de enfermería",
           width: 350,
           height: 553
@@ -170,7 +170,7 @@ export const landingHeros = {
           subTitle: "Facilita el contacto entre el paciente y <br> personal de salud.",
         },
         image: {
-          src: "website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
           alt: "Llamado de enfermería",
           width: 900,
           height: 741
@@ -223,10 +223,10 @@ export const landingHeros = {
           description: "Digitaliza tu sala de espera fácilmente.",
         },
         image: {
-          src: "website-v2/images/landings/sistema-de-turnos-turnomaster/landings/trdh4recmp6uwwa8ux71",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/sistema-de-turnos-turnomaster/landings/trdh4recmp6uwwa8ux71",
           alt: "Sistema de turnos de espera",
-          width: 350,
-          height: 521
+          width: 600,
+          height: 600
         }
       },
       desktop: {
@@ -236,7 +236,7 @@ export const landingHeros = {
           description: "Lleva tu sala de espera al siguiente nivel",
         },
         image: {
-          src: "13_adjkab.png",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_1200,q_90,f_webp/13_adjkab",
           alt: "Sistema de turnos de espera",
           width: 1200,
           height: 1009
@@ -278,7 +278,7 @@ export const landingHeros = {
           description: "Orden y agilidad </br> en cada turno.",
         },
         image: {
-          src: "website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,q_80,f_webp/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
           alt: "Turnero digital",
           width: 350,
           height: 541
@@ -291,7 +291,7 @@ export const landingHeros = {
           description: "Agilidad y orden en cada turno.",
         },
         image: {
-          src: "website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
           alt: "Turnero digital",
           width: 900,
           height: 500
@@ -333,7 +333,7 @@ export const landingHeros = {
           description: "Orden y comodidad </br> en cada turno.",
         },
         image: {
-          src: "website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp,q_80/website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
           alt: "Dispensador de tickets",
           width: 350,
           height: 557
@@ -350,7 +350,7 @@ export const landingHeros = {
           description: "Orden y comodidad en cada turno.",
         },
         image: {
-          src: "website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
           alt: "Dispensador de tickets",
           width: 900,
           height: 818
@@ -402,10 +402,10 @@ export const landingHeros = {
           description: "agilizar la atención de turnos.",
         },
         image: {
-          src: "website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
           alt: "Rollos de turnos",
-          width: 350,
-          height: 447
+          width: 600,
+          height: 600
         },
         button: {
           href: routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url,
@@ -418,7 +418,7 @@ export const landingHeros = {
           description: "para agilizar la atención de turnos.",
         },
         image: {
-          src: "website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
           alt: "Rollos de turnos",
           width: 900,
           height: 610
@@ -464,7 +464,7 @@ export const landingHeros = {
           description: "Perfectos para tickets,</br> facturas y más.",
         },
         image: {
-          src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp,q_80/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
           alt: "Rollos termicos",
           width: 350,
           height: 361
@@ -480,7 +480,7 @@ export const landingHeros = {
           subTitle: "Perfectos para tickets, facturas y más.</br>¡No busques más!",
         },
         image: {
-          src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
           alt: "Rollos termicos",
           width: 900,
           height: 649
@@ -525,7 +525,7 @@ export const landingHeros = {
           subTitle: "para crecer con la </br> voz de tus clientes.",
         },
         image: {
-          src: "website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/zmdy9nvzeoetrit2w95n",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/zmdy9nvzeoetrit2w95n",
           alt: "Calificador de servicio",
           width: 350,
           height: 692
@@ -538,7 +538,7 @@ export const landingHeros = {
           description: "para crecer con la voz de tus clientes.",
         },
         image: {
-          src: "website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/aih7y6glfth4vthhkytk",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/aih7y6glfth4vthhkytk",
           alt: "Calificador de servicio",
           width: 900,
           height: 968
@@ -582,7 +582,7 @@ export const landingHeros = {
           subTitle: "Detecta puntos débiles </br> y mejora tu negocio.",
         },
         image: {
-          src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
           alt: "Encuesta virtual",
           width: 350,
           height: 603
@@ -594,7 +594,7 @@ export const landingHeros = {
           subTitle: "y como mejorar tu negocio.",
         },
         image: {
-          src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
           alt: "Encuesta virtual",
           width: 900,
           height: 905

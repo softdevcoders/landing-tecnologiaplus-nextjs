@@ -13,7 +13,7 @@ export const LANDING_IMAGES = {
   // Sistema de Turnos TurnoMaster
   sistemasDeTurnosTurnomaster: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_1200/13_adjkab.png",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_1200,q_90,f_webp/13_adjkab",
       width: 1200,
       height: 1009,
       alt: "Sistema de turnos de espera"
@@ -23,7 +23,7 @@ export const LANDING_IMAGES = {
   // Llamadores de Meseros
   llamadoresDeMeseros: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900/3_j5shgh.png",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_900/3_j5shgh",
       width: 900,
       height: 500,
       alt: "Llamador de meseros"
@@ -33,7 +33,7 @@ export const LANDING_IMAGES = {
   // Dispensador de Tickets
   dispensadorDeTickets: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
       width: 900,
       height: 818,
       alt: "Dispensador de tickets"
@@ -43,7 +43,7 @@ export const LANDING_IMAGES = {
   // Llamado de Enfermería CuidaMaster
   llamadoDeEnfermeriaCuidamaster: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
       width: 900,
       height: 741,
       alt: "Llamado de enfermería"
@@ -53,7 +53,7 @@ export const LANDING_IMAGES = {
   // Turnero TurnoExpress
   turneroTurnoexpress: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
       width: 900,
       height: 500,
       alt: "Turnero digital"
@@ -63,7 +63,7 @@ export const LANDING_IMAGES = {
   // Calificador de Servicio OpinaMaster
   calificadorDeServicioAlClienteOpinamaster: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/aih7y6glfth4vthhkytk",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/aih7y6glfth4vthhkytk",
       width: 900,
       height: 968,
       alt: "Calificador de servicio"
@@ -73,7 +73,7 @@ export const LANDING_IMAGES = {
   // Encuesta Virtual OpinaMaster
   encuestaVirtual: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
       width: 900,
       height: 905,
       alt: "Encuesta virtual"
@@ -83,7 +83,7 @@ export const LANDING_IMAGES = {
   // Rollos de Papel Térmico
   rollosDePapelTermico: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
       width: 900,
       height: 649,
       alt: "Rollos termicos"
@@ -93,7 +93,7 @@ export const LANDING_IMAGES = {
   // Rollos de Fichas para Turnos
   rollosDeFichosParaTurnos: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
       width: 900,
       height: 610,
       alt: "Rollos de turnos"

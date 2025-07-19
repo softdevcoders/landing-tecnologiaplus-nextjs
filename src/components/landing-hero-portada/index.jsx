@@ -48,12 +48,10 @@ export const LandingHeroPortadaContentImageImg = ({ image, className = "" }) => 
   return (
     <Image
       className={`${styles.content__image__img} ${className}`}
-      {...image} 
-      src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${image.width}/${image.src}`}
       loading="eager"
       fetchPriority="high"
-      priority
       unoptimized={true}
+      {...image} 
     />
   )
 }
