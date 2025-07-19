@@ -8,53 +8,96 @@ export const LANDING_IMAGES = {
   // Localizadores para Restaurantes
   localizadoresParaRestaurantes: {
     root: "/v1752768456/1200-x-630_p3v7aj", // 1200x630
-    // 'localizadores-rec-v3': "/v1752768456/1200-x-630_p3v7aj",
-    // 'localizadores-cir-c2': "/v1752768456/1200-x-630_p3v7aj"
   },
 
   // Sistema de Turnos TurnoMaster
   sistemasDeTurnosTurnomaster: {
-    // root: "/v1752768456/1200-x-630_p3v7aj.jpeg" // 1200x630
+    root: {
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_1200,q_90,f_webp/13_adjkab",
+      width: 1200,
+      height: 1009,
+      alt: "Sistema de turnos de espera"
+    }
   },
 
   // Llamadores de Meseros
   llamadoresDeMeseros: {
-    // root: "/v1752768456/1200-x-630_p3v7aj.jpeg" // 1200x630
+    root: {
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_900/3_j5shgh",
+      width: 900,
+      height: 500,
+      alt: "Llamador de meseros"
+    }
   },  
 
   // Dispensador de Tickets
   dispensadorDeTickets: {
-    // root: "/v1752768456/1200-x-630_p3v7aj.jpeg" // 1200x630
+    root: {
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
+      width: 900,
+      height: 818,
+      alt: "Dispensador de tickets"
+    }
   },
 
   // Llamado de Enfermería CuidaMaster
   llamadoDeEnfermeriaCuidamaster: {
-    // root: "/v1752768456/1200-x-630_p3v7aj.jpeg" // 1200x630
+    root: {
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
+      width: 900,
+      height: 741,
+      alt: "Llamado de enfermería"
+    }
   },
 
   // Turnero TurnoExpress
   turneroTurnoexpress: {
-    // root: "/v1752768456/1200-x-630_p3v7aj.jpeg" // 1200x630
+    root: {
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
+      width: 900,
+      height: 500,
+      alt: "Turnero digital"
+    }
   },
 
   // Calificador de Servicio OpinaMaster
   calificadorDeServicioAlClienteOpinamaster: {
-    // root: "/v1752768456/1200-x-630_p3v7aj.jpeg" // 1200x630
+    root: {
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/aih7y6glfth4vthhkytk",
+      width: 900,
+      height: 968,
+      alt: "Calificador de servicio"
+    }
   },
 
   // Encuesta Virtual OpinaMaster
-  encuestaVirtualOpinamaster: {
-    // root: "/v1752768456/1200-x-630_p3v7aj.jpeg" // 1200x630
+  encuestaVirtual: {
+    root: {
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
+      width: 900,
+      height: 905,
+      alt: "Encuesta virtual"
+    }
   },
 
   // Rollos de Papel Térmico
   rollosDePapelTermico: {
-    // root: "/v1752768456/1200-x-630_p3v7aj.jpeg" // 1200x630
+    root: {
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
+      width: 900,
+      height: 649,
+      alt: "Rollos termicos"
+    }
   },
 
   // Rollos de Fichas para Turnos
   rollosDeFichosParaTurnos: {
-    // root: "/v1752768456/1200-x-630_p3v7aj.jpeg" // 1200x630 
+    root: {
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
+      width: 900,
+      height: 610,
+      alt: "Rollos de turnos"
+    }
   }
 };
 

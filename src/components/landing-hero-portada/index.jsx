@@ -1,7 +1,6 @@
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import { landingHeros } from "@/config/landing-heros";
-import ResponsiveImage from "@/components/ui/responsive-image";
 import Image from "next/image";
 
 export const LandingHeroPortadaContainer = ({ className = "", children }) => {
@@ -10,18 +9,18 @@ export const LandingHeroPortadaContainer = ({ className = "", children }) => {
       <Image 
         {...landingHeros.background.images}
         className={`${styles.background} ${styles.background__desktop}`} 
-        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.background.images.width}/${landingHeros.background.images.src}`}
+        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.background.images.width},q_30,f_webp/${landingHeros.background.images.src}`}
         loading="eager"
         fetchPriority="high"
-        priority
+        unoptimized={true}
       />
       <Image 
         {...landingHeros.backgroundMobilePortada.images}
         className={`${styles.background} ${styles.background__mobile}`} 
-        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.backgroundMobilePortada.images.width}/${landingHeros.backgroundMobilePortada.images.src}`}
+        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.backgroundMobilePortada.images.width},q_80,f_webp/${landingHeros.backgroundMobilePortada.images.src}`}
         loading="eager"
         fetchPriority="high"
-        priority
+        unoptimized={true}
       />
       {children}
     </div>
@@ -48,12 +47,10 @@ export const LandingHeroPortadaContentImageImg = ({ image, className = "" }) => 
   return (
     <Image
       className={`${styles.content__image__img} ${className}`}
-      {...image} 
-      src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${image.width}/${image.src}`}
       loading="eager"
       fetchPriority="high"
-      priority
       unoptimized={true}
+      {...image} 
     />
   )
 }
@@ -125,16 +122,15 @@ export const LandingHeroPortadaContentTextLogoBrand = ({className = "", image}) 
 }
 
 export const LandingHeroPortadaContentDivider = ({className = ""}) => {
+  const baseUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`;
+
   return (
-    <ResponsiveImage 
-      className={`${styles.content__divider} ${className}`} 
-      image={{
-        src: "v1745196016/linea_2x-8_n80wv9_6a5e17-horizontal_giisl2.webp",
-        alt: "Turnero digital",
-        sizes: [
-          { imageWidth: 400, mediaQuery: "(min-width: 0px)" }, 
-        ],
-      }}
+    <Image
+      className={`${styles.content__divider} ${className}`}
+      src={`${baseUrl}/v1745196016/linea_2x-8_n80wv9_6a5e17-horizontal_giisl2.webp`}
+      alt="divisor"
+      width={400}
+      height={5}
     />
   ) 
 }

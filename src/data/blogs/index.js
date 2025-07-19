@@ -594,7 +594,7 @@ const llamadoresDeMeserosPosts = [
     "modified": "2025-06-09T15:52:28",
     // "slug": "timbre-inalambrico-para-restaurantes-como-revoluciona-el-servicio", => Slug antiguo, es el nombre de la carpeta en cloudinary
     "slug": "timbre-inalambrico-para-restaurantes-revoluciona-el-servicio",
-    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/timbre-inalambrico-para-restaurantes-como-revoluciona-el-servicio`,
+    "current_link": `${routes.blog.children.llamadoresDeMeseros.url}/timbre-inalambrico-para-restaurantes-revoluciona-el-servicio`,
     "previous_link": [
         "/timbre-inalambrico-para-restaurantes-revoluciona-el-servicio"
     ],

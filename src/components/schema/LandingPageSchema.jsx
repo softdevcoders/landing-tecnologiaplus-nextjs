@@ -95,7 +95,7 @@ function generateBreadcrumbs(landingCategory, productSlug = null) {
       "@type": "ListItem",
       "position": 1,
       "name": "Inicio",
-      "item": BASE_URL
+      "item": `${BASE_URL}/`
     }
   ];
 
@@ -106,7 +106,7 @@ function generateBreadcrumbs(landingCategory, productSlug = null) {
       "@type": "ListItem",
       "position": 2,
       "name": categoryRoute.label,
-      "item": `${BASE_URL}${categoryRoute.url}`
+      "item": `${BASE_URL}${categoryRoute.url}/`
     });
 
     // Si es un producto específico, añadir el breadcrumb del producto
@@ -115,7 +115,7 @@ function generateBreadcrumbs(landingCategory, productSlug = null) {
         "@type": "ListItem",
         "position": 3,
         "name": categoryRoute.children[productSlug].name,
-        "item": `${BASE_URL}${categoryRoute.children[productSlug].url}`
+        "item": `${BASE_URL}${categoryRoute.children[productSlug].url}/`
       });
     }
   }
@@ -164,7 +164,7 @@ function generateProductSchema({
     "manufacturer": {
       "@type": "Organization",
       "name": manufacturer,
-      "url": BASE_URL
+      "url": `${BASE_URL}/`
     },
     "category": category,
     "image": optimizedImages,
@@ -176,7 +176,7 @@ function generateProductSchema({
       "seller": {
         "@type": "Organization",
         "name": "Tecnología Plus",
-        "url": BASE_URL
+        "url": `${BASE_URL}/`
       }
     }
   };
@@ -189,19 +189,33 @@ function generateWebPageSchema({
   name,
   description,
   url,
-  primaryImageUrl,
+  primaryImage,
   keywords = []
 }) {
-  const optimizedImage = primaryImageUrl ? 
-    generateOptimizedImageVariants(primaryImageUrl, name) : null;
+  let imageData = null;
 
-  const imageData = optimizedImage ? {
-    "@type": "ImageObject",
-    "url": optimizedImage.openGraph.url,
-    "width": optimizedImage.openGraph.width,
-    "height": optimizedImage.openGraph.height,
-    "caption": name,
-  } : undefined;
+  // Si la imagen es un objeto, usar los datos proporcionados
+  if(typeof primaryImage === 'object' && primaryImage !== null) {
+    imageData = {
+      "@type": "ImageObject",
+      "url": primaryImage.url,
+      "width": primaryImage.width,
+      "height": primaryImage.height,
+      "caption": primaryImage.alt,
+    }
+  }
+
+  // Si la imagen es una URL, generar las variantes optimizadas
+  if(typeof primaryImage === 'string' && primaryImage !== null) {
+    const optimizedImage = generateOptimizedImageVariants(primaryImage, name);
+    imageData = {
+      "@type": "ImageObject",
+      "url": optimizedImage.openGraph.url,
+      "width": optimizedImage.openGraph.width,
+      "height": optimizedImage.openGraph.height,
+      "caption": name,
+    }
+  }
 
   return {
     "@context": "https://schema.org",
@@ -213,12 +227,12 @@ function generateWebPageSchema({
     "author": {
       "@type": "Organization",
       "name": "Tecnología Plus",
-      "url": BASE_URL
+      "url": `${BASE_URL}/`
     },
     "publisher": {
       "@type": "Organization",
       "name": "Tecnología Plus",
-      "url": BASE_URL,
+      "url": `${BASE_URL}/`,
       "logo": {
         "@type": "ImageObject",
         "url": "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747675231/website-v2/logos/so7xgqia3ntpj1hqlpsk.png",
@@ -271,7 +285,7 @@ export default function LandingPageSchema({
     name: pageTitle,
     description: pageDescription,
     url: pageUrl,
-    primaryImageUrl: primaryImage,
+    primaryImage,
     isProductPage: !!productData,
     keywords
   }));

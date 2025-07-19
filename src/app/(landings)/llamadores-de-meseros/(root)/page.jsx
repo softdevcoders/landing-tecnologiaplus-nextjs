@@ -8,6 +8,7 @@ import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/lan
 import LlamadorMeserosVideosSection from "@/sections/llamadores-de-meseros/landing/components/LlamadorMeserosVideosSection/LlamadorMeserosVideosSection";
 import LlamadorMeserosVerMasSection from "@/sections/llamadores-de-meseros/landing/components/LlamadorMeserosVerMasSection/LlamadorMeserosVerMasSection";
 import StepsSectionLlamadorMeseros from "@/sections/llamadores-de-meseros/landing/components/StepsSection/StepsSectionLlamadorMeseros";
+import LandingPageSchema from "@/components/schema/LandingPageSchema";
 
 export async function generateMetadata() {
   const { 'llamadores-de-meseros': { root: metadata } } = getMetadata('landings');
@@ -15,8 +16,20 @@ export async function generateMetadata() {
 }
 
 export default function LlamadorMeserosLanding() {
+  const { 'llamadores-de-meseros': { root: metadata } } = getMetadata('landings');
+
   return (
     <>
+      {/* Schema.org optimizado para SEO usando datos centralizados */}
+      <LandingPageSchema
+        pageTitle={metadata.title.absolute}
+        pageDescription={metadata.description}
+        pageUrl={metadata.alternates.canonical}
+        keywords={Array.isArray(metadata.keywords) ? metadata.keywords : [metadata.keywords]}
+        landingCategory="llamadoresDeMeseros"
+        primaryImage={metadata.seoImages?.primary}
+        productImages={metadata.seoImages?.gallery || []}
+      />
       <LlamadorMeserosHeroSection />
       <LlamadorMeserosClientsSection />
       <LlamadorMeserosProductsSection />
