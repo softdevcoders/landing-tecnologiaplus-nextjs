@@ -85,13 +85,13 @@ const ArticleSchema = ({ post, baseUrl }) => {
           "@type": "ListItem",
           "position": 3,
           "name": categoryInfo.name,
-          "item": `${baseUrl}${categoryInfo.url}`
+          "item": `${baseUrl}${categoryInfo.url}/`
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": post.metadata?.title,
-          "item": `${baseUrl}${post.current_link}`
+          "item": `${baseUrl}${post.current_link}/`
         }
       ]
     }
