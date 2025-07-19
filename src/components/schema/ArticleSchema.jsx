@@ -39,7 +39,7 @@ const ArticleSchema = ({ post, baseUrl }) => {
     "author": {
       "@type": "Organization",
       "name": "Tecnología Plus",
-      "url": baseUrl,
+      "url": `${baseUrl}/`,
       "logo": {
         "@type": "ImageObject",
         "url": LOGO_METADATA,
@@ -50,7 +50,7 @@ const ArticleSchema = ({ post, baseUrl }) => {
     "publisher": {
       "@type": "Organization",
       "name": "Tecnología Plus",
-      "url": baseUrl,
+      "url": `${baseUrl}/`,
       "logo": {
         "@type": "ImageObject",
         "url": LOGO_METADATA,
@@ -60,9 +60,9 @@ const ArticleSchema = ({ post, baseUrl }) => {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `${baseUrl}${post.current_link}`
+      "@id": `${baseUrl}${post.current_link}/`
     },
-    "url": `${baseUrl}${post.current_link}`,
+    "url": `${baseUrl}${post.current_link}/`,
     "articleSection": categoryInfo.name,
     "keywords": post.metadata?.keywords || [post.title.rendered],
     "inLanguage": "es-ES",
@@ -73,13 +73,13 @@ const ArticleSchema = ({ post, baseUrl }) => {
           "@type": "ListItem",
           "position": 1,
           "name": "Inicio",
-          "item": baseUrl
+          "item": `${baseUrl}/`
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": `${baseUrl}/blog`
+          "item": `${baseUrl}/blog/`
         },
         {
           "@type": "ListItem",

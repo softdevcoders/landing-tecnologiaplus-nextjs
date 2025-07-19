@@ -95,7 +95,7 @@ function generateBreadcrumbs(landingCategory, productSlug = null) {
       "@type": "ListItem",
       "position": 1,
       "name": "Inicio",
-      "item": BASE_URL
+      "item": `${BASE_URL}/`
     }
   ];
 
@@ -164,7 +164,7 @@ function generateProductSchema({
     "manufacturer": {
       "@type": "Organization",
       "name": manufacturer,
-      "url": BASE_URL
+      "url": `${BASE_URL}/`
     },
     "category": category,
     "image": optimizedImages,
@@ -176,7 +176,7 @@ function generateProductSchema({
       "seller": {
         "@type": "Organization",
         "name": "Tecnología Plus",
-        "url": BASE_URL
+        "url": `${BASE_URL}/`
       }
     }
   };
@@ -227,12 +227,12 @@ function generateWebPageSchema({
     "author": {
       "@type": "Organization",
       "name": "Tecnología Plus",
-      "url": BASE_URL
+      "url": `${BASE_URL}/`
     },
     "publisher": {
       "@type": "Organization",
       "name": "Tecnología Plus",
-      "url": BASE_URL,
+      "url": `${BASE_URL}/`,
       "logo": {
         "@type": "ImageObject",
         "url": "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747675231/website-v2/logos/so7xgqia3ntpj1hqlpsk.png",
