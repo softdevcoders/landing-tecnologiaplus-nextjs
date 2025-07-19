@@ -125,16 +125,15 @@ export const LandingHeroPortadaContentTextLogoBrand = ({className = "", image}) 
 }
 
 export const LandingHeroPortadaContentDivider = ({className = ""}) => {
+  const baseUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`;
+
   return (
-    <ResponsiveImage 
-      className={`${styles.content__divider} ${className}`} 
-      image={{
-        src: "v1745196016/linea_2x-8_n80wv9_6a5e17-horizontal_giisl2.webp",
-        alt: "Turnero digital",
-        sizes: [
-          { imageWidth: 400, mediaQuery: "(min-width: 0px)" }, 
-        ],
-      }}
+    <Image
+      className={`${styles.content__divider} ${className}`}
+      src={`${baseUrl}/v1745196016/linea_2x-8_n80wv9_6a5e17-horizontal_giisl2.webp`}
+      alt="divisor"
+      width={400}
+      height={5}
     />
   ) 
 }

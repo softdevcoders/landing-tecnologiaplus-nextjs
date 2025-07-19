@@ -65,6 +65,8 @@ const PostView = ({ post }) => {
                   <img
                     src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738944985/facebook_2x-8_sy9pch.webp"
                     alt="Compartir en Facebook"
+                    width={23}
+                    height={48}
                   />
                 </a>
               </li>
@@ -78,6 +80,8 @@ const PostView = ({ post }) => {
                   <img
                     src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738944987/wpp_2x-8_tsgorp.webp"
                     alt="Compartir en WhatsApp"
+                    width={48}
+                    height={49}
                   />
                 </a>
               </li>

@@ -1,6 +1,6 @@
 import stylesDefault from "@/components/landing-hero-portada/styles.module.scss";
 import style from "./styles.module.scss";
-import { LandingHeroPortadaContainer, LandingHeroPortadaContent, LandingHeroPortadaContentDivider, LandingHeroPortadaContentImage, LandingHeroPortadaContentImageImg, LandingHeroPortadaContentText, LandingHeroPortadaContentTextDescription, LandingHeroPortadaContentTextSubTitle, LandingHeroPortadaContentTextTitle } from "@/components/landing-hero-portada";
+import { LandingHeroPortadaContainer, LandingHeroPortadaContent, LandingHeroPortadaContentImage, LandingHeroPortadaContentImageImg, LandingHeroPortadaContentText, LandingHeroPortadaContentTextDescription, LandingHeroPortadaContentTextSubTitle, LandingHeroPortadaContentTextTitle } from "@/components/landing-hero-portada";
 import { landingHeros } from "@/config/landing-heros";
 
 function HeroSection() {
