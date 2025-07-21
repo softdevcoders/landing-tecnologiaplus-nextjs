@@ -109,7 +109,8 @@ export default function robots() {
       },
       {
         userAgent: 'SemrushBot',
-        disallow: ['/', '*'],
+        allow: ['/'],
+        disallow: ['/api/', '/_next/data/*', '/_vercel/', '/.env', '/.git/', '/node_modules/', '/_error', '/404', '/500', '/test-migration/', '/manifest.json', '/favicon.ico']
       }
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
