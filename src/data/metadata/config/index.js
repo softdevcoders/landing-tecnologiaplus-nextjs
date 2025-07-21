@@ -80,6 +80,13 @@ export function generateLandingMetadata(config) {
     alternates: {
       canonical: url,
     },
+    // Metaetiqueta específica para imágenes en resultados de Google
+    other: {
+      image: mainImage.url,
+      'image:width': mainImage.width,
+      'image:height': mainImage.height,
+      'image:alt': mainImage.alt,
+    },
     openGraph: {
       title: {
         absolute: title,

@@ -47,7 +47,7 @@ const PostView = ({ post }) => {
           />
           <div className={style.blogPostView__contentHtlmFooter}>
             <p  className={style.blogPostView__contentHtmlFooterText}><Link href={routes.contact.url} className={style.blogPostView__contentHtmlFooterLink}>Contáctanos hoy mismo</Link> y descubre cómo podemos llevar tu servicio al siguiente nivel!</p>
-            <a href={whatsappLink} target="_blank" className={style.blogPostView__contentHtmlFooterButton}>Cotizar</a>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={style.blogPostView__contentHtmlFooterButton}>Cotizar</a>
           </div>
         </div>
 
@@ -61,6 +61,7 @@ const PostView = ({ post }) => {
                   className={`${style.blogPostView__sharingLink} ${style.facebook}`} 
                   title="Compartir en Facebook"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img
                     src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738944985/facebook_2x-8_sy9pch.webp"
@@ -76,6 +77,7 @@ const PostView = ({ post }) => {
                   className={style.blogPostView__sharingLink} 
                   title="Compartir en WhatsApp"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img
                     src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738944987/wpp_2x-8_tsgorp.webp"
