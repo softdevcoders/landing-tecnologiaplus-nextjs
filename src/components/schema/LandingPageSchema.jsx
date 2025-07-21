@@ -20,12 +20,12 @@ const ORGANIZATION_DATA = {
   "@type": "Organization",
   "name": "Tecnología Plus",
   "url": BASE_URL,
-  "logo": {
-    "@type": "ImageObject",
-    "url": LOGO_METADATA,
-    "width": 192,
-    "height": 192
-  },
+  // "logo": {
+  //   "@type": "ImageObject",
+  //   "url": LOGO_METADATA,
+  //   "width": 192,
+  //   "height": 192
+  // },
   "description": "Fabricantes expertos en sistemas de autoservicio, turnos y gestión de filas para restaurantes, hospitales y centros comerciales.",
   // "email": "ventas@tecnologiaplus.com",
   // "address": [
@@ -198,10 +198,8 @@ function generateWebPageSchema({
   if(typeof primaryImage === 'object' && primaryImage !== null) {
     imageData = {
       "@type": "ImageObject",
-      "url": primaryImage.url,
-      "width": primaryImage.width,
-      "height": primaryImage.height,
-      "caption": primaryImage.alt,
+      "url": primaryImage?.small?.url || null,
+      "caption": primaryImage?.small?.alt || null,
     }
   }
 
@@ -211,8 +209,6 @@ function generateWebPageSchema({
     imageData = {
       "@type": "ImageObject",
       "url": optimizedImage.openGraph.url,
-      "width": optimizedImage.openGraph.width,
-      "height": optimizedImage.openGraph.height,
       "caption": name,
     }
   }
@@ -233,12 +229,12 @@ function generateWebPageSchema({
       "@type": "Organization",
       "name": "Tecnología Plus",
       "url": `${BASE_URL}/`,
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747675231/website-v2/logos/so7xgqia3ntpj1hqlpsk.png",
-        "width": 192,
-        "height": 192
-      }
+      // "logo": {
+      //   "@type": "ImageObject",
+      //   "url": "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747675231/website-v2/logos/so7xgqia3ntpj1hqlpsk.png",
+      //   "width": 192,
+      //   "height": 192
+      // }
     },
     "datePublished": "2024-01-15T08:00:00+00:00",
     "dateModified": new Date().toISOString(),
