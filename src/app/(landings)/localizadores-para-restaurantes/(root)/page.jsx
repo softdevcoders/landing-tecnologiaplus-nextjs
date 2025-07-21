@@ -8,7 +8,6 @@ import LocalizadoresProductsSection from "@/sections/localizadores-para-restaura
 import LocalizadoresRelatedProducts from "@/sections/localizadores-para-restaurantes/landing/components/RelatedProducts/LocalizadoresRelatedProducts";
 import LocalizadoresSecondaryProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/SecondaryProductsSection/LocalizadoresSecondaryProductsSection";
 import LocalizadoresPreguntasFrecuentes from "@/sections/localizadores-para-restaurantes/landing/components/PreguntasFrecuentes";
-import HiddenImage from "@/components/hidden-image";
 
 // Los metadatos ya están optimizados en el archivo de metadata centralizado
 export async function generateMetadata() {
@@ -41,9 +40,6 @@ export default function LocalizadoresLanding() {
       <LocalizadoresIndustriesSection />
       <LocalizadoresRelatedProducts />
       <LocalizadoresPreguntasFrecuentes />
-      <HiddenImage 
-        {...metadata.openGraph.images[0]}
-      />
     </>
   );
 }
