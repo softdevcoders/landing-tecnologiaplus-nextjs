@@ -7,12 +7,12 @@
 export const LANDING_IMAGES = {
   // Home
   home: {
-    root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/home_qzq0y.jpg",
-      width: 92,
-      height: 92,
-      alt: "Imagen de Home Tecnología Plus"
-    }
+    // root: {
+    //   url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/home_qzq0y.jpg",
+    //   width: 92,
+    //   height: 92,
+    //   alt: "Imagen de Home Tecnología Plus"
+    // }
   },
   // Localizadores para Restaurantes
   localizadoresParaRestaurantes: {
@@ -58,7 +58,7 @@ export const LANDING_IMAGES = {
   // Llamado de Enfermería CuidaMaster
   llamadoDeEnfermeriaCuidamaster: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/llamado_de_enfermeri%CC%81a_cuidamaster_qye6ls.jpg",
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753125103/llamado_de_enfermeria_cuidamaster_vsxyqt.jpg",
       width: 92,
       height: 92,
       alt: "Imagen de Llamado de Enfermería"
