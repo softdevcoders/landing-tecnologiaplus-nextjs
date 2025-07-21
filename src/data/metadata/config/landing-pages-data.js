@@ -138,7 +138,7 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Rollos de Papel Térmico"
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120497/rollos_de_papel_termico_ddunbk.jpg",
+        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128272/rollos_de_papel_termico_dppsfx.jpg",
         alt: "Imagen de Rollos de Papel Térmico"
       }
     }
@@ -152,7 +152,7 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Rollos de Fichas para Turnos"
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128272/rollos_de_papel_termico_dppsfx.jpg",
+        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/rollos_de_fichos_para_turnos_ybfly0.jpg",
         alt: "Imagen de Rollos de Fichas para Turnos"
       }
     }
