@@ -5,98 +5,113 @@
 
 // Configuración de imágenes por categoría de landing page
 export const LANDING_IMAGES = {
+  // Home
+  home: {
+    // root: {
+    //   url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/home_qzq0y.jpg",
+    //   width: 92,
+    //   height: 92,
+    //   alt: "Imagen de Home Tecnología Plus"
+    // }
+  },
   // Localizadores para Restaurantes
   localizadoresParaRestaurantes: {
-    root: "/v1752768456/1200-x-630_p3v7aj", // 1200x630
+    // root: "/v1752768456/1200-x-630_p3v7aj", // 1200x630
+    root: {
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/localizadores_para_restaurantes_matzlw.jpg",
+      width: 92,
+      height: 92,
+      alt: "Imagen de Localizadores para restaurantes"
+    }
   },
 
   // Sistema de Turnos TurnoMaster
   sistemasDeTurnosTurnomaster: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_1200,q_90,f_webp/13_adjkab",
-      width: 1200,
-      height: 1009,
-      alt: "Sistema de turnos de espera"
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120497/sistema_de_turnos_turnomaster_sqicli.jpg",
+      width: 92,
+      height: 92,
+      alt: "Imagen de Sistemas de Turnos TurnoMaster"
     }
   },
 
   // Llamadores de Meseros
   llamadoresDeMeseros: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_900/3_j5shgh",
-      width: 900,
-      height: 500,
-      alt: "Llamador de meseros"
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120497/llamadores_de_meseros_dbigcf.jpg",
+      width: 92,
+      height: 92,
+      alt: "Imagen de Llamadores de Meseros"
     }
   },  
 
   // Dispensador de Tickets
   dispensadorDeTickets: {
-    root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
-      width: 900,
-      height: 818,
-      alt: "Dispensador de tickets"
-    }
+    // root: {
+    //   url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
+    //   width: 900,
+    //   height: 818,
+    //   alt: "Dispensador de tickets"
+    // }
   },
 
   // Llamado de Enfermería CuidaMaster
   llamadoDeEnfermeriaCuidamaster: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
-      width: 900,
-      height: 741,
-      alt: "Llamado de enfermería"
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753125103/llamado_de_enfermeria_cuidamaster_vsxyqt.jpg",
+      width: 92,
+      height: 92,
+      alt: "Imagen de Llamado de Enfermería"
     }
   },
 
   // Turnero TurnoExpress
   turneroTurnoexpress: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
-      width: 900,
-      height: 500,
-      alt: "Turnero digital"
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/turnero_turnoexpress_hk28p5.jpg",
+      width: 92,
+      height: 92,
+      alt: "Imagen de Turnero TurnoExpress"
     }
   },
 
   // Calificador de Servicio OpinaMaster
   calificadorDeServicioAlClienteOpinamaster: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/aih7y6glfth4vthhkytk",
-      width: 900,
-      height: 968,
-      alt: "Calificador de servicio"
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/calificador_de_servicio_al_cliente_opinamaster_vz4o1c.jpg",
+      width: 92,
+      height: 92,
+      alt: "Imagen de Calificador de Servicio"
     }
   },
 
   // Encuesta Virtual OpinaMaster
   encuestaVirtual: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
-      width: 900,
-      height: 905,
-      alt: "Encuesta virtual"
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120497/encuesta_virtual_opinamaster_ynv7xn.jpg",
+      width: 92,
+      height: 92,
+      alt: "Imagen de Encuesta Virtual"
     }
   },
 
   // Rollos de Papel Térmico
   rollosDePapelTermico: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
-      width: 900,
-      height: 649,
-      alt: "Rollos termicos"
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120497/rollos_de_papel_termico_ddunbk.jpg",
+      width: 92,
+      height: 92,
+      alt: "Imagen de Rollos de Papel Térmico"
     }
   },
 
   // Rollos de Fichas para Turnos
   rollosDeFichosParaTurnos: {
     root: {
-      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
-      width: 900,
-      height: 610,
-      alt: "Rollos de turnos"
+      url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120498/rollos_de_fichos_para_turnos_mm3kem.jpg",
+      width: 92,
+      height: 92,
+      alt: "Imagen de Rollos de Fichas para Turnos"
     }
   }
 };
