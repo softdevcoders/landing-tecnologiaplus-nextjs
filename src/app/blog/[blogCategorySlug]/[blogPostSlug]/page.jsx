@@ -52,7 +52,6 @@ export async function generateMetadata({ params }) {
           width: 1200,
           height: 630,
           alt: imageAltText,
-          type: 'image/jpeg',
         }],
         locale: 'es-ES',
         type: 'article',
@@ -76,6 +75,12 @@ export async function generateMetadata({ params }) {
           type: 'image/jpeg',
         }],
       },
+      other: {
+        image: imageVariants?.openGraph,
+        'image:width': 1200,
+        'image:height': 630,
+        'image:alt': imageAltText,
+      },
       alternates: {
         canonical: `${baseUrl}${post.current_link}`,
       },
@@ -84,15 +89,6 @@ export async function generateMetadata({ params }) {
         icon: '/favicon.ico',
         shortcut: '/favicon.ico',
         apple: LOGO_METADATA,
-      },
-      // Metadatos adicionales para SEO
-      other: {
-        'article:author': 'Tecnología Plus',
-        'article:publisher': 'https://www.facebook.com/tecnologiapluscolombia',
-        'og:image:secure_url': imageVariants?.openGraph,
-        'og:image:width': '1200',
-        'og:image:height': '630',
-        'twitter:image:alt': imageAltText,
       },
     };
   } catch (error) {
