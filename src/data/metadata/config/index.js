@@ -109,9 +109,8 @@ export function generateLandingMetadata(config) {
       type: COMPANY_INFO.type,
       images: {
         ...mainImage,
-        url: image ? mainImage.url.replace('w_1200,h_630', 'w_1200,h_628') : mainImage.url,
       },
-      card: "summary_large_image",
+      card: "summary",
     },
   };
 
