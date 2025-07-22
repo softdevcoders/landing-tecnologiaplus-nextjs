@@ -24,7 +24,7 @@ const TinesPreguntasButton = ({ styles }) => {
         style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}
       >
         <WhatsApp className={styles.icon__wpp} />
-        <h3>¿Tienes preguntas?</h3>
+        <span>¿Tienes preguntas?</span>
       </a>
     </>
   );

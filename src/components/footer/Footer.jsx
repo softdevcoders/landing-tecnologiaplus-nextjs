@@ -15,7 +15,7 @@ const Footer = () => {
       <div className={styles.footer__top}>
         {/* Redes Sociales */}
         <div className={styles.footer__social}>
-          <h3>Síguenos</h3>
+          <h2>Síguenos</h2>
           <ul>
             <li>
               <a
@@ -66,7 +66,7 @@ const Footer = () => {
 
         {/* Contacto */}
         <div className={styles.footer__contact}>
-          <h3>Contacto</h3>
+          <h2>Contacto</h2>
           <ul>
             <li>
               <a href="mailto:ventas@tecnologiaplus.com" id={GOOGLE_TAG_EVENTS.EMAIL_FOOTER.id}>
@@ -91,7 +91,7 @@ const Footer = () => {
 
         {/* Ubicación */}
         <div className={styles.footer__location}>
-          <h3>Estamos en</h3>
+          <h2>Estamos en</h2>
           <div className={styles.footer__location_countries}>
             <div className={styles.footer__location_country}>
               <div className={styles.footer__location_country_flag}>

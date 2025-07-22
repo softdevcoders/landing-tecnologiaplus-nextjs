@@ -5,15 +5,17 @@ import style from "./card-home.module.scss"
 import { cleanText } from "@/lib/clean-text"
 import { formatDate } from "@/lib/format-date"
 import Image from "next/image"
+import { truncateAltText } from "@/lib/truncate-alt-text"
 
 const CardHome = ({ post }) => {
+  const optimizedAltText = truncateAltText(post?.metadata?.title);
   return (
     <article className={style.blogCard}>
       <Link href={post.current_link}> 
         <div className={style.blogCard__image} >
           <Image  
             src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${post.images[0]}`}
-            alt={post.title.rendered}
+            alt={optimizedAltText}
             width={435}
             height={235}
             className={style.blogCard__image__img}

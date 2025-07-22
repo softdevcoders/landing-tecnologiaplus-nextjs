@@ -5,25 +5,26 @@ import { htmlReader } from "@/lib/html-reader";
 import CarRelated from "@/sections/blog/components/card-related";
 import Link from "next/link";
 import { routes } from "@/config/routes";
-import Image from "next/image";
-import ArticleSchema from "@/components/schema/ArticleSchema";
-import { generateImageVariants, generateImageAltText, generateImageSizes } from "@/lib/optimizedImageServer";
+// import ArticleSchema from "@/components/schema/ArticleSchema";
+import { generateImageVariants } from "@/lib/optimizedImageServer";
+import { truncateAltText } from "@/lib/truncate-alt-text";
 
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
   const message = `Hola, te comparto este artículo: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}/`;
   const whatsappLink = `https://wa.me/573164682034?text=Hola, vengo del artículo "${post.title.rendered}" y quiero más información.`;
 
+  const optimizedAltText = truncateAltText(post?.metadata?.title);
   // Generar variantes de imagen optimizadas
   const imageVariants = generateImageVariants(post.images[0]);
 
   return (
     <>
       {/* Schema.org structured data */}
-      <ArticleSchema 
+      {/* <ArticleSchema 
         post={post} 
         baseUrl={process.env.NEXT_PUBLIC_BASE_URL} 
-      />
+      /> */}
       
       <main className={style.blogPostView__container}>
       <article itemScope itemType="https://schema.org/BlogPosting" className={style.blogPostView__article}>
@@ -34,11 +35,13 @@ const PostView = ({ post }) => {
         <div itemProp="articleBody" className={style.blogPostView__content}>
           <div className={style.blogPostView__imageContainer}>
             <img
-              src={`${imageVariants?.original}.jpeg`} 
-              alt={`Imagen de ${post?.metadata?.title}`}
+              src={imageVariants?.original} 
+              alt={optimizedAltText}
               className={style.blogPostView__image}
               loading="eager"
               itemProp="image"
+              width={720}
+              height={405}
             />
           </div>
           <div 
