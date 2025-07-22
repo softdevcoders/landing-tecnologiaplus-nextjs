@@ -23,9 +23,9 @@ const CarRelated = ({ post }) => {
       
       <div className={style.blogCard__content}>
         <Link href={post.current_link} title={`Leer más sobre ${post.title.rendered}`}>
-          <h2 className={style.blogCard__title}>
+          <h3 className={style.blogCard__title}>
               {cleanText(post.title.rendered)}
-          </h2>
+          </h3>
         </Link>
         <p className={style.blogCard__excerpt}>
           {cleanText(post.excerpt.rendered)}
