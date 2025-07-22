@@ -19,6 +19,15 @@ function HeroSection() {
 
         {/* Seccion de Texto */}
         <>
+
+          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__desktop} ${style.content__text__desktop__custom}`}>
+            <LandingHeroPortadaContentTextTitle>
+              {landingHeros.llamadoresDeMeseros.informationPortadas.desktop.text.title}
+            </LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentTextDescription>
+              {landingHeros.llamadoresDeMeseros.informationPortadas.desktop.text.description}
+            </LandingHeroPortadaContentTextDescription>
+          </LandingHeroPortadaContentText>
           <LandingHeroPortadaContentText className={`${stylesDefault.content__text__mobile}`}>
             <LandingHeroPortadaContentTextTitle isMobile={true} className={style.content__text__title__mobile__custom}>
               {landingHeros.llamadoresDeMeseros.informationPortadas.mobile.text.title}
@@ -28,14 +37,6 @@ function HeroSection() {
             </LandingHeroPortadaContentTextSubTitle>
             <LandingHeroPortadaContentTextDescription className={style.content__text__description__mobile__custom}>
               {landingHeros.llamadoresDeMeseros.informationPortadas.mobile.text.description}
-            </LandingHeroPortadaContentTextDescription>
-          </LandingHeroPortadaContentText>
-          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__desktop} ${style.content__text__desktop__custom}`}>
-            <LandingHeroPortadaContentTextTitle>
-              {landingHeros.llamadoresDeMeseros.informationPortadas.desktop.text.title}
-            </LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentTextDescription>
-              {landingHeros.llamadoresDeMeseros.informationPortadas.desktop.text.description}
             </LandingHeroPortadaContentTextDescription>
           </LandingHeroPortadaContentText>
         </>

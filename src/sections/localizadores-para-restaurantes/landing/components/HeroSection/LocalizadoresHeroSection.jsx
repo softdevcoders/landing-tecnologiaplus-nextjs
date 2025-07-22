@@ -19,20 +19,20 @@ function HeroSection() {
 
         {/* Seccion de Texto */}
         <>
-          <LandingHeroPortadaContentText className={stylesDefault.content__text__mobile}>
-            <LandingHeroPortadaContentTextTitle isMobile={true} className={style.content__text__title__mobile__custom}>
-              {landingHeros.localizadoresParaRestaurantes.informationPortadas.mobile.text.title}
-            </LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentTextDescription className={style.content__text__description__mobile__custom}>
-              {landingHeros.localizadoresParaRestaurantes.informationPortadas.mobile.text.description}
-            </LandingHeroPortadaContentTextDescription>
-          </LandingHeroPortadaContentText>
           <LandingHeroPortadaContentText className={`${stylesDefault.content__text__desktop} ${style.content__text__desktop__custom}`}>
             <LandingHeroPortadaContentTextTitle className={style.content__text__title__desktop__custom}>
               {landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.text.title}
             </LandingHeroPortadaContentTextTitle>
             <LandingHeroPortadaContentTextDescription className={style.content__text__description__desktop__custom}>
               {landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.text.description}
+            </LandingHeroPortadaContentTextDescription>
+          </LandingHeroPortadaContentText>
+          <LandingHeroPortadaContentText className={stylesDefault.content__text__mobile}>
+            <LandingHeroPortadaContentTextTitle isMobile={true} className={style.content__text__title__mobile__custom}>
+              {landingHeros.localizadoresParaRestaurantes.informationPortadas.mobile.text.title}
+            </LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentTextDescription className={style.content__text__description__mobile__custom}>
+              {landingHeros.localizadoresParaRestaurantes.informationPortadas.mobile.text.description}
             </LandingHeroPortadaContentTextDescription>
           </LandingHeroPortadaContentText>
         </>
