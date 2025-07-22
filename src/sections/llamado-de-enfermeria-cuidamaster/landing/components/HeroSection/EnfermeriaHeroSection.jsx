@@ -19,14 +19,6 @@ function HeroSection() {
 
         {/* Seccion de Texto */}
         <>
-          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__mobile} ${style.content__text__mobile__custom}`}>
-            <LandingHeroPortadaContentTextTitle isMobile={true} className={style.content__text__title__mobile__custom}>
-              {landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.mobile.text.title}
-            </LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentTextSubTitle className={style.content__text__subTitle__mobile__custom}>
-              {landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.mobile.text.subTitle}
-            </LandingHeroPortadaContentTextSubTitle>
-          </LandingHeroPortadaContentText>
           <LandingHeroPortadaContentText className={`${stylesDefault.content__text__desktop} ${style.content__text__desktop__custom}`}>
             <LandingHeroPortadaContentTextLogoBrand
               className={style.content__text__logoBrand__desktop__custom} 
@@ -37,6 +29,14 @@ function HeroSection() {
             </LandingHeroPortadaContentTextTitle>
             <LandingHeroPortadaContentTextSubTitle className={style.content__text__subTitle__desktop__custom}>
               {landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.desktop.text.subTitle}
+            </LandingHeroPortadaContentTextSubTitle>
+          </LandingHeroPortadaContentText>
+          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__mobile} ${style.content__text__mobile__custom}`}>
+            <LandingHeroPortadaContentTextTitle isMobile={true} className={style.content__text__title__mobile__custom}>
+              {landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.mobile.text.title}
+            </LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentTextSubTitle className={style.content__text__subTitle__mobile__custom}>
+              {landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.mobile.text.subTitle}
             </LandingHeroPortadaContentTextSubTitle>
           </LandingHeroPortadaContentText>
         </>

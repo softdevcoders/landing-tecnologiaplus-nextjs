@@ -19,6 +19,20 @@ function HeroSection() {
 
         {/* Seccion de Texto */}
         <>
+          
+          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__desktop} ${style.content__text__desktop__custom}`}>
+            <LandingHeroPortadaContentTextTitle className={style.content__text__title__desktop__custom}>
+              {landingHeros.rollosDePapelTermico.informationPortadas.desktop.text.title}
+            </LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentTextSubTitle className={style.content__text__subTitle__desktop__custom}>
+              {landingHeros.rollosDePapelTermico.informationPortadas.desktop.text.subTitle}
+            </LandingHeroPortadaContentTextSubTitle>
+            <LandingHeroPortadaContentTextButton
+              href={landingHeros.rollosDePapelTermico.informationPortadas.mobile.button.href}
+            >
+              {landingHeros.rollosDePapelTermico.informationPortadas.mobile.button.text}
+            </LandingHeroPortadaContentTextButton>
+          </LandingHeroPortadaContentText>
           <LandingHeroPortadaContentText className={`${stylesDefault.content__text__mobile} ${style.content__text__mobile__custom}`}>
             <LandingHeroPortadaContentTextTitle isMobile={true} className={style.content__text__title__mobile__custom}>
               {landingHeros.rollosDePapelTermico.informationPortadas.mobile.text.title}
@@ -30,19 +44,6 @@ function HeroSection() {
             <LandingHeroPortadaContentTextDescription className={style.content__text__description__mobile__custom}>
               {landingHeros.rollosDePapelTermico.informationPortadas.mobile.text.description}
             </LandingHeroPortadaContentTextDescription>
-            <LandingHeroPortadaContentTextButton
-              href={landingHeros.rollosDePapelTermico.informationPortadas.mobile.button.href}
-            >
-              {landingHeros.rollosDePapelTermico.informationPortadas.mobile.button.text}
-            </LandingHeroPortadaContentTextButton>
-          </LandingHeroPortadaContentText>
-          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__desktop} ${style.content__text__desktop__custom}`}>
-            <LandingHeroPortadaContentTextTitle className={style.content__text__title__desktop__custom}>
-              {landingHeros.rollosDePapelTermico.informationPortadas.desktop.text.title}
-            </LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentTextSubTitle className={style.content__text__subTitle__desktop__custom}>
-              {landingHeros.rollosDePapelTermico.informationPortadas.desktop.text.subTitle}
-            </LandingHeroPortadaContentTextSubTitle>
             <LandingHeroPortadaContentTextButton
               href={landingHeros.rollosDePapelTermico.informationPortadas.mobile.button.href}
             >

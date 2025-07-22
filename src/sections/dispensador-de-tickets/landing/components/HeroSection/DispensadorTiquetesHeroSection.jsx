@@ -19,23 +19,6 @@ function HeroSection() {
 
         {/* Seccion de Texto */}
         <>
-          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__mobile} ${style.content__text__mobile__custom}`}>
-            <LandingHeroPortadaContentTextTitle isMobile={true} className={style.content__text__title__mobile__custom}>
-              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.text.title}
-            </LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentTextSubTitle className={style.content__text__subTitle__mobile__custom}>
-              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.text.subTitle}
-            </LandingHeroPortadaContentTextSubTitle>
-            <LandingHeroPortadaContentDivider />
-            <LandingHeroPortadaContentTextDescription className={style.content__text__description__mobile__custom}>
-              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.text.description}
-            </LandingHeroPortadaContentTextDescription>
-            <LandingHeroPortadaContentTextButton
-              href={landingHeros.dispensadorDeTickets.informationPortadas.mobile.button.href}
-            >
-              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.button.text}
-            </LandingHeroPortadaContentTextButton>
-          </LandingHeroPortadaContentText>
           <LandingHeroPortadaContentText className={`${stylesDefault.content__text__desktop} ${style.content__text__desktop__custom}`}>
             <LandingHeroPortadaContentTextLogoBrand
               className={style.content__text__logoBrand__desktop__custom} 
@@ -54,6 +37,23 @@ function HeroSection() {
               href={landingHeros.dispensadorDeTickets.informationPortadas.desktop.button.href}
             >
               {landingHeros.dispensadorDeTickets.informationPortadas.desktop.button.text}
+            </LandingHeroPortadaContentTextButton>
+          </LandingHeroPortadaContentText>
+          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__mobile} ${style.content__text__mobile__custom}`}>
+            <LandingHeroPortadaContentTextTitle isMobile={true} className={style.content__text__title__mobile__custom}>
+              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.text.title}
+            </LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentTextSubTitle className={style.content__text__subTitle__mobile__custom}>
+              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.text.subTitle}
+            </LandingHeroPortadaContentTextSubTitle>
+            <LandingHeroPortadaContentDivider />
+            <LandingHeroPortadaContentTextDescription className={style.content__text__description__mobile__custom}>
+              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.text.description}
+            </LandingHeroPortadaContentTextDescription>
+            <LandingHeroPortadaContentTextButton
+              href={landingHeros.dispensadorDeTickets.informationPortadas.mobile.button.href}
+            >
+              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.button.text}
             </LandingHeroPortadaContentTextButton>
           </LandingHeroPortadaContentText>
         </>
