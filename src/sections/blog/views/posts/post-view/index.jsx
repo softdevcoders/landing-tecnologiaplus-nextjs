@@ -39,6 +39,8 @@ const PostView = ({ post }) => {
               className={style.blogPostView__image}
               loading="eager"
               itemProp="image"
+              width={720}
+              height={405}
             />
           </div>
           <div 
