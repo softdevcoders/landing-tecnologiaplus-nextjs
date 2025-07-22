@@ -62,7 +62,7 @@ $transition-base: all 0.3s ease;
       align-items: center;
       gap: 1.5rem;
 
-      h2 {
+      h1, h2 {
         font-size: 1.3rem;
         font-weight: 900;
         color: $primary-color;
@@ -283,7 +283,7 @@ $transition-base: all 0.3s ease;
           color: $success-color;
         }
 
-        h2 {
+        h1, h2 {
           color: $primary-color;
           font-size: 1.4rem;
           text-align: center;

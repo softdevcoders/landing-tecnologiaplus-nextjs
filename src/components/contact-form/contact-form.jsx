@@ -20,14 +20,10 @@ async function ContactForm({ noMarginTop = false, isContactPage = false }) {
             noMarginTop ? style.noMarginTop : ""
           }`}
         >
-          <ContactFormClient sendEmail={sendEmail} />
+          <ContactFormClient sendEmail={sendEmail} isContactPage={isContactPage} />
         </div>
         <div className={style.contact__texts}>
-          {isContactPage ? (
-            <h1 className={style.contact__title}>Te brindamos asesoría</h1>
-          ) : (
-            <h2 className={style.contact__title}>Te brindamos asesoría</h2>
-          )}
+          <p className={style.contact__title}>Te brindamos asesoría</p>
           <p>Para escoger la mejor opción según tu necesidad</p>
         </div>
       </div>

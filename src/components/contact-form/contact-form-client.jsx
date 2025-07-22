@@ -7,7 +7,7 @@ import Check from '@/components/ui/icons/check';
 import { usePathname } from 'next/navigation';
 import { GOOGLE_TAG_EVENTS } from '@/config/google-tag-events';
 
-const ContactFormClient = ({ sendEmail }) => {
+const ContactFormClient = ({ sendEmail, isContactPage = false }) => {
   const pathname = usePathname();
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm({
     defaultValues: {
@@ -47,7 +47,11 @@ const ContactFormClient = ({ sendEmail }) => {
       <div className={style.message__container}>
         <div className={style.message__head}>
           <Check size={50} className={style.check__icon} />
-          <h2>¡Mensaje enviado!</h2>
+          {isContactPage ? (
+            <h1>¡Mensaje enviado!</h1>
+          ) : (
+            <h2>¡Mensaje enviado!</h2>
+          )}
         </div>
         <p>
          Te vamos a contactar en máximo 2 horas hábiles, de lunes a viernes 8 a 5 pm.
@@ -58,7 +62,11 @@ const ContactFormClient = ({ sendEmail }) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <h2>Llámanos o escríbenos</h2>
+      {isContactPage ? (
+        <h1>Llámanos o escríbenos</h1>
+      ) : (
+        <h2>Llámanos o escríbenos</h2>
+      )}
       
       {submitError && (
         <div className={style.form_error}>{submitError}</div>
