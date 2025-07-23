@@ -30,13 +30,13 @@ export const landingHeros = {
       description: "Tiempo de espera sin temor a perder el turno.",
       images: [{
         src: "1_zjvtlb.png",
-        alt: "Localizadores para clientes",
+        alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus",
         className: styles.landing_hero__content__image_mobile,
         width: 350,
         fetchPriority: "high",
       },{
         src: "1_zjvtlb.png",
-        alt: "Localizadores para clientes",
+        alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
         fetchPriority: "high",
@@ -54,7 +54,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_475/1_zjvtlb",
-          alt: "Localizadores para clientes",
+          alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus",
           width: 350,
           height: 550
         }
@@ -66,7 +66,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,q_80,f_webp,w_730/1_zjvtlb",
-          alt: "Localizadores para clientes",
+          alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus",
           width: 1500,
           height: 701
         }
@@ -79,12 +79,12 @@ export const landingHeros = {
       description: "Un solo toque evita largas esperas.",
       images: [{
         src: "3_j5shgh.png",
-        alt: "Llamador de meseros",
+        alt: "Imagen de Llamadores de Meseros - TecnologíaPlus",
         className: styles.landing_hero__content__image_mobile,
         width: 350,
       },{
         src: "3_j5shgh.png",
-        alt: "Llamador de meseros",
+        alt: "Imagen de Llamadores de Meseros - TecnologíaPlus",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
@@ -102,7 +102,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_475/3_j5shgh",
-          alt: "Llamador de meseros",
+          alt: "Imagen de Llamador de Meseros - TecnologíaPlus",
           width: 350,
           height: 553
         }
@@ -114,7 +114,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_900/3_j5shgh",
-          alt: "Llamador de meseros",
+          alt: "Imagen de Llamador de Meseros - TecnologíaPlus",
           width: 900,
           height: 500
         }
@@ -129,12 +129,12 @@ export const landingHeros = {
       // templateName: templateNames.LLAMADO_DE_ENFERMERIA_CUIDAMASTER_HOME,
       images: [{
         src: "website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/pp65ihdvnzxx3arig8yj",
-        alt: "Llamado de enfermería",
+        alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus",
         className: styles.landing_hero__content__image_mobile,
         width: 350,
       },{
         src: "website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
-        alt: "Llamado de enfermería",
+        alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
@@ -157,7 +157,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/pp65ihdvnzxx3arig8yj",
-          alt: "Llamado de enfermería",
+          alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus",
           width: 350,
           height: 553
         }
@@ -169,7 +169,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
-          alt: "Llamado de enfermería",
+          alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus",
           width: 900,
           height: 741
         },  
@@ -194,12 +194,12 @@ export const landingHeros = {
       description: "Digitaliza tu sala de espera fácilmente.",
       images: [{
         src: "website-v2/images/landings/sistema-de-turnos-turnomaster/landings/trdh4recmp6uwwa8ux71",
-        alt: "Sistema de turnos de espera",
+        alt: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus",
         className: styles.landing_hero__content__image_mobile,
         width: 350,
       },{
         src: "13_adjkab.png",
-        alt: "Sistema de turnos de espera",
+        alt: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
@@ -222,7 +222,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/sistema-de-turnos-turnomaster/landings/trdh4recmp6uwwa8ux71",
-          alt: "Sistema de turnos de espera",
+          alt: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus",
           width: 600,
           height: 600
         }
@@ -235,7 +235,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_1200,q_90,f_webp/13_adjkab",
-          alt: "Sistema de turnos de espera",
+          alt: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus",
           width: 1200,
           height: 1009
         }
@@ -248,12 +248,12 @@ export const landingHeros = {
       description: "Orden y agilidad en cada turno.",
       images: [{
         src: "website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
-        alt: "Turnero digital",
+        alt: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus",
         className: styles.landing_hero__content__image_mobile,
         width: 350,
       },{
         src: "website-v2/images/landings/turnero-turnoexpress/landings/uv4swpdtp8jpg35dclbh",
-        alt: "Turnero digital",
+        alt: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
@@ -277,7 +277,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,q_80,f_webp/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
-          alt: "Turnero digital",
+          alt: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus",
           width: 350,
           height: 541
         }
@@ -290,7 +290,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
-          alt: "Turnero digital",
+          alt: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus",
           width: 900,
           height: 500
         }
@@ -303,12 +303,12 @@ export const landingHeros = {
       description: "Para llamar turnos en orden.",
       images: [{
         src: "website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
-        alt: "Dispensador de tickets",
+        alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus",
         className: styles.landing_hero__content__image_mobile,
         width: 350,
       },{
         src: "website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
-        alt: "Dispensador de tickets",
+        alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
@@ -332,7 +332,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp,q_80/website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
-          alt: "Dispensador de tickets",
+          alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus",
           width: 350,
           height: 557
         },
@@ -349,7 +349,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
-          alt: "Dispensador de tickets",
+          alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus",
           width: 900,
           height: 818
         },
@@ -372,12 +372,12 @@ export const landingHeros = {
       description: "Para dispensador tipo caracol.",
       images: [{
         src: "website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
-        alt: "Rollos de turnos",
+        alt: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus",
         className: styles.landing_hero__content__image_mobile,
         width: 350,
       },{
         src: "website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
-        alt: "Rollos de turnos",
+        alt: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
@@ -401,7 +401,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
-          alt: "Rollos de turnos",
+          alt: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus",
           width: 600,
           height: 600
         },
@@ -417,7 +417,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
-          alt: "Rollos de turnos",
+          alt: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus",
           width: 900,
           height: 610
         },
@@ -440,12 +440,12 @@ export const landingHeros = {
       description: "Para tickets, facturas y más.",
       images: [{
         src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
-        alt: "Rollos termicos",
+        alt: "Imagen de Rollos de Papel Térmico - TecnologíaPlus",
         className: styles.landing_hero__content__image_mobile,
         width: 350,
       },{
         src: "website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
-        alt: "Rollos termicos",
+        alt: "Imagen de Rollos de Papel Térmico - TecnologíaPlus",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
@@ -463,7 +463,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp,q_80/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
-          alt: "Rollos termicos",
+          alt: "Imagen de Rollos de Papel Térmico - TecnologíaPlus",
           width: 350,
           height: 361
         },
@@ -479,7 +479,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
-          alt: "Rollos termicos",
+          alt: "Imagen de Rollos de Papel Térmico - TecnologíaPlus",
           width: 900,
           height: 649
         },
@@ -496,12 +496,12 @@ export const landingHeros = {
       description: "Escucha a tus clientes.",
       images: [{
         src: "website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/zmdy9nvzeoetrit2w95n",
-        alt: "Calificador de servicio",
+        alt: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus",
         className: styles.landing_hero__content__image_mobile,  
         width: 350,
       },{
         src: "website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/epg4efgegtcqvxyfdsbe",
-        alt: "Calificador de servicio",
+        alt: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
@@ -524,7 +524,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/zmdy9nvzeoetrit2w95n",
-          alt: "Calificador de servicio",
+          alt: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus",
           width: 350,
           height: 692
         }
@@ -537,7 +537,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/aih7y6glfth4vthhkytk",
-          alt: "Calificador de servicio",
+          alt: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus",
           width: 900,
           height: 968
         },
@@ -553,12 +553,12 @@ export const landingHeros = {
       templateName: templateNames.ENCUESTA_VIRTUAL_OPINAMASTER_HOME,
       images: [{
         src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
-        alt: "Encuesta virtual",
+        alt: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus",
         className: styles.landing_hero__content__image_mobile,
         width: 350,
       },{
         src: "website-v2/images/landings/encuesta-virtual-opinamaster/landings/ubbkhbpquh0tquaz8xwl",
-        alt: "Encuesta virtual",
+        alt: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus",
         className: styles.landing_hero__content__image_desktop,
         width: 1500,
       }],
@@ -581,7 +581,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
-          alt: "Encuesta virtual",
+          alt: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus",
           width: 350,
           height: 603
         }
@@ -593,7 +593,7 @@ export const landingHeros = {
         },
         image: {
           src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
-          alt: "Encuesta virtual",
+          alt: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus",
           width: 900,
           height: 905
         },

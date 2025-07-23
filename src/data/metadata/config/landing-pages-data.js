@@ -10,11 +10,11 @@ export const LANDING_IMAGES = {
     // root: {
     //   small: {
     //     url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/home_qzq0y.jpg",
-    //     alt: "Imagen de Home Tecnología Plus"
+    //     alt: "Imagen de Home TecnologíaPlus"
     //   },
     //   large: {
     //     url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/home_qzq0y.jpg",
-    //     alt: "Imagen de Home Tecnología Plus"
+    //     alt: "Imagen de Home TecnologíaPlus"
     //   }
     // }
   },
@@ -23,11 +23,11 @@ export const LANDING_IMAGES = {
     root: {
       small: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/localizadores_para_restaurantes_matzlw.jpg",
-        alt: "Imagen de Localizadores para restaurantes"
+        alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus" 
       },
       large: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/localizadores_para_restaurantes_o9eifg.jpg",
-        alt: "Imagen de Localizadores para restaurantes"
+        alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus"
       }
     }
   },
@@ -37,11 +37,11 @@ export const LANDING_IMAGES = {
     root: {
       small: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120497/sistema_de_turnos_turnomaster_sqicli.jpg",
-        alt: "Imagen de Sistemas de Turnos TurnoMaster"
+        alt: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus"
       },
       large: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128274/sistema_de_turnos_turnomaster_lpacwf.jpg",
-        alt: "Imagen de Sistemas de Turnos TurnoMaster"
+        alt: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus"
       }
     }
   },
@@ -51,11 +51,11 @@ export const LANDING_IMAGES = {
     root: {
       small: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120497/llamadores_de_meseros_dbigcf.jpg",
-        alt: "Imagen de Llamadores de Meseros"
+        alt: "Imagen de Llamadores de Meseros - TecnologíaPlus"
       },
       large: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/llamadores_de_meseros_jmasyp.jpg",
-        alt: "Imagen de Llamadores de Meseros"
+        alt: "Imagen de Llamadores de Meseros - TecnologíaPlus"
       }
     }
   },  
@@ -65,11 +65,11 @@ export const LANDING_IMAGES = {
     // root: {
     //   small: {
     //     url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
-    //     alt: "Dispensador de tickets"
+    //     alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus"
     //   },
     //   large: {
     //     url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
-    //     alt: "Dispensador de tickets"
+    //     alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus"
     //   }
     // }
   },
@@ -79,11 +79,11 @@ export const LANDING_IMAGES = {
     root: {
       small: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753125103/llamado_de_enfermeria_cuidamaster_vsxyqt.jpg",
-        alt: "Imagen de Llamado de Enfermería"
+        alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus"
       },
       large: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/llamado_de_enfermeria_cuidamaster_xgzlp2.jpg",
-        alt: "Imagen de Llamado de Enfermería"
+        alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus"
       }
     }
   },
@@ -93,11 +93,11 @@ export const LANDING_IMAGES = {
     root: {
       small: {
           url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/turnero_turnoexpress_hk28p5.jpg",
-          alt: "Imagen de Turnero TurnoExpress"
+          alt: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus"
       },
       large: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/turnero_turno_express_gbw2oz.jpg",
-        alt: "Imagen de Turnero TurnoExpress"
+        alt: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus"
       }
     }
   },
@@ -107,11 +107,11 @@ export const LANDING_IMAGES = {
     root: {
       small: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/calificador_de_servicio_al_cliente_opinamaster_vz4o1c.jpg",
-        alt: "Imagen de Calificador de Servicio"
+        alt: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus"
       },
       large: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/calificador_de_servicio_al_cliente_opinamaster_kikzms.jpg",
-        alt: "Imagen de Calificador de Servicio"
+        alt: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus"
       }
     }
   },
@@ -121,11 +121,11 @@ export const LANDING_IMAGES = {
     root: {
       small: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120497/encuesta_virtual_opinamaster_ynv7xn.jpg",
-        alt: "Imagen de Encuesta Virtual"
+        alt: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus"
       },
       large: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/encuesta_virtual_opinamaster_pl5jft.jpg",
-        alt: "Imagen de Encuesta Virtual"
+        alt: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus"
       }
     }
   },
@@ -135,11 +135,11 @@ export const LANDING_IMAGES = {
     root: {
       small: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120497/rollos_de_papel_termico_ddunbk.jpg",
-        alt: "Imagen de Rollos de Papel Térmico"
+        alt: "Imagen de Rollos de Papel Térmico - TecnologíaPlus"
       },
       large: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128272/rollos_de_papel_termico_dppsfx.jpg",
-        alt: "Imagen de Rollos de Papel Térmico"
+        alt: "Imagen de Rollos de Papel Térmico - TecnologíaPlus"
       }
     }
   },
@@ -149,11 +149,11 @@ export const LANDING_IMAGES = {
     root: {
       small: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120498/rollos_de_fichos_para_turnos_mm3kem.jpg",
-        alt: "Imagen de Rollos de Fichas para Turnos"
+        alt: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus"
       },
       large: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/rollos_de_fichos_para_turnos_ybfly0.jpg",
-        alt: "Imagen de Rollos de Fichas para Turnos"
+        alt: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus"
       }
     }
   }
