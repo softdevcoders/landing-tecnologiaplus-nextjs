@@ -7,6 +7,7 @@ import { routes } from "@/config/routes";
  * Optimizado para SEO y rich snippets en Google
  */
 const ArticleSchema = ({ post, baseUrl }) => {
+  return null;
   if (!post) return null;
 
   // Generar datos de imagen estructurados usando metadatos de marketing

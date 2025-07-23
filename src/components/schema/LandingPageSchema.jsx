@@ -267,7 +267,7 @@ export default function LandingPageSchema({
   primaryImage = null,
   productImages = []
 }) {
-  
+  return null;
   const schemas = [];
 
   // 1. Schema de organización (siempre presente)

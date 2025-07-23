@@ -27,6 +27,16 @@
       }
     }
 
+    .products__container__item:nth-child(2) {
+      max-width: 18rem;
+    }
+
+    @media (min-width: 768px) {
+      .products__container__item:nth-child(2) {
+        max-width: 25rem;
+      }
+    }
+
     .products__container__item:first-child {
       align-self: flex-start;
     }
