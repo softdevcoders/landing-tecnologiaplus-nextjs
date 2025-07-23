@@ -5,7 +5,7 @@ import { htmlReader } from "@/lib/html-reader";
 import CarRelated from "@/sections/blog/components/card-related";
 import Link from "next/link";
 import { routes } from "@/config/routes";
-// import ArticleSchema from "@/components/schema/ArticleSchema";
+import ArticleSchema from "@/components/schema/ArticleSchema";
 import { generateImageVariants } from "@/lib/optimizedImageServer";
 import { truncateAltText } from "@/lib/truncate-alt-text";
 
@@ -15,16 +15,14 @@ const PostView = ({ post }) => {
   const whatsappLink = `https://wa.me/573164682034?text=Hola, vengo del artículo "${post.title.rendered}" y quiero más información.`;
 
   const optimizedAltText = truncateAltText(post?.metadata?.title);
-  // Generar variantes de imagen optimizadas
   const imageVariants = generateImageVariants(post.images[0]);
 
   return (
     <>
-      {/* Schema.org structured data */}
-      {/* <ArticleSchema 
+      <ArticleSchema 
         post={post} 
         baseUrl={process.env.NEXT_PUBLIC_BASE_URL} 
-      /> */}
+      />
       
       <main className={style.blogPostView__container}>
       <article itemScope itemType="https://schema.org/BlogPosting" className={style.blogPostView__article}>
