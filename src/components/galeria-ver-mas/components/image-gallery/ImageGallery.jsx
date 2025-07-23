@@ -35,35 +35,26 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
 
   // Efecto para reiniciar el estado cuando cambian los items
   useEffect(() => {
-    console.log('ImageGallery - displayMediaItems changed:', displayMediaItems);
     reInitCarousel();
     resetGalleryState(setIsZoomed, () => {});
   }, [displayMediaItems, reInitCarousel, resetGalleryState, setIsZoomed]);
 
   // Efecto para reiniciar el estado cuando cambia el color seleccionado
   useEffect(() => {
-    console.log('ImageGallery - selectedColor changed:', colorContext?.selectedColor);
     if (colorContext?.selectedColor) {
       resetGalleryState(setIsZoomed, () => {});
     }
   }, [colorContext?.selectedColor, resetGalleryState, setIsZoomed]);
 
-  console.log('ImageGallery - Rendering with:', { 
-    displayMediaItems: displayMediaItems.length, 
-    selectedColor: colorContext?.selectedColor 
-  });
-
   // Verificar si el item actual tiene fondo oscuro
   const hasDarkBackground = currentMediaItem?.darkBackground || false;
 
   if (!displayMediaItems || displayMediaItems.length === 0) {
-    console.log('ImageGallery - No media items to display');
     return null;
   }
 
   return (
     <div className={styles.gallery}>
-      {/* Solo renderizar thumbnails en tablet/desktop */}
       {!isMobile && (
         <Thumbnails
           mediaItems={displayMediaItems}
