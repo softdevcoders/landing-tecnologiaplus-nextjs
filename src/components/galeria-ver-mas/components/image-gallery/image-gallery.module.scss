@@ -17,6 +17,7 @@
   position: relative;
   flex: 1;
   width: 100%;
+  height: max(500px, 70vh);
 
   @media (min-width: 768px) {
     order: 2;
