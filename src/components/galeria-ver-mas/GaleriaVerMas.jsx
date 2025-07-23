@@ -4,7 +4,7 @@ import InfoContainer from "./components/info-container";
 import { ProductColorProvider } from "@/contexts/ProductColorContext";
 
 const GaleriaVerMas = ({ verMasInformacion }) => {
-  const { title, description, media, colors, defaultColor, hasColors = false } = verMasInformacion;
+  const { title, description, media, colors, defaultColor, hasColors = false, compatibleConProducts = [] } = verMasInformacion;
 
   if (!media && !hasColors) {
     return (
@@ -27,6 +27,7 @@ const GaleriaVerMas = ({ verMasInformacion }) => {
         title={title}
         description={description}
         hasColors={hasColors}
+        compatibleConProducts={compatibleConProducts}
       />
     </section>
   );
