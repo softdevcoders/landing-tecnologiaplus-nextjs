@@ -133,7 +133,8 @@ function ProductGalleryNew() {
         ]
       }
     ],
-    defaultColor: "negro"
+    defaultColor: "negro",
+    hasColors: true
   };
 
   return (

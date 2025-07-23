@@ -1,4 +1,4 @@
-import ProductGalleryNew from '@/sections/test-migration-nueva-galeria/ProductGalleryNew'; 
+import ProductGalleryNew from '@/sections/ver-mas-testing/sin-colores/ProductGalleryNew'; 
 
 const TestMigration = () => {
   return (

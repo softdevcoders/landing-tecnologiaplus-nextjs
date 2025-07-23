@@ -3,17 +3,8 @@ import GalleryWrapper from "./components/gallery-wrapper";
 import InfoContainer from "./components/info-container";
 import { ProductColorProvider } from "@/contexts/ProductColorContext";
 
-const defaultProps = {
-  title: "",
-  description: "",
-  media: [], // Para productos sin colores
-  colors: [], // Lista de colores, cada uno con su propia colección de media
-  defaultColor: null
-};
-
-const GaleriaVerMas = ({ verMasInformacion = defaultProps }) => {
-  const { title, description, media, colors, defaultColor } = verMasInformacion;
-  const hasColors = colors && colors.length > 0;
+const GaleriaVerMas = ({ verMasInformacion }) => {
+  const { title, description, media, colors, defaultColor, hasColors = false } = verMasInformacion;
 
   if (!media && !hasColors) {
     return (
@@ -35,6 +26,7 @@ const GaleriaVerMas = ({ verMasInformacion = defaultProps }) => {
       <InfoContainer 
         title={title}
         description={description}
+        hasColors={hasColors}
       />
     </section>
   );

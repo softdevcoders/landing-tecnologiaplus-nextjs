@@ -99,13 +99,12 @@
   height: 95px;
   flex: 0 0 95px; 
   background-color: transparent;
-  border-radius: 2px;
-  border: 2px solid transparent;
   overflow: hidden;
   cursor: pointer;
   padding: 0;
   opacity: 0.5;
   transition: all 0.2s;
+  border: 1px solid #C1C0C0; 
 
   &:hover {
     opacity: 0.7;
@@ -113,6 +112,6 @@
 
   &.selected {
     opacity: 1;
-    border-color: var(--primary-color, #2e2e2e);
+    border: 1px solid #1E1E1E;
   }
 } 

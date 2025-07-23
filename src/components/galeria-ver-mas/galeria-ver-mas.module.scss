@@ -6,6 +6,10 @@
   padding-inline: 1rem;
   gap: 1.5rem;
 
+  @media (min-width: 1024px) {
+    margin-bottom: 15rem;
+  }
+
   @media (min-width: 1300px) {
     flex-direction: row;
     padding-top: 2rem;

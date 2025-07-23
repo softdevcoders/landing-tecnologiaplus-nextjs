@@ -98,7 +98,7 @@ const ZoomableImage = ({
 
   // Estilos memoizados para la transformación del zoom
   const zoomStyles = useMemo(() => ({
-    objectFit: 'contain',
+    objectFit: 'cover',
     transform: isZoomed ? `scale(${1.75}) translate(-${zoomPosition.x}%, -${zoomPosition.y}%)` : 'none',
     transformOrigin: '0 0'
   }), [isZoomed, zoomPosition.x, zoomPosition.y]);
