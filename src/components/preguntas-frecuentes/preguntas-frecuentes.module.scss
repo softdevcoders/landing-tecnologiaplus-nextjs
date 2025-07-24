@@ -111,6 +111,10 @@
       @media (min-width: 768px) {
         font-size: 1.2rem;
       }
+
+      strong {
+        font-weight: 800;
+      }
     }
 
     span {
@@ -135,6 +139,21 @@
 
     @media (min-width: 768px) {
       font-size: 1rem;
+    }
+
+    a {
+      color: #954ebc;
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: 0.8rem;
+
+      @media (min-width: 768px) {
+        font-size: 1rem;
+      }
+
+      strong {
+        font-weight: 600;
+      }
     }
   }
 
