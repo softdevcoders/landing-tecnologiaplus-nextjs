@@ -1,4 +1,5 @@
 import GaleriaVerMas from '@/components/galeria-ver-mas/GaleriaVerMas';
+import { routes } from '@/config/routes';
 
 function ProductGalleryNew() {
   const productInfo = {
@@ -133,7 +134,37 @@ function ProductGalleryNew() {
         ]
       }
     ],
-    defaultColor: "negro"
+    defaultColor: "negro",
+    hasColors: true,
+    compatibleConProducts: [
+      {
+        name: 'Llamador de meseros E2-N negro vista principal',
+        description: 'Permite llamar al mesero y borrar el llamado al ser atendido.',
+        link: routes.landings.llamadoresDeMeseros.children.e2_b.url,
+        image: {
+          url: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_85/v1738694394/2_2x-8_1_yojp4b',
+          alt: 'Llamador de meseros E2-B blanco vista principal',
+        },
+      },
+      {
+        name: 'Llamador de meseros E2-N negro vista principal',
+        description: 'Resalta tu marca con un espacio adecuado para el botón',
+        link: routes.landings.llamadoresDeMeseros.children.habladorDeMesa.url,
+        image: {
+          url: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_85/v1738694393/3_2x-8_igijiu',
+          alt: 'Hablador de mesa junto al botón para llamar al mesero',
+        },
+      },
+      {
+        name: 'Llamador de meseros E2-N negro vista principal',
+        description: 'Para llamar empleados o meseros desde cocina',
+        link: routes.landings.llamadoresDeMeseros.children.controlNumerico.url,
+        image: {
+          url: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_85/v1738694391/4_2x-8_mioq3p',
+          alt: 'Control numérico para cocina',
+        },
+      },
+    ]
   };
 
   return (

@@ -2,18 +2,10 @@ import styles from "./galeria-ver-mas.module.scss";
 import GalleryWrapper from "./components/gallery-wrapper";
 import InfoContainer from "./components/info-container";
 import { ProductColorProvider } from "@/contexts/ProductColorContext";
+import BackButton from "../back-button";
 
-const defaultProps = {
-  title: "",
-  description: "",
-  media: [], // Para productos sin colores
-  colors: [], // Lista de colores, cada uno con su propia colección de media
-  defaultColor: null
-};
-
-const GaleriaVerMas = ({ verMasInformacion = defaultProps }) => {
-  const { title, description, media, colors, defaultColor } = verMasInformacion;
-  const hasColors = colors && colors.length > 0;
+const GaleriaVerMas = ({ verMasInformacion }) => {
+  const { title, description, media, colors, defaultColor, hasColors = false, compatibleConProducts = [] } = verMasInformacion;
 
   if (!media && !hasColors) {
     return (
@@ -25,17 +17,24 @@ const GaleriaVerMas = ({ verMasInformacion = defaultProps }) => {
 
   const content = (
     <section className={styles.container}>
-      <GalleryWrapper 
-        media={media}
-        colors={colors}
-        hasColors={hasColors}
-        productTitle={title}
-      />
+      <div className={styles.backButton__container}>
+        <BackButton />
+      </div>
+      <div className={styles.gallery__container}>
+        <GalleryWrapper 
+          media={media}
+          colors={colors}
+          hasColors={hasColors}
+          productTitle={title}
+        />
 
-      <InfoContainer 
-        title={title}
-        description={description}
-      />
+        <InfoContainer 
+          title={title}
+          description={description}
+          hasColors={hasColors}
+          compatibleConProducts={compatibleConProducts}
+        />
+      </div>
     </section>
   );
 

@@ -7,16 +7,16 @@
 export const LANDING_IMAGES = {
   // Home
   home: {
-    // root: {
-    //   small: {
-    //     url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/home_qzq0y.jpg",
-    //     alt: "Imagen de Home TecnologíaPlus"
-    //   },
-    //   large: {
-    //     url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753120496/home_qzq0y.jpg",
-    //     alt: "Imagen de Home TecnologíaPlus"
-    //   }
-    // }
+    root: {
+      small: {
+        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753292818/home_rsbmwy.jpg",
+        alt: "Imagen de Home TecnologíaPlus"
+      },
+      large: {
+        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753292804/home_kve9cx.jpg",
+        alt: "Imagen de Home TecnologíaPlus"
+      }
+    }
   },
   // Localizadores para Restaurantes
   localizadoresParaRestaurantes: {
@@ -62,16 +62,16 @@ export const LANDING_IMAGES = {
 
   // Dispensador de Tickets
   dispensadorDeTickets: {
-    // root: {
-    //   small: {
-    //     url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
-    //     alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus"
-    //   },
-    //   large: {
-    //     url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
-    //     alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus"
-    //   }
-    // }
+    root: {
+      small: {
+        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753292818/dispensador_de_tickets_uspfnh.jpg",
+        alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus"
+      },
+      large: {
+        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753292806/dispensador_ticketes_vr63as.jpg",
+        alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus"
+      }
+    }
   },
 
   // Llamado de Enfermería CuidaMaster
