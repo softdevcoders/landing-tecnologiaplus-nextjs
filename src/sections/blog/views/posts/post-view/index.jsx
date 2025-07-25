@@ -9,6 +9,7 @@ import ArticleSchema from "@/components/schema/ArticleSchema";
 import { generateImageVariants } from "@/lib/optimizedImageServer";
 import { truncateAltText } from "@/lib/truncate-alt-text";
 import PreguntasFrecuentesBlog from "@/sections/blog/components/preguntas-frecuentes";
+
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
   const message = `Hola, te comparto este artículo: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}/`;
