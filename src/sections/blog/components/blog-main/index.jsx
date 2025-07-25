@@ -4,9 +4,9 @@ import BlogContentSection from './blog-content-section';
 import { routes } from "@/config/routes";
 import Link from '@/components/ui/link';
 
-const BlogMain = ({ posts, pagination }) => {
+const BlogMain = ({ posts, pagination, shouldAddMarginBottom = true }) => {
   return (
-    <main className={style.blogMain__main}> 
+    <main className={`${style.blogMain__main} ${shouldAddMarginBottom ? style.blogMain__mainWithMarginBottom : ""}`}>
       <BlogHeroSection />
       {
         posts.length === 0 ? (
@@ -18,9 +18,8 @@ const BlogMain = ({ posts, pagination }) => {
             </Link>
           </div>
         ) : (
-          <BlogContentSection posts={posts} pagination={pagination} />
+          <BlogContentSection posts={posts} pagination={pagination} shouldAddMarginBottom={shouldAddMarginBottom} />
         )
-
       }
     </main>
   )

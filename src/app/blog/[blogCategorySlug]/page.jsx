@@ -2,6 +2,7 @@ import CategoryView from "@/sections/blog/views/categories/category-view";
 import { getCategories } from "@/request/server/categories/get-categories";
 import { notFound } from "next/navigation";
 import getMetadata from "@/request/server/metadata/get-metadata";
+import PreguntasFrecuentesBlog from "@/sections/blog/components/preguntas-frecuentes";
 
 export async function generateMetadata({ params }) {
   
@@ -25,7 +26,10 @@ const BlogCategoryPage = async ({ searchParams, params }) => {
   const category = Object.values(categories).find(category => category.slug === blogCategorySlug);
 
   return (
-    <CategoryView page={page || 1} category={category.category_key} />
+    <>
+      <CategoryView page={page || 1} category={category.category_key} />
+      <PreguntasFrecuentesBlog categoryKey={category.category_key} /> 
+    </>
   );
 }
 

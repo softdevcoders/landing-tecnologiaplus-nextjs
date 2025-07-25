@@ -2,7 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 6rem;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
+
+  &.blogMain__mainWithMarginBottom {
+    margin-bottom: 10rem;
+  }
   
   .blogMain__noPosts {
     display: flex;

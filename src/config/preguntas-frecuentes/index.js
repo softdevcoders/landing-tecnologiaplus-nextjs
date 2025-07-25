@@ -1,0 +1,2 @@
+export { preguntasFrecuentes as llamadoresDeMeserosPreguntasFrecuentes } from './llamadores-de-meseros';
+export { preguntasFrecuentes as localizadoresDeRestaurantesPreguntasFrecuentes } from './localizadores-de-restaurantes';
