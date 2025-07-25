@@ -3,7 +3,10 @@
   flex-direction: column;
   gap: 5rem;
   padding: 2rem;
-  margin-bottom: 6rem;
+
+  &.blogPostView__containerWithMarginBottom {
+    margin-bottom: 6rem;
+  }
 
   .blogPostView__article {
     .blogPostView__header {
@@ -279,7 +282,7 @@
 @media (min-width: 1500px) {
   .blogPostView__container {
     flex-direction: row;
-    padding: 3rem 5rem;
+    padding: 3rem 4rem;
 
     .blogPostView__related {
       position: sticky;
