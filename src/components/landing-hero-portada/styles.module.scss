@@ -15,7 +15,11 @@
     z-index: 0;
     
     &.background__mobile {
-      display: flex;
+      display: block;
+      background-image: url("https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_200,q_80,f_webp/v1745272277/Fondo_3x-8_yjkwov");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     &.background__desktop {
@@ -132,7 +136,11 @@
       }
 
       &.background__desktop {
-        display: flex;
+        display: block;
+        background-image: url("https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,q_30,w_900/website-v2/images/landings/backgrounds/nqz3myqzqgttlqfepepu");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
     .content { 
