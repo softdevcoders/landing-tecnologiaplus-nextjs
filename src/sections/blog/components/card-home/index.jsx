@@ -14,7 +14,7 @@ const CardHome = ({ post }) => {
       <Link href={post.current_link} className={style.blogCard__image__link}> 
         <div className={style.blogCard__image} >
           <Image  
-            src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_500/${post.images[0]}`} 
+            src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_800/${post.images[0]}`} 
             alt={optimizedAltText}
             width={435}
             height={235}
