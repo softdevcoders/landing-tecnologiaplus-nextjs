@@ -8,86 +8,103 @@ const products = [
   {
     title: "TurnoExpress",
     description: "Rapidez y agilidad para tus filas.",
-    imageSrc: "v1738350028/TurnoExpress_2x-8_ri7zqh_xjz8bw.webp",
-    altText: "imagen de TurnoExpress",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1738350028/TurnoExpress_2x-8_ri7zqh_xjz8bw",
+    altText: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus",
     link: routes.landings.turneroTurnoexpress.url,
   }, 
   {
     title: "TurnoMaster",
     description: "Digitaliza la gestión de turnos.",
-    imageSrc: "v1738349924/TurnoMaster_2x-8_1_t4wh3f_ooru74.webp",
-    altText: "imagen de TurnoMaster",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1738349924/TurnoMaster_2x-8_1_t4wh3f_ooru74",
+    altText: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus",
     link: routes.landings.sistemasDeTurnosTurnomaster.url,
   }, 
   {
     title: "Localizadores",
     description: "Lleva el autoservicio a otro nivel.",
-    imageSrc: "v1741708165/NUEVA_etp9mi.webp",
-    altText: "imagen de Localizadores",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1741708165/NUEVA_etp9mi",
+    altText: "Imagen de Localizadores para Restaurantes - TecnologíaPlus",
     link: routes.landings.localizadoresParaRestaurantes.url,
   },
   {
     title: "Llamadores de meseros",
     description: "El botón que eleva la calidad del servicio.",
-    imageSrc: "v1743107327/NUEVA_4x-8_1_wyooar.webp",
-    altText: "imagen de Llamadores de meseros",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1743107327/NUEVA_4x-8_1_wyooar",
+    altText: "Imagen de Llamadores de Meseros - TecnologíaPlus",
     link: routes.landings.llamadoresDeMeseros.url,
   }, 
   {
     title: "Llamado de enfermería",
     description: "Facilita la comunicación paciente - enfermera. ",
-    imageSrc: "v1738596111/cuidamaster_2x-8_dlawzx.webp",
-    altText: "imagen de Llamado de enfermería",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1738596111/cuidamaster_2x-8_dlawzx",
+    altText: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus",
     link: routes.landings.llamadoDeEnfermeriaCuidamaster.url,
   }, 
   {
     title: "Calificador de servicios",
     description: "Toma decisiones con la opinión de tus clientes",
-    imageSrc: "v1738607994/calificador_de_servicios_2x-8_pjnvol.webp",
-    altText: "imagen de Calificador de servicios",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1738607994/calificador_de_servicios_2x-8_pjnvol",
+    altText: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus",
     link: routes.landings.calificadorDeServicioAlClienteOpinamaster.url,
   }, 
   {
     title: "OpinaMaster",
     description: "Transforma opiniones en acciones estratégicas.",
-    imageSrc: "v1738685536/Opinamaster_2x-8_sg1wyy.webp",
-    altText: "imagen de OpinaMaster",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1738685536/Opinamaster_2x-8_sg1wyy",
+    altText: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus",
     link: routes.landings.encuestaVirtual.url,
   }, 
   {
     title: "Dispensador de tiquetes",
     description: "Complemento práctico para tomar el turno.",
-    imageSrc: "v1738349966/dispensador_de_tiquetes_2x-8_qusuqr_fuxs8k.webp",
-    altText: "imagen de Dispensador de tiquetes",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1738349966/dispensador_de_tiquetes_2x-8_qusuqr_fuxs8k",
+    altText: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus",
     link: routes.landings.dispensadorDeTickets.url,
   }, 
   {
     title: "Rollos de turnos",
     description: "Organiza y mejora el servicio.",
-    imageSrc: "v1745247230/Frame_1_35_vku1gs.webp",
-    altText: "imagen de Rollos de turnos",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1745247230/Frame_1_35_vku1gs",
+    altText: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus",
     link: routes.landings.rollosDeFichosParaTurnos.url,
   }, 
   {
     title: "Rollos térmicos",
     description: "Perfectos para tickets, facturas y más.",
-    imageSrc: "v1738349920/image-1_1_ljyxis_qdsmdq.webp",
-    altText: "imagen de Rollos térmicos",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1738349920/image-1_1_ljyxis_qdsmdq",
+    altText: "Imagen de Rollos de Papel Térmico - TecnologíaPlus",
     link: routes.landings.rollosDePapelTermico.url,
   },
   {
     title: "Desarrollo de software",
     description: "Ajustado a tus necesidades.",
-    imageSrc: "v1738945022/11_2x-8_lb72ht.webp",
-    altText: "imagen de Desarrollo de software",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1738945022/11_2x-8_lb72ht",
+    altText: "Imagen de Desarrollo de Software - TecnologíaPlus",
   }, 
   {
     title: "Soporte Técnico",
     description: "Maximiza la vida útil y el rendimiento de tu inversión.",
-    imageSrc: "v1738945024/12_2x-8_nnlbla.webp",
-    altText: "imagen de Soporte Técnico",
+    imageSrc: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_440/v1738945024/12_2x-8_nnlbla",
+    altText: "Imagen de Soporte Técnico - TecnologíaPlus",
   }
 ]
+
+function CardContent({ product }) {
+  return (
+    <>
+      <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
+      <p className={style.productsSection__cardDescription}>{product.description}</p>
+      <Image
+        src={product.imageSrc}
+        alt={product.altText}
+        width={436}
+        height={350}
+        className={style.productsSection__cardImage}
+        unoptimized={true}
+      />
+    </>
+  )
+} 
 
 function HomeProductsSection() {
   return (
@@ -97,47 +114,26 @@ function HomeProductsSection() {
         {products.map((product, index) => (
           <div key={index} className={style.productsSection__card}>
             {product.link ? (
-              <Link 
-                href={product.link}
-                className={style.productsSection__cardLink}
-                title={`Ver más sobre ${product.title}`}
-                aria-label={`Ver más información sobre ${product.title}: ${product.description}`}
-              >
-                <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
-                <p className={style.productsSection__cardDescription}>{product.description}</p>
-                <Image
-                  src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${product.imageSrc}`}
-                  alt={product.altText}
-                  width={463}
-                  height={350}
-                  sizes="(max-width: 768px) 316px, 600px"
-                  className={style.productsSection__cardImage}
-                  srcSet={`
-                    https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_316/${product.imageSrc} 316w,
-                    https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${product.imageSrc} 600w
-                  `}
-                />
-              </Link>
+              <>
+                <Link 
+                  href={product.link}
+                  className={style.productsSection__cardLink}
+                  title={`Ver más sobre ${product.title}`}
+                  aria-label={`Ver más información sobre ${product.title}: ${product.description}`}
+                >
+                  <CardContent product={product} />
+                </Link>
+                <div className={style.productsSection__cardBtn}>
+                  <LinkCard className={style.productsSection__cardBtn} href={product.link} size="big">
+                    Ver más
+                  </LinkCard>
+                </div>
+              </>
             ) : (
               <div className={style.productsSection__cardContent}>
-                <h3 className={style.productsSection__cardTitle}>{product.title}</h3>
-                <p className={style.productsSection__cardDescription}>{product.description}</p>
-                <Image
-                  src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600/${product.imageSrc}`}
-                  alt={product.altText}
-                  width={463}
-                  height={350}
-                  sizes="(max-width: 768px) 316px, 600px"
-                  className={style.productsSection__cardImage}
-                />
+                <CardContent product={product} />
               </div>
-            )}
-            {product.link && (
-              <div className={style.productsSection__cardBtn}>
-                <LinkCard className={style.productsSection__cardBtn} href={product.link} size="big">
-                  Ver más
-                </LinkCard>
-              </div>
+
             )}
           </div>
         ))}
