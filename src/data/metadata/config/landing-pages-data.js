@@ -54,7 +54,8 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Llamadores de Meseros - TecnologíaPlus"
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/llamadores_de_meseros_jmasyp.jpg",
+        // url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/llamadores_de_meseros_jmasyp.jpg",
+        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_900/3_j5shgh",
         alt: "Imagen de Llamadores de Meseros - TecnologíaPlus"
       }
     }
