@@ -3,6 +3,8 @@
  * Incluye imágenes, categorías y información de productos
  */
 
+import { landingHeros } from '@/config/landing-heros';
+
 // Configuración de imágenes por categoría de landing page
 export const LANDING_IMAGES = {
   // Home
@@ -26,8 +28,9 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus" 
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/localizadores_para_restaurantes_o9eifg.jpg",
-        alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus"
+        // url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/localizadores_para_restaurantes_o9eifg.jpg",
+        url: landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image.src,
+        alt: landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image.alt
       }
     }
   },
@@ -40,8 +43,9 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus"
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128274/sistema_de_turnos_turnomaster_lpacwf.jpg",
-        alt: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus"
+        // url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128274/sistema_de_turnos_turnomaster_lpacwf.jpg",
+        url: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.desktop.image.src,
+        alt: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.desktop.image.alt
       }
     }
   },
@@ -55,8 +59,8 @@ export const LANDING_IMAGES = {
       },
       large: {
         // url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/llamadores_de_meseros_jmasyp.jpg",
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_900/3_j5shgh",
-        alt: "Imagen de Llamadores de Meseros - TecnologíaPlus"
+        url: landingHeros.llamadoresDeMeseros.informationPortadas.desktop.image.src,
+        alt: landingHeros.llamadoresDeMeseros.informationPortadas.desktop.image.alt
       }
     }
   },  
@@ -69,8 +73,8 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus"
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753292806/dispensador_ticketes_vr63as.jpg",
-        alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus"
+        url: landingHeros.dispensadorDeTickets.informationPortadas.desktop.image.src,
+        alt: landingHeros.dispensadorDeTickets.informationPortadas.desktop.image.alt
       }
     }
   },
@@ -83,8 +87,8 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus"
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/llamado_de_enfermeria_cuidamaster_xgzlp2.jpg",
-        alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus"
+        url: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.desktop.image.src,
+        alt: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.desktop.image.alt
       }
     }
   },
@@ -97,8 +101,8 @@ export const LANDING_IMAGES = {
           alt: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus"
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/turnero_turno_express_gbw2oz.jpg",
-        alt: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus"
+        url: landingHeros.turneroTurnoexpress.informationPortadas.desktop.image.src,
+        alt: landingHeros.turneroTurnoexpress.informationPortadas.desktop.image.alt
       }
     }
   },
@@ -111,8 +115,8 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus"
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/calificador_de_servicio_al_cliente_opinamaster_kikzms.jpg",
-        alt: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus"
+        url: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.desktop.image.src,
+        alt: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.desktop.image.alt
       }
     }
   },
@@ -125,8 +129,8 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus"
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/encuesta_virtual_opinamaster_pl5jft.jpg",
-        alt: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus"
+        url: landingHeros.encuestaVirtual.informationPortadas.desktop.image.src,
+        alt: landingHeros.encuestaVirtual.informationPortadas.desktop.image.alt
       }
     }
   },
@@ -139,8 +143,8 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Rollos de Papel Térmico - TecnologíaPlus"
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128272/rollos_de_papel_termico_dppsfx.jpg",
-        alt: "Imagen de Rollos de Papel Térmico - TecnologíaPlus"
+        url: landingHeros.rollosDePapelTermico.informationPortadas.desktop.image.src,
+        alt: landingHeros.rollosDePapelTermico.informationPortadas.desktop.image.alt
       }
     }
   },
@@ -153,8 +157,8 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus"
       },
       large: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/rollos_de_fichos_para_turnos_ybfly0.jpg",
-        alt: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus"
+        url: landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.image.src,
+        alt: landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.image.alt
       }
     }
   }
