@@ -1,27 +1,12 @@
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import { landingHeros } from "@/config/landing-heros";
 import Image from "next/image";
 
 export const LandingHeroPortadaContainer = ({ className = "", children }) => {
   return (
     <div className={`${styles.container} ${className}`}>
-      <Image 
-        {...landingHeros.background.images}
-        className={`${styles.background} ${styles.background__desktop}`} 
-        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.background.images.width},q_30,f_webp/${landingHeros.background.images.src}`}
-        loading="eager"
-        fetchPriority="high"
-        unoptimized={true}
-      />
-      <Image 
-        {...landingHeros.backgroundMobilePortada.images}
-        className={`${styles.background} ${styles.background__mobile}`} 
-        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${landingHeros.backgroundMobilePortada.images.width},q_80,f_webp/${landingHeros.backgroundMobilePortada.images.src}`}
-        loading="eager"
-        fetchPriority="high"
-        unoptimized={true}
-      />
+      <div className={`${styles.background} ${styles.background__desktop}`}></div>
+      <div className={`${styles.background} ${styles.background__mobile}`}></div>
       {children}
     </div>
   );

@@ -6,9 +6,9 @@ import CarRelated from "@/sections/blog/components/card-related";
 import Link from "next/link";
 import { routes } from "@/config/routes";
 import ArticleSchema from "@/components/schema/ArticleSchema";
-import { generateImageVariants } from "@/lib/optimizedImageServer";
 import { truncateAltText } from "@/lib/truncate-alt-text";
 import PreguntasFrecuentesBlog from "@/sections/blog/components/preguntas-frecuentes";
+import Image from "next/image";
 
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
@@ -16,7 +16,6 @@ const PostView = ({ post }) => {
   const whatsappLink = `https://wa.me/573164682034?text=Hola, vengo del artículo "${post.title.rendered}" y quiero más información.`;
 
   const optimizedAltText = truncateAltText(post?.metadata?.title);
-  const imageVariants = generateImageVariants(post.images[0]);
 
   let shouldAddMarginBottom = true;
 
@@ -43,14 +42,15 @@ const PostView = ({ post }) => {
 
           <div itemProp="articleBody" className={style.blogPostView__content}>
             <div className={style.blogPostView__imageContainer}>
-              <img
-                src={imageVariants?.original} 
+              <Image
+                src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp/${post.images[0]}`} 
                 alt={optimizedAltText}
                 className={style.blogPostView__image}
                 loading="eager"
                 itemProp="image"
                 width={720}
                 height={405}
+                unoptimized={true}
               />
             </div>
             <div 
