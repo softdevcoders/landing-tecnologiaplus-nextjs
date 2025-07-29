@@ -30,24 +30,23 @@ const PostView = ({ post }) => {
 
   return (
     <>
-      <ArticleSchema 
+      {/* <ArticleSchema 
         post={post} 
         baseUrl={process.env.NEXT_PUBLIC_BASE_URL} 
-      />
+      /> */}
       <main className={`${style.blogPostView__container} ${shouldAddMarginBottom ? style.blogPostView__containerWithMarginBottom : ""}`}>
-        <article itemScope itemType="https://schema.org/BlogPosting" className={style.blogPostView__article}>
+        <article className={style.blogPostView__article}>
           <header className={style.blogPostView__header}>
-            <h1 itemProp="headline" className={style.blogPostView__title}>{post.title.rendered}</h1>
+            <h1 className={style.blogPostView__title}>{post.title.rendered}</h1>
           </header>
 
-          <div itemProp="articleBody" className={style.blogPostView__content}>
+          <div className={style.blogPostView__content}>  
             <div className={style.blogPostView__imageContainer}>
               <Image
                 src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp/${post.images[0]}`} 
                 alt={optimizedAltText}
                 className={style.blogPostView__image}
                 loading="eager"
-                itemProp="image"
                 width={720}
                 height={405}
                 unoptimized={true}
@@ -113,7 +112,7 @@ const PostView = ({ post }) => {
           <h2 id="related-title" className={style.blogPostView__relatedTitle}>Artículos similares</h2>
           <ul className={style.blogPostView__relatedList}>
             {posts.map((post) => (
-              <li key={post.id} itemProp="relatedLink" itemScope itemType="https://schema.org/BlogPosting" className={style.blogPostView__relatedItem}>
+              <li key={post.id} className={style.blogPostView__relatedItem}>
                 <CarRelated post={post} />
               </li>
             ))}

@@ -8,7 +8,6 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
-  trailingSlash: true,
   
   // Configuración del compilador SWC para optimizar para navegadores modernos
   compiler: {
@@ -17,9 +16,6 @@ const nextConfig = {
     // Minify CSS
     styledComponents: true,
   },
-  
-  // SWC está habilitado por defecto en Next.js 15
-  
   images: {
     domains: ['res.cloudinary.com', 'i.ytimg.com', '31.97.14.208', 'tecnologiaplus.com'],
     formats: ['image/avif', 'image/webp'],
@@ -128,37 +124,6 @@ const nextConfig = {
     // You can customize webpack configuration here
     return config;
   },
-  // async redirects() {
-  //   return [
-  //     // Redirigir HTTP a HTTPS de manera segura
-  //     {
-  //       source: '/:path*',
-  //       has: [
-  //         {
-  //           type: 'header',
-  //           key: 'x-forwarded-proto',
-  //           value: 'http'
-  //         }
-  //       ],
-  //       permanent: true,
-  //       destination: 'https://tecnologiaplus.com/:path*',
-  //       basePath: false
-  //     },
-  //     // Redirigir www a non-www de manera segura
-  //     {
-  //       source: '/:path*',
-  //       has: [
-  //         {
-  //           type: 'host',
-  //           value: 'www.tecnologiaplus.com'
-  //         }
-  //       ],
-  //       permanent: true,
-  //       destination: 'https://tecnologiaplus.com/:path*',
-  //       basePath: false
-  //     },
-  //   ];
-  // },
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
