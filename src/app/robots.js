@@ -25,7 +25,7 @@ export default function robots() {
         allow: [
           '/',
           '/blog/*',
-          '/contacto/',
+          '/contacto',
           '/localizadores-para-restaurantes/*',
           '/llamadores-de-meseros/*',
           '/llamado-de-enfermeria-cuidamaster/*',
@@ -59,7 +59,7 @@ export default function robots() {
         allow: [
           '/',
           '/blog/*',
-          '/contacto/',
+          '/contacto',
           '/localizadores-para-restaurantes/*',
           '/llamadores-de-meseros/*',
           '/llamado-de-enfermeria-cuidamaster/*',
