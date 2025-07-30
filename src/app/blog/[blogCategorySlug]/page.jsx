@@ -4,13 +4,31 @@ import { notFound } from "next/navigation";
 import getMetadata from "@/request/server/metadata/get-metadata";
 import PreguntasFrecuentesBlog from "@/sections/blog/components/preguntas-frecuentes";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params, searchParams }) {
   
   const { blogCategorySlug } = await params;
-
   const metadata = getMetadata('blog');
-
-  return metadata[blogCategorySlug];
+  const baseMetadata = metadata[blogCategorySlug];
+  
+  // Si hay parámetro page=, aplicar configuración de noindex
+  if (searchParams?.page) {
+    return {
+      ...baseMetadata,
+      robots: {
+        index: false,
+        follow: false,
+        googleBot: {
+          index: false,
+          follow: false,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      }
+    };
+  }
+  
+  return baseMetadata;
 }
 
 const BlogCategoryPage = async ({ searchParams, params }) => {
