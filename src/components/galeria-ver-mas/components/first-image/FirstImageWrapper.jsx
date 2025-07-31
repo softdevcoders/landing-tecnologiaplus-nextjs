@@ -21,23 +21,16 @@ const FirstImageWrapper = ({
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Debug: verificar el estado del cliente
-    console.log('FirstImageWrapper - isClient:', isClient);
-    
     // Pequeño delay para asegurar que las imágenes SSR ya se hayan cargado
     const timer = setTimeout(() => {
-      console.log('FirstImageWrapper - Cambiando a cliente');
       setIsClient(true);
     }, 100);
     
     return () => clearTimeout(timer);
-  }, [isClient]);
+  }, []);
 
   return (
     <div className={styles.wrapper}>
-      {/* Debug: mostrar qué componente se está renderizando */}
-      {console.log('FirstImageWrapper - Renderizando, isClient:', isClient)}
-      
       {/* Imagen SSR - siempre visible para SEO */}
       <div className={`${styles.firstImageContainer} ${isClient ? styles.hidden : ''}`}>
         <FirstImage

@@ -1,19 +1,15 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
 import styles from "./image-gallery.module.scss";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
 import Thumbnails from "../thumbnails";
-import ZoomableImage from "../zoomable-image";
-import FirstImageWrapper from "../first-image/FirstImageWrapper";
-import SEOImages from "../seo-images/SEOImages";
+import ZoomableImageDirect from "../zoomable-image-direct/ZoomableImageDirect";
 import VideoPlayer from "../video-player/VideoPlayer";
 import ImageIndicators from "../image-indicators";
 import ActionButtons from "../action-buttons/ActionButtons";
 import { useMainCarousel } from "../../hooks/useMainCarousel";
 import { useGalleryState } from "../../hooks/useGalleryState";
-import { generateImageAlt, getOptimizedSizes } from "../../utils/imageUtils";
 
 const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, productTitle = '' }) => {
   const {
@@ -64,12 +60,12 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
   return (
     <div className={styles.gallery}>
       {/* Componente SEO para indexación de todas las imágenes */}
-      <SEOImages
+      {/* <SEOImages
         mediaItems={displayMediaItems}
         productTitle={productTitle}
         selectedColor={colorContext?.getSelectedColor()?.name || ''}
         isMobile={isMobile}
-      />
+      /> */}
       
       {!isMobile && (
         <Thumbnails
@@ -96,26 +92,20 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
                     />
                   </div>
                 ) : (
-                  // Renderizar directamente con Next.js Image para eliminar loader
-                  <div className={styles.imageWrapper}>
-                    <div className={styles.imageContainer}>
-                      <Image
-                        src={item.src}
-                        alt={generateImageAlt(item, index, productTitle, colorContext?.getSelectedColor()?.name || '')}
-                        width={item.width}
-                        height={item.height}
-                        priority={index === 0}
-                        sizes={getOptimizedSizes('main', isMobile)}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover'
-                        }}
-                        unoptimized={false}
-                        quality={85}
-                      />
-                    </div>
-                  </div>
+                  // Renderizar con zoom y sin loader
+                  <ZoomableImageDirect
+                    image={item}
+                    isZoomed={isZoomed}
+                    zoomPosition={zoomPosition}
+                    onZoomChange={setIsZoomed}
+                    onZoomPositionChange={setZoomPosition}
+                    index={index}
+                    isSelected={index === selectedIndex}
+                    priority={index === 0}
+                    productTitle={productTitle}
+                    selectedColor={colorContext?.getSelectedColor()?.name || ''}
+                    isMobile={isMobile}
+                  />
                 )}
               </div>
             ))}
