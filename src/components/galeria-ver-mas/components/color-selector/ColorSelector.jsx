@@ -7,8 +7,8 @@ import styles from './color-selector.module.scss';
 
 const ColorSelector = ({
   title = "Elige el color",
-  showLabel = true,
-  size = "small", // small, medium, large
+  showLabel = false,
+  size = "medium", // small, medium, large
   productTitle = ''
 }) => {
   const colorContext = useProductColor();
@@ -28,7 +28,7 @@ const ColorSelector = ({
   return (
     <div className={styles.imageSelector}>
       {title && <span className={styles.title}>{title}</span>}
-      
+      <span className={styles.colorSelected_label}>{colors.find(color => color.id === selectedColor)?.name}</span>
       <div className={`${styles.imageList} ${styles[size]}`}>
         {colors.map((item) => {
           

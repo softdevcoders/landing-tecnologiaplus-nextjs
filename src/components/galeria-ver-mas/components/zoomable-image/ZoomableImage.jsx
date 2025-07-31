@@ -98,7 +98,7 @@ const ZoomableImage = ({
 
   // Estilos memoizados para la transformación del zoom
   const zoomStyles = useMemo(() => ({
-    objectFit: 'cover',
+    objectFit: 'contain',
     transform: isZoomed ? `scale(${1.75}) translate(-${zoomPosition.x}%, -${zoomPosition.y}%)` : 'none',
     transformOrigin: '0 0'
   }), [isZoomed, zoomPosition.x, zoomPosition.y]);
@@ -162,6 +162,7 @@ const ZoomableImage = ({
           style={zoomStyles}
           blurDataURL={generateBlurDataURL()}
           placeholder="blur"
+          unoptimized={true}
         />
       </div>
     </div>

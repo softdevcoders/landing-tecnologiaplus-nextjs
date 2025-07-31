@@ -1,10 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
   padding-inline: 1rem;
   margin-bottom: 15rem;
+  max-width: 112rem;
+  margin: auto;
 
   @media (min-width: 1024px) {
     margin-bottom: 15rem;
@@ -14,7 +16,7 @@
   .backButton__container {
     display: block;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #606060;
+    border-bottom: 1px solid #dfdfdf;
   }
 
   .gallery__container {
@@ -23,7 +25,9 @@
     gap: 1.5rem;
 
     @media (min-width: 1300px) {
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-column-gap: 2rem;
     }
   }
 }

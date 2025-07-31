@@ -1,9 +1,22 @@
+.imageSelector {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
 .title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 0;
-  padding-left: 0.3125rem;
+  font-size: .875rem;
+  line-height: 1.571;
+  font-weight: 700;
   color: #535353;
+}
+
+.colorSelected_label {
+  font-size: 0.8rem; 
+  line-height: 1.571;
+  font-weight: 400;
+  color: #535353;
+  margin-bottom: 1rem;
 }
 
 .imageList {
@@ -11,7 +24,6 @@
   flex-direction: row;
   gap: 0.6875rem;
   width: 100%;
-  padding: 0.3125rem;
 
   &.small {
     .imageButton {
@@ -37,21 +49,22 @@
 
 .imageButton {
   position: relative;
-  padding: 0;
+  padding: 0.25rem;
   overflow: hidden;
   cursor: pointer;
   background: none;
   transition: all 0.2s ease;
-  opacity: 0.6;
-  border: 1px solid #C1C0C0; 
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
 
   &:hover {
     opacity: 0.9;
+    border: 1px solid #1E1E1E;
   }
 
   &.selected {
     opacity: 1;
-    border: 1px solid #1E1E1E;
+    border: 2px solid #1E1E1E;
   }
 }
 
