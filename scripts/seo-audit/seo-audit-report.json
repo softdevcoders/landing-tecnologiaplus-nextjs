@@ -1,9 +1,9 @@
 {
   "summary": {
-    "totalUrls": 108,
-    "correctBehavior": 94,
+    "totalUrls": 157,
+    "correctBehavior": 157,
     "problems": 0,
-    "errors": 14
+    "errors": 0
   },
   "results": [
     {
@@ -607,9 +607,9 @@
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos",
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria/como-mejorar-servicio-enfermeria-en-geriatricos",
       "type": "blog-post",
-      "label": "Mejorar Servicio Enfermería",
+      "label": "Post 1 - como mejorar servicio enfermeria en geriatricos",
       "statusCode": 200,
       "expectedNoindex": false,
       "hasIssues": false,
@@ -622,9 +622,9 @@
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria",
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria/por-que-usar-sistema-llamado-de-enfermeria",
       "type": "blog-post",
-      "label": "Por Qué Usar Sistema Enfermería",
+      "label": "Post 2 - por que usar sistema llamado de enfermeria",
       "statusCode": 200,
       "expectedNoindex": false,
       "hasIssues": false,
@@ -637,9 +637,9 @@
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes",
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria/beneficios-invertir-en-sistemas-de-llamador-de-pacientes",
       "type": "blog-post",
-      "label": "Beneficios Llamador Pacientes",
+      "label": "Post 3 - beneficios invertir en sistemas de llamador de pacientes",
       "statusCode": 200,
       "expectedNoindex": false,
       "hasIssues": false,
@@ -652,219 +652,9 @@
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/ventajas-sistema-llamador-meseros",
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria/mejora-experiencia-paciente-con-timbre-llamado-enfermeria",
       "type": "blog-post",
-      "label": "Ventajas Llamador Meseros",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/como-funciona-sistema-llamador-meseros",
-      "type": "blog-post",
-      "label": "Cómo Funciona Llamador Meseros",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/beneficios-localizadores-restaurantes",
-      "type": "blog-post",
-      "label": "Beneficios Localizadores",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/como-funciona-localizador-restaurantes",
-      "type": "blog-post",
-      "label": "Cómo Funciona Localizador",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/turnero-turnoexpress/ventajas-sistema-turnero",
-      "type": "blog-post",
-      "label": "Ventajas Sistema Turnero",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/turnero-turnoexpress/como-funciona-turnero",
-      "type": "blog-post",
-      "label": "Cómo Funciona Turnero",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos-turnomaster/beneficios-sistema-turnos",
-      "type": "blog-post",
-      "label": "Beneficios Sistema Turnos",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos-turnomaster/como-funciona-sistema-turnos",
-      "type": "blog-post",
-      "label": "Cómo Funciona Sistema Turnos",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets/ventajas-dispensador-tickets",
-      "type": "blog-post",
-      "label": "Ventajas Dispensador",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets/como-funciona-dispensador-tickets",
-      "type": "blog-post",
-      "label": "Cómo Funciona Dispensador",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos/beneficios-rollos-fichos-turnos",
-      "type": "blog-post",
-      "label": "Beneficios Rollos Fichos",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos/como-funciona-rollos-fichos-turnos",
-      "type": "blog-post",
-      "label": "Cómo Funciona Rollos Fichos",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/rollos-de-papel-termico/ventajas-rollos-papel-termico",
-      "type": "blog-post",
-      "label": "Ventajas Rollos Térmicos",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/rollos-de-papel-termico/como-funciona-rollos-papel-termico",
-      "type": "blog-post",
-      "label": "Cómo Funciona Rollos Térmicos",
-      "statusCode": 404,
-      "expectedNoindex": false,
-      "hasIssues": false,
-      "issues": [],
-      "status": "ERROR",
-      "redirectUrl": null,
-      "foundHeaders": [
-        "Cache-Control: s-maxage=31536000"
-      ],
-      "foundMetas": []
-    },
-    {
-      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente-opinamaster/por-que-usar-calificadores-de-servicio",
-      "type": "blog-post",
-      "label": "Por Qué Usar Calificadores",
+      "label": "Post 4 - mejora experiencia paciente con timbre llamado enfermeria",
       "statusCode": 200,
       "expectedNoindex": false,
       "hasIssues": false,
@@ -877,9 +667,954 @@
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente-opinamaster/como-califica-servicio-preguntas-personalizadas",
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria/como-llamadores-enfermeria-transforman-hospitales",
       "type": "blog-post",
-      "label": "Cómo Califica Servicio",
+      "label": "Post 5 - como llamadores enfermeria transforman hospitales",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria/timbre-para-cama-hospital-atencion-rapida-paciente",
+      "type": "blog-post",
+      "label": "Post 6 - timbre para cama hospital atencion rapida paciente",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria/boton-para-llamar-enfermera-facilita-labor-personal",
+      "type": "blog-post",
+      "label": "Post 7 - boton para llamar enfermera facilita labor personal",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/como-reducir-tiempos-espera-restaurante",
+      "type": "blog-post",
+      "label": "Post 8 - como reducir tiempos espera restaurante",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/implementar-timbres-de-mesa-para-restaurante",
+      "type": "blog-post",
+      "label": "Post 9 - implementar timbres de mesa para restaurante",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/llamadores-mesa-tecnologia-revoluciona-atencion-al-cliente",
+      "type": "blog-post",
+      "label": "Post 10 - llamadores mesa tecnologia revoluciona atencion al cliente",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/reducir-tiempo-de-espera-mejora-satisfaccion-del-cliente",
+      "type": "blog-post",
+      "label": "Post 11 - reducir tiempo de espera mejora satisfaccion del cliente",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/aumenta-propinas-llamadores-de-meseros-en-restaurantes",
+      "type": "blog-post",
+      "label": "Post 12 - aumenta propinas llamadores de meseros en restaurantes",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/como-mejorar-administracion-restaurantes",
+      "type": "blog-post",
+      "label": "Post 13 - como mejorar administracion restaurantes",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/transforma-atencion-cliente-llamadores-de-meseros",
+      "type": "blog-post",
+      "label": "Post 14 - transforma atencion cliente llamadores de meseros",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/como-mejorar-servicio-restaurante",
+      "type": "blog-post",
+      "label": "Post 15 - como mejorar servicio restaurante",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/mejorar-atencion-gimnasios-llamador-entrenadores",
+      "type": "blog-post",
+      "label": "Post 16 - mejorar atencion gimnasios llamador entrenadores",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/llamadores-meseros-esenciales-elevar-nivel-restaurante",
+      "type": "blog-post",
+      "label": "Post 17 - llamadores meseros esenciales elevar nivel restaurante",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/llamador-de-meseros-realmente-necesario",
+      "type": "blog-post",
+      "label": "Post 18 - llamador de meseros realmente necesario",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/timbre-inalambrico-para-restaurantes-revoluciona-el-servicio",
+      "type": "blog-post",
+      "label": "Post 19 - timbre inalambrico para restaurantes revoluciona el servicio",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/autoservicio-restaurante-8-infaltables",
+      "type": "blog-post",
+      "label": "Post 20 - autoservicio restaurante 8 infaltables",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/avisadores-clientes-restaurante-autoservicio",
+      "type": "blog-post",
+      "label": "Post 21 - avisadores clientes restaurante autoservicio",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/escoger-localizador-ideal-restaurante-bogota",
+      "type": "blog-post",
+      "label": "Post 22 - escoger localizador ideal restaurante bogota",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/autoservicio-colombia-6-claves",
+      "type": "blog-post",
+      "label": "Post 23 - autoservicio colombia 6 claves",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/localizadores-clientes-autoservicio",
+      "type": "blog-post",
+      "label": "Post 24 - localizadores clientes autoservicio",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/como-elegir-localizadores-para-restaurantes",
+      "type": "blog-post",
+      "label": "Post 25 - como elegir localizadores para restaurantes",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/por-que-usar-localizadores-para-restaurantes",
+      "type": "blog-post",
+      "label": "Post 26 - por que usar localizadores para restaurantes",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/caos-zonas-de-comida",
+      "type": "blog-post",
+      "label": "Post 27 - caos zonas de comida",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/secreto-espera-agradable",
+      "type": "blog-post",
+      "label": "Post 28 - secreto espera agradable",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/avisador-de-pedidos-fidelizacion-clientes",
+      "type": "blog-post",
+      "label": "Post 29 - avisador de pedidos fidelizacion clientes",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/guia-localizadores-clientes-restaurantes-colombia",
+      "type": "blog-post",
+      "label": "Post 30 - guia localizadores clientes restaurantes colombia",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/localizadores-autoservicio-bogota-rec-v3",
+      "type": "blog-post",
+      "label": "Post 31 - localizadores autoservicio bogota rec v3",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/sistema-de-llamado-restaurante-porque-lo-necesitas",
+      "type": "blog-post",
+      "label": "Post 32 - sistema de llamado restaurante porque lo necesitas",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/localizadores-clientes-atencion-sin-mas-personal",
+      "type": "blog-post",
+      "label": "Post 33 - localizadores clientes atencion sin mas personal",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/como-funcionan-localizadores-restaurantes-pasos",
+      "type": "blog-post",
+      "label": "Post 34 - como funcionan localizadores restaurantes pasos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/localizadores-clientes-resistentes-golpes-caidas",
+      "type": "blog-post",
+      "label": "Post 35 - localizadores clientes resistentes golpes caidas",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/turnero/moderniza-tu-atencion-cliente-restaurantes-autoservicio",
+      "type": "blog-post",
+      "label": "Post 36 - moderniza tu atencion cliente restaurantes autoservicio",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/turnero/orden-en-salas-de-espera-digiturno",
+      "type": "blog-post",
+      "label": "Post 37 - orden en salas de espera digiturno",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/turnero/organizador-filas-digital-como-funciona",
+      "type": "blog-post",
+      "label": "Post 38 - organizador filas digital como funciona",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/turnero/turneros-digitales-casos-exito-colombia",
+      "type": "blog-post",
+      "label": "Post 39 - turneros digitales casos exito colombia",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/turnero/gestor-turnos-clientes-digitales-manuales",
+      "type": "blog-post",
+      "label": "Post 40 - gestor turnos clientes digitales manuales",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/turnero/como-mejorar-servicio-enfermeria-en-geriatricos",
+      "type": "blog-post",
+      "label": "Post 41 - como mejorar servicio enfermeria en geriatricos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos/reducir-tiempo-espera-gestion-turnos",
+      "type": "blog-post",
+      "label": "Post 42 - reducir tiempo espera gestion turnos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos/sistema-espera-inteligente-como-funciona",
+      "type": "blog-post",
+      "label": "Post 43 - sistema espera inteligente como funciona",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos/mejor-sistema-turnos-inalambrico-drogueria",
+      "type": "blog-post",
+      "label": "Post 44 - mejor sistema turnos inalambrico drogueria",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos/pantalla-de-turnos-plan-eficaz-equipo",
+      "type": "blog-post",
+      "label": "Post 45 - pantalla de turnos plan eficaz equipo",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos/mejor-software-turnos-negocio",
+      "type": "blog-post",
+      "label": "Post 46 - mejor software turnos negocio",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos/mejorar-gestion-filas",
+      "type": "blog-post",
+      "label": "Post 47 - mejorar gestion filas",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos/importancia-sistema-turnos-negocios-beneficios",
+      "type": "blog-post",
+      "label": "Post 48 - importancia sistema turnos negocios beneficios",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos/5-ventajas-software-turnos",
+      "type": "blog-post",
+      "label": "Post 49 - 5 ventajas software turnos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos/organizar-filas-turnero-digital",
+      "type": "blog-post",
+      "label": "Post 50 - organizar filas turnero digital",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos/integrar-sistema-espera-software-gestion-facturacion",
+      "type": "blog-post",
+      "label": "Post 51 - integrar sistema espera software gestion facturacion",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos/facilitar-transicion-software-gestion-turnos",
+      "type": "blog-post",
+      "label": "Post 52 - facilitar transicion software gestion turnos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/turnero/como-mejorar-servicio-enfermeria-en-geriatricos",
+      "type": "blog-post",
+      "label": "Post 53 - como mejorar servicio enfermeria en geriatricos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets/calcular-inversion-despachador-tickets-colombia",
+      "type": "blog-post",
+      "label": "Post 54 - calcular inversion despachador tickets colombia",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets/deberias-tener-dispensador-turnos-negocio",
+      "type": "blog-post",
+      "label": "Post 55 - deberias tener dispensador turnos negocio",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets/integrar-dispensador-turnos-sistema-gestion",
+      "type": "blog-post",
+      "label": "Post 56 - integrar dispensador turnos sistema gestion",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets/mejora-la-atencion-en-negocio-con-un-despachador-de-tickets",
+      "type": "blog-post",
+      "label": "Post 57 - mejora la atencion en negocio con un despachador de tickets",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos/todo-lo-que-necesitas-saber-numeros-guia-completa",
+      "type": "blog-post",
+      "label": "Post 58 - todo lo que necesitas saber numeros guia completa",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos/aspectos-clave-comprar-rollos-turnos",
+      "type": "blog-post",
+      "label": "Post 59 - aspectos clave comprar rollos turnos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos/rollos-para-turneros",
+      "type": "blog-post",
+      "label": "Post 60 - rollos para turneros",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-papel-termico/secreto-del-exito-en-gestion-de-turnos",
+      "type": "blog-post",
+      "label": "Post 61 - secreto del exito en gestion de turnos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-papel-termico/que-es-papel-transferencia-termica-como-usarlo",
+      "type": "blog-post",
+      "label": "Post 62 - que es papel transferencia termica como usarlo",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-papel-termico/como-ahorrar-dinero-medio-ambiente",
+      "type": "blog-post",
+      "label": "Post 63 - como ahorrar dinero medio ambiente",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente/evaluar-calidad-servicio-cliente",
+      "type": "blog-post",
+      "label": "Post 64 - evaluar calidad servicio cliente",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente/herramienta-retroalimentacion-cliente",
+      "type": "blog-post",
+      "label": "Post 65 - herramienta retroalimentacion cliente",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente/como-mejorar-la-satisfaccion-del-cliente",
+      "type": "blog-post",
+      "label": "Post 66 - como mejorar la satisfaccion del cliente",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente/por-que-usar-calificadores-de-servicio",
+      "type": "blog-post",
+      "label": "Post 67 - por que usar calificadores de servicio",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente/como-califica-servicio-preguntas-personalizadas",
+      "type": "blog-post",
+      "label": "Post 68 - como califica servicio preguntas personalizadas",
       "statusCode": 200,
       "expectedNoindex": false,
       "hasIssues": false,
