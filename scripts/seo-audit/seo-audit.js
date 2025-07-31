@@ -89,25 +89,25 @@ const routes = {
 };
 
 const blogPosts = [
-  { url: '/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos', type: 'blog-post', label: 'Mejorar Servicio Enfermería' },
-  { url: '/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria', type: 'blog-post', label: 'Por Qué Usar Sistema Enfermería' },
-  { url: '/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes', type: 'blog-post', label: 'Beneficios Llamador Pacientes' },
-  { url: '/llamadores-de-meseros/ventajas-sistema-llamador-meseros', type: 'blog-post', label: 'Ventajas Llamador Meseros' },
-  { url: '/llamadores-de-meseros/como-funciona-sistema-llamador-meseros', type: 'blog-post', label: 'Cómo Funciona Llamador Meseros' },
-  { url: '/localizadores-para-restaurantes/beneficios-localizadores-restaurantes', type: 'blog-post', label: 'Beneficios Localizadores' },
-  { url: '/localizadores-para-restaurantes/como-funciona-localizador-restaurantes', type: 'blog-post', label: 'Cómo Funciona Localizador' },
-  { url: '/turnero-turnoexpress/ventajas-sistema-turnero', type: 'blog-post', label: 'Ventajas Sistema Turnero' },
-  { url: '/turnero-turnoexpress/como-funciona-turnero', type: 'blog-post', label: 'Cómo Funciona Turnero' },
-  { url: '/sistema-de-turnos-turnomaster/beneficios-sistema-turnos', type: 'blog-post', label: 'Beneficios Sistema Turnos' },
-  { url: '/sistema-de-turnos-turnomaster/como-funciona-sistema-turnos', type: 'blog-post', label: 'Cómo Funciona Sistema Turnos' },
-  { url: '/dispensador-de-tickets/ventajas-dispensador-tickets', type: 'blog-post', label: 'Ventajas Dispensador' },
-  { url: '/dispensador-de-tickets/como-funciona-dispensador-tickets', type: 'blog-post', label: 'Cómo Funciona Dispensador' },
-  { url: '/rollos-de-fichos-para-turnos/beneficios-rollos-fichos-turnos', type: 'blog-post', label: 'Beneficios Rollos Fichos' },
-  { url: '/rollos-de-fichos-para-turnos/como-funciona-rollos-fichos-turnos', type: 'blog-post', label: 'Cómo Funciona Rollos Fichos' },
-  { url: '/rollos-de-papel-termico/ventajas-rollos-papel-termico', type: 'blog-post', label: 'Ventajas Rollos Térmicos' },
-  { url: '/rollos-de-papel-termico/como-funciona-rollos-papel-termico', type: 'blog-post', label: 'Cómo Funciona Rollos Térmicos' },
-  { url: '/calificador-de-servicio-al-cliente-opinamaster/por-que-usar-calificadores-de-servicio', type: 'blog-post', label: 'Por Qué Usar Calificadores' },
-  { url: '/calificador-de-servicio-al-cliente-opinamaster/como-califica-servicio-preguntas-personalizadas', type: 'blog-post', label: 'Cómo Califica Servicio' }
+  { url: '/blog/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos', type: 'blog-post', label: 'Mejorar Servicio Enfermería' },
+  { url: '/blog/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria', type: 'blog-post', label: 'Por Qué Usar Sistema Enfermería' },
+  { url: '/blog/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes', type: 'blog-post', label: 'Beneficios Llamador Pacientes' },
+  { url: '/blog/llamadores-de-meseros/ventajas-sistema-llamador-meseros', type: 'blog-post', label: 'Ventajas Llamador Meseros' },
+  { url: '/blog/llamadores-de-meseros/como-funciona-sistema-llamador-meseros', type: 'blog-post', label: 'Cómo Funciona Llamador Meseros' },
+  { url: '/blog/localizadores-para-restaurantes/beneficios-localizadores-restaurantes', type: 'blog-post', label: 'Beneficios Localizadores' },
+  { url: '/blog/localizadores-para-restaurantes/como-funciona-localizador-restaurantes', type: 'blog-post', label: 'Cómo Funciona Localizador' },
+  { url: '/blog/turnero-turnoexpress/ventajas-sistema-turnero', type: 'blog-post', label: 'Ventajas Sistema Turnero' },
+  { url: '/blog/turnero-turnoexpress/como-funciona-turnero', type: 'blog-post', label: 'Cómo Funciona Turnero' },
+  { url: '/blog/sistema-de-turnos-turnomaster/beneficios-sistema-turnos', type: 'blog-post', label: 'Beneficios Sistema Turnos' },
+  { url: '/blog/sistema-de-turnos-turnomaster/como-funciona-sistema-turnos', type: 'blog-post', label: 'Cómo Funciona Sistema Turnos' },
+  { url: '/blog/dispensador-de-tickets/ventajas-dispensador-tickets', type: 'blog-post', label: 'Ventajas Dispensador' },
+  { url: '/blog/dispensador-de-tickets/como-funciona-dispensador-tickets', type: 'blog-post', label: 'Cómo Funciona Dispensador' },
+  { url: '/blog/rollos-de-fichos-para-turnos/beneficios-rollos-fichos-turnos', type: 'blog-post', label: 'Beneficios Rollos Fichos' },
+  { url: '/blog/rollos-de-fichos-para-turnos/como-funciona-rollos-fichos-turnos', type: 'blog-post', label: 'Cómo Funciona Rollos Fichos' },
+  { url: '/blog/rollos-de-papel-termico/ventajas-rollos-papel-termico', type: 'blog-post', label: 'Ventajas Rollos Térmicos' },
+  { url: '/blog/rollos-de-papel-termico/como-funciona-rollos-papel-termico', type: 'blog-post', label: 'Cómo Funciona Rollos Térmicos' },
+  { url: '/blog/calificador-de-servicio-al-cliente-opinamaster/por-que-usar-calificadores-de-servicio', type: 'blog-post', label: 'Por Qué Usar Calificadores' },
+  { url: '/blog/calificador-de-servicio-al-cliente-opinamaster/como-califica-servicio-preguntas-personalizadas', type: 'blog-post', label: 'Cómo Califica Servicio' }
 ];
 
 // Función para hacer petición HTTP/HTTPS

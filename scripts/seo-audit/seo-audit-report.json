@@ -1,9 +1,9 @@
 {
   "summary": {
     "totalUrls": 108,
-    "correctBehavior": 89,
+    "correctBehavior": 94,
     "problems": 0,
-    "errors": 19
+    "errors": 14
   },
   "results": [
     {
@@ -607,52 +607,52 @@
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos",
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos",
       "type": "blog-post",
       "label": "Mejorar Servicio Enfermería",
-      "statusCode": 404,
+      "statusCode": 200,
       "expectedNoindex": false,
       "hasIssues": false,
       "issues": [],
-      "status": "ERROR",
+      "status": "CORRECTO",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria",
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria",
       "type": "blog-post",
       "label": "Por Qué Usar Sistema Enfermería",
-      "statusCode": 404,
+      "statusCode": 200,
       "expectedNoindex": false,
       "hasIssues": false,
       "issues": [],
-      "status": "ERROR",
+      "status": "CORRECTO",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes",
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes",
       "type": "blog-post",
       "label": "Beneficios Llamador Pacientes",
-      "statusCode": 404,
+      "statusCode": 200,
       "expectedNoindex": false,
       "hasIssues": false,
       "issues": [],
-      "status": "ERROR",
+      "status": "CORRECTO",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/llamadores-de-meseros/ventajas-sistema-llamador-meseros",
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/ventajas-sistema-llamador-meseros",
       "type": "blog-post",
       "label": "Ventajas Llamador Meseros",
       "statusCode": 404,
@@ -662,12 +662,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/llamadores-de-meseros/como-funciona-sistema-llamador-meseros",
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros/como-funciona-sistema-llamador-meseros",
       "type": "blog-post",
       "label": "Cómo Funciona Llamador Meseros",
       "statusCode": 404,
@@ -677,12 +677,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/localizadores-para-restaurantes/beneficios-localizadores-restaurantes",
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/beneficios-localizadores-restaurantes",
       "type": "blog-post",
       "label": "Beneficios Localizadores",
       "statusCode": 404,
@@ -692,12 +692,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/localizadores-para-restaurantes/como-funciona-localizador-restaurantes",
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes/como-funciona-localizador-restaurantes",
       "type": "blog-post",
       "label": "Cómo Funciona Localizador",
       "statusCode": 404,
@@ -707,12 +707,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/turnero-turnoexpress/ventajas-sistema-turnero",
+      "url": "https://tecnologiaplus.com/blog/turnero-turnoexpress/ventajas-sistema-turnero",
       "type": "blog-post",
       "label": "Ventajas Sistema Turnero",
       "statusCode": 404,
@@ -722,12 +722,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/turnero-turnoexpress/como-funciona-turnero",
+      "url": "https://tecnologiaplus.com/blog/turnero-turnoexpress/como-funciona-turnero",
       "type": "blog-post",
       "label": "Cómo Funciona Turnero",
       "statusCode": 404,
@@ -737,12 +737,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/sistema-de-turnos-turnomaster/beneficios-sistema-turnos",
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos-turnomaster/beneficios-sistema-turnos",
       "type": "blog-post",
       "label": "Beneficios Sistema Turnos",
       "statusCode": 404,
@@ -752,12 +752,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/sistema-de-turnos-turnomaster/como-funciona-sistema-turnos",
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos-turnomaster/como-funciona-sistema-turnos",
       "type": "blog-post",
       "label": "Cómo Funciona Sistema Turnos",
       "statusCode": 404,
@@ -767,12 +767,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/dispensador-de-tickets/ventajas-dispensador-tickets",
+      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets/ventajas-dispensador-tickets",
       "type": "blog-post",
       "label": "Ventajas Dispensador",
       "statusCode": 404,
@@ -782,12 +782,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/dispensador-de-tickets/como-funciona-dispensador-tickets",
+      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets/como-funciona-dispensador-tickets",
       "type": "blog-post",
       "label": "Cómo Funciona Dispensador",
       "statusCode": 404,
@@ -797,12 +797,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/rollos-de-fichos-para-turnos/beneficios-rollos-fichos-turnos",
+      "url": "https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos/beneficios-rollos-fichos-turnos",
       "type": "blog-post",
       "label": "Beneficios Rollos Fichos",
       "statusCode": 404,
@@ -812,12 +812,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/rollos-de-fichos-para-turnos/como-funciona-rollos-fichos-turnos",
+      "url": "https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos/como-funciona-rollos-fichos-turnos",
       "type": "blog-post",
       "label": "Cómo Funciona Rollos Fichos",
       "statusCode": 404,
@@ -827,12 +827,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/rollos-de-papel-termico/ventajas-rollos-papel-termico",
+      "url": "https://tecnologiaplus.com/blog/rollos-de-papel-termico/ventajas-rollos-papel-termico",
       "type": "blog-post",
       "label": "Ventajas Rollos Térmicos",
       "statusCode": 404,
@@ -842,12 +842,12 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/rollos-de-papel-termico/como-funciona-rollos-papel-termico",
+      "url": "https://tecnologiaplus.com/blog/rollos-de-papel-termico/como-funciona-rollos-papel-termico",
       "type": "blog-post",
       "label": "Cómo Funciona Rollos Térmicos",
       "statusCode": 404,
@@ -857,37 +857,37 @@
       "status": "ERROR",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster/por-que-usar-calificadores-de-servicio",
+      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente-opinamaster/por-que-usar-calificadores-de-servicio",
       "type": "blog-post",
       "label": "Por Qué Usar Calificadores",
-      "statusCode": 404,
+      "statusCode": 200,
       "expectedNoindex": false,
       "hasIssues": false,
       "issues": [],
-      "status": "ERROR",
+      "status": "CORRECTO",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },
     {
-      "url": "https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster/como-califica-servicio-preguntas-personalizadas",
+      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente-opinamaster/como-califica-servicio-preguntas-personalizadas",
       "type": "blog-post",
       "label": "Cómo Califica Servicio",
-      "statusCode": 404,
+      "statusCode": 200,
       "expectedNoindex": false,
       "hasIssues": false,
       "issues": [],
-      "status": "ERROR",
+      "status": "CORRECTO",
       "redirectUrl": null,
       "foundHeaders": [
-        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+        "Cache-Control: s-maxage=31536000"
       ],
       "foundMetas": []
     },

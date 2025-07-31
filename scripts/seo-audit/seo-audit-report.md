@@ -1,6 +1,6 @@
 # 🔍 Reporte de Auditoría SEO - Tecnología Plus
 
-**Fecha:** 31/7/2025, 9:26:18  
+**Fecha:** 31/7/2025, 9:41:21  
 **Sitio:** https://tecnologiaplus.com  
 **Total de URLs verificadas:** 108
 
@@ -11,9 +11,9 @@
 | Métrica | Valor | Estado |
 |---------|-------|--------|
 | **URLs verificadas** | 108 | ℹ️ |
-| **Comportamiento correcto** | 89 | ✅ |
+| **Comportamiento correcto** | 94 | ✅ |
 | **Problemas encontrados** | 0 | ✅ |
-| **Errores de conexión** | 19 | ❌ |
+| **Errores de conexión** | 14 | ❌ |
 
 ⚠️ **AUDITORÍA CON PROBLEMAS** - Se encontraron 0 URLs con problemas
 
@@ -100,29 +100,29 @@
 
 ### 🔴 BLOG-POST (19 URLs) - CON PROBLEMAS
 
-**Estadísticas:** ✅ Correctas: 0 | ❌ Problemas: 0 | ⚠️ Errores: 19
+**Estadísticas:** ✅ Correctas: 5 | ❌ Problemas: 0 | ⚠️ Errores: 14
 
 | URL | Tipo | Esperado | Estado | Detalles |
 |-----|------|----------|--------|----------|
-| `https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/llamadores-de-meseros/ventajas-sistema-llamador-meseros` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/llamadores-de-meseros/como-funciona-sistema-llamador-meseros` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/localizadores-para-restaurantes/beneficios-localizadores-restaurantes` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/localizadores-para-restaurantes/como-funciona-localizador-restaurantes` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/turnero-turnoexpress/ventajas-sistema-turnero` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/turnero-turnoexpress/como-funciona-turnero` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/sistema-de-turnos-turnomaster/beneficios-sistema-turnos` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/sistema-de-turnos-turnomaster/como-funciona-sistema-turnos` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/dispensador-de-tickets/ventajas-dispensador-tickets` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/dispensador-de-tickets/como-funciona-dispensador-tickets` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/rollos-de-fichos-para-turnos/beneficios-rollos-fichos-turnos` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/rollos-de-fichos-para-turnos/como-funciona-rollos-fichos-turnos` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/rollos-de-papel-termico/ventajas-rollos-papel-termico` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/rollos-de-papel-termico/como-funciona-rollos-papel-termico` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster/por-que-usar-calificadores-de-servicio` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
-| `https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster/como-califica-servicio-preguntas-personalizadas` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate |
+| `https://tecnologiaplus.com/blog/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos` | blog-post | INDEXADA | ✅ ✅ Correcto | ✅ **Correctamente indexada**<br>• Sin etiquetas restrictivas detectadas<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria` | blog-post | INDEXADA | ✅ ✅ Correcto | ✅ **Correctamente indexada**<br>• Sin etiquetas restrictivas detectadas<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes` | blog-post | INDEXADA | ✅ ✅ Correcto | ✅ **Correctamente indexada**<br>• Sin etiquetas restrictivas detectadas<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/llamadores-de-meseros/ventajas-sistema-llamador-meseros` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/llamadores-de-meseros/como-funciona-sistema-llamador-meseros` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/localizadores-para-restaurantes/beneficios-localizadores-restaurantes` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/localizadores-para-restaurantes/como-funciona-localizador-restaurantes` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/turnero-turnoexpress/ventajas-sistema-turnero` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/turnero-turnoexpress/como-funciona-turnero` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/sistema-de-turnos-turnomaster/beneficios-sistema-turnos` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/sistema-de-turnos-turnomaster/como-funciona-sistema-turnos` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/dispensador-de-tickets/ventajas-dispensador-tickets` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/dispensador-de-tickets/como-funciona-dispensador-tickets` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos/beneficios-rollos-fichos-turnos` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos/como-funciona-rollos-fichos-turnos` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/rollos-de-papel-termico/ventajas-rollos-papel-termico` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/rollos-de-papel-termico/como-funciona-rollos-papel-termico` | blog-post | INDEXADA | ⚠️ ⚠️ Error | Error de conexión<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente-opinamaster/por-que-usar-calificadores-de-servicio` | blog-post | INDEXADA | ✅ ✅ Correcto | ✅ **Correctamente indexada**<br>• Sin etiquetas restrictivas detectadas<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
+| `https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente-opinamaster/como-califica-servicio-preguntas-personalizadas` | blog-post | INDEXADA | ✅ ✅ Correcto | ✅ **Correctamente indexada**<br>• Sin etiquetas restrictivas detectadas<br><br>**Cabeceras HTTP encontradas:**<br>• Cache-Control: s-maxage=31536000 |
 
 ### 🟢 BLOG-PAGINATION (9 URLs) - CORRECTO
 
@@ -194,16 +194,16 @@
 ### 🎉 Resumen Final
 
 **Total de URLs auditadas:** 108  
-**URLs con comportamiento correcto:** 89  
+**URLs con comportamiento correcto:** 94  
 **URLs con problemas:** 0  
-**URLs con errores:** 19
+**URLs con errores:** 14
 
 ### ℹ️ Análisis por Categoría
 
 - 🟢 **PAGE**: 3/3 correctas (100%)
 - 🟢 **LANDING**: 10/10 correctas (100%)
 - 🟢 **LANDING-CHILD**: 27/27 correctas (100%)
-- 🔴 **BLOG-POST**: 0/19 correctas (0%)
+- 🔴 **BLOG-POST**: 5/19 correctas (26%)
 - 🟢 **BLOG-PAGINATION**: 9/9 correctas (100%)
 - 🟢 **CATEGORY-PAGINATION**: 40/40 correctas (100%)
 
@@ -211,7 +211,7 @@
 
 ⚠️ **AUDITORÍA CON PROBLEMAS**
 
-Se encontraron **0 URLs** con problemas de indexación y **19 URLs** con errores de conexión.
+Se encontraron **0 URLs** con problemas de indexación y **14 URLs** con errores de conexión.
 
 **Problemas detectados:**
 
@@ -220,4 +220,4 @@ Se encontraron **0 URLs** con problemas de indexación y **19 URLs** con errores
 ---
 
 *Reporte generado automáticamente por el sistema de auditoría SEO*  
-*Fecha: 2025-07-31T12:26:18.456Z*
+*Fecha: 2025-07-31T12:41:21.896Z*
