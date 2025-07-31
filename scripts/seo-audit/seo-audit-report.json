@@ -1,0 +1,1777 @@
+{
+  "summary": {
+    "totalUrls": 108,
+    "correctBehavior": 89,
+    "problems": 0,
+    "errors": 19
+  },
+  "results": [
+    {
+      "url": "https://tecnologiaplus.com/",
+      "type": "page",
+      "label": "Página Principal",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog",
+      "type": "page",
+      "label": "Blog Principal",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/contacto",
+      "type": "page",
+      "label": "Contacto",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/localizadores-para-restaurantes",
+      "type": "landing",
+      "label": "Localizadores",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamadores-de-meseros",
+      "type": "landing",
+      "label": "Llamadores",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/turnero-turnoexpress",
+      "type": "landing",
+      "label": "Turnero",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/sistema-de-turnos-turnomaster",
+      "type": "landing",
+      "label": "Sistema Turnos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/rollos-de-fichos-para-turnos",
+      "type": "landing",
+      "label": "Rollos Fichos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/rollos-de-papel-termico",
+      "type": "landing",
+      "label": "Rollos Térmicos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/dispensador-de-tickets",
+      "type": "landing",
+      "label": "Dispensador",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster",
+      "type": "landing",
+      "label": "Enfermería",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster",
+      "type": "landing",
+      "label": "Calificador",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/encuesta-virtual-opinamaster",
+      "type": "landing",
+      "label": "Encuesta",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/localizadores-para-restaurantes/localizadores-rec-v3",
+      "type": "landing-child",
+      "label": "Localizador REC V3",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/localizadores-para-restaurantes/localizadores-cir-c2",
+      "type": "landing-child",
+      "label": "Localizador CIR C2",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar",
+      "type": "landing-child",
+      "label": "Llamador E2-N",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamadores-de-meseros/llamador-de-meseros-e2-b",
+      "type": "landing-child",
+      "label": "Llamador E2-B",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamadores-de-meseros/hablador-de-mesa",
+      "type": "landing-child",
+      "label": "Hablador Mesa",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamadores-de-meseros/control-numerico",
+      "type": "landing-child",
+      "label": "Control Numérico",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamadores-de-meseros/reloj-receptor-de-llamados",
+      "type": "landing-child",
+      "label": "Reloj Receptor",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamadores-de-meseros/pantalla-t1-b",
+      "type": "landing-child",
+      "label": "Pantalla T1-B",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamadores-de-meseros/pantalla-t6",
+      "type": "landing-child",
+      "label": "Pantalla T6",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/turnero-turnoexpress/turnero-t3-modulo-turno",
+      "type": "landing-child",
+      "label": "Turnero T3",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/turnero-turnoexpress/turnero-t3-con-logo",
+      "type": "landing-child",
+      "label": "Turnero T3 Logo",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/turnero-turnoexpress/turnero-t1-b",
+      "type": "landing-child",
+      "label": "Turnero T1-B",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/turnero-turnoexpress/turnero-t1-n",
+      "type": "landing-child",
+      "label": "Turnero T1-N",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/turnero-turnoexpress/turnero-fila-unica-supermercados",
+      "type": "landing-child",
+      "label": "Turnero Fila Única",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/turnero-turnoexpress/turnero-transformer",
+      "type": "landing-child",
+      "label": "Turnero Transformer",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/rollos-de-fichos-para-turnos/rollos-de-turnos",
+      "type": "landing-child",
+      "label": "Rollos Turnos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/rollos-de-papel-termico/rollos-termicos",
+      "type": "landing-child",
+      "label": "Rollos Térmicos",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/dispensador-de-tickets/dispensador-de-tickets-caracol",
+      "type": "landing-child",
+      "label": "Dispensador Caracol",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/alarma-de-luz",
+      "type": "landing-child",
+      "label": "Alarma Luz",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/llamador-e2-blanco",
+      "type": "landing-child",
+      "label": "Llamador E2 Blanco",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello",
+      "type": "landing-child",
+      "label": "Llamador E1 Cuello",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/llamador-ex1",
+      "type": "landing-child",
+      "label": "Llamador EX1",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/pantalla-t1-b",
+      "type": "landing-child",
+      "label": "Pantalla T1-B",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/pantalla-t6",
+      "type": "landing-child",
+      "label": "Pantalla T6",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados",
+      "type": "landing-child",
+      "label": "Reloj Receptor",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster/calificador-de-servicio",
+      "type": "landing-child",
+      "label": "Calificador Servicio",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio",
+      "type": "landing-child",
+      "label": "Aviso Pared",
+      "statusCode": 200,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: s-maxage=31536000"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos",
+      "type": "blog-post",
+      "label": "Mejorar Servicio Enfermería",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria",
+      "type": "blog-post",
+      "label": "Por Qué Usar Sistema Enfermería",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes",
+      "type": "blog-post",
+      "label": "Beneficios Llamador Pacientes",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamadores-de-meseros/ventajas-sistema-llamador-meseros",
+      "type": "blog-post",
+      "label": "Ventajas Llamador Meseros",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/llamadores-de-meseros/como-funciona-sistema-llamador-meseros",
+      "type": "blog-post",
+      "label": "Cómo Funciona Llamador Meseros",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/localizadores-para-restaurantes/beneficios-localizadores-restaurantes",
+      "type": "blog-post",
+      "label": "Beneficios Localizadores",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/localizadores-para-restaurantes/como-funciona-localizador-restaurantes",
+      "type": "blog-post",
+      "label": "Cómo Funciona Localizador",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/turnero-turnoexpress/ventajas-sistema-turnero",
+      "type": "blog-post",
+      "label": "Ventajas Sistema Turnero",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/turnero-turnoexpress/como-funciona-turnero",
+      "type": "blog-post",
+      "label": "Cómo Funciona Turnero",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/sistema-de-turnos-turnomaster/beneficios-sistema-turnos",
+      "type": "blog-post",
+      "label": "Beneficios Sistema Turnos",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/sistema-de-turnos-turnomaster/como-funciona-sistema-turnos",
+      "type": "blog-post",
+      "label": "Cómo Funciona Sistema Turnos",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/dispensador-de-tickets/ventajas-dispensador-tickets",
+      "type": "blog-post",
+      "label": "Ventajas Dispensador",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/dispensador-de-tickets/como-funciona-dispensador-tickets",
+      "type": "blog-post",
+      "label": "Cómo Funciona Dispensador",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/rollos-de-fichos-para-turnos/beneficios-rollos-fichos-turnos",
+      "type": "blog-post",
+      "label": "Beneficios Rollos Fichos",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/rollos-de-fichos-para-turnos/como-funciona-rollos-fichos-turnos",
+      "type": "blog-post",
+      "label": "Cómo Funciona Rollos Fichos",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/rollos-de-papel-termico/ventajas-rollos-papel-termico",
+      "type": "blog-post",
+      "label": "Ventajas Rollos Térmicos",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/rollos-de-papel-termico/como-funciona-rollos-papel-termico",
+      "type": "blog-post",
+      "label": "Cómo Funciona Rollos Térmicos",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster/por-que-usar-calificadores-de-servicio",
+      "type": "blog-post",
+      "label": "Por Qué Usar Calificadores",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/calificador-de-servicio-al-cliente-opinamaster/como-califica-servicio-preguntas-personalizadas",
+      "type": "blog-post",
+      "label": "Cómo Califica Servicio",
+      "statusCode": 404,
+      "expectedNoindex": false,
+      "hasIssues": false,
+      "issues": [],
+      "status": "ERROR",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog?page=2",
+      "type": "blog-pagination",
+      "label": "Blog Paginación 2",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog?page=3",
+      "type": "blog-pagination",
+      "label": "Blog Paginación 3",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog?page=4",
+      "type": "blog-pagination",
+      "label": "Blog Paginación 4",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog?page=5",
+      "type": "blog-pagination",
+      "label": "Blog Paginación 5",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog?page=6",
+      "type": "blog-pagination",
+      "label": "Blog Paginación 6",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog?page=7",
+      "type": "blog-pagination",
+      "label": "Blog Paginación 7",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog?page=8",
+      "type": "blog-pagination",
+      "label": "Blog Paginación 8",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog?page=9",
+      "type": "blog-pagination",
+      "label": "Blog Paginación 9",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog?page=10",
+      "type": "blog-pagination",
+      "label": "Blog Paginación 10",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-papel-termico?page=2",
+      "type": "category-pagination",
+      "label": "rollos-de-papel-termico Paginación 2",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-papel-termico?page=3",
+      "type": "category-pagination",
+      "label": "rollos-de-papel-termico Paginación 3",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-papel-termico?page=4",
+      "type": "category-pagination",
+      "label": "rollos-de-papel-termico Paginación 4",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-papel-termico?page=5",
+      "type": "category-pagination",
+      "label": "rollos-de-papel-termico Paginación 5",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes?page=2",
+      "type": "category-pagination",
+      "label": "localizadores-para-restaurantes Paginación 2",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes?page=3",
+      "type": "category-pagination",
+      "label": "localizadores-para-restaurantes Paginación 3",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes?page=4",
+      "type": "category-pagination",
+      "label": "localizadores-para-restaurantes Paginación 4",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/localizadores-para-restaurantes?page=5",
+      "type": "category-pagination",
+      "label": "localizadores-para-restaurantes Paginación 5",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros?page=2",
+      "type": "category-pagination",
+      "label": "llamadores-de-meseros Paginación 2",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros?page=3",
+      "type": "category-pagination",
+      "label": "llamadores-de-meseros Paginación 3",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros?page=4",
+      "type": "category-pagination",
+      "label": "llamadores-de-meseros Paginación 4",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamadores-de-meseros?page=5",
+      "type": "category-pagination",
+      "label": "llamadores-de-meseros Paginación 5",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria?page=2",
+      "type": "category-pagination",
+      "label": "llamado-de-enfermeria Paginación 2",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria?page=3",
+      "type": "category-pagination",
+      "label": "llamado-de-enfermeria Paginación 3",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria?page=4",
+      "type": "category-pagination",
+      "label": "llamado-de-enfermeria Paginación 4",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/llamado-de-enfermeria?page=5",
+      "type": "category-pagination",
+      "label": "llamado-de-enfermeria Paginación 5",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos?page=2",
+      "type": "category-pagination",
+      "label": "sistema-de-turnos Paginación 2",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos?page=3",
+      "type": "category-pagination",
+      "label": "sistema-de-turnos Paginación 3",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos?page=4",
+      "type": "category-pagination",
+      "label": "sistema-de-turnos Paginación 4",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/sistema-de-turnos?page=5",
+      "type": "category-pagination",
+      "label": "sistema-de-turnos Paginación 5",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/turnero?page=2",
+      "type": "category-pagination",
+      "label": "turnero Paginación 2",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/turnero?page=3",
+      "type": "category-pagination",
+      "label": "turnero Paginación 3",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/turnero?page=4",
+      "type": "category-pagination",
+      "label": "turnero Paginación 4",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/turnero?page=5",
+      "type": "category-pagination",
+      "label": "turnero Paginación 5",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets?page=2",
+      "type": "category-pagination",
+      "label": "dispensador-de-tickets Paginación 2",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets?page=3",
+      "type": "category-pagination",
+      "label": "dispensador-de-tickets Paginación 3",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets?page=4",
+      "type": "category-pagination",
+      "label": "dispensador-de-tickets Paginación 4",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/dispensador-de-tickets?page=5",
+      "type": "category-pagination",
+      "label": "dispensador-de-tickets Paginación 5",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos?page=2",
+      "type": "category-pagination",
+      "label": "rollos-de-fichos-para-turnos Paginación 2",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos?page=3",
+      "type": "category-pagination",
+      "label": "rollos-de-fichos-para-turnos Paginación 3",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos?page=4",
+      "type": "category-pagination",
+      "label": "rollos-de-fichos-para-turnos Paginación 4",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/rollos-de-fichos-para-turnos?page=5",
+      "type": "category-pagination",
+      "label": "rollos-de-fichos-para-turnos Paginación 5",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente?page=2",
+      "type": "category-pagination",
+      "label": "calificador-de-servicio-al-cliente Paginación 2",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente?page=3",
+      "type": "category-pagination",
+      "label": "calificador-de-servicio-al-cliente Paginación 3",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente?page=4",
+      "type": "category-pagination",
+      "label": "calificador-de-servicio-al-cliente Paginación 4",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/calificador-de-servicio-al-cliente?page=5",
+      "type": "category-pagination",
+      "label": "calificador-de-servicio-al-cliente Paginación 5",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/encuesta-virtual?page=2",
+      "type": "category-pagination",
+      "label": "encuesta-virtual Paginación 2",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/encuesta-virtual?page=3",
+      "type": "category-pagination",
+      "label": "encuesta-virtual Paginación 3",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/encuesta-virtual?page=4",
+      "type": "category-pagination",
+      "label": "encuesta-virtual Paginación 4",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    },
+    {
+      "url": "https://tecnologiaplus.com/blog/encuesta-virtual?page=5",
+      "type": "category-pagination",
+      "label": "encuesta-virtual Paginación 5",
+      "statusCode": 200,
+      "expectedNoindex": true,
+      "hasIssues": true,
+      "issues": [
+        "X-Robots-Tag restrictivo: noindex, nofollow, noarchive, nosnippet, noimageindex"
+      ],
+      "status": "CORRECTO",
+      "redirectUrl": null,
+      "foundHeaders": [
+        "X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex",
+        "Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate, no-cache, no-store, must-revalidate"
+      ],
+      "foundMetas": []
+    }
+  ]
+}
