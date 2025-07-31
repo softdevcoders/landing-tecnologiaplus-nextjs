@@ -17,9 +17,10 @@ const ImageLoader = ({
   onLoad,
   placeholder = "blur",
   blurDataURL,
+  skipLoader = false,
   ...props
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(!skipLoader);
   const [hasError, setHasError] = useState(false);
 
   const handleLoad = useCallback(() => {
@@ -42,7 +43,7 @@ const ImageLoader = ({
   return (
     <div className={`${styles.imageContainer} ${className || ''}`} onClick={handleClick}>
       {/* Loader */}
-      {isLoading && (
+      {isLoading && !skipLoader && (
         <div className={styles.loader}>
           <div className={styles.spinner}></div>
         </div>
@@ -68,7 +69,7 @@ const ImageLoader = ({
           width: '100%',
           height: '100%',
           ...style,
-          opacity: isLoading ? 0 : 1,
+          opacity: (isLoading && !skipLoader) ? 0 : 1,
           transition: 'opacity 0.3s ease-in-out'
         }}
         onLoad={handleLoad}

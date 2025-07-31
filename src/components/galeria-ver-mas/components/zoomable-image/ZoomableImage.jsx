@@ -162,7 +162,8 @@ const ZoomableImage = ({
           style={zoomStyles}
           blurDataURL={generateBlurDataURL()}
           placeholder="blur"
-          unoptimized={true}
+          unoptimized={false}
+          skipLoader={priority} // Evitar loader si es la primera imagen
         />
       </div>
     </div>

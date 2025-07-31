@@ -5,6 +5,7 @@ import styles from "./image-gallery.module.scss";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
 import Thumbnails from "../thumbnails";
 import ZoomableImage from "../zoomable-image";
+import FirstImageWrapper from "../first-image/FirstImageWrapper";
 import VideoPlayer from "../video-player/VideoPlayer";
 import ImageIndicators from "../image-indicators";
 import ActionButtons from "../action-buttons/ActionButtons";
@@ -53,6 +54,10 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
     return null;
   }
 
+  // Obtener la primera imagen para renderizado SSR
+  const firstImage = displayMediaItems[0];
+  const isFirstImageVideo = firstImage?.type === 'video';
+
   return (
     <div className={styles.gallery}>
       {!isMobile && (
@@ -80,19 +85,36 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
                     />
                   </div>
                 ) : (
-                  <ZoomableImage
-                    image={item}
-                    isZoomed={isZoomed}
-                    zoomPosition={zoomPosition}
-                    onZoomChange={setIsZoomed}
-                    onZoomPositionChange={setZoomPosition}
-                    index={index}
-                    isSelected={index === selectedIndex}
-                    priority={index === 0}
-                    productTitle={productTitle}
-                    selectedColor={colorContext?.getSelectedColor()?.name || ''}
-                    isMobile={isMobile}
-                  />
+                  // Renderizar la primera imagen con SSR + funcionalidad completa
+                  index === 0 ? (
+                    <FirstImageWrapper
+                      image={item}
+                      index={index}
+                      productTitle={productTitle}
+                      selectedColor={colorContext?.getSelectedColor()?.name || ''}
+                      isMobile={isMobile}
+                      isZoomed={isZoomed}
+                      zoomPosition={zoomPosition}
+                      onZoomChange={setIsZoomed}
+                      onZoomPositionChange={setZoomPosition}
+                      isSelected={index === selectedIndex}
+                    />
+                  ) : (
+                    // Para las demás imágenes, usar el componente ZoomableImage con loader
+                    <ZoomableImage
+                      image={item}
+                      isZoomed={isZoomed}
+                      zoomPosition={zoomPosition}
+                      onZoomChange={setIsZoomed}
+                      onZoomPositionChange={setZoomPosition}
+                      index={index}
+                      isSelected={index === selectedIndex}
+                      priority={false}
+                      productTitle={productTitle}
+                      selectedColor={colorContext?.getSelectedColor()?.name || ''}
+                      isMobile={isMobile}
+                    />
+                  )
                 )}
               </div>
             ))}
