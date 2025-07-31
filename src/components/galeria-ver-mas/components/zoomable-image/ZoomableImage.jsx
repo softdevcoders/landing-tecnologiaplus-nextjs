@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useRef } from 'react';
-import ImageLoader from "../image-loader";
+import Image from "next/image";
 import { generateImageAlt, shouldUsePriority, getOptimizedSizes, generateBlurDataURL } from "../../utils/imageUtils";
 import styles from "./zoomable-image.module.scss";
 
@@ -152,18 +152,21 @@ const ZoomableImage = ({
       )}
 
       <div className={styles.imageContainer}>
-        <ImageLoader
+        <Image
           src={image.src}
           alt={altText}
           width={image.width}
           height={image.height}
           priority={usePriority}
           sizes={optimizedSizes}
-          style={zoomStyles}
-          blurDataURL={generateBlurDataURL()}
+          style={{
+            width: '100%',
+            height: '100%',
+            ...zoomStyles
+          }}
           placeholder="blur"
+          blurDataURL={generateBlurDataURL()}
           unoptimized={false}
-          skipLoader={priority} // Evitar loader si es la primera imagen
         />
       </div>
     </div>

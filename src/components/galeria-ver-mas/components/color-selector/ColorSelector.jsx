@@ -1,7 +1,7 @@
 "use client";
 
 import { useProductColor } from '@/contexts/ProductColorContext';
-import ImageLoader from '../image-loader';
+import Image from 'next/image';
 import { generateThumbnailAlt, getOptimizedSizes, generateBlurDataURL } from "../../utils/imageUtils";
 import styles from './color-selector.module.scss';
 
@@ -60,16 +60,21 @@ const ColorSelector = ({
               aria-pressed={selectedColor === item.id}
             >
               <div className={styles.imageWrapper}>
-                <ImageLoader
+                <Image
                   src={thumbnail.src}
                   alt={generateThumbnailAlt(thumbnail, 0, productTitle, item.name)}
                   width={thumbnail.width}
                   height={thumbnail.height}
                   sizes={getOptimizedSizes('color-selector', false)}
-                  style={{ objectFit: 'contain' }}
+                  style={{ 
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain' 
+                  }}
                   priority={false}
                   blurDataURL={generateBlurDataURL()}
                   placeholder="blur"
+                  unoptimized={false}
                 />
               </div>
               {showLabel && (

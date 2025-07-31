@@ -15,22 +15,30 @@ const FirstImageWrapper = ({
   zoomPosition = { x: 0, y: 0 },
   onZoomChange = () => {},
   onZoomPositionChange = () => {},
-  isSelected = false
+  isSelected = false,
+  priority = false
 }) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Pequeño delay para asegurar que la imagen SSR ya se haya cargado
+    // Debug: verificar el estado del cliente
+    console.log('FirstImageWrapper - isClient:', isClient);
+    
+    // Pequeño delay para asegurar que las imágenes SSR ya se hayan cargado
     const timer = setTimeout(() => {
+      console.log('FirstImageWrapper - Cambiando a cliente');
       setIsClient(true);
     }, 100);
     
     return () => clearTimeout(timer);
-  }, []);
+  }, [isClient]);
 
   return (
     <div className={styles.wrapper}>
-      {/* Primera imagen (SSR) - siempre visible */}
+      {/* Debug: mostrar qué componente se está renderizando */}
+      {console.log('FirstImageWrapper - Renderizando, isClient:', isClient)}
+      
+      {/* Imagen SSR - siempre visible para SEO */}
       <div className={`${styles.firstImageContainer} ${isClient ? styles.hidden : ''}`}>
         <FirstImage
           image={image}
@@ -38,6 +46,7 @@ const FirstImageWrapper = ({
           productTitle={productTitle}
           selectedColor={selectedColor}
           isMobile={isMobile}
+          priority={priority}
         />
       </div>
       
@@ -52,7 +61,7 @@ const FirstImageWrapper = ({
             onZoomPositionChange={onZoomPositionChange}
             index={index}
             isSelected={isSelected}
-            priority={true}
+            priority={priority}
             productTitle={productTitle}
             selectedColor={selectedColor}
             isMobile={isMobile}

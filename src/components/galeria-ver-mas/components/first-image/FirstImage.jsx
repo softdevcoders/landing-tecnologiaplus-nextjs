@@ -7,7 +7,8 @@ const FirstImage = ({
   index, 
   productTitle = '', 
   selectedColor = '', 
-  isMobile = false 
+  isMobile = false,
+  priority = false
 }) => {
   if (!image || image.type === 'video') {
     return null;
@@ -24,7 +25,7 @@ const FirstImage = ({
           alt={altText}
           width={image.width}
           height={image.height}
-          priority={true}
+          priority={priority}
           sizes={optimizedSizes}
           style={{
             width: '100%',

@@ -1,16 +1,19 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import styles from "./image-gallery.module.scss";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
 import Thumbnails from "../thumbnails";
 import ZoomableImage from "../zoomable-image";
 import FirstImageWrapper from "../first-image/FirstImageWrapper";
+import SEOImages from "../seo-images/SEOImages";
 import VideoPlayer from "../video-player/VideoPlayer";
 import ImageIndicators from "../image-indicators";
 import ActionButtons from "../action-buttons/ActionButtons";
 import { useMainCarousel } from "../../hooks/useMainCarousel";
 import { useGalleryState } from "../../hooks/useGalleryState";
+import { generateImageAlt, getOptimizedSizes } from "../../utils/imageUtils";
 
 const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, productTitle = '' }) => {
   const {
@@ -60,6 +63,14 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
 
   return (
     <div className={styles.gallery}>
+      {/* Componente SEO para indexación de todas las imágenes */}
+      <SEOImages
+        mediaItems={displayMediaItems}
+        productTitle={productTitle}
+        selectedColor={colorContext?.getSelectedColor()?.name || ''}
+        isMobile={isMobile}
+      />
+      
       {!isMobile && (
         <Thumbnails
           mediaItems={displayMediaItems}
@@ -85,36 +96,26 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
                     />
                   </div>
                 ) : (
-                  // Renderizar la primera imagen con SSR + funcionalidad completa
-                  index === 0 ? (
-                    <FirstImageWrapper
-                      image={item}
-                      index={index}
-                      productTitle={productTitle}
-                      selectedColor={colorContext?.getSelectedColor()?.name || ''}
-                      isMobile={isMobile}
-                      isZoomed={isZoomed}
-                      zoomPosition={zoomPosition}
-                      onZoomChange={setIsZoomed}
-                      onZoomPositionChange={setZoomPosition}
-                      isSelected={index === selectedIndex}
-                    />
-                  ) : (
-                    // Para las demás imágenes, usar el componente ZoomableImage con loader
-                    <ZoomableImage
-                      image={item}
-                      isZoomed={isZoomed}
-                      zoomPosition={zoomPosition}
-                      onZoomChange={setIsZoomed}
-                      onZoomPositionChange={setZoomPosition}
-                      index={index}
-                      isSelected={index === selectedIndex}
-                      priority={false}
-                      productTitle={productTitle}
-                      selectedColor={colorContext?.getSelectedColor()?.name || ''}
-                      isMobile={isMobile}
-                    />
-                  )
+                  // Renderizar directamente con Next.js Image para eliminar loader
+                  <div className={styles.imageWrapper}>
+                    <div className={styles.imageContainer}>
+                      <Image
+                        src={item.src}
+                        alt={generateImageAlt(item, index, productTitle, colorContext?.getSelectedColor()?.name || '')}
+                        width={item.width}
+                        height={item.height}
+                        priority={index === 0}
+                        sizes={getOptimizedSizes('main', isMobile)}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'contain'
+                        }}
+                        unoptimized={false}
+                        quality={85}
+                      />
+                    </div>
+                  </div>
                 )}
               </div>
             ))}
