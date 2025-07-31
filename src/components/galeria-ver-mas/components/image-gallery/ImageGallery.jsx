@@ -109,7 +109,7 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
                         style={{
                           width: '100%',
                           height: '100%',
-                          objectFit: 'contain'
+                          objectFit: 'cover'
                         }}
                         unoptimized={false}
                         quality={85}
