@@ -21,49 +21,56 @@ function ProductGallery() {
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973028/llamador_e2_b_de_2_teclas_negro_rojo_5_djowrm',   
             alt: 'Llamador de meseros E2-B negro y rojo vista principal - 1',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973032/llamador_e2_b_de_2_teclas_negro_rojo_1_y6fhaj',     
             alt: 'Llamador de meseros E2-B negro y rojo vista principal - 2',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973127/llamador_e2_b_de_2_teclas_negro_rojo_2_yzg6ks', 
             alt: 'Llamador de meseros E2-B negro y rojo vista principal - 3',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973023/llamador_e2_b_de_2_teclas_negro_rojo_3_grufj1',
             alt: 'Llamador de meseros E2-B negro y rojo vista principal - 4',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973123/llamador_e2_b_de_2_teclas_negro_rojo_4_jtuvam',  
             alt: 'Llamador de meseros E2-B negro y rojo vista principal - 5',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973028/llamador_e2_b_de_2_teclas_negro_rojo_6_yh4mx7',  
             alt: 'Llamador de meseros E2-B negro y rojo vista principal - 6',
             width: 780, 
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973025/llamador_e2_b_de_2_teclas_negro_rojo_7_nv6s8k',    
             alt: 'Llamador de meseros E2-B negro y rojo vista principal - 7',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
         ]
       },
@@ -82,7 +89,8 @@ function ProductGallery() {
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973014/llamador_e2_b_de_2_teclas_negro_amarillo_12_waqi0z', 
             alt: 'Llamador de meseros E2-B negro y amarillo vista principal - 1',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
 
           {
@@ -90,42 +98,48 @@ function ProductGallery() {
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973110/llamador_e2_b_de_2_teclas_negro_amarillo_8_ykycrn',
             alt: 'Llamador de meseros E2-B negro y amarillo vista principal - 2', 
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973111/llamador_e2_b_de_2_teclas_negro_amarillo_9_m0pe12', 
             alt: 'Llamador de meseros E2-B negro y amarillo vista principal - 3',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973040/llamador_e2_b_de_2_teclas_negro_amarillo_10_lzrfzo',
             alt: 'Llamador de meseros E2-B negro y amarillo vista principal - 4',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973150/llamador_e2_b_de_2_teclas_negro_amarillo_11_viqyi1',
             alt: 'Llamador de meseros E2-B negro y amarillo vista principal - 5',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973015/llamador_e2_b_de_2_teclas_negro_amarillo_13_x8x17j', 
             alt: 'Llamador de meseros E2-B negro y amarillo vista principal - 6',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973017/llamador_e2_b_de_2_teclas_negro_amarillo_14_ihrdul',
             alt: 'Llamador de meseros E2-B negro y amarillo vista principal - 7',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
         ]
       },
@@ -144,49 +158,56 @@ function ProductGallery() {
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973026/llamador_e2_b_de_2_teclas_negro_negro_19_bl8l7p', 
             alt: 'Llamador de meseros E2-B negro y negro vista principal - 1',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973053/llamador_e2_b_de_2_teclas_negro_negro_15_gxg2ft',   
             alt: 'Llamador de meseros E2-B negro y negro vista principal - 2', 
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973035/llamador_e2_b_de_2_teclas_negro_negro_16_q0q6dz', 
             alt: 'Llamador de meseros E2-B negro y negro vista principal - 3',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973034/llamador_e2_b_de_2_teclas_negro_negro_17_pwatas',
             alt: 'Llamador de meseros E2-B negro y negro vista principal - 4',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973031/llamador_e2_b_de_2_teclas_negro_negro_18_eo24n7', 
             alt: 'Llamador de meseros E2-B negro y negro vista principal - 5',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973017/llamador_e2_b_de_2_teclas_negro_negro_20_jxcr0y', 
             alt: 'Llamador de meseros E2-B negro y negro vista principal - 6',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
           {
             type: 'image',
             src: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_780/v1753973013/llamador_e2_b_de_2_teclas_negro_negro_21_izogwa',
             alt: 'Llamador de meseros E2-B negro y negro vista principal - 7',
             width: 780,
-            height: 780
+            height: 780,
+            darkBackground: true
           },
         ]
       }
