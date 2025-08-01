@@ -15,6 +15,8 @@ const VideoPlayer = ({ video, isActive = true }) => {
     if (videoRef.current) {
       if (!isActive) {
         videoRef.current.pause();
+      } else {
+        videoRef.current.play();
       }
     }
   }, [isActive]);
@@ -30,8 +32,9 @@ const VideoPlayer = ({ video, isActive = true }) => {
         playsInline
         disablePictureInPicture
         onContextMenu={handleContextMenu}
+        autoPlay
       >
-        <source src={video.url} type="video/mp4" />
+        <source src={video.src} type="video/mp4" />
         Tu navegador no soporta la reproducción de videos.
       </video>
     </div>

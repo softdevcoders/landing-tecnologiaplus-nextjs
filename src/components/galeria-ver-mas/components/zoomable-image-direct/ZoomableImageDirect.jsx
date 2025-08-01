@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useRef } from 'react';
 import Image from "next/image";
-import { generateImageAlt, shouldUsePriority, getOptimizedSizes, generateBlurDataURL } from "../../utils/imageUtils";
+import { generateImageAlt, shouldUsePriority, getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from "../../utils/imageUtils";
 import styles from "./zoomable-image-direct.module.scss";
 
 const ZoomableImageDirect = ({
@@ -98,7 +98,7 @@ const ZoomableImageDirect = ({
 
   // Estilos memoizados para la transformación del zoom
   const zoomStyles = useMemo(() => ({
-    objectFit: 'cover',
+    objectFit: 'contain',
     transform: isZoomed ? `scale(${1.75}) translate(-${zoomPosition.x}%, -${zoomPosition.y}%)` : 'none',
     transformOrigin: '0 0'
   }), [isZoomed, zoomPosition.x, zoomPosition.y]);
@@ -150,13 +150,13 @@ const ZoomableImageDirect = ({
           <span className={styles.closeZoomText}>Cerrar zoom</span>
         </button>
       )}
-
+ 
       <div className={styles.imageContainer}>
         <Image
-          src={image.src}
+          src={getOptimizedImageUrl({url: image.src, width: 1600, quality: 80})} 
           alt={altText}
-          width={image.width}
-          height={image.height}
+          width={1800}
+          height={1800}
           priority={usePriority}
           sizes={optimizedSizes}
           style={{
@@ -166,7 +166,7 @@ const ZoomableImageDirect = ({
           }}
           placeholder="blur"
           blurDataURL={generateBlurDataURL()}
-          unoptimized={false}
+          unoptimized={true}
         />
       </div>
     </div>

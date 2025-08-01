@@ -110,12 +110,12 @@ export const getOptimizedSizes = (context = 'main', isMobile = false) => {
     case 'color-selector':
       return isMobile 
         ? '60px' 
-        : '(max-width: 768px) 60px, 95px';
+        : '(max-width: 768px) 60px, 80px';
     
     case 'thumbnail':
       return isMobile 
-        ? '60px' 
-        : '(max-width: 768px) 60px, 95px';
+        ? '150px' 
+        : '(max-width: 768px) 150px, 150px';
     
     case 'gallery-modal':
       return '(max-width: 479px) 100vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, (max-width: 1399px) 25vw, 300px';
@@ -123,4 +123,37 @@ export const getOptimizedSizes = (context = 'main', isMobile = false) => {
     default:
       return '100vw';
   }
-}; 
+};
+
+/**
+ * Optimiza la URL de la imagen basado en el contexto
+ * @param {string} url - URL de la imagen
+ * @param {number} width - Ancho de la imagen
+ * @param {number} height - Alto de la imagen
+ * @param {string} format - Formato de la imagen (webp, jpg, png)
+ * @param {number} quality - Calidad de la imagen
+ * @returns {string} URL optimizada
+ */
+export const getOptimizedImageUrl = ({url, width, height, format = 'webp', quality = 100, type = 'image' }) => {
+  let optimizedUrl = `https://res.cloudinary.com/ddqh0mkx9/${type}/upload`;
+
+  if(width) {
+    optimizedUrl += `/w_${width}`;
+  }
+
+  if(height) {
+    optimizedUrl += `,h_${height}`;
+  }
+
+  if(format) {
+    optimizedUrl += `,f_${format}`;
+  }
+
+  if(quality) {
+    optimizedUrl += `,q_${quality}`;
+  }
+
+  optimizedUrl += `/${url}`;
+
+  return optimizedUrl;
+};
