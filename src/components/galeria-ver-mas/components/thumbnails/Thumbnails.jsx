@@ -2,8 +2,8 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image';
 import { ArrowBack, ArrowForward } from '@/components/ui/icons';
-import ImageLoader from '../image-loader';
 import { generateThumbnailAlt, getOptimizedSizes, generateBlurDataURL } from '../../utils/imageUtils';
 import styles from './thumbnails.module.scss';
 
@@ -108,28 +108,38 @@ const Thumbnails = ({
                 aria-label={`Ir a ${item.type === 'video' ? 'video' : 'imagen'} ${index + 1}`}
               >
                 {item.type === 'video' ? (
-                  <ImageLoader
+                  <Image
                     src={item.thumbnail || `https://i.ytimg.com/vi/${item.videoId}/mqdefault.jpg`}
                     alt={`Vista previa del video ${index + 1}`}
                     width={320}
                     height={180}
                     sizes={getOptimizedSizes('thumbnail', false)}
-                    style={{ objectFit: 'contain' }}
-                    priority={false}
+                    style={{ 
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain' 
+                    }}
+                    priority={index < 3} // Solo las primeras 3 imágenes con priority
                     blurDataURL={generateBlurDataURL()}
                     placeholder="blur"
+                    unoptimized={false}
                   />
                 ) : (
-                  <ImageLoader
+                  <Image
                     src={item.src}
                     alt={generateThumbnailAlt(item, index, productTitle, selectedColor)}
                     width={item.width}
                     height={item.height}
                     sizes={getOptimizedSizes('thumbnail', false)}
-                    style={{ objectFit: 'contain' }}
-                    priority={false}
+                    style={{ 
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain' 
+                    }}
+                    priority={index < 3} // Solo las primeras 3 imágenes con priority
                     blurDataURL={generateBlurDataURL()}
                     placeholder="blur"
+                    unoptimized={false}
                   />
                 )}
               </button>

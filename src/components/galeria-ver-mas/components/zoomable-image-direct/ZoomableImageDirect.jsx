@@ -3,9 +3,9 @@
 import { useCallback, useMemo, useRef } from 'react';
 import Image from "next/image";
 import { generateImageAlt, shouldUsePriority, getOptimizedSizes, generateBlurDataURL } from "../../utils/imageUtils";
-import styles from "./zoomable-image.module.scss";
+import styles from "./zoomable-image-direct.module.scss";
 
-const ZoomableImage = ({
+const ZoomableImageDirect = ({
   image,
   isZoomed,
   zoomPosition,
@@ -98,7 +98,7 @@ const ZoomableImage = ({
 
   // Estilos memoizados para la transformación del zoom
   const zoomStyles = useMemo(() => ({
-    objectFit: 'contain',
+    objectFit: 'cover',
     transform: isZoomed ? `scale(${1.75}) translate(-${zoomPosition.x}%, -${zoomPosition.y}%)` : 'none',
     transformOrigin: '0 0'
   }), [isZoomed, zoomPosition.x, zoomPosition.y]);
@@ -173,4 +173,4 @@ const ZoomableImage = ({
   );
 };
 
-export default ZoomableImage; 
+export default ZoomableImageDirect; 

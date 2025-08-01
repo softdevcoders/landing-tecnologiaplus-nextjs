@@ -1,14 +1,14 @@
 "use client";
 
 import { useProductColor } from '@/contexts/ProductColorContext';
-import ImageLoader from '../image-loader';
+import Image from 'next/image';
 import { generateThumbnailAlt, getOptimizedSizes, generateBlurDataURL } from "../../utils/imageUtils";
 import styles from './color-selector.module.scss';
 
 const ColorSelector = ({
   title = "Elige el color",
-  showLabel = true,
-  size = "small", // small, medium, large
+  showLabel = false,
+  size = "medium", // small, medium, large
   productTitle = ''
 }) => {
   const colorContext = useProductColor();
@@ -28,7 +28,7 @@ const ColorSelector = ({
   return (
     <div className={styles.imageSelector}>
       {title && <span className={styles.title}>{title}</span>}
-      
+      <span className={styles.colorSelected_label}>{colors.find(color => color.id === selectedColor)?.name}</span>
       <div className={`${styles.imageList} ${styles[size]}`}>
         {colors.map((item) => {
           
@@ -60,16 +60,21 @@ const ColorSelector = ({
               aria-pressed={selectedColor === item.id}
             >
               <div className={styles.imageWrapper}>
-                <ImageLoader
+                <Image
                   src={thumbnail.src}
                   alt={generateThumbnailAlt(thumbnail, 0, productTitle, item.name)}
                   width={thumbnail.width}
                   height={thumbnail.height}
                   sizes={getOptimizedSizes('color-selector', false)}
-                  style={{ objectFit: 'contain' }}
+                  style={{ 
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain' 
+                  }}
                   priority={false}
                   blurDataURL={generateBlurDataURL()}
                   placeholder="blur"
+                  unoptimized={false}
                 />
               </div>
               {showLabel && (

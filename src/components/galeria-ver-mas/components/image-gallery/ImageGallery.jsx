@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import styles from "./image-gallery.module.scss";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
 import Thumbnails from "../thumbnails";
-import ZoomableImage from "../zoomable-image";
+import ZoomableImageDirect from "../zoomable-image-direct/ZoomableImageDirect";
 import VideoPlayer from "../video-player/VideoPlayer";
 import ImageIndicators from "../image-indicators";
 import ActionButtons from "../action-buttons/ActionButtons";
@@ -53,8 +53,20 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
     return null;
   }
 
+  // Obtener la primera imagen para renderizado SSR
+  const firstImage = displayMediaItems[0];
+  const isFirstImageVideo = firstImage?.type === 'video';
+
   return (
     <div className={styles.gallery}>
+      {/* Componente SEO para indexación de todas las imágenes */}
+      {/* <SEOImages
+        mediaItems={displayMediaItems}
+        productTitle={productTitle}
+        selectedColor={colorContext?.getSelectedColor()?.name || ''}
+        isMobile={isMobile}
+      /> */}
+      
       {!isMobile && (
         <Thumbnails
           mediaItems={displayMediaItems}
@@ -80,7 +92,8 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
                     />
                   </div>
                 ) : (
-                  <ZoomableImage
+                  // Renderizar con zoom y sin loader
+                  <ZoomableImageDirect
                     image={item}
                     isZoomed={isZoomed}
                     zoomPosition={zoomPosition}
