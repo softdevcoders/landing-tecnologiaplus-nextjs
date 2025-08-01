@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import { ArrowBack, ArrowForward } from '@/components/ui/icons';
-import { generateThumbnailAlt, getOptimizedSizes, generateBlurDataURL } from '../../utils/imageUtils';
+import { getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from '../../utils/imageUtils';
 import styles from './thumbnails.module.scss';
 
 const Thumbnails = ({
@@ -109,27 +109,27 @@ const Thumbnails = ({
               >
                 {item.type === 'video' ? (
                   <Image
-                    src={item.thumbnail || `https://i.ytimg.com/vi/${item.videoId}/mqdefault.jpg`}
-                    alt={`Vista previa del video ${index + 1}`}
-                    width={320}
-                    height={180}
+                    src={getOptimizedImageUrl({url: item.thumbnail, width: 150, height: 150, quality: 80})} 
+                    alt={`Miniatura: ${item.alt}`}
+                    width={150}
+                    height={150}
                     sizes={getOptimizedSizes('thumbnail', false)}
                     style={{ 
                       width: '100%',
                       height: '100%',
                       objectFit: 'contain' 
                     }}
-                    priority={index < 3} // Solo las primeras 3 imágenes con priority
+                    priority={true} // Solo las primeras 3 imágenes con priority
                     blurDataURL={generateBlurDataURL()}
                     placeholder="blur"
-                    unoptimized={false}
+                    unoptimized={true}
                   />
                 ) : (
                   <Image
-                    src={item.src}
-                    alt={generateThumbnailAlt(item, index, productTitle, selectedColor)}
-                    width={item.width}
-                    height={item.height}
+                    src={getOptimizedImageUrl({url: item.src, width: 150, height: 150, quality: 80})}
+                    alt={`Miniatura: ${item.alt}`}
+                    width={150} 
+                    height={150}
                     sizes={getOptimizedSizes('thumbnail', false)}
                     style={{ 
                       width: '100%',
@@ -139,7 +139,7 @@ const Thumbnails = ({
                     priority={index < 3} // Solo las primeras 3 imágenes con priority
                     blurDataURL={generateBlurDataURL()}
                     placeholder="blur"
-                    unoptimized={false}
+                    unoptimized={true}
                   />
                 )}
               </button>

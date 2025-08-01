@@ -27,10 +27,11 @@
   @media (min-width: 768px) {
     order: 2;
     width: auto;
-    // aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1;
   }
 
   @media (min-width: 1200px) {
+    aspect-ratio: 1 / 1;
     &:hover {
       .navButton,
       :global(.bullets),
@@ -39,10 +40,6 @@
         visibility: visible;
       }
     }
-  }
-
-  @media (min-width: 1200px) {
-    width: 85%;
   }
 }
 
