@@ -3,7 +3,7 @@
 import { useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
-import { generateImageAlt, getOptimizedSizes, generateBlurDataURL } from '../../utils/imageUtils';
+import { getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from '../../utils/imageUtils';
 import styles from './gallery-modal.module.scss';
 
 const GalleryModal = ({ 
@@ -68,20 +68,19 @@ const GalleryModal = ({
           {imageItems.map((item, index) => (
             <div key={index} className={styles.imageItem}>
               <Image
-                src={item.src}
-                alt={generateImageAlt(item, index, productTitle, selectedColor)}
-                width={item.width}
-                height={item.height}
+                src={getOptimizedImageUrl({url: item?.src, width: 400, quality: 80})} 
+                alt={item.alt}
+                width={400}
+                height={400}
                 sizes={getOptimizedSizes('gallery-modal', false)}
                 style={{ 
                   width: '100%',
                   height: '100%',
-                  objectFit: 'cover'
+                  objectFit: 'contain'
                 }}
                 priority={index < 6}
                 blurDataURL={generateBlurDataURL()}
                 placeholder="blur"
-                unoptimized={false}
               />
             </div>
           ))}
