@@ -16,16 +16,18 @@ const Thumbnails = ({
 }) => {
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: 'keepSnaps',
-    dragFree: true,
+    dragFree: false,
     axis: 'y',
     speed: 10,
-    skipSnaps: true,
-    watchDrag: false
+    skipSnaps: false,
+    watchDrag: true
   });
 
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [shouldShowButtons, setShouldShowButtons] = useState(false);
+  const [touchStartY, setTouchStartY] = useState(null);
+  const [scrollAccumulator, setScrollAccumulator] = useState(0);
 
   const onThumbsSelect = useCallback(() => {
     if (!emblaThumbsApi) return;
@@ -35,35 +37,67 @@ const Thumbnails = ({
 
   const scrollThumbsPrev = useCallback(() => {
     if (!emblaThumbsApi) return;
-    emblaThumbsApi.scrollTo(emblaThumbsApi.selectedScrollSnap() - 2);
+    emblaThumbsApi.scrollPrev();
   }, [emblaThumbsApi]);
 
   const scrollThumbsNext = useCallback(() => {
     if (!emblaThumbsApi) return;
-    emblaThumbsApi.scrollTo(emblaThumbsApi.selectedScrollSnap() + 2);
+    emblaThumbsApi.scrollNext();
   }, [emblaThumbsApi]);
 
   const handleWheel = useCallback((event) => {
     if (!emblaThumbsApi) return;
     
-    // Prevenir el comportamiento por defecto si estamos en los límites del scroll
-    if (
-      (event.deltaY < 0 && !canScrollPrev) ||
-      (event.deltaY > 0 && !canScrollNext)
-    ) {
-      event.preventDefault();
+    // Prevenir el comportamiento por defecto
+    event.preventDefault();
+    
+    // Detectar si es un trackpad (deltaY más pequeño) o mouse wheel (deltaY más grande)
+    const isTrackpad = Math.abs(event.deltaY) < 50;
+    const scrollThreshold = isTrackpad ? 10 : 50;
+    
+    // Acumular el scroll para gestos suaves
+    setScrollAccumulator(prev => {
+      const newAccumulator = prev + event.deltaY;
+      
+      if (Math.abs(newAccumulator) > scrollThreshold) {
+        if (newAccumulator > 0) {
+          emblaThumbsApi.scrollNext();
+        } else {
+          emblaThumbsApi.scrollPrev();
+        }
+        return 0; // Resetear el acumulador
+      }
+      
+      return newAccumulator;
+    });
+  }, [emblaThumbsApi]);
+
+  const handleTouchStart = useCallback((event) => {
+    setTouchStartY(event.touches[0].clientY);
+  }, []);
+
+  const handleTouchMove = useCallback((event) => {
+    if (!emblaThumbsApi || touchStartY === null) return;
+    
+    event.preventDefault();
+    
+    const touchY = event.touches[0].clientY;
+    const deltaY = touchStartY - touchY;
+    const threshold = 30; // Umbral mínimo para considerar un swipe
+    
+    if (Math.abs(deltaY) > threshold) {
+      if (deltaY > 0) {
+        emblaThumbsApi.scrollNext();
+      } else {
+        emblaThumbsApi.scrollPrev();
+      }
+      setTouchStartY(null);
     }
-    
-    // Ajustar la sensibilidad del scroll
-    const scrollMultiplier = 1.5;
-    const scrollDistance = event.deltaY * scrollMultiplier;
-    
-    emblaThumbsApi.scrollTo(
-      emblaThumbsApi.scrollProgress() * 
-      emblaThumbsApi.scrollSnapList().length + 
-      scrollDistance / 100
-    );
-  }, [emblaThumbsApi, canScrollPrev, canScrollNext]);
+  }, [emblaThumbsApi, touchStartY]);
+
+  const handleTouchEnd = useCallback(() => {
+    setTouchStartY(null);
+  }, []);
 
   useEffect(() => {
     if (!emblaThumbsApi) return;
@@ -71,6 +105,9 @@ const Thumbnails = ({
     const viewport = emblaThumbsRef.current;
     if (viewport) {
       viewport.addEventListener('wheel', handleWheel, { passive: false });
+      viewport.addEventListener('touchstart', handleTouchStart);
+      viewport.addEventListener('touchmove', handleTouchMove);
+      viewport.addEventListener('touchend', handleTouchEnd);
     }
 
     emblaThumbsApi.on('select', onThumbsSelect);
@@ -78,17 +115,39 @@ const Thumbnails = ({
     onThumbsSelect();
 
     // Mostrar botones solo si hay scroll disponible
-    const hasOverflow = emblaThumbsApi.scrollSnapList().length > 6;
+    const hasOverflow = emblaThumbsApi.scrollSnapList().length > 4;
     setShouldShowButtons(hasOverflow);
 
     return () => {
       if (viewport) {
         viewport.removeEventListener('wheel', handleWheel);
+        viewport.removeEventListener('touchstart', handleTouchStart);
+        viewport.removeEventListener('touchmove', handleTouchMove);
+        viewport.removeEventListener('touchend', handleTouchEnd);
       }
       emblaThumbsApi.off('select', onThumbsSelect);
       emblaThumbsApi.off('reInit', onThumbsSelect);
     };
-  }, [emblaThumbsApi, onThumbsSelect, emblaThumbsRef, handleWheel]);
+  }, [emblaThumbsApi, onThumbsSelect, emblaThumbsRef, handleWheel, handleTouchStart, handleTouchMove, handleTouchEnd]);
+
+  // Efecto para hacer scroll al thumbnail seleccionado
+  useEffect(() => {
+    if (!emblaThumbsApi || selectedIndex === undefined) return;
+    
+    // Hacer scroll al thumbnail seleccionado
+    emblaThumbsApi.scrollTo(selectedIndex);
+  }, [emblaThumbsApi, selectedIndex]);
+
+  // Efecto para limpiar el acumulador de scroll después de inactividad
+  useEffect(() => {
+    if (scrollAccumulator === 0) return;
+    
+    const timeout = setTimeout(() => {
+      setScrollAccumulator(0);
+    }, 1000); // Limpiar después de 1 segundo de inactividad
+    
+    return () => clearTimeout(timeout);
+  }, [scrollAccumulator]);
 
   if (!mediaItems || mediaItems.length === 0) {
     return null;

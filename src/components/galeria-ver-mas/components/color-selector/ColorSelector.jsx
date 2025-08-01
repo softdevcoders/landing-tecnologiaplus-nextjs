@@ -8,7 +8,7 @@ import styles from './color-selector.module.scss';
 const ColorSelector = ({
   title = "Elige el color",
   showLabel = false,
-  size = "large", // small, medium, large
+  size = "medium", // small, medium, large
   productTitle = ''
 }) => {
   const colorContext = useProductColor();
