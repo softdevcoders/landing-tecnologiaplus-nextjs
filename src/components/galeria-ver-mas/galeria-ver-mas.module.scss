@@ -27,7 +27,6 @@
     @media (min-width: 1200px) {
       display: grid;
       grid-template-columns: repeat(12, minmax(0, 1fr));
-      grid-column-gap: 1.25rem;
     }
   }
 }
