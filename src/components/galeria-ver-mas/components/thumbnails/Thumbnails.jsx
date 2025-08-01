@@ -109,7 +109,7 @@ const Thumbnails = ({
               >
                 {item.type === 'video' ? (
                   <Image
-                    src={getOptimizedImageUrl({url: item.thumbnail, width: 150, height: 150, quality: 80})} 
+                    src={getOptimizedImageUrl({url: item.thumbnail, width: 150, height: 150, quality: 80, type: 'video'})} 
                     alt={`Miniatura: ${item.alt}`}
                     width={150}
                     height={150}

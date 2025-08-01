@@ -4,7 +4,7 @@ import { habladorDeMesa } from "@/config/productos-galeria-ver-mas/llamadores-me
 import { relojReceptorDeLlamados } from "@/config/productos-galeria-ver-mas/llamadores-meseros/reloj-receptor-de-llamados";
 
 const mainImage = {
-  src: 'v1753973028/llamador_e2_b_de_2_teclas_negro_rojo_5_djowrm',
+  src: 'v1754070595/llamador_e2_b_de_2_teclas_negro_rojo_1_oi6rrv',
   alt: 'Llamador de meseros E2-B negro y rojo vista principal',
 };
 
@@ -22,42 +22,59 @@ export const llamadorDeMeserosE2B = {
       media: [
         {
           type: 'image',
-          darkBackground: true,
           ...mainImage,
         },
         {
-          type: 'image',
-          src: 'v1753973032/llamador_e2_b_de_2_teclas_negro_rojo_1_y6fhaj',     
+          type: 'video',
+          src: 'https://res.cloudinary.com/ddqh0mkx9/video/upload/v1754070602/llamador_e2_b_de_2_teclas_negro_rojo_2_pffe7w.mp4',
           alt: 'Llamador de meseros E2-B negro y rojo vista principal - 2',
+          thumbnail: 'so_0/v1754070602/llamador_e2_b_de_2_teclas_negro_rojo_2_pffe7w', 
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1753973127/llamador_e2_b_de_2_teclas_negro_rojo_2_yzg6ks', 
+          src: 'v1754070595/llamador_e2_b_de_2_teclas_negro_rojo_3_srtnbz',     
+          alt: 'Llamador de meseros E2-B negro y rojo vista principal - 2',
+        },
+        {
+          type: 'image',
+          src: 'v1754070601/llamador_e2_b_de_2_teclas_negro_rojo_4_ylmsj3', 
           alt: 'Llamador de meseros E2-B negro y rojo vista principal - 3',
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1753973023/llamador_e2_b_de_2_teclas_negro_rojo_3_grufj1',
+          src: 'v1754070595/llamador_e2_b_de_2_teclas_negro_rojo_5_bv6j7e',
           alt: 'Llamador de meseros E2-B negro y rojo vista principal - 4',
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1753973123/llamador_e2_b_de_2_teclas_negro_rojo_4_jtuvam',  
+          src: 'v1754070599/llamador_e2_b_de_2_teclas_negro_rojo_6_iw2wjx',  
           alt: 'Llamador de meseros E2-B negro y rojo vista principal - 5',
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1753973028/llamador_e2_b_de_2_teclas_negro_rojo_6_yh4mx7',  
+          src: 'v1754070601/llamador_e2_b_de_2_teclas_negro_rojo_7_bnnqdk',  
           alt: 'Llamador de meseros E2-B negro y rojo vista principal - 6',
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1753973025/llamador_e2_b_de_2_teclas_negro_rojo_7_nv6s8k',    
+          src: 'v1754070594/llamador_e2_b_de_2_teclas_negro_rojo_8_ebrqrx',    
+          alt: 'Llamador de meseros E2-B negro y rojo vista principal - 7',
+          darkBackground: true
+        },
+        {
+          type: 'image',
+          src: 'v1754070595/llamador_e2_b_de_2_teclas_negro_rojo_9_efjug7',    
+          alt: 'Llamador de meseros E2-B negro y rojo vista principal - 7',
+          darkBackground: true
+        },
+        {
+          type: 'image',
+          src: 'v1754070599/llamador_e2_b_de_2_teclas_negro_rojo_10_vcxtna',    
           alt: 'Llamador de meseros E2-B negro y rojo vista principal - 7',
           darkBackground: true
         },
@@ -172,33 +189,6 @@ export const llamadorDeMeserosE2B = {
   defaultColor: "negro_rojo",
   hasColors: true,
   compatibleConProducts: [
-    // {
-    //   name: 'Llamador de meseros E2-N negro vista principal',
-    //   description: 'Permite llamar al mesero y borrar el llamado al ser atendido.',
-    //   link: routes.landings.llamadoresDeMeseros.children.e2_b.url,
-    //   image: {
-    //     url: 'v1738694394/2_2x-8_1_yojp4b',
-    //     alt: 'Llamador de meseros E2-B blanco vista principal',
-    //   },
-    // },
-    // {
-    //   name: 'Llamador de meseros E2-N negro vista principal',
-    //   description: 'Resalta tu marca con un espacio adecuado para el botón',
-    //   link: routes.landings.llamadoresDeMeseros.children.habladorDeMesa.url,
-    //   image: {
-    //     url: 'v1738694393/3_2x-8_igijiu',
-    //     alt: 'Hablador de mesa junto al botón para llamar al mesero',
-    //   },
-    // },
-    // {
-    //   name: 'Llamador de meseros E2-N negro vista principal',
-    //   description: 'Para llamar empleados o meseros desde cocina',
-    //   link: routes.landings.llamadoresDeMeseros.children.controlNumerico.url,
-    //   image: {
-    //     url: 'v1738694391/4_2x-8_mioq3p',
-    //     alt: 'Control numérico para cocina',
-    //   },
-    // },
     controlNumerico,
     habladorDeMesa,
     relojReceptorDeLlamados,

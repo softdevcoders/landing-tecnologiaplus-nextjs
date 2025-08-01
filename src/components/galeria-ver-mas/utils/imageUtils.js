@@ -134,8 +134,8 @@ export const getOptimizedSizes = (context = 'main', isMobile = false) => {
  * @param {number} quality - Calidad de la imagen
  * @returns {string} URL optimizada
  */
-export const getOptimizedImageUrl = ({url, width, height, format = 'webp', quality = 100 }) => {
-  let optimizedUrl = 'https://res.cloudinary.com/ddqh0mkx9/image/upload';
+export const getOptimizedImageUrl = ({url, width, height, format = 'webp', quality = 100, type = 'image' }) => {
+  let optimizedUrl = `https://res.cloudinary.com/ddqh0mkx9/${type}/upload`;
 
   if(width) {
     optimizedUrl += `/w_${width}`;
