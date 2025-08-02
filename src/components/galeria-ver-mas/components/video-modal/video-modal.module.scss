@@ -4,34 +4,44 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  padding: 1rem;
-  backdrop-filter: blur(4px);
+  padding: 0;
+  
+  /* Específico para móviles reales */
+  -webkit-overflow-scrolling: touch;
+
+  @media (min-width: 1024px) { 
+    padding: 1rem;
+  }
 }
 
 .modalContent {
-  background: #000;
-  border-radius: 12px;
+  background: rgb(0, 0, 0);
+  border-radius: 0;
   width: 100%;
-  max-width: 1000px;
-  max-height: 90vh;
+  max-width: 100rem;
+  height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  /* Específico para móviles reales */
+  position: relative;
+
+  @media (min-width: 1024px) { 
+    border-radius: 8px;
+  }
 }
 
 .modalHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  padding: 1.5rem;
 }
 
 .modalTitle {
@@ -44,21 +54,28 @@
 .closeButton {
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.25rem;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   transition: all 0.2s ease;
+
+  @media (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+    font-weight: 600;
+    padding: 0.5rem;
+  }
 
   &:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: #fff;
   }
 }
 

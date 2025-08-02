@@ -4,55 +4,44 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   padding: 0;
-  backdrop-filter: blur(4px);
+  
   /* Específico para móviles reales */
   -webkit-overflow-scrolling: touch;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) { 
     padding: 1rem;
   }
 }
 
 .modalContent {
   background: white;
-  border-radius: 8px;
+  border-radius: 0;
   width: 100%;
-  max-width: 1200px;
-  height: 90vh;
-  max-height: 90vh;
+  max-width: 100rem;
+  height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   /* Específico para móviles reales */
   position: relative;
-  padding-bottom: 2rem;
 
-  @media (min-width: 768px) {
-    height: 85vh;
-    max-height: 85vh;
-    border-radius: 12px;
+  @media (min-width: 1024px) { 
+    border-radius: 8px;
   }
 }
 
 .modalHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 2rem;
-  border-bottom: 1px solid #e0e0e0;
-  background: #f8f9fa;
-  flex-shrink: 0;
-
-  @media (min-width: 768px) {
-    padding: 1.5rem 2rem;
-  }
+  padding: 1.5rem;
 }
 
 .modalTitle {
@@ -70,7 +59,7 @@
 .closeButton {
   background: none;
   border: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
   cursor: pointer;
   padding: 0.25rem;
   border-radius: 50%;
@@ -79,13 +68,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666;
+  color: #000;
   transition: all 0.2s ease;
 
   @media (min-width: 768px) {
     width: 40px;
     height: 40px;
-    font-size: 1.5rem;
+    font-weight: 600;
     padding: 0.5rem;
   }
 
@@ -102,7 +91,8 @@
   display: grid;
   gap: 0.75rem;
   flex: 1;
-  align-items: start;
+  align-items: center;
+  justify-content: center;
   /* Específico para móviles reales */
   -webkit-overflow-scrolling: touch;
   will-change: scroll-position;
@@ -112,29 +102,10 @@
   grid-template-columns: 1fr;
   grid-auto-rows: min-content;
   
-  /* Mobile landscape y tablets pequeñas: 2 columnas */
-  @media (min-width: 480px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(auto-fill, 600px);
     padding: 1rem;
-    gap: 1rem;
-  }
-  
-  /* Tablets: 2-3 columnas dependiendo del espacio */
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    padding: 2rem;
-    gap: 1.5rem;
-  }
-  
-  /* Desktop: 3-4 columnas */
-  @media (min-width: 1200px) {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 2rem;
-  }
-  
-  /* Desktop grande: máximo 4 columnas */
-  @media (min-width: 1400px) {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -144,7 +115,6 @@
   aspect-ratio: 1/1;
   overflow: hidden;
   border: 1px solid #e0e0e0;
-  border-radius: 6px;
   transition: transform 0.2s ease;
   background: #f9f9f9;
   display: flex;
