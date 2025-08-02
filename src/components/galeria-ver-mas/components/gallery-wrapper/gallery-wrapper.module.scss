@@ -1,5 +1,5 @@
 .galleryWrapper {
-  width: 100%;
+  grid-column: 1 / span 12;
 
   @media (min-width: 1200px) {
     grid-column: 1 / span 7;

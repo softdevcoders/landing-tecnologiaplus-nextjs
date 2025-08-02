@@ -18,25 +18,10 @@
 
 .thumbsTrack {
   position: relative;
-  height: max(500px, 70vh); /* Fallback para móviles */
+  height: calc((((100vw - 2rem) / 12) * 11) - 6 * 1.5rem);
   overflow: hidden;
 
-  @media (min-width: 768px) {
-    /* Cálculo dinámico:
-     * 1. Ancho disponible: min(112rem, 100vw) - padding
-     * 2. Ancho de galería: (ancho_disponible - gaps) / 12 * 7 (7 columnas)
-     * 3. Ancho de mainCarousel: ancho_galería - thumbnails - gap
-     * 4. Altura = ancho (aspect-ratio 1:1)
-     */
-    height: calc(
-      (
-        (min(112rem, 100vw) - 2rem - 6 * 1.5rem) / 12 * 7 - 115px - 0.625rem
-      )
-    );
-  }
-
   @media (min-width: 1200px) {
-    /* Para pantallas grandes con padding de 3rem */
     height: calc(
       (
         (min(112rem, 100vw) - 6rem - 6 * 1.5rem) / 12 * 7 - 115px - 0.625rem
