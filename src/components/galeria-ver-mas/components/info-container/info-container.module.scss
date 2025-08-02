@@ -1,6 +1,7 @@
 .infoContainer {
   display: flex;
   flex-direction: column;
+  row-gap: 2rem;
   grid-column: 1 / span 12;
 
   @media (min-width: 1200px) {
