@@ -33,6 +33,7 @@ const VideoPlayer = ({ video, isActive = true }) => {
         disablePictureInPicture
         onContextMenu={handleContextMenu}
         autoPlay
+        loop
       >
         <source src={video.src} type="video/mp4" />
         Tu navegador no soporta la reproducción de videos.

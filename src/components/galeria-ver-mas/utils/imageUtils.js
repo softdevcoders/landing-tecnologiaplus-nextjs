@@ -137,17 +137,19 @@ export const getOptimizedSizes = (context = 'main', isMobile = false) => {
 export const getOptimizedImageUrl = ({url, width, height, format = 'webp', quality = 100, type = 'image' }) => {
   let optimizedUrl = `https://res.cloudinary.com/ddqh0mkx9/${type}/upload`;
 
+  if(format) {
+    optimizedUrl += `/f_${format}`;
+  }
+
   if(width) {
-    optimizedUrl += `/w_${width}`;
+    optimizedUrl += `,w_${width}`;
   }
 
   if(height) {
     optimizedUrl += `,h_${height}`;
   }
 
-  if(format) {
-    optimizedUrl += `,f_${format}`;
-  }
+
 
   if(quality) {
     optimizedUrl += `,q_${quality}`;

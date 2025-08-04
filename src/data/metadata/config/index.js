@@ -10,7 +10,7 @@ export const ROBOTS_CONFIG = {
     follow: SHOULD_ROBOTS_INDEX,
     "max-video-preview": -1,
     "max-image-preview": "large",
-    "max-snippet": -1,
+    "max-snippet": 160, 
   },
 }
 

@@ -1,25 +1,37 @@
 .thumbs {
-  order: 1;
-  width: 115px;
-  flex-shrink: 0;
   display: none;
 
   @media (min-width: 768px) {
     display: block;
+    order: 1;
+    width: 115px;
+    flex-shrink: 0;
   }
 
   @media (min-width: 1200px) {
     width: 13%;
     min-width: 3.375rem;
-    margin-inline-start: -0.375rem;
-    margin-top: -0.375rem;
+    margin-inline-start: -0.275rem;
+    margin-top: 0.1rem;
   }
 }
 
 .thumbsTrack {
-  position: relative;
-  height: max(500px, 70vh);
-  overflow: hidden;
+
+
+  @media (min-width: 768px) {
+    position: relative;
+    height: calc((((100vw - 2rem) / 12) * 11) - 3.5rem);
+    overflow: hidden;
+  }
+
+  @media (min-width: 1200px) {
+    height: calc((((100vw - 6rem) / 12) * 6) - 1.225rem);
+  }
+
+  @media (min-width: 112rem) {
+    height: calc((((112rem - 6rem) / 12) * 6) - 1.225rem);
+  }
 
   &:hover .thumbNavButton {
     opacity: 1;

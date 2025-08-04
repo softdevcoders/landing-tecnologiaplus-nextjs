@@ -2,6 +2,7 @@ import styles from "./compatible-con.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { getOptimizedImageUrl } from "../../utils/imageUtils";
+import ArrowRightIcon  from "@/components/ui/icons/arrow-right";
 
 const CompatibleCon = ({ compatibleConProducts = [] }) => {
   return (
@@ -21,6 +22,9 @@ const CompatibleCon = ({ compatibleConProducts = [] }) => {
             <div className={styles.compatibleCon__product__content}>
               <span className={styles.compatibleCon__product__title}>{product.title}</span>
               <span className={styles.compatibleCon__product__description}>{product.description}</span>
+            </div>
+            <div className={styles.compatibleCon__product__arrow}>
+              <ArrowRightIcon size={14} strokeWidth={1.5} />
             </div>
           </Link>
         ))}

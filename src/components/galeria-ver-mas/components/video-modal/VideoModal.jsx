@@ -50,9 +50,6 @@ const VideoModal = ({
     <div className={styles.modalOverlay} onClick={handleBackdropClick}>
       <div className={styles.modalContent}>
         <div className={styles.modalHeader}>
-          <h2 className={styles.modalTitle}>
-            Video 360°{selectedColor && ` - ${selectedColor}`}
-          </h2>
           <button 
             className={styles.closeButton}
             onClick={onClose}

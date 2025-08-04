@@ -51,9 +51,6 @@ const GalleryModal = ({
     <div className={styles.modalOverlay} onClick={handleBackdropClick}>
       <div className={styles.modalContent}>
         <div className={styles.modalHeader}>
-          <h2 className={styles.modalTitle}>
-            Galería Completa{selectedColor && ` - ${selectedColor}`}
-          </h2>
           <button 
             className={styles.closeButton}
             onClick={onClose}
@@ -68,19 +65,16 @@ const GalleryModal = ({
           {imageItems.map((item, index) => (
             <div key={index} className={styles.imageItem}>
               <Image
-                src={getOptimizedImageUrl({url: item?.src, width: 400, quality: 80})} 
+                src={getOptimizedImageUrl({url: item?.src, width: 800, quality: 80})} 
                 alt={item.alt}
-                width={400}
-                height={400}
-                sizes={getOptimizedSizes('gallery-modal', false)}
+                width={800}
+                height={800}
                 style={{ 
                   width: '100%',
                   height: '100%',
                   objectFit: 'contain'
                 }}
-                priority={index < 6}
-                blurDataURL={generateBlurDataURL()}
-                placeholder="blur"
+                unoptimized={true}
               />
             </div>
           ))}
