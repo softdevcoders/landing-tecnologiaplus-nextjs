@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import styles from "./video-player.module.scss";
+import { getOptimizedVideoUrl, getOptimizedImageUrl } from "../../utils/imageUtils";
 
 const VideoPlayer = ({ video, isActive = true }) => {
   const videoRef = useRef(null);
@@ -27,7 +28,7 @@ const VideoPlayer = ({ video, isActive = true }) => {
         ref={videoRef}
         controls
         preload="metadata"
-        poster={video.thumbnail}
+        poster={getOptimizedImageUrl({url: video.thumbnail, width: 1600, quality: 80, type: 'video'})}
         className={styles.videoElement}
         playsInline
         disablePictureInPicture
@@ -35,7 +36,7 @@ const VideoPlayer = ({ video, isActive = true }) => {
         autoPlay
         loop
       >
-        <source src={video.src} type="video/mp4" />
+        <source src={getOptimizedVideoUrl({ url: video.src })} type="video/mp4" />   
         Tu navegador no soporta la reproducción de videos.
       </video>
     </div>

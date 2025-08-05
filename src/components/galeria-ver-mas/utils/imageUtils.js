@@ -159,3 +159,11 @@ export const getOptimizedImageUrl = ({url, width, height, format = 'webp', quali
 
   return optimizedUrl;
 };
+
+export const getOptimizedVideoUrl = ({ url }) => {
+  let optimizedUrl = `https://res.cloudinary.com/ddqh0mkx9/video/upload`;
+
+  optimizedUrl += `/${url}`;
+
+  return optimizedUrl;
+};
