@@ -133,14 +133,16 @@
           }
         }
 
-        picture[class='w-50'] {
+        picture {
           display: flex;
           justify-content: center;
           align-items: center;
           width: 100%;
           img {
-            width: 50%;
+            margin: 1rem 0;
+            object-fit: contain;
             height: auto;
+            width: 100%;
           }
         }
 
@@ -152,7 +154,7 @@
 
       .blogPostView__contentHtlmFooter {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         gap: 0.5rem;
         margin-top: 2rem;
