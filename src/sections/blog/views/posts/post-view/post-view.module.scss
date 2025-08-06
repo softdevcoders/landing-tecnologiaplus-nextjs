@@ -106,6 +106,13 @@
               margin-right: 0.5rem;
             }
           }
+
+          li[class='no-bullet'] {
+            list-style: none;
+            &::before {
+              content: '';
+            }
+          }
         }
 
         table {
@@ -135,6 +142,11 @@
             width: 50%;
             height: auto;
           }
+        }
+
+        div[class='divider'] {
+          margin: 2rem 0;
+          border-bottom: 1px solid #e0e0e0;
         }
       }
 
