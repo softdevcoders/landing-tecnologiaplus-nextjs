@@ -2495,7 +2495,7 @@ const encuestaVirtualOpinamaster = [
             "template_name": "/encuesta-virtual/como-mejorar-pregunta-a-tus-clientes.html",
         },
         "excerpt": {
-            "rendered": "<p>Descubre cómo una encuesta virtual te ayuda a mejorar tu negocio con las opiniones reales de tus clientes. ¡Ellos tienen la respuesta!</p>\n",
+            "rendered": "<p>Cada día, tus clientes interactúan con tu negocio, forman opiniones y viven experiencias que pueden impulsarte al éxito… o alejarte de él. Pero muchos negocios siguen adivinando en lugar de preguntar. Una encuesta virtual efectiva te permite escuchar en tiempo real lo que tus clientes piensan, sienten y necesitan. Es hora de dejar de suponer y empezar a actuar con información real, directa y poderosa. Porque la mejor estrategia comienza con una simple pregunta: ¿qué opinan tus clientes?</p>\n",
         },
         "images": [
             "v1754414735/conocer_lo_que_falla_antes_de_que_lo_griten_en_redes_nd8y6x"
