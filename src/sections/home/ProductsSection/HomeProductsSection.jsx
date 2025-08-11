@@ -16,7 +16,7 @@ const products = [
   {
     title: "TurnoMaster",
     description: "Digitaliza la gestión de turnos.",
-    imageSrc: "v1754420147/sistema_de_turnos_turnomaster_nxmrcv",
+    imageSrc: "v1754922554/sistema_de_turnos_turnomaste_jgwtjl",
     altText: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus",
     link: routes.landings.sistemasDeTurnosTurnomaster.url,
   }, 
