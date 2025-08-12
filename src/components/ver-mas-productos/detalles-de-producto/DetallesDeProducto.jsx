@@ -1,4 +1,4 @@
-import styles from "../styles/ver-mas-productos-global-style.module.scss";
+import styles from "@/components/ver-mas-productos/styles/ver-mas-productos-global-style.module.scss";
 
 const DetallesDeProducto = ({ children }) => {
   return (
