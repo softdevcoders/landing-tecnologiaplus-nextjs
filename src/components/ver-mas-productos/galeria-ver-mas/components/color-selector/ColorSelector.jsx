@@ -1,8 +1,8 @@
 "use client";
 
-import { useProductColor } from '@/contexts/ProductColorContext';
+import { useProductColor } from '@/components/ver-mas-productos/galeria-ver-mas/contexts/ProductColorContext';
 import Image from 'next/image';
-import { generateThumbnailAlt, getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from "../../utils/imageUtils";
+import { generateThumbnailAlt, getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from "../../../../../lib/imageUtils";
 import styles from './color-selector.module.scss';
 
 const ColorSelector = ({

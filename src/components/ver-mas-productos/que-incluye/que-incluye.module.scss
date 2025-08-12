@@ -1,0 +1,38 @@
+.container {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 1rem;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(auto-fill, 330px);
+  }
+
+  .container__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  .container__item__description {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .container__item__image__container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    padding: 0.625rem;
+
+    .container__item__image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

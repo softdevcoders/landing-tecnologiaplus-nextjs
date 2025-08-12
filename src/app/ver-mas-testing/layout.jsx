@@ -1,11 +1,11 @@
 import LayoutWrapperHeaderDarkWithContactForm from "@/components/layout/LayoutWrapperHeaderDarkWithContactForm"
-import style from "@/styles/layout.module.scss"
+import VerMasWrapper from "@/components/ver-mas-productos/layout/ver-mas-wrapper/VerMasWrapper"
 
 const Layout = ({ children }) => (
-  <LayoutWrapperHeaderDarkWithContactForm>
-    <div className={style.layout_header_margin_top}>
+  <LayoutWrapperHeaderDarkWithContactForm> 
+    <VerMasWrapper>
       {children}
-    </div>
+    </VerMasWrapper>
   </LayoutWrapperHeaderDarkWithContactForm>
 )
 

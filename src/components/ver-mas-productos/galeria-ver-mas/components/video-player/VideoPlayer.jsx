@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import styles from "./video-player.module.scss";
-import { getOptimizedVideoUrl, getOptimizedImageUrl } from "../../utils/imageUtils";
+import { getOptimizedVideoUrl, getOptimizedImageUrl } from "../../../../../lib/imageUtils";
 
 const VideoPlayer = ({ video, isActive = true }) => {
   const videoRef = useRef(null);

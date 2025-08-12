@@ -1,4 +1,4 @@
-import GaleriaVerMas from '@/components/galeria-ver-mas/GaleriaVerMas';
+import GaleriaVerMas from '@/components/ver-mas-productos/galeria-ver-mas/GaleriaVerMas';
 import { productosGaleriaVerMas } from '@/config/productos-galeria-ver-mas';
 
 function ProductGallery() {

@@ -2,10 +2,10 @@
 
 import { useCallback, useMemo, useRef } from 'react';
 import Image from "next/image";
-import { generateImageAlt, shouldUsePriority, getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from "../../utils/imageUtils";
-import styles from "./zoomable-image-direct.module.scss";
+import { generateImageAlt, shouldUsePriority, getOptimizedSizes, generateBlurDataURL } from "../../../../../lib/imageUtils";
+import styles from "./zoomable-image.module.scss";
 
-const ZoomableImageDirect = ({
+const ZoomableImage = ({
   image,
   isZoomed,
   zoomPosition,
@@ -150,13 +150,13 @@ const ZoomableImageDirect = ({
           <span className={styles.closeZoomText}>Cerrar zoom</span>
         </button>
       )}
- 
+
       <div className={styles.imageContainer}>
         <Image
-          src={getOptimizedImageUrl({url: image.src, width: 1600, quality: 80})} 
+          src={image.src}
           alt={altText}
-          width={1800}
-          height={1800}
+          width={image.width}
+          height={image.height}
           priority={usePriority}
           sizes={optimizedSizes}
           style={{
@@ -166,11 +166,11 @@ const ZoomableImageDirect = ({
           }}
           placeholder="blur"
           blurDataURL={generateBlurDataURL()}
-          unoptimized={true}
+          unoptimized={false}
         />
       </div>
     </div>
   );
 };
 
-export default ZoomableImageDirect; 
+export default ZoomableImage; 

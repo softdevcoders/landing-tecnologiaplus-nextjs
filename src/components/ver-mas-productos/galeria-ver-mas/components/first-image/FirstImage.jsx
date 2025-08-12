@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { generateImageAlt, getOptimizedSizes } from "../../utils/imageUtils";
+import { generateImageAlt, getOptimizedSizes } from "../../../../../lib/imageUtils";
 import styles from "./first-image.module.scss";
 
 const FirstImage = ({ 

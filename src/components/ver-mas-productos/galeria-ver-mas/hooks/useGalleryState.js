@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState, useEffect, useMemo } from 'react';
-import { useProductColorSafe } from '@/contexts/ProductColorContext';
+import { useProductColorSafe } from '@/components/ver-mas-productos/galeria-ver-mas/contexts/ProductColorContext';
 
 export const useGalleryState = (media = [], colors = [], hasColors = false, selectedIndex = 0) => {
   const colorContext = useProductColorSafe();

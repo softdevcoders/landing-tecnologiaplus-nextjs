@@ -1,8 +1,8 @@
 import styles from "./galeria-ver-mas.module.scss";
 import GalleryWrapper from "./components/gallery-wrapper";
 import InfoContainer from "./components/info-container";
-import { ProductColorProvider } from "@/contexts/ProductColorContext";
-import BackButton from "../back-button";
+import { ProductColorProvider } from "@/components/ver-mas-productos/galeria-ver-mas/contexts/ProductColorContext";
+import BackButton from "@/components/back-button";
 
 const GaleriaVerMas = ({ verMasInformacion }) => {
   const { title, description, media, colors, defaultColor, hasColors = false, compatibleConProducts = [] } = verMasInformacion;

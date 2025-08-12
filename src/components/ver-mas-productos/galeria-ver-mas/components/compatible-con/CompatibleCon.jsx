@@ -1,7 +1,7 @@
 import styles from "./compatible-con.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { getOptimizedImageUrl } from "../../utils/imageUtils";
+import { getOptimizedImageUrl } from "../../../../../lib/imageUtils";
 import ArrowRightIcon  from "@/components/ui/icons/arrow-right";
 
 const CompatibleCon = ({ compatibleConProducts = [] }) => {

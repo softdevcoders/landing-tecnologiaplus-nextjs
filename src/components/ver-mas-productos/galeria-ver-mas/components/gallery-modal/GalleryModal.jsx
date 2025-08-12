@@ -3,7 +3,7 @@
 import { useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
-import { getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from '../../utils/imageUtils';
+import { getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from '../../../../../lib/imageUtils';
 import styles from './gallery-modal.module.scss';
 
 const GalleryModal = ({ 

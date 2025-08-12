@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #535353;
+  }
+
+  .content__container {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #535353;
+      text-align: justify;
+    }
+  }
+}
