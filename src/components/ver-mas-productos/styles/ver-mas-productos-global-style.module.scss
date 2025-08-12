@@ -4,9 +4,13 @@
   gap: 1.875rem;
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #535353;
+
+    @media (min-width: 1024px) {
+      font-size: 1.5rem;
+    }
   }
 
   .content__container {
@@ -14,10 +18,15 @@
     flex-direction: column;
 
     p {
-      font-size: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.4;
       font-weight: 400;
       color: #535353;
       text-align: justify;
+
+      @media (min-width: 1024px) {
+        font-size: 1.125rem;
+      }
     }
   }
 }
