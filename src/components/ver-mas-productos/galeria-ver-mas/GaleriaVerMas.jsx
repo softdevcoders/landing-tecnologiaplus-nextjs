@@ -1,4 +1,5 @@
 import styles from "./galeria-ver-mas.module.scss";
+import globalStyles from "@/components/ver-mas-productos/styles/ver-mas-productos-global-style.module.scss";
 import GalleryWrapper from "./components/gallery-wrapper";
 import InfoContainer from "./components/info-container";
 import { ProductColorProvider } from "@/components/ver-mas-productos/galeria-ver-mas/contexts/ProductColorContext";
@@ -16,7 +17,7 @@ const GaleriaVerMas = ({ verMasInformacion }) => {
   }
 
   const content = (
-    <section className={styles.container}>
+    <section className={`${styles.container} ${globalStyles.container}`}>
       <div className={styles.backButton__container}>
         <BackButton />
       </div>

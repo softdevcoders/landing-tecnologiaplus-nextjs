@@ -1,6 +1,6 @@
 import DetallesDeProducto from "@/components/ver-mas-productos/detalles-de-producto";
 
-const DetallesDelProducto = () => {
+const DetallesDelProductoSection = () => {
   return (
     <DetallesDeProducto>
       <p>El botón llamador de meseros E2-B de Tecnología Plus es inalámbrico,  práctico y moderno para optimizar la atención al cliente en restaurantes, cafés, clínicas, spas, gimnasios y más. Su diseño compacto incorpora dos teclas diferenciadas que permiten realizar funciones como “Llamar” y “Cancelar”, facilitando una comunicación clara y eficiente entre el usuario y el personal de servicio.</p>
@@ -10,4 +10,4 @@ const DetallesDelProducto = () => {
   );
 };
 
-export default DetallesDelProducto;
+export default DetallesDelProductoSection;

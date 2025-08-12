@@ -1,7 +1,7 @@
 import GaleriaVerMas from '@/components/ver-mas-productos/galeria-ver-mas/GaleriaVerMas';
 import { productosGaleriaVerMas } from '@/config/productos-galeria-ver-mas';
 
-function ProductGallery() {
+function ProductGallerySection() {
   return (
     <GaleriaVerMas 
       verMasInformacion={productosGaleriaVerMas.llamadoresMeseros.llamadorDeMeserosE2B} 
@@ -9,4 +9,4 @@ function ProductGallery() {
   );
 }
 
-export default ProductGallery; 
+export default ProductGallerySection; 
