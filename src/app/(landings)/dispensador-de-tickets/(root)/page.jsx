@@ -18,7 +18,7 @@ export default function DispensadorTiquetesLanding() {
   return (
     <>
       {/* Schema.org optimizado para SEO usando datos centralizados */}
-      <LandingPageSchema
+      {/* <LandingPageSchema
         pageTitle={metadata.title.absolute}
         pageDescription={metadata.description}
         pageUrl={metadata.alternates.canonical}
@@ -26,7 +26,7 @@ export default function DispensadorTiquetesLanding() {
         landingCategory="dispensadorDeTickets"
         primaryImage={metadata.seoImages?.primary}
         productImages={metadata.seoImages?.gallery || []}
-      />
+      /> */}
       <DispensadorTiquetesHeroSection />
       <DispensadorTiquetesClientsSection />
       <DispensadorTiquetesProductsSection />

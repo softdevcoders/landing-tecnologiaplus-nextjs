@@ -1,12 +1,8 @@
-"use client";
-
-import Image from "next/image";
-import { useState } from "react";
+import Image from "next/image"; 
 import style from "./LlamadorMeserosProductsSection.module.scss";
+import ToggleTextContent from "@/components/toggle-text-content";
 
 function LlamadorMeserosProductsSection() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <section className={style.products__section}>
       <div className={style.products__container_mobile}>
@@ -48,23 +44,17 @@ function LlamadorMeserosProductsSection() {
             className={style.products__container__item__image}
           />
         </div>
-      </div>
-      <p className={`${style.products__text} ${isOpen ? style.open : ""}`}>
-        Eleva el nivel de tu negocio con el Llamador de Meseros. Este sistema
+      </div>  
+      <ToggleTextContent> 
+        <p>Eleva el nivel de tu negocio con el Llamador de Meseros. Este sistema
         permite que los clientes soliciten atención de manera rápida, discreta y
         sin interrumpir su conversación. Con solo pulsar un botón, el mesero
         recibe la alerta y acude a la mesa indicada en segundos. Nada de
         levantar la mano, esperar demasiado o llamar en voz alta. Con este
         sistema, la atención es más fluida, el servicio más ágil y la
         satisfacción del cliente aumenta considerablemente, impactando
-        directamente en la reputación y fidelización de tu negocio.
-      </p>
-      <button
-        className={style.toggle__label}
-        onClick={() => setIsOpen(!isOpen)}
-      > 
-        {isOpen ? "Ver menos" : "Ver más"}
-      </button>
+        directamente en la reputación y fidelización de tu negocio.</p>
+      </ToggleTextContent>
     </section>
   );
 }

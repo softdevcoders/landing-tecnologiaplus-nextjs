@@ -1,308 +1,170 @@
 /**
  * Componente Schema.org para Landing Pages
  * Genera structured data optimizado para SEO incluyendo:
- * - Product schema para productos específicos
+ * - WebPage schema para la página principal
+ * - ImageObject para la imagen principal
  * - BreadcrumbList para navegación
- * - WebPage para la página general
- * - Organization para datos de la empresa
+ * - WebSite para datos del sitio web
+ * - Service para el servicio ofrecido
  */
 
-import { routes } from "@/config/routes";
-import { generateOptimizedImageVariants } from "@/lib/optimizedImageServer";
-import { cleanText } from "@/lib/clean-text";
-import { LOGO_METADATA } from "@/data/metadata/config";
+import { DEFAULT_LOGO_IMAGE } from "@/data/metadata/config";
 
 // URL base para canonical URLs
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://tecnologiaplus.com';
 
-// Información de la organización
-const ORGANIZATION_DATA = {
-  "@type": "Organization",
-  "name": "Tecnología Plus",
-  "url": BASE_URL,
-  // "logo": {
-  //   "@type": "ImageObject",
-  //   "url": LOGO_METADATA,
-  //   "width": 192,
-  //   "height": 192
-  // },
-  "description": "Fabricantes expertos en sistemas de autoservicio, turnos y gestión de filas para restaurantes, hospitales y centros comerciales.",
-  // "email": "ventas@tecnologiaplus.com",
-  // "address": [
-  //   {
-  //     "@type": "PostalAddress",
-  //     "addressCountry": "CO",
-  //     "addressLocality": "Bogotá",
-  //     "streetAddress": "Cra 19 # 82-85 oficina 401",
-  //     "addressRegion": "Bogotá D.C."
-  //   },
-  //   {
-  //     "@type": "PostalAddress",
-  //     "addressCountry": "CO",
-  //     "addressLocality": "Medellín",
-  //     "streetAddress": "El Poblado edificio Oceanía",
-  //     "addressRegion": "Antioquia"
-  //   },
-  //   {
-  //     "@type": "PostalAddress",
-  //     "addressCountry": "PE",
-  //     "addressLocality": "Lima",
-  //     "addressRegion": "Lima"
-  //   }
-  // ],
-  // "contactPoint": [
-  //   {
-  //     "@type": "ContactPoint",
-  //     "contactType": "sales",
-  //     "availableLanguage": ["Spanish"],
-  //     "telephone": ["+573164682034", "+573227347971"],
-  //     "areaServed": "CO",
-  //     "contactOption": "TollFree"
-  //   },
-  //   {
-  //     "@type": "ContactPoint",
-  //     "contactType": "sales",
-  //     "availableLanguage": ["Spanish"],
-  //     "telephone": "+51976270171",
-  //     "areaServed": "PE",
-  //     "contactOption": "TollFree"
-  //   }
-  // ],
-  // "areaServed": [
-  //   {
-  //     "@type": "GeoCircle",
-  //     "geoMidpoint": {
-  //       "@type": "GeoCoordinates",
-  //       "latitude": "4.6097",
-  //       "longitude": "-74.0817"
-  //     },
-  //     "description": "Colombia - Cobertura nacional"
-  //   },
-  //   {
-  //     "@type": "Country",
-  //     "name": "Peru"
-  //   }
-  // ],
-  // "serviceArea": ["Colombia", "Peru", "Latin America"]
-};
-
 /**
- * Genera breadcrumbs basado en la estructura de rutas
- */
-function generateBreadcrumbs(landingCategory, productSlug = null) {
-  const breadcrumbs = [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": `${BASE_URL}/`
-    }
-  ];
-
-  // Buscar la categoría en las rutas
-  const categoryRoute = routes.landings[landingCategory];
-  if (categoryRoute) {
-    breadcrumbs.push({
-      "@type": "ListItem",
-      "position": 2,
-      "name": categoryRoute.label,
-      "item": `${BASE_URL}${categoryRoute.url}/`
-    });
-
-    // Si es un producto específico, añadir el breadcrumb del producto
-    if (productSlug && categoryRoute.children && categoryRoute.children[productSlug]) {
-      breadcrumbs.push({
-        "@type": "ListItem",
-        "position": 3,
-        "name": categoryRoute.children[productSlug].name,
-        "item": `${BASE_URL}${categoryRoute.children[productSlug].url}/`
-      });
-    }
-  }
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": breadcrumbs
-  };
-}
-
-/**
- * Genera schema de producto
- */
-function generateProductSchema({
-  name,
-  description,
-  images = [],
-  category = "Sistemas de Autoservicio",
-  brand = "Tecnología Plus",
-  manufacturer = "Tecnología Plus",
-  url,
-  keywords = []
-}) {
-  // Optimizar imágenes para diferentes formatos
-  const optimizedImages = images.map(imageUrl => {
-    const variants = generateOptimizedImageVariants(imageUrl, name);
-    return {
-      "@type": "ImageObject",
-      "url": variants.openGraph.url,
-      "width": variants.openGraph.width,
-      "height": variants.openGraph.height,
-      "caption": name
-    };
-  });
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": cleanText(name),
-    "description": cleanText(description),
-    "brand": {
-      "@type": "Brand",
-      "name": brand
-    },
-    "manufacturer": {
-      "@type": "Organization",
-      "name": manufacturer,
-      "url": `${BASE_URL}/`
-    },
-    "category": category,
-    "image": optimizedImages,
-    "url": url,
-    "keywords": keywords.join(", "),
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "name": "Tecnología Plus",
-        "url": `${BASE_URL}/`
-      }
-    }
-  };
-}
-
-/**
- * Genera schema de página web
- */
-function generateWebPageSchema({
-  name,
-  description,
-  url,
-  primaryImage,
-  keywords = []
-}) {
-  let imageData = null;
-
-  // Si la imagen es un objeto, usar los datos proporcionados
-  if(typeof primaryImage === 'object' && primaryImage !== null) {
-    imageData = {
-      "@type": "ImageObject",
-      "url": primaryImage?.small?.url || null,
-      "caption": primaryImage?.small?.alt || null,
-    }
-  }
-
-  // Si la imagen es una URL, generar las variantes optimizadas
-  if(typeof primaryImage === 'string' && primaryImage !== null) {
-    const optimizedImage = generateOptimizedImageVariants(primaryImage, name);
-    imageData = {
-      "@type": "ImageObject",
-      "url": optimizedImage.openGraph.url,
-      "caption": name,
-    }
-  }
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": cleanText(name),
-    "description": cleanText(description),
-    "url": `${url}/`,
-    "image": imageData, // Propiedad estándar que Google reconoce mejor
-    "author": {
-      "@type": "Organization",
-      "name": "Tecnología Plus",
-      "url": `${BASE_URL}/`
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Tecnología Plus",
-      "url": `${BASE_URL}/`,
-      // "logo": {
-      //   "@type": "ImageObject",
-      //   "url": "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1747675231/website-v2/logos/so7xgqia3ntpj1hqlpsk.png",
-      //   "width": 192,
-      //   "height": 192
-      // }
-    },
-    "datePublished": "2024-01-15T08:00:00+00:00",
-    "dateModified": new Date().toISOString(),
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `${url}/`
-    },
-    "keywords": keywords.join(", ")
-  };
-}
-
-/**
- * Props del componente LandingPageSchema
+ * Genera el esquema completo de la landing page
  */
 export default function LandingPageSchema({
   // Información básica de la página
   pageTitle,
   pageDescription,
   pageUrl,
-  keywords = [],
-  
-  // Información del producto (opcional)
-  productData = null,
+  // Información de la imagen principal
+  primaryImage,
+  // Fechas de publicación y modificación
+  datePublished = "2025-06-16T17:12:34+00:00",
+  dateModified = "2025-06-16T17:35:53+00:00",
   
   // Navegación
-  landingCategory, // ej: 'localizadoresParaRestaurantes'
-  productSlug = null, // ej: 'rec_v3' para productos específicos
-  
-  // Imágenes
-  primaryImage = null,
-  productImages = []
+  landingCategory,
 }) {
-  return null;
-  const schemas = [];
+  // Generar breadcrumbs
+  const breadcrumbs = [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": `${BASE_URL}`
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": pageTitle,
+      "item": pageUrl
+    }
+  ];
 
-  // 1. Schema de organización (siempre presente)
-  schemas.push(ORGANIZATION_DATA);
+  // Para futuras implementaciones considerar agregar el breadcrumb para Ver mas.
 
-  // 2. Schema de breadcrumbs
-  schemas.push(generateBreadcrumbs(landingCategory, productSlug));
-
-  // 3. Schema de página web
-  schemas.push(generateWebPageSchema({
-    name: pageTitle,
-    description: pageDescription,
-    url: pageUrl,
-    primaryImage,
-    isProductPage: !!productData,
-    keywords
-  }));
-
-  // 4. Schema de producto (si se proporciona información del producto)
-  if (productData) {
-    schemas.push(generateProductSchema({
-      name: productData.name,
-      description: productData.description,
-      images: productImages,
-      category: productData.category || "Sistemas de Autoservicio",
-      url: pageUrl,
-      keywords
-    }));
-  }
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": pageUrl,
+        "url": pageUrl,
+        "name": pageTitle,
+        "isPartOf": { "@id": `${BASE_URL}/#website` },
+        "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
+        "image": { "@id": `${pageUrl}#primaryimage` },
+        "thumbnailUrl": primaryImage.url,
+        "datePublished": datePublished,
+        "dateModified": dateModified,
+        "description": pageDescription,
+        "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
+        "inLanguage": "es-CO",
+        "potentialAction": [{
+          "@type": "ReadAction",
+          "target": [pageUrl]
+        }],
+        "mainEntity": { "@id": `${pageUrl}#service` }
+      },
+      {
+        "@type": "ImageObject",
+        "inLanguage": "es-CO",
+        "@id": `${pageUrl}#primaryimage`,
+        "url": primaryImage.url,
+        "contentUrl": primaryImage.url,
+        "width": primaryImage.width,
+        "height": primaryImage.height,
+        "caption": primaryImage.alt,
+        "representativeOfPage": true
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        "itemListElement": breadcrumbs
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${BASE_URL}/#website`,
+        "url": `${BASE_URL}`,
+        "name": "Tecnología Plus",
+        "description": "Fabricantes de soluciones de autoservicio para restaurantes, eventos y negocios. Localizadores y llamadores que llevan tu atención al siguiente nivel.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tecnología Plus",
+          "url": `${BASE_URL}`,
+          "logo": { 
+            "@type": "ImageObject", 
+            "url": DEFAULT_LOGO_IMAGE.url,
+            "width": DEFAULT_LOGO_IMAGE.width,  
+            "height": DEFAULT_LOGO_IMAGE.height
+          },
+          "sameAs": [
+            "https://www.facebook.com/tecnologiapluscolombia",
+            "https://www.instagram.com/tecnologiapluscolombia",
+            "https://www.youtube.com/channel/UCPho92vfQwC24X8Y3eI8Dvg",
+            "https://www.tiktok.com/@tecnologiapluscolombia",
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "email": "ventas@tecnologiaplus.com",
+              "telephone": "+57 316 468 2034",
+              "contactType": "Ventas",
+              "areaServed": "CO",
+              "availableLanguage": "es"
+            },
+            {
+              "@type": "ContactPoint",
+              "telephone": "+57 322 734 7971",
+              "contactType": "Ventas",
+              "areaServed": "CO",
+              "availableLanguage": "es-CO"
+            }
+          ]
+        },
+        // "potentialAction": [{
+        //   "@type": "SearchAction",
+        //   "target": { "@type": "EntryPoint", "urlTemplate": `${BASE_URL}/?s={search_term_string}` },
+        //   "query-input": { "@type": "PropertyValueSpecification", "valueRequired": true, "valueName": "search_term_string" }
+        // }],
+        "inLanguage": "es-CO"
+      },
+      {
+        "@type": "Service",
+        "@id": `${pageUrl}#service`,
+        "serviceType": pageTitle,
+        "provider": { 
+          "@type": "Organization", 
+          "name": "Tecnología Plus", 
+          "url": `${BASE_URL}`, 
+          "logo": DEFAULT_LOGO_IMAGE.url
+        },
+        "areaServed": { "@type": "Country", "name": "Colombia" },
+        "brand": { "@type": "Brand", "name": "Tecnología Plus" },
+        "offers": {
+          "@type": "Offer",
+          "url": pageUrl,
+          "priceCurrency": "COP",
+          "price": "0",
+          "availability": "https://schema.org/InStock"
+        },
+        "description": pageDescription,
+        "image": primaryImage.url,
+        "inLanguage": "es-CO"
+      }
+    ]
+  };
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(schemas, null, 2)
+        __html: JSON.stringify(schema, null, 2)
       }}
     />
   );

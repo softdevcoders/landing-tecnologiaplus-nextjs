@@ -19,7 +19,7 @@ export default function EncuestaVirtualLanding() {
   return (
     <>
       {/* Schema.org optimizado para SEO usando datos centralizados */}
-      <LandingPageSchema
+      {/* <LandingPageSchema
         pageTitle={metadata.title.absolute}
         pageDescription={metadata.description}
         pageUrl={metadata.alternates.canonical}
@@ -27,7 +27,7 @@ export default function EncuestaVirtualLanding() {
         landingCategory="encuestaVirtualOpinamaster"
         primaryImage={metadata.seoImages?.primary}
         productImages={metadata.seoImages?.gallery || []}
-      />
+      /> */}
       <EncuestaVirtualHeroSection />
       <EncuestaVirtualClientsSection />
       <EncuestaVirtualProductsSection />

@@ -8,9 +8,9 @@ function ToggleTextContent({ children }) {
 
   return (
     <div className={style.description__section}>
-      <p className={`${style.description__section__text} ${isOpen ? style.open : ""}`}>
+      <div className={`${style.description__section__text} ${isOpen ? style.open : ""}`}>
         {children}
-      </p>
+      </div>
       <button
         className={style.toggle__label}
         onClick={() => setIsOpen(!isOpen)}

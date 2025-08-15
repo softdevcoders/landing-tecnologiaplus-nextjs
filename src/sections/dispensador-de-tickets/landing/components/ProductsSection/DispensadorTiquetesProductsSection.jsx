@@ -24,7 +24,7 @@ function DispensadorTiquetesProductsSection() {
         </Link>
       </div>
       <ToggleTextContent>
-        Elimina las filas y agiliza el flujo de atención, nuestro dispensador de turnos ayuda a reducir el desorden y mejora la experiencia de espera,asegurando que cada cliente sea atendido en el momento adecuado y sin confusiones.
+        <p>Elimina las filas y agiliza el flujo de atención, nuestro dispensador de turnos ayuda a reducir el desorden y mejora la experiencia de espera,asegurando que cada cliente sea atendido en el momento adecuado y sin confusiones.</p>
       </ToggleTextContent>
     </section>
   );

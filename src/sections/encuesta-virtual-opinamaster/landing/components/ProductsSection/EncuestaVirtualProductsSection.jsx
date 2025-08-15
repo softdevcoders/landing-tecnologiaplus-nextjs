@@ -22,6 +22,7 @@ function EncuestaVirtualProductsSection() {
         />
       </div>
       <ToggleTextContent>
+        <p>
         Cada empresa es única, y OpinaMaster Virtual se adapta a sus
         necesidades. Este sistema de encuestas de satisfacción del cliente
         permite personalizar preguntas, elegir diferentes formatos de respuesta
@@ -31,6 +32,7 @@ function EncuestaVirtualProductsSection() {
         desde retail y restaurantes hasta clínicas y corporaciones. Con
         OpinaMaster, medir la experiencia del cliente te ayuda a tomar mejores
         decisiones.
+        </p>
       </ToggleTextContent>
     </section>
   );

@@ -19,7 +19,7 @@ export default function RollosTermicosLanding() {
   return (
     <>
       {/* Schema.org optimizado para SEO usando datos centralizados */}
-      <LandingPageSchema
+      {/* <LandingPageSchema
         pageTitle={metadata.title.absolute}
         pageDescription={metadata.description}
         pageUrl={metadata.alternates.canonical}
@@ -27,7 +27,7 @@ export default function RollosTermicosLanding() {
         landingCategory="rollosDePapelTermico"
         primaryImage={metadata.seoImages?.primary}
         productImages={metadata.seoImages?.gallery || []}
-      />
+      /> */}
       <HeroSection />
       <ClientsSection />
       <ProductsSection />

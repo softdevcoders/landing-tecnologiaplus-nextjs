@@ -23,15 +23,17 @@ function ProductsSection() {
         />
       </div>
       <ToggleTextContent>
-        En Tecnología Plus, somos fabricantes especializados en rollos térmicos
-        de alta calidad, diseñados para satisfacer las necesidades de impresión
-        de todo tipo de negocios. Nuestros productos destacan por su precisión,
-        durabilidad y compatibilidad con las principales impresoras del mercado.
-        Nos comprometemos a brindar soluciones confiables que optimicen tus
-        procesos y refuercen la profesionalidad de tu empresa. Elige Tecnología
-        Plus y experimenta la diferencia que solo los expertos pueden ofrecer.
-        ¡Contacta con nosotros y descubre cómo podemos ser tu mejor aliado en
-        impresión térmica!
+        <p>
+          En Tecnología Plus, somos fabricantes especializados en rollos térmicos
+          de alta calidad, diseñados para satisfacer las necesidades de impresión
+          de todo tipo de negocios. Nuestros productos destacan por su precisión,
+          durabilidad y compatibilidad con las principales impresoras del mercado.
+          Nos comprometemos a brindar soluciones confiables que optimicen tus
+          procesos y refuercen la profesionalidad de tu empresa. Elige Tecnología
+          Plus y experimenta la diferencia que solo los expertos pueden ofrecer.
+          ¡Contacta con nosotros y descubre cómo podemos ser tu mejor aliado en
+          impresión térmica!
+        </p>
       </ToggleTextContent>
     </section>
   );

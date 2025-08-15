@@ -21,7 +21,7 @@ export default function CalificadorLanding() {
   return (
     <>
       {/* Schema.org optimizado para SEO usando datos centralizados */}
-      <LandingPageSchema
+      {/* <LandingPageSchema
         pageTitle={metadata.title.absolute}
         pageDescription={metadata.description}
         pageUrl={metadata.alternates.canonical}
@@ -29,7 +29,7 @@ export default function CalificadorLanding() {
         landingCategory="calificadorDeServicioAlClienteOpinamaster"
         primaryImage={metadata.seoImages?.primary}
         productImages={metadata.seoImages?.gallery || []}
-      />
+      /> */}
       <CalificadorHeroSection />
       <CalificadorClientsSection />
       <CalificadorProductsSection />

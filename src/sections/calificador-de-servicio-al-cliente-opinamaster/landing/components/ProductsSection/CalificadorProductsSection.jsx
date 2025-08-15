@@ -75,17 +75,19 @@ function CalificadorProductsSection() {
         ))}
       </div>
       <ToggleTextContent>
-        En Tecnología Plus, entendemos que la satisfacción del cliente es clave
-        para el éxito de cualquier negocio. Por eso, hemos desarrollado
-        OpinaMaster, un sistema avanzado que permite recopilar opiniones en
-        tiempo real y transformar cada experiencia en una oportunidad de mejora.
-        Con nuestro Calificador de Servicio, los clientes pueden evaluar su
-        atención de forma rápida, permitiéndote recibir alertas automáticas en
-        caso de calificaciones negativas, personalizar preguntas según tus
-        necesidades y acceder a estadísticas en línea para analizar tendencias y
-        tomar decisiones estratégicas. Somos fabricantes, lo que nos permite
-        ofrecer soluciones personalizadas, adaptadas a distintos sectores como
-        restaurantes, clínicas, hoteles y más.
+        <p>
+          En Tecnología Plus, entendemos que la satisfacción del cliente es clave
+          para el éxito de cualquier negocio. Por eso, hemos desarrollado
+          OpinaMaster, un sistema avanzado que permite recopilar opiniones en
+          tiempo real y transformar cada experiencia en una oportunidad de mejora.
+          Con nuestro Calificador de Servicio, los clientes pueden evaluar su
+          atención de forma rápida, permitiéndote recibir alertas automáticas en
+          caso de calificaciones negativas, personalizar preguntas según tus
+          necesidades y acceder a estadísticas en línea para analizar tendencias y
+          tomar decisiones estratégicas. Somos fabricantes, lo que nos permite
+          ofrecer soluciones personalizadas, adaptadas a distintos sectores como
+          restaurantes, clínicas, hoteles y más.
+        </p>
       </ToggleTextContent>
     </section>
   );

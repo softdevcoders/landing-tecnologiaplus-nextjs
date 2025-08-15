@@ -22,7 +22,7 @@ export default function LlamadorMeserosLanding() {
   return (
     <>
       {/* Schema.org optimizado para SEO usando datos centralizados */}
-      <LandingPageSchema
+      {/* <LandingPageSchema
         pageTitle={metadata.title.absolute}
         pageDescription={metadata.description}
         pageUrl={metadata.alternates.canonical}
@@ -30,7 +30,7 @@ export default function LlamadorMeserosLanding() {
         landingCategory="llamadoresDeMeseros"
         primaryImage={metadata.seoImages?.primary}
         productImages={metadata.seoImages?.gallery || []}
-      />
+      /> */}
       <LlamadorMeserosHeroSection />
       <LlamadorMeserosClientsSection />
       <LlamadorMeserosProductsSection />

@@ -1,10 +1,8 @@
-"use client";
-
 import { routes } from "@/config/routes";
 import style from "./TurnoExpressProductsSection.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import ToggleTextContent from "@/components/toggle-text-content";
 
 function TurnoExpressProductsSection() {
 
@@ -52,8 +50,6 @@ function TurnoExpressProductsSection() {
       type: "panel_digital",
     },
   ];
-
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section className={style.ver__mas__section}>
@@ -129,22 +125,12 @@ function TurnoExpressProductsSection() {
             </div>
           ))}
         </div>
-        <div className={style.description__section}>
-          <p className={`${style.description__section__text} ${isOpen ? style.open : ""}`}>
-            Dale a tus clientes la comodidad que merecen con TurnoExpress. Nuestro
-            Turnero digital elimina las aburridas filas, brindando orden y comodidad
-            para tu equipo de trabajo y para tus clientes. Con nuestra pantalla de
-            turnos ayudas a mejorar el servicio y los tiempos de atención, mientras
-            tus clientes esperan el turno de una forma más cómoda y sin estrés
-            porque sabrán exactamente cuantos turnos faltan para ser atendidos.
+        <ToggleTextContent>
+          <p>
+          Dale a tus clientes la comodidad que merecen con TurnoExpress. Nuestro Turnero digital elimina las aburridas filas, brindando orden y comodidad para tu equipo de trabajo y para tus clientes. Con nuestra pantalla de turnos ayudas a mejorar el servicio y los tiempos de atención, mientras tus clientes esperan el turno de una forma más cómoda y sin estrés porque sabrán exactamente cuantos turnos faltan para ser atendidos.
           </p>
-          <button
-            className={style.toggle__label}
-            onClick={() => setIsOpen(!isOpen)}
-          > 
-            {isOpen ? "Ver menos" : "Ver más"}
-          </button>
-        </div>
+        </ToggleTextContent>
+        
       </div>
     </section>
   );

@@ -63,7 +63,7 @@ function LocalizadoresSecondaryProductsSection() {
             </div>
           </div>
           <p className={style.secondary__products__description}>
-            Localizador de clientes con señal de largo alcance y material resistente a golpes o caídas.
+            <strong>Localizador de clientes con señal de largo alcance y material resistente a golpes o caídas.</strong>
           </p>
         </div>
       </section>
