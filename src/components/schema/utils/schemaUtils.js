@@ -8,22 +8,14 @@
 export function cleanAllSchemas() {
   // Buscar en todo el documento, no solo en el head
   const allSchemas = document.querySelectorAll('script[type="application/ld+json"]');
-  console.log('cleanAllSchemas - Schemas encontrados para limpiar:', allSchemas.length);
   
   if (allSchemas.length === 0) {
-    console.log('cleanAllSchemas - No se encontraron schemas para limpiar');
     return;
   }
   
-  allSchemas.forEach((schema, index) => {
-    console.log(`cleanAllSchemas - Removiendo schema ${index + 1} con ID:`, schema.id);
+  allSchemas.forEach((schema) => {
     schema.remove();
   });
-  
-  // Verificar que se hayan removido
-  const remainingSchemas = document.querySelectorAll('script[type="application/ld+json"]');
-  console.log('cleanAllSchemas - Schemas restantes después de limpieza:', remainingSchemas.length);
-  console.log('cleanAllSchemas - Limpieza completada');
 }
 
 /**
@@ -39,14 +31,12 @@ export function cleanOldSchemas() {
  * Inserta un nuevo script de schema en el head
  */
 export function insertSchemaScript(schemaData, id = 'landing-page-schema') {
-  console.log('insertSchemaScript - Creando script con ID:', id);
   const newScript = document.createElement('script');
   newScript.type = 'application/ld+json';
   newScript.id = id;
-  newScript.textContent = JSON.stringify(schemaData, null, 2);
+  newScript.textContent = JSON.stringify(schemaData, null, 0).replace(/\s+/g, '');
   
   document.head.appendChild(newScript);
-  console.log('insertSchemaScript - Script insertado en el head');
   return newScript;
 }
 

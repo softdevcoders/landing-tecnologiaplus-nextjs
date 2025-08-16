@@ -200,37 +200,22 @@ const generateClientSchema = (pathname) => {
 export default function SchemaCleaner() {
   const pathname = usePathname();
   const scriptRef = useRef(null);
-  
-  // Log inmediato cuando cambie el pathname
-  console.log('SchemaCleaner - Pathname cambiado a:', pathname);
 
   useEffect(() => {
-    console.log('SchemaCleaner - useEffect TRIGGERED para pathname:', pathname);
-    
     // Solo ejecutar en navegaciones SPA (no en SSR)
     if (typeof window !== 'undefined') {
-      console.log('SchemaCleaner - useEffect ejecutado para pathname:', pathname);
-      
       // PRIMERO: Limpiar TODOS los schemas anteriores
       cleanAllSchemas();
-      console.log('SchemaCleaner - Schemas anteriores limpiados');
       
       // SEGUNDO: Generar el schema CORRECTO para la nueva página
       const newSchemaData = generateClientSchema(pathname);
       
       if (newSchemaData) {
-        console.log('SchemaCleaner - Schema generado para nueva página:', newSchemaData);
-        
         // TERCERO: Insertar el nuevo schema con ID único
         const cleanPath = pathname.replace(/[^a-zA-Z0-9]/g, '-').replace(/^-+|-+$/g, '').replace(/-+/g, '-');
         const newScript = insertSchemaScript(newSchemaData, `schema-${cleanPath}`);
         scriptRef.current = newScript;
-        console.log('SchemaCleaner - Nuevo schema insertado con ID:', newScript.id);
-      } else {
-        console.log('SchemaCleaner - No se pudo generar schema para la nueva página');
       }
-    } else {
-      console.log('SchemaCleaner - No se ejecuta (SSR)');
     }
   }, [pathname]);
 
@@ -238,13 +223,10 @@ export default function SchemaCleaner() {
   useEffect(() => {
     return () => {
       if (scriptRef.current) {
-        scriptRef.current.remove();a
+        scriptRef.current.remove();
       }
     };
   }, []);
 
-  // Log en cada render para debug
-  console.log('SchemaCleaner - Renderizando para pathname:', pathname);
-  
   return null; // No renderiza nada visual
 }

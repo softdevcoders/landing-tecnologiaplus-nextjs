@@ -184,12 +184,9 @@ export default async function JsonLdGenerator() {
   const cookieStore = await cookies();
   const pathname = cookieStore.get('current-path')?.value || '/';
 
-  console.log('JsonLdGenerator - Path detectado:', pathname);
-
   // Verificar si la ruta está configurada
   const routeConfig = ROUTE_CONFIG[pathname];
   if (!routeConfig) {
-    console.log('JsonLdGenerator - Ruta no configurada:', pathname);
     return null; // No generar schema para rutas no configuradas
   }
 
@@ -209,14 +206,13 @@ export default async function JsonLdGenerator() {
     // Generar ID único para este schema (remover guiones múltiples y del inicio)
     const cleanPath = pathname.replace(/[^a-zA-Z0-9]/g, '-').replace(/^-+|-+$/g, '').replace(/-+/g, '-');
     const schemaId = `schema-${cleanPath}`;
-    console.log('JsonLdGenerator - Schema generado con ID:', schemaId);
 
     return (
       <script 
         id={schemaId}
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema, null, 0)
+          __html: JSON.stringify(schema, null, 0).replace(/\s+/g, '')
         }} 
       />
     );
