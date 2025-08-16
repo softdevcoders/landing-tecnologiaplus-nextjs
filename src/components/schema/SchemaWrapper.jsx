@@ -1,13 +1,3 @@
-/**
- * Componente Schema.org para Landing Pages
- * Genera structured data optimizado para SEO incluyendo:
- * - WebPage schema para la página principal
- * - ImageObject para la imagen principal
- * - BreadcrumbList para navegación
- * - WebSite para datos del sitio web
- * - Service para el servicio ofrecido
- */
-
 import { DEFAULT_LOGO_IMAGE } from "@/data/metadata/config";
 import Script from "next/script";
 import SchemaCleaner from "./client/SchemaCleaner";
@@ -16,22 +6,47 @@ import SchemaCleaner from "./client/SchemaCleaner";
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://tecnologiaplus.com';
 
 /**
- * Genera el esquema completo de la landing page
+ * Wrapper opcional para schemas - solo renderiza si se proporcionan datos
+ * Útil para páginas que pueden o no tener schema
  */
-export default function LandingPageSchema({
-  // Información básica de la página
+export default function SchemaWrapper({
+  // Información básica de la página (opcional)
   pageTitle,
   pageDescription,
   pageUrl,
-  // Información de la imagen principal
   primaryImage,
-  // Fechas de publicación y modificación
-  datePublished = "2025-06-16T17:12:34+00:00",
-  dateModified = "2025-06-16T17:35:53+00:00",
-  
-  // Navegación
+  datePublished,
+  dateModified,
   serviceType,
+  
+  // Flag para habilitar/deshabilitar schema
+  enableSchema = true,
+  
+  // Schema personalizado (si se proporciona, ignora las props individuales)
+  customSchema = null
 }) {
+  // Si no está habilitado o no hay datos suficientes, no renderizar nada
+  if (!enableSchema || (!customSchema && !pageTitle && !pageUrl)) {
+    return null;
+  }
+
+  // Si se proporciona schema personalizado, usarlo directamente
+  if (customSchema) {
+    return (
+      <>
+        <SchemaCleaner schemaData={customSchema} />
+        <Script
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          id="landing-page-schema"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(customSchema, null, 2)
+          }} 
+        />
+      </>
+    );
+  }
+
   // Generar breadcrumbs
   const breadcrumbs = [
     {
@@ -48,8 +63,6 @@ export default function LandingPageSchema({
     }
   ];
 
-  // Para futuras implementaciones considerar agregar el breadcrumb para Ver mas.
-
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -61,9 +74,9 @@ export default function LandingPageSchema({
         "isPartOf": { "@id": `${BASE_URL}/#website` },
         "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
         "image": { "@id": `${pageUrl}#primaryimage` },
-        "thumbnailUrl": primaryImage.url,
-        "datePublished": datePublished,
-        "dateModified": dateModified,
+        "thumbnailUrl": primaryImage?.url,
+        "datePublished": datePublished || "2025-06-16T17:12:34+00:00",
+        "dateModified": dateModified || "2025-06-16T17:35:53+00:00",
         "description": pageDescription,
         "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
         "inLanguage": "es-CO",
@@ -77,11 +90,11 @@ export default function LandingPageSchema({
         "@type": "ImageObject",
         "inLanguage": "es-CO",
         "@id": `${pageUrl}#primaryimage`,
-        "url": primaryImage.url,
-        "contentUrl": primaryImage.url,
-        "width": primaryImage.width,
-        "height": primaryImage.height,
-        "caption": primaryImage.alt,
+        "url": primaryImage?.url,
+        "contentUrl": primaryImage?.url,
+        "width": primaryImage?.width,
+        "height": primaryImage?.height,
+        "caption": primaryImage?.alt,
         "representativeOfPage": true
       },
       {
@@ -151,7 +164,7 @@ export default function LandingPageSchema({
           "availability": "https://schema.org/InStock"
         },
         "description": pageDescription,
-        "image": primaryImage.url,
+        "image": primaryImage?.url,
         "inLanguage": "es-CO"
       }
     ]
