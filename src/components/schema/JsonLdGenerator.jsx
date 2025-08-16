@@ -1,37 +1,60 @@
 /**
- * Componente Schema.org para Landing Pages
- * Genera structured data optimizado para SEO incluyendo:
- * - WebPage schema para la página principal
- * - ImageObject para la imagen principal
- * - BreadcrumbList para navegación
- * - WebSite para datos del sitio web
- * - Service para el servicio ofrecido
+ * Componente que genera el script JSON-LD dependiendo del path
+ * Se ejecuta en el servidor para estar en el HEAD sin hidratación
  */
-
+import getMetadata from "@/request/server/metadata/get-metadata";
+import { cookies } from 'next/headers';
 import { DEFAULT_LOGO_IMAGE } from "@/data/metadata/config";
-import Script from "next/script";
-import SchemaCleaner from "./client/SchemaCleaner";
 
-// URL base para canonical URLs
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://tecnologiaplus.com';
 
-/**
- * Genera el esquema completo de la landing page
- */
-export default function LandingPageSchema({
-  // Información básica de la página
-  pageTitle,
-  pageDescription,
-  pageUrl,
-  // Información de la imagen principal
-  primaryImage,
-  // Fechas de publicación y modificación
-  datePublished = "2025-06-16T17:12:34+00:00",
-  dateModified = "2025-06-16T17:35:53+00:00",
+// Mapeo de rutas a metadatos para facilitar la escalabilidad
+const ROUTE_CONFIG = {
+  '/localizadores-para-restaurantes': {
+    metadataKey: 'localizadores-para-restaurantes',
+    serviceType: "Localizadores para restaurantes"
+  },
+  '/llamadores-de-meseros': {
+    metadataKey: 'llamadores-de-meseros',
+    serviceType: "Llamadores de meseros"
+  },
+  // '/turnero-turnoexpress': {
+  //   metadataKey: 'turnero-turnoexpress',
+  //   serviceType: "Turnero TurnoExpress"
+  // },
+  // '/sistema-de-turnos-turnomaster': {
+  //   metadataKey: 'sistema-de-turnos-turnomaster',
+  //   serviceType: "Sistema de turnos TurnoMaster"
+  // },
+  // '/rollos-de-fichos-para-turnos': {
+  //   metadataKey: 'rollos-de-fichos-para-turnos',
+  //   serviceType: "Rollos de fichos para turnos"
+  // },
+  // '/rollos-de-papel-termico': {
+  //   metadataKey: 'rollos-de-papel-termico',
+  //   serviceType: "Rollos de papel térmico"
+  // },
+  // '/dispensador-de-tickets': {
+  //   metadataKey: 'dispensador-de-tickets',
+  //   serviceType: "Dispensador de tickets"
+  // },
+  // '/llamado-de-enfermeria-cuidamaster': {
+  //   metadataKey: 'llamado-de-enfermeria-cuidamaster',
+  //   serviceType: "Llamado de enfermería CuidaMaster"
+  // },
+  // '/calificador-de-servicio-al-cliente-opinamaster': {
+  //   metadataKey: 'calificador-de-servicio-al-cliente-opinamaster',
+  //   serviceType: "Calificador de servicio al cliente Opinamaster"
+  // },
+  // '/encuesta-virtual-opinamaster': {
+  //   metadataKey: 'encuesta-virtual-opinamaster',
+  //   serviceType: "Encuesta virtual Opinamaster"
+  // }
+};
+
+const getSchema = (metadata) => {
+  const { pageTitle, pageDescription, pageUrl, primaryImage, serviceType } = metadata;
   
-  // Navegación
-  serviceType,
-}) {
   // Generar breadcrumbs
   const breadcrumbs = [
     {
@@ -48,8 +71,6 @@ export default function LandingPageSchema({
     }
   ];
 
-  // Para futuras implementaciones considerar agregar el breadcrumb para Ver mas.
-
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -62,8 +83,8 @@ export default function LandingPageSchema({
         "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
         "image": { "@id": `${pageUrl}#primaryimage` },
         "thumbnailUrl": primaryImage.url,
-        "datePublished": datePublished,
-        "dateModified": dateModified,
+        "datePublished": "2025-06-16T17:12:34+00:00",
+        "dateModified": "2025-06-16T17:35:53+00:00",
         "description": pageDescription,
         "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
         "inLanguage": "es-CO",
@@ -156,20 +177,51 @@ export default function LandingPageSchema({
     ]
   };
 
-  return (
-    <>
-      {/* Componente cliente para limpiar schemas en navegaciones SPA */}
-      <SchemaCleaner schemaData={schema} />
-      
-      {/* Script SSR para SEO inicial */}
-      <Script
+  return schema;
+};
+
+export default async function JsonLdGenerator() {
+  const cookieStore = await cookies();
+  const pathname = cookieStore.get('current-path')?.value || '/';
+
+  console.log('JsonLdGenerator - Path detectado:', pathname);
+
+  // Verificar si la ruta está configurada
+  const routeConfig = ROUTE_CONFIG[pathname];
+  if (!routeConfig) {
+    console.log('JsonLdGenerator - Ruta no configurada:', pathname);
+    return null; // No generar schema para rutas no configuradas
+  }
+
+  try {
+    // Obtener metadatos de la ruta
+    const { [routeConfig.metadataKey]: { root: metadata } } = getMetadata('landings');
+    
+    // Generar schema con los metadatos
+    const schema = getSchema({
+      pageTitle: metadata.title.absolute,
+      pageDescription: metadata.description,
+      pageUrl: metadata.alternates.canonical,
+      serviceType: routeConfig.serviceType,
+      primaryImage: metadata.seoImages?.primary?.large
+    });
+
+    // Generar ID único para este schema (remover guiones múltiples y del inicio)
+    const cleanPath = pathname.replace(/[^a-zA-Z0-9]/g, '-').replace(/^-+|-+$/g, '').replace(/-+/g, '-');
+    const schemaId = `schema-${cleanPath}`;
+    console.log('JsonLdGenerator - Schema generado con ID:', schemaId);
+
+    return (
+      <script 
+        id={schemaId}
         type="application/ld+json"
-        strategy="beforeInteractive"
-        id="landing-page-schema"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema, null, 2)
+          __html: JSON.stringify(schema, null, 0)
         }} 
       />
-    </>
-  );
+    );
+  } catch (error) {
+    console.error('Error generating schema for path:', pathname, error);
+    return null;
+  }
 }
