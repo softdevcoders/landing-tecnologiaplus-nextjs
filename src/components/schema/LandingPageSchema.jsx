@@ -9,6 +9,7 @@
  */
 
 import { DEFAULT_LOGO_IMAGE } from "@/data/metadata/config";
+import Script from "next/script";
 
 // URL base para canonical URLs
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://tecnologiaplus.com';
@@ -28,7 +29,7 @@ export default function LandingPageSchema({
   dateModified = "2025-06-16T17:35:53+00:00",
   
   // Navegación
-  landingCategory,
+  serviceType,
 }) {
   // Generar breadcrumbs
   const breadcrumbs = [
@@ -116,7 +117,7 @@ export default function LandingPageSchema({
               "telephone": "+57 316 468 2034",
               "contactType": "Ventas",
               "areaServed": "CO",
-              "availableLanguage": "es"
+              "availableLanguage": "es-CO"
             },
             {
               "@type": "ContactPoint",
@@ -127,17 +128,12 @@ export default function LandingPageSchema({
             }
           ]
         },
-        // "potentialAction": [{
-        //   "@type": "SearchAction",
-        //   "target": { "@type": "EntryPoint", "urlTemplate": `${BASE_URL}/?s={search_term_string}` },
-        //   "query-input": { "@type": "PropertyValueSpecification", "valueRequired": true, "valueName": "search_term_string" }
-        // }],
         "inLanguage": "es-CO"
       },
       {
         "@type": "Service",
         "@id": `${pageUrl}#service`,
-        "serviceType": pageTitle,
+        "serviceType": serviceType,
         "provider": { 
           "@type": "Organization", 
           "name": "Tecnología Plus", 
@@ -161,11 +157,13 @@ export default function LandingPageSchema({
   };
 
   return (
-    <script
+    <Script
       type="application/ld+json"
+      strategy="beforeInteractive"
+      id="landing-page-schema"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(schema, null, 2)
-      }}
+      }} 
     />
   );
 }

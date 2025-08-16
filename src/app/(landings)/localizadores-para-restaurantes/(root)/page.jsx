@@ -28,6 +28,7 @@ export default function LocalizadoresLanding() {
         pageUrl={metadata.alternates.canonical}
         keywords={Array.isArray(metadata.keywords) ? metadata.keywords : [metadata.keywords]}
         landingCategory="localizadoresParaRestaurantes"
+        serviceType="Localizadores para restaurantes"
         primaryImage={metadata.seoImages?.primary?.large}
       />
       
