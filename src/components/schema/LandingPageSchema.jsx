@@ -152,7 +152,6 @@ export default function LandingPageSchema({
         },
         "description": pageDescription,
         "image": primaryImage.url,
-        "inLanguage": "es-CO"
       }
     ]
   };
