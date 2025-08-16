@@ -28,9 +28,10 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus" 
       },
       large: {
-        // url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/localizadores_para_restaurantes_o9eifg.jpg",
         url: landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image.src,
-        alt: landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image.alt
+        alt: landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image.alt,
+        width: landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image.width,
+        height: landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image.height
       }
     }
   },

@@ -1,12 +1,8 @@
-"use client";
-
-import Image from "next/image";
-import { useState } from "react";
+import Image from "next/image"; 
 import style from "./LocalizadoresProductsSection.module.scss";
+import ToggleTextContent from "@/components/toggle-text-content";
 
 function LocalizadoresProductsSection() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <section className={style.products__section}>
       <h2 className={style.products__title}>
@@ -35,32 +31,11 @@ function LocalizadoresProductsSection() {
           />
         </div>
       </div>
-      <p className={`${style.products__text} ${isOpen ? style.open : ""}`}>
-        Los localizadores de clientes de Tecnología Plus son la solución ideal
-        para facilitar la entrega de pedidos en restaurantes autoservicio y
-        otros sectores. Con un alcance de más de 200 metros, estos dispositivos
-        permiten a los usuarios disfrutar su tiempo sin temor de perder su
-        turno, ya que el avisador de pedidos vibra alumbra y suena para avisar
-        cuando el pedido está listo. Marcas reconocidas los utilizan en sus
-        plazoletas de comidas, mejorando la atención y resaltando su marca a
-        través de publicidad impresa en los localizadores de clientes.
-        Fabricados con material termoplástico resistente a golpes, garantizan
-        durabilidad y fiabilidad para más años de vida útil. Además, contamos
-        con los repuestos para ofrecer servicio técnico y así prolongar su vida
-        útil. Su versatilidad los hace ideales no solo para restaurantes, sino
-        también en el sector salud y otros sectores que buscan facilitar la
-        entrega de pedidos o el llamado de turnos. Con modelos que se ajustan
-        según la necesidad, es una solución escalable que se ajusta según el
-        crecimiento de los negocios, los Localizadores para restaurantes de
-        Tecnología Plus son la herramienta perfecta para transformar la
-        experiencia de atención al cliente.
-      </p>
-      <button
-        className={style.toggle__label}
-        onClick={() => setIsOpen(!isOpen)}
-      > 
-        {isOpen ? "Ver menos" : "Ver más"}
-      </button>
+      <ToggleTextContent>
+        <p>En Tecnología Plus fabricamos <strong>localizadores para restaurantes</strong>, eventos y negocios autoservicio, diseñados para optimizar la entrega de pedidos y elevar la experiencia del cliente, con un alcance real de más de 200 metros, nuestros <strong>localizadores de clientes</strong> permiten a los usuarios disfrutar su tiempo con tranquilidad, ya que el avisador de pedidos vibra, ilumina y emite sonido en el momento exacto en que el pedido está listo. Marcas reconocidas los utilizan en plazoletas de comidas, potenciando la eficiencia operativa y proyectando su marca gracias a la publicidad personalizada en cada dispositivo.</p>
+        <p>Fabricados en material termoplástico de alta resistencia a golpes, garantizan durabilidad y rendimiento constante incluso en entornos de alta demanda. Contamos con repuestos originales y un completo servicio técnico para extender la vida útil del equipo. Su versatilidad permite implementarlos no solo en restaurantes, sino también en clínicas, hospitales, casas de eventos y cualquier lugar donde se requiera agilizar la entrega de pedidos o gestionar turnos de forma ordenada.</p>
+        <p>Disponibles en distintos modelos que se adaptan al crecimiento de cada negocio, los <strong>localizadores para restaurantes</strong> de Tecnología Plus son una solución escalable, fiable y diseñada para transformar por completo la atención al cliente, convirtiéndose en una inversión que genera eficiencia y satisfacción desde el primer día.</p>
+      </ToggleTextContent>
     </section>
   );
 }

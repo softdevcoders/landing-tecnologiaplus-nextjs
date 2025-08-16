@@ -3,7 +3,7 @@ import { routes } from "@/config/routes";
 import LinkCard from "@/components/ui/link";
 import Image from "next/image";
 import Link from "next/link";
-import { getOptimizedImageUrl } from "@/components/galeria-ver-mas/utils/imageUtils";
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 const products = [
   {

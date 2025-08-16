@@ -1,0 +1,35 @@
+.nuestros__clientes__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  overflow: hidden;
+
+  .nuestros__clientes__background_gradient_left, 
+  .nuestros__clientes__background_gradient_right {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .nuestros__clientes__background_gradient_left,
+    .nuestros__clientes__background_gradient_right {
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 150px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .nuestros__clientes__background_gradient_left {
+      left: 0;
+      background: linear-gradient(to right, white 20%, rgba(255, 255, 255, 0) 100%);
+    }
+    .nuestros__clientes__background_gradient_right {
+      right: 0;
+      background: linear-gradient(to left, white 20%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+}

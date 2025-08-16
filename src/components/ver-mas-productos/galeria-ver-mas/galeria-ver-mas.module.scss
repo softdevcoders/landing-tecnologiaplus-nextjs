@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  .backButton__container {
+    display: block;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dfdfdf;
+  }
+
+  .gallery__container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    overflow: hidden;
+  }
+}
+
+.emptyMessage {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+ 

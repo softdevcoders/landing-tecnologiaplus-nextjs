@@ -5,7 +5,6 @@ import DispensadorTiquetesHeroSection from "@/sections/dispensador-de-tickets/la
 import DispensadorTiquetesIndustriesSection from "@/sections/dispensador-de-tickets/landing/components/IndustriesSection/DispensadorTiquetesIndustriesSection";
 import DispensadorTiquetesProductsSection from "@/sections/dispensador-de-tickets/landing/components/ProductsSection/DispensadorTiquetesProductsSection";
 import DispensadorTiquetesRelatedProducts from "@/sections/dispensador-de-tickets/landing/components/RelatedProducts/DispensadorTiquetesRelatedProducts";
-import LandingPageSchema from "@/components/schema/LandingPageSchema";
 
 export async function generateMetadata() {
   const { 'dispensador-de-tickets': { root: metadata } } = getMetadata('landings');
@@ -13,20 +12,8 @@ export async function generateMetadata() {
 }
 
 export default function DispensadorTiquetesLanding() {
-  const { 'dispensador-de-tickets': { root: metadata } } = getMetadata('landings');
-
   return (
     <>
-      {/* Schema.org optimizado para SEO usando datos centralizados */}
-      <LandingPageSchema
-        pageTitle={metadata.title.absolute}
-        pageDescription={metadata.description}
-        pageUrl={metadata.alternates.canonical}
-        keywords={Array.isArray(metadata.keywords) ? metadata.keywords : [metadata.keywords]}
-        landingCategory="dispensadorDeTickets"
-        primaryImage={metadata.seoImages?.primary}
-        productImages={metadata.seoImages?.gallery || []}
-      />
       <DispensadorTiquetesHeroSection />
       <DispensadorTiquetesClientsSection />
       <DispensadorTiquetesProductsSection />
