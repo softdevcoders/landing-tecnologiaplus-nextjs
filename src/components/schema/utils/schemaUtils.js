@@ -34,7 +34,8 @@ export function insertSchemaScript(schemaData, id = 'landing-page-schema') {
   const newScript = document.createElement('script');
   newScript.type = 'application/ld+json';
   newScript.id = id;
-  newScript.textContent = JSON.stringify(schemaData, null, 0).replace(/\s+/g, '');
+  // Solo simplificar la estructura del JSON, no el contenido de los textos
+  newScript.textContent = JSON.stringify(schemaData);
   
   document.head.appendChild(newScript);
   return newScript;

@@ -1,23 +1,21 @@
-/**
- * Componente que genera el script JSON-LD dependiendo del path
- * Se ejecuta en el servidor para estar en el HEAD sin hidratación
- */
-import getMetadata from "@/request/server/metadata/get-metadata";
-import { cookies } from 'next/headers';
 import { DEFAULT_LOGO_IMAGE } from "@/data/metadata/config";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://tecnologiaplus.com';
+// ============================================================================
+// CONFIGURACIÓN CENTRALIZADA
+// ============================================================================
+
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://tecnologiaplus.com';
 
 // Mapeo de rutas a metadatos para facilitar la escalabilidad
-const ROUTE_CONFIG = {
+export const ROUTE_CONFIG = {
   '/localizadores-para-restaurantes': {
     metadataKey: 'localizadores-para-restaurantes',
     serviceType: "Localizadores para restaurantes"
   },
-  '/llamadores-de-meseros': {
-    metadataKey: 'llamadores-de-meseros',
-    serviceType: "Llamadores de meseros"
-  },
+  // '/llamadores-de-meseros': {
+  //   metadataKey: 'llamadores-de-meseros',
+  //   serviceType: "Llamadores de meseros"
+  // },
   // '/turnero-turnoexpress': {
   //   metadataKey: 'turnero-turnoexpress',
   //   serviceType: "Turnero TurnoExpress"
@@ -52,16 +50,51 @@ const ROUTE_CONFIG = {
   // }
 };
 
-const getSchema = (metadata) => {
-  const { pageTitle, pageDescription, pageUrl, primaryImage, serviceType } = metadata;
-  
-  // Generar breadcrumbs
-  const breadcrumbs = [
+export const ORGANIZATION_INFO = {
+  name: "Tecnología Plus",
+  description: "Fabricantes de soluciones de autoservicio para restaurantes, eventos y negocios. Localizadores y llamadores que llevan tu atención al siguiente nivel.",
+  sameAs: [
+    "https://www.facebook.com/tecnologiapluscolombia",
+    "https://www.instagram.com/tecnologiapluscolombia",
+    "https://www.youtube.com/channel/UCPho92vfQwC24X8Y3eI8Dvg",
+    "https://www.tiktok.com/@tecnologiapluscolombia",
+  ],
+  contactPoints: [
+    {
+      email: "ventas@tecnologiaplus.com",
+      telephone: "+57 316 468 2034",
+      contactType: "Ventas",
+      areaServed: "CO",
+      availableLanguage: "es-CO"
+    },
+    {
+      telephone: "+57 322 734 7971",
+      contactType: "Ventas",
+      areaServed: "CO",
+      availableLanguage: "es-CO"
+    }
+  ]
+};
+
+export const SCHEMA_DATES = {
+  datePublished: "2025-06-16T17:12:34+00:00",
+  dateModified: "2025-06-16T17:35:53+00:00"
+};
+
+// ============================================================================
+// FUNCIONES DE GENERACIÓN DE SCHEMA
+// ============================================================================
+
+/**
+ * Genera breadcrumbs para el schema
+ */
+export function generateBreadcrumbs(pageTitle, pageUrl) {
+  return [
     {
       "@type": "ListItem",
       "position": 1,
       "name": "Inicio",
-      "item": `${BASE_URL}`
+      "item": BASE_URL
     },
     {
       "@type": "ListItem",
@@ -70,6 +103,16 @@ const getSchema = (metadata) => {
       "item": pageUrl
     }
   ];
+}
+
+/**
+ * Genera el schema completo de JSON-LD
+ */
+export function generateSchema(metadata) {
+  const { pageTitle, pageDescription, pageUrl, primaryImage, serviceType } = metadata;
+  
+  // Generar breadcrumbs
+  const breadcrumbs = generateBreadcrumbs(pageTitle, pageUrl);
 
   const schema = {
     "@context": "https://schema.org",
@@ -83,8 +126,8 @@ const getSchema = (metadata) => {
         "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
         "image": { "@id": `${pageUrl}#primaryimage` },
         "thumbnailUrl": primaryImage.url,
-        "datePublished": "2025-06-16T17:12:34+00:00",
-        "dateModified": "2025-06-16T17:35:53+00:00",
+        "datePublished": SCHEMA_DATES.datePublished,
+        "dateModified": SCHEMA_DATES.dateModified,
         "description": pageDescription,
         "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
         "inLanguage": "es-CO",
@@ -113,42 +156,24 @@ const getSchema = (metadata) => {
       {
         "@type": "WebSite",
         "@id": `${BASE_URL}/#website`,
-        "url": `${BASE_URL}`,
-        "name": "Tecnología Plus",
-        "description": "Fabricantes de soluciones de autoservicio para restaurantes, eventos y negocios. Localizadores y llamadores que llevan tu atención al siguiente nivel.",
+        "url": BASE_URL,
+        "name": ORGANIZATION_INFO.name,
+        "description": ORGANIZATION_INFO.description,
         "publisher": {
           "@type": "Organization",
-          "name": "Tecnología Plus",
-          "url": `${BASE_URL}`,
+          "name": ORGANIZATION_INFO.name,
+          "url": BASE_URL,
           "logo": { 
             "@type": "ImageObject", 
             "url": DEFAULT_LOGO_IMAGE.url,
             "width": DEFAULT_LOGO_IMAGE.width,  
             "height": DEFAULT_LOGO_IMAGE.height
           },
-          "sameAs": [
-            "https://www.facebook.com/tecnologiapluscolombia",
-            "https://www.instagram.com/tecnologiapluscolombia",
-            "https://www.youtube.com/channel/UCPho92vfQwC24X8Y3eI8Dvg",
-            "https://www.tiktok.com/@tecnologiapluscolombia",
-          ],
-          "contactPoint": [
-            {
-              "@type": "ContactPoint",
-              "email": "ventas@tecnologiaplus.com",
-              "telephone": "+57 316 468 2034",
-              "contactType": "Ventas",
-              "areaServed": "CO",
-              "availableLanguage": "es-CO"
-            },
-            {
-              "@type": "ContactPoint",
-              "telephone": "+57 322 734 7971",
-              "contactType": "Ventas",
-              "areaServed": "CO",
-              "availableLanguage": "es-CO"
-            }
-          ]
+          "sameAs": ORGANIZATION_INFO.sameAs,
+          "contactPoint": ORGANIZATION_INFO.contactPoints.map(contact => ({
+            "@type": "ContactPoint",
+            ...contact
+          }))
         },
         "inLanguage": "es-CO"
       },
@@ -158,12 +183,12 @@ const getSchema = (metadata) => {
         "serviceType": serviceType,
         "provider": { 
           "@type": "Organization", 
-          "name": "Tecnología Plus", 
-          "url": `${BASE_URL}`, 
+          "name": ORGANIZATION_INFO.name, 
+          "url": BASE_URL, 
           "logo": DEFAULT_LOGO_IMAGE.url
         },
         "areaServed": { "@type": "Country", "name": "Colombia" },
-        "brand": { "@type": "Brand", "name": "Tecnología Plus" },
+        "brand": { "@type": "Brand", "name": ORGANIZATION_INFO.name },
         "offers": {
           "@type": "Offer",
           "url": pageUrl,
@@ -178,46 +203,25 @@ const getSchema = (metadata) => {
   };
 
   return schema;
-};
+}
 
-export default async function JsonLdGenerator() {
-  const cookieStore = await cookies();
-  const pathname = cookieStore.get('current-path')?.value || '/';
+/**
+ * Genera ID único para el schema basado en la ruta
+ */
+export function generateSchemaId(pathname) {
+  const cleanPath = pathname.replace(/[^a-zA-Z0-9]/g, '-').replace(/^-+|-+$/g, '').replace(/-+/g, '-');
+  return `schema-${cleanPath}`;
+}
 
-  // Verificar si la ruta está configurada
-  const routeConfig = ROUTE_CONFIG[pathname];
-  if (!routeConfig) {
-    return null; // No generar schema para rutas no configuradas
-  }
-
-  try {
-    // Obtener metadatos de la ruta
-    const { [routeConfig.metadataKey]: { root: metadata } } = getMetadata('landings');
-    
-    // Generar schema con los metadatos
-    const schema = getSchema({
-      pageTitle: metadata.title.absolute,
-      pageDescription: metadata.description,
-      pageUrl: metadata.alternates.canonical,
-      serviceType: routeConfig.serviceType,
-      primaryImage: metadata.seoImages?.primary?.large
-    });
-
-    // Generar ID único para este schema (remover guiones múltiples y del inicio)
-    const cleanPath = pathname.replace(/[^a-zA-Z0-9]/g, '-').replace(/^-+|-+$/g, '').replace(/-+/g, '-');
-    const schemaId = `schema-${cleanPath}`;
-
-    return (
-      <script 
-        id={schemaId}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema, null, 0).replace(/\s+/g, '')
-        }} 
-      />
-    );
-  } catch (error) {
-    console.error('Error generating schema for path:', pathname, error);
-    return null;
-  }
+/**
+ * Prepara los metadatos para la generación del schema
+ */
+export function prepareSchemaMetadata(metadata, serviceType) {
+  return {
+    pageTitle: metadata.title.absolute,
+    pageDescription: metadata.description,
+    pageUrl: metadata.alternates.canonical,
+    serviceType,
+    primaryImage: metadata.seoImages?.primary?.large
+  };
 }

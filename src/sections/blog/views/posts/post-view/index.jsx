@@ -5,7 +5,6 @@ import { htmlReader } from "@/lib/html-reader";
 import CarRelated from "@/sections/blog/components/card-related";
 import Link from "next/link";
 import { routes } from "@/config/routes";
-import ArticleSchema from "@/components/schema/ArticleSchema";
 import { truncateAltText } from "@/lib/truncate-alt-text";
 import PreguntasFrecuentesBlog from "@/sections/blog/components/preguntas-frecuentes";
 import Image from "next/image";

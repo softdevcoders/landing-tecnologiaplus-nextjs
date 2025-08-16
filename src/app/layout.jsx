@@ -6,8 +6,7 @@ import "@/styles/main.scss";
 // import "swiper/css/pagination";
 // import { GoogleTagManager } from '@next/third-parties/google'
 import ResourceHints from '@/components/resource-hints'
-import JsonLdGenerator from '@/components/schema/JsonLdGenerator'
-import SchemaCleaner from '@/components/schema/client/SchemaCleaner'
+import { JsonLdGenerator, SchemaCleaner } from '@/components/schema'
 
 import { Bebas_Neue, Montserrat, Archivo_Black } from 'next/font/google'
 import { SHOULD_ROBOTS_INDEX } from "@/data/metadata/config";
@@ -96,7 +95,7 @@ export default function RootLayout({ children }) {
         )}
 
         {/* Aca crear un componente */}
-        <JsonLdGenerator />
+        <JsonLdGenerator /> 
       </head>
       <body>
         {/* {SHOULD_ROBOTS_INDEX && <GoogleTagManager gtmId="GTM-P8J6LTX" />} */}
