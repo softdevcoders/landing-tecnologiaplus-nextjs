@@ -1,14 +1,14 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { useEffect, useRef } from 'react';
-import { cleanAllSchemas, insertSchemaScript } from '../utils/schemaUtils';
+import { useMemo } from 'react';
+import { useSchemaManager } from '../hooks/useSchemaManager';
 import getMetadata from "@/request/server/metadata/get-metadata";
-import { ROUTE_CONFIG, generateSchema, generateSchemaId, prepareSchemaMetadata } from '../utils/schemaGenerator';
+import { ROUTE_CONFIG, generateSchema, prepareSchemaMetadata } from '../utils/schemaGenerator';
 
 /**
- * Componente cliente que limpia y recarga schemas en navegaciones SPA
- * Detecta automáticamente el schema del JsonLdGenerator y lo maneja
+ * Componente cliente que gestiona schemas en navegaciones SPA usando Virtual DOM
+ * NO manipula el DOM directamente, usa el estado de React
  */
 
 // Función para generar schema en el cliente (usando configuración compartida)
@@ -36,33 +36,19 @@ const generateClientSchema = (pathname) => {
 
 export default function SchemaCleaner() {
   const pathname = usePathname();
-  const scriptRef = useRef(null);
 
-  useEffect(() => {
-    // Solo ejecutar en navegaciones SPA (no en SSR)
-    if (typeof window !== 'undefined') {
-      // PRIMERO: Limpiar TODOS los schemas anteriores
-      cleanAllSchemas();
-      
-      // SEGUNDO: Generar el schema CORRECTO para la nueva página
-      const newSchemaData = generateClientSchema(pathname);
-      
-      if (newSchemaData) {
-        // TERCERO: Insertar el nuevo schema con ID único
-        const newScript = insertSchemaScript(newSchemaData, generateSchemaId(pathname));
-        scriptRef.current = newScript;
-      }
-    }
+  // Generar schema de forma memoizada para evitar regeneraciones innecesarias
+  const schemaData = useMemo(() => {
+    return generateClientSchema(pathname);
   }, [pathname]);
 
-  // Cleanup al desmontar
-  useEffect(() => {
-    return () => {
-      if (scriptRef.current) {
-        scriptRef.current.remove();
-      }
-    };
-  }, []);
+  // Usar el hook personalizado para gestionar el schema reactivamente
+  const { schemaId } = useSchemaManager(pathname, schemaData);
+
+  // Log para debugging (opcional)
+  if (schemaData && schemaId) {
+    console.log('SchemaCleaner - Schema gestionado reactivamente:', schemaId);
+  }
 
   return null; // No renderiza nada visual
 }
