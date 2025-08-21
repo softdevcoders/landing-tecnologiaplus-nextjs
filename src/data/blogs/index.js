@@ -224,7 +224,8 @@ const llamadoresDeEnfermeriaPosts = [
         "rendered": "<p>Los Desafíos del Personal de Enfermería en el Día a Día El personal de enfermería es el pilar fundamental en la atención hospitalaria. Son quienes están en primera línea, garantizando el bienestar de los pacientes, administrando medicamentos, supervisando signos vitales y respondiendo a emergencias médicas. Sin embargo, su trabajo no solo implica conocimientos técnicos.</p>\n",
     },
     "images": [
-        "website-v2/blog/llamado-de-enfermeria-cuidamaster/boton-para-llamar-enfermera-facilita-labor-personal/yk9qvs37vgvhe0gr6ir2"
+        // "website-v2/blog/llamado-de-enfermeria-cuidamaster/boton-para-llamar-enfermera-facilita-labor-personal/yk9qvs37vgvhe0gr6ir2"
+        "v1755787958/boton-para-llamar-enfermera-facilita-labor-personal_onwrjh"
     ],
     "categories": [
       routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key
@@ -486,7 +487,8 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>Como gerente y dueño de un restaurante, tienes la responsabilidad de ofrecer el mejor servicio posible, tanto en infraestructura como en atención al cliente. Estos aspectos son fundamentales para garantizar una experiencia memorable, lo que aumenta las posibilidades de que los comensales regresen y recomienden tu establecimiento. Sin embargo, es natural que te preguntes cómo&#8230;</p>\n",
     },
     "images": [
-        "v1747157481/website-v2/blog/llamadores-de-meseros/como-mejorar-servicio-restaurante/l699mlifpw0p2rtshopf"
+        // "v1747157481/website-v2/blog/llamadores-de-meseros/como-mejorar-servicio-restaurante/l699mlifpw0p2rtshopf"
+        "v1755782115/como-mejorar-servicio-restaurante_rbzuu6"
     ],
     "categories": [
       routes.blog.children.llamadoresDeMeseros.category_key
@@ -518,7 +520,8 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>Cuando hablamos de atención al cliente, pensamos en empresas como Amazon, Zara, Netflix, entre otras grandes industrias. Sin embargo, no solo estas grandes compañías deben ofrecer un servicio de atención al cliente de calidad, ya que las pequeñas industrias también tienen esta responsabilidad. Y es que el protocolo de atención al cliente de tu empresa&#8230;</p>\n",
     },
     "images": [
-        "v1747157483/website-v2/blog/llamadores-de-meseros/mejorar-atencion-gimnasios-llamador-entrenadores/cji9wlpmcig6bsoxoapl"
+        // "v1747157483/website-v2/blog/llamadores-de-meseros/mejorar-atencion-gimnasios-llamador-entrenadores/cji9wlpmcig6bsoxoapl"
+        "v1755787383/mejorar-atencion-gimnasios-llamador-entrenadores_swk0p5"
     ],
     "categories": [
       routes.blog.children.llamadoresDeMeseros.category_key
@@ -686,7 +689,8 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>Brindar un excelente servicio al cliente es esencial para el éxito de cualquier negocio de comida. En el caso de los restaurantes autoservicio, garantizar una experiencia satisfactoria, rápida y sin contratiempos se convierte en un factor clave para fidelizar a los clientes y destacarse en un mercado competitivo. Para lograrlo, es fundamental contar con una&#8230;</p>\n",
     },
     "images": [
-        "v1747157484/website-v2/blog/localizadores-para-restaurantes/autoservicio-restaurante-8-infaltables/shwocfd5yexl6prratf4"
+        // "v1747157484/website-v2/blog/localizadores-para-restaurantes/autoservicio-restaurante-8-infaltables/shwocfd5yexl6prratf4"
+        "v1755785579/autoservicio-restaurante-8-infaltables_qusrie"
     ],
     "categories": [
       routes.blog.children.localizadoresParaRestaurantes.category_key
@@ -750,7 +754,8 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>La tecnología ha llegado para facilitarle la vida a cientos de negocios, y la industria gastronómica no es la excepción. Los localizadores para restaurantes han revolucionado la forma en que los establecimientos atienden a los clientes, mejorando notablemente la eficiencia en la toma de pedidos y ofreciendo una experiencia más fluida. Esto marca un antes&#8230;</p>\n",
     },
     "images": [
-        "v1747157484/website-v2/blog/localizadores-para-restaurantes/escoger-localizador-ideal-restaurante-bogota/zjmueqynef85vavenptj"
+        // "v1747157484/website-v2/blog/localizadores-para-restaurantes/escoger-localizador-ideal-restaurante-bogota/zjmueqynef85vavenptj"
+        "v1755784429/escoger-localizador-ideal-restaurante-bogota_sdhjbf"
     ],
     "categories": [
       routes.blog.children.localizadoresParaRestaurantes.category_key
@@ -846,7 +851,8 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>Los localizadores para restaurantes o avisadores de pedidos han revolucionado la industria gastronómica, facilitando la comunicación entre el establecimiento y los clientes. Hace algunos años, pocos restaurantes de autoservicio contaban con esta tecnología, pero hoy en día su uso se ha convertido en una necesidad para mejorar la atención y agilizar el servicio. Gracias a&#8230;</p>\n",
     },
     "images": [
-        "v1747157485/website-v2/blog/localizadores-para-restaurantes/como-elegir-localizadores-para-restaurantes/jiko3dmfxdau84gu4klp"
+        // "v1747157485/website-v2/blog/localizadores-para-restaurantes/como-elegir-localizadores-para-restaurantes/jiko3dmfxdau84gu4klp"
+        "v1755700703/como-elegir-localizadores-para-restaurantes_dqbbrp"
     ],
     "categories": [
       routes.blog.children.localizadoresParaRestaurantes.category_key
@@ -878,7 +884,8 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>En la industria gastronómica, la rapidez y eficiencia en el servicio son clave para garantizar una experiencia satisfactoria. Es aquí donde los avisadores de pedidos, también conocidos como llamadores y localizadores para restaurantes, juegan un papel fundamental. Estos dispositivos han revolucionado la forma en que los restaurantes en Colombia, especialmente en Bogotá, gestionan la atención&#8230;</p>\n",
     },
     "images": [
-        "v1747157483/website-v2/blog/localizadores-para-restaurantes/por-que-usar-localizadores-para-restaurantes/uz3xvayckifntwzzehbp"
+        // "v1747157483/website-v2/blog/localizadores-para-restaurantes/por-que-usar-localizadores-para-restaurantes/uz3xvayckifntwzzehbp"
+        "v1755783836/por-que-usar-localizadores-para-restaurantes_rgyund"
     ],
     "categories": [
       routes.blog.children.localizadoresParaRestaurantes.category_key
@@ -1347,7 +1354,8 @@ const turneroTurnoexpressPosts = [
         "rendered": "<p>Algo que por desgracia, es común, es que no se realice de manera adecuada la atención al cliente durante la gestión de los turnos. El lapso entre la espera del cliente, y el momento de ser atendido, es más importante de lo que parece, pues durante ese tiempo, podrías perder interesados potenciales en tu negocio,&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnoexpress/turneros-digitales-casos-exito-colombia/nwewzakbnogro4dbg79z"
+        // "website-v2/blog/turnero-turnoexpress/turneros-digitales-casos-exito-colombia/nwewzakbnogro4dbg79z"
+        "v1755788516/turneros-digitales-casos-exito-colombia_qglw2n"
     ],
     "categories": [
       routes.blog.children.turneroTurnoexpress.category_key
@@ -1380,7 +1388,8 @@ const turneroTurnoexpressPosts = [
         "rendered": "<p>Si estás decidido a elegir un Gestor de Turnos de Tecnología Plus para controlar las filas de tu negocio, quizá estés pensando en cuál de los modelos sería una mejor opción para ti, el manual o el gestor de turnos con sistema de software. La verdad, no existe una respuesta para todos los casos, ya&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnoexpress/gestor-turnos-clientes-digitales-manuales/jizumbpz22hdkeqrujio"
+        // "website-v2/blog/turnero-turnoexpress/gestor-turnos-clientes-digitales-manuales/jizumbpz22hdkeqrujio"
+        "v1755788416/gestor-turnos-clientes-digitales-manuales_k1zhwe"
     ],
     "categories": [
       routes.blog.children.turneroTurnoexpress.category_key
@@ -1451,7 +1460,8 @@ const turneroTurnomasterPosts = [
         "rendered": "<p>El tiempo se ha convertido en un recurso no renovable para las empresas, como lo mencionaron Jorge Lerdo de Tejada, Gerente de Forbes México, y René Saúl, CEO y Cofundador de Kapital Bank. No solo es valioso el tiempo del empresario o dueño de negocio, sino también el de sus clientes. Por esta razón, contar&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnomaster/reducir-tiempo-espera-gestion-turnos/b2hncc0io0rvigtvues2"
+        // "website-v2/blog/turnero-turnomaster/reducir-tiempo-espera-gestion-turnos/b2hncc0io0rvigtvues2"
+        "v1755783003/reducir-tiempo-espera-gestion-turnos_iszab2"
     ],
     "categories": [
       routes.blog.children.sistemasDeTurnosTurnomaster.category_key
@@ -1484,7 +1494,8 @@ const turneroTurnomasterPosts = [
         "rendered": "<p>Un sistema de espera inteligente es una aplicación tecnológica que utiliza algoritmos avanzados y tecnologías de última generación para garantizar una mejor eficiencia en la experiencia de usuario cuando se trata de esperar en situaciones como colas o líneas de atención al cliente.  Estos sistemas de espera inteligentes buscan reducir el tiempo que las personas&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnomaster/sistema-espera-inteligente-como-funciona/c1t4tln8da6rvvzi0l0z"
+        // "website-v2/blog/turnero-turnomaster/sistema-espera-inteligente-como-funciona/c1t4tln8da6rvvzi0l0z"
+        "v1755784304/sistema-espera-inteligente-como-funciona_fi9i0q"
     ],
     "categories": [
       routes.blog.children.sistemasDeTurnosTurnomaster.category_key
@@ -1517,7 +1528,8 @@ const turneroTurnomasterPosts = [
         "rendered": "<p>Elegir el mejor sistema de turnos inalámbrico para tu droguería puede mejorar la eficiencia y la satisfacción de tus clientes y, siendo este un aspecto fundamental para cualquier empresa, lo ideal es que sepas cómo elegir un buen sistema de llamado, por lo que debes considerar lo siguiente: 1. Identifica tus necesidades Antes de explorar&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnomaster/mejor-sistema-turnos-inalambrico-drogueria/gazy4zrbrtunb94fqzqu"
+        // "website-v2/blog/turnero-turnomaster/mejor-sistema-turnos-inalambrico-drogueria/gazy4zrbrtunb94fqzqu",
+        "v1755699492/mejor-sistema-turnos-inalambrico-drogueria_mkxgh8"
     ],
     "categories": [
       routes.blog.children.sistemasDeTurnosTurnomaster.category_key
@@ -1583,7 +1595,8 @@ const turneroTurnomasterPosts = [
         "rendered": "<p>Al elegir el mejor sistema de turnos médicos para tu clínica, droguería o cualquier otra empresa, es importante considerar varios factores claves que van en función de tus necesidades. Sin embargo, ¿realmente necesitas un software de gestión de turnos? Antes de realizar una inversión tan importante necesitas considerar todos los beneficios, así como las funcionalidades&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnomaster/mejor-software-turnos-negocio/ytlgl7cteynexoaxbta2"
+        // "website-v2/blog/turnero-turnomaster/mejor-software-turnos-negocio/ytlgl7cteynexoaxbta2"
+        "v1755786848/mejor-software-turnos-negocio_ql2qpx"
     ],
     "categories": [
       routes.blog.children.sistemasDeTurnosTurnomaster.category_key
@@ -1616,7 +1629,8 @@ const turneroTurnomasterPosts = [
         "rendered": "<p>En algún momento, todos enfrentamos la necesidad de hacer una fila, pero la verdadera diferencia radica en cómo tu empresa gestiona ese proceso. Si tu compañía trabaja con citas o servicios programados, entenderás lo esencial que es optimizar la gestión del tiempo para garantizar la satisfacción de tus clientes. Implementar un turnero digital o un&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnomaster/mejorar-gestion-filas/x1nbdd9kb4wfp3woki8q"
+        // "website-v2/blog/turnero-turnomaster/mejorar-gestion-filas/x1nbdd9kb4wfp3woki8q"
+        "v1755787551/mejorar-gestion-filas_b9bhlb"
     ],
     "categories": [
       routes.blog.children.sistemasDeTurnosTurnomaster.category_key
@@ -1649,7 +1663,8 @@ const turneroTurnomasterPosts = [
         "rendered": "<p>En general, a las personas les molesta esperar más de la cuenta en áreas donde no hay un sistema de turnos para organizar filas. Debido a la sensación de desorganización, el cliente fácilmente cae ante la inseguridad. ¿Será atendido siguiendo los turnos? ¿Lo saltarán, o se le adelantarán otras personas? Para evitar casos así, es&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnomaster/importancia-sistema-turnos-negocios-beneficios/aluplk2xbe1ukxzp5i8c"
+        // "website-v2/blog/turnero-turnomaster/importancia-sistema-turnos-negocios-beneficios/aluplk2xbe1ukxzp5i8c"
+        "v1755783240/importancia-sistema-turnos-negocios-beneficios_imvzez"
     ],
     "categories": [
       routes.blog.children.sistemasDeTurnosTurnomaster.category_key
@@ -1682,7 +1697,8 @@ const turneroTurnomasterPosts = [
         "rendered": "<p>El software para turnos es una tecnología que llegó para quedarse, sobre todo en las salas de espera, aunque a día de hoy, hay empresas que se siguen negando a la implementación de dicha herramienta. Es por eso que te queremos contar 5 beneficios importantes que aporta un software para gestión de turnos, desde optimización,&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnomaster/5-ventajas-software-turnos/zrnygwr1o9zunjkfb2wr"
+        // "website-v2/blog/turnero-turnomaster/5-ventajas-software-turnos/zrnygwr1o9zunjkfb2wr"
+        "v1755784560/5-ventajas-software-turnos_aorcx7"
     ],
     "categories": [
       routes.blog.children.sistemasDeTurnosTurnomaster.category_key
@@ -1715,7 +1731,8 @@ const turneroTurnomasterPosts = [
         "rendered": "<p>No importa qué tan bueno sea tu producto o servicio, ni qué tan fiel sea tu clientela. Si el día de mañana ofreces un mal manejo de turnos, es probable que el día de mañana decidan elegir a tu competencia.&nbsp; Esto podría significar grandes pérdidas económicas y en el mercado actual ninguna empresa quiere eso&#8230;.</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnomaster/organizar-filas-turnero-digital/xtycndmshsuacstzeosw"
+        // "website-v2/blog/turnero-turnomaster/organizar-filas-turnero-digital/xtycndmshsuacstzeosw",
+        "v1755782823/organizar-filas-turnero-digital_epsde8"
     ],
     "categories": [
       routes.blog.children.sistemasDeTurnosTurnomaster.category_key
@@ -1748,7 +1765,8 @@ const turneroTurnomasterPosts = [
         "rendered": "<p>En la era digital actual, la eficiencia y la optimización de los procesos comerciales son fundamentales para el éxito de cualquier empresa. Uno de los desafíos más comunes que enfrentan las organizaciones es la gestión eficiente de las esperas de los clientes. Ya sea en un restaurante, una clínica médica, una farmacia o una tienda&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnomaster/integrar-sistema-espera-software-gestion-facturacion/mx8yt5dzxgnjayg026ez"
+        // "website-v2/blog/turnero-turnomaster/integrar-sistema-espera-software-gestion-facturacion/mx8yt5dzxgnjayg026ez"
+        "v1755781968/integrar-sistema-espera-software-gestion-facturacion_gu5wnz"
     ],
     "categories": [
       routes.blog.children.sistemasDeTurnosTurnomaster.category_key
@@ -1852,7 +1870,8 @@ const dispensadorDeTicketsPosts = [
         "rendered": "<p>Invertir en tu negocio es una decisión importante que requiere un análisis previo del impacto que puede tener en la operatividad y en los ingresos de la empresa. En el caso del despachador de tickets, esta herramienta se convierte en un recurso valioso para mejorar la eficiencia de cualquier negocio, siempre y cuando se implemente&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/dispensador-de-tickets/calcular-inversion-despachador-tickets-colombia/faelxxxeysxstquthqpn"
+        // "website-v2/blog/dispensador-de-tickets/calcular-inversion-despachador-tickets-colombia/faelxxxeysxstquthqpn",
+        "v1755699683/calcular-inversion-despachador-tickets-colombia_arhfga"
     ],
     "categories": [
         routes.blog.children.dispensadorDeTickets.category_key
@@ -1885,7 +1904,8 @@ const dispensadorDeTicketsPosts = [
         "rendered": "<p>Tener o no un dispensador de tiquetes es una elección que algunas empresas en Colombia se han planteado en los últimos años y es que en la búsqueda de una mejor satisfacción del cliente surge como una de las mejores formas de gestionar y optimizar el tiempo de espera de los clientes en la sala&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/dispensador-de-tickets/deberias-tener-dispensador-turnos-negocio/oweismz9w8mzdz2yq2hc"
+        // "website-v2/blog/dispensador-de-tickets/deberias-tener-dispensador-turnos-negocio/oweismz9w8mzdz2yq2hc"
+        "v1755783107/deberias-tener-dispensador-turnos-negocio_lqifvn"
     ],
     "categories": [
       routes.blog.children.dispensadorDeTickets.category_key
@@ -1918,7 +1938,8 @@ const dispensadorDeTicketsPosts = [
     "rendered":  "<p>Si tienes una empresa que está orientada a la atención al cliente, seguro te habrás dado cuenta que siempre buscas la manera de mejorar este servicio tan importante. Y es que una buena experiencia de los clientes en tu empresa es parte clave para garantizar la fidelización de los prospectos. Uno de los problemas que&#8230;</p>\n",
 },
 "images": [
-    "website-v2/blog/dispensador-de-tickets/integrar-dispensador-turnos-sistema-gestion/fftzagaeoapujutqdiob"
+    // "website-v2/blog/dispensador-de-tickets/integrar-dispensador-turnos-sistema-gestion/fftzagaeoapujutqdiob"
+    "v1755781113/integrar-dispensador-turnos-sistema-gestion_v6kbba"
 ],
 "categories": [
     routes.blog.children.dispensadorDeTickets.category_key
@@ -1952,7 +1973,8 @@ const dispensadorDeTicketsPosts = [
         "rendered": "<p>El manejo de turnos es un aspecto clave en cualquier negocio, ya que el tiempo de los clientes es un recurso valioso. Para optimizar la atención y agilizar el servicio, contar con un despachador de tickets se ha convertido en una solución eficiente y moderna. En Tecnología Plus, sabemos que elegir el sistema adecuado puede&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/dispensador-de-tickets/mejora-la-atencion-en-tu-negocio-con-un-despachador-de-tickets/vikc0gp7a8meep8ka0wh"
+        // "website-v2/blog/dispensador-de-tickets/mejora-la-atencion-en-tu-negocio-con-un-despachador-de-tickets/vikc0gp7a8meep8ka0wh"
+        "v1755788282/mejora-la-atencion-en-negocio-con-un-despachador-de-tickets_wnx0s6"
     ],
     "categories": [
         routes.blog.children.dispensadorDeTickets.category_key
@@ -2193,7 +2215,8 @@ const rollosDePapelTermico = [
         "rendered": "<p>El papel de transferencia térmica es un medio utilizado en impresoras térmicas para transferir imágenes o texto a través de la aplicación de calor. Las empresas del territorio nacional colombiano las utilizan para imprimir etiquetas, códigos de barras y otros datos en diversos materiales, por lo que los rollos térmicos se han vuelto muy comunes&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/rollos-de-papel-termico/que-es-papel-transferencia-termica-como-usarlo/nkgixvy5kmylol8sdsrp"
+        // "website-v2/blog/rollos-de-papel-termico/que-es-papel-transferencia-termica-como-usarlo/nkgixvy5kmylol8sdsrp"
+        "v1755784130/que-es-papel-transferencia-termica-como-usarlo_g3saxg"
     ],
     "categories": [
         categories.ROLLOS_DE_PAPEL_TERMICO.category_key
@@ -2226,7 +2249,8 @@ const rollosDePapelTermico = [
         "rendered": "<p>Los rollos térmicos han llegado para quedarse y es que sin darte cuenta, muchas veces utilizamos los ticketes o facturas de casi todos los negocios de comercio utilizan este tipo de papel pero, ¿alguna vez te preguntaste por qué? Porque tienen una serie de beneficios que ayudan a cuidar el planeta, desde el ahorro de&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/rollos-de-papel-termico/como-ahorrar-dinero-medio-ambiente/ydt3ctfai0tiwvrfzr2p"
+        // "website-v2/blog/rollos-de-papel-termico/como-ahorrar-dinero-medio-ambiente/ydt3ctfai0tiwvrfzr2p"
+        "v1755786708/como-ahorrar-dinero-medio-ambiente_s4ly3l"
     ],
     "categories": [
         categories.ROLLOS_DE_PAPEL_TERMICO.category_key
@@ -2297,7 +2321,8 @@ const calificadorDeServicioAlCliente = [
         "rendered": "<p>¿Por qué usar calificadores de servicio? Un calificador de servicio es una herramienta poderosa para mejorar la calidad de la atención al cliente. En el mundo actual, donde la satisfacción del cliente es crucial para el éxito de cualquier negocio, contar con una forma eficiente de obtener retroalimentación es esencial. Los calificadores de servicio permiten&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/calificador-de-servicio-al-cliente-opinamaster/evaluar-calidad-servicio-cliente/yasunmdhgoduyojqbwe2"
+        // "website-v2/blog/calificador-de-servicio-al-cliente-opinamaster/evaluar-calidad-servicio-cliente/yasunmdhgoduyojqbwe2"
+        "v1755787232/evaluar-calidad-servicio-cliente_qugzwe"
     ],
     "categories": [
         routes.blog.children.calificadorDeServicioAlClienteOpinamaster.category_key
@@ -2330,7 +2355,8 @@ const calificadorDeServicioAlCliente = [
         "rendered": "<p>Conoces la metodología de trabajo de tu empresa como la palma de tu mano, pero ¿de verdad es tan efectiva como piensas? Muchos dueños de negocio creen que tienen el mejor sistema de trabajo en su compañía y no decimos que no, pero siempre hay margen de mejora, especialmente cuando hablamos de la gestión de&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/calificador-de-servicio-al-cliente-opinamaster/herramienta-retroalimentacion-cliente/jonsknrmc0pssapwj4xy"
+        // "website-v2/blog/calificador-de-servicio-al-cliente-opinamaster/herramienta-retroalimentacion-cliente/jonsknrmc0pssapwj4xy"
+        "v1755786565/herramienta-retroalimentacion-cliente_kyknvj"
     ],
     "categories": [
       routes.blog.children.calificadorDeServicioAlClienteOpinamaster.category_key
@@ -2363,7 +2389,8 @@ const calificadorDeServicioAlCliente = [
         "rendered": "<p>¿Te has preguntado si tus clientes realmente están satisfechos con la atención que reciben? La experiencia del cliente es un factor clave que influye en la fidelización y el crecimiento de cualquier negocio. Contar con un calificador de servicio te permitirá obtener retroalimentación en tiempo real sobre la calidad de tus productos y atención, brindándote&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/calificador-de-servicio-al-cliente-opinamaster/como-mejorar-la-satisfaccion-del-cliente/ditomc40us6l6dwqprdm"
+        // "website-v2/blog/calificador-de-servicio-al-cliente-opinamaster/como-mejorar-la-satisfaccion-del-cliente/ditomc40us6l6dwqprdm"
+        "v1755782291/como-mejorar-la-satisfaccion-del-cliente_uc4s2s"
     ],
     "categories": [
       routes.blog.children.calificadorDeServicioAlClienteOpinamaster.category_key
@@ -2396,7 +2423,8 @@ const calificadorDeServicioAlCliente = [
         "rendered": "<p>El calificador de servicio al cliente es una herramienta o indicador utilizado para medir y evaluar el rendimiento de un servicio, producto y/o personal ofrecido por una empresa o entidad, por lo que resulta útil conocer qué piensan los clientes una vez ya han cumplido el ciclo de compra.&nbsp; Hay varias razones por las cuales&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/calificador-de-servicio-al-cliente-opinamaster/por-que-usar-calificadores-de-servicio/xdhjzf4og1oxsp3iodix"
+        // "website-v2/blog/calificador-de-servicio-al-cliente-opinamaster/por-que-usar-calificadores-de-servicio/xdhjzf4og1oxsp3iodix"
+        "v1755783399/por-que-usar-calificadores-de-servicio_m148gk"
     ],
     "categories": [
       routes.blog.children.calificadorDeServicioAlClienteOpinamaster.category_key
