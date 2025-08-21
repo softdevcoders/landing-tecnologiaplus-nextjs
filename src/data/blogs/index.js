@@ -1,7 +1,6 @@
 import { categories } from "@/config/categories";
 import { routes } from "@/config/routes";
 
-
 const llamadoresDeEnfermeriaPosts = [
   {
     "id": 8585,
