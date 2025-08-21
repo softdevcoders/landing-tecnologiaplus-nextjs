@@ -1,7 +1,7 @@
 import { routes } from "@/config/routes";
 
 const mainImage = {
-  src: 'v1741624303/Frame_1_38_ymaal6',
+  src: 'v1755801006/hablador-para-mesa_zbqcbx',
   alt: 'Hablador de mesa vista principal',
 };
 

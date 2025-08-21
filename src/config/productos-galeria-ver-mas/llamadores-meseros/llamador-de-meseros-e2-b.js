@@ -2,6 +2,8 @@ import { routes } from "@/config/routes";
 import { controlNumerico } from "@/config/productos-galeria-ver-mas/llamadores-meseros/control-numerico";
 import { habladorDeMesa } from "@/config/productos-galeria-ver-mas/llamadores-meseros/hablador-de-mesa";
 import { relojReceptorDeLlamados } from "@/config/productos-galeria-ver-mas/llamadores-meseros/reloj-receptor-de-llamados";
+import { pantallaT1B } from "@/config/productos-galeria-ver-mas/llamadores-meseros/pantalla-t1-b";
+import { pantallaT6 } from "@/config/productos-galeria-ver-mas/llamadores-meseros/pantalla-t6";
 
 const mainImage = {
   src: 'v1754405582/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_1_g97quo',
@@ -396,8 +398,10 @@ export const llamadorDeMeserosE2B = {
   defaultColor: "negro_rojo",
   hasColors: true,
   compatibleConProducts: [
-    controlNumerico,
     habladorDeMesa,
     relojReceptorDeLlamados,
+    pantallaT1B,
+    pantallaT6, 
+    controlNumerico,
   ]
 };
