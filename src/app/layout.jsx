@@ -6,8 +6,8 @@ import "@/styles/main.scss";
 // import "swiper/css/pagination";
 // import { GoogleTagManager } from '@next/third-parties/google'
 import ResourceHints from '@/components/resource-hints'
-import GuaranteedServerSchema from '@/components/schema/components/GuaranteedServerSchema'
-import HybridServerSchema from '@/components/schema/components/HybridServerSchema'
+import GuaranteedServerSchema from '@/components/schema/GuaranteedServerSchema'
+import HybridServerSchema from '@/components/schema/HybridServerSchema'
 
 import { Bebas_Neue, Montserrat, Archivo_Black } from 'next/font/google'
 import { SHOULD_ROBOTS_INDEX } from "@/data/metadata/config";

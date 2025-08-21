@@ -1,5 +1,6 @@
 import getMetadata from "@/request/server/metadata/get-metadata";
-import { ROUTE_CONFIG, generateSchema, generateSchemaId, prepareSchemaMetadata } from '../utils/schemaGenerator';
+import { ROUTE_CONFIG, generateSchema, generateSchemaId, prepareSchemaMetadata } from './utils/schemaGenerator';
+import { headers } from "next/headers";
 
 /**
  * Componente que GARANTIZA 100% renderizado del servidor
@@ -26,10 +27,13 @@ function generateServerSchema(pathname) {
   }
 }
 
-export default function GuaranteedServerSchema({ pathname }) {
+export default function GuaranteedServerSchema() {
+  const headersList = headers();
+  const currentPath = headersList.get('x-pathname');
+  
   // Si no se proporciona pathname, generar schema por defecto para localizadores
   const defaultPathname = '/localizadores-para-restaurantes';
-  const targetPathname = pathname || defaultPathname;
+  const targetPathname = currentPath || defaultPathname;
   
   // Generar schema en el servidor usando el pathname
   const schemaData = generateServerSchema(targetPathname);

@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 import getMetadata from "@/request/server/metadata/get-metadata";
-import { ROUTE_CONFIG, generateSchema, generateSchemaId, prepareSchemaMetadata } from '../utils/schemaGenerator';
+import { ROUTE_CONFIG, generateSchema, generateSchemaId, prepareSchemaMetadata } from './utils/schemaGenerator';
 
 /**
  * Componente híbrido que garantiza:
@@ -37,7 +37,6 @@ export default function HybridServerSchema({ serverPathname }) {
 
   // Determinar si estamos en SSR o CSR
   const isSSR = typeof window === 'undefined';
-  const pathname = isSSR ? serverPathname || '/localizadores-para-restaurantes' : clientPathname;
 
   useEffect(() => {
     // Solo ejecutar en el cliente (navegación SPA)
