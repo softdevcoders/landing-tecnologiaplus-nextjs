@@ -2086,7 +2086,7 @@ const rollosDeFichosParaTurnos = [
     },
     "images": [
         // "website-v2/blog/rollos-de-fichos-para-turnos/aspectos-clave-comprar-rollos-turnos/hafllbs5tgvqejm7xy08"
-        "aspectos-clave-comprar-rollos-turnos_jgybzj"
+        "v1755786299/aspectos-clave-comprar-rollos-turnos_jgybzj"
     ],
     "categories": [
         routes.blog.children.rollosDeFichosParaTurnos.category_key
