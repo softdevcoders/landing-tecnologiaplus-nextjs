@@ -93,7 +93,8 @@ const llamadoresDeEnfermeriaPosts = [
         "rendered": "<p>La eficiencia y la satisfacción del paciente son dos pilares fundamentales para el éxito de cualquier institución de salud. Un sistema de llamador de pacientes se ha convertido en una herramienta esencial para hospitales, clínicas y consultorios, mejorando estos aspectos clave. En Colombia, la adopción de esta tecnología ha crecido rápidamente, demostrando su efectividad y&#8230;</p>\n",
     },
     "images": [
-        "v1747075100/website-v2/blog/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes/fsmtqpuetpamgbb1pfgu"
+        // "v1747075100/website-v2/blog/llamado-de-enfermeria-cuidamaster/beneficios-invertir-en-sistemas-de-llamador-de-pacientes/fsmtqpuetpamgbb1pfgu"
+        "v1755790917/beneficios-invertir-en-sistemas-de-llamador-de-pacientes_b6ttbt"
     ],
     "categories": [
         routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key,
@@ -585,7 +586,8 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>La industria de la gastronomía es altamente competitiva y está en constante evolución. Los clientes ya no solo buscan una buena comida, sino una experiencia completa: rapidez, comodidad y atención de calidad. Uno de los principales desafíos en un restaurante es la comunicación entre los clientes y los meseros. ¿Cuántas veces un comensal ha intentado&#8230;</p>\n",
     },
     "images": [
-        "v1747157480/website-v2/blog/llamadores-de-meseros/llamador-de-meseros-realmente-necesario/pqyz7gyor9jska8me88f"
+        // "v1747157480/website-v2/blog/llamadores-de-meseros/llamador-de-meseros-realmente-necesario/pqyz7gyor9jska8me88f"
+        "v1755790676/llamador-de-meseros-realmente-necesario_upvjao"
     ],
     "categories": [
       routes.blog.children.llamadoresDeMeseros.category_key
@@ -787,7 +789,8 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>Si estás considerando implementar localizadores para restaurantes autoservicio en Colombia, es fundamental que tengas en cuenta ciertos aspectos clave para garantizar una inversión exitosa. En Tecnología Plus, como fabricantes de esta tecnología, sabemos que elegir el sistema adecuado puede marcar la diferencia en la experiencia del cliente y la eficiencia operativa de tu negocio. Por&#8230;</p>\n",
     },
     "images": [
-        "v1747157486/website-v2/blog/localizadores-para-restaurantes/autoservicio-colombia-6-claves/xd13dwcmrrtrfewxp5oa"
+        // "v1747157486/website-v2/blog/localizadores-para-restaurantes/autoservicio-colombia-6-claves/xd13dwcmrrtrfewxp5oa"
+        "v1755791341/autoservicio-colombia-6-claves_tryuul"
     ],
     "categories": [
       routes.blog.children.localizadoresParaRestaurantes.category_key
@@ -819,7 +822,8 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>En la industria gastronómica actual, la eficiencia y la rapidez en la atención al cliente marcan la diferencia. Un servicio ágil no solo mejora la experiencia del usuario, sino que también incrementa la rentabilidad del negocio. En Tecnología Plus, somos fabricantes de localizadores de clientes para restaurantes autoservicio, diseñados para optimizar los tiempos de espera&#8230;</p>\n",
     },
     "images": [
-        "v1747157485/website-v2/blog/localizadores-para-restaurantes/localizadores-clientes-autoservicio/kmqmrs58emlnndbelt7g"
+        // "v1747157485/website-v2/blog/localizadores-para-restaurantes/localizadores-clientes-autoservicio/kmqmrs58emlnndbelt7g"
+        "v1755791236/localizadores-clientes-autoservicio_oormu7"
     ],
     "categories": [
       routes.blog.children.localizadoresParaRestaurantes.category_key
@@ -1562,7 +1566,8 @@ const turneroTurnomasterPosts = [
         "rendered": "<p>La implementación de pantallas de turnos y sistemas de gestión de filas en tu negocio no solo mejora la experiencia del cliente, sino que también optimiza el rendimiento de tu equipo. Ya sea en el sector de la gastronomía, la atención al cliente, la salud, o cualquier otro sector que implique la gestión de personas,&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/turnero-turnomaster/pantalla-de-turnos-plan-eficaz-equipo/azqvp2abgwzewt86mff3"
+        // "website-v2/blog/turnero-turnomaster/pantalla-de-turnos-plan-eficaz-equipo/azqvp2abgwzewt86mff3"
+        "v1755791681/pantalla-de-turnos-plan-eficaz-equipo_tpthro"
     ],
     "categories": [
       routes.blog.children.sistemasDeTurnosTurnomaster.category_key
