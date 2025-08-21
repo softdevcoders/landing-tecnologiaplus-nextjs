@@ -6,7 +6,8 @@ import "@/styles/main.scss";
 // import "swiper/css/pagination";
 // import { GoogleTagManager } from '@next/third-parties/google'
 import ResourceHints from '@/components/resource-hints'
-import { JsonLdGenerator, SchemaCleaner } from '@/components/schema'
+import GuaranteedServerSchema from '@/components/schema/GuaranteedServerSchema'
+import HybridServerSchema from '@/components/schema/HybridServerSchema'
 
 import { Bebas_Neue, Montserrat, Archivo_Black } from 'next/font/google'
 import { SHOULD_ROBOTS_INDEX } from "@/data/metadata/config";
@@ -94,8 +95,11 @@ export default function RootLayout({ children }) {
           />
         )}
 
-        {/* Aca crear un componente */}
-        <JsonLdGenerator /> 
+        {/* Schema 100% server-side para SEO */}
+        <GuaranteedServerSchema />
+        
+        {/* Gestión de schemas durante navegación SPA */}
+        <HybridServerSchema /> 
       </head>
       <body>
         {/* {SHOULD_ROBOTS_INDEX && <GoogleTagManager gtmId="GTM-P8J6LTX" />} */}
@@ -110,7 +114,6 @@ export default function RootLayout({ children }) {
           </noscript>
         )}
 
-        <SchemaCleaner />
         {children}
       </body>
     </html>

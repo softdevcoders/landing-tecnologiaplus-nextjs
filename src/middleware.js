@@ -6,6 +6,9 @@ export function middleware(request) {
   // Establecer el path actual en una cookie
   response.cookies.set('current-path', request.nextUrl.pathname);
   
+  // Pasar el pathname en headers para acceso server-side
+  response.headers.set('x-pathname', request.nextUrl.pathname);
+  
   return response;
 }
 
