@@ -456,7 +456,8 @@ const llamadoresDeMeserosPosts = [
         "rendered": "<p>En un mundo donde los clientes valoran cada vez más la rapidez, la eficiencia y la personalización, los llamadores de meseros están ganando terreno como una solución innovadora para mejorar el servicio en los restaurantes. Aunque aún no se han masificado como los localizadores, estos dispositivos representan una tendencia en crecimiento, optimizando las operaciones y&#8230;</p>\n",
     },
     "images": [
-        "v1747157482/website-v2/blog/llamadores-de-meseros/transforma-atencion-cliente-llamadores-de-meseros/axpan0mvlx8uvnpjojqh"
+        // "v1747157482/website-v2/blog/llamadores-de-meseros/transforma-atencion-cliente-llamadores-de-meseros/axpan0mvlx8uvnpjojqh"
+        "v1755794409/transforma-atencion-cliente-llamadores-de-meseros_xyzioc"
     ],
     "categories": [
       routes.blog.children.llamadoresDeMeseros.category_key
@@ -724,7 +725,8 @@ const localizadoresParaRestaurantesPosts = [
         "rendered": "<p>En los restaurantes de autoservicio, donde no hay servicio a la mesa ni meseros, la rapidez y la organización del proceso de atención son esenciales para garantizar la satisfacción del cliente. Para lograrlo, herramientas tecnológicas como los avisadores de clientes se han convertido en una solución eficiente que optimiza el servicio y mejora la experiencia&#8230;</p>\n",
     },
     "images": [
-        "v1747157485/website-v2/blog/localizadores-para-restaurantes/avisadores-clientes-restaurante-autoservicio/iv5xyyaht7ps7rxvdfw1"
+        // "v1747157485/website-v2/blog/localizadores-para-restaurantes/avisadores-clientes-restaurante-autoservicio/iv5xyyaht7ps7rxvdfw1"
+        "v1755793908/avisadores-clientes-restaurante-autoservicio_vqqh8b"
     ],
     "categories": [
       routes.blog.children.localizadoresParaRestaurantes.category_key
@@ -2050,7 +2052,8 @@ const rollosDeFichosParaTurnos = [
         "rendered": "<p>En el mundo moderno, la gestión eficiente de filas y turnos se ha vuelto esencial, especialmente en entornos donde la atención al cliente es fundamental. Los Rollos De Números Para Turnos, utilizados en los dispensadores de tiquetes, juegan un papel crucial en este proceso, permitiendo un control ordenado y justo del servicio. Aunque puedan parecer&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/rollos-de-fichos-para-turnos/todo-lo-que-necesitas-saber-numeros-guia-completa/ijwhfn49a9bbohzefccp"
+        // "website-v2/blog/rollos-de-fichos-para-turnos/todo-lo-que-necesitas-saber-numeros-guia-completa/ijwhfn49a9bbohzefccp"
+        "v1755794176/todo-lo-que-necesitas-saber-numeros-guia-completa_c621wm"
     ],
     "categories": [
         routes.blog.children.rollosDeFichosParaTurnos.category_key
@@ -2116,7 +2119,8 @@ const rollosDeFichosParaTurnos = [
         "rendered": "<p>En un entorno donde la eficiencia y la satisfacción del cliente son fundamentales, la gestión adecuada de las filas se convierte en una prioridad para cualquier negocio que atienda a un gran número de personas, por estes motivo, necesitan adquirir un sistema de gestión que utilice rollos para turneros. Los rollos para turnos son una&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/rollos-de-fichos-para-turnos/rollos-para-turneros/zrjbg9ozmarsrdpenrjk"
+        // "website-v2/blog/rollos-de-fichos-para-turnos/rollos-para-turneros/zrjbg9ozmarsrdpenrjk"
+        "v1755793752/rollos-para-turneros_zc3rhp"
     ],
     "categories": [
       routes.blog.children.rollosDeFichosParaTurnos.category_key
@@ -2187,7 +2191,8 @@ const rollosDePapelTermico = [
         "rendered": "<p>Los dispensadores de turnos en Medellín se han popularizado en los últimos años para facilitar la gestión de filas en las empresas. Sin embargo, también se ha popularizado el uso de Rollos de papel térmico en los dispensadores de turnos, por una amplia variedad de motivos, desde la economía, hasta la facilidad de uso y&#8230;</p>\n",
     },
     "images": [
-        "website-v2/blog/rollos-de-papel-termico/secreto-del-exito-en-gestion-de-turnos/b1i3dckri6zwvzulzbet"
+        // "website-v2/blog/rollos-de-papel-termico/secreto-del-exito-en-gestion-de-turnos/b1i3dckri6zwvzulzbet"
+        "v1755793553/secreto-del-exito-en-gestion-de-turnos_wus9ka"
     ],
     "categories": [
         categories.ROLLOS_DE_PAPEL_TERMICO.category_key
