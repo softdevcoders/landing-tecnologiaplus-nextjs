@@ -115,6 +115,19 @@
           }
         }
 
+        ol {
+          list-style: decimal;
+          margin-left: 1rem;
+          margin-bottom: 1rem;
+          padding-left: 1rem;
+          padding-bottom: 1rem;
+
+          li {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+        }
+
         table {
           width: 100%;
           border-collapse: collapse;
@@ -149,6 +162,11 @@
         div[class='divider'] {
           margin: 2rem 0;
           border-bottom: 1px solid #e0e0e0;
+        }
+
+        span[class='bold-50'] {
+          font-weight: 600;
+          color: #606060;
         }
       }
 
