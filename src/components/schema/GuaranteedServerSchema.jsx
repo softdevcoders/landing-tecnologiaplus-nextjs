@@ -27,8 +27,8 @@ function generateServerSchema(pathname) {
   }
 }
 
-export default function GuaranteedServerSchema() {
-  const headersList = headers();
+export default async function GuaranteedServerSchema() {
+  const headersList = await headers();
   const currentPath = headersList.get('x-pathname');
   
   // Si no se proporciona pathname, generar schema por defecto para localizadores
