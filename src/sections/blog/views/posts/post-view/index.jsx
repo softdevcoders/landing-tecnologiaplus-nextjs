@@ -9,6 +9,7 @@ import { truncateAltText } from "@/lib/truncate-alt-text";
 import PreguntasFrecuentesBlog from "@/sections/blog/components/preguntas-frecuentes";
 import Image from "next/image";
 
+
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
   const message = `Hola, te comparto este artículo: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}/`;
@@ -34,7 +35,7 @@ const PostView = ({ post }) => {
         baseUrl={process.env.NEXT_PUBLIC_BASE_URL} 
       /> */}
       <main className={`${style.blogPostView__container} ${shouldAddMarginBottom ? style.blogPostView__containerWithMarginBottom : ""}`}>
-        <article className={style.blogPostView__article}>
+        <article className={style.blogPostView__article} data-blog-article="true">
           <header className={style.blogPostView__header}>
             <h1 className={style.blogPostView__title}>{post.title.rendered}</h1>
           </header>

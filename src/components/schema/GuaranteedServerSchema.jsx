@@ -30,15 +30,15 @@ function generateServerSchema(pathname) {
 export default async function GuaranteedServerSchema() {
   const headersList = await headers();
   const currentPath = headersList.get('x-pathname');
-
-  if (!currentPath) {
-    return null;
-  }
   
-  const targetPathname = currentPath;
+  // Si no se proporciona pathname, generar schema por defecto para localizadores
+  const defaultPathname = '/localizadores-para-restaurantes';
+  const targetPathname = currentPath || defaultPathname;
   
-  const schemaData = generateServerSchema(targetPathname);
+  // Generar schema en el servidor usando el pathname
+  const schemaData = generateServerSchema(currentPath);
 
+  // Si no hay schema data, no renderizar nada
   if (!schemaData) {
     return null;
   }
