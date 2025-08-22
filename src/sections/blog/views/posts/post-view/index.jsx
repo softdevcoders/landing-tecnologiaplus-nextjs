@@ -55,10 +55,10 @@ const PostView = ({ post }) => {
               className={style.blogPostView__contentHtml} 
               dangerouslySetInnerHTML={{ __html: htmlReader(post.content.template_name) }} 
             />
-            <div className={style.blogPostView__contentHtlmFooter}>
+            {/* <div className={style.blogPostView__contentHtlmFooter}>
               <p  className={style.blogPostView__contentHtmlFooterText}><Link href={routes.contact.url} className={style.blogPostView__contentHtmlFooterLink}>Contáctanos hoy mismo y descubre cómo podemos llevar tu servicio al siguiente nivel!</Link></p>
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={style.blogPostView__contentHtmlFooterButton}>Cotizar</a>
-            </div>
+            </div> */}
           </div>
 
           <footer className={style.blogPostView__footer}>

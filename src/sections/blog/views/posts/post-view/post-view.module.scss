@@ -98,6 +98,7 @@
             display: list-item;
             text-align: -webkit-match-parent;
             unicode-bidi: isolate;
+            padding-left: 2rem;
             &::before {
               content: '•';
               color: #1c1b1c;
@@ -119,7 +120,7 @@
           list-style: decimal;
           margin-left: 1rem;
           margin-bottom: 1rem;
-          padding-left: 1rem;
+          padding-left: 2rem;
           padding-bottom: 1rem;
 
           li {
@@ -137,7 +138,11 @@
             background-color: #6a0dad;
             color: #fff;
             padding: 1rem;
-            text-align: left;
+            text-align: center;
+          }
+
+          th:not(:first-child) {
+            border-left: 2px solid #e0e0e0;
           }
 
           td {
