@@ -1,7 +1,7 @@
 import { routes } from "@/config/routes";
 
 const mainImage = {
-  src: 'v1741623334/Frame_1_34_g50ooz',
+  src: 'v1755800973/control-numerico_mhg7af',
   alt: 'Control numérico vista principal',
 };
 

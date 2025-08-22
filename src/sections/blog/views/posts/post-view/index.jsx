@@ -9,6 +9,7 @@ import { truncateAltText } from "@/lib/truncate-alt-text";
 import PreguntasFrecuentesBlog from "@/sections/blog/components/preguntas-frecuentes";
 import Image from "next/image";
 
+
 const PostView = ({ post }) => {
   const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
   const message = `Hola, te comparto este artículo: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}/`;
@@ -34,7 +35,7 @@ const PostView = ({ post }) => {
         baseUrl={process.env.NEXT_PUBLIC_BASE_URL} 
       /> */}
       <main className={`${style.blogPostView__container} ${shouldAddMarginBottom ? style.blogPostView__containerWithMarginBottom : ""}`}>
-        <article className={style.blogPostView__article}>
+        <article className={style.blogPostView__article} data-blog-article="true">
           <header className={style.blogPostView__header}>
             <h1 className={style.blogPostView__title}>{post.title.rendered}</h1>
           </header>
@@ -43,7 +44,7 @@ const PostView = ({ post }) => {
             <div className={style.blogPostView__imageContainer}>
               <Image
                 src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp/${post.images[0]}`} 
-                alt={optimizedAltText}
+                alt={post.alt_imagen_principal ?? optimizedAltText}
                 className={style.blogPostView__image}
                 loading="eager"
                 width={720}
@@ -55,10 +56,10 @@ const PostView = ({ post }) => {
               className={style.blogPostView__contentHtml} 
               dangerouslySetInnerHTML={{ __html: htmlReader(post.content.template_name) }} 
             />
-            <div className={style.blogPostView__contentHtlmFooter}>
+            {/* <div className={style.blogPostView__contentHtlmFooter}>
               <p  className={style.blogPostView__contentHtmlFooterText}><Link href={routes.contact.url} className={style.blogPostView__contentHtmlFooterLink}>Contáctanos hoy mismo y descubre cómo podemos llevar tu servicio al siguiente nivel!</Link></p>
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={style.blogPostView__contentHtmlFooterButton}>Cotizar</a>
-            </div>
+            </div> */}
           </div>
 
           <footer className={style.blogPostView__footer}>

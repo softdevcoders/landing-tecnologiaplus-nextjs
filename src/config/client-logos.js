@@ -27,6 +27,10 @@ export const logosTermicos = [
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1742563277/Mesa_de_trabajo_11_nkxgvv",
     alt: "Logo Cruz Roja",
   },
+  {
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1755887842/banco-santander_eyqkts",
+    alt: "Logo Banco Santander",
+  },
 ];
 
 export const logosTurnos = [
@@ -57,6 +61,10 @@ export const logosTurnos = [
   {
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1742563277/Mesa_de_trabajo_11_nkxgvv",
     alt: "Logo Cruz Roja",
+  },
+  {
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1755887842/banco-santander_eyqkts",
+    alt: "Logo Banco Santander",
   },
 ];
 
@@ -96,6 +104,10 @@ export const logosTurnoExpress = [
   {
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1742563260/Mesa_de_trabajo_16_jyibxe",
     alt: "Logo Comfacundi",
+  },
+  {
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1755887842/banco-santander_eyqkts",
+    alt: "Logo Banco Santander",
   },
 ];
 
@@ -139,6 +151,10 @@ export const logosTurnoMaster = [
   {
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1743542409/Mesa_de_trabajo_26_4x_hu0kue",
     alt: "Logo Confa",
+  },
+  {
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1755887842/banco-santander_eyqkts",
+    alt: "Logo Banco Santander",
   },
 ];
 
@@ -229,6 +245,10 @@ export const logosLlamadorMeseros = [
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1742563272/Mesa_de_trabajo_62_w7ggme",
     alt: "Logo Loreal",
   },
+  {
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1755887843/la-finca-de-rigo_q2t7o8",
+    alt: "Logo La Finca de Rigo",
+  },
 ];
 
 export const logosLocalizadores = [
@@ -256,10 +276,10 @@ export const logosLocalizadores = [
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1742563269/Mesa_de_trabajo_43_s6hdzr",
     alt: "Logo Montolvo",
   },
-  {
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1742563270/Mesa_de_trabajo_44_ircfaa",
-    alt: "Logo Peru Wok",
-  },
+  // {
+  //   src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1742563270/Mesa_de_trabajo_44_ircfaa",
+  //   alt: "Logo Peru Wok",
+  // },
   {
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1743127235/F5CDDFC9F623885E_odq2pa",
     alt: "Logo Sr. Wok",
@@ -283,6 +303,10 @@ export const logosLocalizadores = [
   {
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1743542005/Mesa_de_trabajo_49_4x_jlptaw",
     alt: "Logo Crepes & Waffles",
+  },
+  {
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1755887843/la-finca-de-rigo_q2t7o8",
+    alt: "Logo La Finca de Rigo",
   },
 ];
 
@@ -330,5 +354,13 @@ export const logosHome = [
   {
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1742563274/Mesa_de_trabajo_7_awxms5",
     alt: "Logo Colmedica",
+  },
+  // {
+  //   src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1755887843/la-finca-de-rigo_q2t7o8",
+  //   alt: "Logo La Finca de Rigo",
+  // },
+  {
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_150,f_webp/v1755887842/banco-santander_eyqkts",
+    alt: "Logo Banco Santander",
   },
 ];

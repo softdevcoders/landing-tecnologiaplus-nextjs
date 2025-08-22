@@ -98,6 +98,7 @@
             display: list-item;
             text-align: -webkit-match-parent;
             unicode-bidi: isolate;
+            padding-left: 2rem;
             &::before {
               content: '•';
               color: #1c1b1c;
@@ -115,6 +116,19 @@
           }
         }
 
+        ol {
+          list-style: decimal;
+          margin-left: 1rem;
+          margin-bottom: 1rem;
+          padding-left: 2rem;
+          padding-bottom: 1rem;
+
+          li {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+        }
+
         table {
           width: 100%;
           border-collapse: collapse;
@@ -124,7 +138,11 @@
             background-color: #6a0dad;
             color: #fff;
             padding: 1rem;
-            text-align: left;
+            text-align: center;
+          }
+
+          th:not(:first-child) {
+            border-left: 2px solid #e0e0e0;
           }
 
           td {
@@ -149,6 +167,11 @@
         div[class='divider'] {
           margin: 2rem 0;
           border-bottom: 1px solid #e0e0e0;
+        }
+
+        span[class='bold-50'] {
+          font-weight: 600;
+          color: #606060;
         }
       }
 
@@ -303,5 +326,56 @@
       top: 5rem;
       max-width: 500px;
     }
+  }
+}
+
+/* ============================================
+   EMOJI ENHANCEMENT STYLES FOR BLOG ARTICLES
+   ============================================ */
+
+/* Set emoji-compatible font family for the entire article */
+.blogPostView__article[data-blog-article="true"] {
+  font-family: var(--font-montserrat), "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif;
+}
+
+/* Conservative approach: Only apply emoji rendering to headers where emojis commonly appear */
+.blogPostView__article[data-blog-article="true"] {
+  /* Apply emoji rendering ONLY to headers (where emojis in blog posts typically appear) */
+  h1, h2, h3, h4, h5, h6 {
+    /* Enable color emoji rendering but strongly preserve numbers */
+    font-variant-emoji: emoji;
+    font-variant-numeric: normal !important; /* Force normal numeric rendering */
+    font-feature-settings: "clig" 1, "calt" 1; /* Only contextual features */
+    -webkit-font-feature-settings: "clig" 1, "calt" 1;
+    -moz-font-feature-settings: "clig" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* For body text, DO NOT apply font-variant-emoji to avoid number conversion */
+  p, li, span, div {
+    /* Explicitly preserve normal number rendering */
+    font-variant-emoji: normal !important;
+    font-variant-numeric: normal !important;
+    font-feature-settings: normal;
+    -webkit-font-feature-settings: normal;
+    -moz-font-feature-settings: normal;
+  }
+}
+
+/* Windows Chrome specific optimizations - only for headers where emojis are common */
+@supports (-webkit-appearance: none) and (not (-moz-appearance: none)) {
+  .blogPostView__article[data-blog-article="true"] {
+    h1, h2, h3, h4, h5, h6 {
+      /* Force color rendering for Windows Chrome on headers only */
+      -webkit-text-stroke: 0.01em transparent;
+      text-shadow: 0 0 0 transparent;
+    }
+  }
+}
+
+/* Firefox optimizations */
+@-moz-document url-prefix() {
+  .blogPostView__article[data-blog-article="true"] {
+    font-family: var(--font-montserrat), "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
   }
 }
