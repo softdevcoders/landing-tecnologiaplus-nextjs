@@ -28,22 +28,28 @@ function generateServerSchema(pathname) {
 }
 
 export default async function GuaranteedServerSchema() {
+  // Obtener pathname dinámicamente del middleware via headers
   const headersList = await headers();
   const currentPath = headersList.get('x-pathname');
   
-  // Si no se proporciona pathname, generar schema por defecto para localizadores
-  const defaultPathname = '/localizadores-para-restaurantes';
-  const targetPathname = currentPath || defaultPathname;
+  // Si no hay pathname, no generar schema
+  if (!currentPath) {
+    console.log('GuaranteedServerSchema - No hay pathname del middleware, no se genera schema');
+    return null;
+  }
   
-  // Generar schema en el servidor usando el pathname
+  console.log('GuaranteedServerSchema - Pathname del middleware:', currentPath);
+  
+  // Generar schema en el servidor usando el pathname dinámico
   const schemaData = generateServerSchema(currentPath);
 
   // Si no hay schema data, no renderizar nada
   if (!schemaData) {
+    console.log('GuaranteedServerSchema - No hay configuración para:', currentPath);
     return null;
   }
 
-  const schemaId = generateSchemaId(targetPathname);
+  const schemaId = generateSchemaId(currentPath);
 
   // Renderizado server-side puro con suppressHydrationWarning
   // Esto garantiza que NO se rehidrate en el cliente
