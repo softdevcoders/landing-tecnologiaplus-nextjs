@@ -2583,7 +2583,7 @@ const encuestaVirtualOpinamaster = [
             "title": "Encuestas virtuales: multicanal, rápidas y efectivas",
             "description": "Descubre cómo las encuestas virtuales intuitivas y multicanal de OpinaMaster transforman la experiencia del cliente con datos en tiempo real.",
             "keywords": [
-                "Encuesta virtual",
+                "Encuesta virtuales",
             ]
         },
         "title": {
