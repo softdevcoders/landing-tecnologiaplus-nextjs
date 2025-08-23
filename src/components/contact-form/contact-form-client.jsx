@@ -50,7 +50,7 @@ const ContactFormClient = ({ sendEmail, isContactPage = false }) => {
           {isContactPage ? (
             <h1>¡Mensaje enviado!</h1>
           ) : (
-            <h2>¡Mensaje enviado!</h2>
+            <span>¡Mensaje enviado!</span>
           )}
         </div>
         <p>
@@ -65,7 +65,7 @@ const ContactFormClient = ({ sendEmail, isContactPage = false }) => {
       {isContactPage ? (
         <h1>Llámanos o escríbenos</h1>
       ) : (
-        <h2>Llámanos o escríbenos</h2>
+        <span>Llámanos o escríbenos</span>
       )}
       
       {submitError && (

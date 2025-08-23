@@ -1,65 +1,30 @@
-import stylesDefault from "@/components/landing-hero-portada/styles.module.scss";
-import style from "./styles.module.scss";
-import { LandingHeroPortadaContainer, LandingHeroPortadaContent, LandingHeroPortadaContentDivider, LandingHeroPortadaContentImage, LandingHeroPortadaContentImageImg, LandingHeroPortadaContentText, LandingHeroPortadaContentTextButton, LandingHeroPortadaContentTextDescription, LandingHeroPortadaContentTextLogoBrand, LandingHeroPortadaContentTextSubTitle, LandingHeroPortadaContentTextTitle } from "@/components/landing-hero-portada";
-import { landingHeros } from "@/config/landing-heros";
+import LandingHeroPortadaV2 from "@/components/landing-hero-portada-v2";
+import { routes } from "@/config/routes";
 
-function HeroSection() {
+const DispensadorTiquetesHeroSection = () => {
+  const values = {
+    title: "Dispensador de tickets",
+    description: "Adiós a las filas. Orden y comodidad en cada turno.",
+    image: {
+      mobile: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
+      desktop: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1200,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
+      alt: "Imagen de Dispensador de Tickets TurnoExpress - Tecnología Plus",
+    },
+    button: {
+      text: "Ver más",
+      href: routes.landings.dispensadorDeTickets.children.dispensadorDeTicketsCaracol.url,
+    },
+    brandImage: {
+      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_500,f_webp/v1744463735/12-8_qjsewx",
+      alt: "Logo Turno Express",
+      width: 300,
+      height: 65,
+    }
+  };
+
   return (
-    <LandingHeroPortadaContainer>
-      <LandingHeroPortadaContent className={style.content__mobile__custom}>
-        {/* Seccion de Images */}
-        <>
-          <LandingHeroPortadaContentImage className={`${stylesDefault.content__image__imgMobile} ${style.content__image__imgMobile__custom}`}>
-            <LandingHeroPortadaContentImageImg image={landingHeros.dispensadorDeTickets.informationPortadas.mobile.image} />
-          </LandingHeroPortadaContentImage>
-          <LandingHeroPortadaContentImage className={`${stylesDefault.content__image__imgDesktop} ${style.content__image__imgDesktop__custom}`}>
-            <LandingHeroPortadaContentImageImg image={landingHeros.dispensadorDeTickets.informationPortadas.desktop.image} />
-          </LandingHeroPortadaContentImage>
-        </>
-
-        {/* Seccion de Texto */}
-        <>
-          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__desktop} ${style.content__text__desktop__custom}`}>
-            <LandingHeroPortadaContentTextLogoBrand
-              className={style.content__text__logoBrand__desktop__custom} 
-              image={landingHeros.dispensadorDeTickets.informationPortadas.desktop.imageTextColumn}
-            />
-            <LandingHeroPortadaContentTextTitle className={style.content__text__title__desktop__custom}>
-              {landingHeros.dispensadorDeTickets.informationPortadas.desktop.text.title}
-            </LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentTextSubTitle className={style.content__text__subTitle__desktop__custom}>
-              {landingHeros.dispensadorDeTickets.informationPortadas.desktop.text.subTitle}
-            </LandingHeroPortadaContentTextSubTitle>
-            <LandingHeroPortadaContentTextDescription className={style.content__text__description__desktop__custom}>
-              {landingHeros.dispensadorDeTickets.informationPortadas.desktop.text.description}
-            </LandingHeroPortadaContentTextDescription>
-            <LandingHeroPortadaContentTextButton
-              href={landingHeros.dispensadorDeTickets.informationPortadas.desktop.button.href}
-            >
-              {landingHeros.dispensadorDeTickets.informationPortadas.desktop.button.text}
-            </LandingHeroPortadaContentTextButton>
-          </LandingHeroPortadaContentText>
-          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__mobile} ${style.content__text__mobile__custom}`}>
-            <LandingHeroPortadaContentTextTitle isMobile={true} className={style.content__text__title__mobile__custom}>
-              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.text.title}
-            </LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentTextSubTitle className={style.content__text__subTitle__mobile__custom}>
-              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.text.subTitle}
-            </LandingHeroPortadaContentTextSubTitle>
-            <LandingHeroPortadaContentDivider />
-            <LandingHeroPortadaContentTextDescription className={style.content__text__description__mobile__custom}>
-              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.text.description}
-            </LandingHeroPortadaContentTextDescription>
-            <LandingHeroPortadaContentTextButton
-              href={landingHeros.dispensadorDeTickets.informationPortadas.mobile.button.href}
-            >
-              {landingHeros.dispensadorDeTickets.informationPortadas.mobile.button.text}
-            </LandingHeroPortadaContentTextButton>
-          </LandingHeroPortadaContentText>
-        </>
-      </LandingHeroPortadaContent>
-    </LandingHeroPortadaContainer>
+    <LandingHeroPortadaV2 values={values} />
   )
-}
+};
 
-export default HeroSection;
+export default DispensadorTiquetesHeroSection;

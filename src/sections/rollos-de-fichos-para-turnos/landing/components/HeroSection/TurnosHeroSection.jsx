@@ -1,58 +1,30 @@
-import stylesDefault from "@/components/landing-hero-portada/styles.module.scss";
-import style from "./styles.module.scss";
-import { LandingHeroPortadaContainer, LandingHeroPortadaContent, LandingHeroPortadaContentImage, LandingHeroPortadaContentImageImg, LandingHeroPortadaContentText, LandingHeroPortadaContentTextButton, LandingHeroPortadaContentTextDescription, LandingHeroPortadaContentTextLogoBrand, LandingHeroPortadaContentTextSubTitle, LandingHeroPortadaContentTextTitle } from "@/components/landing-hero-portada";
-import { landingHeros } from "@/config/landing-heros";
+import LandingHeroPortadaV2 from "@/components/landing-hero-portada-v2";
+import { routes } from "@/config/routes";
 
-function HeroSection() {
+const RollosDeFichosParaTurnosHeroSection = () => {
+  const values = {
+    title: "Rollos de fichos para turnos",
+    description: "Numeración clara para agilizar la atención de turnos.",
+    image: {
+      mobile: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
+      desktop: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1200,f_webp,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
+      alt: "Imagen de Rollos de fichos para turnos TurnoExpress - Tecnología Plus",
+    },
+    button: {
+      text: "Ver más",
+      href: routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url,
+    },
+    brandImage: {
+      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_500,f_webp/v1744463735/12-8_qjsewx",
+      alt: "Logo Turno Express",
+      width: 300,
+      height: 65,
+    }
+  };
+
   return (
-    <LandingHeroPortadaContainer>
-      <LandingHeroPortadaContent className={style.content__mobile__custom}>
-        {/* Seccion de Images */}
-        <>
-          <LandingHeroPortadaContentImage className={`${stylesDefault.content__image__imgMobile} ${style.content__image__imgMobile__custom}`}>
-            <LandingHeroPortadaContentImageImg image={landingHeros.rollosDeFichosParaTurnos.informationPortadas.mobile.image} />
-          </LandingHeroPortadaContentImage>
-          <LandingHeroPortadaContentImage className={`${stylesDefault.content__image__imgDesktop} ${style.content__image__imgDesktop__custom}`}>
-             <LandingHeroPortadaContentImageImg image={landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.image} />
-          </LandingHeroPortadaContentImage>
-        </>
-
-        {/* Seccion de Texto */}
-        <>
-          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__desktop} ${style.content__text__desktop__custom}`}>
-            <LandingHeroPortadaContentTextLogoBrand image={landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.imageTextColumn }/>
-            <LandingHeroPortadaContentTextTitle className={style.content__text__title__desktop__custom}>
-              {landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.text.title}
-            </LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentTextDescription className={style.content__text__description__desktop__custom}>
-              {landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.text.description}
-            </LandingHeroPortadaContentTextDescription>
-            <LandingHeroPortadaContentTextButton
-              href={landingHeros.rollosDeFichosParaTurnos.informationPortadas.mobile.button.href}
-            >
-              {landingHeros.rollosDeFichosParaTurnos.informationPortadas.mobile.button.text}
-            </LandingHeroPortadaContentTextButton>
-          </LandingHeroPortadaContentText>
-          <LandingHeroPortadaContentText className={`${stylesDefault.content__text__mobile} ${style.content__text__mobile__custom}`}>
-            <LandingHeroPortadaContentTextTitle isMobile={true} className={style.content__text__title__mobile__custom}>
-              {landingHeros.rollosDeFichosParaTurnos.informationPortadas.mobile.text.title}
-            </LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentTextSubTitle className={style.content__text__subTitle__mobile__custom}>
-              {landingHeros.rollosDeFichosParaTurnos.informationPortadas.mobile.text.subTitle}
-            </LandingHeroPortadaContentTextSubTitle>
-            <LandingHeroPortadaContentTextDescription className={style.content__text__description__mobile__custom}>
-              {landingHeros.rollosDeFichosParaTurnos.informationPortadas.mobile.text.description}
-            </LandingHeroPortadaContentTextDescription>
-            <LandingHeroPortadaContentTextButton
-              href={landingHeros.rollosDeFichosParaTurnos.informationPortadas.mobile.button.href}
-            >
-              {landingHeros.rollosDeFichosParaTurnos.informationPortadas.mobile.button.text}
-            </LandingHeroPortadaContentTextButton>
-          </LandingHeroPortadaContentText>
-        </>
-      </LandingHeroPortadaContent>
-    </LandingHeroPortadaContainer>
+    <LandingHeroPortadaV2 values={values} />
   )
-}
+};
 
-export default HeroSection;
+export default RollosDeFichosParaTurnosHeroSection;
