@@ -7,7 +7,7 @@ import Image from "next/image";
 function LocalizadoresSecondaryProductsSection() {
   return (
     <>
-      <section className={style.secondary__products__section}>
+      <section className={style.secondary__products__section} data-nosnippet>
         <div className={style.secondary__products__container}>
           <div
             className={style.secondary__products__card__container}
@@ -67,7 +67,7 @@ function LocalizadoresSecondaryProductsSection() {
           </p>
         </div>
       </section>
-      <section className={style.video__section}>
+      <section className={style.video__section} data-nosnippet>
         <div className={style.video__container}>
           <h2 className={style.video__title}>Veamos funcionar nuestros Localizadores para restaurantes</h2>
           <div
