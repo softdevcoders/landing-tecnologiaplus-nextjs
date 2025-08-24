@@ -11,6 +11,7 @@ import {
   LandingHeroPortadaContentTextLogoBrand
 } from "@/components/landing-hero-portada";
 import { landingHeros } from "@/config/landing-heros";
+import style from "./styles.module.scss";
 
 const DispensadorTiquetesHeroSection = () => {
   const { informationPortadas: values } = landingHeros.dispensadorDeTickets;  
@@ -25,14 +26,14 @@ const DispensadorTiquetesHeroSection = () => {
                 ...values?.image?.mobile, 
                 alt: values?.image?.alt,
               }} 
-              isMobile={true} 
+              isMobile={true}
             />
             <LandingHeroPortadaContentImageImg 
               image={{
                 ...values?.image?.desktop, 
                 alt: values?.image?.alt,
-              }} 
-              isMobile={false} 
+              }}
+              className={style.custom_image__desktop}  
             />
           </LandingHeroPortadaContentImage>
           <LandingHeroPortadaContentText>

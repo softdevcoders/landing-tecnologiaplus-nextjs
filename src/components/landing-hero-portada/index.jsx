@@ -38,13 +38,13 @@ export const LandingHeroPortadaContentImage = ({ children, className = "" }) => 
 
 export const LandingHeroPortadaContentImageImg = ({ image, isMobile = false, className = "" }) => {
   return (
-    <div className={isMobile ? style.image__mobile : style.image__desktop}>
+    <div className={`${isMobile ? style.image__mobile : style.image__desktop} ${className}`}>
       <Image
         src={image.src}
         alt={image.alt}
         width={image.width}
         height={image.height}
-        className={`${isMobile ? style.image__mobile__image : style.image__desktop__image} ${className}`}
+        className={isMobile ? style.image__mobile__image : style.image__desktop__image} 
         unoptimized={true}
       />
     </div>

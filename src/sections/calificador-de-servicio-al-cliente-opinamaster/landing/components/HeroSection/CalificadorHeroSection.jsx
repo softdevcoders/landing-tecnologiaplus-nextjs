@@ -9,6 +9,7 @@ import {
   LandingHeroPortadaContentDescription,
 } from "@/components/landing-hero-portada";
 import { landingHeros } from "@/config/landing-heros";
+import style from "./styles.module.scss";
 
 const CalificadorHeroSection = () => {
   const { informationPortadas: values } = landingHeros.calificadorDeServicioAlClienteOpinamaster;
@@ -24,7 +25,7 @@ const CalificadorHeroSection = () => {
             />
             <LandingHeroPortadaContentImageImg 
               image={{...values?.image?.desktop, alt: values?.image?.alt}} 
-              isMobile={false} 
+              className={style.custom_image__desktop}  
             />
           </LandingHeroPortadaContentImage>
           <LandingHeroPortadaContentText>
