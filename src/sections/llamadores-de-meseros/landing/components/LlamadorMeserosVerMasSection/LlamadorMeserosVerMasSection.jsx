@@ -58,7 +58,7 @@ function LlamadorMeserosVerMasSection() {
   ];
 
   return (
-    <section className={style.ver__mas__section}>
+    <section data-nosnippet className={style.ver__mas__section}>
       <div className={style.ver__mas__section__container}>
         <h2 className={style.ver__mas__section__title}>
           Opciones para llamar al mesero

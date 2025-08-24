@@ -36,7 +36,7 @@ function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
       className={styles.s} 
       aria-label="Preguntas Frecuentes"
     >
-      <span ref={titleRef} itemProp="name">Preguntas Frecuentes</span>        
+      <h2 ref={titleRef} itemProp="name">Preguntas Frecuentes</h2>        
       <div 
         className={styles.faqContainer} 
         data-show={showAllQuestions}

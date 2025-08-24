@@ -3,7 +3,7 @@ import YouTubePlayer from "@/components/YouTubePlayer";
 
 function LlamadorMeserosVideosSection() {
   return (
-    <section className={style.video__section}>
+    <section data-nosnippet className={style.video__section}>
       <div className={style.video__container}>
         <h2 className={style.video__title}>Dale play para verlos funcionar</h2>
         <div

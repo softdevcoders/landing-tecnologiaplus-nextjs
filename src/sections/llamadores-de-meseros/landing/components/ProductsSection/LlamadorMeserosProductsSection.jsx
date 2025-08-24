@@ -4,7 +4,7 @@ import ToggleTextContent from "@/components/toggle-text-content";
 
 function LlamadorMeserosProductsSection() {
   return (
-    <section className={style.products__section}>
+    <section data-nosnippet className={style.products__section}>
       <div className={style.products__container_mobile}>
         <div className={style.products__container__item}>
           <Image
