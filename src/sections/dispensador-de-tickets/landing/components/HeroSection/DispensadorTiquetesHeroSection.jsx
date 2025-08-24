@@ -1,4 +1,15 @@
-import LandingHeroPortadaV2 from "@/components/landing-hero-portada-v2";
+import { 
+  LandingHeroPortada, 
+  LandingHeroPortadaContainer, 
+  LandingHeroPortadaContent, 
+  LandingHeroPortadaContentImage, 
+  LandingHeroPortadaContentImageImg, 
+  LandingHeroPortadaContentText, 
+  LandingHeroPortadaContentTextTitle, 
+  LandingHeroPortadaContentDescription,
+  LandingHeroPortadaContentTextButton,
+  LandingHeroPortadaContentTextLogoBrand
+} from "@/components/landing-hero-portada-v2";
 import { routes } from "@/config/routes";
 
 const DispensadorTiquetesHeroSection = () => {
@@ -6,8 +17,16 @@ const DispensadorTiquetesHeroSection = () => {
     title: "Dispensador de tickets",
     description: "Adiós a las filas. Orden y comodidad en cada turno.",
     image: {
-      mobile: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
-      desktop: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1200,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
+      mobile: {
+        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
+        width: 600,
+        height: 600,
+      },
+      desktop: {
+        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1000,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
+        width: 1000,
+        height: 1000,
+      },
       alt: "Imagen de Dispensador de Tickets TurnoExpress - Tecnología Plus",
     },
     button: {
@@ -23,7 +42,36 @@ const DispensadorTiquetesHeroSection = () => {
   };
 
   return (
-    <LandingHeroPortadaV2 values={values} />
+    <LandingHeroPortada>
+      <LandingHeroPortadaContainer>
+        <LandingHeroPortadaContent>
+          <LandingHeroPortadaContentImage>
+            <LandingHeroPortadaContentImageImg 
+              image={{
+                ...values?.image?.mobile, 
+                alt: values?.image?.alt,
+              }} 
+              isMobile={true} 
+            />
+            <LandingHeroPortadaContentImageImg 
+              image={{
+                ...values?.image?.desktop, 
+                alt: values?.image?.alt,
+              }} 
+              isMobile={false} 
+            />
+          </LandingHeroPortadaContentImage>
+          <LandingHeroPortadaContentText>
+            <LandingHeroPortadaContentTextLogoBrand image={values?.brandImage} />
+            <LandingHeroPortadaContentTextTitle>{values?.title}</LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentDescription>{values?.description}</LandingHeroPortadaContentDescription>
+            <LandingHeroPortadaContentTextButton href={values?.button?.href}>
+              {values?.button?.text}
+            </LandingHeroPortadaContentTextButton>
+          </LandingHeroPortadaContentText>
+        </LandingHeroPortadaContent>
+      </LandingHeroPortadaContainer>
+    </LandingHeroPortada> 
   )
 };
 
