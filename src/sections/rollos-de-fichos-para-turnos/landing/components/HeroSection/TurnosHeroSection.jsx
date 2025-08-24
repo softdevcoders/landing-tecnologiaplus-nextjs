@@ -10,36 +10,10 @@ import {
   LandingHeroPortadaContentTextButton,
   LandingHeroPortadaContentTextLogoBrand
 } from "@/components/landing-hero-portada-v2";
-import { routes } from "@/config/routes";
+import { landingHeros } from "@/config/landing-heros";
 
 const RollosDeFichosParaTurnosHeroSection = () => {
-  const values = {
-    title: "Rollos de fichos para turnos",
-    description: "Numeración clara para agilizar la atención de turnos.",
-    image: {
-      mobile: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
-        width: 600,
-        height: 600,
-      },
-      desktop: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1000,f_webp,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
-        width: 1000,
-        height: 1000,
-      },
-      alt: "Imagen de Rollos de fichos para turnos TurnoExpress - Tecnología Plus",
-    },
-    button: {
-      text: "Ver más",
-      href: routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url,
-    },
-    brandImage: {
-      src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_500,f_webp/v1744463735/12-8_qjsewx",
-      alt: "Logo Turno Express",
-      width: 300,
-      height: 65,
-    }
-  };
+  const { informationPortadas: values } = landingHeros.rollosDeFichosParaTurnos;  
 
   return (
     <LandingHeroPortada>

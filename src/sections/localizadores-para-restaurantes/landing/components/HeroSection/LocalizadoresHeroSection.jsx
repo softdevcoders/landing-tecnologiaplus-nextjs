@@ -8,25 +8,10 @@ import {
   LandingHeroPortadaContentText, 
   LandingHeroPortadaContentDescription, 
 } from "@/components/landing-hero-portada-v2";
+import { landingHeros } from "@/config/landing-heros";
 
 const LocalizadoresHeroSection = () => {
-  const values = {
-    title: "Localizadores para restaurantes",
-    description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
-    image: {
-      mobile: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_600,q_80/1_zjvtlb",
-        width: 600,
-        height: 600,
-      },
-      desktop: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_1000,q_80/1_zjvtlb",
-        width: 1000,
-        height: 1000,
-      },
-      alt: "Imagen de Localizadores para Restaurantes - Tecnología Plus",
-    },
-  };
+  const { informationPortadas: values } = landingHeros.localizadoresParaRestaurantes;
 
   return (
     <LandingHeroPortada>

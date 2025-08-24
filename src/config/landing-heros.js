@@ -47,30 +47,21 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      mobile: {
-        text: {
-          title: "Localizadores para restaurantes",
-          description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
+      title: "Localizadores para restaurantes",
+      description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
+      image: {
+        mobile: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_600,q_80/1_zjvtlb",
+          width: 600,
+          height: 600,
         },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_475/1_zjvtlb",
-          alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus",
-          width: 350,
-          height: 550
-        }
+        desktop: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_1000,q_80/1_zjvtlb",
+          width: 1000,
+          height: 1000,
+        },
+        alt: "Imagen de Localizadores para Restaurantes - Tecnología Plus",
       },
-      desktop: {
-        text: {
-          title: "Localizadores para restaurantes:",
-          description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
-        },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,q_80,f_webp,w_730/1_zjvtlb",
-          alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus",
-          width: 1500,
-          height: 701
-        }
-      }
     },
   },
   llamadoresDeMeseros: {
@@ -94,31 +85,21 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      mobile: {
-        text: {
-          title: "Llamador de meseros",
-          subTitle: "Un solo toque evita largas esperas",
-          description: "Silencioso y de largo alcance",
+      title: "Llamador de Meseros",
+      description: "Un solo toque evita largas esperas. Silencioso y de largo alcance.",
+      image: {
+        mobile: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_600,q_80/3_j5shgh",
+          width: 600,
+          height: 600,
         },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_475/3_j5shgh",
-          alt: "Imagen de Llamador de Meseros - TecnologíaPlus",
-          width: 350,
-          height: 553
-        }
+        desktop: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_1000,q_80/3_j5shgh",
+          width: 1000,
+          height: 1000,
+        },
+        alt: "Imagen de Llamador de Meseros - Tecnología Plus",
       },
-      desktop: {
-        text: {
-          title: "Llamador de Meseros: Un solo toque evita largas esperas.",
-          description: "Silencioso y de largo alcance.",
-        },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_900/3_j5shgh",
-          alt: "Imagen de Llamador de Meseros - TecnologíaPlus",
-          width: 900,
-          height: 500
-        }
-      }
     },
   },
   llamadoDeEnfermeriaCuidamaster: {
@@ -150,35 +131,26 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      mobile: {
-        text: {
-          title: "Llamado de enfermería",
-          subTitle: "Conecta al paciente con </b> el personal de salud.",
+      title: "Llamado de Enfermería",
+      description: "Más cerca de tus pacientes. Facilita el contacto entre el paciente y personal de salud.",
+      image: {
+        mobile: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/pp65ihdvnzxx3arig8yj",
+          width: 600,
+          height: 600,
         },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/pp65ihdvnzxx3arig8yj",
-          alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus",
-          width: 350,
-          height: 553
-        }
+        desktop: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1000,q_80,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
+          width: 1000,
+          height: 1000,
+        },
+        alt: "Imagen de Llamado de Enfermería CuidaMaster - Tecnología Plus",
       },
-      desktop: {
-        text: {
-          title: "Llamado de Enfermería: </br> Más cerca de tus pacientes.",
-          subTitle: "Facilita el contacto entre el paciente y <br> personal de salud.",
-        },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
-          alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus",
-          width: 900,
-          height: 741
-        },  
-        imageTextColumn: {
-          src: "v1744462125/Logo_CuidaMaster_4x-8_cn4z4h.webp",
-          alt: "CuidaMaster Logo",
-          width: 300,
-          height: 133
-        },
+      brandImage: {
+        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_500,f_webp/v1744462125/Logo_CuidaMaster_4x-8_cn4z4h",
+        alt: "Logo CuidaMaster",
+        width: 300,
+        height: 65,
       }
     },
   },
@@ -215,31 +187,21 @@ export const landingHeros = {
       }
     },
     informationPortadas: {
-      mobile: {
-        text: {
-          title: "Sistema de turnos de espera",
-          description: "Digitaliza tu sala de espera fácilmente.",
-        },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/sistema-de-turnos-turnomaster/landings/trdh4recmp6uwwa8ux71",
-          alt: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus",
+      title: "Sistema de turnos de espera",
+      description: "TurnoMaster lleva tu sala de espera al siguiente nivel.",
+      image: {
+        mobile: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/website-v2/images/landings/sistema-de-turnos-turnomaster/landings/trdh4recmp6uwwa8ux71",
           width: 600,
-          height: 600
-        }
-      },
-      desktop: {
-        text: {
-          title: "TurnoMaster:",
-          subTitle: "Sistema de turnos de espera",
-          description: "Lleva tu sala de espera al siguiente nivel",
+          height: 600,
         },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_1200,q_90,f_webp/13_adjkab",
-          alt: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus",
-          width: 1200,
-          height: 1009
-        }
-      }
+        desktop: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1000,f_webp,q_80/13_adjkab",
+          width: 1000,
+          height: 1000,
+        },
+        alt: "Imagen de Sistema de Turnos de espera Turnomaster - Tecnología Plus.",
+      },
     },
   },
   turneroTurnoexpress: {
@@ -269,32 +231,21 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      mobile: {
-        text: {
-          title: "Turnero digital",
-          subTitle: "Adiós a las filas",
-          description: "Orden y agilidad </br> en cada turno.",
+      title: "Turnero digital",
+      description: "Adiós a las filas. Agilidad y orden en cada turno.",
+      image: {
+        mobile: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_600,q_80/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
+          width: 600,
+          height: 600,
         },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,q_80,f_webp/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
-          alt: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus",
-          width: 350,
-          height: 541
-        }
-      },
-      desktop: {
-        text: {
-          title: "Turnero digital:",
-          subTitle: "Adiós a las filas",
-          description: "Agilidad y orden en cada turno.",
+        desktop: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_1000,q_80/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
+          width: 1000,
+          height: 1000,
         },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
-          alt: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus",
-          width: 900,
-          height: 500
-        }
-      }
+        alt: "Imagen de Turnero Digital TurnoExpress - Tecnología Plus",
+      },  
     },
   },
   dispensadorDeTickets: {
@@ -324,45 +275,30 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      mobile: {
-        text: {
-          title: "Dispensador de tickets",
-          subTitle: "Adiós a las filas",
-          description: "Orden y comodidad </br> en cada turno.",
+      title: "Dispensador de tickets",
+      description: "Adiós a las filas. Orden y comodidad en cada turno.",
+      image: {
+        mobile: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
+          width: 600,
+          height: 600,
         },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp,q_80/website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",
-          alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus",
-          width: 350,
-          height: 557
+        desktop: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1000,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
+          width: 1000,
+          height: 1000,
         },
-        button: {
-          href: routes.landings.dispensadorDeTickets.children.dispensadorDeTicketsCaracol.url,
-          text: "Ver más",  
-        }
+        alt: "Imagen de Dispensador de Tickets TurnoExpress - Tecnología Plus",
       },
-      desktop: {
-        text: {
-          title: "Dispensador de tickets",
-          subTitle: "Adiós a las filas",
-          description: "Orden y comodidad en cada turno.",
-        },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/dispensador-de-tickets/landings/vqnlsnau4j8n1jdfe3wq",
-          alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus",
-          width: 900,
-          height: 818
-        },
-        imageTextColumn: {
-          src: "v1744463735/12-8_qjsewx.webp",
-          alt: "Logo Turno Express",
-          width: 400,
-          height: 65
-        },
-        button: {
-          href: routes.landings.dispensadorDeTickets.children.dispensadorDeTicketsCaracol.url,
-          text: "Ver más",  
-        }
+      button: {
+        text: "Ver más",
+        href: routes.landings.dispensadorDeTickets.children.dispensadorDeTicketsCaracol.url,
+      },
+      brandImage: {
+        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_500,f_webp/v1744463735/12-8_qjsewx",
+        alt: "Logo Turno Express",
+        width: 300,
+        height: 65,
       }
     },
   },
@@ -393,44 +329,30 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      mobile: {
-        text: {
-          title: "Rollos </br> de turnos",
-          subTitle: "Numeración clara </br> y corte preciso para",  
-          description: "agilizar la atención de turnos.",
-        },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
-          alt: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus",
+      title: "Rollos de fichos para turnos",
+      description: "Numeración clara para agilizar la atención de turnos.",
+      image: {
+        mobile: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
           width: 600,
-          height: 600
+          height: 600,
         },
-        button: {
-          href: routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url,
-          text: "Ver más",
-        }
+        desktop: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1000,f_webp,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
+          width: 1000,
+          height: 1000,
+        },
+        alt: "Imagen de Rollos de fichos para turnos TurnoExpress - Tecnología Plus",
       },
-      desktop: {
-        text: {
-          title: "Numeración clara y corte preciso",
-          description: "para agilizar la atención de turnos.",
-        },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
-          alt: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus",
-          width: 900,
-          height: 610
-        },
-        button: {
-          href: routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url,
-          text: "Ver más",
-        },
-        imageTextColumn: {
-          src: "v1744463735/12-8_qjsewx.webp",
-          alt: "Logo Turno Express",
-          width: 400,
-          height: 65
-        },
+      button: {
+        text: "Ver más",
+        href: routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url,
+      },
+      brandImage: {
+        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_500,f_webp/v1744463735/12-8_qjsewx",
+        alt: "Logo Turno Express",
+        width: 300,
+        height: 65,
       }
     },    
   },
@@ -455,39 +377,25 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      mobile: {
-        text: {
-          title: "Rollos térmicos",
-          subTitle: "En variedad de tamaños </br> ¡Somos fabricantes!",
-          description: "Perfectos para tickets,</br> facturas y más.",
+      title: "Rollos de papel térmico",
+      description: "Perfectos para tickets, facturas y más. ¡Somos fabricantes!",
+      image: {
+        mobile: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
+          width: 600,
+          height: 600,
         },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp,q_80/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
-          alt: "Imagen de Rollos de Papel Térmico - TecnologíaPlus",
-          width: 350,
-          height: 361
+        desktop: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1000,f_webp,q_80/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
+          width: 1000,
+          height: 1000,
         },
-        button: {
-          href: routes.landings.rollosDePapelTermico.children.rollosTermicos.url,
-          text: "Ver más",
-        },
+        alt: "Imagen de Rollos de Papel Térmico - Tecnología Plus",
       },
-      desktop: {
-        text: {
-          title: "Rollos térmicos en variedad de tamaños. ¡Somos fabricantes!",
-          subTitle: "Perfectos para tickets, facturas y más.</br>¡No busques más!",
-        },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/rollos-de-papel-termico/landings/qfa0blen1npshqa6cny6",
-          alt: "Imagen de Rollos de Papel Térmico - TecnologíaPlus",
-          width: 900,
-          height: 649
-        },
-        button: {
-          href: routes.landings.rollosDePapelTermico.children.rollosTermicos.url,
-          text: "Ver más",
-        },
-      }
+      button: {
+        text: "Ver más",
+        href: routes.landings.rollosDePapelTermico.children.rollosTermicos.url,
+      },
     },
   },
   calificadorDeServicioAlClienteOpinamaster: {
@@ -517,33 +425,22 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      mobile: {
-        text: {
-          title: "Calificador </br> de servicio",
-          subTitle: "para crecer con la </br> voz de tus clientes.",
+      title: "Calificador de servicio al cliente",
+      description: "Para crecer con la voz de tus clientes.",
+      image: {
+        mobile: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/zmdy9nvzeoetrit2w95n",
+          width: 600,
+          height: 600,
         },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/zmdy9nvzeoetrit2w95n",
-          alt: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus",
-          width: 350,
-          height: 692
-        }
+        desktop: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1000,q_80,f_webp/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/aih7y6glfth4vthhkytk",
+          width: 1000,
+          height: 1000,
+        },
+        alt: "Imagen de Calificador de servicio al cliente - Tecnología Plus",
       },
-      desktop: {
-        text: {
-          title: "OpinaMaster:",
-          subTitle: "El calificador de servicio",
-          description: "para crecer con la voz de tus clientes.",
-        },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/calificador-de-servicio-al-cliente-opinamaster/landings/aih7y6glfth4vthhkytk",
-          alt: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus",
-          width: 900,
-          height: 968
-        },
-      }
     },
-    
   },
   encuestaVirtual: {
     informationHome: {    
@@ -574,30 +471,21 @@ export const landingHeros = {
       },
     },
     informationPortadas: {
-      mobile: {
-        text: {
-          title: "Encuesta virtual",
-          subTitle: "Detecta puntos débiles </br> y mejora tu negocio.",
+      title: "Encuesta virtual",
+      description: "Detecta los puntos fuertes y como mejorar tu negocio.",
+      image: {
+        mobile: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
+          width: 600,
+          height: 600,
         },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_600,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
-          alt: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus",
-          width: 350,
-          height: 603
-        }
+        desktop: {
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1000,q_80,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
+          width: 1000,
+          height: 1000,
+        },
+        alt: "Imagen de Encuesta Virtual - Tecnología Plus",
       },
-      desktop: {
-        text: {
-          title: "Encuesta virtual: </br> Detecta los puntos fuertes",
-          subTitle: "y como mejorar tu negocio.",
-        },
-        image: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_900,q_80,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
-          alt: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus",
-          width: 900,
-          height: 905
-        },
-      }
     },
   }
 }

@@ -8,25 +8,10 @@ import {
   LandingHeroPortadaContentTextTitle, 
   LandingHeroPortadaContentDescription 
 } from "@/components/landing-hero-portada-v2";
+import { landingHeros } from "@/config/landing-heros";
 
 const TurnoExpressHeroSection = () => {
-  const values = {
-    title: "Turnero digital",
-    description: "Adiós a las filas. Agilidad y orden en cada turno.",
-    image: {
-      mobile: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_600,q_80/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
-        width: 600,
-        height: 600,
-      },
-      desktop: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_1000,q_80/website-v2/images/landings/turnero-turnoexpress/landings/edivf9hsjswfezxetlsw",
-        width: 1000,
-        height: 1000,
-      },
-      alt: "Imagen de Turnero Digital TurnoExpress - Tecnología Plus",
-    },  
-  };
+  const { informationPortadas: values } = landingHeros.turneroTurnoexpress; 
 
   return (
     <LandingHeroPortada>

@@ -8,25 +8,10 @@ import {
   LandingHeroPortadaContentTextTitle, 
   LandingHeroPortadaContentDescription 
 } from "@/components/landing-hero-portada-v2";
+import { landingHeros } from "@/config/landing-heros";
 
 const EncuestaVirtualHeroSection = () => {
-  const values = {
-    title: "Encuesta virtual",
-    description: "Detecta los puntos fuertes y como mejorar tu negocio.",
-    image: {
-      mobile: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
-        width: 600,
-        height: 600,
-      },
-      desktop: {
-        src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1000,q_80,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
-        width: 1000,
-        height: 1000,
-      },
-      alt: "Imagen de Encuesta Virtual - Tecnología Plus",
-    },
-  };
+  const { informationPortadas: values } = landingHeros.encuestaVirtual;
 
   return (
     <LandingHeroPortada>

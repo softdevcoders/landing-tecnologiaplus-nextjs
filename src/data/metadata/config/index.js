@@ -82,8 +82,7 @@ export function generateLandingMetadata(config) {
     },
     // Metaetiqueta específica para imágenes en resultados de Google
     other: {
-      image: mainImage?.small?.url || null,
-      'image:alt': mainImage?.small?.alt || null,
+      image: mainImage?.large?.url || null,
     },
     openGraph: {
       title: {

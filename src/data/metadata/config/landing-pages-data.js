@@ -28,10 +28,10 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Localizadores para Restaurantes - TecnologíaPlus" 
       },
       large: {
-        url: landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image.src,
-        alt: landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image.alt,
-        width: landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image.width,
-        height: landingHeros.localizadoresParaRestaurantes.informationPortadas.desktop.image.height
+        url: landingHeros.localizadoresParaRestaurantes.informationPortadas.image.desktop.src,  
+        alt: landingHeros.localizadoresParaRestaurantes.informationPortadas.image.desktop.alt,
+        width: landingHeros.localizadoresParaRestaurantes.informationPortadas.image.desktop.width,
+        height: landingHeros.localizadoresParaRestaurantes.informationPortadas.image.desktop.height
       }
     }
   },
@@ -45,8 +45,10 @@ export const LANDING_IMAGES = {
       },
       large: {
         // url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128274/sistema_de_turnos_turnomaster_lpacwf.jpg",
-        url: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.desktop.image.src,
-        alt: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.desktop.image.alt
+        url: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.image.desktop.src,
+        alt: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.image.desktop.alt,
+        width: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.image.desktop.width,
+        height: landingHeros.sistemasDeTurnosTurnomaster.informationPortadas.image.desktop.height
       }
     }
   },
@@ -60,9 +62,11 @@ export const LANDING_IMAGES = {
       },
       large: {
         // url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753128273/llamadores_de_meseros_jmasyp.jpg",
-        url: landingHeros.llamadoresDeMeseros.informationPortadas.desktop.image.src,
-        alt: landingHeros.llamadoresDeMeseros.informationPortadas.desktop.image.alt
-      }
+        url: landingHeros.llamadoresDeMeseros.informationPortadas.image.desktop.src,
+        alt: landingHeros.llamadoresDeMeseros.informationPortadas.image.desktop.alt,
+        width: landingHeros.llamadoresDeMeseros.informationPortadas.image.desktop.width,
+        height: landingHeros.llamadoresDeMeseros.informationPortadas.image.desktop.height
+      },
     }
   },  
 
@@ -74,8 +78,10 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Dispensador de Tickets TurnoExpress - TecnologíaPlus"
       },
       large: {
-        url: landingHeros.dispensadorDeTickets.informationPortadas.desktop.image.src,
-        alt: landingHeros.dispensadorDeTickets.informationPortadas.desktop.image.alt
+        url: landingHeros.dispensadorDeTickets.informationPortadas.image.desktop.src,
+        alt: landingHeros.dispensadorDeTickets.informationPortadas.image.desktop.alt,
+        width: landingHeros.dispensadorDeTickets.informationPortadas.image.desktop.width,
+        height: landingHeros.dispensadorDeTickets.informationPortadas.image.desktop.height
       }
     }
   },
@@ -88,8 +94,10 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus"
       },
       large: {
-        url: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.desktop.image.src,
-        alt: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.desktop.image.alt
+        url: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.image.desktop.src,
+        alt: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.image.desktop.alt,
+        width: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.image.desktop.width,
+        height: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.image.desktop.height
       }
     }
   },
@@ -102,8 +110,10 @@ export const LANDING_IMAGES = {
           alt: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus"
       },
       large: {
-        url: landingHeros.turneroTurnoexpress.informationPortadas.desktop.image.src,
-        alt: landingHeros.turneroTurnoexpress.informationPortadas.desktop.image.alt
+        url: landingHeros.turneroTurnoexpress.informationPortadas.image.desktop.src,
+        alt: landingHeros.turneroTurnoexpress.informationPortadas.image.desktop.alt,
+        width: landingHeros.turneroTurnoexpress.informationPortadas.image.desktop.width,
+        height: landingHeros.turneroTurnoexpress.informationPortadas.image.desktop.height
       }
     }
   },
@@ -116,8 +126,10 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Calificador de Servicio OpinaMaster - TecnologíaPlus"
       },
       large: {
-        url: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.desktop.image.src,
-        alt: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.desktop.image.alt
+        url: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.image.desktop.src,
+        alt: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.image.desktop.alt,
+        width: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.image.desktop.width,
+        height: landingHeros.calificadorDeServicioAlClienteOpinamaster.informationPortadas.image.desktop.height
       }
     }
   },
@@ -130,8 +142,10 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus"
       },
       large: {
-        url: landingHeros.encuestaVirtual.informationPortadas.desktop.image.src,
-        alt: landingHeros.encuestaVirtual.informationPortadas.desktop.image.alt
+        url: landingHeros.encuestaVirtual.informationPortadas.image.desktop.src,
+        alt: landingHeros.encuestaVirtual.informationPortadas.image.desktop.alt,
+        width: landingHeros.encuestaVirtual.informationPortadas.image.desktop.width,
+        height: landingHeros.encuestaVirtual.informationPortadas.image.desktop.height
       }
     }
   },
@@ -144,8 +158,10 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Rollos de Papel Térmico - TecnologíaPlus"
       },
       large: {
-        url: landingHeros.rollosDePapelTermico.informationPortadas.desktop.image.src,
-        alt: landingHeros.rollosDePapelTermico.informationPortadas.desktop.image.alt
+        url: landingHeros.rollosDePapelTermico.informationPortadas.image.desktop.src,
+        alt: landingHeros.rollosDePapelTermico.informationPortadas.image.desktop.alt,
+        width: landingHeros.rollosDePapelTermico.informationPortadas.image.desktop.width,
+        height: landingHeros.rollosDePapelTermico.informationPortadas.image.desktop.height
       }
     }
   },
@@ -158,8 +174,10 @@ export const LANDING_IMAGES = {
         alt: "Imagen de Rollos de Turnos TurnoExpress - TecnologíaPlus"
       },
       large: {
-        url: landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.image.src,
-        alt: landingHeros.rollosDeFichosParaTurnos.informationPortadas.desktop.image.alt
+        url: landingHeros.rollosDeFichosParaTurnos.informationPortadas.image.desktop.src,
+        alt: landingHeros.rollosDeFichosParaTurnos.informationPortadas.image.desktop.alt,
+        width: landingHeros.rollosDeFichosParaTurnos.informationPortadas.image.desktop.width,
+        height: landingHeros.rollosDeFichosParaTurnos.informationPortadas.image.desktop.height
       }
     }
   }
