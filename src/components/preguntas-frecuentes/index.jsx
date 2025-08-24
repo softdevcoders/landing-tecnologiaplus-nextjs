@@ -32,6 +32,7 @@ function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
 
   return (
     <section 
+      data-nosnippet
       className={styles.s} 
       aria-label="Preguntas Frecuentes"
     >

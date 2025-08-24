@@ -7,7 +7,7 @@ import {
   LandingHeroPortadaContentImageImg, 
   LandingHeroPortadaContentText, 
   LandingHeroPortadaContentDescription, 
-} from "@/components/landing-hero-portada-v2";
+} from "@/components/landing-hero-portada";
 import { landingHeros } from "@/config/landing-heros";
 
 const LocalizadoresHeroSection = () => {
