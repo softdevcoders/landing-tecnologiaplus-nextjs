@@ -1,18 +1,45 @@
-import LandingHeroPortadaV2 from "@/components/landing-hero-portada-v2";
+import { 
+  LandingHeroPortada, 
+  LandingHeroPortadaContainer, 
+  LandingHeroPortadaContent, 
+  LandingHeroPortadaContentImage, 
+  LandingHeroPortadaContentImageImg, 
+  LandingHeroPortadaContentText, 
+  LandingHeroPortadaContentTextTitle, 
+  LandingHeroPortadaContentDescription 
+} from "@/components/landing-hero-portada";
+import { landingHeros } from "@/config/landing-heros";
 
 const SistemaDeTurnosTurnoMasterHeroSection = () => {
-  const values = {
-    title: "Sistema de turnos de espera",
-    description: "TurnoMaster lleva tu sala de espera al siguiente nivel.",
-    image: {
-      mobile: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/website-v2/images/landings/sistema-de-turnos-turnomaster/landings/trdh4recmp6uwwa8ux71",
-      desktop: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1200,f_webp,q_80/13_adjkab",
-      alt: "Imagen de Sistema de Turnos de espera Turnomaster - Tecnología Plus.",
-    },
-  };
+  const { informationPortadas: values } = landingHeros.sistemasDeTurnosTurnomaster;  
 
   return (
-    <LandingHeroPortadaV2 values={values} />
+    <LandingHeroPortada>
+      <LandingHeroPortadaContainer>
+        <LandingHeroPortadaContent>
+          <LandingHeroPortadaContentImage>
+            <LandingHeroPortadaContentImageImg 
+              image={{
+                ...values?.image?.mobile, 
+                alt: values?.image?.alt,
+              }} 
+              isMobile={true} 
+            />
+            <LandingHeroPortadaContentImageImg 
+              image={{
+                ...values?.image?.desktop, 
+                alt: values?.image?.alt,
+              }} 
+              isMobile={false} 
+            />
+          </LandingHeroPortadaContentImage>
+          <LandingHeroPortadaContentText>
+            <LandingHeroPortadaContentTextTitle>{values?.title}</LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentDescription>{values?.description}</LandingHeroPortadaContentDescription>
+          </LandingHeroPortadaContentText>
+        </LandingHeroPortadaContent>
+      </LandingHeroPortadaContainer>
+    </LandingHeroPortada> 
   )
 };
 

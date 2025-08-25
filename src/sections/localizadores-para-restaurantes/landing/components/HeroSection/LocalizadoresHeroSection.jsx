@@ -1,18 +1,45 @@
-import LandingHeroPortadaV2 from "@/components/landing-hero-portada-v2";
+import { 
+  LandingHeroPortada, 
+  LandingHeroPortadaContainer, 
+  LandingHeroPortadaContent, 
+  LandingHeroPortadaContentTextTitle, 
+  LandingHeroPortadaContentImage, 
+  LandingHeroPortadaContentImageImg, 
+  LandingHeroPortadaContentText, 
+  LandingHeroPortadaContentDescription, 
+} from "@/components/landing-hero-portada";
+import { landingHeros } from "@/config/landing-heros";
 
 const LocalizadoresHeroSection = () => {
-  const values = {
-    title: "Localizadores para restaurantes",
-    description: "Tus clientes disfrutan el tiempo sin temor de perder el turno.",
-    image: {
-      mobile: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_600,q_80/1_zjvtlb",
-      desktop: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_1200,q_80/1_zjvtlb",
-      alt: "Imagen de Localizadores para Restaurantes - Tecnología Plus",
-    },
-  };
+  const { informationPortadas: values } = landingHeros.localizadoresParaRestaurantes;
 
   return (
-    <LandingHeroPortadaV2 values={values} />
+    <LandingHeroPortada>
+      <LandingHeroPortadaContainer>
+        <LandingHeroPortadaContent>
+          <LandingHeroPortadaContentImage>
+            <LandingHeroPortadaContentImageImg 
+              image={{
+                ...values?.image?.mobile, 
+                alt: values?.image?.alt,
+              }} 
+              isMobile={true} 
+            />
+            <LandingHeroPortadaContentImageImg 
+              image={{
+                ...values?.image?.desktop, 
+                alt: values?.image?.alt,
+              }} 
+              isMobile={false} 
+            />
+          </LandingHeroPortadaContentImage>
+          <LandingHeroPortadaContentText>
+            <LandingHeroPortadaContentTextTitle>{values?.title}</LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentDescription>{values?.description}</LandingHeroPortadaContentDescription>
+          </LandingHeroPortadaContentText>
+        </LandingHeroPortadaContent>
+      </LandingHeroPortadaContainer>
+    </LandingHeroPortada> 
   )
 };
 

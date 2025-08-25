@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const IndustriesSection = ({ children, className = "" }) => {
   return (
-    <section className={`${style.industries__section} ${className}`}>
+    <section data-nosnippet className={`${style.industries__section} ${className}`}>
       <div className={style.industries__section__background}>
         <Image
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/nisgh2gbe0ginddnsrko_opkrn1.webp"

@@ -1,4 +1,3 @@
-import { routes } from "@/config/routes";
 import { generateLandingMetadata } from "@/data/metadata/config";
 import { getLandingPageConfig } from "@/data/metadata/config/landing-pages-data";
 

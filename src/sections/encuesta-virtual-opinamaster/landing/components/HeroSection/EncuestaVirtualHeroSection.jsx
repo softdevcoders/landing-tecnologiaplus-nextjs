@@ -1,19 +1,40 @@
-import LandingHeroPortadaV2 from "@/components/landing-hero-portada-v2";
+import { 
+  LandingHeroPortada, 
+  LandingHeroPortadaContainer, 
+  LandingHeroPortadaContent, 
+  LandingHeroPortadaContentImage, 
+  LandingHeroPortadaContentImageImg, 
+  LandingHeroPortadaContentText, 
+  LandingHeroPortadaContentTextTitle, 
+  LandingHeroPortadaContentDescription 
+} from "@/components/landing-hero-portada";
+import { landingHeros } from "@/config/landing-heros";
 
 const EncuestaVirtualHeroSection = () => {
-  const values = {
-    title: "Encuesta virtual",
-    description: "Detecta los puntos fuertes y como mejorar tu negocio.",
-    image: {
-      mobile: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
-      desktop: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1200,q_80,f_webp/website-v2/images/landings/encuesta-virtual-opinamaster/landings/oxf7yydvvrkv1n7pem0i",
-      alt: "Imagen de Encuesta Virtual - Tecnología Plus",
-    },
-  };
+  const { informationPortadas: values } = landingHeros.encuestaVirtual;
 
   return (
-    <LandingHeroPortadaV2 values={values} />
-  )
+    <LandingHeroPortada>
+      <LandingHeroPortadaContainer>
+        <LandingHeroPortadaContent>
+          <LandingHeroPortadaContentImage>
+            <LandingHeroPortadaContentImageImg 
+              image={{...values?.image?.mobile, alt: values?.image?.alt}} 
+              isMobile={true} 
+            />
+            <LandingHeroPortadaContentImageImg 
+              image={{...values?.image?.desktop, alt: values?.image?.alt}} 
+              isMobile={false} 
+            />
+          </LandingHeroPortadaContentImage>
+          <LandingHeroPortadaContentText>
+            <LandingHeroPortadaContentTextTitle>{values?.title}</LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentDescription>{values?.description}</LandingHeroPortadaContentDescription>
+          </LandingHeroPortadaContentText>
+        </LandingHeroPortadaContent>
+      </LandingHeroPortadaContainer>
+    </LandingHeroPortada> 
+  ) 
 };
 
 export default EncuestaVirtualHeroSection;

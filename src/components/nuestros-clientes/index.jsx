@@ -4,7 +4,7 @@ import InfiniteSlider from "@/components/nuestros-clientes/inifinite-slider";
 function NuestrosClientes({ title, description, logos, isVerMasView = false }) {
 
   return (
-    <section className={`${style.nuestros__clientes__section} ${isVerMasView ? style.nuestros__clientes__section__ver__mas : ""}`}>
+    <section data-nosnippet className={`${style.nuestros__clientes__section} ${isVerMasView ? style.nuestros__clientes__section__ver__mas : ""}`}>
       <span className={`${style.nuestros__clientes__title} ${isVerMasView ? style.nuestros__clientes__title__ver__mas : ""}`}>{title}</span>
       {description && <p className={style.nuestros__clientes__description}>{description}</p>}
       <div className={style.nuestros__clientes__container}>

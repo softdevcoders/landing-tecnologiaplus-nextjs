@@ -1,20 +1,28 @@
-import styles from "./styles.module.scss";
+import style from "./styles.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
-export const LandingHeroPortadaContainer = ({ className = "", children }) => {
+export const LandingHeroPortada = ({ children, className = "" }) => {
   return (
-    <div className={`${styles.container} ${className}`}>
-      <div className={`${styles.background} ${styles.background__desktop}`}></div>
-      <div className={`${styles.background} ${styles.background__mobile}`}></div>
+    <section className={`${style.landingHeroSection} ${className}`}>
+      <div className={style.background__mobile}></div>
+      <div className={style.background__desktop}></div>
       {children}
-    </div>
-  );
+    </section>
+  )
 };
 
-export const LandingHeroPortadaContent = ({ className = "", children }) => {
+export const LandingHeroPortadaContainer = ({ children, className = "" }) => {
   return (
-    <div className={`${styles.content} ${className}`}>
+    <div className={`${style.landingHeroSection__container} ${className}`}>
+      {children}
+    </div>
+  )
+}
+
+export const LandingHeroPortadaContent = ({ children, className = "" }) => {
+  return (
+    <div className={`${style.landingHeroSection__content} ${className}`}>
       {children}
     </div>
   )
@@ -22,102 +30,75 @@ export const LandingHeroPortadaContent = ({ className = "", children }) => {
 
 export const LandingHeroPortadaContentImage = ({ children, className = "" }) => {
   return (
-    <div className={`${styles.content__image} ${className}`}>
+    <div className={`${style.landingHeroSection__image} ${className}`}>
       {children}
     </div>
   )
 }
 
-export const LandingHeroPortadaContentImageImg = ({ image, className = "" }) => {
+export const LandingHeroPortadaContentImageImg = ({ image, isMobile = false, className = "" }) => {
   return (
-    <Image
-      className={`${styles.content__image__img} ${className}`}
-      loading="eager"
-      fetchPriority="high"
-      unoptimized={true}
-      {...image} 
-    />
-  )
-}
-
-export const LandingHeroPortadaContentText = ({children, className = ""}) => {
-  return (
-    <div className={`${styles.content__text} ${className}`}>
-      {children}
-    </div>
-  ) 
-}
-
-export const LandingHeroPortadaContentTextTitle = ({className = "", isMobile = false, children}) => {
-  return (
-    // Se hace esto para que SEO no tome dos h1 en la misma pagina.
-    <>
-      {isMobile ? (  
-        <h2 
-          className={`${styles.content__text__title} ${className}`}
-          dangerouslySetInnerHTML={{__html: children}}
-        />
-      ) : (
-        <h1 
-          className={`${styles.content__text__title} ${className}`}
-          dangerouslySetInnerHTML={{__html: children}}
-        />
-      )}
-    </>
-  )
-}
-
-export const LandingHeroPortadaContentTextSubTitle = ({className = "", children}) => {
-  return (
-    <h2 
-      className={`${styles.content__text__subTitle} ${className}`}
-      dangerouslySetInnerHTML={{__html: children}}
-    />
-  ) 
-}
-
-export const LandingHeroPortadaContentTextDescription = ({className = "", children}) => {
-  return (
-    <p 
-      className={`${styles.content__text__description} ${className}`}
-      dangerouslySetInnerHTML={{__html: children}}
-    />
-  ) 
-}
-
-export const LandingHeroPortadaContentTextButton = ({className = "", href, children}) => {
-  return (
-    <Link href={href} className={`${styles.content__text__button} ${className}`} >
-      {children}
-    </Link>
-  ) 
-}
-
-export const LandingHeroPortadaContentTextLogoBrand = ({className = "", image}) => {
-  return (
-    <div className={`${styles.content__text__image_container} ${className}`}>
+    <div className={`${isMobile ? style.image__mobile : style.image__desktop} ${className}`}>
       <Image
-        className={styles.landing_hero__content__logo__brand__image} 
-        {...image} 
-        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${image.width}/${image.src}`}
-        loading="lazy"
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        className={isMobile ? style.image__mobile__image : style.image__desktop__image} 
+        unoptimized={true}
       />
     </div>
   )
 }
 
-export const LandingHeroPortadaContentDivider = ({className = ""}) => {
-  const baseUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`;
-
+export const LandingHeroPortadaContentText = ({ children, className = "" }) => {
   return (
-    <Image
-      className={`${styles.content__divider} ${className}`}
-      src={`${baseUrl}/v1745196016/linea_2x-8_n80wv9_6a5e17-horizontal_giisl2.webp`}
-      alt="divisor"
-      width={400}
-      height={5}
-    />
-  ) 
+    <div className={`${style.landingHeroSection__text} ${className}`}>
+      {children}
+    </div>
+  )
 }
 
+export const LandingHeroPortadaContentTextTitle = ({ children, className = "" }) => {
+  return (
+    <h1 className={`${style.title} ${className}`}>
+      {children}
+    </h1>
+  )
+}
 
+export const LandingHeroPortadaContentDescription = ({ children, className = "" }) => {
+  return (
+    <p className={`${style.description} ${className}`}>
+      {children}
+    </p>
+  )
+}
+
+export const LandingHeroPortadaContentTextButton = ({ children, className = "", href }) => {
+  return (
+    <Link
+      href={href}
+      className={`${style.button} ${className}`}
+    >
+      {children}
+    </Link>
+  )
+}
+
+export const LandingHeroPortadaContentTextLogoBrand = ({ image, className = "" }) => {
+  return (
+    <div className={`${style.brandImage} ${className}`}>
+      <Image 
+        src={image.src} 
+        alt={image.alt} 
+        width={image.width} 
+        height={image.height} 
+        className={`${style.brandImage__image} ${className}`}
+        unoptimized={true}
+      />
+    </div>
+  )
+}
+
+export default LandingHeroPortada;

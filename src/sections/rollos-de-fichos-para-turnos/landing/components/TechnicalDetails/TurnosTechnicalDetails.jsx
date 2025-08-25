@@ -100,7 +100,7 @@ function TurnosTechnicalDetails() {
       <div className={style.technical__details__container}>
         <div className={style.technical__details__container__body}>
           <div className={style.technical__details__container__body__colors_container}>
-            <h3 className={style.technical__details__container__body__colors_container__title}>Color - {colors.find((color) => color.id === selectedColor)?.label}</h3>
+            <span className={style.technical__details__container__body__colors_container__title}>Color - {colors.find((color) => color.id === selectedColor)?.label}</span>
             <div className={style.technical__details__container__body__colors_container__colors_list}>
               {colors.map((color) => (
                 <div 
@@ -112,7 +112,7 @@ function TurnosTechnicalDetails() {
             </div>
           </div>
           <div className={style.technical__details__container__body__features_container}>
-            <h3 className={style.technical__details__container__body__features_container__title}>Características</h3>
+            <span className={style.technical__details__container__body__features_container__title}>Características</span>
             <div className={style.technical__details__container__body__features_container__features_list}>
               {features.map((feature) => (
                 <div className={style.technical__details__container__body__features_container__features_list__feature} key={feature.id}>

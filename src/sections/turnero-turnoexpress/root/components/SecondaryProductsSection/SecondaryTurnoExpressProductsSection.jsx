@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function SecondaryTurnoExpressProductsSection() {
   return (
-    <section className={style.products__section}>
+    <section data-nosnippet className={style.products__section}>
       <div className={style.products__card}>
         <Link href={routes.landings.dispensadorDeTickets.children.dispensadorDeTicketsCaracol.url}> 
           <h2 className={style.products__card__title}>Dispensador de tiquetes</h2> 

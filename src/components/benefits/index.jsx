@@ -3,7 +3,7 @@ import style from "./benefits.module.scss";
 
 function BenefitsSection({ benefits, title, className = "", isHome = false, isEncuestaVirtual = false }) {
   return (
-    <section className={`${style.benefits__section} ${className}`}>
+    <section data-nosnippet className={`${style.benefits__section} ${className}`}>
       <Image
         src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_50/v1738851175/fondo_2x-8_pxbzqc"
         alt="benefits-background"
