@@ -18,31 +18,67 @@ const Thumbnails = ({
     containScroll: 'keepSnaps',
     dragFree: false,
     axis: 'y',
-    speed: 10,
+    speed: 20,
     skipSnaps: false,
-    watchDrag: true
+    watchDrag: true,
+    slidesToScroll: 2, // Scroll 2 thumbnails a la vez para que sea más visible
+    duration: 25 // Duración más rápida de la animación
   });
 
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [shouldShowButtons, setShouldShowButtons] = useState(false);
   const [touchStartY, setTouchStartY] = useState(null);
-  const [scrollAccumulator, setScrollAccumulator] = useState(0);
 
   const onThumbsSelect = useCallback(() => {
     if (!emblaThumbsApi) return;
-    setCanScrollPrev(emblaThumbsApi.canScrollPrev());
-    setCanScrollNext(emblaThumbsApi.canScrollNext());
+    
+    // Usar setTimeout para asegurar que el estado se actualice después del render
+    setTimeout(() => {
+      const canPrev = emblaThumbsApi.canScrollPrev();
+      const canNext = emblaThumbsApi.canScrollNext();
+      setCanScrollPrev(canPrev);
+      setCanScrollNext(canNext);
+    }, 0);
   }, [emblaThumbsApi]);
 
-  const scrollThumbsPrev = useCallback(() => {
+  const scrollThumbsPrev = useCallback((e) => {
+    e?.preventDefault();
+    e?.stopPropagation();
     if (!emblaThumbsApi) return;
-    emblaThumbsApi.scrollPrev();
+    
+    // Obtener el índice actual y calcular el anterior
+    const currentIndex = emblaThumbsApi.selectedScrollSnap();
+    const prevIndex = Math.max(currentIndex - 2, 0); // Saltar 2 posiciones hacia atrás
+    
+    // Scroll directo al índice calculado para mayor control
+    emblaThumbsApi.scrollTo(prevIndex);
+    
+    // Forzar actualización del estado después del scroll
+    setTimeout(() => {
+      setCanScrollPrev(emblaThumbsApi.canScrollPrev());
+      setCanScrollNext(emblaThumbsApi.canScrollNext());
+    }, 100);
   }, [emblaThumbsApi]);
 
-  const scrollThumbsNext = useCallback(() => {
+  const scrollThumbsNext = useCallback((e) => {
+    e?.preventDefault();
+    e?.stopPropagation();
     if (!emblaThumbsApi) return;
-    emblaThumbsApi.scrollNext();
+    
+    // Obtener el índice actual y calcular el siguiente
+    const currentIndex = emblaThumbsApi.selectedScrollSnap();
+    const scrollSnaps = emblaThumbsApi.scrollSnapList();
+    const nextIndex = Math.min(currentIndex + 2, scrollSnaps.length - 1); // Saltar 2 posiciones
+    
+    // Scroll directo al índice calculado para mayor control
+    emblaThumbsApi.scrollTo(nextIndex);
+    
+    // Forzar actualización del estado después del scroll
+    setTimeout(() => {
+      setCanScrollPrev(emblaThumbsApi.canScrollPrev());
+      setCanScrollNext(emblaThumbsApi.canScrollNext());
+    }, 100);
   }, [emblaThumbsApi]);
 
   const handleWheel = useCallback((event) => {
@@ -53,23 +89,16 @@ const Thumbnails = ({
     
     // Detectar si es un trackpad (deltaY más pequeño) o mouse wheel (deltaY más grande)
     const isTrackpad = Math.abs(event.deltaY) < 50;
-    const scrollThreshold = isTrackpad ? 10 : 50;
+    const scrollThreshold = isTrackpad ? 30 : 100;
     
-    // Acumular el scroll para gestos suaves
-    setScrollAccumulator(prev => {
-      const newAccumulator = prev + event.deltaY;
-      
-      if (Math.abs(newAccumulator) > scrollThreshold) {
-        if (newAccumulator > 0) {
-          emblaThumbsApi.scrollNext();
-        } else {
-          emblaThumbsApi.scrollPrev();
-        }
-        return 0; // Resetear el acumulador
+    // Scroll directo sin acumulador
+    if (Math.abs(event.deltaY) > scrollThreshold) {
+      if (event.deltaY > 0) {
+        emblaThumbsApi.scrollNext();
+      } else {
+        emblaThumbsApi.scrollPrev();
       }
-      
-      return newAccumulator;
-    });
+    }
   }, [emblaThumbsApi]);
 
   const handleTouchStart = useCallback((event) => {
@@ -110,13 +139,18 @@ const Thumbnails = ({
       viewport.addEventListener('touchend', handleTouchEnd);
     }
 
-    emblaThumbsApi.on('select', onThumbsSelect);
-    emblaThumbsApi.on('reInit', onThumbsSelect);
-    onThumbsSelect();
+    // Usar requestAnimationFrame para asegurar que el carousel esté listo
+    const initCarousel = () => {
+      emblaThumbsApi.on('select', onThumbsSelect);
+      emblaThumbsApi.on('reInit', onThumbsSelect);
+      onThumbsSelect();
 
-    // Mostrar botones solo si hay scroll disponible
-    const hasOverflow = emblaThumbsApi.scrollSnapList().length > 4;
-    setShouldShowButtons(hasOverflow);
+      // Mostrar botones solo si hay scroll disponible
+      const hasOverflow = emblaThumbsApi.scrollSnapList().length > 4;
+      setShouldShowButtons(hasOverflow);
+    };
+
+    requestAnimationFrame(initCarousel);
 
     return () => {
       if (viewport) {
@@ -138,16 +172,7 @@ const Thumbnails = ({
     emblaThumbsApi.scrollTo(selectedIndex);
   }, [emblaThumbsApi, selectedIndex]);
 
-  // Efecto para limpiar el acumulador de scroll después de inactividad
-  useEffect(() => {
-    if (scrollAccumulator === 0) return;
-    
-    const timeout = setTimeout(() => {
-      setScrollAccumulator(0);
-    }, 1000); // Limpiar después de 1 segundo de inactividad
-    
-    return () => clearTimeout(timeout);
-  }, [scrollAccumulator]);
+
 
   if (!mediaItems || mediaItems.length === 0) {
     return null;
