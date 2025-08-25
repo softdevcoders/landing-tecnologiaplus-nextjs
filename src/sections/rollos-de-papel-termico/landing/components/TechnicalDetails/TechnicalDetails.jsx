@@ -84,7 +84,7 @@ function TurnosTechnicalDetails() {
       </div> 
       <div className={style.info_container}>
         <div className={style.colors}>
-          <h3>Color - {colors.find((color) => color.id === selectedColor)?.label}</h3>
+          <span>Color - {colors.find((color) => color.id === selectedColor)?.label}</span>
           <ul>
             {colors.map((color) => (
               <li 
@@ -96,7 +96,7 @@ function TurnosTechnicalDetails() {
           </ul>
         </div>
         <div className={style.features}>
-          <h3>Características</h3>
+          <span>Características</span>
           <ul>
             {features.map((feature, index) => (
               <li key={index}>
