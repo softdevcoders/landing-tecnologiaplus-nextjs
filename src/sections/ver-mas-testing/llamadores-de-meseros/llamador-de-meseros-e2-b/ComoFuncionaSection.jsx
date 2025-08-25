@@ -4,24 +4,24 @@ const ComoFuncionaSection = () => {
   const comoFuncionaPasos = [
     {
       imagen: {
-        src: "v1743039883/14_4x-8_1_nfpyrv",
-        alt: "Usuario presionando el llamador de meseros",
+        src: "v1756136678/llamador-de-meseros-e2-b_como_funciona_1_osbkfu",
+        alt: "Imagen de cliente presionando botón",
       },
-      descripcion: "1. El cliente presiona el botón: tecla para llamar al mesero o tecla para pagar.",
+      descripcion: "1. El cliente presiona el botón <br> para llamar al mesero",
     },
     {
       imagen: {
-        src: "v1743039883/15_4x-8_1_otbk7u",
-        alt: "Mesero recibiendo el llamado en el reloj recepto o pantallas de turno",
+        src: "v1756136679/llamador-de-meseros-e2-b_como_funciona_2_gkkh7n",
+        alt: "Imagen de mesero recibiendo llamado",
       },
-      descripcion: "2. El mesero recibe el llamado en alguna de las pantallas o en el reloj.",
+      descripcion: "2. El mesero recibe el llamado en <br> alguna de las pantallas o en el reloj",
     },
     {
       imagen: {
-        src: "v1743039883/16_4x-8_2_ej3v5o",
-        alt: "Batería 23A12V Voltaje: DC12V",
+        src: "v1756136679/llamador-de-meseros-e2-b_como_funciona_3_jagwii",
+        alt: "Imagen de mesero atendiendo llamado",
       },
-      descripcion: "3. El mesero atiende el llamado y presiona la tecla CANCELAR para borrar el llamado",
+      descripcion: "3. El mesero atiende el llamado y presiona la <br> tecla CANCELAR para borrar el llamado",
     },
   ];
 

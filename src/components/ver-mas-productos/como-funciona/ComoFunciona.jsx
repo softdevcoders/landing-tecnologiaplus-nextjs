@@ -20,7 +20,10 @@ const ComoFunciona = ({ comoFuncionaPasos }) => {
                 className={styles.container__item__image}
               />
             </div>
-            <p className={styles.container__item__description}>{paso.descripcion}</p>
+            <p 
+              className={styles.container__item__description}
+              dangerouslySetInnerHTML={{ __html: paso.descripcion }}
+            />
           </div>
         ))}
       </div>

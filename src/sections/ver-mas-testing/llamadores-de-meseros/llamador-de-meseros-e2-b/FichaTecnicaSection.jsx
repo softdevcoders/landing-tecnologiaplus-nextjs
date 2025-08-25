@@ -4,45 +4,45 @@ const FichaTecnicaSection = () => {
   const fichaTecnica = [
     {
       imagen: {
-        src: "v1740254431/16_4x-8_pcbsng",
-        alt: "Batería 23A12V Voltaje: DC12V",
+        src: "v1756135012/dos_teclas_eksjl4",  
+        alt: "Icono Doble función: Llamar y Cancelar",
       },
-      descripcion: "Batería 23A12V Voltaje: DC12V",
+      descripcion: "Doble función:<br> Llamar y Cancelar",
     },
     {
       imagen: {
-        src: "v1739998010/icono_7_4x-8_gkqxdl",
-        alt: "Rango: hasta 100m o más con amplificador de señal Frecuencia: 433MHz",
+        src: "v1756135012/bateria_jnbukc",
+        alt: "Icono Voltaje: DC12V. Batería 23A12V.",
       },
-      descripcion: "Rango: hasta 100m o más con amplificador de señal Frecuencia: 433MHz",
+      descripcion: "Voltaje: DC12V.<br> Batería 23A12V.",
     },
     {
       imagen: {
-        src: "v1743039883/11_4x-8_rp9yee",  
-        alt: "3 teclas de llamado: Tecla llamar o tecla pagar. Cancelar (para borrar el llamado cuando atienden el cliente)",
+        src: "v1756135012/rango_xk2u4q",
+        alt: "Icono Rango: hasta 100m o más con amplificador de señal Frecuencia: 433MHz",
       },
-      descripcion: "3 teclas de llamado: Tecla llamar o tecla pagar. Cancelar (para borrar el llamado cuando atienden el cliente)",
+      descripcion: "Rango: hasta 100m o más<br> con amplificador de señal.<br> Frecuencia: 433MHz",
     },
     {
       imagen: {
-        src: "v1740254426/11_4x-8_tfnsac",  
-        alt: "Uso: en lugares para llamar al mesero o empleados",
+        src: "v1756135012/resistente_al_agua_vushok",  
+        alt: "Icono Resiste derrames accidentales de agua",
       },
-      descripcion: "Uso: en lugares para llamar al mesero o empleados",
+      descripcion: "Resiste derrames<br> accidentales de agua.",
     },
     {
       imagen: {
-        src: "v1740161084/9_4x-8_l5gvik",  
-        alt: "Compatible con: Equipos de Tecnología Plus.",
+        src: "v1756135012/compatible_yxoml0",  
+        alt: "Icono Compatible con receptores inalámbricos de Tecnología Plus.",
       },
-      descripcion: "Compatible con: Equipos de Tecnología Plus.",
+      descripcion: "Compatible con receptores<br> inalámbricos de Tecnología Plus.", 
     },
     {
       imagen: {
-        src: "v1740172482/7_4x-8_1_ptxtfo",  
-        alt: "Resiste derrames accidentales de agua",
+        src: "v1756135012/uso_qnltnn",  
+        alt: "Icono Uso: en lugares para llamar al mesero o empleados",
       },
-      descripcion: "Resiste derrames accidentales de agua",
+      descripcion: "Uso: en lugares para llamar<br> al mesero o empleados",
     },
   ];
   
