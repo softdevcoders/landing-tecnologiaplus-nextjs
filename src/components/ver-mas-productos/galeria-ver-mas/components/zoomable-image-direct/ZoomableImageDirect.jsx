@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useRef } from 'react';
+import { useCallback, useMemo, useRef, useState, useEffect } from 'react';
 import Image from "next/image";
 import { generateImageAlt, shouldUsePriority, getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from "../../../../../lib/imageUtils";
 import styles from "./zoomable-image-direct.module.scss";
@@ -16,7 +16,8 @@ const ZoomableImageDirect = ({
   priority = false,
   productTitle = '',
   selectedColor = '',
-  isMobile = false
+  isMobile = false,
+  onOpenGalleryModal = () => {}
 }) => {
   const imageRef = useRef(null);
 
@@ -36,72 +37,52 @@ const ZoomableImageDirect = ({
     };
   }, []);
 
-  // Manejador memoizado para el movimiento del mouse durante el zoom
+  // Manejador para el movimiento del mouse durante el zoom
   const handleMouseMove = useCallback((e) => {
-    if (!isZoomed || !imageRef.current) return;
-    e.stopPropagation();
-    
-    const rect = imageRef.current.getBoundingClientRect();
-    const newPosition = calculateZoomPosition(e.clientX, e.clientY, rect);
-    onZoomPositionChange(newPosition);
-  }, [isZoomed, calculateZoomPosition, onZoomPositionChange]);
-
-  // Manejador memoizado para el movimiento táctil durante el zoom
-  const handleTouchMove = useCallback((e) => {
-    if (!isZoomed || !imageRef.current) return;
-    
-    // Prevenir scroll del navegador completamente
-    e.preventDefault();
-    e.stopPropagation();
-    
-    const touch = e.touches[0];
-    const rect = imageRef.current.getBoundingClientRect();
-    const newPosition = calculateZoomPosition(touch.clientX, touch.clientY, rect);
-    onZoomPositionChange(newPosition);
-  }, [isZoomed, calculateZoomPosition, onZoomPositionChange]);
-
-  // Manejador para prevenir eventos de drag cuando está en zoom
-  const handleTouchStart = useCallback((e) => {
-    if (isZoomed) {
+    if (isZoomed && !isMobile && isSelected && imageRef.current) {
       e.preventDefault();
       e.stopPropagation();
+      const rect = imageRef.current.getBoundingClientRect();
+      const newPosition = calculateZoomPosition(e.clientX, e.clientY, rect);
+      onZoomPositionChange(newPosition);
     }
-  }, [isZoomed]);
-
-  const handleTouchEnd = useCallback((e) => {
-    if (isZoomed) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-  }, [isZoomed]);
-
-  // Manejador para cancelación de touch
-  const handleTouchCancel = useCallback((e) => {
-    if (isZoomed) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-  }, [isZoomed]);
+  }, [isZoomed, isMobile, isSelected, calculateZoomPosition, onZoomPositionChange]);
 
   // Manejador específico para cerrar zoom
   const handleCloseZoom = useCallback((e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    onZoomChange(false);
-  }, [onZoomChange]);
+    if (!isMobile) {
+      e.preventDefault();
+      e.stopPropagation();
+      onZoomChange(false);
+    }
+  }, [onZoomChange, isMobile]);
 
-  // Manejador memoizado para alternar el estado del zoom
-  const handleImageClick = useCallback((e) => {
-    e.stopPropagation();
-    onZoomChange(!isZoomed);
-  }, [isZoomed, onZoomChange]);
+  // Manejador para click que activa zoom en desktop o abre modal en móvil
+  const handleClick = useCallback((e) => {
+    // Solo detenemos la propagación si vamos a hacer zoom o abrir el modal
+    if ((isMobile && isSelected) || (!isMobile && isSelected && !isZoomed)) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (isMobile) {
+        onOpenGalleryModal();
+      } else {
+        onZoomChange(true);
+      }
+    } else if (isZoomed) {
+      e.preventDefault();
+      e.stopPropagation();
+      onZoomChange(false);
+    }
+  }, [isMobile, isSelected, isZoomed, onZoomChange, onOpenGalleryModal]);
 
-  // Estilos memoizados para la transformación del zoom
-  const zoomStyles = useMemo(() => ({
+  // Estilos para la imagen con soporte de zoom
+  const imageStyles = useMemo(() => ({
     objectFit: 'contain',
-    transform: isZoomed ? `scale(${1.75}) translate(-${zoomPosition.x}%, -${zoomPosition.y}%)` : 'none',
+    width: '100%',
+    height: '100%',
+    transform: isZoomed && !isMobile ? `scale(${1.75}) translate(-${zoomPosition.x}%, -${zoomPosition.y}%)` : 'none',
     transformOrigin: '0 0'
-  }), [isZoomed, zoomPosition.x, zoomPosition.y]);
+  }), [isZoomed, isMobile, zoomPosition.x, zoomPosition.y]);
 
   // Generar alt text descriptivo
   const altText = useMemo(() => 
@@ -124,17 +105,15 @@ const ZoomableImageDirect = ({
   return (
     <div 
       ref={isSelected ? imageRef : null}
-      className={`${styles.imageWrapper} ${isZoomed && isSelected ? styles.zoomedWrapper : ''}`}
-      onClick={handleImageClick}
+      className={`${styles.imageWrapper} ${isZoomed && !isMobile ? styles.zoomedWrapper : ''}`}
+      onClick={handleClick}
       onMouseMove={handleMouseMove}
-      onTouchMove={handleTouchMove}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-      onTouchCancel={handleTouchCancel}
       style={
-        isZoomed && isSelected
-          ? { cursor: 'zoom-out' }
-          : { cursor: 'zoom-in' }
+        isZoomed && !isMobile
+          ? { cursor: 'zoom-out', pointerEvents: 'all' }
+          : !isMobile && isSelected
+            ? { cursor: 'zoom-in', pointerEvents: 'all' }
+            : { cursor: 'pointer', pointerEvents: isSelected ? 'all' : 'none' }
       }
     >
       {/* Botón de cerrar zoom */}
@@ -159,11 +138,7 @@ const ZoomableImageDirect = ({
           height={1800}
           priority={usePriority}
           sizes={optimizedSizes}
-          style={{
-            width: '100%',
-            height: '100%',
-            ...zoomStyles
-          }}
+          style={imageStyles}
           placeholder="blur"
           blurDataURL={generateBlurDataURL()}
           unoptimized={true}
