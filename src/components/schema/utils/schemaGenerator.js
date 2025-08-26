@@ -12,10 +12,10 @@ export const ROUTE_CONFIG = {
     metadataKey: 'localizadores-para-restaurantes',
     serviceType: "Localizadores para restaurantes"
   },
-  // '/llamadores-de-meseros': {
-  //   metadataKey: 'llamadores-de-meseros',
-  //   serviceType: "Llamadores de meseros"
-  // },
+  '/llamadores-de-meseros': {
+    metadataKey: 'llamadores-de-meseros',
+    serviceType: "Llamadores de meseros"
+  },
   // '/turnero-turnoexpress': {
   //   metadataKey: 'turnero-turnoexpress',
   //   serviceType: "Turnero TurnoExpress"
@@ -36,10 +36,10 @@ export const ROUTE_CONFIG = {
   //   metadataKey: 'dispensador-de-tickets',
   //   serviceType: "Dispensador de tickets"
   // },
-  // '/llamado-de-enfermeria-cuidamaster': {
-  //   metadataKey: 'llamado-de-enfermeria-cuidamaster',
-  //   serviceType: "Llamado de enfermería CuidaMaster"
-  // },
+  '/llamado-de-enfermeria-cuidamaster': {
+    metadataKey: 'llamado-de-enfermeria-cuidamaster',
+    serviceType: "Llamado de enfermería CuidaMaster"
+  },
   // '/calificador-de-servicio-al-cliente-opinamaster': {
   //   metadataKey: 'calificador-de-servicio-al-cliente-opinamaster',
   //   serviceType: "Calificador de servicio al cliente Opinamaster"
