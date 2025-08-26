@@ -89,16 +89,31 @@ export const useMainCarousel = () => {
   }, [isZoomed, emblaMainApi]);
 
   const scrollPrev = useCallback(() => {
-    if (emblaMainApi && !isZoomed) emblaMainApi.scrollPrev();
-  }, [emblaMainApi, isZoomed]);
+    if (emblaMainApi) {
+      if (isZoomed) {
+        setIsZoomed(false);
+      }
+      emblaMainApi.scrollPrev();
+    }
+  }, [emblaMainApi, isZoomed, setIsZoomed]);
 
   const scrollNext = useCallback(() => {
-    if (emblaMainApi && !isZoomed) emblaMainApi.scrollNext();
-  }, [emblaMainApi, isZoomed]);
+    if (emblaMainApi) {
+      if (isZoomed) {
+        setIsZoomed(false);
+      }
+      emblaMainApi.scrollNext();
+    }
+  }, [emblaMainApi, isZoomed, setIsZoomed]);
 
   const scrollTo = useCallback((index) => {
-    if (emblaMainApi && !isZoomed) emblaMainApi.scrollTo(index);
-  }, [emblaMainApi, isZoomed]);
+    if (emblaMainApi) {
+      if (isZoomed) {
+        setIsZoomed(false);
+      }
+      emblaMainApi.scrollTo(index);
+    }
+  }, [emblaMainApi, isZoomed, setIsZoomed]);
 
   const reInitCarousel = useCallback(() => {
     if (emblaMainApi) {

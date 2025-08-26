@@ -20,7 +20,10 @@ const FichaTecnica = ({ fichaTecnica }) => {
                 className={fichaTecnicaStyles.container__item__image}
               />
             </div>
-            <p className={fichaTecnicaStyles.container__item__description}>{articulo.descripcion}</p>
+            <p 
+              className={fichaTecnicaStyles.container__item__description}
+              dangerouslySetInnerHTML={{ __html: articulo.descripcion }}
+            />
           </div>
         ))}
       </div>

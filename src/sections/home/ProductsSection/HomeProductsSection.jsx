@@ -85,7 +85,7 @@ const products = [
   {
     title: "Soporte Técnico",
     description: "Maximiza la vida útil y el rendimiento de tu inversión.",
-    imageSrc: "v1754420730/soporte_tecnico_omhpvx",
+    imageSrc: "v1756137326/soporte_te%CC%81cnico_v2_fbj9vi",
     altText: "Imagen de Soporte Técnico - TecnologíaPlus",
   }
 ]

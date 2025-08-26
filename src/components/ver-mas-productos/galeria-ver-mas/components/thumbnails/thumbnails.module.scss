@@ -33,6 +33,11 @@
     height: calc((((112rem - 6rem) / 12) * 6) - 1.225rem);
   }
 
+  .thumbNavButton {
+    opacity: 1;
+    visibility: visible;
+  }
+  
   &:hover .thumbNavButton {
     opacity: 1;
     visibility: visible;
@@ -82,8 +87,8 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   left: 50%;
   transform: translateX(-50%) rotate(90deg);
-  opacity: 0;
-  visibility: hidden;
+  opacity: 0.8;
+  visibility: visible;
 
   svg {
     width: 14px;

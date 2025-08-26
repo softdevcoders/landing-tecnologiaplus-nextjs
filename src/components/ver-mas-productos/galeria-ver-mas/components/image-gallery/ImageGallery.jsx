@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./image-gallery.module.scss";
 import { ArrowBack, ArrowForward } from "@/components/ui/icons";
 import Thumbnails from "../thumbnails";
@@ -8,10 +8,12 @@ import ZoomableImageDirect from "../zoomable-image-direct/ZoomableImageDirect";
 import VideoPlayer from "../video-player/VideoPlayer";
 import ImageIndicators from "../image-indicators";
 import ActionButtons from "../action-buttons/ActionButtons";
+import GalleryModal from "../gallery-modal/GalleryModal";
 import { useMainCarousel } from "../../hooks/useMainCarousel";
 import { useGalleryState } from "../../hooks/useGalleryState";
 
 const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, productTitle = '' }) => {
+  const [isGalleryModalOpen, setIsGalleryModalOpen] = useState(false);
   const {
     emblaMainRef,
     selectedIndex,
@@ -105,6 +107,7 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
                     productTitle={productTitle}
                     selectedColor={colorContext?.getSelectedColor()?.name || ''}
                     isMobile={isMobile}
+                    onOpenGalleryModal={() => setIsGalleryModalOpen(true)}
                   />
                 )}
               </div>
@@ -112,8 +115,8 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
           </div>
         </div>
 
-        {/* Botones de navegación */}
-        {displayMediaItems.length > 1 && !isZoomed && (
+        {/* Botones de navegación - solo en desktop */}
+        {displayMediaItems.length > 1 && !isZoomed && !isMobile && (
           <>
             <button
               className={`${styles.navButton} ${styles.prev} ${hasDarkBackground ? styles.darkNav : ''}`}
@@ -154,6 +157,15 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
           />
         )}
       </div>
+
+      {/* Modal de galería */}
+      <GalleryModal
+        isOpen={isGalleryModalOpen}
+        onClose={() => setIsGalleryModalOpen(false)}
+        mediaItems={displayMediaItems}
+        productTitle={productTitle}
+        selectedColor={colorContext?.getSelectedColor()?.name || ''}
+      />
     </div>
   );
 };

@@ -120,7 +120,10 @@
   justify-content: center;
 }
 
+
+
 .navButton {
+  display: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -131,16 +134,19 @@
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   transition: all 0.3s ease;
 
-  @media (max-width: 1023px) {
-    opacity: 1;
-    visibility: visible;
+  @media (min-width: 1024px) {
+    display: flex;
   }
+
+  // @media (max-width: 1023px) {
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
 
   @media (min-width: 1200px) {
     opacity: 0;
