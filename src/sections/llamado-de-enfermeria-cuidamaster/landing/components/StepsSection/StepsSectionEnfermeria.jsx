@@ -21,7 +21,7 @@ const steps = [
 
 function StepsSectionEnfermeria() {
   return (
-    <section className={style.steps__section}>
+    <section data-nosnippet className={style.steps__section}>
       <h2 className={style.steps__section__title}>¿Cómo funciona?</h2>  
 
       <div className={style.cards__container}>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function EnfermeriaProductsSection() {
   return (
-    <section className={style.products__section}>
+    <section data-nosnippet className={style.products__section}>
       <div className={style.products__container}>
         <div className={style.products__container__item}>
           <div className={style.products__container__item__image}>
