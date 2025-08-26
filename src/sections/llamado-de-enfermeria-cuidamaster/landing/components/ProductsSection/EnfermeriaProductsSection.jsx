@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function EnfermeriaProductsSection() {
   return (
-    <section className={style.products__section}>
+    <section data-nosnippet className={style.products__section}>
       <div className={style.products__container}>
         <div className={style.products__container__item}>
           <div className={style.products__container__item__image}>
@@ -30,7 +30,9 @@ function EnfermeriaProductsSection() {
         </div>
       </div>
       <ToggleTextContent>
-        <p>Garantizar el bienestar del paciente es esencial, y con nuestro Sistema de Llamado de Enfermería, se facilita la comunicación entre pacientes y personal de enfermería. Equipado con un llamador de personal adaptable a todos los sectores, este dispositivo facilita una asistencia oportuna con solo presionar un botón. Su diseño portátil permite reubicarlo fácilmente o incluso puede ser usado en el cuello del paciente, brindando comodidad y tranquilidad. La señal de largo alcance y notificación instantánea mejoran la eficiencia del personal de salud, ofreciendo un servicio de calidad que ayuda a pacientes y enfermeras.</p>
+        <p>El <strong>llamado de enfermería</strong> es una herramienta esencial en hospitales, clínicas y hogares geriátricos, ya que está diseñado para facilitar la comunicación entre paciente y enfermera de manera rápida y confiable. Nuestro <strong>llamador de enfermería</strong> combina practicidad y facilidad de uso: con solo presionar un botón para llamar a enfermera, la alerta llega de inmediato al personal, permitiendo una asistencia oportuna que mejora la calidad del servicio y genera tranquilidad tanto en pacientes como en familiares.</p>
+        <p>Un <strong>sistema de llamado de enfermeras</strong> eficaz reduce los tiempos de espera y ayuda a organizar mejor las tareas del personal. Gracias a nuestro <strong>sistema de llamado de enfermería</strong>, la atención se vuelve más ágil, discreta y eficiente. Estos equipos pueden integrarse a un sistema de timbres para habitaciones, lo que facilita identificar solicitudes específicas y acudir con rapidez. Además, alternativas como el <strong>timbre para pacientes</strong> o el <strong>timbre hospitalario</strong> hacen que la asistencia sea más organizada y práctica en entornos con alta demanda.</p>
+        <p>En Tecnología Plus desarrollamos <strong>llamadores hospitalarios</strong> adaptados a diferentes necesidades, desde clínicas pequeñas hasta grandes instituciones médicas. Ofrecemos soluciones como el <strong>timbre para cama de hospital</strong>, sistemas inalámbricos o dispositivos portátiles de largo alcance, fabricados con estándares de calidad que garantizan eficiencia y durabilidad. Con estas herramientas, el personal de salud puede responder de manera más rápida, mientras los pacientes disfrutan de mayor comodidad y comunicación directa. Apostar por este sistema es invertir en bienestar y confianza para todos.</p>
       </ToggleTextContent>
     </section>
   );

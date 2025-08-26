@@ -22,7 +22,6 @@ function generateServerSchema(pathname) {
     const schemaMetadata = prepareSchemaMetadata(metadata, routeConfig.serviceType);
     return generateSchema(schemaMetadata);
   } catch (error) {
-    console.error('GuaranteedServerSchema - Error generando schema:', error);
     return null;
   }
 }
@@ -34,18 +33,14 @@ export default async function GuaranteedServerSchema() {
   
   // Si no hay pathname, no generar schema
   if (!currentPath) {
-    console.log('GuaranteedServerSchema - No hay pathname del middleware, no se genera schema');
     return null;
   }
-  
-  console.log('GuaranteedServerSchema - Pathname del middleware:', currentPath);
   
   // Generar schema en el servidor usando el pathname dinámico
   const schemaData = generateServerSchema(currentPath);
 
   // Si no hay schema data, no renderizar nada
   if (!schemaData) {
-    console.log('GuaranteedServerSchema - No hay configuración para:', currentPath);
     return null;
   }
 

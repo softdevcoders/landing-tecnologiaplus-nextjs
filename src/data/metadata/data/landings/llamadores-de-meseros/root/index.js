@@ -2,8 +2,8 @@ import { routes } from "@/config/routes";
 import { generateLandingMetadata } from "@/data/metadata/config";
 import { getLandingPageConfig } from "@/data/metadata/config/landing-pages-data";
 
-const title = "Llamadores de Meseros: Hacemos Fácil la Atención de tus Clientes";
-const description = "Facilita el servicio con nuestros llamadores de meseros inalámbricos. Agiliza la atención y mejora la experiencia del cliente. ¡Asesoría personalizada!";
+const title = "Llamadores de Meseros: Atención Fácil para tus Clientes";
+const description = "Llamadores de meseros inalámbricos que agilizan la atención, elevan la calidad del servicio y mejoran la experiencia de tus clientes. ¡Asesoría personalizada!";
 const keywords = ["Llamadores De Meseros"];
 const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.llamadoresDeMeseros.url}`;
 
