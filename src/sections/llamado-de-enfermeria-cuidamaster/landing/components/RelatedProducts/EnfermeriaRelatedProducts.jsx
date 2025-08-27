@@ -9,6 +9,7 @@ function EnfermeriaRelatedProducts() {
         categories.TURNERO_TURNOEXPRESS.category_key,
         categories.ENCUESTA_VIRTUAL_OPINAMASTER.category_key,
       ]}
+      addMarginBottom={false}
     />
   );
 }

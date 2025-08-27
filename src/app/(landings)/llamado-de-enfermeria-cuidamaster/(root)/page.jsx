@@ -7,6 +7,7 @@ import EnfermeriaProductsSection from "@/sections/llamado-de-enfermeria-cuidamas
 import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/RelatedProducts/EnfermeriaRelatedProducts";
 import EnfermeriaSecondaryProductsSection from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/SecondaryProductsSection/EnfermeriaSecondaryProductsSection";
 import StepsSectionEnfermeria from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/StepsSection/StepsSectionEnfermeria";
+import EnfermeriaPreguntasFrecuentes from "@/sections/llamado-de-enfermeria-cuidamaster/landing/components/PreguntasFrecuentes";
 
 export async function generateMetadata() {
   const { 'llamado-de-enfermeria-cuidamaster': { root: metadata } } = getMetadata('landings');
@@ -18,12 +19,13 @@ export default function EnfermeriaLanding() {
     <>
       <EnfermeriaHeroSection />
       <EnfermeriaClientsSection />
-      <EnfermeriaProductsSection />
+      <EnfermeriaProductsSection /> 
       <EnfermeriaBenefitsSection />
       <EnfermeriaSecondaryProductsSection />
       <StepsSectionEnfermeria />
       <EnfermeriaIndustriesSection />
       <EnfermeriaRelatedProducts />
+      <EnfermeriaPreguntasFrecuentes />
     </>
   );
 }
