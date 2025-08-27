@@ -111,7 +111,20 @@
           li[class='no-bullet'] {
             list-style: none;
             &::before {
-              content: '';
+              display: none;
+            }
+
+            h3, p {
+              margin: 0;
+            }
+            h3 {
+              &::before {
+                content: '•';
+                color: #1c1b1c;
+                font-weight: 600;
+                font-size: 1.5rem;
+                margin-right: 0.5rem;
+              }
             }
           }
         }
