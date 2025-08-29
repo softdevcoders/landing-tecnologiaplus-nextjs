@@ -91,7 +91,7 @@ const defaultProducts = [
     name: "Llamadores de meseros",
     description: "El botón que eleva la calidad del servicio.",
     img: "v1754420144/llamadores_de_meseros_hfsfxc",
-    altText: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus",
+    altText: "Imagen de Llamador de meseros - TecnologíaPlus",
     sold: "8.426 vendidos",
     link: routes.landings.llamadoresDeMeseros.url,
     category_key: categories.LLAMADORES_DE_MESEROS.category_key,

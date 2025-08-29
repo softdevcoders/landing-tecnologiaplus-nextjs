@@ -19,6 +19,7 @@ export default function ProductCard({ product }) {
             className={product.customClass ? product.customClass : ""}
             loading="lazy"
             itemProp="image"
+            unoptimized={true}
           />
           <p itemProp="orderQuantity">
             {product.sold}
