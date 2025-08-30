@@ -140,9 +140,9 @@ jobs:
             echo "new_container=${{ env.DOCKER_CONTAINER_NAME }}-blue" >> $GITHUB_OUTPUT
           elif [ "$blue_healthy" = false ] && [ "$green_healthy" = false ]; then
             # Ninguno activo, usar Blue como default
-            echo "🚀 Estrategia: Primer deploy - iniciando en BLUE (puerto ${{ env.BLUE_PORT }})"
+            echo "🚀 Estrategia: Primer deploy - iniciando en GREEN (puerto ${{ env.GREEN_PORT }})"
             echo "active_port=" >> $GITHUB_OUTPUT
-            echo "new_port=${{ env.BLUE_PORT }}" >> $GITHUB_OUTPUT
+            echo "new_port=${{ env.GREEN_PORT }}" >> $GITHUB_OUTPUT
             echo "active_container=" >> $GITHUB_OUTPUT
             echo "new_container=${{ env.DOCKER_CONTAINER_NAME }}-blue" >> $GITHUB_OUTPUT
           else
