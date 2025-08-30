@@ -1,6 +1,8 @@
 import Image from "next/image"; 
 import style from "./LlamadorMeserosProductsSection.module.scss";
 import ToggleTextContent from "@/components/toggle-text-content";
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
+
 
 function LlamadorMeserosProductsSection() {
   return (
@@ -8,40 +10,44 @@ function LlamadorMeserosProductsSection() {
       <div className={style.products__container_mobile}>
         <div className={style.products__container__item}>
           <Image
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743022988/11_4x-8_1_sftupq.webp"
+            src={getOptimizedImageUrl({ url: "v1743022988/11_4x-8_1_sftupq", width: 600, quality: 80 })}
             alt="Reloj receptor de llamados para meseros"
             width={500}
             height={402}
             className={style.products__container__item__image}
+            unoptimized={true}
           />
         </div>
         <div className={style.products__container__item}>
           <Image
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743022991/12_4x-8_km9kam.webp"
+            src={getOptimizedImageUrl({ url: "v1743022991/12_4x-8_km9kam", width: 600, quality: 80 })}
             alt="Hablador de mesa junto al botón para llamar al mesero"
             width={421}
             height={253}
             className={style.products__container__item__image}
+            unoptimized={true}
           />
         </div>
       </div>
       <div className={style.products__container_desktop}>
         <div className={style.products__container__item}>
           <Image
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738694397/Group_8_og4pea.webp"
+            src={getOptimizedImageUrl({ url: "v1738694397/Group_8_og4pea", quality: 80 })}
             alt="Reloj receptor de llamados para meseros"
-            width={500}
-            height={402}
+            width={800}
+            height={585}
             className={style.products__container__item__image}
+            unoptimized={true}
           />
         </div>
         <div className={style.products__container__item}>
           <Image
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738694396/Group_9_yutx7u.webp"
+            src={getOptimizedImageUrl({ url: "v1738694396/Group_9_yutx7u", quality: 80 })}
             alt="Hablador de mesa junto al botón para llamar al mesero"
-            width={421}
-            height={253}
+            width={800}
+            height={585}
             className={style.products__container__item__image}
+            unoptimized={true}
           />
         </div>
       </div>  

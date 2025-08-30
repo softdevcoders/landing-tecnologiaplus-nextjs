@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 export default function ProductSpecs() {
   return (
@@ -8,8 +9,9 @@ export default function ProductSpecs() {
           <Image
             width={30}
             height={34}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349925/xcbtnf1wh1en4taujsdx_avnfkj.webp"
+            src={getOptimizedImageUrl({ url: "v1738349925/xcbtnf1wh1en4taujsdx_avnfkj", width: 50, quality: 80 })}
             alt="icono pulgar arriba"
+            unoptimized={true}
           />
           <p>Precios Justos</p>
         </li>
@@ -17,7 +19,8 @@ export default function ProductSpecs() {
           <Image
             width={30}
             height={34}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349925/zpyfcqvsxo6wdubn2kdu_iuw7tl.webp"
+            src={getOptimizedImageUrl({ url: "v1738349925/zpyfcqvsxo6wdubn2kdu_iuw7tl", width: 50, quality: 80 })}
+            unoptimized={true}
             alt="icono de seguridad"
           />
           <p>Protección al comprador</p>
@@ -26,7 +29,8 @@ export default function ProductSpecs() {
             <Image
               width={30}
               height={34}
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349921/jg3stajnopybox4xxdkd_favvxk.webp"
+              src={getOptimizedImageUrl({ url: "v1738349921/jg3stajnopybox4xxdkd_favvxk", width: 50, quality: 80 })}
+              unoptimized={true}
               alt="icono de excelencia"
             />
           <p>Garantía superior</p>
@@ -35,7 +39,8 @@ export default function ProductSpecs() {
           <Image
             width={30}
             height={34}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_500/v1738349925/ynuxn64wkw3nkqxl4tvo_lwqzi0.webp"
+            src={getOptimizedImageUrl({ url: "v1738349925/ynuxn64wkw3nkqxl4tvo_lwqzi0", width: 50, quality: 80 })}
+            unoptimized={true}
             alt="icono de Envíos en Colombia y Latinoamérica"
           />
           <p>Envíos en Colombia y Latinoamérica</p>

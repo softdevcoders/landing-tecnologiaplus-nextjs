@@ -58,7 +58,7 @@ USER node
 
 FROM node:24.0.0-alpine AS production
 
-RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache libc6-compat curl
 
 # Install pnpm globally in the production stage
 RUN corepack enable && corepack prepare pnpm@latest --activate
@@ -80,5 +80,9 @@ RUN chown -R nextjs:nodejs .next
 
 USER nextjs
 EXPOSE 3000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+  CMD curl -f http://localhost:3000/health || exit 1
 
 CMD ["pnpm", "run", "start"]

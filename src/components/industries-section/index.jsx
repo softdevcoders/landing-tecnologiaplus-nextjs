@@ -61,7 +61,13 @@ export const IndustriesSectionListItemIconContainer = ({ children, className = "
 
 export const IndustriesSectionListItemIcon = ({ src, alt, width = 300, height = 300, className = "" }) => {
   return (
-    <Image src={src} alt={alt} width={width} height={height} className={className} sizes="(max-width: 768px) 10vw, 10vw" />
+    <Image 
+      src={src}  
+      alt={alt} 
+      width={width} 
+      height={height} 
+      className={className} 
+      unoptimized={true} />
   );
 };
 

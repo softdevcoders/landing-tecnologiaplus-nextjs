@@ -1,27 +1,28 @@
 import style from "./LlamadorMeserosBenefitsSection.module.scss";
 import BenefitsSection from "@/components/benefits";
 import YouTubePlayer from "@/components/YouTubePlayer";
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 const benefits = [
   {
-    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743024065/15_4x-8_xfnlus",
+    icon: getOptimizedImageUrl({ url: "v1743024065/15_4x-8_xfnlus", quality: 80, width: 100 }),
     title: "Empleados más alertas.",
-    width: 399,
-    height: 399,
+    width: 70,
+    height: 70, 
     alt: "icono de sonido",
   },
   {
-    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743024067/14_4x-8_fmpqd8",
+    icon: getOptimizedImageUrl({ url: "v1743024067/14_4x-8_fmpqd8", quality: 80, width: 100 }),
     title: "Reduce tiempos de espera.",
-    width: 399,
-    height: 399,
+    width: 70,
+    height: 70,
     alt: "icono de reducción de tiempo",
   },
   {
-    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743024062/13_4x-8_iqmqcf",
+    icon: getOptimizedImageUrl({ url: "v1743024062/13_4x-8_iqmqcf", quality: 80, width: 100 }),
     title: "Aumenta ventas al facilitar pedidos adicionales.",
-    width: 399,
-    height: 399,
+    width: 70,
+    height: 70,
     alt: "icono de aumento de ventas",
   },
 ];
