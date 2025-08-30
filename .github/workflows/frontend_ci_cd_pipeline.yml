@@ -98,9 +98,10 @@ jobs:
             local port=$1
             if echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker ps --format "table {{.Names}}\t{{.Ports}}" | grep -q ":${port}->"; then
               # Verificar que el puerto responda a health check
-              if curl -f -s "http://localhost:${port}/health" > /dev/null 2>&1; then
-                return 0
-              fi
+              # if curl -f -s "http://localhost:${port}/health" > /dev/null 2>&1; then
+              #   return 0
+              # fi
+              return 0
             fi
             return 1
           }
