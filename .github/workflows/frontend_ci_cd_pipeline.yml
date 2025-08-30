@@ -314,9 +314,9 @@ jobs:
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S systemctl status nginx --no-pager -l
 
-      - name: Prune Docker Images unused
-        run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f    
+      # - name: Prune Docker Images unused
+      #   run: |
+      #     echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f    
   # pull-frontend-image-and-run-container:
   #   name: Deploy Frontend Container
   #   runs-on: self-hosted

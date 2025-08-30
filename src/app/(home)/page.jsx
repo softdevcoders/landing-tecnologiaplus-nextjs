@@ -11,7 +11,6 @@ export async function generateMetadata() {
   return metadata;
 }
 
-// Hacemos unos cambios
 
 export default function Home() {
   return (
