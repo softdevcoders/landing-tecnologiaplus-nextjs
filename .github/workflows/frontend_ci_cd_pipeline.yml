@@ -43,8 +43,6 @@ env:
   NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
   NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
 
-
-
 jobs:
   retrieve-environment-variable:
     name: Retrieve Environment Variable
@@ -316,6 +314,9 @@ jobs:
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S systemctl status nginx --no-pager -l
 
+      - name: Prune Docker Images unused
+        run: |
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f    
   # pull-frontend-image-and-run-container:
   #   name: Deploy Frontend Container
   #   runs-on: self-hosted
