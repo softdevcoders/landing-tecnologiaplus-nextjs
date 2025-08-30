@@ -25,7 +25,14 @@ env:
   #########################################
   DOCKER_IMAGE_VERSION: ${{ vars.DOCKER_IMAGE_VERSION }}
   DOCKER_CONTAINER_NAME: ${{ vars.DOCKER_CONTAINER_NAME }}
-  DOCKER_HOST_PORT: ${{ vars.DOCKER_HOST_PORT }}
+  DOCKER_HOST_PORT: ${{ vars.DOCKER_HOST_PORT }} #Esto debe desaparecer en un futuro
+
+  #########################################
+  #   BLUE-GREEN DEPLOYMENT
+  #########################################
+  BLUE_PORT: ${{ vars.HOST_PORT_BLUE }}
+  GREEN_PORT: ${{ vars.HOST_PORT_GREEN }}
+  
   DOCKER_CONTAINER_PORT: ${{ vars.DOCKER_CONTAINER_PORT }}
   GMAIL_USER: ${{ secrets.GMAIL_USER }}
   GMAIL_RECIPIENTS: ${{ secrets.GMAIL_RECIPIENTS }}
@@ -35,6 +42,7 @@ env:
   NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
   NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
   NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
+
 jobs:
   retrieve-environment-variable:
     name: Retrieve Environment Variable
@@ -69,25 +77,100 @@ jobs:
       - name: Push Docker Image to Docker Hub
         run: docker push ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
 
-  pull-frontend-image-and-run-container:
-    name: Deploy Frontend Container
+  blue-green-deployment:
+    name: Blue-Green Deployment
     runs-on: self-hosted
     needs: [retrieve-environment-variable, build-push-docker-image]
     environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
-    steps:      
-      - name: Pull Docker Image
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Determine Active Port
+        id: determine-port
+        run: |
+          echo "🔍 Detectando puerto activo actual..."
+          
+          # Función para verificar si un puerto está activo y saludable
+          check_port_health() {
+            local port=$1
+            if echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker ps --format "table {{.Names}}\t{{.Ports}}" | grep -q ":${port}->"; then
+              # Verificar que el puerto responda a health check
+              if curl -f -s "http://localhost:${port}/health" > /dev/null 2>&1; then
+                return 0
+              fi
+            fi
+            return 1
+          }
+          
+          # Verificar estado de los puertos
+          blue_healthy=false
+          green_healthy=false
+          
+          if check_port_health ${{ env.BLUE_PORT }}; then
+            blue_healthy=true
+            echo "🔵 Puerto BLUE (${{ env.BLUE_PORT }}) está ACTIVO actualmente"
+          else
+            echo "⚪ Puerto BLUE (${{ env.BLUE_PORT }}) está DISPONIBLE para el nuevo deploy"
+          fi
+          
+          if check_port_health ${{ env.GREEN_PORT }}; then
+            green_healthy=true
+            echo "🟢 Puerto GREEN (${{ env.GREEN_PORT }}) está ACTIVO actualmente"
+          else
+            echo "⚪ Puerto GREEN (${{ env.GREEN_PORT }}) está DISPONIBLE para el nuevo deploy"
+          fi
+          
+          # Determinar configuración de despliegue
+          if [ "$blue_healthy" = true ] && [ "$green_healthy" = false ]; then
+            # Blue activo, desplegar en Green
+            echo "🔄 Estrategia: Desplegar en GREEN (puerto ${{ env.GREEN_PORT }}) mientras BLUE sigue activo"
+            echo "active_port=${{ env.BLUE_PORT }}" >> $GITHUB_OUTPUT
+            echo "new_port=${{ env.GREEN_PORT }}" >> $GITHUB_OUTPUT
+            echo "active_container=${{ env.DOCKER_CONTAINER_NAME }}-blue" >> $GITHUB_OUTPUT
+            echo "new_container=${{ env.DOCKER_CONTAINER_NAME }}-green" >> $GITHUB_OUTPUT
+          elif [ "$green_healthy" = true ] && [ "$blue_healthy" = false ]; then
+            # Green activo, desplegar en Blue
+            echo "🔄 Estrategia: Desplegar en BLUE (puerto ${{ env.BLUE_PORT }}) mientras GREEN sigue activo"
+            echo "active_port=${{ env.GREEN_PORT }}" >> $GITHUB_OUTPUT
+            echo "new_port=${{ env.BLUE_PORT }}" >> $GITHUB_OUTPUT
+            echo "active_container=${{ env.DOCKER_CONTAINER_NAME }}-green" >> $GITHUB_OUTPUT
+            echo "new_container=${{ env.DOCKER_CONTAINER_NAME }}-blue" >> $GITHUB_OUTPUT
+          elif [ "$blue_healthy" = false ] && [ "$green_healthy" = false ]; then
+            # Ninguno activo, usar Blue como default
+            echo "🚀 Estrategia: Primer deploy - iniciando en BLUE (puerto ${{ env.BLUE_PORT }})"
+            echo "active_port=" >> $GITHUB_OUTPUT
+            echo "new_port=${{ env.BLUE_PORT }}" >> $GITHUB_OUTPUT
+            echo "active_container=" >> $GITHUB_OUTPUT
+            echo "new_container=${{ env.DOCKER_CONTAINER_NAME }}-blue" >> $GITHUB_OUTPUT
+          else
+            # Ambos activos - estado inconsistente
+            echo "⚠️ ADVERTENCIA: Ambos puertos están activos. Limpiando estado inconsistente..."
+            echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm -f ${{ env.DOCKER_CONTAINER_NAME }}-green || true
+            echo "🔄 Estrategia: Desplegar en GREEN (puerto ${{ env.GREEN_PORT }}) después de limpieza"
+            echo "active_port=${{ env.BLUE_PORT }}" >> $GITHUB_OUTPUT
+            echo "new_port=${{ env.GREEN_PORT }}" >> $GITHUB_OUTPUT
+            echo "active_container=${{ env.DOCKER_CONTAINER_NAME }}-blue" >> $GITHUB_OUTPUT
+            echo "new_container=${{ env.DOCKER_CONTAINER_NAME }}-green" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Pull New Docker Image
         run: |
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker pull ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
-      
-      - name: Stop Current Running Container
+
+      - name: Deploy New Instance
         run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm -f ${{ env.DOCKER_CONTAINER_NAME }} || true
-      
-      - name: Run Docker Container
-        run: |
+          # Limpiar SOLO el contenedor del puerto destino (si hay alguno previo fallido)
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm -f ${{ steps.determine-port.outputs.new_container }} || true
+          
+          # Levantar la nueva instancia en el puerto libre (SIN TOCAR el contenedor activo)
+          echo "🚀 Desplegando nueva instancia en puerto ${{ steps.determine-port.outputs.new_port }}..."
           echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker run -d \
+            --name ${{ steps.determine-port.outputs.new_container }} \
             --restart unless-stopped \
-            -p ${{ env.DOCKER_HOST_PORT }}:${{ env.DOCKER_CONTAINER_PORT }} \
+            -p ${{ steps.determine-port.outputs.new_port }}:${{ env.DOCKER_CONTAINER_PORT }} \
             -e GMAIL_USER=${{ env.GMAIL_USER }} \
             -e GMAIL_RECIPIENTS=${{ env.GMAIL_RECIPIENTS }} \
             -e GMAIL_APP_PASSWORD='${{ env.GMAIL_APP_PASSWORD }}' \
@@ -95,9 +178,174 @@ jobs:
             -e NEXT_PUBLIC_BASE_URL=${{ env.NEXT_PUBLIC_BASE_URL }} \
             -e NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }} \
             -e NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=${{ env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }} \
-            --name ${{ env.DOCKER_CONTAINER_NAME }} \
             ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
+          
+          echo "✅ Nueva instancia desplegada. Contenedor activo anterior sigue corriendo para zero-downtime"
+
+      - name: Wait for New Instance Health Check
+        run: |
+          echo "🏥 Esperando que la nueva instancia esté saludable..."
+          max_attempts=30
+          attempt=1
+          healthy=false
+          
+          while [ $attempt -le $max_attempts ]; do
+            echo "⏳ Intento $attempt/$max_attempts - Verificando health check..."
             
+            # Verificar health check de la aplicación
+            if curl -f -s http://localhost:${{ steps.determine-port.outputs.new_port }}/health > /dev/null 2>&1; then
+              echo "✅ Health check de aplicación: OK"
+              
+              # Verificar que el contenedor esté realmente saludable via Docker
+              container_health=$(echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker inspect ${{ steps.determine-port.outputs.new_container }} --format='{{.State.Health.Status}}' 2>/dev/null || echo "no-healthcheck")
+              
+              if [ "$container_health" = "healthy" ] || [ "$container_health" = "no-healthcheck" ]; then
+                echo "✅ Container health: $container_health"
+                
+                # Verificar que responda correctamente múltiples veces
+                success_count=0
+                for i in {1..5}; do
+                  if curl -f -s http://localhost:${{ steps.determine-port.outputs.new_port }}/health > /dev/null 2>&1; then
+                    success_count=$((success_count + 1))
+                  fi
+                  sleep 1
+                done
+                
+                if [ $success_count -ge 4 ]; then
+                  echo "✅ Nueva instancia está consistentemente saludable en puerto ${{ steps.determine-port.outputs.new_port }}"
+                  healthy=true
+                  break
+                else
+                  echo "⚠️ Respuestas inconsistentes ($success_count/5), continuando..."
+                fi
+              else
+                echo "⚠️ Container health: $container_health"
+              fi
+            else
+              echo "❌ Health check falló"
+            fi
+            
+            sleep 10
+            attempt=$((attempt + 1))
+          done
+          
+          if [ "$healthy" = false ]; then
+            echo "❌ La nueva instancia no pasó el health check después de $max_attempts intentos"
+            echo "🔄 Iniciando rollback automático..."
+            
+            # Cleanup de la nueva instancia fallida
+            echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm -f ${{ steps.determine-port.outputs.new_container }} || true
+            
+            exit 1
+          fi
+
+      - name: Verify New Instance is Ready
+        run: |
+          echo "Verificando que la nueva instancia esté lista para recibir tráfico..."
+          max_attempts=10
+          attempt=1
+          
+          while [ $attempt -le $max_attempts ]; do
+            # Verificar SOLO la nueva instancia directamente (no a través de Nginx)
+            if curl -f http://localhost:${{ steps.determine-port.outputs.new_port }}/health > /dev/null 2>&1; then
+              echo "✅ Nueva instancia está lista en puerto ${{ steps.determine-port.outputs.new_port }}"
+              echo "ℹ️ Nginx detectará automáticamente el cambio cuando se detenga la instancia anterior"
+              break
+            fi
+            echo "⏳ Intento $attempt/$max_attempts - Verificando nueva instancia..."
+            echo "   - Puerto ${{ steps.determine-port.outputs.new_port }}: $(curl -f http://localhost:${{ steps.determine-port.outputs.new_port }}/health > /dev/null 2>&1 && echo "OK" || echo "FAIL")"
+            sleep 5
+            attempt=$((attempt + 1))
+          done
+          
+          if [ $attempt -gt $max_attempts ]; then
+            echo "❌ La nueva instancia no está sirviendo tráfico correctamente"
+            exit 1
+          fi
+
+      - name: Stop Old Instance
+        run: |
+          # Detener la instancia anterior SOLO después de confirmar que la nueva funciona correctamente
+          if [ -n "${{ steps.determine-port.outputs.active_container }}" ]; then
+            echo "🔄 Blue-Green Switch: Deteniendo instancia anterior ahora que la nueva está funcionando..."
+            echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm -f ${{ steps.determine-port.outputs.active_container }} || true
+            echo "✅ Zero-downtime completado: ${{ steps.determine-port.outputs.active_container }} → ${{ steps.determine-port.outputs.new_container }}"
+          else
+            echo "ℹ️ Primer deployment - no había instancia anterior que detener"
+          fi
+
+      - name: Verify Nginx is Serving New Instance
+        run: |
+          echo "🔍 Verificando que Nginx esté sirviendo la nueva instancia..."
+          max_attempts=10
+          attempt=1
+          
+          # Dar tiempo a Nginx para detectar que la instancia anterior se detuvo
+          sleep 5
+          
+          while [ $attempt -le $max_attempts ]; do
+            # Verificar que Nginx esté sirviendo la nueva instancia correctamente
+            if curl -f http://localhost:${{ steps.determine-port.outputs.new_port }}/health > /dev/null 2>&1; then
+              echo "✅ Nginx está sirviendo correctamente la nueva instancia"
+              echo "🎯 Tráfico fluyendo: puerto 80 → puerto ${{ steps.determine-port.outputs.new_port }}"
+              break
+            fi
+            echo "⏳ Intento $attempt/$max_attempts - Esperando que Nginx detecte el cambio..."
+            echo "   - Verificando a través de Nginx (puerto 80): $(curl -f http://localhost:${{ steps.determine-port.outputs.new_port }}/health > /dev/null 2>&1 && echo "OK" || echo "FAIL")"
+            sleep 3
+            attempt=$((attempt + 1))
+          done
+          
+          if [ $attempt -gt $max_attempts ]; then
+            echo "❌ Nginx no está sirviendo correctamente a través del puerto 80"
+            echo "🔧 Posible solución: verificar configuración de Nginx"
+            exit 1
+          fi
+
+      - name: Deployment Summary
+        run: |
+          echo "🎉 Blue-Green Deployment Completado Exitosamente!"
+          echo "📊 Resumen del despliegue:"
+          echo "   - Puerto activo: ${{ steps.determine-port.outputs.new_port }}"
+          echo "   - Contenedor activo: ${{ steps.determine-port.outputs.new_container }}"
+          echo "   - Imagen: ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}"
+          echo "   - Nginx: Sistema (no contenedor)"
+          
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S systemctl status nginx --no-pager -l
+
       - name: Prune Docker Images unused
         run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f
+          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f    
+  # pull-frontend-image-and-run-container:
+  #   name: Deploy Frontend Container
+  #   runs-on: self-hosted
+  #   needs: [retrieve-environment-variable, build-push-docker-image]
+  #   environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
+  #   steps:      
+  #     - name: Pull Docker Image
+  #       run: |
+  #         echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker pull ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
+      
+  #     - name: Stop Current Running Container
+  #       run: |
+  #         echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker rm -f ${{ env.DOCKER_CONTAINER_NAME }} || true
+      
+  #     - name: Run Docker Container
+  #       run: |
+  #         echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker run -d \
+  #           --restart unless-stopped \
+  #           -p ${{ env.DOCKER_HOST_PORT }}:${{ env.DOCKER_CONTAINER_PORT }} \
+  #           -e GMAIL_USER=${{ env.GMAIL_USER }} \
+  #           -e GMAIL_RECIPIENTS=${{ env.GMAIL_RECIPIENTS }} \
+  #           -e GMAIL_APP_PASSWORD='${{ env.GMAIL_APP_PASSWORD }}' \
+  #           -e SHOULD_ROBOTS_INDEX='${{ env.SHOULD_ROBOTS_INDEX }}' \
+  #           -e NEXT_PUBLIC_BASE_URL=${{ env.NEXT_PUBLIC_BASE_URL }} \
+  #           -e NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }} \
+  #           -e NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=${{ env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }} \
+  #           --name ${{ env.DOCKER_CONTAINER_NAME }} \
+  #           ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
+            
+  #     - name: Prune Docker Images unused
+  #       run: |
+  #         echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker image prune -f
