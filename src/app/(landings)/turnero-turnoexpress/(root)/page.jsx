@@ -6,6 +6,7 @@ import TurnoExpressIndustriesSection from "@/sections/turnero-turnoexpress/root/
 import TurnoExpressProductsSection from "@/sections/turnero-turnoexpress/root/components/ProductsSection/TurnoExpressProductsSection";
 import TurnoExpressRelatedProducts from "@/sections/turnero-turnoexpress/root/components/RelatedProducts/TurnoExpressRelatedProducts";
 import SecondaryTurnoExpressProductsSection from "@/sections/turnero-turnoexpress/root/components/SecondaryProductsSection/SecondaryTurnoExpressProductsSection";
+import TurneroTurnoexpressPreguntasFrecuentes from "@/sections/turnero-turnoexpress/root/components/PreguntasFrecuentes";
 
 export async function generateMetadata() {
   const { 'turnero-turnoexpress': { root: metadata } } = getMetadata('landings');
@@ -22,6 +23,7 @@ export default function TurnoExpressLanding() {
       <SecondaryTurnoExpressProductsSection />
       <TurnoExpressIndustriesSection />
       <TurnoExpressRelatedProducts />
+      <TurneroTurnoexpressPreguntasFrecuentes />
     </>
   );
 }

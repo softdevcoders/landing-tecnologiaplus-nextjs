@@ -2,7 +2,8 @@ import PreguntasFrecuentes from "@/components/preguntas-frecuentes";
 import { 
   llamadoresDeMeserosPreguntasFrecuentes, 
   localizadoresDeRestaurantesPreguntasFrecuentes,
-  llamadoresEnfermeriaPreguntasFrecuentes
+  llamadoresEnfermeriaPreguntasFrecuentes,
+  turneroTurnoexpressPreguntasFrecuentes
 } from "@/config/preguntas-frecuentes";
 import { routes } from "@/config/routes";
 
@@ -19,7 +20,10 @@ const PreguntasFrecuentesBlog = ({ categoryKey }) => {
     case routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key:
       preguntasFrecuentes = llamadoresEnfermeriaPreguntasFrecuentes;
       break;
-    default:
+    case routes.blog.children.turneroTurnoexpress.category_key:
+      preguntasFrecuentes = turneroTurnoexpressPreguntasFrecuentes;
+      break;
+    default:  
       preguntasFrecuentes = null;
   }
 
