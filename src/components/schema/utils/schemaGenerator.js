@@ -16,10 +16,10 @@ export const ROUTE_CONFIG = {
     metadataKey: 'llamadores-de-meseros',
     serviceType: "Llamadores de meseros"
   },
-  // '/turnero-turnoexpress': {
-  //   metadataKey: 'turnero-turnoexpress',
-  //   serviceType: "Turnero TurnoExpress"
-  // },
+  '/turnero-turnoexpress': {
+    metadataKey: 'turnero-turnoexpress',
+    serviceType: "Turnero TurnoExpress"
+  },
   // '/sistema-de-turnos-turnomaster': {
   //   metadataKey: 'sistema-de-turnos-turnomaster',
   //   serviceType: "Sistema de turnos TurnoMaster"

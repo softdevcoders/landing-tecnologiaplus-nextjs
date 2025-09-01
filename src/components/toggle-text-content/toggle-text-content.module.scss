@@ -16,12 +16,12 @@
     transition: max-height 0.3s ease-in-out;
 
     p {
-      text-align: center;
-      text-wrap: balance;
+      text-align: justify;
       font-size: 1rem;
       font-weight: 400;
       color: #606060;
       line-height: 1.5;
+      margin-bottom: 1.75rem;
     }
 
     &.open {
