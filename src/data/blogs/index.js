@@ -5,6 +5,7 @@ const llamadoresDeEnfermeriaPosts = [
   {
     "id": 8585,
     "date": "2024-12-11T13:43:00",
+    "modified": "2025-09-02T00:00:01",
     "slug": "como-mejorar-servicio-enfermeria-en-geriatricos",
     "previous_link": [
         "/llamado-de-enfermeria-como-mejorar-el-servicio-en-geriatricos"
@@ -28,7 +29,8 @@ const llamadoresDeEnfermeriaPosts = [
         "rendered": "<p>En este artículo te explicamos porque un llamado de enfermeria mejora el servicio en un centro geriátrico, también conocido como hogar de cuidado de ancianos, residencia de ancianos o centro de atención a personas mayores, es una institución especializada en ofrecer atención y cuidado a personas de edad avanzada que necesitan asistencia y supervisión continua&#8230;</p>\n",
     },
     "images": [
-        "v1747075097/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos/uoafg9o5tum5d0kfmc1s"
+        // "v1747075097/website-v2/blog/llamado-de-enfermeria-cuidamaster/como-mejorar-servicio-enfermeria-en-geriatricos/uoafg9o5tum5d0kfmc1s"
+        "v1756825368/como-mejorar-servicio-enfermeria-en-geriatricos_tt3pzq"
     ],
     "categories": [
       routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key,
@@ -37,6 +39,7 @@ const llamadoresDeEnfermeriaPosts = [
   {
     "id": 8587,
     "date": "2024-12-11T10:43:39",
+    "modified": "2025-09-02T00:00:01",
     "slug": "por-que-usar-sistema-llamado-de-enfermeria",
     "preious_link": [
         "/por-que-usar-sistema-de-llamado-de-enfermeria"
@@ -53,7 +56,8 @@ const llamadoresDeEnfermeriaPosts = [
         ]
     },
     "images": [
-        "v1747075097/website-v2/blog/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria/deuzrhwcdvak5wgmizbr",
+        // "v1747075097/website-v2/blog/llamado-de-enfermeria-cuidamaster/por-que-usar-sistema-llamado-de-enfermeria/deuzrhwcdvak5wgmizbr",
+        "v1756825318/por-que-usar-sistema-llamado-de-enfermeria_qwngar"
     ],
     "content": {
         "rendered": "\n<p>Hace algunos años que se comenzó a implementar el <a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><strong>sistema de llamado de enfermería</strong></a> en Colombia, una manera eficiente de atender las necesidades de los pacientes en clínicas, hogares geriátricos y gerontológicos, debido a las facilidades que ofrece tanto para las enfermeras, como para los pacientes.</p>\n\n\n\n<p>No por nada se han vuelto tendencia y una norma casi obligatoria en los últimos años. Es por ello que en<em> Tecnología Plus</em> queremos ofrecerte algunos de los mejores<strong> sistemas de llamado de enfermería</strong> del mercado, puesto que sabemos lo importante de ofrecer comodidades tanto para tu personal como para tus pacientes.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-ventajas-de-utilizar-un-sistema-de-llamado-de-enfermeras\">Ventajas de utilizar un sistema de llamado de enfermeras</h2>\n\n\n\n<p>Aunque no todas las empresas del sector salud en Colombia cuentan con esta tecnología, la verdad es que resulta una de las mejores opciones de inversión que pueden realizar por los grandes beneficios que aporta, no solo para el personal, sino también para los pacientes.</p>\n\n\n\n<ul>\n<li>No emiten ruidos molestos que puedan perturbar la paz de tu clínica.</li>\n\n\n\n<li>Diseñados para fijarlos sobre cualquier tipo de superficie.</li>\n\n\n\n<li>Los enfermeros solo deben utilizar el reloj receptor digital donde recibirán el llamado de enfermera de los pacientes.</li>\n\n\n\n<li>Puedes configurar y utilizar cualquiera de nuestros sistemas de llamado en la zona de enfermería.</li>\n\n\n\n<li>Entrenar a tu personal para utilizar los llamadores es fácil.</li>\n\n\n\n<li>Le ofreces a los pacientes más seguridad y accesibilidad a los enfermeros en caso de necesidad.</li>\n\n\n\n<li>Te mantiene actualizado en cuanto a tecnología de atención al paciente.</li>\n\n\n\n<li>Es fácil enseñarle el método de funcionamiento a tus pacientes para que llamen a las enfermeras.</li>\n\n\n\n<li>Nuestros modelos son resistentes al agua.</li>\n\n\n\n<li>Tienen un largo alcance de hasta 50 metros de distancia.</li>\n\n\n\n<li>Los llamadores de enfermeras &#8211; pacientes son inalámbricos.</li>\n</ul>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-como-funciona-el-sistema-de-llamado-de-paciente-enfermera\">¿Cómo funciona el sistema de llamado de paciente enfermera?</h2>\n\n\n\n<p>El funcionamiento del sistema&nbsp; de llamada paciente &#8211; enfermera es bastante practico, ya que a través de los modelos que tenemos disponibles en Tecnología Plus, el proceso se hace más simple.&nbsp;</p>\n\n\n\n<p>El <a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><strong><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"></a><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><strong><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><strong>sistema de llamado de enfermería</strong></a></strong></a></strong></a> </a>solo debes instalarlo cerca de la cama del paciente y este debe tener un acceso fácil, cómodo y rápido. Por su parte, el llamador con cable extensor es para pacientes que no pueden levantarse de la cama y así ofrecer más comodidades.</p>\n\n\n\n<p>En cualquiera de los casos, ambos modelos cuentan con 2 botones para el uso de los pacientes:</p>\n\n\n\n<ul>\n<li>Call.</li>\n\n\n\n<li>Cancel.</li>\n</ul>\n\n\n\n<p>Una vez lo has instalado, solo debes presentarle al paciente el funcionamiento que tienen los botones, lo cual no es difícil, por lo que te aseguras de evitar inconvenientes con el funcionamiento y/o errores en el uso de los llamadores.</p>\n\n\n\n<p>El paciente solo debe aparentar el botón respectivo para que la enfermera reciba la señal, ya sea en su muñeca con el reloj digital, en su pantalla instalada en la sala de enfermeras o a través de una alarma de luz. Esto bastará para saber que debe movilizarse hacia la sala del enfermero lo más pronto posible.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-empresas-de-salud-que-usan-nuestro-llamado-de-enfermeras\">Empresas de salud que usan nuestro llamado de enfermeras</h2>\n\n\n\n<p>Si estás decidido a instalar estos <strong><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><a href=\"https://tecnologiaplus.com/llamado-de-enfermeria/\"><strong>sistema de llamado de enfermeras</strong></a> </a></strong>en tu clínica, hogar geriátrico o gerontológicos, quizá te gustaría conocer algunos casos de éxitos de otras empresas que ya cuentan con los llamadores de Tecnología Plus:</p>\n\n\n\n<ul>\n<li>Hospital San Carlos</li>\n\n\n\n<li>Hogar casa Viva</li>\n\n\n\n<li>Dermosalud</li>\n\n\n\n<li>Hospital San Rafael.</li>\n\n\n\n<li>Hogar Gerontológico El Bosque.</li>\n\n\n\n<li>Hogar La Alborada.<br></li>\n</ul>\n\n\n\n<p class=\"has-text-align-center\">¡<a href=\"https://tecnologiaplus.com/contacto/\">Contáctanos hoy</a> mismo y descubre cómo podemos llevar tu servicio al siguiente nivel!</p>\n",
