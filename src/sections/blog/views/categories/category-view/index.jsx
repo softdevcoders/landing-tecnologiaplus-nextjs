@@ -14,6 +14,12 @@ const CategoryView = ({ category, page }) => {
     case routes.blog.children.localizadoresParaRestaurantes.category_key:
       shouldAddMarginBottom = false;
       break;
+    case routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key:
+      shouldAddMarginBottom = false;
+      break;
+    case routes.blog.children.turneroTurnoexpress.category_key:
+      shouldAddMarginBottom = false;
+      break;
   }
   
   return (

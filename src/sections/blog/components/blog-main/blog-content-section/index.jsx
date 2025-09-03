@@ -9,7 +9,7 @@ const BlogContentSection = ({ posts, pagination }) => {
   const categories = routes.blog.children;
 
   return (
-    <div className={style.blogContent__container}>
+    <div className={style.blogContent__container} data-nosnippet>
       <div className={style.blogContent__content}>
         <div className={style.blogContent__grid}>
           {posts.map((post) => (

@@ -3,7 +3,7 @@ import style from './blog-hero-section.module.scss';
 
 const BlogHeroSection = () => {
   return (
-    <section id="hero" aria-labelledby="heroHeading" className={style.blogHeroSection}>
+    <section id="hero" aria-labelledby="heroHeading" className={style.blogHeroSection} data-nosnippet>
       <Image
         src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349921/jlxxsnlercoj0nihz4am_udppso.webp"
         alt="Background Image for Hero"

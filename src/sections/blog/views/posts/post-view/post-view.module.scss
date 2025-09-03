@@ -16,6 +16,15 @@
         font-size: 28px;
         font-weight: 700;
         text-align: center;
+        /* Force Montserrat font for consistent rendering */
+        font-family: var(--font-montserrat), sans-serif !important;
+        /* Reset all font variants to ensure consistent number rendering */
+        font-variant: normal !important;
+        font-variant-numeric: normal !important;
+        font-variant-emoji: normal !important;
+        font-feature-settings: normal !important;
+        -webkit-font-feature-settings: normal !important;
+        -moz-font-feature-settings: normal !important;
       }
     }
 
