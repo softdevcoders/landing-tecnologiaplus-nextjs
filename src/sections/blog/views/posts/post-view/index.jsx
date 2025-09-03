@@ -54,7 +54,8 @@ const PostView = ({ post }) => {
             </div>
             <div 
               className={style.blogPostView__contentHtml} 
-              dangerouslySetInnerHTML={{ __html: htmlReader(post.content.template_name) }} 
+              dangerouslySetInnerHTML={{ __html: htmlReader(post.content.template_name) }}
+              data-nosnippet
             />
             {/* <div className={style.blogPostView__contentHtlmFooter}>
               <p  className={style.blogPostView__contentHtmlFooterText}><Link href={routes.contact.url} className={style.blogPostView__contentHtmlFooterLink}>Contáctanos hoy mismo y descubre cómo podemos llevar tu servicio al siguiente nivel!</Link></p>

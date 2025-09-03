@@ -14,7 +14,7 @@ import { SHOULD_ROBOTS_INDEX } from "@/data/metadata/config";
  
 const montserrat = Montserrat({ 
   weight: ["400", "500", "600", "700", "800", "900"],
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   display: 'swap',
   variable: '--font-montserrat',
 })
