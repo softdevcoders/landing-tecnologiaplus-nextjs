@@ -60,7 +60,7 @@ function TurnosTechnicalDetails() {
   }, [setSelectedColor]);
 
   return (
-    <section className={style.technical__details}>
+    <section className={style.technical__details} data-nosnippet> 
       <div className={style.header}>
         <h2 className={style.title}>Ficha Técnica</h2>
         <p className={style.description}>Rollos térmicos</p>

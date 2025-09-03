@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function EncuestaVirtualProductsSection() {
   return (
-    <section className={style.products__section}>
+    <section className={style.products__section} data-nosnippet>
       <div className={style.products__container}>
         <Image
           width={660}

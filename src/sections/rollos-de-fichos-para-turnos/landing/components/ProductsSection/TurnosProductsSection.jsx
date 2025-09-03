@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function TurnosProductsSection() {
   return (
-    <section className={style.products__section}>
+    <section className={style.products__section} data-nosnippet>
       <h2 className={style.products__title}>
         Colores de Ticket más solicitados
       </h2>

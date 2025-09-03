@@ -6,7 +6,7 @@ import ToggleTextContent from "@/components/toggle-text-content";
 
 function DispensadorTiquetesProductsSection() {
   return (
-    <section className={style.products__section}>
+    <section className={style.products__section} data-nosnippet>
       <h2 className={style.products__title}>Dispensador de rollos de turnos</h2>
       <div className={style.products__container}>
         <Image

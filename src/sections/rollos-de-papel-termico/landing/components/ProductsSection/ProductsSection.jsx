@@ -4,7 +4,7 @@ import ToggleTextContent from "@/components/toggle-text-content";
 
 function ProductsSection() {
   return (
-    <section className={style.products__section}>
+    <section className={style.products__section} data-nosnippet>
       <h2 className={style.products__title}>Rollos para impresora térmica</h2>
       <div className={style.products__container}>
         <Image

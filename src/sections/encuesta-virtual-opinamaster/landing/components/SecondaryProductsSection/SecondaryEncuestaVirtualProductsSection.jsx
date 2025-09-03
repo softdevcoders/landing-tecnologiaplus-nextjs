@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function SecondaryEncuestaVirtualProductsSection() {
   return (
-    <section className={style.products__section}>
+    <section className={style.products__section} data-nosnippet>
       <div className={style.information}>
         <h2>Gráficos para tomar decisiones</h2>
         <p>Convierte opiniones en gráficos que reflejan la percepción real de tus clientes.</p>
