@@ -49,7 +49,7 @@ function ProductGallery() {
 
   
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} data-nosnippet>
 
 
       <div className={styles.action__nav}>

@@ -23,7 +23,7 @@ function MobileProductGallery() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className={styles.mobileGallery}>
+    <div className={styles.mobileGallery} data-nosnippet>
 
 
       <div className={styles.action__nav}>
