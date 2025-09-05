@@ -38,6 +38,13 @@
       @media (min-width: 1024px) {
         font-size: 1.125rem;
       }
+
+      a {
+        color: #6a0dad;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
     }
   }
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function SecondaryCalificadorProductsSection() {
   return (
-    <section className={style.products__section}>
+    <section className={style.products__section} data-nosnippet> 
       <div className={style.information}>
         <h2>Alertas en tiempo real.</h2>
         <p>Agiliza la toma de decisiones.</p>

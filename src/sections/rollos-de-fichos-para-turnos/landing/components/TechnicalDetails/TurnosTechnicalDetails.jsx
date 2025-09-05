@@ -74,7 +74,7 @@ function TurnosTechnicalDetails() {
   }, [setSelectedColor]);
 
   return (
-    <section className={style.technical__details}>
+    <section className={style.technical__details} data-nosnippet> 
       <div className={style.technical__details__header}>
         <h2 className={style.technical__details__header__title}>Ficha Técnica</h2>
         <Link href={routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url}> 

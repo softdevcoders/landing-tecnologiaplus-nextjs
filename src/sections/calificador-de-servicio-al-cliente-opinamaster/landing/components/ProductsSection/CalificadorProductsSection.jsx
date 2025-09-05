@@ -45,7 +45,7 @@ const products = [
 
 function CalificadorProductsSection() {
   return (
-    <section className={style.products__section}>
+    <section className={style.products__section} data-nosnippet>
       <div className={style.products__container}>
         {products.map((product) => (
           <div className={style.product__item} key={product.id}>

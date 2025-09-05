@@ -2,7 +2,7 @@ import styles from "./HowItWorks.module.scss";
 
 function HowItWorks() {
   return (
-    <section id="clients-section" className={styles.HowItWorks__container}>
+    <section id="clients-section" className={styles.HowItWorks__container} data-nosnippet>
       <h2>¿Cómo funciona?</h2>
       <div className={styles.items__container}>
         <div className={styles.item}>

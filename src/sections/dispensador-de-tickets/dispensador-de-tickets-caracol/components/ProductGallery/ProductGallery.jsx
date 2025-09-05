@@ -95,7 +95,7 @@
 //   };
 
 //   return (
-//     <section className={styles.hero}>
+//     <section className={styles.hero} data-nosnippet>
 //       <div className={styles.action__nav}>
 //         <button onClick={() => window.history.back()}>
 //           <ArrowBack className={styles.icon__back} /> Volver
@@ -365,7 +365,7 @@ function ProductGallery() {
   };
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} data-nosnippet>
       <div className={styles.action__nav}>
         <BackButton /> 
       </div>

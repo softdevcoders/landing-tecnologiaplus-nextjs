@@ -29,7 +29,7 @@ const benefits = [
 
 function LlamadorMeserosBenefitsSection() {
   return (
-    <section className={style.benefits__section_container}>
+    <section className={style.benefits__section_container} data-nosnippet>
       <div className={style.video__container}>
         <YouTubePlayer
           videoId="XGGhLks0iVc" 

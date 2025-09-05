@@ -30,7 +30,7 @@ const steps = [
 
 function StepsSectionCalificador() {
   return (
-    <section className={style.steps__section}>
+    <section className={style.steps__section} data-nosnippet>
       <h2>¿Cómo Funciona el Calificador de Servicio al Cliente?</h2>
 
       <div className={style.cards__container}>
