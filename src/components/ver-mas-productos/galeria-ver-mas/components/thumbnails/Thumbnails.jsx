@@ -195,6 +195,7 @@ const Thumbnails = ({
                   <Image
                     src={getOptimizedImageUrl({url: item.thumbnail, width: 150, height: 150, quality: 80, type: 'video'})} 
                     alt={`Miniatura: ${item.alt}`}
+                    title={`Miniatura: ${item.alt}`}
                     width={150}
                     height={150}
                     sizes={getOptimizedSizes('thumbnail', false)}
@@ -212,6 +213,7 @@ const Thumbnails = ({
                   <Image
                     src={getOptimizedImageUrl({url: item.src, width: 150, height: 150, quality: 80})}
                     alt={`Miniatura: ${item.alt}`}
+                    title={`Miniatura: ${item.alt}`}
                     width={150} 
                     height={150}
                     sizes={getOptimizedSizes('thumbnail', false)}

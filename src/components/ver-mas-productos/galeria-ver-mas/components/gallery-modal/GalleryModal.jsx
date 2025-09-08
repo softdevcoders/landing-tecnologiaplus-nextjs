@@ -67,6 +67,7 @@ const GalleryModal = ({
               <Image
                 src={getOptimizedImageUrl({url: item?.src, width: 800, quality: 80})} 
                 alt={item.alt}
+                title={item.title}
                 width={800}
                 height={800}
                 style={{ 

@@ -1,8 +1,9 @@
 import { routes } from "@/config/routes";
 
 const mainImage = {
-  src: 'v1755800973/control-numerico_mhg7af',
-  alt: 'Control numérico vista principal',
+  src: 'v1757338403/control_numerico_llamador_de_meseros',
+  alt: 'Control numérico para gestión de llamados compatible con llamador de meseros.',
+  title: 'Control numérico para llamador de meseros.'
 };
 
 export const controlNumerico = {
