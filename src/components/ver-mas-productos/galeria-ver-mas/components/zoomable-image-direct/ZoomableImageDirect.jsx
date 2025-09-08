@@ -132,7 +132,7 @@ const ZoomableImageDirect = ({
  
       <div className={styles.imageContainer}>
         <Image
-          src={getOptimizedImageUrl({url: image.src, width: 1600, quality: 80})} 
+          src={getOptimizedImageUrl({url: image.src, width: 1500, quality: 70})} 
           alt={altText}
           width={1800}
           height={1800}

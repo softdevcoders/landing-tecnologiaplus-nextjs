@@ -6,8 +6,9 @@ import { pantallaT1B } from "@/config/productos-galeria-ver-mas/llamadores-meser
 import { pantallaT6 } from "@/config/productos-galeria-ver-mas/llamadores-meseros/pantalla-t6";
 
 const mainImage = {
-  src: 'v1754405582/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_1_g97quo',
-  alt: 'Timbre para restaurante negro con botón rojo brillante para llamado inmediato',
+  src: 'v1757338389/llamador_meseros_e2b_negro_rojo_2teclas',
+  alt: 'Llamador de meseros E2-B negro y rojo con 2 teclas para restaurante.',
+  title: 'Llamador de meseros E2-B negro y rojo de 2 teclas.'
 };
 
 export const llamadorDeMeserosE2B = {
@@ -28,56 +29,65 @@ export const llamadorDeMeserosE2B = {
         },
         {
           type: 'video',
-          src: 'v1754405618/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_2_oqho0j.mp4',
-          alt: 'Demostración de timbre inalámbrico para restaurantes negro y rojo en funcionamiento',
+          src: 'v1757338405/timbre_de_restaurante_modelo_e2b_video.mp4',
+          alt: 'Demostración de timbre de restaurante modelo E2-B en funcionamiento.',
+          title: 'Timbre de restaurante modelo E2-B.',
           thumbnail: 'so_0/v1754070602/llamador_e2_b_de_2_teclas_negro_rojo_2_pffe7w', 
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1754405566/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_3_xylugh',     
-          alt: 'Medidas de Timbre inalámbrico para restaurantes',
+          src: 'v1757338389/medidas_timbre_inalambrico_restaurantes_e2b_2teclas_negro_rojo',     
+          alt: 'Medidas de timbre inalámbrico para restaurantes E2-B de dos teclas en color negro y rojo.',
+          title: 'Medidas timbre inalámbrico para restaurantes E2-B 2 teclas negro y rojo.',
         },
         {
           type: 'image',
-          src: 'v1754405614/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_4_tmuscx', 
-          alt: 'Llamadores de meseros negro-rojo en uso por grupo de clientes',
+          src: 'v1757338391/timbre_de_restaurante_e2b_2teclas_negro_rojo_en_uso', 
+          alt: 'Timbre de restaurante E2-B negro y rojo de dos teclas en uso en restaurante con clientes.',
+          title: 'Timbre de restaurante E2-B negro y rojo en uso con clientes.',
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1754405611/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_5_lt8hav',
-          alt: 'Timbre de personal en rojo y negro usado por usuarios con atención rápida',
+          src: 'v1757338390/llamadores_para_restaurantes_e2b_2teclas_negro_rojo_diferentes_sectores',
+          alt: 'Llamadores para restaurantes E2-B en color negro y rojo, ideales para gimnasios, gastrobares y sector salud.',
+          title: 'Llamadores para restaurantes E2-B negro y rojo ideales para diferentes sectores.',
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1754405613/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_6_fslbbu',  
-          alt: 'Timbres para mesas de restaurantes con botón rojo y base negra moderna',
+          src: 'v1757338391/timbres_para_mesas_restaurantes_e2b_2teclas_negro_rojo_comparacion',  
+          alt: 'Timbres para mesas de restaurantes E2-B negro y rojo comparados con otros modelos, diseño moderno y batería de larga duración.',
+          title: 'Timbres para mesas de restaurantes E2-B comparados con otros modelos.',
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1754405617/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_7_zco9dx',  
-          alt: 'Beeper para restaurantes en rojo y negro iluminado con su complemento hablador de mesa',
+          src: 'v1757338389/llamadores_de_meseros_e2B_negro_rojo_fijacion_hablador_adhesivo',  
+          alt: 'Llamadores de meseros E2-B negro y rojo fijados en mesa con hablador publicitario y adhesivo extra fuerte.',
+          title: 'Llamadores de meseros E2-B negro y rojo con hablador y adhesivo extra fuerte.',
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1754405614/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_8_zurcot',    
-          alt: 'Timbre de restaurante rojo con negro activado para llamado de personal',
+          src: 'v1757338391/timbre_de_mesa_e2_b_negro_rojo_resistente_agua',    
+          alt: 'Timbre de mesa E2-B negro rojo resistente a derrames de agua para restaurantes.',
+          title: 'Timbre de mesa E2-B negro rojo resistente al agua.',
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1754405585/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_9_rkid08',    
-          alt: 'Sistema de llamado para meseros en rojo-negro con opciones en reloj receptor y pantallas',
+          src: 'v1757338390/timbres_para_restaurantes_e2_b_negro_rojo_receptores',    
+          alt: 'Timbres para restaurantes E2-B negro rojo compatibles con reloj receptor y pantallas de llamados.',
+          title: 'Timbres para restaurantes E2-B negro rojo con receptores.',
           darkBackground: true
         },
         {
           type: 'image',
-          src: 'v1754405582/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_10_ektdpr',    
-          alt: 'Llamadores de mesa para restaurante con diseño rojo rompemuros de muros, columnas y aglomeraciones',
+          src: 'v1757338390/llamadores_de_mesa_e2_b_negro_rojo_rompemuros',    
+          alt: 'Llamadores de mesa E2-B negro rojo con señal rompemuros para restaurantes.',
+          title: 'Llamadores de mesa E2-B negro rojo rompemuros.',
           darkBackground: true
         },
       ]
@@ -87,7 +97,7 @@ export const llamadorDeMeserosE2B = {
       name: "Negro y Amarillo",
       thumbnail: {
         src: 'v1754405572/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_amarillo_1_bkashy',  
-        alt: 'Timbre de restaurante negro con amarillo, moderno y llamativo',
+        alt: 'Timbre para mesa de restaurante modelo E2-B en color negro y amarillo con diseño moderno.',
       },
       media: [
         {
