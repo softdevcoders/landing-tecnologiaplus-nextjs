@@ -19,6 +19,7 @@ function TurnoMasterProductsSection() {
               width={588}
               height={378}
               className={style.products__section__mobile__image__img}
+              unoptimized={true}
             />
           </div>
           <a href={whatsappUrl} target="_blank" rel="noreferrer" className={`${style.products__whatsapp__btn__mobile} ${style.products__whatsapp__btn}`}>¡Quiero más información!</a> 
@@ -29,6 +30,7 @@ function TurnoMasterProductsSection() {
               width={375}
               height={400}
               className={style.products__section__mobile__image__img}
+              unoptimized={true}
             />
           </div>
         </div>
@@ -41,6 +43,7 @@ function TurnoMasterProductsSection() {
               height={400}
               className={style.products__section__desktop__image__img}
               loading="lazy"
+              unoptimized={true}
             />
           </div>
           <div className={style.products__section__desktop__image}>
@@ -50,6 +53,7 @@ function TurnoMasterProductsSection() {
               width={588}
               height={378}
               className={style.products__section__desktop__image__img}
+              unoptimized={true}
             />
           </div>
         </div>  

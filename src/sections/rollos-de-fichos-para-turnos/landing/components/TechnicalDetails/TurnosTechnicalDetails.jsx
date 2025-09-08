@@ -92,6 +92,7 @@ function TurnosTechnicalDetails() {
                 height={500} 
                 onClick={() => handleColorClick(color.id)}
                 className={style.technical__details__carousel__item__image}
+                unoptimized={true}
               />
             </div>
             ))}
@@ -123,6 +124,7 @@ function TurnosTechnicalDetails() {
                       width={200} 
                       height={200} 
                       className={style.technical__details__container__body__features_container__features_list__feature__icon__image}
+                      unoptimized={true}
                     />
                   </div>
                   <p className={style.technical__details__container__body__features_container__features_list__feature__description}>{feature.label}</p>

@@ -42,6 +42,7 @@ function StepsSectionCalificador() {
               width={step.width}
               height={step.height}
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 33vw"
+              unoptimized={true}
             />
             <div className={style.text__container}>
               <span>{step.number}</span>

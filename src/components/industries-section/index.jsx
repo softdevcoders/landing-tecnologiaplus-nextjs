@@ -11,6 +11,7 @@ export const IndustriesSection = ({ children, className = "" }) => {
           width={300}
           height={300}
           className={style.industries__section__background__image}
+          unoptimized={true}
         />
       </div>
       {children}

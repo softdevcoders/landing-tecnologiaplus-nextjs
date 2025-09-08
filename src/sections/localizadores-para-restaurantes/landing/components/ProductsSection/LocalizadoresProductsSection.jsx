@@ -19,6 +19,7 @@ function LocalizadoresProductsSection() {
             width={500}
             height={402}
             className={style.products__container__item__image}
+            unoptimized={true}
           />
         </div>
         <div className={style.products__container__item}>
@@ -28,6 +29,7 @@ function LocalizadoresProductsSection() {
             width={421}
             height={253}
             className={style.products__container__item__image}
+            unoptimized={true}
           />
         </div>
       </div>

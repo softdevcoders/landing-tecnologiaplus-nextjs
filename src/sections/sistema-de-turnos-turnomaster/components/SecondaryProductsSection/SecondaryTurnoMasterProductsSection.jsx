@@ -17,6 +17,7 @@ function SecondaryTurnoMasterProductsSection() {
                 alt="Ticket de turno en físico y en el teléfono"
                 width={1000}
                 height={1000}
+                unoptimized={true}
               />
             </div>
           </div>
@@ -29,6 +30,7 @@ function SecondaryTurnoMasterProductsSection() {
                 alt="Pantalla TV para llamar los turnos"
                 width={1000}
                 height={1000}
+                unoptimized={true}
               />
             </div>
           </div>
@@ -45,6 +47,7 @@ function SecondaryTurnoMasterProductsSection() {
                 alt="Estadísticas en base a los resultados del calificador de servicio"
                 width={1000}
                 height={1000}
+                unoptimized={true}
               />
             </div>
           </div>
@@ -57,6 +60,7 @@ function SecondaryTurnoMasterProductsSection() {
                 alt="Pantalla de turnos con la información correspondiente al mostrar el llamado"
                 width={1000}
                 height={1000}
+                unoptimized={true}
               />
             </div>
           </div>
@@ -75,6 +79,7 @@ function SecondaryTurnoMasterProductsSection() {
                 alt="Código QR para revisar el turno"
                 width={1000}
                 height={1000}
+                unoptimized={true}
               />
             </div>
             <p className={style.additional__services__section__card__text}>Código QR para revisar el turno</p>
@@ -86,6 +91,7 @@ function SecondaryTurnoMasterProductsSection() {
                 alt="Visualización del turno correspondiente y del que fue llamado para así guiar al usuario"
                 width={1000}
                 height={1000}
+                unoptimized={true}
               />
             </div>
             <p className={style.additional__services__section__card__text}>Ver estado del turno en el celular</p>
@@ -97,6 +103,7 @@ function SecondaryTurnoMasterProductsSection() {
                 alt="Notificación por medio de mensaje de texto del turno correspondiente"
                 width={1000}
                 height={1000}
+                unoptimized={true}
               />
             </div>
             <p className={style.additional__services__section__card__text}>Turno por mensaje de texto</p>
@@ -108,6 +115,7 @@ function SecondaryTurnoMasterProductsSection() {
                 alt="Calificador de servicio u OpinaMaster"
                 width={1000}
                 height={1000}
+                unoptimized={true}
               />
             </div>
             <p className={style.additional__services__section__card__text}>Calificador de servicio</p>

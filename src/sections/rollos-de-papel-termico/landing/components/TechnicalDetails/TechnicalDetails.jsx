@@ -77,6 +77,7 @@ function TurnosTechnicalDetails() {
                 sizes="(max-width: 768px) 100vw, 80vw"
                 onClick={() => handleColorClick(color.id)}
                 className={style.image}
+                unoptimized={true}
               />
             </div>
           ))}
@@ -110,6 +111,7 @@ function TurnosTechnicalDetails() {
                     height={feature.height} 
                     className={style.icon}
                     sizes="(max-width: 768px) 25vw, 10vw"
+                    unoptimized={true}
                   />
                 )}
                 <p dangerouslySetInnerHTML={{ __html: feature.label }} />

@@ -15,6 +15,7 @@ function DispensadorTiquetesProductsSection() {
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738424725/dispensador_2x-8_dwru2g"
           alt="Colores de tickets y dispensador de turnos rojo"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 50vw"
+          unoptimized={true}
         />
         <Link
           className={style.card__btn}

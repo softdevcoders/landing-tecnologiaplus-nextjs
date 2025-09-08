@@ -56,6 +56,7 @@ function CalificadorProductsSection() {
               width={product.images.mobile.width}
               height={product.images.mobile.height}
               sizes="(max-width: 1250px) 100vw, 0vw"
+              unoptimized={true}
             />
             <Image
               className={style.image__desktop}
@@ -64,6 +65,7 @@ function CalificadorProductsSection() {
               width={product.images.desktop.width}
               height={product.images.desktop.height}
               sizes="(max-width: 1250px) 50vw, 30vw"
+              unoptimized={true}
             />
             <div className={style.btn__container}>
               <p>{product.sellingCounter}</p> 

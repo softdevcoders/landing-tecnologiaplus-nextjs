@@ -14,6 +14,7 @@ function SecondaryEncuestaVirtualProductsSection() {
         height={1083}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         alt="Estadísticas en base a los resultados del calificador de servicio"
+        unoptimized={true}
       />
     </section>
   );

@@ -12,6 +12,7 @@ function EncuestaVirtualProductsSection() {
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738681738/Group_3_1_kawcef"
           alt="Computador portátil que muestra un aviso emergente de la aplicación de encuestas de satisfacción"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 20vw"
+          unoptimized={true}
         />
         <Image
           width={559}
@@ -19,6 +20,7 @@ function EncuestaVirtualProductsSection() {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738681739/Group_4_1_h4asog"
           alt="Ejemplo de una alerta en tiempo real recibida en un teléfono celular"
+          unoptimized={true}
         />
       </div>
       <ToggleTextContent>

@@ -13,6 +13,7 @@ function ProductsSection() {
           sizes="(max-width: 768px) 80vw, (max-width: 1024px) 60vw, (max-width: 1400px) 35vw, 20vw"
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349920/image-1_1_ljyxis_qdsmdq"
           alt="Rollos Térmicos blancos"
+          unoptimized={true}
         />
         <Image
           width={1237}
@@ -20,6 +21,7 @@ function ProductsSection() {
           sizes="(max-width: 768px) 80vw, (max-width: 1024px) 60vw, (max-width: 1400px) 35vw, 25vw"
           src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/Recurso-13_2x-8_1_suitny_l91ptd"
           alt="rollos de papel termico para impresoras"
+          unoptimized={true}
         />
       </div>
       <ToggleTextContent>

@@ -13,6 +13,7 @@ const BlogHeroSection = () => {
         fetchPriority="high"
         loading="eager"
         className={style.blogHeroSection__background}
+        unoptimized={true}
       />
       <div className={style.blogHeroSection__overlay}>
         <h1 id="heroHeading" className={style.blogHeroSection__title}>
