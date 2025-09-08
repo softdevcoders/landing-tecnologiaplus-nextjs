@@ -34,7 +34,7 @@ const CarRelated = ({ post }) => {
           {cleanText(post.excerpt.rendered)}
         </p>
         <div className={style.blogCard__footer}>
-          <time className={style.blogCard__date}>{formatDate(post.date)}</time>
+          <time className={style.blogCard__date}>{formatDate(post.modified && new Date(post.modified) > new Date(post.date) ? post.modified : post.date)}</time>
           <LinkButton 
             href={post.current_link} 
             title={`Leer más sobre ${post.title.rendered}`} 
