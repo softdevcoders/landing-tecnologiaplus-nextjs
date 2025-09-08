@@ -12,7 +12,7 @@ const EncuestaVirtualCuidamasteHomeDesktop = ({ images }) => {
             width={900}
             height={680}
             alt={images.alt}
-            src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_900/${images.src}`}
+            src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/f_webp,q_70,w_${image.width || 900}/${images.src}`}
             {...images.fetchPriority ? { fetchPriority: images.fetchPriority, priority: 'high' } : { loading: "lazy" }}
             unoptimized={true}
           />
@@ -29,7 +29,7 @@ const EncuestaVirtualCuidamasteHomeDesktop = ({ images }) => {
               width={900}
               height={680}
               alt={image.alt}
-              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_900/${image.src}`}
+              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/f_webp,q_70,w_${image.width || 900}/${image.src}`}
               {...image.fetchPriority ? { fetchPriority: image.fetchPriority, priority: 'high' } : { loading: "lazy" }}
               unoptimized={true}
             />

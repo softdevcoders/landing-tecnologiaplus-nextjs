@@ -3,18 +3,19 @@ import style from "./CalificadorProductsSection.module.scss";
 import { routes } from "@/config/routes";
 import ToggleTextContent from "@/components/toggle-text-content";
 import Image from "next/image";
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 const products = [
   {
     id: 1,
     images: {
       mobile: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1742992729/6_4x-8_fqosbn",
+        url: "v1742992729/6_4x-8_fqosbn",
         width: 1502,
         height: 1670,
       },
       desktop: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1741104598/nuevo_4x-8_qbdidq",
+        url: "v1741104598/nuevo_4x-8_qbdidq",
         width: 3647,
         height: 2708,
       }
@@ -27,12 +28,12 @@ const products = [
     id: 2,
     images: {
       mobile: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1742992730/7_4x-8_nuhjlt",
+        url: "v1742992730/7_4x-8_nuhjlt",
         width: 1238,
         height: 1869,
       },
       desktop: {
-        url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738678296/Group_2_fpyzaa",
+        url: "v1738678296/Group_2_fpyzaa",
         width: 633,
         height: 577,
       }
@@ -50,8 +51,8 @@ function CalificadorProductsSection() {
         {products.map((product) => (
           <div className={style.product__item} key={product.id}>
             <Image
-              className={style.image__mobile}
-              src={product.images.mobile.url}
+              className={style.image__mobile} 
+              src={getOptimizedImageUrl({ url: product.images.mobile.url, width: 800, quality: 80 })}
               alt={product.alt}
               width={product.images.mobile.width}
               height={product.images.mobile.height}
@@ -60,7 +61,7 @@ function CalificadorProductsSection() {
             />
             <Image
               className={style.image__desktop}
-              src={product.images.desktop.url}
+              src={getOptimizedImageUrl({ url: product.images.desktop.url, width: 1200, quality: 80 })}
               alt={product.alt}
               width={product.images.desktop.width}
               height={product.images.desktop.height}

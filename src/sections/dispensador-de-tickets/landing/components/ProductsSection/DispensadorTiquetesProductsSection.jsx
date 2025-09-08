@@ -3,6 +3,7 @@ import style from "./DispensadorTiquetesProductsSection.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import ToggleTextContent from "@/components/toggle-text-content";
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 function DispensadorTiquetesProductsSection() {
   return (
@@ -12,7 +13,7 @@ function DispensadorTiquetesProductsSection() {
         <Image
           width={1594}
           height={952}
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738424725/dispensador_2x-8_dwru2g"
+          src={getOptimizedImageUrl({ url: 'v1738424725/dispensador_2x-8_dwru2g', width: 900, quality: 80 })}
           alt="Colores de tickets y dispensador de turnos rojo"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 50vw"
           unoptimized={true}

@@ -1,6 +1,7 @@
 import style from "./TurnosProductsSection.module.scss";
 import ToggleTextContent from "@/components/toggle-text-content";
 import Image from "next/image";
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 function TurnosProductsSection() {
   return (
@@ -13,7 +14,7 @@ function TurnosProductsSection() {
           <Image
             width={967}
             height={352}
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350027/tickets_2x-8_j3gdmx_mt44rr.webp"
+            src={getOptimizedImageUrl({ url: 'v1738350027/tickets_2x-8_j3gdmx_mt44rr', width: 1200, quality: 80 })}
             alt="Fichos para turnos"
             className={style.product__image}
             unoptimized={true}
