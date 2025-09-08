@@ -13,8 +13,9 @@ const LandingHeroImageContentDefault = ({ images }) => {
           width={image.width || 900}
           height={image.height || 680}
           alt={image.alt}
-          src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_${image.width || 900}/${image.src}`}
+          src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/f_webp,w_${image.width || 900},q_70/${image.src}`}
           {...image.fetchPriority && { fetchPriority: image.fetchPriority, loading: 'eager', priority: true }}
+          unoptimized={true}
         />
       </div>
     ))

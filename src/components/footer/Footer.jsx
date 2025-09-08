@@ -165,6 +165,7 @@ const Footer = () => {
           alt="Logo de Tecnología Plus"
           width={762}
           height={114}
+          unoptimized={true}
         />
       </div>
     </footer>

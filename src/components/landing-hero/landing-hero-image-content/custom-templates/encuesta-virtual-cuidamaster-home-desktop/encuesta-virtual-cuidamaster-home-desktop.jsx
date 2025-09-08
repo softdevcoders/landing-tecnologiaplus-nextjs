@@ -14,6 +14,7 @@ const EncuestaVirtualCuidamasteHomeDesktop = ({ images }) => {
             alt={images.alt}
             src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_900/${images.src}`}
             {...images.fetchPriority ? { fetchPriority: images.fetchPriority, priority: 'high' } : { loading: "lazy" }}
+            unoptimized={true}
           />
         </div>
       )}
@@ -30,6 +31,7 @@ const EncuestaVirtualCuidamasteHomeDesktop = ({ images }) => {
               alt={image.alt}
               src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_900/${image.src}`}
               {...image.fetchPriority ? { fetchPriority: image.fetchPriority, priority: 'high' } : { loading: "lazy" }}
+              unoptimized={true}
             />
           </div>
         ))
