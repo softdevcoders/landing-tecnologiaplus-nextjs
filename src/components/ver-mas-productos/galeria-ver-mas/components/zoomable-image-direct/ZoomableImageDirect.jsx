@@ -84,12 +84,6 @@ const ZoomableImageDirect = ({
     transformOrigin: '0 0'
   }), [isZoomed, isMobile, zoomPosition.x, zoomPosition.y]);
 
-  // Generar alt text descriptivo
-  const altText = useMemo(() => 
-    generateImageAlt(image, index, productTitle, selectedColor), 
-    [image, index, productTitle, selectedColor]
-  );
-
   // Determinar si usar priority
   const usePriority = useMemo(() => 
     priority || shouldUsePriority(index, 0, 1), 
@@ -133,7 +127,8 @@ const ZoomableImageDirect = ({
       <div className={styles.imageContainer}>
         <Image
           src={getOptimizedImageUrl({url: image.src, width: 1500, quality: 70})} 
-          alt={altText}
+          alt={image.alt}
+          title={image.title}
           width={1800}
           height={1800}
           priority={usePriority}

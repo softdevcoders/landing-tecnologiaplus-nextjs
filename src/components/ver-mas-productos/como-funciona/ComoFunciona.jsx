@@ -3,17 +3,18 @@ import globalStyles from "@/components/ver-mas-productos/styles/ver-mas-producto
 import styles from "./como-funciona.module.scss";
 import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
-const ComoFunciona = ({ comoFuncionaPasos }) => {
+const ComoFunciona = ({ comoFuncionaPasos, title = "¿Cómo funciona?" }) => {
   return (
     <section className={globalStyles.container}>
-      <h2>¿Cómo funciona?</h2>
+      <h3>{title}</h3>
       <div className={styles.container__items}>
         {comoFuncionaPasos.map((paso, index) => (
           <div className={styles.container__item} key={index}>
             <div className={styles.container__item__image__container}>
               <Image 
                 src={getOptimizedImageUrl({url: paso.imagen.src, width: 600, quality: 80})}  
-                alt={paso.imagen.alt} 
+                alt={paso?.imagen?.alt} 
+                title={paso?.imagen?.title}
                 width={350} 
                 height={350}
                 unoptimized={true} 

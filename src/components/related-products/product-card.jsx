@@ -1,14 +1,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getOptimizedImageUrl } from "@/lib/imageUtils";
+import style from "./related-products.module.scss";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, isVerMasVersionNueva }) {
   return (
     <>
-      <article>
+      <article className={style.product__card}>
         <Link href={product.link}>
-          <h3 itemProp="name">{product.name}</h3>
-          <p itemProp="description">
+          {isVerMasVersionNueva ? (
+            <h4 className={style.product__card__title}>{product.name}</h4>
+          ) : (
+            <h3 className={style.product__card__title}>{product.name}</h3>
+          )}
+          <p 
+            className={style.product__card__description}>
             {product.description}
           </p>
           <Image
@@ -21,7 +27,7 @@ export default function ProductCard({ product }) {
             itemProp="image"
             unoptimized={true}
           />
-          <p itemProp="orderQuantity">
+          <p className={style.product__card__description}>
             {product.sold}
           </p>
         </Link>

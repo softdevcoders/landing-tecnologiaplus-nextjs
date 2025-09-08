@@ -61,7 +61,8 @@ const ColorSelector = ({
               <div className={styles.imageWrapper}>
                 <Image
                   src={getOptimizedImageUrl({url: thumbnail.src, width: 150, height: 150, quality: 80})}
-                  alt={`Color: ${item.name}`} 
+                  alt={`Selector de color ${item.name}`} 
+                  title={`Selector de color ${item.name}`}
                   width={80} 
                   height={80}
                   sizes={getOptimizedSizes('color-selector', false)}

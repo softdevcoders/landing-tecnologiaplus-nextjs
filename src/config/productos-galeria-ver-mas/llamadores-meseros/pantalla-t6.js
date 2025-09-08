@@ -1,8 +1,9 @@
 import { routes } from "@/config/routes";
 
 const mainImage = {
-  src: 'v1755800992/pantalla-t6_hym198',
-  alt: 'Pantalla T6 vista principal',
+  src: 'v1757338403/pantalla_t6_llamador_de_meseros',
+  alt: 'Pantalla T6 receptora de llamados para restaurantes compatible con llamador de meseros.',
+  title: 'Pantalla T6 para llamador de meseros.'
 };
 
 export const pantallaT6 = {
