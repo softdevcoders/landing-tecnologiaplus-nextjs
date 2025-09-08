@@ -10,6 +10,7 @@ function BenefitsSection({ benefits, title, className = "", isHome = false, isEn
         className={style.benefits__background_image}
         width={1000}
         height={1000}
+        unoptimized={true}
       />
       <div className={style.benefits__content}>
         {title && (
@@ -26,6 +27,7 @@ function BenefitsSection({ benefits, title, className = "", isHome = false, isEn
                 alt="imagen que dice Nuestros clientes"
                 sizes="50vw"
                 className={style.benefits__image}
+                unoptimized={true}
               />
             )}
           </div>
@@ -43,6 +45,7 @@ function BenefitsSection({ benefits, title, className = "", isHome = false, isEn
                   src={benefit.icon}
                   alt={benefit.alt}
                   sizes="(max-width: 768px) 40vw, (max-width: 1200px) 30vw, 20vw"
+                  unoptimized={true}
                 />
                 <h3
                   dangerouslySetInnerHTML={{ __html: benefit.title }}
@@ -62,6 +65,7 @@ function BenefitsSection({ benefits, title, className = "", isHome = false, isEn
                   src={benefit.icon}
                   alt={benefit.alt}
                   unoptimized={true}
+                  sizes="(max-width: 768px) 40vw, (max-width: 1200px) 30vw, 20vw"
                 />
                 <h3>{benefit.title}</h3>
                 {benefit.description && <p>{benefit.description}</p>} 

@@ -100,6 +100,7 @@ const Footer = () => {
                   alt="Bandera de Colombia"
                   width={20}
                   height={15}
+                  unoptimized={true}
                 />
                 <span>Colombia</span>
               </div>
@@ -140,6 +141,7 @@ const Footer = () => {
                   alt="Bandera del Perú"
                   width={20}
                   height={15}
+                  unoptimized={true}
                 />
                 <span>Perú</span>
               </div>

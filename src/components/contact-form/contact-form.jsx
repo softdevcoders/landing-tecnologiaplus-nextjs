@@ -13,6 +13,7 @@ async function ContactForm({ noMarginTop = false, isContactPage = false }) {
         width={1920}
         height={1080}
         className={style.contact__form__background}
+        unoptimized={true}
       />
       <div className={style.contact__form__container}>
         <div
