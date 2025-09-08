@@ -34,6 +34,7 @@ function StepsSectionEnfermeria() {
                 width={550}
                 height={550}
                 className={style.card__image}
+                unoptimized={true}
               />
             </div>
             <div className={style.card__text__container}>

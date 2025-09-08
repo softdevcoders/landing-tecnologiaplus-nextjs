@@ -17,7 +17,8 @@ function SecondaryTurnoExpressProductsSection() {
               height={320}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738789798/Dispensador_2x-8_soj9hp.webp"
               alt="Dispensador de turnos caracol rojo"
-                className={style.products__card__image_container__image}
+              className={style.products__card__image_container__image}    
+              unoptimized={true}
             />
           </Link>
         </div>
@@ -40,7 +41,8 @@ function SecondaryTurnoExpressProductsSection() {
               height={320}
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738448114/Rollos_de_turnos_2x-8_ovbwlu.webp"
               alt="Rollos de turnos personalizados"
-                className={style.products__card__image_container__image}
+              className={style.products__card__image_container__image}
+              unoptimized={true}
             />
           </Link>
         </div>  

@@ -67,7 +67,8 @@ function TurnoExpressProductsSection() {
                     alt={product.title}
                     width={250}
                     height={250}
-                      className={style.ver__mas__section__container__card__image__img}
+                    className={style.ver__mas__section__container__card__image__img}
+                    unoptimized={true}
                   />
                 </Link>
               </div>
@@ -103,7 +104,8 @@ function TurnoExpressProductsSection() {
                     alt={product.title}
                     width={250}
                     height={250}
-                      className={style.ver__mas__section__container__card__image__img}
+                    className={style.ver__mas__section__container__card__image__img}
+                    unoptimized={true}
                   />
                 </Link>
               </div>

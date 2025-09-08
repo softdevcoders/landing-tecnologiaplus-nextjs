@@ -16,6 +16,7 @@ function TurnosProductsSection() {
             src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350027/tickets_2x-8_j3gdmx_mt44rr.webp"
             alt="Fichos para turnos"
             className={style.product__image}
+            unoptimized={true}
           />
         </div>
 

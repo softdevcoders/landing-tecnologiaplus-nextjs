@@ -13,6 +13,7 @@ function SecondaryCalificadorProductsSection() {
           height={1036}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt="Recibe alertas moviles"
+          unoptimized={true}
         />
       </div>
       <div className={style.information}>
@@ -24,6 +25,7 @@ function SecondaryCalificadorProductsSection() {
           height={1083}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
           alt="Estadísticas en base a los resultados del calificador de servicio"
+          unoptimized={true}
         />
       </div>
     </section>

@@ -14,6 +14,7 @@ function EnfermeriaProductsSection() {
               width={468}
               height={669}
               className={style.products__container__item__image__img}
+              unoptimized={true}
             />
           </div>
         </div>
@@ -25,6 +26,7 @@ function EnfermeriaProductsSection() {
               width={649}
               height={649}
               className={style.products__container__item__image__img}
+              unoptimized={true}
             />
           </div>
         </div>

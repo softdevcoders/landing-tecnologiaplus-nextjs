@@ -74,6 +74,7 @@ function EnfermeriaSecondaryProductsSection() {
                     width={500}
                     height={500}
                     className={style.ver__mas__section__container__card__image__img}
+                    unoptimized={true}
                   />
                 </Link>
               </div>
@@ -108,6 +109,7 @@ function EnfermeriaSecondaryProductsSection() {
                     width={500}
                     height={500}
                     className={style.ver__mas__section__container__card__image__img}
+                    unoptimized={true}
                   />
                 </Link>
               </div>

@@ -74,6 +74,7 @@ function LlamadorMeserosVerMasSection() {
                     width={250}
                     height={250}
                     className={style.ver__mas__section__container__card__image__img}
+                    unoptimized={true}
                   />
                 </Link>
               </div>
@@ -110,6 +111,7 @@ function LlamadorMeserosVerMasSection() {
                     width={250}
                     height={250}
                     className={style.ver__mas__section__container__card__image__img}
+                    unoptimized={true}
                   />
                 </Link>
               </div>

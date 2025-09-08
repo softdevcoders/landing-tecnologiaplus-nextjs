@@ -29,6 +29,7 @@ function LocalizadoresSecondaryProductsSection() {
                   height={595}
                   src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_800/v1738855044/rec_v3_1_2x-8_ctzrqp.webp"
                   alt="Localizador para restaurantes REC V3 junto a su base de carga"
+                  unoptimized={true}
                 />
               </div>
             </div>
@@ -39,6 +40,7 @@ function LocalizadoresSecondaryProductsSection() {
                 className={style.secondary__products__separator}
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_5/v1738851946/linea_2x-8_n80wv9.webp"
                 alt="Separador"
+                unoptimized={true}
               />
             </div>
             <div className={style.secondary__products__card}>
@@ -58,6 +60,7 @@ function LocalizadoresSecondaryProductsSection() {
                   height={595}
                   src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_800/v1738851948/cir_c2_1_2x-8_lb8ufb.webp"
                   alt="Localizadores para clientes CIR C2 junto a su base de carga"
+                  unoptimized={true}
                 />
               </div>
             </div>
@@ -80,6 +83,7 @@ function LocalizadoresSecondaryProductsSection() {
                   videoId="aB7FLAPCCJ8"
                   title="Rec V3 - Localizadores para restaurantes"
                   imageCover="https://i.ytimg.com/vi_webp/aB7FLAPCCJ8/maxresdefault.webp"
+                  unoptimized={true}
                 />
               </div>
 
@@ -92,6 +96,7 @@ function LocalizadoresSecondaryProductsSection() {
                   videoId="b2nlu7sOlcI"
                   title="Cir C2 - Localizadores para restaurantes"
                   imageCover="https://i.ytimg.com/vi_webp/b2nlu7sOlcI/sddefault.webp"
+                  unoptimized={true}
                 />
               </div>
             </div>
