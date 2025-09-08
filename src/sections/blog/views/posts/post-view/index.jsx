@@ -45,6 +45,7 @@ const PostView = ({ post }) => {
               <Image
                 src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp/${post.images[0]}`} 
                 alt={post.alt_imagen_principal ?? optimizedAltText}
+                {...(post.title_imagen_principal && { title: post.title_imagen_principal })}
                 className={style.blogPostView__image}
                 loading="eager"
                 width={720}
