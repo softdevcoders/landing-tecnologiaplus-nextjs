@@ -82,6 +82,7 @@ function ProductGallery() {
                       : ""
                   }
                   style={{ cursor: "pointer" }}
+                  unoptimized={true}
                 />
               ))}
             {showScrollButtons && scrollPosition < images.length - 5 && (
@@ -111,6 +112,7 @@ function ProductGallery() {
               height={606}  
               src={selectedImage} 
               alt="Imagen seleccionada" 
+              unoptimized={true}
             />
             <ArrowForward
               className={styles.icon__next}

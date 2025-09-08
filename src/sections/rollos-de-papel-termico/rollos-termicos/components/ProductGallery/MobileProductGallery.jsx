@@ -57,6 +57,7 @@ function MobileProductGallery() {
               src={img}
               alt={`Imagen ${index + 1}`}
               className={styles.mainImage}
+              unoptimized={true}
             />
           </SwiperSlide>
         ))}
