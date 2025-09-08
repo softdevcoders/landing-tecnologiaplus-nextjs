@@ -100,6 +100,7 @@ function Header({ headerAlt = false }) {
                 height={27}
                 src="https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp/c_scale/w_300/website-v2/zyl0ca6woqgk2ehlynem"
                 alt="logo Tecnología plus"
+                unoptimized={true}
               />
             </Link>
           </div>

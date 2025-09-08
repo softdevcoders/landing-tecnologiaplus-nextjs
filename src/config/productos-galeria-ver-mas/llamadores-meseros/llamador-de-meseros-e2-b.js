@@ -5,6 +5,8 @@ import { relojReceptorDeLlamados } from "@/config/productos-galeria-ver-mas/llam
 import { pantallaT1B } from "@/config/productos-galeria-ver-mas/llamadores-meseros/pantalla-t1-b";
 import { pantallaT6 } from "@/config/productos-galeria-ver-mas/llamadores-meseros/pantalla-t6";
 
+// Inverntar un cambio
+
 const mainImage = {
   src: 'v1754405582/llamadores_de_meseros_llamador_e2_b_de_2_teclas_negro_rojo_1_g97quo',
   alt: 'Timbre para restaurante negro con botón rojo brillante para llamado inmediato',

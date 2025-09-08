@@ -30,6 +30,7 @@ const LLamadoEnfermeriaHomeDesktop = ({ images }) => {
               alt={image.alt}
               src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_900/${image.src}`}
               {...image.fetchPriority ? { fetchPriority: image.fetchPriority, priority: 'high' } : { loading: "lazy" }}
+              unoptimized={true}
             />
           </div>
         ))
