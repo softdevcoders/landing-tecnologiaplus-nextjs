@@ -5,7 +5,7 @@ import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 const FichaTecnica = ({ fichaTecnica, title = "Ficha técnica" }) => {  
   return (
-    <section className={styles.container}>
+    <section className={styles.container} data-nosnippet>
       <h3>{title}</h3>
       <div className={fichaTecnicaStyles.container}>
         {fichaTecnica.map((articulo, key) => (

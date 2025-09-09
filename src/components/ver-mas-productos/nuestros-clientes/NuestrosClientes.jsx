@@ -4,7 +4,7 @@ import InfiniteSlider from "@/components/nuestros-clientes/inifinite-slider";
 
 const NuestrosClientes = ({ logos, title = "Algunos clientes", headingLevel = "h2" }) => {
   return (
-    <section className={globalStyles.container}>
+    <section className={globalStyles.container} data-nosnippet>
       {headingLevel === "h2" && (
         <h2>{title}</h2>
       )}

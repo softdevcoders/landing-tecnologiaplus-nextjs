@@ -5,7 +5,7 @@ import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 const QueIncluye = ({ articulosIncluidos, title = "¿Qué incluye?" }) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} data-nosnippet>
       <h3 className={styles.title} >{title}</h3>
       <div className={queIncluyeStyles.container}>
         {articulosIncluidos.map((articulo, key) => (
