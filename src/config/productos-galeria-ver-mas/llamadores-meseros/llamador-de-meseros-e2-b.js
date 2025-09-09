@@ -15,7 +15,7 @@ const mainImage = {
 
 export const llamadorDeMeserosE2B = {
   id: "llamador-de-meseros-e2-b",
-  title: "LLAMADOR DE MESEROS E2",
+  title: "LLAMADOR DE MESEROS E2-B",
   description: "Permite llamar al mesero y borrar el llamado al ser atendido.",
   url: routes.landings.llamadoresDeMeseros.children.e2_b.url,
   mainImage,

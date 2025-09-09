@@ -5,7 +5,7 @@ const LlamadoresDeMeserosPreguntasFrecuentes = () => {
   return (
     <PreguntasFrecuentes 
       preguntasFrecuentes={llamadoresDeMeserosPreguntasFrecuentes} 
-      title="Preguntas frecuentes del llamador de meseros E2" 
+      title="Preguntas frecuentes del llamador de meseros E2-B" 
       headingLevel="h3"
     />
   )

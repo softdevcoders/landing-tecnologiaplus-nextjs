@@ -31,7 +31,7 @@ const ComoFuncionaSection = () => {
   return (
     <ComoFunciona 
       comoFuncionaPasos={comoFuncionaPasos} 
-      title="¿Cómo funciona el llamador de meseros E2?" 
+      title="¿Cómo funciona el llamador de meseros E2-B?" 
     />
   );
 };
