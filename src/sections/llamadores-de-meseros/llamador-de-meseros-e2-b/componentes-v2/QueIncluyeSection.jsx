@@ -43,7 +43,7 @@ const QueIncluyeSection = () => {
   return (
     <QueIncluye 
       articulosIncluidos={articulosIncluidos} 
-      title="¿Qué incluye el llamador de meseros E2-B?"
+      title="¿Qué incluye el llamador de meseros E2?"
     />
   );
 };

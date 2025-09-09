@@ -11,7 +11,7 @@ function ProductosRelacionadosSection() {
       ]} 
       isVerMasVersionNueva={true}
       addMarginBottom={false}
-      title="Productos relacionados del llamador de meseros E2-B"
+      title="Productos relacionados del llamador de meseros E2"
     />
   )
 }

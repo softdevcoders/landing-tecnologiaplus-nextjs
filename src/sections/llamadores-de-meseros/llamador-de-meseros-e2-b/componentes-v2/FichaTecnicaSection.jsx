@@ -54,7 +54,7 @@ const FichaTecnicaSection = () => {
   
   return <FichaTecnica
     fichaTecnica={fichaTecnica}
-    title="Ficha técnica del llamador de meseros E2-B"
+    title="Ficha técnica del llamador de meseros E2"
   />;
 };
 
