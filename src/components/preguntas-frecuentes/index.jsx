@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react';
 import styles from './preguntas-frecuentes.module.scss';
-import ArrowDown from "@/components/ui/icons/arrow-down";
+import ArrowUp from "@/components/ui/icons/arrow-up";
 
 function PreguntasFrecuentes({ 
   preguntasFrecuentes = [], 
@@ -72,8 +72,7 @@ function PreguntasFrecuentes({
               {headingLevel === "h3" && (
                 <h4 className={styles.faq__question__title} dangerouslySetInnerHTML={{ __html: faq.question }} /> 
               )}
-              {/* <span aria-hidden="true">⌃</span> */}
-              <ArrowDown aria-hidden="true" size={16} />
+              <ArrowUp aria-hidden="true" size={16} />
             </summary>
             <div 
               className={styles.faq__answer}
@@ -93,10 +92,7 @@ function PreguntasFrecuentes({
           <span>
             {showAllQuestions ? 'Menos preguntas' : 'Más preguntas'}
           </span>
-          {/* <span aria-hidden="true" className={styles.arrow}>
-            ⌃
-          </span> */}
-          <ArrowDown className={styles.arrow} size={16} />
+          <ArrowUp className={styles.arrow} size={16} />
         </button>
       )}
     </section>

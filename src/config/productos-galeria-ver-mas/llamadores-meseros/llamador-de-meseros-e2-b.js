@@ -349,7 +349,7 @@ export const llamadorDeMeserosE2B = {
         },
         {
           type: 'image',
-          src: 'v1757338388/timbre_para_restaurante_e2b_2teclas_blanco_amarillo_sectores', 
+          src: 'v1757338388/timbres_inalambricos_para_restaurantes_e2b_comparacion', 
           alt: 'Timbres inalámbricos para restaurantes modelo E2-B blanco con amarillo comparado con equipos de la competencia.',
           title: 'Timbres inalámbricos para restaurantes E2-B comparado con la competencia.',
           darkBackground: true
