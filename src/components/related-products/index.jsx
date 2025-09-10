@@ -66,7 +66,7 @@ const defaultProducts = [
     img: "v1754420142/llamado_de_enfermeri%CC%81a_cuidamaster_gctjus",
     altText: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus",
     sold: "9.825 vendidos",
-    link: routes.landings.llamadoDeEnfermeriaCuidamaster.url,
+    link: routes.landings.llamadoDeEnfermeria.url,
     category_key: categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,
   },
   {

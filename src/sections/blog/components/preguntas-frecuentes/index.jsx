@@ -17,7 +17,7 @@ const PreguntasFrecuentesBlog = ({ categoryKey }) => {
     case routes.blog.children.localizadoresParaRestaurantes.category_key:
       preguntasFrecuentes = localizadoresDeRestaurantesPreguntasFrecuentes;
       break;
-    case routes.blog.children.llamadoDeEnfermeriaCuidamaster.category_key:
+    case routes.blog.children.llamadoDeEnfermeria.category_key:
       preguntasFrecuentes = llamadoresEnfermeriaPreguntasFrecuentes;
       break;
     case routes.blog.children.turneroTurnoexpress.category_key:

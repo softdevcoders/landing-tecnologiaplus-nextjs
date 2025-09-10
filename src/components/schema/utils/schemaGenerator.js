@@ -36,9 +36,9 @@ export const ROUTE_CONFIG = {
   //   metadataKey: 'dispensador-de-tickets',
   //   serviceType: "Dispensador de tickets"
   // },
-  '/llamado-de-enfermeria-cuidamaster': {
-    metadataKey: 'llamado-de-enfermeria-cuidamaster',
-    serviceType: "Llamado de enfermería CuidaMaster"
+  '/llamado-de-enfermeria': {
+    metadataKey: 'llamado-de-enfermeria',
+    serviceType: "Llamado de enfermería"
   },
   // '/calificador-de-servicio-al-cliente-opinamaster': {
   //   metadataKey: 'calificador-de-servicio-al-cliente-opinamaster',

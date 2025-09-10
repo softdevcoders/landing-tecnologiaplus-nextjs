@@ -39,7 +39,7 @@ const products = [
     description: "Facilita la comunicación paciente - enfermera. ",
     imageSrc: "v1754420142/llamado_de_enfermeri%CC%81a_cuidamaster_gctjus",
     altText: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus",
-    link: routes.landings.llamadoDeEnfermeriaCuidamaster.url,
+    link: routes.landings.llamadoDeEnfermeria.url,
   }, 
   {
     title: "Calificador de servicios",

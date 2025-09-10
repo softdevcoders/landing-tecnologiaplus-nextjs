@@ -102,7 +102,7 @@ export const landingHeros = {
       },
     },
   },
-  llamadoDeEnfermeriaCuidamaster: {
+  llamadoDeEnfermeria: {
     informationHome: {    
       title: "Llamado de enfermería",
       description: "Conecta al paciente con el personal de salud.",
@@ -126,7 +126,7 @@ export const landingHeros = {
         height: 100,
       },
       button: {
-        href: routes.landings.llamadoDeEnfermeriaCuidamaster.url,
+        href: routes.landings.llamadoDeEnfermeria.url,
         text: "Ver más",
       },
     },

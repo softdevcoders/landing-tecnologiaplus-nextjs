@@ -29,15 +29,15 @@ Tecnología Plus es una empresa colombiana especializada en soluciones tecnológ
   * Turnero Transformer: https://tecnologiaplus.com/turnero-turnoexpress/turnero-transformer
 
 ### 3. Llamado de Enfermería (CuidaMaster)
-- URL Completa: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster
+- URL Completa: https://tecnologiaplus.com/llamado-de-enfermeria
 - Productos:
-  * Llamador E1 para cuello: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello
-  * Llamador E2 blanco: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/llamador-e2-blanco
-  * Llamador EX1: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/llamador-ex1
-  * Pantalla T1-B: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/pantalla-t1-b
-  * Pantalla T6: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/pantalla-t6
-  * Reloj receptor de llamados: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados
-  * Alarma de luz: https://tecnologiaplus.com/llamado-de-enfermeria-cuidamaster/alarma-de-luz
+  * Llamador E1 para cuello: https://tecnologiaplus.com/llamado-de-enfermeria/llamador-e1-para-cuello
+  * Llamador E2 blanco: https://tecnologiaplus.com/llamado-de-enfermeria/llamador-e2-blanco
+  * Llamador EX1: https://tecnologiaplus.com/llamado-de-enfermeria/llamador-ex1
+  * Pantalla T1-B: https://tecnologiaplus.com/llamado-de-enfermeria/pantalla-t1-b
+  * Pantalla T6: https://tecnologiaplus.com/llamado-de-enfermeria/pantalla-t6
+  * Reloj receptor de llamados: https://tecnologiaplus.com/llamado-de-enfermeria/reloj-receptor-de-llamados
+  * Alarma de luz: https://tecnologiaplus.com/llamado-de-enfermeria/alarma-de-luz
 
 ### 4. Llamadores de Meseros
 - URL Completa: https://tecnologiaplus.com/llamadores-de-meseros

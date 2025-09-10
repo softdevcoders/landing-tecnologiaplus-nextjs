@@ -56,7 +56,7 @@ export const routes = {
         category_key: "DISPENSADOR_DE_TICKETS",
         category_name: "Dispensador de tickets",
       },
-      llamadoDeEnfermeriaCuidamaster: {
+      llamadoDeEnfermeria: {
         label: "Llamado de enfermería",
         url: "/blog/llamado-de-enfermeria",
         slug: "llamado-de-enfermeria",
@@ -226,37 +226,37 @@ export const routes = {
         }
       }
     },
-    llamadoDeEnfermeriaCuidamaster: {
-      url: "/llamado-de-enfermeria-cuidamaster",
+    llamadoDeEnfermeria: {
+      url: "/llamado-de-enfermeria",
       label: "Llamado de enfermería",
       children: {
         alarmaDeLuz: {
           label: "Alarma de luz",
-          url: "/llamado-de-enfermeria-cuidamaster/alarma-de-luz",
+          url: "/llamado-de-enfermeria/alarma-de-luz",
         },
         llamadorE2NBlanco: {
           label: "Llamador E2 blanco",
-          url: "/llamado-de-enfermeria-cuidamaster/llamador-e2-blanco",
+          url: "/llamado-de-enfermeria/llamador-e2-blanco",
         },
         llamadorE1ParaCuello: {
           label: "Llamador E1 para cuello",
-          url: "/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello",
+          url: "/llamado-de-enfermeria/llamador-e1-para-cuello",
         },
         llamadorEx1: {
           label: "Llamador EX1",
-          url: "/llamado-de-enfermeria-cuidamaster/llamador-ex1",
+          url: "/llamado-de-enfermeria/llamador-ex1",
         },
         pantallaT1B: {
           label: "Pantalla T1-B",
-          url: "/llamado-de-enfermeria-cuidamaster/pantalla-t1-b",
+          url: "/llamado-de-enfermeria/pantalla-t1-b",
         },
         pantallaT6: {
           label: "Pantalla T6",
-          url: "/llamado-de-enfermeria-cuidamaster/pantalla-t6",
+          url: "/llamado-de-enfermeria/pantalla-t6",
         },
         relojReceptorDeLlamados: {
           label: "Reloj receptor de llamados",
-          url: "/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados",
+          url: "/llamado-de-enfermeria/reloj-receptor-de-llamados",
         }
       }
     },
