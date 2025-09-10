@@ -34,11 +34,12 @@
   }
 
   .thumbNavButton {
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
   
-  &:hover .thumbNavButton {
+  &:hover .thumbNavButton:not(.hidden) {
     opacity: 1;
     visibility: visible;
   }
@@ -77,18 +78,18 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;
   border: 1px solid #e0e0e0;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   left: 50%;
   transform: translateX(-50%) rotate(90deg);
-  opacity: 0.8;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 
   svg {
     width: 14px;
@@ -97,7 +98,7 @@
   }
 
   &:hover:not(:disabled) {
-    background: white;
+    background: #ffffff;
     transform: translateX(-50%) rotate(90deg) scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }

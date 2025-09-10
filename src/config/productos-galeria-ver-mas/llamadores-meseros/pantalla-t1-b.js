@@ -1,8 +1,9 @@
 import { routes } from "@/config/routes";
 
 const mainImage = {
-  src: 'v1755800979/pantalla-t1b_ffw7dm',
-  alt: 'Pantalla T1-B vista principal',
+  src: 'v1757338403/pantalla_t1b_boton_para_llamar_al_mesero',
+  alt: 'Pantalla T1-B receptora de llamados compatible con botón para llamar al mesero en restaurantes y bares.',
+  title: 'Pantalla T1-B para boton para llamar al mesero.'
 };
 
 export const pantallaT1B = {

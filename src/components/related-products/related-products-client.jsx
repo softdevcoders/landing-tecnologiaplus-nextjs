@@ -6,7 +6,7 @@ import style from './related-products.module.scss';
 import ProductCard from './product-card';
 import { ArrowLeft, ArrowRight } from '@/components/ui/icons';
 
-export default function RelatedProductsCarousel({ products }) {
+export default function RelatedProductsCarousel({ products, isVerMasVersionNueva }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
     align: 'start',
@@ -101,7 +101,7 @@ export default function RelatedProductsCarousel({ products }) {
         <div className={style.container}>
           {products.map((product, index) => (
             <div key={index} className={style.slide}>
-              <ProductCard product={product} />
+              <ProductCard product={product} isVerMasVersionNueva={isVerMasVersionNueva} />
             </div>
           ))}
         </div>

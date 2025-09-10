@@ -13,7 +13,8 @@ const CompatibleCon = ({ compatibleConProducts = [] }) => {
           <Link href={product.url} className={styles.compatibleCon__product} key={index}>
             <Image 
               src={getOptimizedImageUrl({url: product?.mainImage?.src, width: 120, quality: 80})}  
-              alt={product?.mainImage?.alt} 
+              alt={product?.mainImage?.alt}
+              title={product?.mainImage?.title}
               width={85} 
               height={85}
               className={styles.compatibleCon__product__image}

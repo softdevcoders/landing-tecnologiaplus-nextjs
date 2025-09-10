@@ -2,8 +2,13 @@
 
 import { useState, useRef } from 'react';
 import styles from './preguntas-frecuentes.module.scss';
+import ArrowUp from "@/components/ui/icons/arrow-up";
 
-function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
+function PreguntasFrecuentes({ 
+  preguntasFrecuentes = [], 
+  title = "Preguntas frecuentes",
+  headingLevel = "h2"
+}) {
   const [openAccordion, setOpenAccordion] = useState(null);
   const [showAllQuestions, setShowAllQuestions] = useState(false);
   const titleRef = useRef(null);
@@ -33,34 +38,44 @@ function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
   return (
     <section 
       data-nosnippet
-      className={styles.s} 
+      className={styles.container} 
       aria-label="Preguntas Frecuentes"
     >
-      <h2 ref={titleRef} itemProp="name">Preguntas Frecuentes</h2>        
+      {headingLevel === "h2" && (
+        <h2 ref={titleRef} className={styles.title}>{title}</h2>         
+      )}
+      {headingLevel === "h3" && (
+        <h3 ref={titleRef} className={styles.title}>{title}</h3>         
+      )}
       <div 
-        className={styles.faqContainer} 
+        className={styles.faq__container} 
         data-show={showAllQuestions}
       >
         {preguntasFrecuentes.map((faq, index) => (
           <details
             key={index}
-            className={styles.faqItem}
+            className={styles.faq__item}
             data-hidden={index >= initialQuestionsCount}
             open={index === openAccordion}
             onToggle={(e) => handleAccordionToggle(index, e.target.open)}
           >
             <summary 
-              className={styles.faqQuestion}
+              className={styles.faq__question}
               onClick={(e) => {
                 e.preventDefault();
                 handleAccordionToggle(index, index !== openAccordion);
               }}
             >
-              <h3 dangerouslySetInnerHTML={{ __html: faq.question }} />
-              <span aria-hidden="true">⌃</span>
+              {headingLevel === "h2" && (
+                <h3 className={styles.faq__question__title} dangerouslySetInnerHTML={{ __html: faq.question }} /> 
+              )}
+              {headingLevel === "h3" && (
+                <h4 className={styles.faq__question__title} dangerouslySetInnerHTML={{ __html: faq.question }} /> 
+              )}
+              <ArrowUp aria-hidden="true" size={16} />
             </summary>
             <div 
-              className={styles.faqAnswer}
+              className={styles.faq__answer}
               dangerouslySetInnerHTML={{ __html: faq.answer }}
             />
           </details>
@@ -77,9 +92,7 @@ function PreguntasFrecuentes({ preguntasFrecuentes = [] }) {
           <span>
             {showAllQuestions ? 'Menos preguntas' : 'Más preguntas'}
           </span>
-          <span aria-hidden="true" className={styles.arrow}>
-            ⌃
-          </span>
+          <ArrowUp className={styles.arrow} size={16} />
         </button>
       )}
     </section>

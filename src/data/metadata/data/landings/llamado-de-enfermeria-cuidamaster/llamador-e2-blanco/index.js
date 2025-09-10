@@ -3,7 +3,7 @@ import { LOGO_METADATA, ROBOTS_CONFIG } from "@/data/metadata/config";
 
 const title = " Llamador de Enfermería E2 Blanco: Atención Inmediata";
 const description = " Mejora la experiencia de pacientes en clínicas y hospitales con el llamador inalámbrico E2. Ágil, cómodo y fácil de usar. ¡Solicita asesoría hoy!";
-const keywords = ["Llamado de enfermería inhalambrico"];
+const keywords = ["Llamado de enfermería inalámbrico"];
 const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.llamadoDeEnfermeriaCuidamaster.children.llamadorE2NBlanco.url}`;
 
 export const metadata = {

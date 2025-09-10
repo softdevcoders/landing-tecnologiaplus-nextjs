@@ -29,6 +29,8 @@ const Thumbnails = ({
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [shouldShowButtons, setShouldShowButtons] = useState(false);
   const [touchStartY, setTouchStartY] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [thumbsTrackRef, setThumbsTrackRef] = useState(null);
 
   const onThumbsSelect = useCallback(() => {
     if (!emblaThumbsApi) return;
@@ -128,15 +130,29 @@ const Thumbnails = ({
     setTouchStartY(null);
   }, []);
 
+  const handleMouseEnter = useCallback(() => {
+    setIsHovered(true);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setIsHovered(false);
+  }, []);
+
   useEffect(() => {
     if (!emblaThumbsApi) return;
 
     const viewport = emblaThumbsRef.current;
+    
     if (viewport) {
       viewport.addEventListener('wheel', handleWheel, { passive: false });
       viewport.addEventListener('touchstart', handleTouchStart);
       viewport.addEventListener('touchmove', handleTouchMove);
       viewport.addEventListener('touchend', handleTouchEnd);
+    }
+    
+    if (thumbsTrackRef) {
+      thumbsTrackRef.addEventListener('mouseenter', handleMouseEnter);
+      thumbsTrackRef.addEventListener('mouseleave', handleMouseLeave);
     }
 
     // Usar requestAnimationFrame para asegurar que el carousel esté listo
@@ -159,10 +175,16 @@ const Thumbnails = ({
         viewport.removeEventListener('touchmove', handleTouchMove);
         viewport.removeEventListener('touchend', handleTouchEnd);
       }
+      
+      if (thumbsTrackRef) {
+        thumbsTrackRef.removeEventListener('mouseenter', handleMouseEnter);
+        thumbsTrackRef.removeEventListener('mouseleave', handleMouseLeave);
+      }
+      
       emblaThumbsApi.off('select', onThumbsSelect);
       emblaThumbsApi.off('reInit', onThumbsSelect);
     };
-  }, [emblaThumbsApi, onThumbsSelect, emblaThumbsRef, handleWheel, handleTouchStart, handleTouchMove, handleTouchEnd]);
+  }, [emblaThumbsApi, onThumbsSelect, emblaThumbsRef, thumbsTrackRef, handleWheel, handleTouchStart, handleTouchMove, handleTouchEnd, handleMouseEnter, handleMouseLeave]);
 
   // Efecto para hacer scroll al thumbnail seleccionado
   useEffect(() => {
@@ -180,7 +202,7 @@ const Thumbnails = ({
 
   return (
     <div className={styles.thumbs}>
-      <div className={styles.thumbsTrack}>
+      <div className={styles.thumbsTrack} ref={setThumbsTrackRef}>
         <div className={`${styles.viewport} ${styles.scrollable}`} ref={emblaThumbsRef}>
           <div className={styles.container}>
             {mediaItems.map((item, index) => (
@@ -195,6 +217,7 @@ const Thumbnails = ({
                   <Image
                     src={getOptimizedImageUrl({url: item.thumbnail, width: 150, height: 150, quality: 80, type: 'video'})} 
                     alt={`Miniatura: ${item.alt}`}
+                    title={`Miniatura: ${item.alt}`}
                     width={150}
                     height={150}
                     sizes={getOptimizedSizes('thumbnail', false)}
@@ -212,6 +235,7 @@ const Thumbnails = ({
                   <Image
                     src={getOptimizedImageUrl({url: item.src, width: 150, height: 150, quality: 80})}
                     alt={`Miniatura: ${item.alt}`}
+                    title={`Miniatura: ${item.alt}`}
                     width={150} 
                     height={150}
                     sizes={getOptimizedSizes('thumbnail', false)}
@@ -234,7 +258,7 @@ const Thumbnails = ({
         {shouldShowButtons && (
           <>
             <button
-              className={`${styles.thumbNavButton} ${styles.prev} ${!canScrollPrev ? styles.hidden : ''}`}
+              className={`${styles.thumbNavButton} ${styles.prev} ${!isHovered || !canScrollPrev ? styles.hidden : ''}`}
               onClick={scrollThumbsPrev}
               aria-label="Miniaturas anteriores"
               type="button"
@@ -243,7 +267,7 @@ const Thumbnails = ({
             </button>
             
             <button
-              className={`${styles.thumbNavButton} ${styles.next} ${!canScrollNext ? styles.hidden : ''}`}
+              className={`${styles.thumbNavButton} ${styles.next} ${!isHovered || !canScrollNext ? styles.hidden : ''}`}
               onClick={scrollThumbsNext}
               aria-label="Miniaturas siguientes"
               type="button"

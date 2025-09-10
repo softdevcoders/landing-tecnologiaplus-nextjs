@@ -6,6 +6,7 @@ import FichaTecnicaSection from '@/sections/ver-mas-testing/llamadores-de-mesero
 import ComoFuncionaSection from '@/sections/ver-mas-testing/llamadores-de-meseros/llamador-de-meseros-e2-b/ComoFuncionaSection';
 import NuestrosClientesSection from '@/sections/ver-mas-testing/llamadores-de-meseros/llamador-de-meseros-e2-b/NuestrosClientesSection';
 import ProductosRelacionadosSection from '@/sections/ver-mas-testing/llamadores-de-meseros/llamador-de-meseros-e2-b/ProductosRelacionadosSection';
+import LlamadoresDeMeserosPreguntasFrecuentes from '@/sections/ver-mas-testing/llamadores-de-meseros/llamador-de-meseros-e2-b/PreguntasFrecuentes'
 
 export async function generateMetadata() {
   const { 'llamadores-de-meseros': { 'llamador-de-meseros-e2-b': metadata } } = getMetadata('landings'); 
@@ -22,6 +23,7 @@ const TestMigration = () => {
       <ComoFuncionaSection />
       <NuestrosClientesSection />
       <ProductosRelacionadosSection />
+      <LlamadoresDeMeserosPreguntasFrecuentes />
     </>
   );
 };
