@@ -40,7 +40,7 @@
   }
   
   &:hover .thumbNavButton:not(.hidden) {
-    opacity: 0.8;
+    opacity: 1;
     visibility: visible;
   }
 }
@@ -78,7 +78,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;
   border: 1px solid #e0e0e0;
   display: flex;
   align-items: center;
@@ -98,7 +98,7 @@
   }
 
   &:hover:not(:disabled) {
-    background: white;
+    background: #ffffff;
     transform: translateX(-50%) rotate(90deg) scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
