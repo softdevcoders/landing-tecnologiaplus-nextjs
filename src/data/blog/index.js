@@ -1,7 +1,7 @@
 import { articulos as calificadorDeServicioAlClienteOpinamaster } from "./calificador-de-servicio-al-cliente";
 import { articulos as dispensadorDeTickets } from "./dispensador-de-tickets";
 import { articulos as encuestaVirtualOpinamaster } from "./encuesta-virtual";
-import { articulos as llamadoDeEnfermeriaCuidamaster } from "./llamado-de-enfermeria-cuidamaster";
+import { articulos as llamadoDeEnfermeria } from "./llamado-de-enfermeria";
 import { articulos as llamadoresDeMeseros } from "./llamadores-de-meseros";
 import { articulos as localizadoresParaRestaurantes } from "./localizadores-para-restaurantes";
 import { articulos as rollosDeFichosParaTurnos } from "./rollos-de-fichos-para-turnos";
@@ -13,7 +13,7 @@ export const posts = [
   ...calificadorDeServicioAlClienteOpinamaster,
   ...dispensadorDeTickets,
   ...encuestaVirtualOpinamaster,
-  ...llamadoDeEnfermeriaCuidamaster,
+  ...llamadoDeEnfermeria,
   ...llamadoresDeMeseros,
   ...localizadoresParaRestaurantes,
   ...rollosDeFichosParaTurnos,
