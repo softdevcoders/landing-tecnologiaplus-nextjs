@@ -1,25 +1,22 @@
-import { getPosts } from "@/request/server/posts/get-posts";
-import style from "./post-view.module.scss";
-import { formatDate } from "@/lib/format-date";
-import { htmlReader } from "@/lib/html-reader";
-import CarRelated from "@/sections/blog/components/card-related";
-import Link from "next/link";
-import { routes } from "@/config/routes";
-import { truncateAltText } from "@/lib/truncate-alt-text";
-import PreguntasFrecuentesBlog from "@/sections/blog/components/preguntas-frecuentes";
 import Image from "next/image";
+import style from "./post-view.module.scss";
+import { routes } from "@/config/routes";
+import { getPosts } from "@/request/server/posts/get-posts";
+import CarRelated from "@/sections/blog/components/card-related";
+import PreguntasFrecuentesBlog from "@/sections/blog/components/preguntas-frecuentes";
+import { truncateAltText, formatDate, htmlReader } from "@/lib/blog";
 
 
 const PostView = ({ post }) => {
-  const { posts } = getPosts({ category: post.categories[0], page: 1, pageSize: 3, exclude: [post.id] });
-  const message = `Hola, te comparto este artículo: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}/`;
-  const whatsappLink = `https://wa.me/573164682034?text=Hola, vengo del artículo "${post.title.rendered}" y quiero más información.`;
+  const { posts } = getPosts({ category: post.categoria, page: 1, pageSize: 3, exclude: [post.id] });
 
-  const optimizedAltText = truncateAltText(post?.metadata?.title);
+  const message = `Hola, te comparto este artículo: \n\n${process.env.NEXT_PUBLIC_BASE_URL}${post.enlace_completo}/`;
+
+  const optimizedAltText = truncateAltText(post?.titulo);
 
   let shouldAddMarginBottom = true;
 
-  switch (post.categories[0]) {
+  switch (post.categoria) {
     case routes.blog.children.llamadoresDeMeseros.category_key:
       shouldAddMarginBottom = false;
       break;
@@ -30,22 +27,18 @@ const PostView = ({ post }) => {
 
   return (
     <>
-      {/* <ArticleSchema 
-        post={post} 
-        baseUrl={process.env.NEXT_PUBLIC_BASE_URL} 
-      /> */}
       <main className={`${style.blogPostView__container} ${shouldAddMarginBottom ? style.blogPostView__containerWithMarginBottom : ""}`}>
         <article className={style.blogPostView__article} data-blog-article="true">
           <header className={style.blogPostView__header}>
-            <h1 className={style.blogPostView__title}>{post.title.rendered}</h1>
+            <h1 className={style.blogPostView__title}>{post.titulo}</h1>
           </header>
 
           <div className={style.blogPostView__content}>  
             <div className={style.blogPostView__imageContainer}>
               <Image
-                src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp/${post.images[0]}`} 
-                alt={post.alt_imagen_principal ?? optimizedAltText}
-                {...(post.title_imagen_principal && { title: post.title_imagen_principal })}
+                src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_720,q_80/${post.imagen_principal.src}`} 
+                alt={post.imagen_principal.alt ?? optimizedAltText}
+                title={post.imagen_principal.title ?? optimizedAltText}
                 className={style.blogPostView__image}
                 loading="eager"
                 width={720}
@@ -55,13 +48,9 @@ const PostView = ({ post }) => {
             </div>
             <div 
               className={style.blogPostView__contentHtml} 
-              dangerouslySetInnerHTML={{ __html: htmlReader(post.content.template_name) }}
+              dangerouslySetInnerHTML={{ __html: htmlReader(post.plantilla) }}
               data-nosnippet
             />
-            {/* <div className={style.blogPostView__contentHtlmFooter}>
-              <p  className={style.blogPostView__contentHtmlFooterText}><Link href={routes.contact.url} className={style.blogPostView__contentHtmlFooterLink}>Contáctanos hoy mismo y descubre cómo podemos llevar tu servicio al siguiente nivel!</Link></p>
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={style.blogPostView__contentHtmlFooterButton}>Cotizar</a>
-            </div> */}
           </div>
 
           <footer className={style.blogPostView__footer}>
@@ -70,7 +59,7 @@ const PostView = ({ post }) => {
               <ul className={style.blogPostView__sharingList}>
                 <li className={style.blogPostView__sharingItem}>
                   <a 
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`${process.env.NEXT_PUBLIC_BASE_URL}${post.current_link}`)}`} 
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`${process.env.NEXT_PUBLIC_BASE_URL}${post.enlace_completo}`)}`} 
                     className={`${style.blogPostView__sharingLink} ${style.facebook}`} 
                     title="Compartir en Facebook"
                     target="_blank"
@@ -103,9 +92,9 @@ const PostView = ({ post }) => {
               </ul>
             </div>
             <div className={style.blogPostView__dateInformation}>
-              <p>Publicado: {formatDate(post.date)}</p>
-              {post.modified && (
-                <p>Actualizado: {formatDate(post.modified)}</p>
+              <p>Publicado: {formatDate(post.fecha_creacion)}</p>
+              {post.fecha_modificacion && (
+                <p>Actualizado: {formatDate(post.fecha_modificacion)}</p>
               )}
             </div>
           </footer>
@@ -121,7 +110,7 @@ const PostView = ({ post }) => {
           </ul>
         </aside>
       </main>
-      <PreguntasFrecuentesBlog categoryKey={post.categories[0]} />
+      <PreguntasFrecuentesBlog categoryKey={post.categoria} />
     </>
   );
 }

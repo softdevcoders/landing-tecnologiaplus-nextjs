@@ -7,7 +7,7 @@ import CardHome from "@/sections/blog/components/card-home";
 
 function HomeRecentPostsSection() {
   const { posts } = getPosts({ page: 1, pageSize: 3 });
-  
+
   return (
     <section className={style.products__section}>
       <h2 className={style.products__title}>Publicaciones recientes</h2>
