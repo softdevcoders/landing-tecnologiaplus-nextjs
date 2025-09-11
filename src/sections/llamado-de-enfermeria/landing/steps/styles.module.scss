@@ -8,6 +8,10 @@
 
   .steps__section__title {
     text-align: center;
+    color: #606060;
+    max-width: 70rem;
+    font-size: 1.625rem;
+    font-weight: 900;
     max-width: 50rem;
   }
 
@@ -69,6 +73,10 @@
 @media (min-width: 1024px) {
   .steps__section {
     padding: 3rem 2rem 10rem;
+
+    .steps__section__title {
+      font-size: 2.5rem;
+    }
 
     .cards__container {
       flex-direction: row;
