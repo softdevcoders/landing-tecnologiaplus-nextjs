@@ -11,7 +11,7 @@ import {
 } from "@/components/landing-hero-portada";
 import { landingHeros } from "@/config/landing-heros";
 
-const EnfermeriaHeroSection = () => {
+const LlamadoDeEnfermeriaHeroSection = () => { 
   const { informationPortadas: values } = landingHeros.llamadoDeEnfermeria;  
 
   return (
@@ -45,4 +45,4 @@ const EnfermeriaHeroSection = () => {
   )
 };
 
-export default EnfermeriaHeroSection;
+export default LlamadoDeEnfermeriaHeroSection;

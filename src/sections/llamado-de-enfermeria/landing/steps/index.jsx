@@ -1,5 +1,5 @@
 import Image from "next/image";
-import style from "./StepsSectionEnfermeria.module.scss";
+import style from "./styles.module.scss";
 
 const steps = [
   {
@@ -19,10 +19,10 @@ const steps = [
   },
 ];
 
-function StepsSectionEnfermeria() {
+function StepsSection() {
   return (
     <section data-nosnippet className={style.steps__section}>
-      <h2 className={style.steps__section__title}>¿Cómo funciona?</h2>  
+      <h2 className={style.steps__section__title}>¿Cómo funciona el llamado de enfermeras?</h2>  
 
       <div className={style.cards__container}>
         {steps.map((step, index) => (
@@ -49,4 +49,4 @@ function StepsSectionEnfermeria() {
   );
 }
 
-export default StepsSectionEnfermeria;
+export default StepsSection;

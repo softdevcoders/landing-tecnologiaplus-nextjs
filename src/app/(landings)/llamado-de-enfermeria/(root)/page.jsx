@@ -1,31 +1,31 @@
 import getMetadata from "@/request/server/metadata/get-metadata";
-import EnfermeriaBenefitsSection from "@/sections/llamado-de-enfermeria/landing/components/BenefitsSection/EnfermeriaBenefitsSection";
-import EnfermeriaClientsSection from "@/sections/llamado-de-enfermeria/landing/components/ClientsSection/EnfermeriaClientsSection";
-import EnfermeriaHeroSection from "@/sections/llamado-de-enfermeria/landing/components/HeroSection/EnfermeriaHeroSection";
-import EnfermeriaIndustriesSection from "@/sections/llamado-de-enfermeria/landing/components/IndustriesSection/EnfermeriaIndustriesSection";
-import EnfermeriaProductsSection from "@/sections/llamado-de-enfermeria/landing/components/ProductsSection/EnfermeriaProductsSection";
-import EnfermeriaRelatedProducts from "@/sections/llamado-de-enfermeria/landing/components/RelatedProducts/EnfermeriaRelatedProducts";
-import EnfermeriaSecondaryProductsSection from "@/sections/llamado-de-enfermeria/landing/components/SecondaryProductsSection/EnfermeriaSecondaryProductsSection";
-import StepsSectionEnfermeria from "@/sections/llamado-de-enfermeria/landing/components/StepsSection/StepsSectionEnfermeria";
-import EnfermeriaPreguntasFrecuentes from "@/sections/llamado-de-enfermeria/landing/components/PreguntasFrecuentes";
+import BenefitsSection from "@/sections/llamado-de-enfermeria/landing/benefits";
+import ClientsSection from "@/sections/llamado-de-enfermeria/landing/clients"
+import HeroSection from "@/sections/llamado-de-enfermeria/landing/hero";
+import IndustriesSection from "@/sections/llamado-de-enfermeria/landing/industries";
+import ProductsSection from "@/sections/llamado-de-enfermeria/landing/products";
+import RelatedProductsSection from "@/sections/llamado-de-enfermeria/landing/related-products";
+import ProductsSecondarySection from "@/sections/llamado-de-enfermeria/landing/products-secondary";
+import StepsSection from "@/sections/llamado-de-enfermeria/landing/steps";
+import FQASection from "@/sections/llamado-de-enfermeria/landing/fqa";
 
 export async function generateMetadata() {
   const { 'llamado-de-enfermeria': { root: metadata } } = getMetadata('landings');
   return metadata;
 }
 
-export default function EnfermeriaLanding() {
+export default function LlamadoDeEnfermeriaLandingPage() {
   return (
     <>
-      <EnfermeriaHeroSection />
-      <EnfermeriaClientsSection />
-      <EnfermeriaProductsSection /> 
-      <EnfermeriaBenefitsSection />
-      <EnfermeriaSecondaryProductsSection />
-      <StepsSectionEnfermeria />
-      <EnfermeriaIndustriesSection />
-      <EnfermeriaRelatedProducts />
-      <EnfermeriaPreguntasFrecuentes />
+      <HeroSection />
+      <ClientsSection />
+      <ProductsSection /> 
+      <BenefitsSection />
+      <ProductsSecondarySection />
+      <StepsSection />
+      <IndustriesSection />
+      <RelatedProductsSection />
+      <FQASection />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import RelatedProducts from "@/components/related-products";
 import { categories } from "@/config/categories";
 
-function EnfermeriaRelatedProducts() {
+function LlamadoDeEnfermeriaRelatedProductsSection() {
   return (
     <RelatedProducts 
       productsKeys={[
@@ -14,4 +14,4 @@ function EnfermeriaRelatedProducts() {
   );
 }
 
-export default EnfermeriaRelatedProducts;
+export default LlamadoDeEnfermeriaRelatedProductsSection;

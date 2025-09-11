@@ -1,4 +1,4 @@
-import BenefitsSection from "@/components/benefits";
+import Benefits from "@/components/benefits";
 
 const benefits = [
   {
@@ -24,16 +24,16 @@ const benefits = [
   }
 ];
 
-function EnfermeriaBenefitsSection() {
+function LlamadoDeEnfermeriaBenefitsSection() {
   return (
-    <BenefitsSection 
+    <Benefits 
       benefits={benefits} 
-      title="BENEFICIOS<br />DESTACADOS"
+      title="BENEFICIOS DESTACADOS DEL LLAMADOR DE ENFERMERÍA"
     />
   );
 }
 
-export default EnfermeriaBenefitsSection;
+export default LlamadoDeEnfermeriaBenefitsSection;
 
 
 

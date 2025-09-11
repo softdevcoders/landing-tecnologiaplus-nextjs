@@ -1,10 +1,10 @@
-import { routes } from "@/config/routes";
-import style from "./EnfermeriaSecondaryProductsSection.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { routes } from "@/config/routes";
+import style from "./styles.module.scss";
 import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
-function EnfermeriaSecondaryProductsSection() {
+function LlamadoDeEnfermeriaProductsSecondarySection() {
 
   const products = [
     {
@@ -62,7 +62,7 @@ function EnfermeriaSecondaryProductsSection() {
     <section data-nosnippet className={style.ver__mas__section}>
       <div className={style.ver__mas__section__container}>
         <h2 className={style.ver__mas__section__title}>
-          Opciones para llamar a la enfermera
+          Opciones para llamar a la enfermera en hospitales y clínicas
         </h2>
         <div className={style.ver__mas__section__container__cards}>
           {products.filter((product) => product.type === "llamador_enfermera").map((product, index) => (
@@ -97,7 +97,7 @@ function EnfermeriaSecondaryProductsSection() {
       </div>
       <div className={style.ver__mas__section__container}>
         <h2 className={style.ver__mas__section__title}>
-          Opciones para recibir llamados
+          Opciones para recibir llamados de pacientes
         </h2>
         <div className={style.ver__mas__section__container__cards}>
           {products.filter((product) => product.type === "recibir_llamados").map((product, index) => (
@@ -134,4 +134,4 @@ function EnfermeriaSecondaryProductsSection() {
   );
 }
 
-export default EnfermeriaSecondaryProductsSection;
+export default LlamadoDeEnfermeriaProductsSecondarySection;

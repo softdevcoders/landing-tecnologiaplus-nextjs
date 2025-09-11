@@ -1,8 +1,8 @@
 import ToggleTextContent from "@/components/toggle-text-content";
-import style from "./EnfermeriaProductsSection.module.scss";
+import style from "./styles.module.scss";
 import Image from "next/image";
 
-function EnfermeriaProductsSection() {
+function LlamadoDeEnfermeriaProductsSection() {  
   return (
     <section data-nosnippet className={style.products__section}>
       <div className={style.products__container}>
@@ -40,4 +40,4 @@ function EnfermeriaProductsSection() {
   );
 }
 
-export default EnfermeriaProductsSection;
+export default LlamadoDeEnfermeriaProductsSection;

@@ -109,7 +109,7 @@ export default function RelatedProducts({
 
   return (
     <section data-nosnippet className={`${style.related__products} ${addMarginBottom ? style.addMarginBottom : ''}`}>
-      {isVerMasVersionNueva ? (
+      {/* {isVerMasVersionNueva ? (
         <h3 className={`${style.related__products__title} ${style.related__products__ver__mas__version__nueva}`}>
           {title}
         </h3>
@@ -117,7 +117,8 @@ export default function RelatedProducts({
         <h2 className={style.related__products__title} data-is-ver-mas={isVerMasView}>
           {title}
         </h2>
-      )}
+      )} */}
+      <span className={style.related__products__title}>{title}</span>
       <RelatedProductsCarousel
         isVerMasVersionNueva={isVerMasVersionNueva}
         products={filteredProducts} 

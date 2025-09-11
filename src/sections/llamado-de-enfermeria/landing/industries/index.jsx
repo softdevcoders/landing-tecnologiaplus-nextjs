@@ -9,7 +9,7 @@ import {
   IndustriesSectionListItemText 
 } from "@/components/industries-section";
 
-function EnfermeriaIndustriesSection() {
+function LlamadoDeEnfermeriaIndustriesSection() {
   const industries = [
     {
       icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738685529/Geria%CC%81tricos_2x-8_djctos.webp",
@@ -37,7 +37,7 @@ function EnfermeriaIndustriesSection() {
   return (
     <IndustriesSection>
       <IndustriesSectionContainer>
-        <IndustriesSectionTitle title="Llamador de Personal ideal para hospitales, clínicas y más" />
+        <IndustriesSectionTitle title="LLAMADOR DE PERONAL IDEAL PARA HOSPITALES, CLÍNICAS Y MÁS" />
         <IndustriesSectionList> 
           {industries.map((industry, index) => (
             <IndustriesSectionListItem key={index}>
@@ -53,6 +53,6 @@ function EnfermeriaIndustriesSection() {
   );
 }
 
-export default EnfermeriaIndustriesSection;
+export default LlamadoDeEnfermeriaIndustriesSection;
 
 
