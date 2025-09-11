@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem;
-  gap: 2rem;
+  gap: 5rem;
   background-color: #fff;
 
   .ver__mas__section__container {
@@ -19,7 +19,6 @@
       font-weight: 900;
       line-height: 1.2;
       text-align: center;
-      max-width: 50rem;
     }
 
     .ver__mas__section__container__cards {
@@ -103,14 +102,14 @@
 @media (min-width: 1024px) {
   .ver__mas__section {
     padding: 0 1rem 5rem;
-    gap: 5rem;
+    gap: 8rem;
 
     .ver__mas__section__container {
       gap: 3rem;
-      max-width: 1200px;
+      max-width: inherit;
 
       .ver__mas__section__title {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
       }
 
       .ver__mas__section__container__cards {

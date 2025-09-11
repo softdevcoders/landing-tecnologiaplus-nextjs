@@ -28,12 +28,9 @@ function LlamadoDeEnfermeriaBenefitsSection() {
   return (
     <Benefits 
       benefits={benefits} 
-      title="BENEFICIOS DESTACADOS DEL LLAMADOR DE ENFERMERÍA"
+      title="BENEFICIOS DEL LLAMADOR DE ENFERMERÍA"
     />
   );
 }
 
 export default LlamadoDeEnfermeriaBenefitsSection;
-
-
-
