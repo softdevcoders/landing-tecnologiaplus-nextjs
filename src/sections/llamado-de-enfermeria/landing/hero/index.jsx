@@ -23,6 +23,7 @@ const LlamadoDeEnfermeriaHeroSection = () => {
               image={{
                 ...values?.image?.mobile, 
                 alt: values?.image?.alt,
+                title: values?.image?.title ?? undefined,
               }} 
               isMobile={true} 
             />
@@ -30,6 +31,7 @@ const LlamadoDeEnfermeriaHeroSection = () => {
               image={{
                 ...values?.image?.desktop, 
                 alt: values?.image?.alt,
+                title: values?.image?.title ?? undefined,
               }} 
               isMobile={false} 
             />

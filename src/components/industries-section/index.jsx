@@ -60,11 +60,12 @@ export const IndustriesSectionListItemIconContainer = ({ children, className = "
   );
 };
 
-export const IndustriesSectionListItemIcon = ({ src, alt, width = 300, height = 300, className = "" }) => {
+export const IndustriesSectionListItemIcon = ({ src, alt, title = null, width = 300, height = 300, className = "" }) => {
   return (
     <Image 
       src={src}  
       alt={alt} 
+      {...title && { title }}
       width={width} 
       height={height} 
       className={className} 

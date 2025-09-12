@@ -23,9 +23,8 @@ export default function ProductCard({ product, isVerMasVersionNueva }) {
             height={230}
             src={getOptimizedImageUrl({ url: product.img, width: 600, quality: 80 })}
             alt={product.altText}
+            {...product.title_attribute && { title: product.title_attribute }}
             className={product.customClass ? product.customClass : ""}
-            loading="lazy"
-            itemProp="image"
             unoptimized={true}
           />
           <p className={style.product__card__description}>

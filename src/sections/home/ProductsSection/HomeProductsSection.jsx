@@ -9,14 +9,14 @@ const products = [
   {
     title: "TurnoExpress",
     description: "Rapidez y agilidad para tus filas.",
-    imageSrc: "v1754420148/turnero_turnoexpress_bl0pdv",
+    imageSrc: "v1757697842/turnero_digital_turnoexpress",
     altText: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus",
     link: routes.landings.turneroTurnoexpress.url,
   }, 
   {
     title: "TurnoMaster",
     description: "Digitaliza la gestión de turnos.",
-    imageSrc: "v1754922913/sistema_de_turnos_turnomaster_gz3gic",
+    imageSrc: "v1757697841/sistema_de_turnos_turnomaster",
     altText: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus",
     link: routes.landings.sistemasDeTurnosTurnomaster.url,
   }, 
@@ -51,7 +51,7 @@ const products = [
   {
     title: "OpinaMaster",
     description: "Transforma opiniones en acciones estratégicas.",
-    imageSrc: "v1754420143/encuesta_virtual_opinamaster_utrsch",
+    imageSrc: "v1757697842/encuesta_virtual_opinamaster",
     altText: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus",
     link: routes.landings.encuestaVirtual.url,
   }, 

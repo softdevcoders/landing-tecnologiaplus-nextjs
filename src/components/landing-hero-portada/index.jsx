@@ -42,6 +42,7 @@ export const LandingHeroPortadaContentImageImg = ({ image, isMobile = false, cla
       <Image
         src={image.src}
         alt={image.alt}
+        {...image.title ? { title: image.title } : {}}
         width={image.width}
         height={image.height}
         className={isMobile ? style.image__mobile__image : style.image__desktop__image} 
@@ -94,6 +95,7 @@ export const LandingHeroPortadaContentTextLogoBrand = ({ image, className = "" }
         alt={image.alt} 
         width={image.width} 
         height={image.height} 
+        {...image.title && { title: image.title }}
         className={`${style.brandImage__image} ${className}`}
         unoptimized={true}
       />
