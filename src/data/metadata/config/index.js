@@ -82,7 +82,7 @@ export function generateLandingMetadata(config) {
     },
     // Metaetiqueta específica para imágenes en resultados de Google
     other: {
-      image: mainImage?.large?.url || null,
+      image: mainImage?.url || null,
     },
     openGraph: {
       title: {
@@ -93,7 +93,7 @@ export function generateLandingMetadata(config) {
       url: url,
       locale: COMPANY_INFO.locale,
       type: COMPANY_INFO.type,
-      images: [mainImage?.large || null],
+      images: [mainImage || null],
     },
     twitter: {
       title: {
@@ -105,7 +105,7 @@ export function generateLandingMetadata(config) {
       locale: COMPANY_INFO.locale,
       type: COMPANY_INFO.type,
       images: {
-        ...mainImage?.large || null,
+        ...mainImage || null,
       },
       card: "summary_large_image",
     },

@@ -3,7 +3,7 @@ import HomeBenefitsSection from "@/sections/home/BenefitsSection/HomeBenefitsSec
 import HomeClientsSection from "@/sections/home/ClientsSection/HomeClientsSection";
 import HomeProductsSection from "@/sections/home/ProductsSection/HomeProductsSection";
 import HomeRecentPostsSection from "@/sections/home/RecentPost/HomeRecentPostsSection";
-import SliderHero from "@/sections/home/slider-hero";
+import SliderHeroSection from "@/sections/home/SliderHeroSection";
 import VideoSection from "@/sections/home/VideoSection/ProductsSection/VideoSection";
 
 export async function generateMetadata() {
@@ -16,7 +16,7 @@ export async function generateMetadata() {
 export default function Home() {
   return (
     <>
-      <SliderHero />
+      <SliderHeroSection />
       <HomeClientsSection />
       <HomeProductsSection />
       <VideoSection />

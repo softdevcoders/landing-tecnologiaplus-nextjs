@@ -6,14 +6,18 @@ const inicio = {
   imagenes: [{
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_600,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
     alt: "Imagen de Rollos de turnos TurnoExpress - Tecnología Plus", 
+    width: 600,
+    height: 400,
     tipo: "mobile",
   },{
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_1200,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
     alt: "Imagen de Rollos de turnos TurnoExpress - Tecnología Plus",
+    width: 1200,
+    height: 800,
     tipo: "desktop",
   }],
   imagenDeMarca: {
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1744463735/12-8_qjsewx",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1757686959/turnoexpress_logo",
     alt: "Logo TurnoExpress",
     width: 225,
     height: 100,
@@ -25,19 +29,23 @@ const inicio = {
 };
 
 const portada = { 
-  titulo: "Rollos de turnos",
+  titulo: "Rollos de fichos para turnos",
   descripcion: "Numeración clara para agilizar la atención de turnos.",
   imagenes: [{
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_600,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/w2wxhksiyspmadxwm8v9",
     alt: "Imagen de Rollos de turnos TurnoExpress - Tecnología Plus",
+    width: 600,
+    height: 400,
     tipo: "mobile",
   }, {
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_1200,q_80/website-v2/images/landings/rollos-de-fichos-para-turnos/landings/tojt9jjjomzd1bhpdj81",
     alt: "Imagen de Rollos de turnos TurnoExpress - Tecnología Plus",
+    width: 1200,
+    height: 800,
     tipo: "desktop",
   }],
   imagenDeMarca: {
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1744463735/12-8_qjsewx",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1757686959/turnoexpress_logo",
     alt: "Logo TurnoExpress",
     width: 225,
     height: 100,

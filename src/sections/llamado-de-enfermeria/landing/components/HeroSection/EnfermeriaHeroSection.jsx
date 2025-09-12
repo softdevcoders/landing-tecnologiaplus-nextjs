@@ -8,11 +8,15 @@ import {
   LandingHeroPortadaContentTextTitle, 
   LandingHeroPortadaContentDescription,
   LandingHeroPortadaContentTextLogoBrand
-} from "@/components/landing-hero-portada";
-import { landingHeros } from "@/config/landing-heros";
+} from "@/components/heros/portada";
+import landingHeros from "@/data/heros";
+import style from "./styles.module.scss";
+
+const IMAGE_MOBILE = 0;
+const IMAGE_DESKTOP = 1;
 
 const EnfermeriaHeroSection = () => {
-  const { informationPortadas: values } = landingHeros.llamadoDeEnfermeria;  
+  const values = landingHeros?.llamadoDeEnfermeria?.portada;  
 
   return (
     <LandingHeroPortada>
@@ -20,24 +24,18 @@ const EnfermeriaHeroSection = () => {
         <LandingHeroPortadaContent>
           <LandingHeroPortadaContentImage>
             <LandingHeroPortadaContentImageImg 
-              image={{
-                ...values?.image?.mobile, 
-                alt: values?.image?.alt,
-              }} 
+              image={values?.imagenes[IMAGE_MOBILE]} 
               isMobile={true} 
             />
             <LandingHeroPortadaContentImageImg 
-              image={{
-                ...values?.image?.desktop, 
-                alt: values?.image?.alt,
-              }} 
-              isMobile={false} 
+              image={values?.imagenes[IMAGE_DESKTOP]} 
+              className={style.custom_image__desktop}  
             />
           </LandingHeroPortadaContentImage>
           <LandingHeroPortadaContentText>
-            <LandingHeroPortadaContentTextLogoBrand image={values?.brandImage} />
-            <LandingHeroPortadaContentTextTitle>{values?.title}</LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentDescription>{values?.description}</LandingHeroPortadaContentDescription>
+            <LandingHeroPortadaContentTextLogoBrand image={values?.imagenDeMarca} />
+            <LandingHeroPortadaContentTextTitle>{values?.titulo}</LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentDescription>{values?.descripcion}</LandingHeroPortadaContentDescription>
           </LandingHeroPortadaContentText>
         </LandingHeroPortadaContent>
       </LandingHeroPortadaContainer>

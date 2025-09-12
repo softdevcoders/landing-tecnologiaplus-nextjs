@@ -69,9 +69,9 @@ export const LandingHeroPortadaContentTextTitle = ({ children, className = "" })
 
 export const LandingHeroPortadaContentDescription = ({ children, className = "" }) => {
   return (
-    <p className={`${style.description} ${className}`}>
+    <h2 className={`${style.description} ${className}`}>
       {children}
-    </p>
+    </h2>
   )
 }
 

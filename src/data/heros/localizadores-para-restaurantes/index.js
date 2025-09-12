@@ -6,10 +6,14 @@ const inicio = {
   imagenes: [{
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/1_zjvtlb", 
     alt: "Imagen de Localizadores para restaurantes - Tecnología Plus",
+    width: 600,
+    height: 400,
     tipo: "mobile",
   },{
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1200,f_webp,q_80/1_zjvtlb",
     alt: "Imagen de Localizadores para restaurantes - Tecnología Plus",
+    width: 1200,
+    height: 800,
     tipo: "desktop",
   }],
   boton: {
@@ -24,10 +28,14 @@ const portada = {
   imagenes: [{
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/1_zjvtlb", 
     alt: "Imagen de Localizadores para restaurantes - Tecnología Plus",
+    width: 600,
+    height: 400,
     tipo: "mobile",
   },{
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1200,f_webp,q_80/1_zjvtlb",
     alt: "Imagen de Localizadores para restaurantes - Tecnología Plus",
+    width: 1200,
+    height: 800,
     tipo: "desktop",
   }],
 };

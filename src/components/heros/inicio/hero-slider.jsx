@@ -6,7 +6,7 @@ import styles from "./styles/hero-inicio.module.scss";
 import ArrowLeft from "@/components/ui/icons/arrow-left";
 import ArrowRight from "@/components/ui/icons/arrow-right";
 
-export default function HeroSlider({ children }) {
+export default function HeroSlider({ children, items }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
     duration: 30,
