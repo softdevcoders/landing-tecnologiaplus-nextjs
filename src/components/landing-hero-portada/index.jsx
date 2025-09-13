@@ -42,6 +42,7 @@ export const LandingHeroPortadaContentImageImg = ({ image, isMobile = false, cla
       <Image
         src={image.src}
         alt={image.alt}
+        {...image.title ? { title: image.title } : {}}
         width={image.width}
         height={image.height}
         className={isMobile ? style.image__mobile__image : style.image__desktop__image} 
@@ -69,9 +70,9 @@ export const LandingHeroPortadaContentTextTitle = ({ children, className = "" })
 
 export const LandingHeroPortadaContentDescription = ({ children, className = "" }) => {
   return (
-    <p className={`${style.description} ${className}`}>
+    <h2 className={`${style.description} ${className}`}>
       {children}
-    </p>
+    </h2>
   )
 }
 
@@ -94,6 +95,7 @@ export const LandingHeroPortadaContentTextLogoBrand = ({ image, className = "" }
         alt={image.alt} 
         width={image.width} 
         height={image.height} 
+        {...image.title && { title: image.title }}
         className={`${style.brandImage__image} ${className}`}
         unoptimized={true}
       />

@@ -26,8 +26,9 @@ const defaultProducts = [
   {
     name: "TurnoExpress",
     description: "Rapidez y agilidad para tus filas.",
-    img: "v1754420148/turnero_turnoexpress_bl0pdv",
-    altText: "Imagen de Turnero Digital TurnoExpress - TecnologíaPlus",
+    img: "v1757697842/turnero_digital_turnoexpress",
+    altText: "Turnero Digiturno Digital TurnoExpress de Tecnología Plus",
+    title_attribute: "Turnero digiturno TurnoExpress",
     sold: "692 vendidos",
     link: routes.landings.turneroTurnoexpress.url,
     category_key: categories.TURNERO_TURNOEXPRESS.category_key,
@@ -35,8 +36,9 @@ const defaultProducts = [
   {
     name: "TurnoMaster",
     description: "Digitaliza la gestión de turnos.",
-    img: "v1754922913/sistema_de_turnos_turnomaster_gz3gic",
-    altText: "Imagen de Sistema de Turnos de Espera Turnomaster - TecnologíaPlus",
+    img: "v1757697841/sistema_de_turnos_turnomaster",
+    altText: "Sistema de Turnos de Espera TurnoMaster de Tecnología Plus",
+    title_attribute: "Sistema de turnos TurnoMaster",
     sold: "194 vendidos",
     link: routes.landings.sistemasDeTurnosTurnomaster.url,
     category_key: categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key,
@@ -66,14 +68,15 @@ const defaultProducts = [
     img: "v1754420142/llamado_de_enfermeri%CC%81a_cuidamaster_gctjus",
     altText: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus",
     sold: "9.825 vendidos",
-    link: routes.landings.llamadoDeEnfermeriaCuidamaster.url,
+    link: routes.landings.llamadoDeEnfermeria.url,
     category_key: categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,
   },
   {
     name: "OpinaMaster",
     description: "Transforma opiniones en acciones estratégicas.",
-    img: "v1754420143/encuesta_virtual_opinamaster_utrsch",
-    altText: "Imagen de Encuesta Virtual OpinaMaster - TecnologíaPlus",
+    img: "v1757697842/encuesta_virtual_opinamaster",
+    altText: "Encuesta Virtual OpinaMaster para calificación de servicio a cliente en Tecnología Plus",
+    title_attribute: "Encuesta virtual OpinaMaster",
     sold: "18 vendidos",
     link: routes.landings.encuestaVirtual.url,
     category_key: categories.ENCUESTA_VIRTUAL_OPINAMASTER.category_key,
@@ -109,7 +112,7 @@ export default function RelatedProducts({
 
   return (
     <section data-nosnippet className={`${style.related__products} ${addMarginBottom ? style.addMarginBottom : ''}`}>
-      {isVerMasVersionNueva ? (
+      {/* {isVerMasVersionNueva ? (
         <h3 className={`${style.related__products__title} ${style.related__products__ver__mas__version__nueva}`}>
           {title}
         </h3>
@@ -117,7 +120,8 @@ export default function RelatedProducts({
         <h2 className={style.related__products__title} data-is-ver-mas={isVerMasView}>
           {title}
         </h2>
-      )}
+      )} */}
+      <span className={style.related__products__title}>{title}</span>
       <RelatedProductsCarousel
         isVerMasVersionNueva={isVerMasVersionNueva}
         products={filteredProducts} 

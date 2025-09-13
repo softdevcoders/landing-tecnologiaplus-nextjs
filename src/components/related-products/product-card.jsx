@@ -8,11 +8,12 @@ export default function ProductCard({ product, isVerMasVersionNueva }) {
     <>
       <article className={style.product__card}>
         <Link href={product.link}>
-          {isVerMasVersionNueva ? (
+          {/* {isVerMasVersionNueva ? (
             <h4 className={style.product__card__title}>{product.name}</h4>
           ) : (
             <h3 className={style.product__card__title}>{product.name}</h3>
-          )}
+          )} */}
+          <span className={style.product__card__title}>{product.name}</span>
           <p 
             className={style.product__card__description}>
             {product.description}
@@ -22,9 +23,8 @@ export default function ProductCard({ product, isVerMasVersionNueva }) {
             height={230}
             src={getOptimizedImageUrl({ url: product.img, width: 600, quality: 80 })}
             alt={product.altText}
+            {...product.title_attribute && { title: product.title_attribute }}
             className={product.customClass ? product.customClass : ""}
-            loading="lazy"
-            itemProp="image"
             unoptimized={true}
           />
           <p className={style.product__card__description}>

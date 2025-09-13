@@ -127,11 +127,9 @@ function TurnoExpressProductsSection() {
             </div>
           ))}
         </div>
-        <ToggleTextContent>
+        <ToggleTextContent showToggleButtonInDesktop={true}>
           <p>El <strong>turnero</strong> es una solución esencial para organizar filas de espera en bancos, restaurantes, farmacias, clínicas y diferentes tipos de negocios. Diseñado para ofrecer orden y comodidad, un <strong>turnero digital</strong> permite que cada cliente reciba su número y espere su turno sin confusiones ni incomodidades. Este sistema elimina el desorden de las filas físicas y mejora la experiencia del usuario, ya que siempre sabe cuántos turnos faltan para ser atendido. Gracias a su practicidad, el <strong>turnero digiturno</strong> se convierte en una herramienta indispensable para agilizar procesos y dar un servicio más organizado.</p>
-
           <p>Contar con un <strong>turnero electrónico</strong> facilita la gestión de la atención, optimiza el tiempo del personal y reduce el estrés de los clientes. Existen diferentes tipos de soluciones, desde el <strong>turnero manual</strong> hasta los <strong>turneros inalámbricos</strong> y digitales, todos adaptados a la necesidad de cada negocio. Los <strong>organizadores de fila</strong> permiten manejar grandes volúmenes de usuarios de manera eficiente, con pantallas claras y sistemas de fácil uso. Además, estos equipos responden a una de las preguntas más comunes: <strong>cómo organizar filas de espera</strong> sin complicaciones, ofreciendo la mejor experiencia en atención.</p>
-
           <p>En Tecnología Plus somos fabricantes de <strong>turneros en Colombia</strong> y ofrecemos equipos personalizables, con el respaldo de nuestra marca. Contamos con diferentes modelos de pantallas y sistemas, incluyendo <strong>turneros digitales</strong> en Medellín, Bogotá y Cali, adaptados a cada sector. Nuestros <strong>turneros para restaurantes</strong>, bancos o farmacias están diseñados para garantizar durabilidad, variedad de funciones y un precio competitivo. Apostar por un <strong>dispensador de turnos digital</strong> o manual de Tecnología Plus es invertir en orden, eficiencia y confianza para tu negocio.</p>
         </ToggleTextContent>
         

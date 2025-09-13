@@ -9,7 +9,7 @@
     width: 100%;
     max-width: 1300px;
     overflow: hidden;
-    padding-inline: 1.5rem;
+    // padding-inline: 1rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -36,10 +36,32 @@
     font-size: 1rem;
     font-weight: 700;
     color: #606060;
-    text-decoration: underline;
+    border-bottom: 1.5px solid #606060;
     cursor: pointer;
     margin-bottom: 2rem;
     text-align: center;
+
+    .toggle__icon {
+      transition: transform 0.3s ease;
+      margin-left: 0.25rem;
+
+      &.rotate {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.show__toggle__button__in__desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      transform: translateY(-1px);
+      color: #545353;
+      border-bottom-color: #545353;
+      transition: all 0.3s ease;
+    }
   }
 }
 
@@ -52,6 +74,14 @@
       -webkit-box-orient: unset;
       transition: max-height 0.3s ease-in-out;
       display: block;
+
+      p:first-child {
+        margin-bottom: 0;
+      }
+
+      p:not(:first-child) {
+        display: none;
+      }
   
       &.open {
         max-height: none;
@@ -60,11 +90,30 @@
         -webkit-box-orient: unset;
         transition: max-height 0.3s ease-in-out;
         display: block;
+
+        p:first-child {
+          margin-bottom: 1.75rem;
+        }
+
+        p:last-child {
+          margin-bottom: 0;
+        }
+
+        p:not(:first-child) {
+          display: block;
+        }
       }
     }
 
-    .toggle__label {
+    .toggle__label { 
       display: none;
+
+      &.show__toggle__button__in__desktop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
     }
   }
 }

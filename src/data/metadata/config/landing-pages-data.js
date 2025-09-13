@@ -87,17 +87,17 @@ export const LANDING_IMAGES = {
   },
 
   // Llamado de Enfermería CuidaMaster
-  llamadoDeEnfermeriaCuidamaster: {
+  llamadoDeEnfermeria: {
     root: {
       small: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753125103/llamado_de_enfermeria_cuidamaster_vsxyqt.jpg",
         alt: "Imagen de Llamado de Enfermería Cuidamaster - TecnologíaPlus"
       },
       large: {
-        url: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.image.desktop.src,
-        alt: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.image.desktop.alt,
-        width: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.image.desktop.width,
-        height: landingHeros.llamadoDeEnfermeriaCuidamaster.informationPortadas.image.desktop.height
+        url: landingHeros.llamadoDeEnfermeria.informationPortadas.image.desktop.src,
+        alt: landingHeros.llamadoDeEnfermeria.informationPortadas.image.desktop.alt,
+        width: landingHeros.llamadoDeEnfermeria.informationPortadas.image.desktop.width,
+        height: landingHeros.llamadoDeEnfermeria.informationPortadas.image.desktop.height
       }
     }
   },
@@ -189,7 +189,7 @@ export const LANDING_CATEGORIES = {
   sistemasDeTurnosTurnomaster: "Sistema de Turnos",
   llamadoresDeMeseros: "Llamadores de Meseros",
   dispensadorDeTickets: "Dispensador de Tickets",
-  llamadoDeEnfermeriaCuidamaster: "Llamado de Enfermería",
+  llamadoDeEnfermeria: "Llamado de Enfermería",
   turneroTurnoexpress: "Turnero Digital",
   calificadorDeServicioAlClienteOpinamaster: "Calificador de Servicio",
   encuestaVirtualOpinamaster: "Encuesta Virtual",
@@ -226,7 +226,7 @@ export const PRODUCT_INFO = {
   sistemasDeTurnosTurnomaster: {},
   llamadoresDeMeseros: {},
   dispensadorDeTickets: {},
-  llamadoDeEnfermeriaCuidamaster: {},
+  llamadoDeEnfermeria: {},
   turneroTurnoexpress: {},
   calificadorDeServicioAlClienteOpinamaster: {},
   encuestaVirtualOpinamaster: {},

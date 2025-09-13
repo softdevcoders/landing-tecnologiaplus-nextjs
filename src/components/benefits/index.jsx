@@ -6,7 +6,8 @@ function BenefitsSection({ benefits, title, className = "", isHome = false, isEn
     <section data-nosnippet className={`${style.benefits__section} ${className}`}>
       <Image
         src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_50/v1738851175/fondo_2x-8_pxbzqc"
-        alt="benefits-background"
+        alt="Benefits background"
+        title="Benefits background"
         className={style.benefits__background_image}
         width={1000}
         height={1000}
@@ -58,14 +59,15 @@ function BenefitsSection({ benefits, title, className = "", isHome = false, isEn
             {benefits.map((benefit, index) => (
               <li 
                 className={`${style.benefits__item} ${benefit.description ? style.benefits__item_two_rows : ""}`} 
-                key={index}>
+                key={index}
+              >
                 <Image
                   width={benefit.width}
                   height={benefit.height}
                   src={benefit.icon}
                   alt={benefit.alt}
                   unoptimized={true}
-                  sizes="(max-width: 768px) 40vw, (max-width: 1200px) 30vw, 20vw"
+                  {...benefit.title_attribute && { title: benefit.title_attribute }}
                 />
                 <h3>{benefit.title}</h3>
                 {benefit.description && <p>{benefit.description}</p>} 

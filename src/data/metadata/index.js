@@ -5,7 +5,7 @@ import { metadata as blog } from '@/data/metadata/data/blog/root';
 import { metadata as calificadorDeServicioAlClienteOpinamaster } from '@/data/metadata/data/blog/calificador-de-servicio-al-cliente-opinamaster';
 import { metadata as dispensadorDeTickets } from '@/data/metadata/data/blog/dispensador-de-tickets';
 import { metadata as encuestaVirtualOpinamaster } from '@/data/metadata/data/blog/encuesta-virtual-opinamaster';
-import { metadata as llamadoDeEnfermeriaCuidamaster } from '@/data/metadata/data/blog/llamado-de-enfermeria-cuidamaster';
+import { metadata as llamadoDeEnfermeria } from '@/data/metadata/data/blog/llamado-de-enfermeria';
 import { metadata as llamadoresDeMeseros } from '@/data/metadata/data/blog/llamadores-de-meseros';
 import { metadata as localizadoresParaRestaurantes } from '@/data/metadata/data/blog/localizadores-para-restaurantes';
 import { metadata as rollosDeFichosParaTurnos } from '@/data/metadata/data/blog/rollos-de-fichos-para-turnos';
@@ -23,7 +23,7 @@ import { metadata as home } from '@/data/metadata/data/home';
 import { metadata as turneroTurnoexpressLanding } from '@/data/metadata/data/landings/turnero-turnoexpress/root';
 import { metadata as rollosDePapelTermicoLanding } from '@/data/metadata/data/landings/rollos-de-papel-termico/root';
 import { metadata as calificadorDeServicioAlClienteOpinamasterLanding } from '@/data/metadata/data/landings/calificador-de-servicio-al-cliente-opinamaster/root';
-import { metadata as llamadoDeEnfermeriaCuidamasterLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/root';
+import { metadata as llamadoDeEnfermeriaLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria/root';
 import { metadata as localizadoresParaRestaurantesLanding } from '@/data/metadata/data/landings/localizadores-para-restaurantes/root';
 import { metadata as rollosDeFichosParaTurnosLanding } from '@/data/metadata/data/landings/rollos-de-fichos-para-turnos/root';
 import { metadata as llamadoresDeMeserosLanding } from '@/data/metadata/data/landings/llamadores-de-meseros/root';
@@ -36,13 +36,13 @@ import { metadata as localizadoresParaRestaurantesLandingLocalizadoresRecV3 } fr
 import { metadata as localizadoresParaRestaurantesLandingLocalizadoresCirC2 } from '@/data/metadata/data/landings/localizadores-para-restaurantes/localizadores-cir-c2';
 
 // Llamado de enfermería
-import { metadata as llamadoDeEnfermeriaCuidamasterAlarmaDeLuzLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/alarma-de-luz';
-import { metadata as llamadoDeEnfermeriaCuidamasterLlamadorE1ParaCuelloLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/llamador-e1-para-cuello';
-import { metadata as llamadoDeEnfermeriaCuidamasterLlamadorE2BlancoLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/llamador-e2-blanco';
-import { metadata as llamadoDeEnfermeriaCuidamasterLlamadorEx1Landing } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/llamador-ex1';
-import { metadata as llamadoDeEnfermeriaCuidamasterPantallaT1BLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/pantalla-t1-b';
-import { metadata as llamadoDeEnfermeriaCuidamasterPantallaT6Landing } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/pantalla-t6';
-import { metadata as llamadoDeEnfermeriaCuidamasterRelojReceptorDeLlamadosLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria-cuidamaster/reloj-receptor-de-llamados';
+import { metadata as llamadoDeEnfermeriaAlarmaDeLuzLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria/alarma-de-luz';
+import { metadata as llamadoDeEnfermeriaLlamadorE1ParaCuelloLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria/llamador-e1-para-cuello';
+import { metadata as llamadoDeEnfermeriaLlamadorE2BlancoLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria/llamador-e2-blanco';
+import { metadata as llamadoDeEnfermeriaLlamadorEx1Landing } from '@/data/metadata/data/landings/llamado-de-enfermeria/llamador-ex1';
+import { metadata as llamadoDeEnfermeriaPantallaT1BLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria/pantalla-t1-b';
+import { metadata as llamadoDeEnfermeriaPantallaT6Landing } from '@/data/metadata/data/landings/llamado-de-enfermeria/pantalla-t6';
+import { metadata as llamadoDeEnfermeriaRelojReceptorDeLlamadosLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria/reloj-receptor-de-llamados';
 
 // Rollos de papel térmico
 import { metadata as rollosDePapelTermicoLandingRollosTermicos } from '@/data/metadata/data/landings/rollos-de-papel-termico/rollos-termicos';
@@ -82,7 +82,7 @@ export default {
     root: blog,
     'localizadores-para-restaurantes': localizadoresParaRestaurantes,
     'llamadores-de-meseros': llamadoresDeMeseros,
-    'llamado-de-enfermeria': llamadoDeEnfermeriaCuidamaster,
+    'llamado-de-enfermeria': llamadoDeEnfermeria,
     'sistema-de-turnos': sistemasDeTurnosTurnomaster,
     'turnero': turneroTurnoexpress,
     'dispensador-de-tickets': dispensadorDeTickets,
@@ -110,15 +110,15 @@ export default {
       'calificador-de-servicio': calificadorDeServicioAlClienteOpinamasterLandingCalificadorDeServicio,
       'aviso-de-pared-para-calificar-servicio': calificadorDeServicioAlClienteOpinamasterLandingAvisoDeParedParaCalificarServicio,
     },
-    'llamado-de-enfermeria-cuidamaster': {
-      root: llamadoDeEnfermeriaCuidamasterLanding,
-      'alarma-de-luz': llamadoDeEnfermeriaCuidamasterAlarmaDeLuzLanding,
-      'llamador-e1-para-cuello': llamadoDeEnfermeriaCuidamasterLlamadorE1ParaCuelloLanding,
-      'llamador-e2-blanco': llamadoDeEnfermeriaCuidamasterLlamadorE2BlancoLanding,
-      'llamador-ex1': llamadoDeEnfermeriaCuidamasterLlamadorEx1Landing,
-      'pantalla-t1-b': llamadoDeEnfermeriaCuidamasterPantallaT1BLanding,
-      'pantalla-t6': llamadoDeEnfermeriaCuidamasterPantallaT6Landing,
-      'reloj-receptor-de-llamados': llamadoDeEnfermeriaCuidamasterRelojReceptorDeLlamadosLanding,   
+    'llamado-de-enfermeria': {
+      root: llamadoDeEnfermeriaLanding,
+      'alarma-de-luz': llamadoDeEnfermeriaAlarmaDeLuzLanding,
+      'llamador-e1-para-cuello': llamadoDeEnfermeriaLlamadorE1ParaCuelloLanding,
+      'llamador-e2-blanco': llamadoDeEnfermeriaLlamadorE2BlancoLanding,
+      'llamador-ex1': llamadoDeEnfermeriaLlamadorEx1Landing,
+      'pantalla-t1-b': llamadoDeEnfermeriaPantallaT1BLanding,
+      'pantalla-t6': llamadoDeEnfermeriaPantallaT6Landing,
+      'reloj-receptor-de-llamados': llamadoDeEnfermeriaRelojReceptorDeLlamadosLanding,   
     },
     'localizadores-para-restaurantes': {
       root: localizadoresParaRestaurantesLanding,

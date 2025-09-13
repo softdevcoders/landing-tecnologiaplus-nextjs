@@ -36,14 +36,12 @@ function TurnoMasterProductsSection() {
         </div>
         <div className={style.products__section__desktop}>
           <div className={style.products__section__desktop__image}>
-            <img
+            <Image
               src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860442/turno_en_casa_2x-8_szazfa.webp"
               alt="Solicitar turno de manera presencial"
               width={375}
               height={400}
               className={style.products__section__desktop__image__img}
-              loading="lazy"
-              unoptimized={true}
             />
           </div>
           <div className={style.products__section__desktop__image}>

@@ -2,8 +2,9 @@
 
 import style from "./toggle-text-content.module.scss";
 import { useState } from "react";
+import ArrowDownIcon from "@/components/ui/icons/arrow-down";
 
-function ToggleTextContent({ children }) {
+function ToggleTextContent({ children, showToggleButtonInDesktop = false }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -12,10 +13,11 @@ function ToggleTextContent({ children }) {
         {children}
       </div>
       <button
-        className={style.toggle__label}
+        className={`${style.toggle__label} ${showToggleButtonInDesktop ? style.show__toggle__button__in__desktop : ""}`}
         onClick={() => setIsOpen(!isOpen)}
       > 
-        {isOpen ? "Ver menos" : "Ver más"}
+        <span>{isOpen ? "Leer menos" : "Leer más"}</span>
+        <ArrowDownIcon className={`${style.toggle__icon} ${isOpen ? style.rotate : ""}`} size={16} />
       </button>
     </div>
   );

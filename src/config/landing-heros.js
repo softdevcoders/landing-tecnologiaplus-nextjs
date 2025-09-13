@@ -102,7 +102,7 @@ export const landingHeros = {
       },
     },
   },
-  llamadoDeEnfermeriaCuidamaster: {
+  llamadoDeEnfermeria: {
     informationHome: {    
       title: "Llamado de enfermería",
       description: "Conecta al paciente con el personal de salud.",
@@ -126,7 +126,7 @@ export const landingHeros = {
         height: 100,
       },
       button: {
-        href: routes.landings.llamadoDeEnfermeriaCuidamaster.url,
+        href: routes.landings.llamadoDeEnfermeria.url,
         text: "Ver más",
       },
     },
@@ -135,20 +135,22 @@ export const landingHeros = {
       description: "Más cerca de tus pacientes. Facilita el contacto entre el paciente y personal de salud.",
       image: {
         mobile: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/pp65ihdvnzxx3arig8yj",
-          width: 600,
-          height: 600,
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_800,f_webp,q_80/v1757697927/modelo_llamado_de_enfermeria_cuidamaster_movil",
+          width: 800,
+          height: 800,
         },
         desktop: {
-          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1000,q_80,f_webp/website-v2/images/landings/llamado-de-enfermeria-cuidamaster/landings/qmzlqnbjn5pmn2q4hmhd",
-          width: 1000,
-          height: 1000,
+          src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1200,q_80,f_webp/v1757697928/modelo_llamado_de_enfermeria_cuidamaster_desktop",
+          width: 1200,
+          height: 1200,
         },
-        alt: "Imagen de Llamado de Enfermería CuidaMaster - Tecnología Plus",
+        alt: "Modelo Sistema CuidaMaster de llamado de enfermería para pacientes y hospitales",
+        title: "Llamado de Enfermería | CuidaMaster  para hospitales"
       },
       brandImage: {
         src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_500,f_webp/v1744462125/Logo_CuidaMaster_4x-8_cn4z4h",
-        alt: "Logo CuidaMaster",
+        alt: "Logo CuidaMaster sistema de llamado de enfermería para clínicas y hospitales",
+        title: "Llamado de Enfermería | Logo oficial CuidaMaster",
         width: 300,
         height: 65,
       }

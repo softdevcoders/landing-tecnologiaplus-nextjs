@@ -43,6 +43,7 @@ export default function InfiniteSlider({ logos, speed = 60 }) {
           key={`${logo.src}-${idx}`}
           src={logo.src}
           alt={logo.alt}
+          {...logo.title && { title: logo.title }}
           width={130}
           height={50}
           loading="eager"
