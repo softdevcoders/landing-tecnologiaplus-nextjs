@@ -112,7 +112,7 @@ function LlamadoDeEnfermeriaProductsSecondarySection() {
       </div>
       <div className={style.ver__mas__section__container}>
         <h2 className={style.ver__mas__section__title}>
-          Opciones para recibir llamados de pacientes
+          Opciones para mostrar llamados de pacientes
         </h2>
         <div className={style.ver__mas__section__container__cards}>
           {products.filter((product) => product.type === "recibir_llamados").map((product, index) => (
