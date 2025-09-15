@@ -252,7 +252,6 @@ export const llamadorDeMeserosE2B = {
           src: 'v1757338396/llamador_de_meseros_e2b_blanco_rojo', 
           alt: 'Llamador de meseros modelo E2-B en color blanco con botón rojo ideal para restaurantes.', 
           title: 'Llamador de meseros E2-B blanco con rojo.',
-          darkBackground: true
         },
         {
           type: 'image',
