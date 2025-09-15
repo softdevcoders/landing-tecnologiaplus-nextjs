@@ -1,12 +1,12 @@
-import posts from "@/data/blogs";
-import { sortByDate } from "@/lib/sort-by-date";
+import { posts } from "@/data/blog";
+import { sortByDate } from "@/lib/blog";
 
 const filterAndPaginatePosts = ({ posts, page, pageSize, categoryFilter, exclude }) => {
   let filteredPosts = posts;
 
   if (categoryFilter) {
     filteredPosts = posts.filter(post =>
-      post.categories.includes(categoryFilter)
+      post.categoria === categoryFilter
     );
   }
 
@@ -15,7 +15,7 @@ const filterAndPaginatePosts = ({ posts, page, pageSize, categoryFilter, exclude
       !exclude.includes(post.id)
     );
   }
-  
+
   filteredPosts = sortByDate(filteredPosts);
   
   const totalPosts = filteredPosts.length;

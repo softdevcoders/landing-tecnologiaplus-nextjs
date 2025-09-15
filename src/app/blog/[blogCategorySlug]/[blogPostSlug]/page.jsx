@@ -3,7 +3,7 @@ import PostView from "@/sections/blog/views/posts/post-view";
 import { ROBOTS_CONFIG, LOGO_METADATA } from "@/data/metadata/config";
 import { notFound } from "next/navigation";
 import { generateImageVariants, generateImageAltText } from "@/lib/optimizedImageServer";
-import { cleanText } from "@/lib/clean-text";
+import { cleanText } from "@/lib/blog";
 import { routes } from "@/config/routes";
 
 export const dynamic = "force-static";
@@ -21,31 +21,31 @@ export async function generateMetadata({ params }) {
     }
 
     // Generar todas las variantes de imagen optimizadas
-    const imageVariants = generateImageVariants(post.images[0]);
+    const imageVariants = generateImageVariants(post.imagen_principal.src);
     
     // Generar alt text descriptivo
     const imageAltText = generateImageAltText(
-      cleanText(post?.metadata?.title), 
-      post?.categories?.[0]
+      cleanText(post?.metadatos?.title), 
+      post?.categoria
     );
 
     // Obtener fecha de publicación y modificación
-    const publishedDate = post.date ? new Date(post.date).toISOString() : undefined;
-    const modifiedDate = post.modified ? new Date(post.modified).toISOString() : publishedDate;
+    const publishedDate = post.fecha_creacion ? new Date(post.fecha_creacion).toISOString() : undefined;
+    const modifiedDate = post.fecha_modificacion ? new Date(post.fecha_modificacion).toISOString() : publishedDate;
     
     return {
       title: {
-        absolute: cleanText(post?.metadata?.title)
+        absolute: cleanText(post?.metadatos?.title)
       },
-      keywords: post?.metadata?.keywords,
-      description: cleanText(post?.metadata?.description),
+      keywords: post?.metadatos?.keywords,
+      description: cleanText(post?.metadatos?.description),
       robots: ROBOTS_CONFIG,
       openGraph: {
         title: {
-          absolute: cleanText(post?.metadata?.title)
+          absolute: cleanText(post?.metadatos?.title)
         },
-        description: cleanText(post?.metadata?.description),
-        url: `${baseUrl}${post.current_link}`,
+        description: cleanText(post?.metadatos?.description),
+        url: `${baseUrl}${post.enlace_completo}`,
         siteName: 'Tecnología Plus',
         images: [{
           url: imageVariants?.openGraph,
@@ -58,15 +58,15 @@ export async function generateMetadata({ params }) {
         authors: ['Tecnología Plus'],
         publishedTime: publishedDate,
         modifiedTime: modifiedDate,
-        section: `${Object.values(routes.blog.children).find(child => child.category_key === post?.categories?.[0])?.label} - Blog` || 'Blog',
-        tags: post?.metadata?.keywords || [],
+        section: `${Object.values(routes.blog.children).find(child => child.category_key === post?.categoria)?.label} - Blog` || 'Blog',
+        tags: post?.metadatos?.keywords || [],
       },
       twitter: {
         card: 'summary_large_image',
         title: {
-          absolute: cleanText(post?.metadata?.title)
+          absolute: cleanText(post?.metadatos?.title)
         },
-        description: cleanText(post?.metadata?.description),
+        description: cleanText(post?.metadatos?.description),
         images: [{
           url: imageVariants?.twitterCard,
           width: 1200,
@@ -82,7 +82,7 @@ export async function generateMetadata({ params }) {
         'image:alt': imageAltText,
       },
       alternates: {
-        canonical: `${baseUrl}${post.current_link}`,
+        canonical: `${baseUrl}${post.enlace_completo}`,
       },
       manifest: `${baseUrl}/manifest.json`,
       icons: {
