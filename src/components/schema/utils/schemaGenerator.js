@@ -222,6 +222,6 @@ export function prepareSchemaMetadata(metadata, serviceType) {
     pageDescription: metadata.description,
     pageUrl: metadata.alternates.canonical,
     serviceType,
-    primaryImage: metadata.seoImages?.primary?.large
+    primaryImage: metadata.seoImages?.primary
   };
 }

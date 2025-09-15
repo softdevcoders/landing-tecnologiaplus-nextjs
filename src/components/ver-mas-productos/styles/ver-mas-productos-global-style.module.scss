@@ -2,12 +2,16 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 1.875rem;
+  gap: 1rem;
   width: 100%;
   max-width: 112rem;
   margin: auto;
   padding-inline: 1.5rem;
   padding-bottom: 2.5rem;
+
+  @media (min-width: 1024px) {
+    gap: 1.875rem;
+  }
 
   @media (min-width: 1024px) {
     padding-bottom: 4rem;

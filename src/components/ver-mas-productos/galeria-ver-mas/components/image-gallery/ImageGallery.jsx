@@ -116,7 +116,7 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
         </div>
 
         {/* Botones de navegación - solo en desktop */}
-        {displayMediaItems.length > 1 && !isZoomed && !isMobile && (
+        {displayMediaItems.length > 1 && !isZoomed && (
           <>
             <button
               className={`${styles.navButton} ${styles.prev} ${hasDarkBackground ? styles.darkNav : ''}`}

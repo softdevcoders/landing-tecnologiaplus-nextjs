@@ -2,7 +2,39 @@
   position: relative;
   height: 100vh;
 
+  //**** Backgrounds ****
+  .background__mobile,
+  .background__desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  
+  .background__mobile {
+    display: block;
+    background-image: url("https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,w_200,q_80,f_webp/v1745272277/Fondo_3x-8_yjkwov");
+  }
 
+  .background__desktop {
+    display: none;
+  }
+  
+  @media (min-width: 1024px) {
+    .background__mobile {
+      display: none;
+    }
+    
+    .background__desktop {
+      display: block;
+      background-image: url("https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,q_30,w_900/website-v2/images/landings/backgrounds/nqz3myqzqgttlqfepepu");
+    }
+  }
 
   .slider {
     position: absolute;
