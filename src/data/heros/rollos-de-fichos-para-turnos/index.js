@@ -17,7 +17,7 @@ const inicio = {
     tipo: "desktop",
   }],
   imagenDeMarca: {
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1757686959/turnoexpress_logo",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1757954381/logo_turnoexpress",
     alt: "Logo TurnoExpress",
     width: 225,
     height: 100,
@@ -45,7 +45,7 @@ const portada = {
     tipo: "desktop",
   }],
   imagenDeMarca: {
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1757686959/turnoexpress_logo",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1757954381/logo_turnoexpress",
     alt: "Logo TurnoExpress",
     width: 225,
     height: 100,
