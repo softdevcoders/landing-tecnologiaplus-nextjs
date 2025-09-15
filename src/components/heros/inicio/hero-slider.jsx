@@ -2,11 +2,11 @@
 
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from 'embla-carousel-react';
+import styles from "./styles/hero-inicio.module.scss";
 import ArrowLeft from "@/components/ui/icons/arrow-left";
 import ArrowRight from "@/components/ui/icons/arrow-right";
-import LandingHero from "@/components/landing-hero";
 
-export default function SliderHero({ styles, items }) {
+export default function HeroSlider({ children, items }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
     duration: 30,
@@ -69,23 +69,7 @@ export default function SliderHero({ styles, items }) {
     <div className={styles.slider}>
       <div className={styles.viewport} ref={emblaRef}>
         <div className={styles.container}>
-          {Object.keys(items).map((key, index) => (
-            <div 
-              key={index} 
-              className={styles.slide}
-              role="group"
-              aria-roledescription="slide"
-              aria-label={`${index + 1} of ${Object.keys(items).length}`}
-            >
-              <LandingHero 
-                {...({
-                  ...items[key].informationHome,
-                  title: items[key].informationHome.title,
-                  isFirstSlide: index === 0
-                })} 
-              />
-            </div>
-          ))}
+          {children}
         </div>
       </div>
 

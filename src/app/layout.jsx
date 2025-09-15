@@ -102,7 +102,7 @@ export default function RootLayout({ children }) {
         <HybridServerSchema /> 
       </head>
       <body>
-        {/* {SHOULD_ROBOTS_INDEX && <GoogleTagManager gtmId="GTM-P8J6LTX" />} */}
+
         {SHOULD_ROBOTS_INDEX && (
           <noscript>
             <iframe

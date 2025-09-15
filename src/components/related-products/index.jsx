@@ -98,7 +98,6 @@ const defaultProducts = [
     sold: "8.426 vendidos",
     link: routes.landings.llamadoresDeMeseros.url,
     category_key: categories.LLAMADORES_DE_MESEROS.category_key,
-    // customClass: style.llamadores__img__custom,
   },
 ];
 

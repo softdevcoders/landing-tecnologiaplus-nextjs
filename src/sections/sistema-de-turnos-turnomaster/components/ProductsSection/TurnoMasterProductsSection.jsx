@@ -42,6 +42,7 @@ function TurnoMasterProductsSection() {
               width={375}
               height={400}
               className={style.products__section__desktop__image__img}
+              unoptimized={true}
             />
           </div>
           <div className={style.products__section__desktop__image}>
