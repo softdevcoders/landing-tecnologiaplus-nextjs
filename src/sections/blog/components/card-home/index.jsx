@@ -1,21 +1,18 @@
-// import Link from "next/link"
-import LinkButton from "@/components/ui/link"
-import Link from "next/link"
-import style from "./card-home.module.scss"
-import { cleanText } from "@/lib/clean-text"
-import { formatDate } from "@/lib/format-date"
 import Image from "next/image"
-import { truncateAltText } from "@/lib/truncate-alt-text"
+import Link from "next/link"
+import LinkButton from "@/components/ui/link"
+import style from "./card-home.module.scss"
+import { truncateAltText, cleanText, formatDate } from "@/lib/blog"
 
 const CardHome = ({ post }) => {
-  const optimizedAltText = truncateAltText(post?.metadata?.title);
   return (
     <article className={style.blogCard}>
-      <Link href={post.current_link} className={style.blogCard__image__link}> 
+      <Link href={post.enlace_completo} className={style.blogCard__image__link}> 
         <div className={style.blogCard__image} >
           <Image  
-            src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_800/${post.images[0]}`} 
-            alt={optimizedAltText}
+            src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale,f_webp,w_800/${post?.imagen_principal?.src}`} 
+            alt={post?.imagen_principal?.alt ?? truncateAltText(post?.titulo)}
+            title={post?.imagen_principal?.title ?? truncateAltText(post?.titulo)}
             width={435}
             height={235}
             unoptimized={true}
@@ -25,19 +22,19 @@ const CardHome = ({ post }) => {
       </Link>
       
       <div className={style.blogCard__content}>
-        <Link href={post.current_link}>
+        <Link href={post.enlace_completo}>
           <h2 className={style.blogCard__title}>
-              {cleanText(post.title.rendered)}
+              {cleanText(post.titulo)}
           </h2>
         </Link>
-        <Link href={post.current_link}>
+        <Link href={post.enlace_completo}>
           <p className={style.blogCard__excerpt}>
-            {cleanText(post.excerpt.rendered)}
+            {cleanText(post.extracto)}
           </p>
         </Link>
         <div className={style.blogCard__footer}>
-          <time className={style.blogCard__date}>{formatDate(post.date)}</time>
-          <LinkButton href={post.current_link} title={`Leer más sobre ${post.title.rendered}`} className={style.blogCard__button}>
+          <time className={style.blogCard__date}>{formatDate(post.fecha_creacion)}</time>
+          <LinkButton href={post.enlace_completo} title={`Leer más sobre ${post.titulo}`} className={style.blogCard__button}>
             Leer más
           </LinkButton>
         </div>

@@ -58,10 +58,10 @@ export default async function sitemap() {
 
     for (const post of posts) {
       const sitemapEntry = {
-        url: `${baseUrl}${post.current_link}`,
+        url: `${baseUrl}${post.enlace_completo}`, 
         changeFrequency: 'monthly',
         priority: 0.8,
-        lastModified: formatDate(post.modified && new Date(post.modified) > new Date(post.date) ? post.modified : post.date),
+        lastModified: formatDate(post.fecha_modificacion && new Date(post.fecha_modificacion) > new Date(post.fecha_creacion) ? post.fecha_modificacion : post.fecha_creacion),
       };
 
       links.push(sitemapEntry);
