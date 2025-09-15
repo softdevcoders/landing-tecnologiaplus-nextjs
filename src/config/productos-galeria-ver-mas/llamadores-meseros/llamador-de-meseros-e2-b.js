@@ -30,14 +30,6 @@ export const llamadorDeMeserosE2B = {
           ...mainImage,
         },
         {
-          type: 'video',
-          src: 'v1757338405/timbre_de_restaurante_modelo_e2b_video.mp4',
-          alt: 'Demostración de timbre de restaurante modelo E2-B en funcionamiento.',
-          title: 'Timbre de restaurante modelo E2-B.',
-          thumbnail: 'so_0/v1754070602/llamador_e2_b_de_2_teclas_negro_rojo_2_pffe7w', 
-          darkBackground: true
-        },
-        {
           type: 'image',
           src: 'v1757338389/medidas_timbre_inalambrico_restaurantes_e2b_2teclas_negro_rojo',     
           alt: 'Medidas de timbre inalámbrico para restaurantes E2-B de dos teclas en color negro y rojo.',
@@ -90,6 +82,14 @@ export const llamadorDeMeserosE2B = {
           src: 'v1757338390/llamadores_de_mesa_e2_b_negro_rojo_rompemuros',    
           alt: 'Llamadores de mesa E2-B negro rojo con señal rompemuros para restaurantes.',
           title: 'Llamadores de mesa E2-B negro rojo rompemuros.',
+          darkBackground: true
+        },
+        {
+          type: 'video',
+          src: 'v1757338405/timbre_de_restaurante_modelo_e2b_video.mp4',
+          alt: 'Demostración de timbre de restaurante modelo E2-B en funcionamiento.',
+          title: 'Timbre de restaurante modelo E2-B.',
+          thumbnail: 'so_0/v1754070602/llamador_e2_b_de_2_teclas_negro_rojo_2_pffe7w', 
           darkBackground: true
         },
       ]
@@ -259,7 +259,6 @@ export const llamadorDeMeserosE2B = {
           src: 'v1757338394/medidas_llamador_de_meseros_e2b_blanco_rojo',   
           alt: 'Medidas del llamador de meseros modelo E2-B en color blanco con rojo para restaurantes.', 
           title: 'Medidas llamador de meseros E2-B blanco con rojo.',
-          darkBackground: true
         },
         {
           type: 'image',

@@ -16,7 +16,7 @@
   line-height: 1.571;
   font-weight: 400;
   color: #535353;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .imageList {
@@ -35,7 +35,7 @@
   &.medium {
     .imageButton {
       width: 68px;
-      height: 68px;
+      height: 100%;
     }
   }
 
