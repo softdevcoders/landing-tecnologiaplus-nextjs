@@ -8,11 +8,15 @@ import {
   LandingHeroPortadaContentTextTitle, 
   LandingHeroPortadaContentDescription,
   LandingHeroPortadaContentTextButton
-} from "@/components/landing-hero-portada";
-import { landingHeros } from "@/config/landing-heros";
+} from "@/components/heros/portada";
+import landingHeros from "@/data/heros";
+import style from "./styles.module.scss";
+
+const IMAGE_MOBILE = 0;
+const IMAGE_DESKTOP = 1;
 
 const RollosDePapelTermicoHeroSection = () => { 
-  const { informationPortadas: values } = landingHeros.rollosDePapelTermico;
+  const values = landingHeros?.rollosDePapelTermico?.portada;
 
   return (
     <LandingHeroPortada>
@@ -20,25 +24,19 @@ const RollosDePapelTermicoHeroSection = () => {
         <LandingHeroPortadaContent>
           <LandingHeroPortadaContentImage>
             <LandingHeroPortadaContentImageImg 
-              image={{
-                ...values?.image?.mobile, 
-                alt: values?.image?.alt,
-              }} 
+              image={values?.imagenes[IMAGE_MOBILE]} 
               isMobile={true} 
             />
             <LandingHeroPortadaContentImageImg 
-              image={{
-                ...values?.image?.desktop, 
-                alt: values?.image?.alt,
-              }} 
-              isMobile={false} 
+              image={values?.imagenes[IMAGE_DESKTOP]} 
+              className={style.custom_image__desktop}  
             />
           </LandingHeroPortadaContentImage>
           <LandingHeroPortadaContentText>
-            <LandingHeroPortadaContentTextTitle>{values?.title}</LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentDescription>{values?.description}</LandingHeroPortadaContentDescription>
-            <LandingHeroPortadaContentTextButton href={values?.button?.href}>
-              {values?.button?.text}
+            <LandingHeroPortadaContentTextTitle>{values?.titulo}</LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentDescription>{values?.descripcion}</LandingHeroPortadaContentDescription>
+            <LandingHeroPortadaContentTextButton href={values?.boton?.href}>
+              {values?.boton?.texto}
             </LandingHeroPortadaContentTextButton>
           </LandingHeroPortadaContentText>
         </LandingHeroPortadaContent>

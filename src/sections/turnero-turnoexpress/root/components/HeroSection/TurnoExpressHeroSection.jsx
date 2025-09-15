@@ -7,11 +7,14 @@ import {
   LandingHeroPortadaContentText, 
   LandingHeroPortadaContentTextTitle, 
   LandingHeroPortadaContentDescription 
-} from "@/components/landing-hero-portada";
-import { landingHeros } from "@/config/landing-heros";
+} from "@/components/heros/portada";
+import landingHeros from "@/data/heros";
+
+const IMAGE_MOBILE = 0;
+const IMAGE_DESKTOP = 1;
 
 const TurnoExpressHeroSection = () => {
-  const { informationPortadas: values } = landingHeros.turneroTurnoexpress; 
+  const values = landingHeros?.turneroTurnoexpress?.portada; 
 
   return (
     <LandingHeroPortada>
@@ -19,23 +22,17 @@ const TurnoExpressHeroSection = () => {
         <LandingHeroPortadaContent>
           <LandingHeroPortadaContentImage>
             <LandingHeroPortadaContentImageImg 
-              image={{
-                ...values?.image?.mobile, 
-                alt: values?.image?.alt,
-              }} 
+              image={values?.imagenes[IMAGE_MOBILE]} 
               isMobile={true} 
             />
             <LandingHeroPortadaContentImageImg 
-              image={{
-                ...values?.image?.desktop, 
-                alt: values?.image?.alt,
-              }} 
+              image={values?.imagenes[IMAGE_DESKTOP]} 
               isMobile={false} 
             />
           </LandingHeroPortadaContentImage>
           <LandingHeroPortadaContentText>
-            <LandingHeroPortadaContentTextTitle>{values?.title}</LandingHeroPortadaContentTextTitle>
-            <LandingHeroPortadaContentDescription>{values?.description}</LandingHeroPortadaContentDescription>
+            <LandingHeroPortadaContentTextTitle>{values?.titulo}</LandingHeroPortadaContentTextTitle>
+            <LandingHeroPortadaContentDescription>{values?.descripcion}</LandingHeroPortadaContentDescription>
           </LandingHeroPortadaContentText>
         </LandingHeroPortadaContent>
       </LandingHeroPortadaContainer>
