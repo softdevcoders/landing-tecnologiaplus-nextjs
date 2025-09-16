@@ -6,7 +6,6 @@ const LlamadoresDeMeserosPreguntasFrecuentes = () => {
     <PreguntasFrecuentes 
       preguntasFrecuentes={llamadoresDeMeserosPreguntasFrecuentes} 
       title="Preguntas frecuentes del llamador de meseros E2-B" 
-      headingLevel="h3"
     />
   )
 }

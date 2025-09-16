@@ -5,8 +5,7 @@ const NuestrosClientesSection = () => {
   return (
     <NuestrosClientes 
       logos={logosLlamadorMeseros} 
-      title="Algunos clientes del llamador de meseros E2-B" 
-      headingLevel="h3" 
+      title="Algunos clientes del llamador de meseros E2-B"
     />
   );
 };

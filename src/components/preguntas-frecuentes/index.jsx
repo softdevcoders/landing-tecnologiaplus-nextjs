@@ -7,7 +7,6 @@ import ArrowUp from "@/components/ui/icons/arrow-up";
 function PreguntasFrecuentes({ 
   preguntasFrecuentes = [], 
   title = "Preguntas frecuentes",
-  headingLevel = "h2"
 }) {
   const [openAccordion, setOpenAccordion] = useState(null);
   const [showAllQuestions, setShowAllQuestions] = useState(false);
@@ -41,12 +40,7 @@ function PreguntasFrecuentes({
       className={styles.container} 
       aria-label="Preguntas Frecuentes"
     >
-      {headingLevel === "h2" && (
-        <h2 ref={titleRef} className={styles.title}>{title}</h2>         
-      )}
-      {headingLevel === "h3" && (
-        <h3 ref={titleRef} className={styles.title}>{title}</h3>         
-      )}
+      <h2 ref={titleRef} className={styles.title}>{title}</h2>         
       <div 
         className={styles.faq__container} 
         data-show={showAllQuestions}
@@ -66,12 +60,7 @@ function PreguntasFrecuentes({
                 handleAccordionToggle(index, index !== openAccordion);
               }}
             >
-              {headingLevel === "h2" && (
-                <h3 className={styles.faq__question__title} dangerouslySetInnerHTML={{ __html: faq.question }} /> 
-              )}
-              {headingLevel === "h3" && (
-                <h4 className={styles.faq__question__title} dangerouslySetInnerHTML={{ __html: faq.question }} /> 
-              )}
+              <h3 className={styles.faq__question__title} dangerouslySetInnerHTML={{ __html: faq.question }} /> 
               <ArrowUp aria-hidden="true" size={16} />
             </summary>
             <div 

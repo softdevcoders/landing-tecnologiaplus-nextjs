@@ -2,15 +2,10 @@ import globalStyles from "@/components/ver-mas-productos/styles/ver-mas-producto
 import styles from "./nuestros-clientes.module.scss";
 import InfiniteSlider from "@/components/nuestros-clientes/inifinite-slider";
 
-const NuestrosClientes = ({ logos, title = "Algunos clientes", headingLevel = "h2" }) => {
+const NuestrosClientes = ({ logos, title = "Algunos clientes" }) => {
   return (
     <section className={globalStyles.container} data-nosnippet>
-      {headingLevel === "h2" && (
-        <h2>{title}</h2>
-      )}
-      {headingLevel === "h3" && (
-        <h3>{title}</h3>
-      )}
+      <h2>{title}</h2>
       <div className={styles.nuestros__clientes__container}>
         <div className={styles.nuestros__clientes__background_gradient_left}></div>
         <InfiniteSlider logos={logos}/>
