@@ -4,12 +4,12 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  padding-inline: 1rem;
 
   .description__section__text {
     width: 100%;
     max-width: 1300px;
     overflow: hidden;
-    // padding-inline: 1rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
