@@ -6,7 +6,7 @@ import { getOptimizedImageUrl } from "@/lib/imageUtils";
 const ComoFunciona = ({ comoFuncionaPasos, title = "¿Cómo funciona?" }) => {
   return (
     <section className={globalStyles.container} data-nosnippet>
-      <h3>{title}</h3>
+      <h2>{title}</h2>  
       <div className={styles.container__items}>
         {comoFuncionaPasos.map((paso, index) => (
           <div className={styles.container__item} key={index}>
