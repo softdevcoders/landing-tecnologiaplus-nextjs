@@ -12,11 +12,11 @@ export const LANDING_IMAGES = {
     root: {
       small: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753292818/home_rsbmwy.jpg",
-        alt: "Imagen de Home TecnologíaPlus"
+        alt: "Imagen de Inicio Tecnología Plus"
       },
       large: {
         url: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1753292804/home_kve9cx.jpg",
-        alt: "Imagen de Home TecnologíaPlus"
+        alt: "Imagen de Inicio Tecnología Plus"
       }
     }
   },
