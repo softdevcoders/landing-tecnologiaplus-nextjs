@@ -180,7 +180,7 @@ export async function sendEmail(formData) {
                             <td>
                               <p style="margin: 0 0 20px 0; font-family: Arial, sans-serif; font-size: 18px; color: #333333;">Hola ${sanitizedData.name},</p>
                               <p style="margin: 0 0 20px 0; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333333;">Gracias por tu confianza.</p>
-                              <p style="margin: 0; font-family: Arial, sans-serif; font-size: 16px; color: #333333;">Una asesora te va a contactar para ofrecerte una solución que se ajuste a tu necesidad.</p>
+                              <p style="margin: 0; font-family: Arial, sans-serif; font-size: 16px; color: #333333;">Una asesora se comunicará contigo para ayudarte a encontrar la mejor opción para ti.</p>
                             </td>
                           </tr>
                         </table>
