@@ -55,7 +55,7 @@ function LlamadoDeEnfermeriaProductsSecondarySection() {
     {
       title: "Alarma de luz",
       description: "2.649 vendidos",
-      image: "v1757698096/alarma_de_luz_llamador_de_enfermeria",
+      image: "v1758134014/alarma_de_luz_llamador_de_enfermeria_v2",
       alt: "Alarma de luz para llamador de enfermería inalámbrico",
       title_attribute: "Alarma de luz para llamador de enfermería",
       link: routes.landings.llamadoDeEnfermeria.children.alarmaDeLuz.url,
