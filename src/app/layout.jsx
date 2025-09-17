@@ -66,6 +66,9 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
+        {/* Prevenir modo oscuro forzado del navegador */}
+        {/* <meta name="color-scheme" content="light only" /> */}
+
         {/* Favicon explicit links */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32_32.png" />

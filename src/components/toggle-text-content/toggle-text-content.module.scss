@@ -65,6 +65,13 @@
   }
 }
 
+.description__section__text--no-white-space {
+  padding-inline: 0;
+  .description__section__text {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 1024px) {
   .description__section {
     .description__section__text {

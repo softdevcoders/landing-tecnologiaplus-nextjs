@@ -24,7 +24,7 @@ const FichaTecnicaSection = () => {
         alt: "Llamador de personal con rango de hasta 100m y frecuencia 433MHz",
         title: "Llamador de personal con rango de 100m",
       },
-      descripcion: "Rango: hasta 100m o más<br> con amplificador de señal.<br> Frecuencia: 433MHz",
+      descripcion: "Rango: hasta 100m o más con amplificador de señal.<br> Frecuencia: 433MHz",
     },
     {
       imagen: {
