@@ -62,7 +62,7 @@ function LlamadorMeserosVerMasSection() {
     <section data-nosnippet className={style.ver__mas__section}>
       <div className={style.ver__mas__section__container}>
         <h2 className={style.ver__mas__section__title}>
-          Opciones para llamar al mesero
+          Opciones de timbres inalámbricos para llamar al mesero
         </h2>
         <div className={style.ver__mas__section__container__cards}>
           {products.filter((product) => product.type === "llamador_mesero").map((product, index) => (
@@ -99,7 +99,7 @@ function LlamadorMeserosVerMasSection() {
       </div>
       <div className={style.ver__mas__section__container}>
         <h2 className={style.ver__mas__section__title}>
-          Opciones para recibir llamados
+          Opciones para recibir llamados de clientes 
         </h2>
         <div className={style.ver__mas__section__container__cards}>
           {products.filter((product) => product.type === "recibir_llamados").map((product, index) => (

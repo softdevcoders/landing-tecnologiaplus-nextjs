@@ -37,7 +37,7 @@ function LlamadorMeserosIndustriesSection() {
   return (
     <IndustriesSection>
       <IndustriesSectionContainer>
-          <IndustriesSectionTitle title="LLAMADOR DE PERSONAL ADAPTABLE A TODOS LOS SECTORES" />
+          <IndustriesSectionTitle title="LLAMADOR DE MESEROS ADAPTABLE A TODOS LOS SECTORES" />
           <IndustriesSectionList> 
           {industries.map((industry, index) => (
             <IndustriesSectionListItem key={index}>

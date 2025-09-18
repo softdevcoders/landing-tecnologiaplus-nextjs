@@ -5,7 +5,7 @@ import { getOptimizedImageUrl } from "@/lib/imageUtils";
 function StepsSectionLlamadorMeseros() {
   return (
     <section data-nosnippet className={style.steps__section}>
-      <h2 className={style.steps__section__title}>¿Cómo funciona?</h2>
+      <h2 className={style.steps__section__title}>¿Cómo funciona un timbre de restaurante?</h2>
 
       <div className={style.cards__container}>
         <div className={style.card__desktop}>

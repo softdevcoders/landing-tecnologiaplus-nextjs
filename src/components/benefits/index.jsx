@@ -1,7 +1,7 @@
 import Image from "next/image";
 import style from "./benefits.module.scss";
 
-function BenefitsSection({ benefits, title, className = "", isHome = false, isEncuestaVirtual = false }) {
+function BenefitsSection({ benefits, title, className = "", isHome = false, isEncuestaVirtual = false, isLlamadorDeMeseros = false }) {
   return (
     <section data-nosnippet className={`${style.benefits__section} ${className}`}>
       <Image
@@ -67,10 +67,15 @@ function BenefitsSection({ benefits, title, className = "", isHome = false, isEn
                   src={benefit.icon}
                   alt={benefit.alt}
                   unoptimized={true}
+                  className={style.item__icon}
                   {...benefit.title_attribute && { title: benefit.title_attribute }}
                 />
-                <h3>{benefit.title}</h3>
-                {benefit.description && <p>{benefit.description}</p>} 
+                {isLlamadorDeMeseros ? (
+                  <span className={style.item__title}>{benefit.title}</span>
+                ) : (
+                  <h3 className={style.item__title}>{benefit.title}</h3>
+                )}
+                {benefit.description && <p className={style.item__description}>{benefit.description}</p>} 
               </li>
             ))}
           </ul>

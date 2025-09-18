@@ -5,7 +5,7 @@ function LlamadorMeserosVideosSection() {
   return (
     <section data-nosnippet className={style.video__section}>
       <div className={style.video__container}>
-        <h2 className={style.video__title}>Dale play para verlos funcionar</h2>
+        <h2 className={style.video__title}>Mira cómo funciona el botón para llamar al mesero</h2>
         <div
           className={style.video__card__container}
         >
