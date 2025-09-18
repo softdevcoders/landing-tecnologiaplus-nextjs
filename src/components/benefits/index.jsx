@@ -75,7 +75,7 @@ function BenefitsSection({ benefits, title, className = "", isHome = false, isEn
                 ) : (
                   <h3 className={style.item__title}>{benefit.title}</h3>
                 )}
-                {benefit.description && <p>{benefit.description}</p>} 
+                {benefit.description && <p className={style.item__description}>{benefit.description}</p>} 
               </li>
             ))}
           </ul>
