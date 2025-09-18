@@ -5,7 +5,7 @@ function LlamadorMeserosVideosSection() {
   return (
     <section data-nosnippet className={style.video__section}>
       <div className={style.video__container}>
-        <h2 className={style.video__title}>Dale play para verlos funcionar</h2>
+        <h2 className={style.video__title}>Mira cómo funciona el botón para llamar al mesero</h2>
         <div
           className={style.video__card__container}
         >
@@ -15,7 +15,9 @@ function LlamadorMeserosVideosSection() {
               <YouTubePlayer
                 videoId="uXfDzZuoym4"
                 title="Así de fácil es mejorar la atención en tu restaurante"
-                imageCover="https://i.ytimg.com/vi_webp/uXfDzZuoym4/maxresdefault.webp"
+                imageCover="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758214316/vista_previa_video_timbre_de_restaurante"
+                imageCoverAlt="Vista previa del video sobre timbre de restaurante"
+                imageCoverTitle="Video timbre de restaurante"
               />
             </div>
 
@@ -26,7 +28,9 @@ function LlamadorMeserosVideosSection() {
               <YouTubePlayer
                 videoId="XevVCpp6Drc"
                 title="Personal más alerta, facilita el llamado de meseros desde la cocina"
-                imageCover="https://i.ytimg.com/vi_webp/XevVCpp6Drc/sddefault.webp"
+                imageCover="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758214313/vista_previa_video_timbre_inalambrico_para_restaurantes"
+                imageCoverAlt="Vista previa del video timbre inalámbrico para restaurantes"
+                imageCoverTitle="Video timbre inalámbrico para restaurantes"
               />
             </div>
           </div>
@@ -36,7 +40,9 @@ function LlamadorMeserosVideosSection() {
               <YouTubePlayer
                 videoId="9CPZ2QoFyqM"
                 title="Un solo toque y el número de mesa aparece en pantalla"
-                imageCover="https://i.ytimg.com/vi_webp/9CPZ2QoFyqM/sddefault.webp"
+                imageCover="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758214313/vista_previa_video_llamadores_de_mesa"
+                imageCoverAlt="Vista previa del video explicativo de llamadores de mesa"
+                imageCoverTitle="Video llamadores de mesa"
               />
             </div>
           </div>

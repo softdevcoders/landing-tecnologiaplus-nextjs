@@ -10,49 +10,63 @@ function LlamadorMeserosVerMasSection() {
     {
       title: "Llamador E2-N de 3 teclas",
       description: "4.987 vendidos",
-      image: "v1742395037/Boto%CC%81n_3_teclas_4x-8_buaiyg",
+      image: "v1758214317/llamador_de_meseros_e2n_tres_teclas",
+      alt: "Llamador de meseros E2-N de tres teclas",
+      title_attribute: "Llamador de meseros E2-N",
       link: routes.landings.llamadoresDeMeseros.children.e2_n.url,
       type: "llamador_mesero",
     },
     {
       title: "Llamador E2-B de 2 teclas",
       description: "4.193 vendidos",
-      image: "v1738694394/2_2x-8_1_yojp4b",
+      image: "v1758214350/llamador_de_meseros_e2b_dos_teclas",
+      alt: "Llamador de meseros E2-B de dos teclas compacto",
+      title_attribute: "Llamador de meseros E2-B",
       link: routes.landings.llamadoresDeMeseros.children.e2_b.url,
       type: "llamador_mesero",
     },
     {
       title: "Hablador para mesa",
       description: "2.175 vendidos",
-      image: "v1738694393/3_2x-8_igijiu",
+      image: "v1758214569/hablador_para_mesa_timbres_para_restaurantes",
+      alt: "Hablador para mesa compatible con timbres para restaurantes",
+      title_attribute: "Hablador para mesa timbres para restaurantes",
       link: routes.landings.llamadoresDeMeseros.children.habladorDeMesa.url,
       type: "llamador_mesero",
     },
     {
       title: "Control numérico para cocina",
       description: "198 vendidos",
-      image: "v1738694391/4_2x-8_mioq3p",
+      image: "v1758214320/control_numerico_timbres_para_mesas_de_restaurantes",
+      alt: "Control numérico de cocina para timbres de mesas de restaurantes",
+      title_attribute: "Timbres para mesas de restaurantes control numérico",
       link: routes.landings.llamadoresDeMeseros.children.controlNumerico.url,
       type: "llamador_mesero",
     },
     {
       title: "Reloj receptor de llamados",
       description: "2.276 vendidos",
-      image: "v1738685534/reloj_receptor_digital_2x-8_adfgxj",
+      image: "v1758214316/reloj_receptor_timbre_de_mesa",
+      alt: "Reloj receptor digital para gestionar timbre de mesa",
+      title_attribute: "Timbre de mesa reloj receptor",
       link: routes.landings.llamadoresDeMeseros.children.relojReceptorDeLlamados.url,
       type: "recibir_llamados",
     },
     {
       title: "Pantalla T<span>1</span>-B de <span>1</span> llamado",
       description: "886 vendidos",
-      image: "v1739197744/Turnero_T1B_2x-8_1_1_opvowd",
+      image: "v1758214566/pantalla_t1b_timbre_restaurante",
+      alt: "Pantalla T1-B para gestión de timbre restaurante",
+      title_attribute: "Pantalla T1-B timbre restaurante",
       link: routes.landings.llamadoresDeMeseros.children.t1_b.url,
       type: "recibir_llamados",
     },
     {
       title: "Pantalla T6 de 6 llamados",
       description: "942 vendidos",
-      image: "v1738694391/6_llamados_2x-8_wppkb6",
+      image: "v1758214567/pantalla_t6_timbres_para_restaurantes",
+      alt: "Pantalla T6 de seis llamados con timbres para restaurantes",
+      title_attribute: "Pantalla T6 timbres para restaurantes",
       link: routes.landings.llamadoresDeMeseros.children.t6.url,
       type: "recibir_llamados",
     },
@@ -62,7 +76,7 @@ function LlamadorMeserosVerMasSection() {
     <section data-nosnippet className={style.ver__mas__section}>
       <div className={style.ver__mas__section__container}>
         <h2 className={style.ver__mas__section__title}>
-          Opciones para llamar al mesero
+          Opciones de timbres inalámbricos para llamar al mesero
         </h2>
         <div className={style.ver__mas__section__container__cards}>
           {products.filter((product) => product.type === "llamador_mesero").map((product, index) => (
@@ -71,7 +85,8 @@ function LlamadorMeserosVerMasSection() {
                 <Link href={product.link}>  
                   <Image
                     src={getOptimizedImageUrl({ url: product.image, width: 600, quality: 80 })}
-                    alt={product.title}
+                    alt={product.alt}
+                    title={product.title_attribute}
                     width={250}
                     height={250}
                     className={style.ver__mas__section__container__card__image__img}
@@ -99,7 +114,7 @@ function LlamadorMeserosVerMasSection() {
       </div>
       <div className={style.ver__mas__section__container}>
         <h2 className={style.ver__mas__section__title}>
-          Opciones para recibir llamados
+          Opciones para recibir llamados de clientes 
         </h2>
         <div className={style.ver__mas__section__container__cards}>
           {products.filter((product) => product.type === "recibir_llamados").map((product, index) => (
@@ -108,7 +123,8 @@ function LlamadorMeserosVerMasSection() {
                 <Link href={product.link}>  
                   <Image
                     src={getOptimizedImageUrl({ url: product.image, width: 600, quality: 80 })}
-                    alt={product.title}
+                    alt={product.alt}
+                    title={product.title_attribute}
                     width={250}
                     height={250}
                     className={style.ver__mas__section__container__card__image__img}

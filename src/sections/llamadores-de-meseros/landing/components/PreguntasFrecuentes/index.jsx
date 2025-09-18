@@ -3,7 +3,10 @@ import { llamadoresDeMeserosPreguntasFrecuentes } from "@/config/preguntas-frecu
 
 const LlamadoresDeMeserosPreguntasFrecuentes = () => {
   return (
-    <PreguntasFrecuentes preguntasFrecuentes={llamadoresDeMeserosPreguntasFrecuentes} />
+    <PreguntasFrecuentes 
+      preguntasFrecuentes={llamadoresDeMeserosPreguntasFrecuentes} 
+      title="Preguntas frecuentes sobre llamadores de meseros"
+    />
   )
 }
 

@@ -10,8 +10,9 @@ function LlamadorMeserosProductsSection() {
       <div className={style.products__container_mobile}>
         <div className={style.products__container__item}>
           <Image
-            src={getOptimizedImageUrl({ url: "v1743022988/11_4x-8_1_sftupq", width: 600, quality: 80 })}
-            alt="Reloj receptor de llamados para meseros"
+            src={getOptimizedImageUrl({ url: "v1758215724/reloj__receptor_timbre_de_restaurante.webp", width: 600, quality: 80 })}
+            alt="Reloj receptor digital para timbre de restaurante"
+            title="Reloj receptor timbre de restaurante"
             width={500}
             height={402}
             className={style.products__container__item__image}
@@ -20,8 +21,9 @@ function LlamadorMeserosProductsSection() {
         </div>
         <div className={style.products__container__item}>
           <Image
-            src={getOptimizedImageUrl({ url: "v1743022991/12_4x-8_km9kam", width: 600, quality: 80 })}
-            alt="Hablador de mesa junto al botón para llamar al mesero"
+            src={getOptimizedImageUrl({ url: "v1758215506/hablador__mesa_boton_llamador_de_meseros", width: 600, quality: 80 })}
+            alt="Hablador de mesa con botón llamador de meseros"
+            title="Hablador de mesa con llamador de meseros"
             width={421}
             height={253}
             className={style.products__container__item__image}
@@ -32,8 +34,9 @@ function LlamadorMeserosProductsSection() {
       <div className={style.products__container_desktop}>
         <div className={style.products__container__item}>
           <Image
-            src={getOptimizedImageUrl({ url: "v1738694397/Group_8_og4pea", quality: 80 })}
-            alt="Reloj receptor de llamados para meseros"
+            src={getOptimizedImageUrl({ url: "v1758214578/reloj_receptor_timbre_de_restaurante", quality: 80 })}
+            alt="Reloj receptor digital para timbre de restaurante"
+            title="Reloj receptor timbre de restaurante"
             width={800}
             height={585}
             className={style.products__container__item__image}
@@ -42,8 +45,9 @@ function LlamadorMeserosProductsSection() {
         </div>
         <div className={style.products__container__item}>
           <Image
-            src={getOptimizedImageUrl({ url: "v1738694396/Group_9_yutx7u", quality: 80 })}
-            alt="Hablador de mesa junto al botón para llamar al mesero"
+            src={getOptimizedImageUrl({ url: "v1758214577/hablador_mesa_boton_llamador_de_meseros", quality: 80 })}
+            alt="Hablador de mesa con botón llamador de meseros"
+            title="Hablador de mesa con llamador de meseros"
             width={800}
             height={585}
             className={style.products__container__item__image}

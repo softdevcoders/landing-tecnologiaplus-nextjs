@@ -4,7 +4,7 @@ const benefits = [
   {
     icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/q_80/v1757697968/icono_gota_a_prueba_de_agua",
     title: "Resiste derrames de agua",
-    description: "* Referencia seleccionada",
+    description: "* Según modelo",
     width: 183,
     height: 183,
     alt: "icono de gota a prueba de agua",
