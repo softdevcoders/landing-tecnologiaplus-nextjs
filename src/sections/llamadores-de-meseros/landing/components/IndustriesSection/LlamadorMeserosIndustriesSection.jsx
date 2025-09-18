@@ -12,22 +12,25 @@ import {
 function LlamadorMeserosIndustriesSection() {
   const industries = [
     {
-      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738694400/restaurantes_2x-8_lpqdzj.webp",
-      alt: "icono de Restaurantes",
+      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758214310/industrias_restaurantes_llamador_de_meseros",
+      alt: "Icono restaurantes para usar llamador de meseros",
+      title: "Restaurantes llamador de meseros",
       name: "Restaurantes",
       width: 340,
       height: 293,
     },
     {
-      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738694403/hoteles_2x-8_odgal8.webp",
-      alt: "icono de Hoteles",
+      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758214310/industrias_hoteles_timbre_de_restaurante",
+      alt: "Icono hoteles que implementan timbre de restaurante",
+      title: "Hoteles timbre de restaurante",
       name: "Hoteles",
       width: 340,
       height: 293,
     },
     {
-      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738694400/otras_industrias_2x-8_jwvjrm.webp",
-      alt: "icono de Otras industrias",
+      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758214311/industrias_otras_industrias_timbres_para_restaurantes",
+      alt: "Icono otras industrias con uso de timbres para restaurantes",
+      title: "Otras industrias timbres para restaurantes",
       name: "Otras industrias",  
       width: 340,
       height: 293,
@@ -42,7 +45,7 @@ function LlamadorMeserosIndustriesSection() {
           {industries.map((industry, index) => (
             <IndustriesSectionListItem key={index}>
               <IndustriesSectionListItemIconContainer>
-                <IndustriesSectionListItemIcon src={industry.icon} alt={industry.alt} />
+                <IndustriesSectionListItemIcon src={industry.icon} alt={industry.alt} title={industry.title} />
               </IndustriesSectionListItemIconContainer>
               <IndustriesSectionListItemText text={industry.name} />
             </IndustriesSectionListItem>

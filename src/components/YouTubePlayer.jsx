@@ -9,7 +9,7 @@ import styles from "./YouTubePlayer.module.scss";
  * 1. Shows a static thumbnail with play button (no YouTube cookies)
  * 2. Only loads YouTube iframe after explicit user consent
  */
-const YouTubePlayer = ({ videoId, title, imageCover }) => {
+const YouTubePlayer = ({ videoId, title, imageCover, imageCoverAlt = "Vista previa del video", imageCoverTitle = "Vista previa del video" }) => {
   const [consent, setConsent] = useState(false);
 
   // Extract video ID if a full URL was provided
@@ -36,7 +36,8 @@ const YouTubePlayer = ({ videoId, title, imageCover }) => {
             />
             <img
               src={imageCover || `https://i.ytimg.com/vi/${extractedVideoId}/hqdefault.jpg`}
-              alt="Vista previa del video"
+              alt={imageCoverAlt}
+              title={imageCoverTitle} 
               className={styles.thumbnail}
               loading="lazy"
               width="660"

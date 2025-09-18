@@ -42,7 +42,6 @@ const defaultProducts = [
     sold: "194 vendidos",
     link: routes.landings.sistemasDeTurnosTurnomaster.url,
     category_key: categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key,
-    // customClass: style.turnomaster__img__custom,
   },
   {
     name: "Dispensador de tiquetes",
@@ -56,8 +55,9 @@ const defaultProducts = [
   {
     name: "Localizadores para restaurantes",
     description: "Lleva el autoservicio a otro nivel.",
-    img: "v1754420152/localizadores_para_restaurantes_za7yhv",
-    altText: "Imagen de Localizadores para Restaurantes - Tecnología Plus",
+    img: "v1758214645/localizadores_restaurantes_tecnologia_plus",
+    altText: "Imagen de Localizadores para Restaurantes de Tecnología Plus",
+    title_attribute: "Localizadores para Restaurantes",
     sold: "4.225 vendidos",
     link: routes.landings.localizadoresParaRestaurantes.url,
     category_key: categories.LOCALIZADORES_PARA_RESTAURANTES.category_key,
@@ -65,8 +65,9 @@ const defaultProducts = [
   {
     name: "CuidaMaster",
     description: "Facilita la comunicación paciente - enfermera.",
-    img: "v1754420142/llamado_de_enfermeri%CC%81a_cuidamaster_gctjus",
-    altText: "Imagen de Llamado de Enfermería Cuidamaster - Tecnología Plus",
+    img: "v1758214644/llamado_enfermeria_cuidamaster_tecnologia_plus",
+    altText: "Imagen de Llamado de Enfermería Cuidamaster de Tecnología Plus",
+    title_attribute: "Llamado de Enfermería Cuidamaster",
     sold: "9.825 vendidos",
     link: routes.landings.llamadoDeEnfermeria.url,
     category_key: categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,

@@ -23,7 +23,7 @@ const products = [
   {
     title: "Localizadores",
     description: "Lleva el autoservicio a otro nivel.",
-    imageSrc: "v1754420152/localizadores_para_restaurantes_za7yhv", 
+    imageSrc: "v1758214645/localizadores_restaurantes_tecnologia_plus", 
     altText: "Imagen de Localizadores para Restaurantes - Tecnología Plus",
     link: routes.landings.localizadoresParaRestaurantes.url,
   },
@@ -36,8 +36,8 @@ const products = [
   }, 
   {
     title: "Llamado de enfermería",
-    description: "Facilita la comunicación paciente - enfermera. ",
-    imageSrc: "v1754420142/llamado_de_enfermeri%CC%81a_cuidamaster_gctjus",
+    description: "Facilita la comunicación paciente - enfermera.",
+    imageSrc: "v1758214644/llamado_enfermeria_cuidamaster_tecnologia_plus",
     altText: "Imagen de Llamado de Enfermería Cuidamaster - Tecnología Plus",
     link: routes.landings.llamadoDeEnfermeria.url,
   }, 

@@ -137,37 +137,37 @@ const clientes = {
     title: "Logo Hospital San Rafael",
   },
   Smartfit: {
-    src: `${BASE_URL}/v1750865403/smart_fit_24_06_2025_q4jvmw`,
+    src: `${BASE_URL}/v1758218488/smartfit-logo`,
     alt: "Logo Smartfit",
     title: "Logo Smartfit",
   },
   Estelar: {
-    src: `${BASE_URL}/v1743126933/F4C07E32B458FF3E_hpjknp`,
+    src: `${BASE_URL}/v1758210373/estelar-logo`,
     alt: "Logo Estelar",
     title: "Logo Estelar",
   },
   ClubCampestre: {
-    src: `${BASE_URL}/v1743127595/F4C8E93F6E675389_xuanu0`,
+    src: `${BASE_URL}/v1758210372/club-campestre-logo`,
     alt: "Logo Club Campestre",
     title: "Logo Club Campestre",
   },
   HotelesCosmos: {
-    src: `${BASE_URL}/v1742563266/Mesa_de_trabajo_36_abflwi`,
+    src: `${BASE_URL}/v1758210372/hoteles-cosmos-logo`,
     alt: "Logo Hoteles Cosmos",
     title: "Logo Hoteles Cosmos",
   },
   ClubElNogal: {
-    src: `${BASE_URL}/v1743542350/Mesa_de_trabajo_37_4x_n1ksz9`,
+    src: `${BASE_URL}/v1758210372/club-el-nogal-logo`,
     alt: "Logo Club El Nogal",
     title: "Logo Club El Nogal",
   },
   Jumbo: {
-    src: `${BASE_URL}/v1742563267/Mesa_de_trabajo_38_uajfyi`,
+    src: `${BASE_URL}/v1758210372/jumbo-logo`,
     alt: "Logo Jumbo",
     title: "Logo Jumbo",
   },
   Loreal: {
-    src: `${BASE_URL}/v1742563272/Mesa_de_trabajo_62_w7ggme`,
+    src: `${BASE_URL}/v1758210373/loreal-logo`,
     alt: "Logo Loreal",
     title: "Logo Loreal",
   },
@@ -232,7 +232,7 @@ const clientes = {
     title: "Logo Crepes & Waffles",
   },
   LaFincaDeRigo: {
-    src: `${BASE_URL}/v1755887843/la-finca-de-rigo_q2t7o8`,
+    src: `${BASE_URL}/v1758210373/la-finca-de-rigo-logo`,
     alt: "Logo La Finca de Rigo",
     title: "Logo La Finca de Rigo",
   },
