@@ -38,7 +38,6 @@ function LlamadorMeserosBenefitsSection() {
       </div>
       <BenefitsSection 
         benefits={benefits} 
-        title="BENEFICIOS<br />DESTACADOS"
         className={style.benefits__container_list}
         isLlamadorDeMeseros={true}
       />
