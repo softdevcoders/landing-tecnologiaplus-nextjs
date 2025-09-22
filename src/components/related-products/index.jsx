@@ -85,8 +85,9 @@ const defaultProducts = [
   {
     name: "Calificador de servicios",
     description: "Toma decisiones con la opinión de tus clientes",
-    img: "v1754420542/calificador_de_servicios_opinamaster_gwnjgp",
-    altText: "Imagen de Calificador de Servicio OpinaMaster - Tecnología Plus",
+    img: "v1758563095/calificador_de_servicio_al_cliente_tecnologia_plus",
+    altText: "Calificador de Servicio al cliente OpinaMaster de Tecnología Plus",
+    title_attribute: "Calificador de Servicio al cliente",
     sold: "490 vendidos",
     link: routes.landings.calificadorDeServicioAlClienteOpinamaster.url,
     category_key: categories.CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER.category_key,
@@ -94,8 +95,9 @@ const defaultProducts = [
   {
     name: "Llamadores de meseros",
     description: "El botón que eleva la calidad del servicio.",
-    img: "v1754420144/llamadores_de_meseros_hfsfxc",
-    altText: "Imagen de Llamador de meseros - Tecnología Plus",
+    img: "v1758563095/llamador_de_meseros_tecnologia_plus",
+    altText: "Llamador de meseros de Tecnología Plus",
+    title_attribute: "Llamador de meseros",
     sold: "8.426 vendidos",
     link: routes.landings.llamadoresDeMeseros.url,
     category_key: categories.LLAMADORES_DE_MESEROS.category_key,

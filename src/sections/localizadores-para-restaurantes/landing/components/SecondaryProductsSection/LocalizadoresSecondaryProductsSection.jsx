@@ -9,12 +9,13 @@ function LocalizadoresSecondaryProductsSection() {
     <>
       <section className={style.secondary__products__section} data-nosnippet>
         <div className={style.secondary__products__container}>
+          <h2 className={style.secondary__products__title}>Localizadores para restaurantes autoservicio</h2>
           <div
             className={style.secondary__products__card__container}
           >
             <div className={style.secondary__products__card}>
               <div className={style.secondary__products__card__content}>
-                <h3 className={style.secondary__products__card__title}>REC V3</h3>
+                <h3 className={style.secondary__products__card__title}>Localizadores <br /> REC V3</h3>
                 <Link
                   className={style.secondary__products__card__btn}
                   href={routes.landings.localizadoresParaRestaurantes.children.rec_v3.url}
@@ -27,8 +28,9 @@ function LocalizadoresSecondaryProductsSection() {
                 <Image
                   width={800}
                   height={595}
-                  src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_800/v1738855044/rec_v3_1_2x-8_ctzrqp.webp"
-                  alt="Localizador para restaurantes REC V3 junto a su base de carga"
+                  src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_800/v1758563425/localizador_restaurantes_rec_v3_base_carga"
+                  alt="Localizador para restaurantes modelo REC V3 con base de carga incluida"
+                  title="Localizador REC V3 para restaurantes con base de carga"
                   unoptimized={true}
                 />
               </div>
@@ -45,7 +47,7 @@ function LocalizadoresSecondaryProductsSection() {
             </div>
             <div className={style.secondary__products__card}>
               <div className={style.secondary__products__card__content}>
-                <h3 className={style.secondary__products__card__title}>CIR C2</h3>
+                <h3 className={style.secondary__products__card__title}>Localizadores <br /> CIR C2</h3>
                 <Link
                   className={style.secondary__products__card__btn}
                   href={routes.landings.localizadoresParaRestaurantes.children.rec_c2.url}
@@ -58,8 +60,9 @@ function LocalizadoresSecondaryProductsSection() {
                 <Image
                   width={800}
                   height={595}
-                  src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_800/v1738851948/cir_c2_1_2x-8_lb8ufb.webp"
-                  alt="Localizadores para clientes CIR C2 junto a su base de carga"
+                  src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_800/v1758563427/localizador_clientes_cir_c2_base_carga"
+                  alt="Localizador para clientes modelo CIR C2 junto a su base de carga"
+                  title="Localizador CIR C2 para clientes con base de carga"
                   unoptimized={true}
                 />
               </div>
@@ -77,12 +80,14 @@ function LocalizadoresSecondaryProductsSection() {
             className={style.video__card__container}
           >
             <div className={style.video__card}>
-              <p className={style.video__card__title}>Rec V3 - Localizadores para restaurantes</p>
+              <h3 className={style.video__card__title}>Rec V3 - Localizadores para restaurantes</h3>
               <div className={style.video__card__player__container}>
                 <YouTubePlayer
                   videoId="aB7FLAPCCJ8"
                   title="Rec V3 - Localizadores para restaurantes"
-                  imageCover="https://i.ytimg.com/vi_webp/aB7FLAPCCJ8/maxresdefault.webp"
+                  imageCover="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758563424/localizador_rec_v3_personalizable_logo_base_carga"
+                  imageCoverAlt="Localizador REC V3 en su base de carga con opción de personalizar el logo del restaurante"
+                  imageCoverTitle="Localizador REC V3 personalizable con logo en la base de carga"
                   unoptimized={true}
                 />
               </div>
@@ -90,12 +95,14 @@ function LocalizadoresSecondaryProductsSection() {
             </div>
 
             <div className={style.video__card}>
-              <p className={style.video__card__title}>Cir C2 - Localizadores para restaurantes</p>
+              <h3 className={style.video__card__title}>Cir C2 - Localizadores para restaurantes</h3>
               <div className={style.video__card__player__container}>
                 <YouTubePlayer
                   videoId="b2nlu7sOlcI"
                   title="Cir C2 - Localizadores para restaurantes"
-                  imageCover="https://i.ytimg.com/vi_webp/b2nlu7sOlcI/sddefault.webp"
+                  imageCover="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758563425/localizadores_redondos_cir_c2_con_control_numerico"
+                  imageCoverAlt="Localizadores redondos modelo CIR C2 acompañados de su control numérico"
+                  imageCoverTitle="Localizadores redondos CIR C2 junto al control numérico"
                   unoptimized={true}
                 />
               </div>
