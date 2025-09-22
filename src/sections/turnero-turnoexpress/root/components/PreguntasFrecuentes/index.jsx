@@ -3,7 +3,10 @@ import { turneroTurnoexpressPreguntasFrecuentes } from "@/config/preguntas-frecu
 
 const TurneroTurnoexpressPreguntasFrecuentes = () => {  
   return (
-    <PreguntasFrecuentes preguntasFrecuentes={turneroTurnoexpressPreguntasFrecuentes} />
+    <PreguntasFrecuentes 
+      preguntasFrecuentes={turneroTurnoexpressPreguntasFrecuentes} 
+      title="Preguntas frecuentes sobre el Turnero Digital Digiturno"
+    />
   )
 }
 

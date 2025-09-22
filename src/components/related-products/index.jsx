@@ -8,8 +8,9 @@ const defaultProducts = [
   {
     name: "Rollos de turnos",
     description: "Organiza y mejora el servicio.",
-    img: "v1754420149/rollos_de_fichos_para_turnos_turnoexpress_scqobh",
-    altText: "Imagen de Rollos de Turnos TurnoExpress - Tecnología Plus",
+    img: "v1758572623/rollos_de__fichos_para_turnos_tecnologia_plus",
+    altText: "Rollos de fichos para turnos - Tecnología Plus",
+    title_attribute: "Rollos de fichos para turnos",
     sold: "8.527 vendidos",
     link: routes.landings.rollosDeFichosParaTurnos.url,
     category_key: categories.ROLLOS_DE_FICHOS_PARA_TURNOS.category_key,
@@ -17,8 +18,9 @@ const defaultProducts = [
   {
     name: "Rollos térmicos",
     description: "Perfectos para tickets, facturas y más.",
-    img: "v1754420146/rollos_de_papel_termico_jnusbb",
-    altText: "Imagen de Rollos de Papel Térmico - Tecnología Plus",
+    img: "v1758572595/rollos_de_papel_termico_tecnologia_plus",
+    altText: "Rollos de Papel Térmico - Tecnología Plus",
+    title_attribute: "Rollos de Papel Térmico",
     sold: "14.485 vendidos",
     link: routes.landings.rollosDePapelTermico.url,
     category_key: categories.ROLLOS_DE_PAPEL_TERMICO.category_key,

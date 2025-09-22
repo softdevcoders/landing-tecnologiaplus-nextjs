@@ -8,15 +8,16 @@ function SecondaryTurnoExpressProductsSection() {
     <section data-nosnippet className={style.products__section}>
       <div className={style.products__card}>
         <Link href={routes.landings.dispensadorDeTickets.children.dispensadorDeTicketsCaracol.url}> 
-          <h2 className={style.products__card__title}>Dispensador de tiquetes</h2> 
+          <span className={style.products__card__title}>Dispensador de tiquetes</span> 
         </Link>
         <div className={style.products__card__image_container}>
           <Link href={routes.landings.dispensadorDeTickets.children.dispensadorDeTicketsCaracol.url}> 
             <Image
               width={490}
               height={320}
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738789798/Dispensador_2x-8_soj9hp.webp"
-              alt="Dispensador de turnos caracol rojo"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/v1758571671/dispensador_de_tickets_tecnologia_plus"
+              alt="Dispensador de tickets - Tecnología Plus"
+              title="Dispensador de tickets"
               className={style.products__card__image_container__image}    
               unoptimized={true}
             />
@@ -32,15 +33,16 @@ function SecondaryTurnoExpressProductsSection() {
       </div>
       <div className={style.products__card}>
         <Link href={routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url}> 
-          <h2 className={style.products__card__title}>Rollos de turnos</h2>
+          <span className={style.products__card__title}>Rollos de turnos</span>
         </Link>
         <div className={style.products__card__image_container}>
           <Link href={routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url}> 
             <Image
               width={490}
               height={320}
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738448114/Rollos_de_turnos_2x-8_ovbwlu.webp"
-              alt="Rollos de turnos personalizados"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/v1758571659/rollos_de_fichos_para_turnos_tecnologia_plus"
+              alt="Rollos de fichos para turnos - Tecnología Plus"
+              title="Rollos de fichos para turnos"
               className={style.products__card__image_container__image}
               unoptimized={true}
             />

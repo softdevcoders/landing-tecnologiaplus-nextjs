@@ -10,42 +10,54 @@ function TurnoExpressProductsSection() {
     {
       title: "Turnero T<span>1</span>-B",
       description: "294 vendidos",
-      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1739197744/Turnero_T1B_2x-8_1_1_opvowd.webp",
+      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758570594/turnero_colombia_t1_b",
+      alt: "Imagen de Turnero Colombia modelo T1-B",
+      title_attribute: "Turnero Colombia T1-B",
       link: routes.landings.turneroTurnoexpress.children.turneroT1B.url,
       type: "panel_turnos",
     },
     {
       title: "Turnero T<span>1</span>-N",
       description: "869 vendidos",
-      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431727/Turnero_T1N_2x-8_r4igzs.webp",
+      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758570569/turnero_digiturno_t1_n",
+      alt: "Imagen del turnero digiturno modelo T1-N",
+      title_attribute: "Turnero Digiturno T1-N",
       link: routes.landings.turneroTurnoexpress.children.turneroT1N.url,
       type: "panel_turnos",
     },
     {
       title: "Turnero fila única",
       description: "32 vendidos",
-      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431726/Fila_unica_2x-8_iejxvf.webp",
+      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758570598/turnero_digital_fila_unica",
+      alt: "Turnero Digital de fila única",
+      title_attribute: "Turnero Digital fila única",
       link: routes.landings.turneroTurnoexpress.children.turneroFilaUnicaSupermercados.url,
       type: "panel_turnos",
     },
     {
       title: "Turnero T3",
       description: "692 vendidos",
-      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431727/Turnero_T3_2x-8_ypmexo.webp",
+      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758570590/turneros_digitales_t3",
+      alt: "Imagen de Turneros Digitales modelo T3",
+      title_attribute: "Turneros Digitales T3",
       link: routes.landings.turneroTurnoexpress.children.turneroT3ModuloTurno.url,
       type: "panel_turnos",
     },
     {
       title: "Turnero Transformer",
       description: "82 vendidos",
-      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431730/Segun_producto_2x-8_fepwc0.webp",
+      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758570596/turnero_electronico_transformer",
+      alt: "Imagen de Turnero Electrónico modelo Transformer",
+      title_attribute: "Turnero Electrónico Transformer",
       link: routes.landings.turneroTurnoexpress.children.turneroTransformer.url,
       type: "panel_digital",
     },
     {
       title: "Turnero T3 - con logo",
       description: "269 vendidos",
-      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738431729/T3_con_logo_2x-8_ofmcyp.webp",
+      image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758570568/turneros_para_restaurantes_t3_logo",
+      alt: "Imagen de Turneros para Restaurantes T3 con logo",
+      title_attribute: "Turneros para Restaurantes T3 con logo",
       link: routes.landings.turneroTurnoexpress.children.turneroT3ConLogo.url,
       type: "panel_digital",
     },
@@ -64,7 +76,8 @@ function TurnoExpressProductsSection() {
                 <Link href={product.link}>  
                   <Image
                     src={product.image}
-                    alt={product.title}
+                    alt={product.alt}
+                    title={product.title_attribute}
                     width={250}
                     height={250}
                     className={style.ver__mas__section__container__card__image__img}
@@ -92,7 +105,7 @@ function TurnoExpressProductsSection() {
       </div>
       <div className={style.ver__mas__section__container}>
         <h2 className={style.ver__mas__section__title}>
-          Turneros digitales personalizados
+          Turneros digitales personalizados e inalámbricos
         </h2>
         <div className={style.ver__mas__section__container__cards}>
           {products.filter((product) => product.type === "panel_digital").map((product, index) => (
@@ -101,7 +114,8 @@ function TurnoExpressProductsSection() {
                 <Link href={product.link}>  
                   <Image
                     src={product.image}
-                    alt={product.title}
+                    alt={product.alt}
+                    title={product.title_attribute}
                     width={250}
                     height={250}
                     className={style.ver__mas__section__container__card__image__img}
