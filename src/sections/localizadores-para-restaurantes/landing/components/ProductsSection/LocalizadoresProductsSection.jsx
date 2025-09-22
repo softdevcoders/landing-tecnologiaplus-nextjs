@@ -6,7 +6,7 @@ function LocalizadoresProductsSection() {
   return (
     <section data-nosnippet className={style.products__section}>
       <h2 className={style.products__title}>
-        Más de 1.000 restaurantes usan nuestros localizadores
+        Más de 1.000 restaurantes usan nuestros localizadores de clientes
       </h2>
       <p className={style.products__description}>
         Elige el avisador de pedidos que mejor se adapte a tu negocio.
@@ -14,8 +14,9 @@ function LocalizadoresProductsSection() {
       <div className={style.products__container}>
         <div className={style.products__container__item}>
           <Image
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_470/v1738851946/rec_v3_2x-8_ehwkxo.webp"
-            alt="Localizador para clientes Rec V3"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/v1758563430/lrs_rec_v3"
+            alt="LRS sistema de localizadores Rec V3 Tecnología Plus"
+            title="LRS Rec V3 de Tecnología Plus"
             width={500}
             height={402}
             className={style.products__container__item__image}
@@ -24,8 +25,9 @@ function LocalizadoresProductsSection() {
         </div>
         <div className={style.products__container__item}>
           <Image
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/c_scale/w_600/v1738851948/cir_c2_2x-8_icgmcm.webp"
-            alt="Localizador para restaurantes Cir C2"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/v1758563431/avisador_de_pedidos_cir_c2"
+            alt="Avisador de pedidos Cir C2 para restaurantes Tecnología Plus"
+            title="Avisador de pedidos Cir C2"
             width={421}
             height={253}
             className={style.products__container__item__image}

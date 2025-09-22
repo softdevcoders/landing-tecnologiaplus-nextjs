@@ -8,8 +8,9 @@ const defaultProducts = [
   {
     name: "Rollos de turnos",
     description: "Organiza y mejora el servicio.",
-    img: "v1754420149/rollos_de_fichos_para_turnos_turnoexpress_scqobh",
-    altText: "Imagen de Rollos de Turnos TurnoExpress - Tecnología Plus",
+    img: "v1758572623/rollos_de__fichos_para_turnos_tecnologia_plus",
+    altText: "Rollos de fichos para turnos - Tecnología Plus",
+    title_attribute: "Rollos de fichos para turnos",
     sold: "8.527 vendidos",
     link: routes.landings.rollosDeFichosParaTurnos.url,
     category_key: categories.ROLLOS_DE_FICHOS_PARA_TURNOS.category_key,
@@ -17,8 +18,9 @@ const defaultProducts = [
   {
     name: "Rollos térmicos",
     description: "Perfectos para tickets, facturas y más.",
-    img: "v1754420146/rollos_de_papel_termico_jnusbb",
-    altText: "Imagen de Rollos de Papel Térmico - Tecnología Plus",
+    img: "v1758572595/rollos_de_papel_termico_tecnologia_plus",
+    altText: "Rollos de Papel Térmico - Tecnología Plus",
+    title_attribute: "Rollos de Papel Térmico",
     sold: "14.485 vendidos",
     link: routes.landings.rollosDePapelTermico.url,
     category_key: categories.ROLLOS_DE_PAPEL_TERMICO.category_key,
@@ -85,8 +87,9 @@ const defaultProducts = [
   {
     name: "Calificador de servicios",
     description: "Toma decisiones con la opinión de tus clientes",
-    img: "v1754420542/calificador_de_servicios_opinamaster_gwnjgp",
-    altText: "Imagen de Calificador de Servicio OpinaMaster - Tecnología Plus",
+    img: "v1758563095/calificador_de_servicio_al_cliente_tecnologia_plus",
+    altText: "Calificador de Servicio al cliente OpinaMaster de Tecnología Plus",
+    title_attribute: "Calificador de Servicio al cliente",
     sold: "490 vendidos",
     link: routes.landings.calificadorDeServicioAlClienteOpinamaster.url,
     category_key: categories.CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER.category_key,
@@ -94,8 +97,9 @@ const defaultProducts = [
   {
     name: "Llamadores de meseros",
     description: "El botón que eleva la calidad del servicio.",
-    img: "v1754420144/llamadores_de_meseros_hfsfxc",
-    altText: "Imagen de Llamador de meseros - Tecnología Plus",
+    img: "v1758563095/llamador_de_meseros_tecnologia_plus",
+    altText: "Llamador de meseros de Tecnología Plus",
+    title_attribute: "Llamador de meseros",
     sold: "8.426 vendidos",
     link: routes.landings.llamadoresDeMeseros.url,
     category_key: categories.LLAMADORES_DE_MESEROS.category_key,
@@ -112,7 +116,7 @@ export default function RelatedProducts({
 
   return (
     <section data-nosnippet className={`${style.related__products} ${addMarginBottom ? style.addMarginBottom : ''}`}>
-      <h2 className={style.related__products__title} data-is-ver-mas={isVerMasView}>{title}</h2>
+      <span className={style.related__products__title} data-is-ver-mas={isVerMasView}>{title}</span>
       <RelatedProductsCarousel
         isVerMasVersionNueva={isVerMasVersionNueva}
         products={filteredProducts} 

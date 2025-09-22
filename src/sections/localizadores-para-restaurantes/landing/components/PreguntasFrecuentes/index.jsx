@@ -3,7 +3,10 @@ import { localizadoresDeRestaurantesPreguntasFrecuentes } from "@/config/pregunt
 
 const LocalizadoresPreguntasFrecuentes = () => {
   return (
-    <PreguntasFrecuentes preguntasFrecuentes={localizadoresDeRestaurantesPreguntasFrecuentes} />
+    <PreguntasFrecuentes 
+      preguntasFrecuentes={localizadoresDeRestaurantesPreguntasFrecuentes} 
+      title="Preguntas frecuentes sobre el avisador de pedidos"
+    />
   )
 }
 
