@@ -45,11 +45,12 @@ function BenefitsSection({ benefits, title, className = "", isHome = false, isEn
                   height={benefit.height}
                   src={benefit.icon}
                   alt={benefit.alt}
-                  sizes="(max-width: 768px) 40vw, (max-width: 1200px) 30vw, 20vw"
+                  className={style.item__icon}
                   unoptimized={true}
                 />
                 <h3
                   dangerouslySetInnerHTML={{ __html: benefit.title }}
+                  className={style.item__title}
                 />
               </li>
             ))}
