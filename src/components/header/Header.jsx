@@ -82,7 +82,7 @@ function Header({ headerAlt = false }) {
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${headerAlt ? styles.headerAlt : ""}`}>
-      <div className={styles.header__container}>
+      <div className={styles.header__container} data-nosnippet>
         <div className={styles.header__navlinks_left}>
           <Link href={routes.home.url} className={`${styles.header__navlinks_link} ${homeActive ? styles.active : ''}`}>{routes.home.label}</Link>
           <DropdownMenu links={productLinks} title="Productos" active={productActive} />
@@ -142,7 +142,7 @@ function Header({ headerAlt = false }) {
       </div>
 
       {isMenuOpen && (
-        <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
+        <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`} data-nosnippet>
           <Link href={routes.home.url} className={`${styles.header__navlinks_link} ${homeActive ? styles.active : ''}`}>{routes.home.label}</Link>  
           <DropdownMenuMobile links={productLinks} title="Productos" isOpen={dropDownMobileOpen === "Productos"} handleDropDownMobileOpen={handleDropDownMobileOpen} active={productActive} />
           <DropdownMenuMobile links={blogLinks} title="Blog" isOpen={dropDownMobileOpen === "Blog"} handleDropDownMobileOpen={handleDropDownMobileOpen} active={blogActive} />
