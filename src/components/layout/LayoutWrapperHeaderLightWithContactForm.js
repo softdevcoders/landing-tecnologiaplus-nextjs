@@ -7,10 +7,12 @@ import ContactForm from "@/components/contact-form/contact-form"
 const LayoutWrapperHeaderLightWithContactForm = ({ children }) => (
   <>
     <Header />
-    <DisableRightClickOnImages />
-    {children}
-    <ContactForm />
-    <WhatsappButton />
+    <main>
+      <DisableRightClickOnImages />
+      {children}
+      <ContactForm />
+      <WhatsappButton />
+    </main>
     <Footer />
   </>
 )

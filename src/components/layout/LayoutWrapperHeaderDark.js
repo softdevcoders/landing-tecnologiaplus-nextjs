@@ -6,9 +6,11 @@ import Footer from "@/components/footer/Footer"
 const LayoutWrapperHeaderDark = ({ children }) => (
   <>
     <Header headerAlt />
-    <DisableRightClickOnImages />
-    {children}
-    <WhatsappButton />
+    <main>
+      <DisableRightClickOnImages />
+      {children}
+      <WhatsappButton />
+    </main>
     <Footer />
   </>
 )
