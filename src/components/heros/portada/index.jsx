@@ -54,7 +54,7 @@ export const LandingHeroPortadaContentImageImg = ({ image, isMobile = false, cla
 
 export const LandingHeroPortadaContentText = ({ children, className = "" }) => {
   return (
-    <div className={`${style.landingHeroSection__text} ${className}`}>
+    <div className={`${style.landingHeroSection__text} ${className}`} data-nosnippet>
       {children}
     </div>
   )
