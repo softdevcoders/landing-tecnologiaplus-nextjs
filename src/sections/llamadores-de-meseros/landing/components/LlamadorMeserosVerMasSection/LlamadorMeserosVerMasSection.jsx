@@ -28,7 +28,7 @@ function LlamadorMeserosVerMasSection() {
     {
       title: "Hablador para mesa",
       description: "2.175 vendidos",
-      image: "v1758214569/hablador_para_mesa_timbres_para_restaurantes",
+      image: "v1758724542/hablador_para_mesa_timbres_para__restaurantes",
       alt: "Hablador para mesa compatible con timbres para restaurantes",
       title_attribute: "Hablador para mesa timbres para restaurantes",
       link: routes.landings.llamadoresDeMeseros.children.habladorDeMesa.url,
