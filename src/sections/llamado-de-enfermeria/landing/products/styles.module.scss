@@ -48,15 +48,22 @@
       .products__container__item {
         width: 50%;
 
-        .products__container__item__image {
-          .products__container__item__image__img:first-child {
-            width: 327px;
-            height: 468px;
+        &:first-child {
+          .products__container__item__image {
+            .products__container__item__image__img {
+              width: 440px;
+              height: 435px;
+              margin-top: -15px;
+            }
           }
+        }
 
-          .products__container__item__image__img:last-child { 
-            width: 440px;
-            height: 440px;
+        &:last-child {
+          .products__container__item__image {
+            .products__container__item__image__img {
+              width: 440px;
+              height: 440px;
+            }
           }
         }
       }
