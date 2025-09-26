@@ -1,6 +1,6 @@
 import Link from "next/link";
 import style from "./LocalizadoresSecondaryProductsSection.module.scss";
-import YouTubePlayer from "@/components/YouTubePlayer";
+import YouTubePlayer from "@/components/youtube-player";
 import { routes } from "@/config/routes";
 import Image from "next/image";
 

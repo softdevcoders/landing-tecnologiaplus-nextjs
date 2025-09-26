@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, memo, useCallback, useEffect, useRef } from "react";
-import styles from "./YouTubePlayer.module.scss";
+import styles from "./styles.module.scss";
 
 /**
  * Enhanced YouTube embed component with robust error handling and user experience
@@ -19,7 +19,7 @@ const YouTubePlayer = ({
   imageCover, 
   imageCoverAlt = "Vista previa del video", 
   imageCoverTitle = "Vista previa del video",
-  autoplay = false,
+  autoplay = true,
   muted = false,
   startTime = 0,
   onVideoStart,
@@ -158,7 +158,7 @@ const YouTubePlayer = ({
 
   return (
     <div className={`${styles.youtubeContainer} ${className}`} {...props}>
-      {!consent || hasError ? (
+      {!consent || true ? (
         <div 
           className={styles.thumbnailContainer} 
           onClick={hasError ? handleRetry : handleConsent}
@@ -216,7 +216,7 @@ const YouTubePlayer = ({
           </div>
           
           <div className={styles.consentMessage}>
-            {hasError ? (
+            {hasError && (
               <div>
                 <p>Error al cargar el video</p>
                 <small>Intento {retryCount + 1} de 3</small>
@@ -231,8 +231,6 @@ const YouTubePlayer = ({
                   {retryCount >= 3 ? 'Máximo de reintentos alcanzado' : 'Reintentar'}
                 </button>
               </div>
-            ) : (
-              <p>Haz clic para reproducir</p>
             )}
           </div>
         </div>

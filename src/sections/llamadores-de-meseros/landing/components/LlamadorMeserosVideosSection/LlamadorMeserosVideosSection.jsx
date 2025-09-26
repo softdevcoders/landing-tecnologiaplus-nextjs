@@ -1,5 +1,5 @@
 import style from "./LlamadorMeserosVideosSection.module.scss";
-import YouTubePlayer from "@/components/YouTubePlayer";
+import YouTubePlayer from "@/components/youtube-player";
 
 function LlamadorMeserosVideosSection() {
   return (
