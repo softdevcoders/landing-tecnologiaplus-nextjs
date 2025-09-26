@@ -88,7 +88,6 @@ function LocalizadoresSecondaryProductsSection() {
                   imageCover="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758563424/localizador_rec_v3_personalizable_logo_base_carga"
                   imageCoverAlt="Localizador REC V3 en su base de carga con opción de personalizar el logo del restaurante"
                   imageCoverTitle="Localizador REC V3 personalizable con logo en la base de carga"
-                  unoptimized={true}
                 />
               </div>
 
@@ -103,7 +102,6 @@ function LocalizadoresSecondaryProductsSection() {
                   imageCover="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758563425/localizadores_redondos_cir_c2_con_control_numerico"
                   imageCoverAlt="Localizadores redondos modelo CIR C2 acompañados de su control numérico"
                   imageCoverTitle="Localizadores redondos CIR C2 junto al control numérico"
-                  unoptimized={true}
                 />
               </div>
             </div>
