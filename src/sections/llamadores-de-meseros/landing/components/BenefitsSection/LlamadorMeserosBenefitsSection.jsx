@@ -1,6 +1,6 @@
 import style from "./LlamadorMeserosBenefitsSection.module.scss";
 import BenefitsSection from "@/components/benefits";
-import YouTubePlayer from "@/components/YouTubePlayer";
+import YouTubePlayer from "@/components/youtube-player";
 import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 const benefits = [

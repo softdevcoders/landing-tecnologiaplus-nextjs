@@ -17,7 +17,7 @@
     border-radius: 1.25rem;
     overflow: hidden;
 
-    div {
+   & > div {
       width: 100% !important;
     }
   }
