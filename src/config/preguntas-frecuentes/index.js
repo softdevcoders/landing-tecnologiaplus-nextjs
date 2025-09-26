@@ -2,4 +2,4 @@ export { preguntasFrecuentes as llamadoresDeMeserosPreguntasFrecuentes } from '.
 export { preguntasFrecuentes as localizadoresDeRestaurantesPreguntasFrecuentes } from './localizadores-de-restaurantes';
 export { preguntasFrecuentes as llamadoresEnfermeriaPreguntasFrecuentes } from './llamadores-enfermeria';
 export { preguntasFrecuentes as turneroTurnoexpressPreguntasFrecuentes } from './turnero-turnoexpress';
-export { preguntasFrecuentes as turnoMasterPreguntasFrecuentes } from './sistema-de-turnos-turnomaster';
+export { preguntasFrecuentes as sistemasDeTurnosTurnomasterPreguntasFrecuentes } from './sistema-de-turnos-turnomaster';

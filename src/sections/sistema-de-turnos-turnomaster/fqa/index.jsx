@@ -1,10 +1,10 @@
 import PreguntasFrecuentes from "@/components/preguntas-frecuentes"
-import { turnoMasterPreguntasFrecuentes } from "@/config/preguntas-frecuentes"
+import { sistemasDeTurnosTurnomasterPreguntasFrecuentes } from "@/config/preguntas-frecuentes"
 
 const TurnoMasterPreguntasFrecuentes = () => {
   return (
     <PreguntasFrecuentes  
-      preguntasFrecuentes={turnoMasterPreguntasFrecuentes}
+      preguntasFrecuentes={sistemasDeTurnosTurnomasterPreguntasFrecuentes}
       title="Preguntas frecuentes sobre Sistema de turnos de espera"
     />
   )
