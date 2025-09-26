@@ -3,25 +3,28 @@ import style from "./styles.module.scss";
 
 const benefits = [
   {
-    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860473/icono_1_2x-8_2_ahx7d0",
+    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902038/sistema_de_turnos_personalizable",
     title: "Personaliza según colores y necesidades de tu marca",
     width: 183,
     height: 183,
-    alt: "Personaliza según colores y necesidades de tu marca.",
+    alt: "Sistema de turnos personalizable con colores y logo de la empresa",
+    title_attribute: "Personaliza tu sistema de turnos y adáptalo a tu marca",
   },
   {
-    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860472/icono_2_2x-8_2_kjq13k",
+    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902038/software_de_turnos_con_reportes",
     title: "Datos y estadísticas para evaluar y controlar la calidad del servicio",
     width: 155,
     height: 154,
-    alt: "Reportes gráficos para mejor toma de decisiones",
+    alt: "Software de turnos con reportes gráficos para análisis de gestión",
+    title_attribute: "Mejora decisiones con software de turnos y reportes inteligentes",
   },
   {
-    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860471/icono_3_2x-8_2_fzlqej",
+    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902039/sistema_de_turnos_flexible",
     title: "Agrega funciones extra según tus necesidades",
     width: 155,
     height: 155,
-    alt: "Agrega funciones extra según tus necesidades",
+    alt: "Sistema de turnos flexible con funciones adicionales",
+    title_attribute: "Escoge un sistema de turnos adaptable a tus necesidades",
   }
 ];
 

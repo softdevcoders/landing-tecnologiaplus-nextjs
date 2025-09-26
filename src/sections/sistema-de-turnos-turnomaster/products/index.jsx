@@ -13,8 +13,9 @@ function TurnoMasterProductsSection() {
         <div className={style.products__section__mobile}>
           <div className={style.products__section__mobile__image}>
             <Image
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1742994791/8_4x-8_xto11r.webp"
-              alt="Solicitar turno de manera presencial"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758903159/sistema_de_turnos_online_movil.webp"
+              alt="Solicitud de turnos en línea desde cualquier dispositivo"
+              title="Ofrece turnos online para comodidad de tus usuarios"
               width={588}
               height={378}
               className={style.products__section__mobile__image__img}
@@ -24,8 +25,9 @@ function TurnoMasterProductsSection() {
           <a href={whatsappUrl} target="_blank" rel="noreferrer" className={`${style.products__whatsapp__btn__mobile} ${style.products__whatsapp__btn}`}>¡Quiero más información!</a> 
           <div className={style.products__section__mobile__image}>
             <Image
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1742994790/9_4x-8_zejb3t.webp"
-              alt="Solicitar turno de manera presencial"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758903159/maquina_para_turnos_digital_movil.webp"
+              alt="Máquina digital para turnos con dispensador automático de tickets"
+              title="Agiliza la organización con una máquina para turnos digital"
               width={375}
               height={400}
               className={style.products__section__mobile__image__img}
@@ -36,8 +38,9 @@ function TurnoMasterProductsSection() {
         <div className={style.products__section__desktop}>
           <div className={style.products__section__desktop__image}>
             <Image
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860442/turno_en_casa_2x-8_szazfa.webp"
-              alt="Solicitar turno de manera presencial"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902040/sistema_de_turnos_online.webp"
+              alt="Solicitud de turnos en línea desde cualquier dispositivo"
+              title="Ofrece turnos online para comodidad de tus usuarios"
               width={375}
               height={400}
               className={style.products__section__desktop__image__img}
@@ -46,8 +49,9 @@ function TurnoMasterProductsSection() {
           </div>
           <div className={style.products__section__desktop__image}>
             <Image
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860441/pedestal_2x-8_eurzvd.webp"
-              alt="Solicitar turno de manera presencial"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902039/maquina_para_turnos_digital.webp"
+              alt="Máquina digital para turnos con dispensador automático de tickets"
+              title="Agiliza la organización con una máquina para turnos digital"
               width={588}
               height={378}
               className={style.products__section__desktop__image__img}

@@ -13,8 +13,9 @@ function SecondaryTurnoMasterProductsSection() {
             <p className={style.products__card__description}>físico o digital</p>
             <div className={style.products__card__image_container}> 
               <Image
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738864481/Group_11_1_muxouk.webp"
-                alt="Ticket de turno en físico y en el teléfono"
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902037/maquina_de_tickets_para_filas"
+                alt="Máquina de tickets para filas con opción física y digital"
+                title="Ofrece tickets en papel y en celular con sistema de turnos"
                 width={1000}
                 height={1000}
                 unoptimized={true}
@@ -26,8 +27,9 @@ function SecondaryTurnoMasterProductsSection() {
             <p className={style.products__card__description}>para llamar los turnos</p>
             <div className={style.products__card__image_container}> 
               <Image
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860441/pantalla_tv_2x-8_oq494d.webp"
-                alt="Pantalla TV para llamar los turnos"
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902038/pantalla_de_turnos_electronica"
+                alt="Pantalla electrónica para mostrar turnos en tiempo real"
+                title="Organiza las filas con pantallas electrónicas de turnos"
                 width={1000}
                 height={1000}
                 unoptimized={true}
@@ -44,8 +46,9 @@ function SecondaryTurnoMasterProductsSection() {
             <p className={style.products__card__description}>Reportes en tiempo real de tiempos de atención y calidad del servicio</p>
             <div className={style.products__card__image_container}> 
               <Image
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738864484/estadisticas_2x-8_i2w4e1.webp"
-                alt="Estadísticas en base a los resultados del calificador de servicio"
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902038/sistema_de_turnos_con_estadisticas"
+                alt="Sistema de turnos con estadísticas y calificación del servicio"
+                title="Analiza la atención con estadísticas en tu sistema de turnos"
                 width={1000}
                 height={1000}
                 unoptimized={true}
@@ -57,8 +60,9 @@ function SecondaryTurnoMasterProductsSection() {
             <p className={style.products__card__description}>software amigable y escalable a las necesidades</p>
             <div className={style.products__card__image_container}> 
               <Image
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860449/software_2x-8_rpfkti.webp"
-                alt="Pantalla de turnos con la información correspondiente al mostrar el llamado"
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902035/software_para_turnos_de_espera"
+                alt="Software de turnos de espera con información en pantalla"
+                title="Controla la atención al cliente con software para turnos"
                 width={1000}
                 height={1000}
                 unoptimized={true}
@@ -78,8 +82,9 @@ function SecondaryTurnoMasterProductsSection() {
           <div className={style.additional__services__section__card}>
             <div className={style.additional__services__section__card__image_container}>  
               <Image 
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860451/1_2x-8_2_dm6w2x.webp" 
-                alt="Código QR para revisar el turno"
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902034/sistema_de_turnos_con_qr.webp" 
+                alt="Sistema de turnos con código QR para consultar ticket"
+                title="Facilita la consulta con sistema de turnos y QR"
                 width={1000}
                 height={1000}
                 unoptimized={true}
@@ -90,8 +95,9 @@ function SecondaryTurnoMasterProductsSection() {
           <div className={style.additional__services__section__card}>
             <div className={style.additional__services__section__card__image_container}>  
               <Image 
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860450/2_2x-8_2_gf82jw.webp" 
-                alt="Visualización del turno correspondiente y del que fue llamado para así guiar al usuario"
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902035/sistema_de_control_de_turnos.webp" 
+                alt="Sistema de control de turnos con visualización en pantalla"
+                title="Guía a los clientes con un sistema de control de turnos"
                 width={1000}
                 height={1000}
                 unoptimized={true}
@@ -102,8 +108,9 @@ function SecondaryTurnoMasterProductsSection() {
           <div className={style.additional__services__section__card}>
             <div className={style.additional__services__section__card__image_container}>  
               <Image 
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738860452/3_2x-8_1_aldwxr.webp" 
-                alt="Notificación por medio de mensaje de texto del turno correspondiente"
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902034/sistema_de_turnos_con_sms.webp" 
+                alt="Sistema de turnos con notificación por mensaje de texto" 
+                title="Informa a los clientes con sistema de turnos vía SMS"
                 width={1000}
                 height={1000}
                 unoptimized={true}
@@ -114,8 +121,9 @@ function SecondaryTurnoMasterProductsSection() {
           <div className={style.additional__services__section__card}>
             <div className={style.additional__services__section__card__image_container}>  
               <Image 
-                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738868534/4_2x-8_1_nalqed.webp" 
-                alt="Calificador de servicio u OpinaMaster"
+                src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1758902035/sistema_de_turnos_con_calificador.webp" 
+                alt="Calificador de servicio integrado en el sistema de turnos"
+                title="Mejora la atención con calificación en tu sistema de turnos"
                 width={1000}
                 height={1000}
                 unoptimized={true}
