@@ -1,12 +1,11 @@
-import { routes } from "@/config/routes";
 import Image from "next/image";
-import style from "./TurnoMasterProductsSection.module.scss";
+import style from "./styles.module.scss";
 
 function TurnoMasterProductsSection() {
   const whatsappUrl = `https://wa.me/573164682034?text=${encodeURIComponent(`Hola, vengo de la página "Sistema de turnos TurnoMaster" y quiero más información.`)}`;
   return (
     <section className={style.products__section} data-nosnippet>
-      <h2 className={style.products__section__title}>Dos formas de solicitar el turno</h2>
+      <h2 className={style.products__section__title}>Dos formas de usar el Sistema de Gestión de Turnos</h2>
       <div className={style.products__whatsapp__btn__desktop}>
         <a href={whatsappUrl} target="_blank" rel="noreferrer" className={`${style.products__whatsapp__btn__desktop} ${style.products__whatsapp__btn}`}>¡Quiero más información!</a> 
       </div>

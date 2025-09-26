@@ -1,15 +1,15 @@
-
 import Image from "next/image";
-import style from "./SecondaryTurnoMasterProductsSection.module.scss";
+import style from "./styles.module.scss";
 import ToggleTextContent from "@/components/toggle-text-content";
 
 function SecondaryTurnoMasterProductsSection() {  
   return (
     <>
       <section className={style.products__section__top} data-nosnippet>
+        <h2 className={style.products__section__title}>¿Cómo funciona nuestro Sistema de Gestión de Turnos?</h2>
         <div className={style.products__container__top}>
           <div className={style.products__card}>
-            <h2 className={style.products__card__title}>Ticket de turno</h2>
+            <span className={style.products__card__title}>Ticket de turno</span>
             <p className={style.products__card__description}>físico o digital</p>
             <div className={style.products__card__image_container}> 
               <Image
@@ -22,7 +22,7 @@ function SecondaryTurnoMasterProductsSection() {
             </div>
           </div>
           <div className={style.products__card}>
-            <h2 className={style.products__card__title}>Pantalla TV</h2>
+            <span className={style.products__card__title}>Pantalla TV</span>
             <p className={style.products__card__description}>para llamar los turnos</p>
             <div className={style.products__card__image_container}> 
               <Image
@@ -37,9 +37,10 @@ function SecondaryTurnoMasterProductsSection() {
         </div>
       </section>
       <section className={style.products__section__bottom} data-nosnippet>
+        <h2 className={style.products__section__title}>Funciones destacadas del sistema de turnos</h2>
         <div className={style.products__container__bottom}>
           <div className={style.products__card}>
-            <h2 className={style.products__card__title}>Estadísticas generales y de cada turno</h2>
+            <span className={style.products__card__title}>Estadísticas generales y de cada turno</span>
             <p className={style.products__card__description}>Reportes en tiempo real de tiempos de atención y calidad del servicio</p>
             <div className={style.products__card__image_container}> 
               <Image
@@ -52,7 +53,7 @@ function SecondaryTurnoMasterProductsSection() {
             </div>
           </div>
           <div className={style.products__card}>
-            <h2 className={style.products__card__title}>Control total de la sala de espera</h2>
+            <span className={style.products__card__title}>Control total de la sala de espera</span>
             <p className={style.products__card__description}>software amigable y escalable a las necesidades</p>
             <div className={style.products__card__image_container}> 
               <Image
@@ -65,12 +66,14 @@ function SecondaryTurnoMasterProductsSection() {
             </div>
           </div>
         </div>
-        <ToggleTextContent>
-          <p>Cada marca es única, y en Tecnología Plus lo sabemos. Por eso, nuestro Sistema TurnoMaster es fácil de usar y personalizable, diseñado para adaptarse a las necesidades de tu sala de espera. Configura los colores, escoge la numeración de turnos, elige entre múltiples opciones para organizar filas y el llamado de turnos. Además, puedes integrar servicios adicionales para optimizar la experiencia del usuario. Nuestro software de turnos es dinámico, lo cual permite generar reportes detallados y visualizar métricas clave en tiempo real, facilitando la toma de decisiones para agilizar la atención. Ya sea en el sector salud, retail, oficinas u otros, TurnoMaster transforma la gestión de turnos en un proceso más ágil y organizado, mejorando la experiencia tanto para los colaboradores como para los usuarios.</p> 
+        <ToggleTextContent showToggleButtonInDesktop={true}>
+          <p>Cada marca es única, y en Tecnología Plus lo sabemos. Por eso, nuestro <strong>Sistema de Turnos TurnoMaster</strong> está diseñado para ser intuitivo, personalizable y adaptable, ya sea que necesites <strong>un software para turnos médicos</strong>, una <strong>máquina de turnos digital</strong> o un <strong>completo sistema de control de colas y turnos</strong>. Configura colores, clasifica tipos de servicio, elige la numeración adecuada y organiza las filas y el llamado de turnos según tus necesidades específicas. También puedes complementar el sistema con servicios adicionales que mejoren la experiencia del usuario en salas de espera o atención en filas.</p> 
+          <p>Nuestro <strong>software turnero</strong> permite generar métricas detalladas y reportes en tiempo real, facilitando la toma de decisiones y optimizando el flujo de atención. Gracias a su diseño dinámico, puedes monitorear tiempos de espera, identificar cuellos de botella y ajustar parámetros automáticamente para mejorar la gestión del sistema de turnos. Si usas nuestra solución como <strong>sistema gestión de filas, sistema de gestión de turnos</strong> o incluso con funciones tipo <strong>software de turnos para atención en salas de espera</strong>, tendrás acceso a información valiosa que impulsa tu eficiencia operativa.</p> 
+          <p>Ya sea en el sector salud, oficinas, retail u otros rubros con alta demanda de atención, TurnoMaster transforma la gestión de turnos en un proceso ordenado, efectivo y profesional. Con nuestra <strong>máquina de tickets para filas</strong> integrada, podrás combinar el uso físico y digital. Además, el <strong>sistema digiturno</strong> que ofrecemos permite eliminar filas tradicionales, mejorar la experiencia del cliente y dar control sobre el servicio. En suma, nuestro <strong>sistema de turnos</strong> no solo facilita la operación diaria, sino que posiciona tu marca como referente en organización, modernidad y calidad en atención al cliente.</p>
         </ToggleTextContent>
       </section>
       <section className={style.additional__services__section} data-nosnippet>
-        <h2 className={style.additional__services__section__title}>Servicios adicionales</h2>
+        <h2 className={style.additional__services__section__title}>Servicios complementarios de la Máquina para Turnos Digital</h2>
         <div className={style.additional__services__section__cards}>
           <div className={style.additional__services__section__card}>
             <div className={style.additional__services__section__card__image_container}>  
@@ -82,7 +85,7 @@ function SecondaryTurnoMasterProductsSection() {
                 unoptimized={true}
               />
             </div>
-            <p className={style.additional__services__section__card__text}>Código QR para revisar el turno</p>
+            <h3 className={style.additional__services__section__card__text}>Código QR para revisar el turno</h3>
           </div>
           <div className={style.additional__services__section__card}>
             <div className={style.additional__services__section__card__image_container}>  
@@ -94,7 +97,7 @@ function SecondaryTurnoMasterProductsSection() {
                 unoptimized={true}
               />
             </div>
-            <p className={style.additional__services__section__card__text}>Ver estado del turno en el celular</p>
+            <h3 className={style.additional__services__section__card__text}>Ver estado del turno en el celular</h3>
           </div>
           <div className={style.additional__services__section__card}>
             <div className={style.additional__services__section__card__image_container}>  
@@ -106,7 +109,7 @@ function SecondaryTurnoMasterProductsSection() {
                 unoptimized={true}
               />
             </div>
-            <p className={style.additional__services__section__card__text}>Turno por mensaje de texto</p>
+            <h3 className={style.additional__services__section__card__text}>Turno por mensaje de texto</h3>
           </div>
           <div className={style.additional__services__section__card}>
             <div className={style.additional__services__section__card__image_container}>  
@@ -118,7 +121,7 @@ function SecondaryTurnoMasterProductsSection() {
                 unoptimized={true}
               />
             </div>
-            <p className={style.additional__services__section__card__text}>Calificador de servicio</p>
+            <h3 className={style.additional__services__section__card__text}>Calificador de servicio</h3>
           </div>
         </div>
       </section>

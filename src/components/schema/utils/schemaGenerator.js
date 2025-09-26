@@ -20,10 +20,10 @@ export const ROUTE_CONFIG = {
     metadataKey: 'turnero-turnoexpress',
     serviceType: "Turnero TurnoExpress"
   },
-  // '/sistema-de-turnos-turnomaster': {
-  //   metadataKey: 'sistema-de-turnos-turnomaster',
-  //   serviceType: "Sistema de turnos TurnoMaster"
-  // },
+  '/sistema-de-turnos-turnomaster': {
+    metadataKey: 'sistema-de-turnos-turnomaster',
+    serviceType: "Sistema de turnos TurnoMaster"
+  },
   // '/rollos-de-fichos-para-turnos': {
   //   metadataKey: 'rollos-de-fichos-para-turnos',
   //   serviceType: "Rollos de fichos para turnos"
