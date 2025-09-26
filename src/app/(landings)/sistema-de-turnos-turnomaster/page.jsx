@@ -1,11 +1,12 @@
 import getMetadata from "@/request/server/metadata/get-metadata";
-import TurnoMasterBenefitsSection from "@/sections/sistema-de-turnos-turnomaster/components/BenefitsSection/TurnoMasterBenefitsSection";
-import TurnoMasterClientsSection from "@/sections/sistema-de-turnos-turnomaster/components/ClientsSection/TurnoMasterClientsSection";
-import TurnoMasterHeroSection from "@/sections/sistema-de-turnos-turnomaster/components/HeroSection/TurnoMasterHeroSection";
-import TurnoMasterIndustriesSection from "@/sections/sistema-de-turnos-turnomaster/components/IndustriesSection/TurnoMasterIndustriesSection";
-import TurnoMasterProductsSection from "@/sections/sistema-de-turnos-turnomaster/components/ProductsSection/TurnoMasterProductsSection";
-import TurnoMasterRelatedProducts from "@/sections/sistema-de-turnos-turnomaster/components/RelatedProducts/TurnoMasterRelatedProducts";
-import SecondaryTurnoMasterProductsSection from "@/sections/sistema-de-turnos-turnomaster/components/SecondaryProductsSection/SecondaryTurnoMasterProductsSection";
+import TurnoMasterBenefitsSection from "@/sections/sistema-de-turnos-turnomaster/benefits";
+import TurnoMasterClientsSection from "@/sections/sistema-de-turnos-turnomaster/clients";
+import TurnoMasterHeroSection from "@/sections/sistema-de-turnos-turnomaster/hero";
+import TurnoMasterIndustriesSection from "@/sections/sistema-de-turnos-turnomaster/industries";
+import TurnoMasterProductsSection from "@/sections/sistema-de-turnos-turnomaster/products";
+import TurnoMasterRelatedProducts from "@/sections/sistema-de-turnos-turnomaster/related-products";
+import SecondaryTurnoMasterProductsSection from "@/sections/sistema-de-turnos-turnomaster/secondary-products";
+import TurnoMasterPreguntasFrecuentes from "@/sections/sistema-de-turnos-turnomaster/fqa";
 
 export async function generateMetadata() {
   const { 'sistema-de-turnos-turnomaster': { root: metadata } } = getMetadata('landings');
@@ -22,6 +23,7 @@ export default function TurnoMasterLanding() {
       <SecondaryTurnoMasterProductsSection />
       <TurnoMasterIndustriesSection />
       <TurnoMasterRelatedProducts />
+      <TurnoMasterPreguntasFrecuentes />
     </>
   );
 }
