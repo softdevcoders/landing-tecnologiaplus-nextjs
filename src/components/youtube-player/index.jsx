@@ -158,7 +158,7 @@ const YouTubePlayer = ({
 
   return (
     <div className={`${styles.youtubeContainer} ${className}`} {...props}>
-      {!consent || true ? (
+      {!consent || hasError ? (
         <div 
           className={styles.thumbnailContainer} 
           onClick={hasError ? handleRetry : handleConsent}
