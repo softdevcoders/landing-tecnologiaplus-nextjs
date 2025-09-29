@@ -231,6 +231,21 @@ const clientes = {
     alt: "Logo La Finca de Rigo",
     title: "Logo La Finca de Rigo",
   },
+  Easy: {
+    src: `${BASE_URL}/v1759157935/easy-logo`,
+    alt: "Logo Easy",
+    title: "Logo Easy",
+  },
+  PriceSmart: {
+    src: `${BASE_URL}/v1759157935/pricesmart-logo`,
+    alt: "Logo PriceSmart",
+    title: "Logo PriceSmart",
+  },
+  Metro: {
+    src: `${BASE_URL}/v1759157935/metro-logo`,
+    alt: "Logo Metro",
+    title: "Logo Metro",
+  },
 }
 
 export const logosTermicos = [
@@ -264,8 +279,10 @@ export const logosTurnoExpress = [
   clientes.Colmedica,
   clientes.MacPollo,
   clientes.ComfenalcoAntioquia,
-  clientes.Comfacundi,
-  clientes.BancoSantander
+  clientes.BancoSantander,
+  clientes.Easy,
+  clientes.PriceSmart,
+  clientes.Metro,
 ];
 
 export const logosTurnoMaster = [
