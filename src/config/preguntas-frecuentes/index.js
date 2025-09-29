@@ -3,3 +3,4 @@ export { preguntasFrecuentes as localizadoresDeRestaurantesPreguntasFrecuentes }
 export { preguntasFrecuentes as llamadoresEnfermeriaPreguntasFrecuentes } from './llamadores-enfermeria';
 export { preguntasFrecuentes as turneroTurnoexpressPreguntasFrecuentes } from './turnero-turnoexpress';
 export { preguntasFrecuentes as sistemasDeTurnosTurnomasterPreguntasFrecuentes } from './sistema-de-turnos-turnomaster';
+export { preguntasFrecuentes as dispensadorDeTicketsPreguntasFrecuentes } from './dispensador-de-tickets';

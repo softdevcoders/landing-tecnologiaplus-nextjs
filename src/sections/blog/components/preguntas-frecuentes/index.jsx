@@ -4,7 +4,8 @@ import {
   localizadoresDeRestaurantesPreguntasFrecuentes,
   llamadoresEnfermeriaPreguntasFrecuentes,
   turneroTurnoexpressPreguntasFrecuentes,
-  sistemasDeTurnosTurnomasterPreguntasFrecuentes
+  sistemasDeTurnosTurnomasterPreguntasFrecuentes,
+  dispensadorDeTicketsPreguntasFrecuentes
 } from "@/config/preguntas-frecuentes";
 import { routes } from "@/config/routes";
 
@@ -26,6 +27,9 @@ const PreguntasFrecuentesBlog = ({ categoryKey }) => {
       break;
     case routes.blog.children.sistemasDeTurnosTurnomaster.category_key:
       preguntasFrecuentes = sistemasDeTurnosTurnomasterPreguntasFrecuentes;
+      break;
+    case routes.blog.children.dispensadorDeTickets.category_key:
+      preguntasFrecuentes = dispensadorDeTicketsPreguntasFrecuentes;
       break;
     default:  
       preguntasFrecuentes = null;

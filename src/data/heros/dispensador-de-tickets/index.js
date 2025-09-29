@@ -29,7 +29,7 @@ const inicio = {
 };
 
 const portada = { 
-  titulo: "Dispensador de tickets",
+  titulo: "Dispensador de tickets para turnos",
   descripcion: "Adiós a las filas. Orden y comodidad en cada turno.",
   imagenes: [{
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_600,q_80/website-v2/images/landings/dispensador-de-tickets/landings/gx6ul5i1mmjqdmi6rqvf",

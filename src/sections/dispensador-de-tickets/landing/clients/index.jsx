@@ -4,7 +4,7 @@ import { logosTurnos } from "@/config/client-logos";
 function DispensadorTiquetesClientsSection() {
   return (
     <NuestrosClientes 
-      title="Algunos de nuestros clientes"
+      title="Clientes que usan nuestro dispensador de tickets"
       description="Grandes y pequeños negocios eliminan filas con nuestro dispensador de turnos."
       logos={logosTurnos}
     />
