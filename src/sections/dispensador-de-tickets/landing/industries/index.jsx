@@ -14,18 +14,21 @@ import style from "./styles.module.scss";
 function DispensadorTiquetesIndustriesSection() {
   const industries = [
     {
-      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350027/Salud_2x-8_vg4jxo_dyuifd",
-      alt: "Icono de Sector salud", 
+      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1759249529/industrias_sector_salud_dispensador_de_tickets",
+      alt: "Icono del Sector salud", 
+      title: "Sector salud",
       name: "Sector salud", 
     },
     {
-      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349970/Oficinas_2x-8_xzhwcw_jumnnh",
-      alt: "Icono de Oficinas",
+      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1759249529/industrias_oficinas_dispensador_de_tickets",
+      alt: "Icono de oficinas",
+      title: "Icono de oficinas",
       name: "Oficinas", 
     },
     {
-      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349970/otras_indistrias_2x-8_bvq8fo_s2xoyg",
-      alt: "Icono de Otras industrias",
+      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1759249529/industrias_otras_industrias_dispensador_de_tickets",
+      alt: "Icono otras industrias",
+      title: "Otras industrias",
       name: "Otras industrias",
     },
   ];
@@ -41,7 +44,7 @@ function DispensadorTiquetesIndustriesSection() {
           {industries.map((industry, index) => (
             <IndustriesSectionListItem key={index}>
               <IndustriesSectionListItemIconContainer>
-                <IndustriesSectionListItemIcon src={industry.icon} alt={industry.alt} />
+                <IndustriesSectionListItemIcon src={industry.icon} alt={industry.alt} title={industry.title} />
               </IndustriesSectionListItemIconContainer>
               <IndustriesSectionListItemText text={industry.name} />
             </IndustriesSectionListItem>

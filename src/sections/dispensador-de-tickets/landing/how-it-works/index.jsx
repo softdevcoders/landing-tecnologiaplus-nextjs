@@ -3,22 +3,22 @@ import style from "./styles.module.scss";
 
 const steps = [
   {
-    image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1740689242/8_4x-8_2_twguhd",
+    image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/v1759249531/dispensador_de_tickets_para_turnos_tomar_numero",
     title: "Usuario toma un número de turno en el dispensador tipo caracol.",
-    alt: "",
-    title_attribute: "",
+    alt: "Usuario toma su turno en el dispensador de tickets para turnos color rojo",
+    title_attribute: "Cómo funciona un dispensador de tickets para turnos: tomar el número",
   },
   {
-    image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1740689241/9_4x-8_2_cldmeo",
+    image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/v1759249530/dispensador_de_numeros_para_atencion_espera",
     title: "Usuario espera que lo llamen en la pantalla.",
-    alt: "",
-    title_attribute: "",
+    alt: "Cliente espera su turno en pantalla tras recibir número en dispensador de números para atención",
+    title_attribute: "Espera organizada con dispensador de números para atención al cliente",
   },
   {
-    image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1740689243/7_4x-8_1_ek8a7o",
+    image: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/v1759249530/dispensador_de_turnos_cliente_atendido",
     title: "Cuando llaman el turno, se dirige a la ventanilla o módulo de atención.",
-    alt: "",
-    title_attribute: "",
+    alt: "Cliente es atendido tras ser llamado mediante el dispensador de turnos",
+    title_attribute: "Atención al cliente tras recibir llamado con dispensador de turnos",
   },
 ];
 

@@ -15,8 +15,9 @@ function DispensadorTiquetesProductsSection() {
             <Image
               width={1594}
               height={952}
-              src={getOptimizedImageUrl({ url: 'v1759157259/Dispensador-de-tiquetes-con-rollos', width: 900, quality: 80 })}
-              alt="Colores de tickets y dispensador de turnos rojo"
+              src={getOptimizedImageUrl({ url: 'v1759249532/caracol_de_turnos_rollo_tickets', width: 900, quality: 80 })}
+              alt="Caracol de turnos compatible con rollos grandes de tiquetes"
+              title="Caracol de turnos con rollos de tickets para atención al cliente"
               unoptimized={true}
             />
           </div>
@@ -25,8 +26,9 @@ function DispensadorTiquetesProductsSection() {
             <Image
               width={1594}
               height={952}
-              src={getOptimizedImageUrl({ url: 'v1759157257/Dispensador-de-tiquetes-colores', width: 900, quality: 80 })}
-              alt="Colores de tickets y dispensador de turnos rojo"
+              src={getOptimizedImageUrl({ url: 'v1759249532/dispensador_de_tickets_para_bancos_colores', width: 900, quality: 80 })}
+              alt="Dispensador de tickets para bancos en colores azul rojo y verde"
+              title="Dispensador de tickets para bancos disponible en varios colores"
               unoptimized={true}
             />
           </div>
@@ -40,8 +42,9 @@ function DispensadorTiquetesProductsSection() {
             <Image
               width={1594}
               height={952}
-              src={getOptimizedImageUrl({ url: 'v1759157256/Dispensador-de-tiquetes-soporte-de-piso', height: 900, quality: 80 })}
-              alt="Colores de tickets y dispensador de turnos rojo"
+              src={getOptimizedImageUrl({ url: 'v1759249531/dispensador_de_tickets_de_piso_soporte_120cm', height: 900, quality: 80 })}
+              alt="Dispensador de tickets de piso con soporte negro de 120 cm de altura"
+              title="Dispensador de tickets de piso con soporte vertical para turnos"
               unoptimized={true}
             />
           </div>
@@ -50,8 +53,9 @@ function DispensadorTiquetesProductsSection() {
             <Image
               width={1594}
               height={952}
-              src={getOptimizedImageUrl({ url: 'v1759157257/Dispensador-de-tiquetes-acri%CC%81lico', width: 900, quality: 80 })}
-              alt="Colores de tickets y dispensador de turnos rojo"
+              src={getOptimizedImageUrl({ url: 'v1759249532/dispensador_de_tickets_de_pared_personalizable', width: 900, quality: 80 })}
+              alt="Dispensador de tickets de pared color rojo con acrílico personalizable para turnos"
+              title="Dispensador de tickets de pared con opción de personalizar logotipo"
               unoptimized={true}
             />
           </div>
