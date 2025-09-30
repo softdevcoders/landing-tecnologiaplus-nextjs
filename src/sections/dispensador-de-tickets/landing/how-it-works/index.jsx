@@ -25,7 +25,7 @@ const steps = [
 function StepsSection() {
   return (
     <section data-nosnippet className={style.steps__section}>
-      <h2 className={style.steps__section__title}>¿Cómo funciona el llamado de enfermeras?</h2>  
+      <h2 className={style.steps__section__title}>¿Cómo funciona el dispensador de turnos?</h2>  
 
       <div className={style.cards__container}>
         {steps.map((step, index) => (
