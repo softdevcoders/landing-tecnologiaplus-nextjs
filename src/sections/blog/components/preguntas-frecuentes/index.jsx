@@ -4,28 +4,39 @@ import {
   localizadoresDeRestaurantesPreguntasFrecuentes,
   llamadoresEnfermeriaPreguntasFrecuentes,
   turneroTurnoexpressPreguntasFrecuentes,
-  sistemasDeTurnosTurnomasterPreguntasFrecuentes
+  sistemasDeTurnosTurnomasterPreguntasFrecuentes,
+  dispensadorDeTicketsPreguntasFrecuentes
 } from "@/config/preguntas-frecuentes";
 import { routes } from "@/config/routes";
 
 const PreguntasFrecuentesBlog = ({ categoryKey }) => { 
   let preguntasFrecuentes;
+  let title;
 
   switch (categoryKey) {
     case routes.blog.children.llamadoresDeMeseros.category_key:
       preguntasFrecuentes = llamadoresDeMeserosPreguntasFrecuentes;
+      title = "Preguntas frecuentes sobre llamadores de meseros";
       break;
     case routes.blog.children.localizadoresParaRestaurantes.category_key:
       preguntasFrecuentes = localizadoresDeRestaurantesPreguntasFrecuentes;
+      title = "Preguntas frecuentes sobre el avisador de pedidos";
       break;
     case routes.blog.children.llamadoDeEnfermeria.category_key:
       preguntasFrecuentes = llamadoresEnfermeriaPreguntasFrecuentes;
+      title = "Preguntas frecuentes sobre el llamador de enfermería";
       break;
     case routes.blog.children.turneroTurnoexpress.category_key:
       preguntasFrecuentes = turneroTurnoexpressPreguntasFrecuentes;
+      title = "Preguntas frecuentes sobre el Turnero Digital Digiturno";
       break;
     case routes.blog.children.sistemasDeTurnosTurnomaster.category_key:
       preguntasFrecuentes = sistemasDeTurnosTurnomasterPreguntasFrecuentes;
+      title = "Preguntas frecuentes sobre Sistema de turnos de espera";
+      break;
+    case routes.blog.children.dispensadorDeTickets.category_key:
+      preguntasFrecuentes = dispensadorDeTicketsPreguntasFrecuentes;
+      title = "Preguntas frecuentes sobre el dispensador de turnos";
       break;
     default:  
       preguntasFrecuentes = null;
@@ -34,7 +45,10 @@ const PreguntasFrecuentesBlog = ({ categoryKey }) => {
   if (!preguntasFrecuentes) return null;
 
   return (
-    <PreguntasFrecuentes preguntasFrecuentes={preguntasFrecuentes || []} />
+    <PreguntasFrecuentes 
+      preguntasFrecuentes={preguntasFrecuentes || []} 
+      title={title} 
+    />
   )
 }
 

@@ -32,10 +32,10 @@ export const ROUTE_CONFIG = {
   //   metadataKey: 'rollos-de-papel-termico',
   //   serviceType: "Rollos de papel térmico"
   // },
-  // '/dispensador-de-tickets': {
-  //   metadataKey: 'dispensador-de-tickets',
-  //   serviceType: "Dispensador de tickets"
-  // },
+  '/dispensador-de-tickets': {
+    metadataKey: 'dispensador-de-tickets',
+    serviceType: "Dispensador de tickets"
+  },
   '/llamado-de-enfermeria': {
     metadataKey: 'llamado-de-enfermeria',
     serviceType: "Llamado de enfermería"
