@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const LandingHeroPortada = ({ children, className = "" }) => {
   return (
-    <section className={`${style.landingHeroSection} ${className}`}>
+    <section className={`${style.landingHeroSection} ${className}`} data-nosnippet>
       <div className={style.background__mobile}></div>
       <div className={style.background__desktop}></div>
       {children}
@@ -54,7 +54,7 @@ export const LandingHeroPortadaContentImageImg = ({ image, isMobile = false, cla
 
 export const LandingHeroPortadaContentText = ({ children, className = "" }) => {
   return (
-    <div className={`${style.landingHeroSection__text} ${className}`} data-nosnippet>
+    <div className={`${style.landingHeroSection__text} ${className}`}>
       {children}
     </div>
   )
