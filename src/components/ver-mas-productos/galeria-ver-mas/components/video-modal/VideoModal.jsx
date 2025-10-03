@@ -3,6 +3,7 @@
 import { useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import VideoPlayer from '../video-player/VideoPlayer';
+import Viewer3D from '../3d-viewer';
 import styles from './video-modal.module.scss';
 
 const VideoModal = ({ 
@@ -41,10 +42,12 @@ const VideoModal = ({
     }
   }, [onClose]);
 
-  // Obtener el primer video
+  // Obtener el primer modelo 3D o video
+  const first3DModel = mediaItems.find(item => item.type === '3d');
   const firstVideo = mediaItems.find(item => item.type === 'video');
+  const mediaToShow = first3DModel || firstVideo;
 
-  if (!isOpen || !firstVideo) return null;
+  if (!isOpen || !mediaToShow) return null;
 
   const modalContent = (
     <div className={styles.modalOverlay} onClick={handleBackdropClick}>
@@ -61,10 +64,17 @@ const VideoModal = ({
         </div>
         
         <div className={styles.videoContainer}>
-          <VideoPlayer
-            video={firstVideo}
-            title={`${productTitle} - Video 360°${selectedColor ? ` ${selectedColor}` : ''}`}
-          />
+          {mediaToShow.type === '3d' ? (
+            <Viewer3D
+              modelID={mediaToShow.modelID}
+              title={`${productTitle} - Modelo 3D 360°${selectedColor ? ` ${selectedColor}` : ''}`}
+            />
+          ) : (
+            <VideoPlayer
+              video={mediaToShow}
+              title={`${productTitle} - Video 360°${selectedColor ? ` ${selectedColor}` : ''}`}
+            />
+          )}
         </div>
       </div>
     </div>

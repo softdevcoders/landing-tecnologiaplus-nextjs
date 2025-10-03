@@ -16,15 +16,16 @@ const ActionButtons = ({
   const [isGalleryModalOpen, setIsGalleryModalOpen] = useState(false);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
-  // Verificar si hay imágenes e videos disponibles
+  // Verificar si hay imágenes, videos y modelos 3D disponibles
   const hasImages = mediaItems.some(item => item.type === 'image');
   const hasVideo = mediaItems.some(item => item.type === 'video');
+  const has3DModel = mediaItems.some(item => item.type === '3d');
 
   // Verificar si el item actual tiene fondo oscuro
   const hasDarkBackground = currentMediaItem?.darkBackground || false;
 
   // No mostrar botones si no hay contenido
-  if (!hasImages && !hasVideo) {
+  if (!hasImages && !hasVideo && !has3DModel) {
     return null;
   }
 
@@ -43,12 +44,12 @@ const ActionButtons = ({
           </button>
         )}
         
-        {hasVideo && (
+        {(hasVideo || has3DModel) && (
           <button
             className={`${styles.actionButton} ${hasDarkBackground ? styles.darkButton : ''}`}
             onClick={() => setIsVideoModalOpen(true)}
             type="button"
-            aria-label="Ver video 360°"
+            aria-label={has3DModel ? "Ver modelo 3D 360°" : "Ver video 360°"}
           >
             <Arrows360 color={hasDarkBackground ? '#000' : '#fff'} />
             <span className={styles.buttonText}>360°</span>
