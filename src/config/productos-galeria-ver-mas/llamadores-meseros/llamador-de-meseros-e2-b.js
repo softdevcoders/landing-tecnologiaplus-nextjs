@@ -92,6 +92,13 @@ export const llamadorDeMeserosE2B = {
           thumbnail: 'so_0/v1754070602/llamador_e2_b_de_2_teclas_negro_rojo_2_pffe7w', 
           darkBackground: true
         },
+        // {
+        //   type: '3d',
+        //   modelID: '1d14454478b94e1e81d68187b9d9fecd',
+        //   thumbnail: 'v1757338389/llamador_meseros_e2b_negro_rojo_2teclas',
+        //   preview: 'v1757338389/llamador_meseros_e2b_negro_rojo_2teclas',
+        //   alt: 'Modelo 3D del llamador de meseros E2-B'
+        // },
       ]
     },
     {

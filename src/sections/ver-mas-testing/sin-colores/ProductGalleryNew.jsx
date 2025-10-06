@@ -7,10 +7,11 @@ function ProductGalleryNew() {
     description: "Permite llamar al mesero y borrar el llamado al ser atendido.",
     media: [
       {
-        type: 'video',
-        url: 'https://res.cloudinary.com/ddqh0mkx9/video/upload/v1750185556/website-v2/images/landings/llamadores-de-meseros/ver-mas/llamadores-de-meseros/llamador-de-meseros-e2-b/videos/zm7deogzrlnnfj6hznbv.mp4',
+        type: '3d',
+        modelID: 'para-sketchfab-1d14454478b94e1e81d68187b9d9fecd',
         thumbnail: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he',
-        darkBackground: true
+        alt: 'Modelo 3D del llamador de meseros E2-B',
+        preview: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1743040123/Frame_1_9_tdu2he'
       },
       {
         type: 'image',

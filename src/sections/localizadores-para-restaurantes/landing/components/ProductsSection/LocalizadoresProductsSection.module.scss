@@ -21,10 +21,10 @@
   }
 
   .products__container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
     align-items: center;
-    gap: 2rem;
     margin-bottom: 2rem;
     width: 100%;
     max-width: 30rem;
@@ -93,15 +93,21 @@
 
     .products__container {
       width: 100%;
-      max-width: 1160px;
-      flex-direction: row;
-      gap: 4rem;
+      max-width: 1400px;
+      grid-template-columns: repeat(14, 1fr);
+      gap: 1rem;
       margin-bottom: 4rem;
 
-      .products__container__item {
+      .products__container__item:first-of-type {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        grid-column: 1 / 7;
+      }
+
+      .products__container__item:last-of-type {
         width: 100%;
-        max-width: 50rem;
-        height: 100%;
+        grid-column: 7 / 15;
       }
     }
     

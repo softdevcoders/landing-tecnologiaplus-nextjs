@@ -211,7 +211,7 @@ const Thumbnails = ({
                 className={`${styles.thumb} ${index === selectedIndex ? styles.selected : ''}`}
                 onClick={() => onThumbClick(index)}
                 type="button"
-                aria-label={`Ir a ${item.type === 'video' ? 'video' : 'imagen'} ${index + 1}`}
+                aria-label={`Ir a ${item.type === 'video' ? 'video' : item.type === '3d' ? 'modelo 3D' : 'imagen'} ${index + 1}`}
               >
                 {item.type === 'video' ? (
                   <Image
@@ -231,6 +231,33 @@ const Thumbnails = ({
                     placeholder="blur"
                     unoptimized={true}
                   />
+                ) : item.type === '3d' ? (
+                  <div className={styles.thumb3d}>
+                    <Image
+                      src={getOptimizedImageUrl({url: item.thumbnail || item.preview, width: 150, height: 150, quality: 80})}
+                      alt={`Miniatura: ${item.alt || 'Modelo 3D'}`}
+                      title={`Miniatura: ${item.alt || 'Modelo 3D'}`}
+                      width={150} 
+                      height={150}
+                      sizes={getOptimizedSizes('thumbnail', false)}
+                      style={{ 
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain' 
+                      }}
+                      priority={index < 3}
+                      blurDataURL={generateBlurDataURL()}
+                      placeholder="blur"
+                      unoptimized={true}
+                    />
+                    <div className={styles.thumb3d__icon}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                      </svg>
+                    </div>
+                  </div>
                 ) : (
                   <Image
                     src={getOptimizedImageUrl({url: item.src, width: 150, height: 150, quality: 80})}

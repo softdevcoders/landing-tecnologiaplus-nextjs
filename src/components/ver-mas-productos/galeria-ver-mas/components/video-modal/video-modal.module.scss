@@ -20,7 +20,7 @@
 }
 
 .modalContent {
-  background: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
   border-radius: 0;
   width: 100%;
   max-width: 100rem;
@@ -63,7 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #333;
   transition: all 0.2s ease;
 
   @media (min-width: 768px) {
@@ -74,15 +74,15 @@
   }
 
   &:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
   }
 }
 
 .videoContainer {
   flex: 1;
   position: relative;
-  background: #000;
+  background: #fff;
   min-height: 300px;
 
   @media (min-width: 768px) {

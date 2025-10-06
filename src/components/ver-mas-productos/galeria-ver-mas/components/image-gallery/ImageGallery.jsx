@@ -6,6 +6,7 @@ import { ArrowBack, ArrowForward } from "@/components/ui/icons";
 import Thumbnails from "../thumbnails";
 import ZoomableImageDirect from "../zoomable-image-direct/ZoomableImageDirect";
 import VideoPlayer from "../video-player/VideoPlayer";
+import Viewer3D from "../3d-viewer";
 import ImageIndicators from "../image-indicators";
 import ActionButtons from "../action-buttons/ActionButtons";
 import GalleryModal from "../gallery-modal/GalleryModal";
@@ -61,13 +62,6 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
 
   return (
     <div className={styles.gallery}>
-      {/* Componente SEO para indexación de todas las imágenes */}
-      {/* <SEOImages
-        mediaItems={displayMediaItems}
-        productTitle={productTitle}
-        selectedColor={colorContext?.getSelectedColor()?.name || ''}
-        isMobile={isMobile}
-      /> */}
       
       {!isMobile && (
         <Thumbnails
@@ -91,6 +85,14 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
                       video={item}
                       title={`${productTitle} - Video ${index + 1}`}
                       isActive={index === selectedIndex}
+                    />
+                  </div>
+                ) : item.type === '3d' ? (
+                  <div className={styles.model3dWrapper}>
+                    <Viewer3D
+                      modelID={item.modelID}
+                      title={`${productTitle} - Modelo 3D ${index + 1}`}
+                      isMobile={isMobile}
                     />
                   </div>
                 ) : (
@@ -154,6 +156,7 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
             currentMediaItem={currentMediaItem}
             productTitle={productTitle}
             selectedColor={colorContext?.getSelectedColor()?.name || ''}
+            isMobile={isMobile}
           />
         )}
       </div>
