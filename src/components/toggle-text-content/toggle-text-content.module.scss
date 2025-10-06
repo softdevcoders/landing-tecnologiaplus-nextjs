@@ -24,6 +24,52 @@
       margin-bottom: 1.75rem;
     }
 
+    ul {
+      margin-bottom: 1.75rem;
+      padding-left: 1.5rem;
+      
+      li {
+        text-align: justify;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #606060;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        list-style-type: disc;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      li::before {
+        content: '•';
+        color: #606060;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    ol {
+      margin-bottom: 1.75rem;
+      padding-left: 1.5rem;
+      
+      li {
+        text-align: justify;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #606060;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        list-style-type: decimal;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
     &.open {
       display: block;
       overflow: visible;
@@ -86,7 +132,10 @@
         margin-bottom: 0;
       }
 
-      p:not(:first-child) {
+      p:not(:first-child),
+      ul,
+      ol,
+      li {
         display: none;
       }
   
@@ -106,7 +155,10 @@
           margin-bottom: 0;
         }
 
-        p:not(:first-child) {
+        p:not(:first-child),
+        ul,
+        ol,
+        li {
           display: block;
         }
       }

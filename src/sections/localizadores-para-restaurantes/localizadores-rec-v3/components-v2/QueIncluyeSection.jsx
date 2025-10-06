@@ -43,7 +43,7 @@ const QueIncluyeSection = () => {
   return (
     <QueIncluye 
       articulosIncluidos={articulosIncluidos} 
-      title="¿Qué incluye el localizador REC V3?"
+      title="¿Qué incluye el localizador de clientes REC-V3?"
     />
   );
 };

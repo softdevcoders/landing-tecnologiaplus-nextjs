@@ -15,8 +15,8 @@ const mainImage = {
 
 export const localizadoresRecV3 = {
   id: "localizadores-rec-v3",
-  title: "LOCALIZADORES REC V3",
-  description: "Tus clientes esperan su pedido sin perder el turno. Avisador vibra y alumbra cuando el pedido está listo. Ideal para autoservicio y plazoletas de comida.",
+  title: "Localizadores para restaurantes REC-V3",
+  description: "Tus clientes disfrutan el tiempo mientras esperan el pedido.",
   url: routes.landings.localizadoresParaRestaurantes.children.rec_v3.url,
   mainImage,
   media: [

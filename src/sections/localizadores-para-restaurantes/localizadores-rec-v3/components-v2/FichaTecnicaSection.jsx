@@ -54,7 +54,7 @@ const FichaTecnicaSection = () => {
   
   return <FichaTecnica
     fichaTecnica={fichaTecnica}
-    title="Ficha técnica del localizador REC V3"
+    title="Ficha técnica del viper para restaurantes REC-V3"
   />;
 };
 

@@ -31,7 +31,7 @@ const ComoFuncionaSection = () => {
   return (
     <ComoFunciona 
       comoFuncionaPasos={comoFuncionaPasos} 
-      title="¿Cómo funciona el localizador REC V3?" 
+      title="¿Cómo funciona el localizador de restaurantes autoservicio REC-V3?" 
     />
   );
 };
