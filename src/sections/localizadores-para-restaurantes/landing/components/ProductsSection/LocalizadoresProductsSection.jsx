@@ -14,7 +14,7 @@ function LocalizadoresProductsSection() {
       <div className={style.products__container}>
         <div className={style.products__container__item}>
           <Image
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/v1758563430/lrs_rec_v3"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_800,f_webp,q_80/v1759769424/lrs_rec__v3"
             alt="LRS sistema de localizadores Rec V3 Tecnología Plus"
             title="LRS Rec V3 de Tecnología Plus"
             width={500}
@@ -25,7 +25,7 @@ function LocalizadoresProductsSection() {
         </div>
         <div className={style.products__container__item}>
           <Image
-            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_600,f_webp,q_80/v1758563431/avisador_de_pedidos_cir_c2"
+            src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_800,f_webp,q_80/v1759769424/avisador_de_pedidos_cir__c2"
             alt="Avisador de pedidos Cir C2 para restaurantes Tecnología Plus"
             title="Avisador de pedidos Cir C2"
             width={421}
