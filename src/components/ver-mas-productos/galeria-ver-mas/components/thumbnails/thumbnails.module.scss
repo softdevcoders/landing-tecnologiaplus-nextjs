@@ -145,4 +145,33 @@
     opacity: 1;
     border: 1px solid #1E1E1E; 
   }
+}
+
+.thumb3d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    svg {
+      width: 10px;
+      height: 10px;
+      color: white;
+    }
+  }
 } 

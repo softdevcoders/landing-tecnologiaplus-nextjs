@@ -43,9 +43,9 @@ const GalleryModal = ({
   }, [onClose]);
 
   // Filtrar solo imágenes
-  const imageItems = mediaItems.filter(item => item.type === 'image');
+  const mediaItemsToShow = mediaItems.filter(item => item.type === 'image');
 
-  if (!isOpen || imageItems.length === 0) return null;
+  if (!isOpen || mediaItemsToShow.length === 0) return null;
 
   const modalContent = (
     <div className={styles.modalOverlay} onClick={handleBackdropClick}>
@@ -62,7 +62,7 @@ const GalleryModal = ({
         </div>
         
         <div className={styles.galleryGrid}>
-          {imageItems.map((item, index) => (
+          {mediaItemsToShow.map((item, index) => (
             <div key={index} className={styles.imageItem}>
               <Image
                 src={getOptimizedImageUrl({url: item?.src, width: 800, quality: 80})} 
