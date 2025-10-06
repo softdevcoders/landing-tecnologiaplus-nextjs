@@ -7,11 +7,21 @@ import styles from './action-buttons.module.scss';
 import Arrows360 from '@/components/ui/icons/arrows-360';
 import Gallery from '@/components/ui/icons/gallery';
 
+// Icono 3D para el botón específico
+const View3DIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+    <path d="M2 17l10 5 10-5"/>
+    <path d="M2 12l10 5 10-5"/>
+  </svg>
+);
+
 const ActionButtons = ({ 
   mediaItems = [], 
   currentMediaItem = null,
   productTitle = '', 
-  selectedColor = '' 
+  selectedColor = '',
+  isMobile = false
 }) => {
   const [isGalleryModalOpen, setIsGalleryModalOpen] = useState(false);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -31,8 +41,9 @@ const ActionButtons = ({
 
   return (
     <>
-      <div className={`${styles.actionButtons} ${hasDarkBackground ? styles.darkBackground : ''}`}>
-        {hasImages && (
+      <div className={`${styles.actionButtons} ${hasDarkBackground ? styles.darkBackground : ''} ${isMobile && has3DModel ? styles.has3DContent : ''}`}>
+        {/* Botón "Ver todas" solo en desktop */}
+        {!isMobile && hasImages && (
           <button
             className={`${styles.actionButton} ${hasDarkBackground ? styles.darkButton : ''}`}
             onClick={() => setIsGalleryModalOpen(true)}
@@ -44,7 +55,8 @@ const ActionButtons = ({
           </button>
         )}
         
-        {(hasVideo || has3DModel) && (
+        {/* Botón 360° para desktop o cuando hay video */}
+        {(!isMobile || hasVideo) && (hasVideo || has3DModel) && (
           <button
             className={`${styles.actionButton} ${hasDarkBackground ? styles.darkButton : ''}`}
             onClick={() => setIsVideoModalOpen(true)}

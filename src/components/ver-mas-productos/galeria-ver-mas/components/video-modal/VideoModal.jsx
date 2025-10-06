@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 import { createPortal } from 'react-dom';
 import VideoPlayer from '../video-player/VideoPlayer';
 import Viewer3D from '../3d-viewer';
@@ -13,6 +13,18 @@ const VideoModal = ({
   productTitle = '', 
   selectedColor = '' 
 }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detectar si es mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   // Cerrar modal con ESC
   const handleKeyDown = useCallback((e) => {
     if (e.key === 'Escape') {
@@ -68,6 +80,7 @@ const VideoModal = ({
             <Viewer3D
               modelID={mediaToShow.modelID}
               title={`${productTitle} - Modelo 3D 360°${selectedColor ? ` ${selectedColor}` : ''}`}
+              isMobile={isMobile}
             />
           ) : (
             <VideoPlayer

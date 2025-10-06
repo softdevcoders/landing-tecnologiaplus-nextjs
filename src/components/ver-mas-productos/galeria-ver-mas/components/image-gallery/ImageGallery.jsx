@@ -92,6 +92,7 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
                     <Viewer3D
                       modelID={item.modelID}
                       title={`${productTitle} - Modelo 3D ${index + 1}`}
+                      isMobile={isMobile}
                     />
                   </div>
                 ) : (
@@ -155,6 +156,7 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
             currentMediaItem={currentMediaItem}
             productTitle={productTitle}
             selectedColor={colorContext?.getSelectedColor()?.name || ''}
+            isMobile={isMobile}
           />
         )}
       </div>
