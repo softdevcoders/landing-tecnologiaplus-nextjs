@@ -56,10 +56,6 @@ const ImageGallery = ({ mediaItems = [], colors = [], hasColors = false, product
     return null;
   }
 
-  // Obtener la primera imagen para renderizado SSR
-  const firstImage = displayMediaItems[0];
-  const isFirstImageVideo = firstImage?.type === 'video';
-
   return (
     <div className={styles.gallery}>
       
