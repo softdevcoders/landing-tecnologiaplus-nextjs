@@ -12,10 +12,6 @@ export const ROUTE_CONFIG = {
     metadataKey: 'localizadores-para-restaurantes',
     serviceType: "Localizadores para restaurantes"
   },
-  '/localizadores-para-restaurantes/localizadores-rec-v3': {
-    metadataKey: 'localizadores-para-restaurantes/localizadores-rec-v3',
-    serviceType: "Localizadores para restaurantes REC-V3"
-  },
   '/llamadores-de-meseros': {
     metadataKey: 'llamadores-de-meseros',
     serviceType: "Llamadores de meseros"

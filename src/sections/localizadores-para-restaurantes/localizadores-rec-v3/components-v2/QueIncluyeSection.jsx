@@ -39,6 +39,8 @@ const QueIncluyeSection = () => {
       descripcion: "Empaque protector individual",
     }
   ];
+  
+  return null;
 
   return (
     <QueIncluye 
