@@ -20,7 +20,7 @@ const ComoFuncionaSection = () => {
     },
     {
       imagen: {
-        src: "v1759860213/localizadores_para_restaurantes_rec_v3_senales_alerta",
+        src: "v1759941976/localizadores_para_restaurantes_rec_v3_senales__alerta",
         alt: "Localizadores para restaurantes REC-V3 mostrando a un cliente sentado en su mesa recibiendo la alerta de luz, sonido y vibración al estar listo su pedido.",
         title: "Localizadores para restaurantes REC-V3 - Aviso por vibración, luz y sonido cuando el pedido está listo.",
       },
