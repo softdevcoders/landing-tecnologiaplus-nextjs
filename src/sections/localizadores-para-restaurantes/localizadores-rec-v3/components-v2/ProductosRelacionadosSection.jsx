@@ -12,6 +12,7 @@ function ProductosRelacionadosSection() {
       isVerMasVersionNueva={true}
       addMarginBottom={false}
       title="Productos relacionados del localizador REC V3"
+      headingTag="h2"
     />
   )
 }

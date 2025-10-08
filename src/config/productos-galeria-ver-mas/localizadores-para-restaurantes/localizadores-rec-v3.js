@@ -64,7 +64,7 @@ export const localizadoresRecV3 = {
     {
       nombre: 'Andrés',
       opinion: 'Desde que instalamos el localizador, el servicio al cliente mejoró muchísimo. Ya no tenemos filas ni clientes amontonados esperando su pedido. Los localizadores funcionan perfecto incluso con bastante gente en el local, y el alcance es muy bueno.',
-      sector: 'Restaurante de comida rápida',
+      sector: 'Fast food',
     },
     {
       nombre: 'Laura',
@@ -74,7 +74,7 @@ export const localizadoresRecV3 = {
     {
       nombre: 'Carlos',
       opinion: 'Llevamos casi un año con los localizadores y no hemos tenido problemas. La batería dura bastante y el soporte técnico nos ha ayudado cuando necesitamos algo. Nuestros clientes también lo ven como un detalle tecnológico que da confianza.',
-      sector: 'Restaurante autoservicio universidad',
+      sector: 'Fast food',
     },
   ]
 };
