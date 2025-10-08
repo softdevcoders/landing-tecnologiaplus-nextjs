@@ -58,19 +58,23 @@ export const localizadoresRecV3 = {
       title: 'Beeper para restaurantes REC-V3 con alertas de vibración, sonido y luz.',
       darkBackground: true
     },
-    {
-      type: 'image',
-      src: 'v1759858614/localizador_para_restaurantes_autoservicio_rec_v3_senal_rompe_muros',    
-      alt: 'Localizador para restaurantes autoservicio REC-V3 con señal rompedora de muros, ideal para garantizar comunicación efectiva entre cocina y clientes.',
-      title: 'Localizador para restaurantes autoservicio REC-V3 con señal de largo alcance y tecnología rompe muros.',
-      darkBackground: true
-    }
   ],
-  compatibleConProducts: [
-    habladorDeMesa,
-    relojReceptorDeLlamados,
-    pantallaT1B,
-    pantallaT6, 
-    controlNumerico,
+  // compatibleConProducts: [],
+  opiniones: [
+    {
+      nombre: 'Andrés',
+      opinion: 'Desde que instalamos el localizador, el servicio al cliente mejoró muchísimo. Ya no tenemos filas ni clientes amontonados esperando su pedido. Los localizadores funcionan perfecto incluso con bastante gente en el local, y el alcance es muy bueno.',
+      sector: 'Restaurante de comida rápida',
+    },
+    {
+      nombre: 'Laura',
+      opinion: 'Nos encantó porque es fácil de usar y muy práctico. Los estudiantes hacen su pedido, se sientan tranquilos y cuando vibra el localizador van por la bebida. Además, el diseño se ve moderno y profesional. Ha sido una buena inversión.',
+      sector: 'Cafés universidades',
+    },
+    {
+      nombre: 'Carlos',
+      opinion: 'Llevamos casi un año con los localizadores y no hemos tenido problemas. La batería dura bastante y el soporte técnico nos ha ayudado cuando necesitamos algo. Nuestros clientes también lo ven como un detalle tecnológico que da confianza.',
+      sector: 'Restaurante autoservicio universidad',
+    },
   ]
 };

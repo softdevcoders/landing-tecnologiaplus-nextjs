@@ -1,0 +1,165 @@
+.opiniones {  
+  display: flex;
+  flex-direction: column;
+  gap: 0.6875rem;
+  border: 1px solid #dfdfdf;
+  border-radius: 0.375rem;
+}
+
+.opiniones__title {
+  font-size: 0.875rem; 
+  font-weight: 700;
+  color: #535353;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 0.75rem;
+}
+
+.opiniones__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6875rem;
+
+  // Mobile-first: ocultar opiniones adicionales cuando no está expandido
+  .opinion:not(:first-child) {
+    display: none;
+  }
+
+  // Cuando está expandido, mostrar todas las opiniones
+  &.expanded .opinion:not(:first-child) {
+    display: flex;
+  }
+
+  // Desktop: mostrar todas las opiniones siempre
+  @media (min-width: 1200px) {
+    .opinion:not(:first-child) {
+      display: flex;
+    }
+
+    &.expanded .opinion:not(:first-child) {
+      display: flex;
+    }
+  }
+
+  .opinion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem 0.5rem;
+    border-bottom: 1px solid #dfdfdf;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    // Mobile-first: Estilo para la opinión colapsada (solo la primera)
+    &.opinion__collapsed {
+      position: relative;
+      max-height: 5rem; // Altura más limitada para ocultar más contenido
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
+
+      // Degradado que simula contenido oculto
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4rem; // Degradado más alto para ocultar más
+        background: linear-gradient(transparent, rgba(255, 255, 255, 0.98));
+        pointer-events: none;
+        z-index: 1;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      // Desktop: no aplicar restricciones de altura
+      @media (min-width: 1200px) {
+        max-height: none;
+        overflow: visible;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    // Mobile-first: Estilo para la opinión expandida
+    &.opinion__expanded {
+      max-height: 50rem; // Altura suficientemente grande para mostrar todo el contenido
+      transition: max-height 0.4s ease-in-out;
+
+      &::after {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      // Desktop: no aplicar restricciones de altura
+      @media (min-width: 1200px) {
+        max-height: none;
+      }
+    }
+
+    .opinion__text {
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #535353;
+      margin: 0;
+    }
+
+    .opinion__nombre {
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #535353;
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+
+    .opinion__sector {
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.5;
+      font-style: italic;
+      color: #535353;
+      margin: 0;
+    }
+  }
+}
+
+.opiniones__toggle {
+  // Mobile-first: visible por defecto
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  color: #606060;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-top: 1px solid #dfdfdf;
+  text-align: center;
+  transition: color 0.2s ease;
+  
+
+  &:hover {
+    color: #545353;
+  }
+
+  // Oculto en desktop (pantallas de 1200px y mayores)
+  @media (min-width: 1200px) {
+    display: none;
+  }
+
+  .toggle__icon {
+    transition: transform 0.3s ease;
+    margin-left: 0.25rem;
+
+    &.rotate {
+      transform: rotate(180deg);
+    }
+  }
+}
