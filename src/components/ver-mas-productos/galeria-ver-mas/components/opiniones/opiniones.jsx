@@ -59,7 +59,7 @@ const Opiniones = ({ opiniones }) => {
           className={styles.opiniones__toggle}
           onClick={handleToggle}
         >
-          {isExpanded ? 'Ocultar opiniones' : `Ver ${opiniones.length} opiniones más`}
+          {isExpanded ? 'Ocultar opiniones' : `Ver más`}
           <ArrowDownIcon className={`${styles.toggle__icon} ${isExpanded ? styles.rotate : ""}`} size={16} />
         </button>
       )}
