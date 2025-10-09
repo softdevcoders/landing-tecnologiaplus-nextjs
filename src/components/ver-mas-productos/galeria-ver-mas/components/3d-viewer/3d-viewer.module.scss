@@ -54,17 +54,18 @@
     position: absolute;
     right: 0;
     left: 0;
-    height: 3.75rem;
     background: rgba(221, 221, 221, 1);
     padding-inline: 1.5rem;
     z-index: 10;
   }
 
   &__coverBottom {
+    height: 2.75rem;
     bottom: 0;
   }
 
   &__coverTop {
+    height: 3rem;
     top: 0;
   }
 }
@@ -75,8 +76,16 @@
 }
 
 // Responsive
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .viewer3d {
     min-height: 300px;
+
+    &__coverBottom {
+      height: 5rem;
+    }
+  
+    &__coverTop {
+      height: 2.75em;
+    }
   }
 }
