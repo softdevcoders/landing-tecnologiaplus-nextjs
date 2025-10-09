@@ -6,7 +6,7 @@ import { ProductColorProvider } from "@/components/ver-mas-productos/galeria-ver
 import BackButton from "@/components/back-button";
 
 const GaleriaVerMas = ({ verMasInformacion }) => {
-  const { title, description, media, colors, defaultColor, hasColors = false, compatibleConProducts = [] } = verMasInformacion;
+  const { title, description, media, colors, defaultColor, hasColors = false, compatibleConProducts = [], opiniones = [] } = verMasInformacion;
 
   if (!media && !hasColors) {
     return (
@@ -34,6 +34,7 @@ const GaleriaVerMas = ({ verMasInformacion }) => {
           description={description}
           hasColors={hasColors}
           compatibleConProducts={compatibleConProducts}
+          opiniones={opiniones}
         />
       </div>
     </section>

@@ -1,7 +1,7 @@
 import RelatedProducts from "@/components/related-products";
 import { categories } from "@/config/categories";
 
-function LlamadorMeserosRelatedProducts() {
+function ProductosRelacionadosSection() {
   return (
     <RelatedProducts 
       productsKeys={[
@@ -9,9 +9,12 @@ function LlamadorMeserosRelatedProducts() {
         categories.TURNERO_TURNOEXPRESS.category_key,
         categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,
       ]} 
-      isVerMasView={true}
+      isVerMasVersionNueva={true}
+      addMarginBottom={false}
+      title="Productos relacionados del llamador de meseros E2-B"
+      headingTag="h2"
     />
   )
 }
 
-export default LlamadorMeserosRelatedProducts;
+export default ProductosRelacionadosSection;

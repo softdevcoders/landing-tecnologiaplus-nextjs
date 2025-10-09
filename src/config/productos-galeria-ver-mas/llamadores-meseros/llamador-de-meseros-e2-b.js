@@ -85,19 +85,19 @@ export const llamadorDeMeserosE2B = {
           darkBackground: true
         },
         {
-          type: 'video',
-          src: 'v1757338405/timbre_de_restaurante_modelo_e2b_video.mp4',
-          alt: 'Demostración de timbre de restaurante modelo E2-B en funcionamiento.',
-          title: 'Timbre de restaurante modelo E2-B.',
-          thumbnail: 'so_0/v1754070602/llamador_e2_b_de_2_teclas_negro_rojo_2_pffe7w', 
-          darkBackground: true
+          type: '3d',
+          modelID: '7f65ca693d5d41ce933a2b3f113ad4b7',
+          thumbnail: 'v1757338389/llamador_meseros_e2b_negro_rojo_2teclas',
+          preview: 'v1757338389/llamador_meseros_e2b_negro_rojo_2teclas',
+          alt: 'Llamador de meseros E2-B: un toque, cero esperas'
         },
         // {
-        //   type: '3d',
-        //   modelID: '1d14454478b94e1e81d68187b9d9fecd',
-        //   thumbnail: 'v1757338389/llamador_meseros_e2b_negro_rojo_2teclas',
-        //   preview: 'v1757338389/llamador_meseros_e2b_negro_rojo_2teclas',
-        //   alt: 'Modelo 3D del llamador de meseros E2-B'
+        //   type: 'video',
+        //   src: 'v1757338405/timbre_de_restaurante_modelo_e2b_video.mp4',
+        //   alt: 'Demostración de timbre de restaurante modelo E2-B en funcionamiento.',
+        //   title: 'Timbre de restaurante modelo E2-B.',
+        //   thumbnail: 'so_0/v1754070602/llamador_e2_b_de_2_teclas_negro_rojo_2_pffe7w', 
+        //   darkBackground: true
         // },
       ]
     },
@@ -171,6 +171,13 @@ export const llamadorDeMeserosE2B = {
           title: 'Llamadores de meseros E2-B negro amarillo rompemuros.',
           darkBackground: true
         },
+        {
+          type: '3d',
+          modelID: 'a9eaa5b55b94451798ed570eeece63da',
+          thumbnail: 'v1757338385/timbre_para_mesa_de_restaurante_e2b_negro_amarillo',
+          preview: 'v1757338385/timbre_para_mesa_de_restaurante_e2b_negro_amarillo',
+          alt: 'Llamador de meseros E2-B: un toque, cero esperas'
+        },
       ]
     },
     {
@@ -242,6 +249,13 @@ export const llamadorDeMeserosE2B = {
           alt: 'Llamador de personal en negro con amplio alcance rompemuros para restaurantes y bares.',
           title: 'Llamador de personal con alcance rompemuros.',
           darkBackground: true
+        },
+        {
+          type: '3d',
+          modelID: 'bcb6d9771ab34f918e3ec8330fc0549d',
+          thumbnail: 'v1757338391/llamador_de_meseros_e2b_negro_negro',
+          preview: 'v1757338391/llamador_de_meseros_e2b_negro_negro',
+          alt: 'Llamador de meseros E2-B: un toque, cero esperas'
         },
       ]
     },
@@ -315,6 +329,13 @@ export const llamadorDeMeserosE2B = {
           title: 'Llamadores para restaurantes E2-B blanco con rojo con señal rompemuros.',
           darkBackground: true
         },
+        {
+          type: '3d',
+          modelID: 'b271ce6e9af044809cda4173953f98ac',
+          thumbnail: 'v1757338396/llamador_de_meseros_e2b_blanco_rojo',
+          preview: 'v1757338396/llamador_de_meseros_e2b_blanco_rojo',
+          alt: 'Llamador de meseros E2-B: un toque, cero esperas'
+        },
       ]
     },
     {
@@ -387,6 +408,13 @@ export const llamadorDeMeserosE2B = {
           title: 'Llamadores para restaurantes E2-B blanco con amarillo con señal rompemuros de largo alcance.',
           darkBackground: true
         },
+        {
+          type: '3d',
+          modelID: 'f309cdec26f44f28a21de01aa90eea1d',
+          thumbnail: 'v1757338387/llamador_de_meseros_e2b_2_teclas_blanco_amarillo',
+          preview: 'v1757338387/llamador_de_meseros_e2b_2_teclas_blanco_amarillo',
+          alt: 'Llamador de meseros E2-B: un toque, cero esperas'
+        },
       ]
     },
     {
@@ -458,6 +486,13 @@ export const llamadorDeMeserosE2B = {
           alt: 'Llamador de meseros modelo E2-B en blanco y negro con señal rompemuros que atraviesa muros y aglomeraciones.',
           title: 'Llamador de meseros E2-B blanco y negro rompemuros.',
           darkBackground: true
+        },
+        {
+          type: '3d',
+          modelID: '16e8d01891ca4913b7b9b5027828d85e',
+          thumbnail: 'v1757338397/llamador_de_meseros_e2b_blanco_negro_modelo',
+          preview: 'v1757338397/llamador_de_meseros_e2b_blanco_negro_modelo',
+          alt: 'Llamador de meseros E2-B: un toque, cero esperas'
         },
       ]
     },

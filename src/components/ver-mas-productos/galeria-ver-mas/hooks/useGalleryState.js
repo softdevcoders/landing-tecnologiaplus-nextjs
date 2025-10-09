@@ -21,8 +21,6 @@ export const useGalleryState = (media = [], colors = [], hasColors = false, sele
 
   // Memoizar los items a mostrar
   const displayMediaItems = useMemo(() => {
-    
-    
     if (hasColors && colorContext) {
       // Obtener los medios del color seleccionado
       const selectedColor = colorContext.getSelectedColor();
@@ -31,8 +29,9 @@ export const useGalleryState = (media = [], colors = [], hasColors = false, sele
     }
 
     // Para items sin color, ordenamos con los videos primero
-    const sortedMedia = sortMedia(media);
-    return sortedMedia;
+    // const sortedMedia = sortMedia(media);
+    // return sortedMedia;
+    return media;
   }, [colorContext, media, hasColors, sortMedia]);
 
   // Obtener el item actual basado en el índice seleccionado

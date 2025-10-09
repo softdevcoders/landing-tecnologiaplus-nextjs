@@ -10,9 +10,7 @@
     width: 100%;
     max-width: 1300px;
     overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    max-height: 4.5rem; // Altura equivalente a exactamente 3 líneas (1.5rem line-height * 3)
     transition: max-height 0.3s ease-in-out;
 
     p {
@@ -24,11 +22,55 @@
       margin-bottom: 1.75rem;
     }
 
+    ul {
+      margin-bottom: 1.75rem;
+      padding-left: 1.5rem;
+      
+      li {
+        text-align: justify;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #606060;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        list-style-type: disc;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      li::before {
+        content: '•';
+        color: #606060;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    ol {
+      margin-bottom: 1.75rem;
+      padding-left: 1.5rem;
+      
+      li {
+        text-align: justify;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #606060;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        list-style-type: decimal;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
     &.open {
-      display: block;
+      max-height: none; // Permite que el contenido se expanda naturalmente
       overflow: visible;
-      -webkit-line-clamp: unset;
-      -webkit-box-orient: unset;
     }
   }
 
@@ -77,8 +119,6 @@
     .description__section__text {
       max-height: none;
       overflow: visible;
-      -webkit-line-clamp: unset;
-      -webkit-box-orient: unset;
       transition: max-height 0.3s ease-in-out;
       display: block;
 
@@ -86,15 +126,16 @@
         margin-bottom: 0;
       }
 
-      p:not(:first-child) {
+      p:not(:first-child),
+      ul,
+      ol,
+      li {
         display: none;
       }
   
       &.open {
         max-height: none;
         overflow: visible;
-        -webkit-line-clamp: unset;
-        -webkit-box-orient: unset;
         transition: max-height 0.3s ease-in-out;
         display: block;
 
@@ -106,7 +147,10 @@
           margin-bottom: 0;
         }
 
-        p:not(:first-child) {
+        p:not(:first-child),
+        ul,
+        ol,
+        li {
           display: block;
         }
       }

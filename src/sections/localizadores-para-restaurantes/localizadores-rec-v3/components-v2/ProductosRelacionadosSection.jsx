@@ -5,13 +5,14 @@ function ProductosRelacionadosSection() {
   return (
     <RelatedProducts 
       productsKeys={[
-        categories.LOCALIZADORES_PARA_RESTAURANTES.category_key,
+        categories.LLAMADORES_DE_MESEROS.category_key,
         categories.TURNERO_TURNOEXPRESS.category_key,
-        categories.LLAMADO_DE_ENFERMERIA_CUIDAMASTER.category_key,
+        categories.CALIFICADOR_DE_SERVICIO_AL_CLIENTE_OPINAMASTER.category_key,
       ]} 
       isVerMasVersionNueva={true}
       addMarginBottom={false}
-      title="Productos relacionados del llamador de meseros E2-B"
+      title="Productos relacionados del localizador REC V3"
+      headingTag="h2"
     />
   )
 }

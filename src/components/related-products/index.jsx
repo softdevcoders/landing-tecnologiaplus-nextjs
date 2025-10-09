@@ -109,14 +109,16 @@ const defaultProducts = [
 export default function RelatedProducts({ 
   productsKeys = [], isVerMasView = false, addMarginBottom = true, isVerMasVersionNueva = false,
   title = "Productos similares",
+  headingTag = "span",
 }) {
+  const HeadingTag = headingTag;
   const filteredProducts = productsKeys.map((key) => 
     defaultProducts.find((product) => product.category_key === key)
   );
 
   return (
     <section data-nosnippet className={`${style.related__products} ${addMarginBottom ? style.addMarginBottom : ''}`}>
-      <span className={style.related__products__title} data-is-ver-mas={isVerMasView}>{title}</span>
+      <HeadingTag className={style.related__products__title} data-is-ver-mas={isVerMasView}>{title}</HeadingTag>
       <RelatedProductsCarousel
         isVerMasVersionNueva={isVerMasVersionNueva}
         products={filteredProducts} 

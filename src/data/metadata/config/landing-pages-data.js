@@ -35,8 +35,8 @@ export const LANDING_IMAGES = {
       height: 1500
     },
     'localizadores-rec-v3': {
-      url: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750429714/reemplazo_de_rec_v3_3x-100_eozpj4',
-      alt: 'Localizadores para restaurantes REC-V3.',
+      url: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_1500,q_70/v1759858183/localizadores_para_restaurantes_rec_v3_con_base_de_carga',
+      alt: 'Localizadores para restaurantes REC-V3 con base de carga para avisar pedidos.',
       width: 1500,
       height: 1500
     }
