@@ -59,7 +59,7 @@ function BenefitsSection({ benefits, title, className = "", isHome = false, isEn
           <ul className={style.benefits__container_list}>
             {benefits.map((benefit, index) => (
               <li 
-                className={`${style.benefits__item} ${benefit.description ? style.benefits__item_two_rows : ""}`} 
+                className={`${style.benefits__item} ${benefit.description ? style.benefits__item_two_rows : ""}`}    
                 key={index}
               >
                 <Image

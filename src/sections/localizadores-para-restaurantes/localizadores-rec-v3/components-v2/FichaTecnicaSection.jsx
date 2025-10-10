@@ -4,7 +4,7 @@ const FichaTecnicaSection = () => {
   const fichaTecnica = [
     {
       imagen: {
-        src: "v1759858184/vibracion_sonido_luz_localizador_para_restaurantes_autoservicio_rec_v3",  
+        src: "v1760116908/vibracion_sonido_luz_localizador_para_restaurantes_autoservicio_rec_v3_",  
         alt: "Función de vibración, sonido y luz del localizador para restaurantes autoservicio REC-V3 para alertar al cliente.",
         title: "Localizador para restaurantes autoservicio REC-V3 con vibración, sonido y luz de alerta.",
       },
@@ -12,7 +12,7 @@ const FichaTecnicaSection = () => {
     },
     {
       imagen: {
-        src: "v1759858180/largo_alcance_localizador_para_restaurantes_autoservicio_rec_v3",
+        src: "v1760116908/largo_alcance_localizador_para_restaurantes_autoservicio_rec_v3_",
         alt: "Localizador para restaurantes autoservicio REC-V3 con largo alcance de más de 200 metros a la redonda.",
         title: "Localizador para restaurantes autoservicio REC-V3 con alcance superior a 200 metros.",
       },
@@ -20,7 +20,7 @@ const FichaTecnicaSection = () => {
     },
     {
       imagen: {
-        src: "v1759858185/material_resistente_localizador_para_restaurantes_autoservicio_rec_v3",
+        src: "v1760116908/material_resistente_localizador_para_restaurantes_autoservicio_rec_v3_",
         alt: "Localizador para restaurantes autoservicio REC-V3 fabricado en material termoplástico resistente a golpes.",
         title: "Localizador para restaurantes autoservicio REC-V3 de material termoplástico resistente.",
       },
@@ -28,7 +28,7 @@ const FichaTecnicaSection = () => {
     },
     {
       imagen: {
-        src: "v1759858180/capacidad_20_localizadores_para_restaurantes_autoservicio_rec_v3",  
+        src: "v1760116908/capacidad_20_localizadores_para_restaurantes_autoservicio_rec_v3_",  
         alt: "Base del localizador para restaurantes autoservicio REC-V3 con capacidad de hasta 20 dispositivos y opción de expansión.",
         title: "Localizador para restaurantes autoservicio REC-V3 con capacidad de 20 unidades.",
       },
@@ -36,7 +36,7 @@ const FichaTecnicaSection = () => {
     },
     {
       imagen: {
-        src: "v1759858180/conexion_electrica_localizador_para_restaurantes_autoservicio_rec_v3",  
+        src: "v1760116908/conexion_electrica_localizador_para_restaurantes_autoservicio_rec_v3_",  
         alt: "Localizador para restaurantes autoservicio REC-V3 ideal para áreas de espera y zonas de comidas.",
         title: "Usos del localizador para restaurantes autoservicio REC-V3 en áreas de comida y espera.",
       },
@@ -44,7 +44,7 @@ const FichaTecnicaSection = () => {
     },
     {
       imagen: {
-        src: "v1759858183/bateria_localizador_para_restaurantes_autoservicio_rec_v3",  
+        src: "v1760116908/bateria_localizador_para_restaurantes_autoservicio_rec_v3_",  
         alt: "Localizador para restaurantes autoservicio REC-V3 con requerimiento de conexión eléctrica para su funcionamiento.",
         title: "Localizador para restaurantes autoservicio REC-V3 con conexión eléctrica.",
       },
