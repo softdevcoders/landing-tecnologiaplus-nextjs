@@ -10,32 +10,37 @@ const colors = [
   {
     id: "azul",
     label: "Azul",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349970/rollos-azules_2x-8_1_zlde3h_bt9zne.webp",
-    alt: "imagen rollos de tickets azules",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760130297/rollos_de_tickets_para_turnos_azules",
+    alt: "Rollos de tickets para turnos color azul, compatibles con dispensadores automáticos",
+    title: "Rollos de tickets para turnos azules para dispensadores",
   },
   {
     id: "amarillo",
     label: "Amarillo",
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349971/rollos_amarillo_2x-8_p2ydov_xppmau.webp",
     alt: "imagen rollos de tickets amarillos",
+    title: "Rollos de tickets para turnos color amarillo, compatibles con dispensadores automáticos",
   },
   {
     id: "verde",
     label: "Verde",
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350026/rollos_verde_2x-8_n0r63p_gkrq0j.webp",
     alt: "imagen rollos de tickets verdes",
+    title: "Rollos de tickets para turnos color verde, compatibles con dispensadores automáticos",
   },
   {
     id: "rosa",
     label: "Rosa",
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349986/rollos_rosado_2x-8_oocdj4_d0tqzs.webp",
     alt: "imagen rollos de tickets rosas",
+    title: "Rollos de tickets para turnos color rosa, compatibles con dispensadores automáticos",
   },
   {
     id: "blanco",
     label: "Blanco",
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349971/rollos_blanco_2x-8_r2y66g_escez9.webp",
     alt: "imagen rollos de tickets blancos",
+    title: "Rollos de tickets para turnos color blanco, compatibles con dispensadores automáticos",
   },
 ];
 
@@ -54,7 +59,7 @@ const features = [
   },
   { 
     id: "turno",
-    label: "Asigna turnos en orden de llegada.",
+    label: "Asigna turnos en orden de llegada",
     src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349968/iono_caracteristicas_2_2x-8_jkw2nh_w5ebni.webp",
     alt: "icono de turno numerado gris",
   },
@@ -76,10 +81,10 @@ function TurnosTechnicalDetails() {
   return (
     <section className={style.technical__details} data-nosnippet> 
       <div className={style.technical__details__header}>
-        <h2 className={style.technical__details__header__title}>Ficha Técnica</h2>
-        <Link href={routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url}> 
+        <h2 className={style.technical__details__header__title}>Ficha técnica de los rollos de turnos</h2>
+        {/* <Link href={routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url}> 
           <p className={style.technical__details__header__description}>Rollos de turnos</p>
-        </Link>
+        </Link> */}
       </div>
       <Link href={routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url} className={style.technical__details__carousel_container}> 
         <div className={style.technical__details__carousel}>
@@ -87,7 +92,8 @@ function TurnosTechnicalDetails() {
             <div className={`${style.technical__details__carousel__item} ${selectedColor === color.id ? style.selected : ""}`} key={color.id}>
               <Image 
                 src={color.src} 
-                alt={color.alt} 
+                alt={color.alt}
+                title={color.title} 
                 width={500} 
                 height={500} 
                 onClick={() => handleColorClick(color.id)}
@@ -113,7 +119,7 @@ function TurnosTechnicalDetails() {
             </div>
           </div>
           <div className={style.technical__details__container__body__features_container}>
-            <span className={style.technical__details__container__body__features_container__title}>Características</span>
+            <h2 className={style.technical__details__container__body__features_container__title}>Características de los tickets para turnos</h2>
             <div className={style.technical__details__container__body__features_container__features_list}>
               {features.map((feature) => (
                 <div className={style.technical__details__container__body__features_container__features_list__feature} key={feature.id}>
@@ -127,7 +133,7 @@ function TurnosTechnicalDetails() {
                       unoptimized={true}
                     />
                   </div>
-                  <p className={style.technical__details__container__body__features_container__features_list__feature__description}>{feature.label}</p>
+                  <h3 className={style.technical__details__container__body__features_container__features_list__feature__description}>{feature.label}</h3>
                 </div>
               ))}
             </div>

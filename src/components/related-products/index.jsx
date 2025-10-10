@@ -48,8 +48,9 @@ const defaultProducts = [
   {
     name: "Dispensador de tiquetes",
     description: "Complemento práctico para tomar el turno.",
-    img: "v1754420143/dispensador_de_tiquetes_turnoexpress_r5nx3b",
-    altText: "Imagen de Dispensador de Tickets TurnoExpress - Tecnología Plus",
+    img: "v1760129976/dispensador_de_tickets_para_turnos_turnoexpress_tecnologia_plus",
+    altText: "Imagen de Dispensador de Tickets para turnos TurnoExpress - Tecnología Plus",
+    title_attribute: "Dispensador de Tickets para turnos TurnoExpress",
     sold: "2.686 vendidos",
     link: routes.landings.dispensadorDeTickets.url,
     category_key: categories.DISPENSADOR_DE_TICKETS.category_key,
