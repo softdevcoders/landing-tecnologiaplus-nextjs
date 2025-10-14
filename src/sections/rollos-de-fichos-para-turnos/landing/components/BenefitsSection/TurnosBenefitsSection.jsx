@@ -24,7 +24,7 @@ function TurnosBenefitsSection() {
   return (
     <BenefitsSection 
       benefits={benefits} 
-      title="¿POR QUÉ CONFIAR EN NUESTROS ROLLOS DE TURNOS?"
+      title="¿Por qué confiar en nuestros Rollos de Turnos?"
       className={style.benefits__container_list}
     />
   );

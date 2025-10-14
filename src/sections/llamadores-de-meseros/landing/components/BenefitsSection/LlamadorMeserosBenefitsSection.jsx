@@ -42,7 +42,7 @@ function LlamadorMeserosBenefitsSection() {
       <BenefitsSection 
         benefits={benefits} 
         className={style.benefits__container_list}
-        title="Beneficios del llamador de meseros"
+        title="Beneficios del Llamador de Meseros"
       />
     </section>
   );

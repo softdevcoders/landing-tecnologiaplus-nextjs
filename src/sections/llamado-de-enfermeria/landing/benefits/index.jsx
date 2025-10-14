@@ -32,7 +32,7 @@ function LlamadoDeEnfermeriaBenefitsSection() {
   return (
     <Benefits 
       benefits={benefits} 
-      title="BENEFICIOS DEL LLAMADOR DE ENFERMERÍA"
+      title="Beneficios del Llamador de Enfermería" 
     />
   );
 }
