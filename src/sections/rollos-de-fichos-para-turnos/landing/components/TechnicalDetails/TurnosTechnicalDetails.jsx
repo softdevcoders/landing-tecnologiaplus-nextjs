@@ -17,30 +17,30 @@ const colors = [
   {
     id: "amarillo",
     label: "Amarillo",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349971/rollos_amarillo_2x-8_p2ydov_xppmau.webp",
-    alt: "imagen rollos de tickets amarillos",
-    title: "Rollos de tickets para turnos color amarillo, compatibles con dispensadores automáticos",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760461853/rollos_de_tickets_para_turnos_amarillos",
+    alt: "Rollos de tickets para turnos color amarillo, resistentes y visibles para una gestión de atención ágil",
+    title: "Rollos de tickets para turnos amarillos ideales para alto flujo de clientes",
   },
   {
     id: "verde",
     label: "Verde",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350026/rollos_verde_2x-8_n0r63p_gkrq0j.webp",
-    alt: "imagen rollos de tickets verdes",
-    title: "Rollos de tickets para turnos color verde, compatibles con dispensadores automáticos",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760461853/rollo_de_turnos_verde",
+    alt: "Rollo de turnos color verde ideal para organizar filas y gestionar la atención al cliente",
+    title: "Rollo de turnos verde para un sistema de atención eficiente",
   },
   {
     id: "rosa",
     label: "Rosa",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349986/rollos_rosado_2x-8_oocdj4_d0tqzs.webp",
-    alt: "imagen rollos de tickets rosas",
-    title: "Rollos de tickets para turnos color rosa, compatibles con dispensadores automáticos",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760461854/rollos_de_fichos_para_turnos_rosados",
+    alt: "Rollos de fichos para turnos rosados usados en puntos de atención y comercios concurridos",
+    title: "Rollos de fichos para turnos color rosado para control de filas",
   },
   {
     id: "blanco",
     label: "Blanco",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349971/rollos_blanco_2x-8_r2y66g_escez9.webp",
-    alt: "imagen rollos de tickets blancos",
-    title: "Rollos de tickets para turnos color blanco, compatibles con dispensadores automáticos",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760461853/rollo_de_numeros_para_turnos_blancos",
+    alt: "Rollo de números para turnos blancos ideal para puntos de servicio y atención al cliente",
+    title: "Rollo de números para turnos blanco para organización de filas",
   },
 ];
 
@@ -48,26 +48,30 @@ const features = [
   {
     id: "material",
     label: "Material: papel bond",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349968/iono_caracteristicas_1_2x-8_pnvmte_mfgdfd.webp",
-    alt: "icono de ticket gris",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760462979/icono_caracteristicas_ficho_para_turno_gris",
+    alt: "Icono de características del ficho para turnos gris",
+    title: "Icono del ficho para turnos gris",
   },
   {
     id: "numeracion",
     label: "Varias opciones de numeración",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349968/iono_caracteristicas_3_2x-8_ypg8wb_esoytf.webp",
-    alt: "icono de tipos de numeración gris",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760462980/icono_caracteristicas_fichos_alfanumericos",
+    alt: "Icono características de los fichos alfanuméricos gris",
+    title: "Icono de los fichos alfanuméricos",
   },
   { 
     id: "turno",
     label: "Asigna turnos en orden de llegada",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349968/iono_caracteristicas_2_2x-8_jkw2nh_w5ebni.webp",
-    alt: "icono de turno numerado gris",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760462980/icono_caracteristicas_tickets_turnos_alfanumericos",
+    alt: "Icono características de los tickets turnos alfanuméricos gris",
+    title: "Icono de los tickets turnos alfanuméricos gris",
   },
   {
     id: "dispensador",
     label: "Funciona en dispensadores de turnos tipo caracol",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349968/iono_caracteristicas_4_2x-8_ppszke_c4zofk.webp",
-    alt: "icono de dispensador de turnos gris",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760462980/icono__caracteristicas_dispensador_de_turnos",
+    alt: "Icono características del dispensador de turnos gris",
+    title: "Icono del dispensador de turnos gris",
   },
 ];
 
@@ -126,7 +130,8 @@ function TurnosTechnicalDetails() {
                   <div className={style.technical__details__container__body__features_container__features_list__feature__icon}>
                     <Image 
                       src={feature.src} 
-                      alt={feature.alt} 
+                      alt={feature.alt}
+                      title={feature.title}
                       width={200} 
                       height={200} 
                       className={style.technical__details__container__body__features_container__features_list__feature__icon__image}
