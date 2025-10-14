@@ -27,12 +27,6 @@
 
     & > div {
       gap: 1rem;
-      
-      h2 {
-        text-transform: none !important;
-        font-size: 2rem !important;
-        // text-align: left !important;s
-      }
 
       ul {
         gap: 0.5rem !important;
@@ -47,10 +41,11 @@
       padding: 2rem 2rem !important;
 
       & > div {
+        display: flex !important;
         flex-direction: column;
 
         h2 {
-          font-size: 2.5rem !important;
+          font-size: clamp(1rem, calc(2.5vw + 1rem), 2.5rem) !important;
           text-align: left !important;
         }
 

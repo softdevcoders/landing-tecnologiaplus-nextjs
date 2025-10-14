@@ -1,9 +1,6 @@
 .benefits__container_list {
   h2 {
     max-width: 43rem !important;
-
-    @media (min-width: 1024px) {
-      font-size: 3.5rem !important;
-    }
+    font-size: clamp(1rem, calc(1.7vw + 1rem), 3rem) !important;
   }
 }
