@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import styles from "./3d-viewer.module.scss";
 import { buildEmbedUrl } from "./3dViewerConfig";
 
@@ -23,25 +23,58 @@ const Viewer3D = ({
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const [retryCount, setRetryCount] = useState(0);
+  const [embedUrl, setEmbedUrl] = useState(null);
 
   // Determinar el preset a usar basado en el dispositivo
   const effectivePreset = isMobile ? 'mobile' : preset;
-  
-  // Construir la URL del embed de Sketchfab usando la configuración
-  const embedUrl = buildEmbedUrl(modelID, config, effectivePreset);
+
+  // Efecto para manejar la hidratación del lado del cliente
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Efecto para construir la URL del embed cuando el componente esté montado
+  useEffect(() => {
+    if (isMounted && modelID) {
+      const url = buildEmbedUrl(modelID, config, effectivePreset);
+      setEmbedUrl(url);
+    }
+  }, [isMounted, modelID, config, effectivePreset]);
+
+  // Efecto para reiniciar el estado cuando cambia el modelID
+  useEffect(() => {
+    if (modelID) {
+      setIsLoading(true);
+      setHasError(false);
+      setRetryCount(0);
+    }
+  }, [modelID]);
 
   // Handlers declarativos
   const handleIframeLoad = useCallback(() => {
     setIsLoading(false);
     setHasError(false);
+    setRetryCount(0);
     onLoad();
   }, [onLoad]);
 
   const handleIframeError = useCallback(() => {
-    setHasError(true);
-    setIsLoading(false);
-    onError("Error al cargar el modelo 3D");
-  }, [onError]);
+    if (retryCount < 3) {
+      // Reintentar cargar el iframe
+      setRetryCount(prev => prev + 1);
+      setTimeout(() => {
+        // Forzar recarga del iframe cambiando la URL
+        const url = buildEmbedUrl(modelID, config, effectivePreset);
+        setEmbedUrl(url + `&retry=${retryCount + 1}`);
+      }, 1000 * (retryCount + 1)); // Delay incremental
+    } else {
+      setHasError(true);
+      setIsLoading(false);
+      onError("Error al cargar el modelo 3D después de varios intentos");
+    }
+  }, [onError, retryCount, modelID, config, effectivePreset]);
 
   // Validación del modelo
   if (!modelID) {
@@ -55,12 +88,29 @@ const Viewer3D = ({
     );
   }
 
+  // Mostrar loading mientras no esté montado o no haya URL
+  if (!isMounted || !embedUrl) {
+    return (
+      <div className={styles.viewer3d}>
+        <div className={styles.viewer3d__loading}>
+          <div className={styles.viewer3d__spinner}></div>
+          <p>Cargando modelo 3D...</p>
+        </div>
+      </div>
+    );
+  }
+
   if (hasError) {
     return (
       <div className={styles.viewer3d}>
         <div className={styles.viewer3d__error}>
           <View3DIcon />
           <p>Error al cargar el modelo 3D</p>
+          {retryCount > 0 && (
+            <p className={styles.viewer3d__retryInfo}>
+              Intentos realizados: {retryCount}/3
+            </p>
+          )}
         </div>
       </div>
     );
@@ -68,17 +118,23 @@ const Viewer3D = ({
 
   return (
     <div className={`${styles.viewer3d}`}>
-      {/* {isLoading && (
+      {isLoading && (
         <div className={styles.viewer3d__loading}>
           <div className={styles.viewer3d__spinner}></div>
           <p>Cargando modelo 3D...</p>
+          {retryCount > 0 && (
+            <p className={styles.viewer3d__retryInfo}>
+              Reintentando... ({retryCount}/3)
+            </p>
+          )}
         </div>
-      )} */}
+      )}
       
       <div className={styles.viewer3d__coverTop}></div>
       <div className={styles.viewer3d__coverBottom}></div>
 
       <iframe
+        key={`${modelID}-${retryCount}`} // Forzar re-render cuando cambie el retry
         src={embedUrl}
         className={styles.viewer3d__iframe}
         title={title}
