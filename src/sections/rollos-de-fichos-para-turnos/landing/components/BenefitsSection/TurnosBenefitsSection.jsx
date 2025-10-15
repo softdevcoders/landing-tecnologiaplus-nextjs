@@ -1,5 +1,4 @@
 import BenefitsSection from "@/components/benefits";
-import style from "./TurnosBenefitsSection.module.scss";
 
 const benefits = [
   {
@@ -25,7 +24,6 @@ function TurnosBenefitsSection() {
     <BenefitsSection 
       benefits={benefits} 
       title="¿Por qué confiar en nuestros Rollos de Turnos?"
-      className={style.benefits__container_list}
     />
   );
 }

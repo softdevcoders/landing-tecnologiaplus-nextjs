@@ -29,7 +29,7 @@ const benefits = [
 
 function RollosTermicosBenefitsSection() {
   return (
-    <BenefitsSection benefits={benefits} title="BENEFICIOS<br />DESTACADOS" />
+    <BenefitsSection benefits={benefits} title="Beneficios<br />destacados" />
   );
 }
 
