@@ -130,6 +130,22 @@
       }
     }
   }
+
+  .landing_hero__content.landing_hero__content_single_element {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+
+    .landing_hero__content__image {
+      margin-top: 5rem;
+
+      .landing_hero__content__image__img {
+        max-width: inherit;
+        max-height: 700px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
@@ -228,6 +244,11 @@
           max-width: 700px;
         }
       }
+    }
+
+    .landing_hero__content.landing_hero__content_single_element {
+      align-items: center;
+      margin-top: 0;
     }
   }
 }

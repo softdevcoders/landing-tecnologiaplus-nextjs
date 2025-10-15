@@ -8,6 +8,7 @@ import rollosDeFichosParaTurnos from "./rollos-de-fichos-para-turnos";
 import rollosDePapelTermico from "./rollos-de-papel-termico";
 import calificadorDeServicioAlCliente from "./calificador-de-servicio-al-cliente";
 import encuestaVirtual from "./encuesta-virtual";
+import nuestrosClientesBanner from "./nuestros-clientes-banner";
 
 export default {
   localizadoresParaRestaurantes,
@@ -19,5 +20,6 @@ export default {
   rollosDeFichosParaTurnos,
   rollosDePapelTermico,
   calificadorDeServicioAlCliente,
-  encuestaVirtual
+  encuestaVirtual,
+  nuestrosClientesBanner
 };
