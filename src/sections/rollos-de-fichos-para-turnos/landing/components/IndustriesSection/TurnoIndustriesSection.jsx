@@ -12,18 +12,21 @@ import {
 function TurnoIndustriesSection() {
   const industries = [
     {
-      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738350027/Salud_2x-8_vg4jxo_dyuifd.webp",
-      alt: "icono de Restaurantes",
+      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760130294/industrias_salud_rollos_de_fichos_para_turnos",
+      alt: "Icono del Sector salud",
+      title: "Sector salud",
       name: "Sector salud",
     },
     {
-      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349970/Oficinas_2x-8_xzhwcw_jumnnh.webp",
+      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760130293/industrias_oficinas_rollos_de_fichos_para_turnos",
       alt: "icono de Oficinas",
+      title: "Icono de Oficinas",
       name: "Oficinas",
     },
     {
-      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349970/otras_indistrias_2x-8_bvq8fo_s2xoyg.webp",
-      alt: "icono de otras industrias",
+      icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760130293/industrias_otras_industrias_rollos_de_fichos_para_turnos",
+      alt: "Icono otras industrias",
+      title: "Otras industrias",
       name: "Otras industrias",
     },
   ];
@@ -36,7 +39,7 @@ function TurnoIndustriesSection() {
           {industries.map((industry, index) => (
             <IndustriesSectionListItem key={index}>
               <IndustriesSectionListItemIconContainer>
-                <IndustriesSectionListItemIcon src={industry.icon} alt={industry.alt} />
+                <IndustriesSectionListItemIcon src={industry.icon} alt={industry.alt} title={industry.title} />
               </IndustriesSectionListItemIconContainer>
               <IndustriesSectionListItemText text={industry.name} />
             </IndustriesSectionListItem>

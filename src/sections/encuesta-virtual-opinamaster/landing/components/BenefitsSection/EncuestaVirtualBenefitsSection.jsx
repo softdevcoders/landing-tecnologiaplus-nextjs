@@ -1,5 +1,4 @@
 import BenefitsSection from "@/components/benefits";
-import style from "./EncuestaVirtualBenefitsSection.module.scss"; 
 
 const benefits = [
   {
@@ -29,9 +28,8 @@ function EncuestaVirtualBenefitsSection() {
   return (
     <BenefitsSection 
       benefits={benefits} 
-      title="CREA ENCUESTAS VIRTUALES ADAPTADAS A TU NEGOCIO"
+      title="Crea Encuestas Virtuales adaptadas a tu negocio"
       isEncuestaVirtual={true}
-      className={style.benefits__container_encuesta_virtual}  
     />
   );
 }

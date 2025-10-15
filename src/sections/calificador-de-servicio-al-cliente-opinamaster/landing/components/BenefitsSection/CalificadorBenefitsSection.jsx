@@ -28,7 +28,7 @@ function CalificadorBenefitsSection() {
   return (
     <BenefitsSection 
       benefits={benefits} 
-      title="BENEFICIOS<br />DESTACADOS"
+      title="Beneficios<br />destacados"
     />
   );
 }

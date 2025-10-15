@@ -32,7 +32,7 @@ const benefits = [
 
 function DispensadorTiquetesBenefitsSection() {
   return (
-    <BenefitsSection benefits={benefits} title="Beneficios del dispensador de tickets y turnos" />
+    <BenefitsSection benefits={benefits} title="Beneficios del Dispensador de Tickets y Turnos" />
   );
 }
 

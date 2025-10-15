@@ -5,7 +5,8 @@ import {
   llamadoresEnfermeriaPreguntasFrecuentes,
   turneroTurnoexpressPreguntasFrecuentes,
   sistemasDeTurnosTurnomasterPreguntasFrecuentes,
-  dispensadorDeTicketsPreguntasFrecuentes
+  dispensadorDeTicketsPreguntasFrecuentes,
+  rollosDeFichosParaTurnosPreguntasFrecuentes
 } from "@/config/preguntas-frecuentes";
 import { routes } from "@/config/routes";
 
@@ -37,6 +38,10 @@ const PreguntasFrecuentesBlog = ({ categoryKey }) => {
     case routes.blog.children.dispensadorDeTickets.category_key:
       preguntasFrecuentes = dispensadorDeTicketsPreguntasFrecuentes;
       title = "Preguntas frecuentes sobre el dispensador de turnos";
+      break;
+    case routes.blog.children.rollosDeFichosParaTurnos.category_key:
+      preguntasFrecuentes = rollosDeFichosParaTurnosPreguntasFrecuentes;
+      title = "Preguntas frecuentes sobre rollos de fichos para turnos";
       break;
     default:  
       preguntasFrecuentes = null;

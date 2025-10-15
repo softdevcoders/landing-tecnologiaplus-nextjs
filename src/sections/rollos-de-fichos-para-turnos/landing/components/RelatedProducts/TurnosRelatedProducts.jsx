@@ -9,6 +9,7 @@ function TurnosRelatedProducts() {
         categories.TURNERO_TURNOEXPRESS.category_key,
         categories.SISTEMA_DE_TURNOS_TURNOMASTER.category_key,
       ]}
+      addMarginBottom={false}
     />
   );
 }

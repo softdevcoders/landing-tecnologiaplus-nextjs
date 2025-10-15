@@ -6,6 +6,7 @@ import TurnoIndustriesSection from "@/sections/rollos-de-fichos-para-turnos/land
 import TurnosProductsSection from "@/sections/rollos-de-fichos-para-turnos/landing/components/ProductsSection/TurnosProductsSection";
 import TurnosRelatedProducts from "@/sections/rollos-de-fichos-para-turnos/landing/components/RelatedProducts/TurnosRelatedProducts";
 import TurnosTechnicalDetails from "@/sections/rollos-de-fichos-para-turnos/landing/components/TechnicalDetails/TurnosTechnicalDetails";
+import TurnosPreguntasFrecuentes from "@/sections/rollos-de-fichos-para-turnos/landing/components/PreguntasFrecuentes";
 
 export async function generateMetadata() {
   const { 'rollos-de-fichos-para-turnos': { root: metadata } } = getMetadata('landings');
@@ -22,6 +23,7 @@ export default function RollosTurnosLanding() {
 			<TurnosTechnicalDetails />
 			<TurnoIndustriesSection />
 			<TurnosRelatedProducts />
+			<TurnosPreguntasFrecuentes  />
 		</>
 	);
 }

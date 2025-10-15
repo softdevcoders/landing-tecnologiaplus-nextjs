@@ -1,20 +1,21 @@
 import BenefitsSection from "@/components/benefits";
-import style from "./TurnosBenefitsSection.module.scss";
 
 const benefits = [
   {
-    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349967/Icono_1_2x-8_qhtpsh_s64dlx",
-    title: "Evita el desperdicio - Corte limpio y preciso para aprovechar cada ticket.",
+    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760130296/rollo_de_turnos_icono_corte_limpio",
+    title: "Evita el desperdicio - Corte limpio y preciso para aprovechar cada ticket",
     width: 154,
     height: 154,
-    alt: "Evita el desperdicio - Corte limpio y preciso para aprovechar cada ticket.",
+    alt: "Corte limpio del rollo de turnos para evitar desperdicio y aprovechar cada ticket",
+    title_attribute: "Rollo de turnos con corte preciso que optimiza el uso del papel",
   },
   {
-    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349967/Icono_2_2x-8_q5lixj_n0jsyy",
-    title: "Múltiples estilos de numeración. Opción de fabricar según la  necesidad.",
+    icon: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760130295/rollo_de_numeros_para_turnos_icono_personalizado",
+    title: "Múltiples estilos de numeración. Opción de fabricar según la necesidad",
     width: 154,
     height: 337,
-    alt: "Múltiples estilos de numeración. Opción de fabricar según la  necesidad.",
+    alt: "Rollo de números para turnos con diferentes estilos y numeración personalizada según necesidad",
+    title_attribute: "Rollo de números para turnos con numeración adaptable",
   }
 ];
 
@@ -22,8 +23,7 @@ function TurnosBenefitsSection() {
   return (
     <BenefitsSection 
       benefits={benefits} 
-      title="¿POR QUÉ CONFIAR<br />EN NUESTROS ROLLOS<br />DE TURNOS?"
-      className={style.benefits__container_list}
+      title="¿Por qué confiar en nuestros Rollos de Turnos?"
     />
   );
 }
