@@ -24,7 +24,7 @@ export default function LlamadorMeserosLanding() {
       <LlamadorMeserosBenefitsSection />
       <StepsSectionLlamadorMeseros />
       <LlamadorMeserosVerMasSection />
-      <LlamadorMeserosVideosSection />
+      {/* <LlamadorMeserosVideosSection /> */}
       <LlamadorMeserosIndustriesSection />
       <LlamadorMeserosRelatedProducts />
       <LlamadoresDeMeserosPreguntasFrecuentes />
