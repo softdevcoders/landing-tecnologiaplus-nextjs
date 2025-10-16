@@ -9,13 +9,14 @@ const HeroContent = ({content, isFirstSlide}) => {
     imagenes,
     boton = null,
     imagenDeMarca = null,
+    contenidoCompleto = true,
   } = content;
 
   const HeadingTag = isFirstSlide ? 'h1' : 'h2';
   
   return (
     <div className={styles.landing_hero__container}>
-      <div className={styles.landing_hero__content}>
+      <div className={`${styles.landing_hero__content} ${!contenidoCompleto ? styles.landing_hero__content_single_element : ''}`}>
         {imagenes.map((imagen, index) => (
           <div 
             key={index} 
@@ -33,35 +34,37 @@ const HeroContent = ({content, isFirstSlide}) => {
             />
           </div>
         ))}
-        <div className={styles.landing_hero__content__text}>
-          <div className={styles.landing_hero__content__text__image_container}>
-            {imagenDeMarca && (
-              <Image 
-                className={styles.landing_hero__content__text__image} 
-                width={imagenDeMarca.width}
-                height={imagenDeMarca.height}
-                alt={imagenDeMarca.alt}
-                src={imagenDeMarca.src}
-                unoptimized={true}
-              />
+        {contenidoCompleto && (
+          <div className={styles.landing_hero__content__text}>
+            <div className={styles.landing_hero__content__text__image_container}>
+              {imagenDeMarca && (
+                <Image 
+                  className={styles.landing_hero__content__text__image} 
+                  width={imagenDeMarca.width}
+                  height={imagenDeMarca.height}
+                  alt={imagenDeMarca.alt}
+                  src={imagenDeMarca.src}
+                  unoptimized={true}
+                />
+              )}
+            </div>
+            <HeadingTag className={styles.landing_hero__content__text__title}>
+              {titulo}
+            </HeadingTag>
+            <p 
+              className={styles.landing_hero__content__text__description}
+              dangerouslySetInnerHTML={{ __html: descripcion }} 
+            />
+            {boton && (
+              <Link
+                href={boton.href}
+                className={styles.landing_hero__content__text__button}
+              >
+                {boton.texto}
+              </Link>
             )}
           </div>
-          <HeadingTag className={styles.landing_hero__content__text__title}>
-            {titulo}
-          </HeadingTag>
-          <p 
-            className={styles.landing_hero__content__text__description}
-            dangerouslySetInnerHTML={{ __html: descripcion }} 
-          />
-          {boton && (
-            <Link
-              href={boton.href}
-              className={styles.landing_hero__content__text__button}
-            >
-              {boton.texto}
-            </Link>
-          )}
-        </div>
+        )}
       </div>
     </div>
   );

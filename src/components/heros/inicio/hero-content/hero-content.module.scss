@@ -34,6 +34,7 @@
     .landing_hero__content__image,
     .landing_hero__content__text {
       display: flex;
+      position: relative;
     }
 
     .landing_hero__content__image {
@@ -50,7 +51,7 @@
       }
 
       .landing_hero__content__image__img {
-        width: 80%;
+        width: 100%;
         height: auto;
         max-height: 500px;
         max-width: 500px;
@@ -127,6 +128,21 @@
         &:hover {
           transform: scale(1.05);
         }
+      }
+    }
+  }
+
+  .landing_hero__content.landing_hero__content_single_element {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+
+    .landing_hero__content__image {
+      margin-top: 5rem;
+
+      .landing_hero__content__image__img {
+        max-width: inherit;
+        max-height: inherit;
       }
     }
   }
@@ -224,8 +240,28 @@
       .landing_hero__content__image{
         justify-content: flex-end;
         .landing_hero__content__image__img{
-          max-height: 600px;
           max-width: 700px;
+          max-height: 600px;
+        }
+      }
+    }
+
+    .landing_hero__content.landing_hero__content_single_element {
+      align-items: center;
+      margin-top: 0;
+
+      .landing_hero__content__image {
+        justify-content: center;
+        margin-top: 0;
+
+        &.landing_hero__content__image_desktop {
+          width: 80%;
+          margin: auto;
+        }
+
+        .landing_hero__content__image__img {
+          max-width: inherit;
+          max-height: inherit;
         }
       }
     }

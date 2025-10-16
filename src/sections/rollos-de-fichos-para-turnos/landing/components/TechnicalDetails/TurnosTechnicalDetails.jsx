@@ -85,7 +85,7 @@ function TurnosTechnicalDetails() {
   return (
     <section className={style.technical__details} data-nosnippet> 
       <div className={style.technical__details__header}>
-        <h2 className={style.technical__details__header__title}>Ficha técnica de los rollos de turnos</h2>
+        <h2 className={style.technical__details__header__title}>Ficha técnica de los Rollos de Turnos</h2>
         {/* <Link href={routes.landings.rollosDeFichosParaTurnos.children.rollosDeTurnos.url}> 
           <p className={style.technical__details__header__description}>Rollos de turnos</p>
         </Link> */}
