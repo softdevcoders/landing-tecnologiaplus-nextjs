@@ -3,11 +3,11 @@ import styles from "../styles/ver-mas-productos-global-style.module.scss";
 import fichaTecnicaStyles from "./ficha-tecnica.module.scss";
 import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
-const FichaTecnica = ({ fichaTecnica, title = "Ficha técnica" }) => {  
+const FichaTecnica = ({ fichaTecnica, title = "Ficha técnica", gridColumns = 3 }) => {  
   return (
     <section className={styles.container} data-nosnippet>
       <h2>{title}</h2>
-      <div className={fichaTecnicaStyles.container}>
+      <div className={`${fichaTecnicaStyles.container} ${fichaTecnicaStyles[`grid__${gridColumns}__columns`]}`}>
         {fichaTecnica.map((articulo, key) => (
           <div className={fichaTecnicaStyles.container__item} key={key}>
             <div className={fichaTecnicaStyles.container__item__image__container}>
