@@ -4,8 +4,9 @@ import ImageGallery from "@/components/image-gallery";
 
 const MultimediaSection = () => {
   return (
-    <section data-nosnippet>
-      <div className={style.container}>
+    <section data-nosnippet className={style.section_multimedia}> 
+      <h2 className={style.multimedia__title}>Conoce el botón para llamar al mesero y elige el color ideal para tu negocio</h2>
+      <div className={style.multimedia__container}>
         <div className={style.video__container}>
           <YouTubePlayer
             videoId="XGGhLks0iVc" 
