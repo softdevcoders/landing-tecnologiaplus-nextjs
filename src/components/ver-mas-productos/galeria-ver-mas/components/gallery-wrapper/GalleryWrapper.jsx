@@ -1,4 +1,4 @@
-import ImageGallery from "../image-gallery";
+import ImageGallery from "@/components/image-gallery";
 import styles from "./gallery-wrapper.module.scss";
 
 const GalleryWrapper = ({ media = [], colors = [], hasColors = false, productTitle = '' }) => {

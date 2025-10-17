@@ -1,0 +1,114 @@
+.viewer3d {
+  width: 100%;
+  max-width: 600px; // Ancho máximo para evitar que se vea demasiado ancho
+  height: 100%;
+  min-height: 350px; // Altura mínima mejorada para móvil
+  position: relative; // Importante para el posicionamiento absoluto del iframe
+  background: rgba(221, 221, 221, 1);
+  overflow: hidden;
+  display: block; // Cambiar de flex a block para mejor control del iframe
+  margin: 0 auto; // Centrar cuando tiene max-width
+
+  @media (min-width: 768px) {
+    min-height: 450px; // Altura mínima mejorada para tablet
+    max-width: 700px; // Ancho máximo más generoso en tablet
+  }
+
+  @media (min-width: 1300px) {
+    min-height: 0; // En desktop, se ajusta al contenedor padre
+    max-width: none; // Sin límite de ancho en desktop
+  }
+
+  &__iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 100%; // Asegurar que ocupe toda la altura mínima
+    border: none;
+    border-radius: 8px;
+    position: absolute; // Posicionamiento absoluto para ocupar todo el contenedor
+    top: 0;
+    left: 0;
+  }
+
+  &__loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    color: #666;
+    font-size: 14px;
+  }
+
+  &__spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  &__error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #dc3545;
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  &__retryInfo {
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  &__coverTop,
+  &__coverBottom {
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: rgba(221, 221, 221, 1);
+    padding-inline: 1.5rem;
+    z-index: 10;
+  }
+
+  &__coverBottom {
+    height: 16%;
+    max-height: 3.75rem;
+    bottom: 0;
+  }
+
+  &__coverTop {
+    height: 13%;
+    max-height: 3rem;
+    top: 0;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// // Responsive
+// @media (min-width: 768px) {
+//   .viewer3d {
+//     min-height: 300px;
+
+//     &__coverBottom {
+//       height: 5rem;
+//     }
+  
+//     &__coverTop {
+//       height: 2.75em;
+//     }
+//   }
+// }

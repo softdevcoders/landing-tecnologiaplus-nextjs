@@ -9,6 +9,7 @@ import LlamadorMeserosVideosSection from "@/sections/llamadores-de-meseros/landi
 import LlamadorMeserosVerMasSection from "@/sections/llamadores-de-meseros/landing/components/LlamadorMeserosVerMasSection/LlamadorMeserosVerMasSection";
 import StepsSectionLlamadorMeseros from "@/sections/llamadores-de-meseros/landing/components/StepsSection/StepsSectionLlamadorMeseros";
 import LlamadoresDeMeserosPreguntasFrecuentes from "@/sections/llamadores-de-meseros/landing/components/PreguntasFrecuentes";
+import MultimediaSection from "@/sections/llamadores-de-meseros/landing/components/MultimediaSection/MultimediaSection";
 
 export async function generateMetadata() {
   const { 'llamadores-de-meseros': { root: metadata } } = getMetadata('landings');
@@ -20,8 +21,9 @@ export default function LlamadorMeserosLanding() {
     <>
       <LlamadorMeserosHeroSection />
       <LlamadorMeserosClientsSection />
-      <LlamadorMeserosProductsSection />
+      <MultimediaSection />
       <LlamadorMeserosBenefitsSection />
+      <LlamadorMeserosProductsSection />
       <StepsSectionLlamadorMeseros />
       <LlamadorMeserosVerMasSection />
       {/* <LlamadorMeserosVideosSection /> */}

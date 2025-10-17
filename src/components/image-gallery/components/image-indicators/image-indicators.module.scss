@@ -1,0 +1,60 @@
+.bullets {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+
+  @media (min-width: 768px) {
+    display: none; // Ocultar bullets en pantallas mayores a 768px
+  }
+
+  /* Estilos para fondo oscuro */
+  &.darkBullets {
+    // Puedes agregar estilos específicos para el contenedor si es necesario
+  }
+}
+
+.bullet {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  // border: 1px solid #000000;
+  border-radius: 50%;
+  background: #dfdfdf;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.active {
+    background: var(--primary-color, #484848); 
+    transform: scale(1.2);
+  }
+
+  /* Estilos para bullets cuando el fondo es oscuro */
+  &.darkBullet {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.4);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.6);
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+
+    &.active {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 10px;
+    height: 10px;
+  }
+} 

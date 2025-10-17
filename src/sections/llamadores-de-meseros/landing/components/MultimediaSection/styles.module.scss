@@ -1,0 +1,53 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  width: 100%;
+  padding: 0 1rem 2rem;
+  margin: 0 auto;
+  align-items: start; // En móvil, cada elemento tiene su altura natural
+  max-width: 50rem;
+
+  @media (min-width: 1300px) {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 4rem;
+    row-gap: 2rem;
+    padding: 0 4rem 4rem;
+    align-items: stretch; // En desktop, mantener alineación
+    max-width: 1500px;
+  }
+
+  .video__container {
+    grid-column: 1 / 2;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0; // Permitir que se ajuste al contenido
+    height: auto; // En móvil, altura automática
+
+    @media (min-width: 1300px) {
+      grid-column: 1 / 8;
+      height: 100%; // En desktop, ocupar toda la altura
+    }
+  }
+
+  .gallery__container {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    height: auto; // En móvil, altura automática
+    min-height: 350px; // Altura mínima mejorada para móvil
+
+    @media (min-width: 768px) {
+      min-height: 450px; // Altura mínima mejorada para tablet
+    }
+
+    @media (min-width: 1300px) {
+      grid-column: 8 / 13;
+      height: 100%; // En desktop, ocupar toda la altura disponible
+      min-height: 0; // En desktop, se ajusta al contenedor padre
+    }
+  }
+}

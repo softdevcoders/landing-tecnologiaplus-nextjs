@@ -1,0 +1,260 @@
+.thumbs {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    order: 1;
+    width: 115px;
+    flex-shrink: 0;
+  }
+
+  // Estilos para cuando se fuerza la visualización en móvil
+  &.forceShow {
+    display: block;
+    order: 2; // Cambiar a order: 2 para que aparezca después de la galería
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: 1rem; // Cambiar a margin-top para espaciado superior
+
+    @media (min-width: 768px) {
+      width: 115px;
+      margin-top: 0;
+      order: 1; // En desktop, mantener el orden original
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 13%;
+    min-width: 3.375rem;
+    margin-inline-start: -0.275rem;
+    margin-top: 0.1rem;
+  }
+
+  // Estilos para orientación horizontal
+  &.horizontal {
+    @media (min-width: 768px) {
+      width: 100%;
+      height: auto; // Se ajusta completamente al contenido
+      order: 2;
+    }
+
+    @media (min-width: 1200px) {
+      width: 100%;
+      height: auto; // Se ajusta completamente al contenido
+      margin-inline-start: 0;
+      margin-top: 0.625rem;
+    }
+  }
+}
+
+.thumbsTrack {
+  @media (min-width: 768px) {
+    position: relative;
+    height: calc((((100vw - 2rem) / 12) * 11) - 3.5rem);
+    overflow: hidden;
+  }
+
+  @media (min-width: 1200px) {
+    height: calc((((100vw - 6rem) / 12) * 6) - 1.225rem);
+  }
+
+  @media (min-width: 112rem) {
+    height: calc((((112rem - 6rem) / 12) * 6) - 1.225rem);
+  }
+
+  // Estilos para orientación horizontal
+  &.horizontal {
+    @media (min-width: 768px) {
+      height: auto; // Se ajusta completamente al contenido
+      width: 100%;
+    }
+
+    @media (min-width: 1200px) {
+      height: auto; // Se ajusta completamente al contenido
+      width: 100%;
+    }
+  }
+
+  .thumbNavButton {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  &:hover .thumbNavButton:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.viewport {
+  overflow: hidden;
+  height: 100%;
+  scroll-behavior: smooth;
+  padding: 0;
+  -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+  
+  &.vertical {
+    touch-action: pan-y; /* Permitir gestos verticales */
+  }
+  
+  &.horizontal {
+    touch-action: pan-x; /* Permitir gestos horizontales */
+  }
+  
+  &.scrollable {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  gap: 0.625rem;
+  padding: 0 0.375rem; 
+  height: 100%;
+  
+  &.vertical {
+    flex-direction: column;
+  }
+  
+  &.horizontal {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.thumbNavButton {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    color: #333;
+  }
+
+  &:hover:not(:disabled) {
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:disabled,
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  // Estilos para orientación vertical
+  &.vertical {
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+
+    &:hover:not(:disabled) {
+      transform: translateX(-50%) rotate(90deg) scale(1.1);
+    }
+
+    &.prev {
+      top: 5px;
+    }
+
+    &.next {
+      bottom: 5px;
+    }
+  }
+
+  // Estilos para orientación horizontal
+  &.horizontal {
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover:not(:disabled) {
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    &.prev {
+      left: 5px;
+    }
+
+    &.next {
+      right: 5px;
+    }
+  }
+}
+
+.thumb {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  touch-action: manipulation; /* Optimizar para touch */
+  -webkit-tap-highlight-color: transparent; /* Eliminar highlight en iOS */
+
+  &:hover {
+    opacity: 1;
+    border: 1px solid #1E1E1E; 
+  }
+
+  &:active {
+    transform: scale(0.98); /* Feedback visual al tocar */
+  }
+
+  &.selected {
+    opacity: 1;
+    border: 1px solid #1E1E1E; 
+  }
+}
+
+.thumb3d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    svg {
+      width: 10px;
+      height: 10px;
+      color: white;
+    }
+  }
+} 
