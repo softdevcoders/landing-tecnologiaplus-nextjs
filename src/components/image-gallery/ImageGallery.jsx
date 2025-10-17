@@ -9,7 +9,7 @@ import Thumbnails from "./components/thumbnails";
   import Viewer3D from "./components/3d-viewer";
   import ImageIndicators from "./components/image-indicators";
   import ActionButtons from "./components/action-buttons/ActionButtons";
-import GalleryModal from "../ver-mas-productos/galeria-ver-mas/components/gallery-modal/GalleryModal";
+import GalleryModal from "./components/gallery-modal/GalleryModal"; 
 import { useMainCarousel } from "./hooks/useMainCarousel";
 import { useGalleryState } from "./hooks/useGalleryState";
 

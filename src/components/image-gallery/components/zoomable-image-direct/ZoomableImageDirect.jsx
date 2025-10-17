@@ -1,8 +1,8 @@
 "use client";
 
-import { useCallback, useMemo, useRef, useState, useEffect } from 'react';
+import { useCallback, useMemo, useRef } from 'react';
 import Image from "next/image";
-import { generateImageAlt, shouldUsePriority, getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from "../../../../../lib/imageUtils";
+import { shouldUsePriority, getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from "@/lib/imageUtils";
 import styles from "./zoomable-image-direct.module.scss";
 
 const ZoomableImageDirect = ({
@@ -14,8 +14,6 @@ const ZoomableImageDirect = ({
   index,
   isSelected,
   priority = false,
-  productTitle = '',
-  selectedColor = '',
   isMobile = false,
   onOpenGalleryModal = () => {}
 }) => {
