@@ -19,7 +19,7 @@ export const localizadoresRecV3 = {
     },
     {
       type: '3d',
-      modelID: 'de67c55171d44cf2add1dee2321a6867',
+      modelID: '493cf372aabd43dd8839b1f42f199409',
       thumbnail: 'v1759858183/localizadores_para_restaurantes_rec_v3_con_base_de_carga',
       preview: 'v1759858183/localizadores_para_restaurantes_rec_v3_con_base_de_carga',
       alt: 'Modelo 3D del localizador de clientes REC-V3'
