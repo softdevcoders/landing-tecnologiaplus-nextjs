@@ -5,7 +5,7 @@ const NuestrosClientesSection = () => {
   return (
     <NuestrosClientes 
       logos={logosLocalizadores} 
-      title="Algunos clientes del localizador CIR C2"
+      title="Algunos clientes de los LRS CIR-C2"
     />
   );
 };

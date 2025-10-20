@@ -5,7 +5,7 @@ const LlamadoresDeMeserosPreguntasFrecuentes = () => {
   return (
     <PreguntasFrecuentes 
       preguntasFrecuentes={localizadoresDeRestaurantesPreguntasFrecuentes} 
-      title="Preguntas frecuentes del localizador CIR C2" 
+      title="Preguntas frecuentes de los localizadores de clientes CIR-C2 para restaurantes autoservicio" 
     />
   )
 }
