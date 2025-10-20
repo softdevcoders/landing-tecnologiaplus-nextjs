@@ -30,7 +30,7 @@
 
     @media (min-width: 1300px) {
       grid-template-columns: repeat(12, 1fr);
-      column-gap: 4rem;
+      column-gap: 2rem;
       row-gap: 2rem;
       padding: 0 4rem 4rem;
       align-items: stretch; // En desktop, mantener alineación
@@ -47,7 +47,7 @@
       height: auto; // En móvil, altura automática
 
       @media (min-width: 1300px) {
-        grid-column: 1 / 8;
+        grid-column: 1 / 9;
         height: 100%; // En desktop, ocupar toda la altura
       }
     }
@@ -64,7 +64,7 @@
       }
 
       @media (min-width: 1300px) {
-        grid-column: 8 / 13;
+        grid-column: 9 / 13;
         height: 100%; // En desktop, ocupar toda la altura disponible
         min-height: 0; // En desktop, se ajusta al contenedor padre
       }
