@@ -19,7 +19,7 @@ function LlamadorMeserosVerMasSection() {
     {
       title: "Llamador E2-B de 2 teclas",
       description: "4.193 vendidos",
-      image: "v1758214350/llamador_de_meseros_e2b_dos_teclas",
+      image: "v1760979499/llamador_de_meseros_e2b_dos__teclas",
       alt: "Llamador de meseros E2-B de dos teclas compacto",
       title_attribute: "Llamador de meseros E2-B",
       link: routes.landings.llamadoresDeMeseros.children.e2_b.url,
