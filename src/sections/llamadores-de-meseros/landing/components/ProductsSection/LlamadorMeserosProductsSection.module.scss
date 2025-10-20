@@ -96,7 +96,8 @@
     }
 
     .products__container_desktop {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       width: 100%;
       flex-direction: row;
       gap: 4rem;
@@ -104,18 +105,24 @@
 
       .products__container__item {
         width: 100%;
-        max-width: 50rem;
         height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;  
 
         .products__container__item__image {
           height: 100%;
           width: 100%;
+          max-width: 60rem;
           object-fit: contain;
         }
       }
 
       .products__container__item:last-child {
-        padding: 0 2rem;
+        padding-inline: 5rem;
+        .products__container__item__image {
+          max-width: 50rem;
+        }
       }
     }
     
