@@ -40,7 +40,7 @@ function SecondaryTurnoExpressProductsSection() {
             <Image
               width={490}
               height={320}
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_900,f_webp,q_80/v1758571659/rollos_de_fichos_para_turnos_tecnologia_plus"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_900,f_webp,q_80/v1761062787/rollos_de_fichos_para_turnos_tecnologia__plus"
               alt="Rollos de fichos para turnos - Tecnología Plus"
               title="Rollos de fichos para turnos"
               className={style.products__card__image_container__image}

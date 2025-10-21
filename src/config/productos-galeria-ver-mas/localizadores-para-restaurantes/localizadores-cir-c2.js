@@ -186,18 +186,18 @@ export const localizadoresCirC2 = {
   hasColors: true,
   opiniones: [
     {
-      nombre: 'Andrés',
-      opinion: 'Desde que instalamos el localizador, el servicio al cliente mejoró muchísimo. Ya no tenemos filas ni clientes amontonados esperando su pedido. Los localizadores funcionan perfecto incluso con bastante gente en el local, y el alcance es muy bueno. Además, el control numérico es muy práctico para avisar los pedidos.',
+      nombre: 'Mariana',
+      opinion: 'Desde que comenzamos a usar los localizadores nuestros clientes están más tranquilos, ya no se amontonan frente al mostrador esperando su pedido, ellos saben con claridad cuándo ir por su orden y nosotros estamos mucho más organizados.',
       sector: 'Fast food',
     },
     {
-      nombre: 'Laura',
-      opinion: 'Nos encantó porque es fácil de usar y muy práctico. Los estudiantes hacen su pedido, se sientan tranquilos y cuando vibra el localizador van por la bebida. Además, el diseño se ve moderno y profesional. Ha sido una buena inversión. Además, el control numérico es muy prático para avisar los pedidos.',
+      nombre: 'Javier',
+      opinion: 'La verdad me impresionó es que se nos han caído varias veces y no les afecta, no se dañan, son resistentes, aguantan bastante el ritmo de alto tráfico.',
       sector: 'Cafés universidades',
     },
     {
-      nombre: 'Carlos',
-      opinion: 'Llevamos casi un año con los localizadores y no hemos tenido problemas. La batería dura bastante y el soporte técnico nos ha ayudado cuando necesitamos algo. Nuestros clientes también lo ven como un detalle tecnológico que da confianza.',
+      nombre: 'Luz',
+      opinion: 'Lo que más nos gustó de los localizadores es que tiene un control separado para los localizadores, eso nos ayuda mucho porque el punto de pago está lejos del punto donde se entrega la comida. ',
       sector: 'Fast food',
     },
   ]
