@@ -21,7 +21,7 @@ const FichaTecnica = ({ fichaTecnica, title = "Ficha técnica", gridColumns = 3 
                 className={fichaTecnicaStyles.container__item__image}
               />
             </div>
-            <p 
+            <h3 
               className={fichaTecnicaStyles.container__item__description}
               dangerouslySetInnerHTML={{ __html: articulo.descripcion }}
             />

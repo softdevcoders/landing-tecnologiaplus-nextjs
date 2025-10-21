@@ -9,7 +9,7 @@ const mainImage = {
 export const localizadoresCirC2 = { 
   id: "localizadores-cir-c2",
   title: "Localizadores para restaurantes CIR C2",
-  description: "Tus clientes disfrutan el tiempo mientras esperan el pedido.",
+  description: "Los clientes disfrutan una mejor experiencia mientras esperan su orden.",
   url: routes.landings.localizadoresParaRestaurantes.children.rec_c2.url,
   mainImage,
   colors: [

@@ -70,7 +70,7 @@ const FichaTecnicaSection = () => {
   
   return <FichaTecnica
     fichaTecnica={fichaTecnica}
-    title="Ficha técnica del viper para restaurantes CIR-C2"
+    title="Ficha técnica del localizador de clientes CIR-C2"
     gridColumns={4}
   />;
 };
