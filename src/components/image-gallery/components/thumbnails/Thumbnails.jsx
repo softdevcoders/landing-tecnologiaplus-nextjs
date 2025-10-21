@@ -11,8 +11,6 @@ const Thumbnails = ({
   mediaItems = [],
   selectedIndex,
   onThumbClick,
-  productTitle = '',
-  selectedColor = '',
   orientation = 'vertical', // 'vertical' | 'horizontal'
   forceShow = false // Forzar visualización en móvil
 }) => {
@@ -300,12 +298,14 @@ const Thumbnails = ({
                         <path d="M2 12l10 5 10-5"/>
                       </svg>
                     </div>
-                    <div className={styles.thumb3d__iconArrastrarParaRotar}>
-                      <img 
-                        src={getOptimizedImageUrl({url: 'v1761071071/arrastrar-para-rotar-3d', quality: 80})} 
-                        alt="3D Viewer"
-                      />
-                    </div>
+                    {orientation === 'vertical' && (
+                      <div className={styles.thumb3d__iconArrastrarParaRotar}>
+                        <img 
+                          src={getOptimizedImageUrl({url: 'v1761071071/arrastrar-para-rotar-3d', quality: 80})} 
+                          alt="3D Viewer"
+                        />
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <Image
