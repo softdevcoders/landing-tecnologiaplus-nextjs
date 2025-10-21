@@ -88,8 +88,25 @@
 
   &__coverTop {
     height: 13%;
-    max-height: 3rem;
+    max-height: 5rem;
     top: 0;
+  }
+
+  &__iconArrastrarParaRotar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    offset: 0;
+    width: 30%;
+    height: 15%;
+    z-index: 100;
+
+    img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+    }
   }
 }
 

@@ -14,7 +14,7 @@ export const DEFAULT_3D_CONFIG = {
   ui_infos: 0,
   ui_inspector: 0,
   ui_watermark: 0,
-  ui_stop: 1,
+  ui_stop: 0,
   ui_help: 0,
   ui_settings: 0,
   ui_vr: 0,
@@ -22,7 +22,7 @@ export const DEFAULT_3D_CONFIG = {
   ui_annotations: 0,
   
   // Parámetros de cámara y visualización
-  camera: 1, // Habilitar controles de cámara
+  camera: 0, // Habilitar controles de cámara
   transparent: 0,
   autospin: 0,
   orbit_constraint_pan_y: 0,

@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import styles from "./3d-viewer.module.scss";
 import { buildEmbedUrl } from "./3dViewerConfig";
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 const View3DIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -21,7 +22,6 @@ const Viewer3D = ({
   preset = 'minimal',
   isMobile = false,
   enableZoom = false, // Nueva prop para habilitar zoom
-  zoomLevel = 0, // Nivel de zoom inicial (0 = automático)
   enableControls = false // Habilitar controles de UI
 }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -153,6 +153,12 @@ const Viewer3D = ({
       
       <div className={styles.viewer3d__coverTop}></div>
       <div className={styles.viewer3d__coverBottom}></div>
+      <div className={styles.viewer3d__iconArrastrarParaRotar}>
+        <img 
+          src={getOptimizedImageUrl({url: 'v1761071071/arrastrar-para-rotar-3d', quality: 80})} 
+          alt="3D Viewer"
+        />
+      </div>
 
       <iframe
         key={`${modelID}-${retryCount}`} // Forzar re-render cuando cambie el retry
