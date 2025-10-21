@@ -22,9 +22,9 @@ export const DEFAULT_3D_CONFIG = {
   ui_annotations: 0,
   
   // Parámetros de cámara y visualización
-  camera: 1,
+  camera: 1, // Habilitar controles de cámara
   transparent: 0,
-  autospin: 1,
+  autospin: 0,
   orbit_constraint_pan_y: 0,
   
   // Parámetros adicionales de la documentación oficial
@@ -185,6 +185,46 @@ export const PRESET_CONFIGS = {
     ui_fullscreen: 1,
     ui_annotations: 0,
     camera: 0,
+    preload: 1,
+    transparent: 0,
+    autospin: 0,
+    orbit_constraint_pan_y: 0
+  },
+  
+  // Configuración con controles de zoom habilitados
+  zoomEnabled: {
+    autostart: 1,
+    ui_controls: 1, // Habilitar controles de UI
+    ui_infos: 0,
+    ui_inspector: 0,
+    ui_watermark: 0,
+    ui_stop: 1,
+    ui_help: 0,
+    ui_settings: 0,
+    ui_vr: 0,
+    ui_fullscreen: 1,
+    ui_annotations: 0,
+    camera: 1, // Habilitar controles de cámara
+    preload: 1,
+    transparent: 0,
+    autospin: 0,
+    orbit_constraint_pan_y: 0
+  },
+  
+  // Configuración con zoom limitado
+  zoomLimited: {
+    autostart: 1,
+    ui_controls: 0,
+    ui_infos: 0,
+    ui_inspector: 0,
+    ui_watermark: 0,
+    ui_stop: 1,
+    ui_help: 0,
+    ui_settings: 0,
+    ui_vr: 0,
+    ui_fullscreen: 1,
+    ui_annotations: 0,
+    camera: 1, // Habilitar controles de cámara
     preload: 1,
     transparent: 0,
     autospin: 0,

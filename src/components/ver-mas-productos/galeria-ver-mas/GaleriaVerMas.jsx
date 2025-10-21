@@ -2,7 +2,7 @@ import styles from "./galeria-ver-mas.module.scss";
 import globalStyles from "@/components/ver-mas-productos/styles/ver-mas-productos-global-style.module.scss";
 import GalleryWrapper from "./components/gallery-wrapper";
 import InfoContainer from "./components/info-container";
-import { ProductColorProvider } from "@/components/ver-mas-productos/galeria-ver-mas/contexts/ProductColorContext";
+import { ProductColorProvider } from "@/components/image-gallery/contexts/ProductColorContext";
 import BackButton from "@/components/back-button";
 
 const GaleriaVerMas = ({ verMasInformacion }) => {

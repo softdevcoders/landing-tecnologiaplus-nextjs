@@ -3,15 +3,13 @@
 import { useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
-import { getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from '../../../../../lib/imageUtils';
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
 import styles from './gallery-modal.module.scss';
 
 const GalleryModal = ({ 
   isOpen, 
   onClose, 
   mediaItems = [], 
-  productTitle = '', 
-  selectedColor = '' 
 }) => {
   // Cerrar modal con ESC
   const handleKeyDown = useCallback((e) => {

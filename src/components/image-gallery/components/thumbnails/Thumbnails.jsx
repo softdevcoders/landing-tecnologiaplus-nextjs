@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import { ArrowBack, ArrowForward } from '@/components/ui/icons';
-import { getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from '../../../../../lib/imageUtils';
+import { getOptimizedSizes, generateBlurDataURL, getOptimizedImageUrl } from '../../../../lib/imageUtils';
 import styles from './thumbnails.module.scss';
 
 const Thumbnails = ({
@@ -12,12 +12,14 @@ const Thumbnails = ({
   selectedIndex,
   onThumbClick,
   productTitle = '',
-  selectedColor = ''
+  selectedColor = '',
+  orientation = 'vertical', // 'vertical' | 'horizontal'
+  forceShow = false // Forzar visualización en móvil
 }) => {
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: 'keepSnaps',
     dragFree: false,
-    axis: 'y',
+    axis: orientation === 'horizontal' ? 'x' : 'y',
     speed: 20,
     skipSnaps: false,
     watchDrag: true,
@@ -29,6 +31,7 @@ const Thumbnails = ({
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [shouldShowButtons, setShouldShowButtons] = useState(false);
   const [touchStartY, setTouchStartY] = useState(null);
+  const [touchStartX, setTouchStartX] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
   const [thumbsTrackRef, setThumbsTrackRef] = useState(null);
 
@@ -89,45 +92,82 @@ const Thumbnails = ({
     // Prevenir el comportamiento por defecto
     event.preventDefault();
     
-    // Detectar si es un trackpad (deltaY más pequeño) o mouse wheel (deltaY más grande)
-    const isTrackpad = Math.abs(event.deltaY) < 50;
-    const scrollThreshold = isTrackpad ? 30 : 100;
-    
-    // Scroll directo sin acumulador
-    if (Math.abs(event.deltaY) > scrollThreshold) {
-      if (event.deltaY > 0) {
-        emblaThumbsApi.scrollNext();
-      } else {
-        emblaThumbsApi.scrollPrev();
+    if (orientation === 'horizontal') {
+      // Para orientación horizontal, usar deltaX
+      const isTrackpad = Math.abs(event.deltaX) < 50;
+      const scrollThreshold = isTrackpad ? 30 : 100;
+      
+      if (Math.abs(event.deltaX) > scrollThreshold) {
+        if (event.deltaX > 0) {
+          emblaThumbsApi.scrollNext();
+        } else {
+          emblaThumbsApi.scrollPrev();
+        }
+      }
+    } else {
+      // Para orientación vertical, usar deltaY
+      const isTrackpad = Math.abs(event.deltaY) < 50;
+      const scrollThreshold = isTrackpad ? 30 : 100;
+      
+      if (Math.abs(event.deltaY) > scrollThreshold) {
+        if (event.deltaY > 0) {
+          emblaThumbsApi.scrollNext();
+        } else {
+          emblaThumbsApi.scrollPrev();
+        }
       }
     }
-  }, [emblaThumbsApi]);
+  }, [emblaThumbsApi, orientation]);
 
   const handleTouchStart = useCallback((event) => {
-    setTouchStartY(event.touches[0].clientY);
-  }, []);
+    if (orientation === 'horizontal') {
+      setTouchStartX(event.touches[0].clientX);
+    } else {
+      setTouchStartY(event.touches[0].clientY);
+    }
+  }, [orientation]);
 
   const handleTouchMove = useCallback((event) => {
-    if (!emblaThumbsApi || touchStartY === null) return;
-    
-    event.preventDefault();
-    
-    const touchY = event.touches[0].clientY;
-    const deltaY = touchStartY - touchY;
-    const threshold = 30; // Umbral mínimo para considerar un swipe
-    
-    if (Math.abs(deltaY) > threshold) {
-      if (deltaY > 0) {
-        emblaThumbsApi.scrollNext();
-      } else {
-        emblaThumbsApi.scrollPrev();
+    if (orientation === 'horizontal') {
+      if (!emblaThumbsApi || touchStartX === null) return;
+      
+      event.preventDefault();
+      
+      const touchX = event.touches[0].clientX;
+      const deltaX = touchStartX - touchX;
+      const threshold = 30; // Umbral mínimo para considerar un swipe
+      
+      if (Math.abs(deltaX) > threshold) {
+        if (deltaX > 0) {
+          emblaThumbsApi.scrollNext();
+        } else {
+          emblaThumbsApi.scrollPrev();
+        }
+        setTouchStartX(null);
       }
-      setTouchStartY(null);
+    } else {
+      if (!emblaThumbsApi || touchStartY === null) return;
+      
+      event.preventDefault();
+      
+      const touchY = event.touches[0].clientY;
+      const deltaY = touchStartY - touchY;
+      const threshold = 30; // Umbral mínimo para considerar un swipe
+      
+      if (Math.abs(deltaY) > threshold) {
+        if (deltaY > 0) {
+          emblaThumbsApi.scrollNext();
+        } else {
+          emblaThumbsApi.scrollPrev();
+        }
+        setTouchStartY(null);
+      }
     }
-  }, [emblaThumbsApi, touchStartY]);
+  }, [emblaThumbsApi, touchStartY, touchStartX, orientation]);
 
   const handleTouchEnd = useCallback(() => {
     setTouchStartY(null);
+    setTouchStartX(null);
   }, []);
 
   const handleMouseEnter = useCallback(() => {
@@ -201,10 +241,13 @@ const Thumbnails = ({
   }
 
   return (
-    <div className={styles.thumbs}>
-      <div className={styles.thumbsTrack} ref={setThumbsTrackRef}>
-        <div className={`${styles.viewport} ${styles.scrollable}`} ref={emblaThumbsRef}>
-          <div className={styles.container}>
+    <div className={`${styles.thumbs} ${orientation === 'horizontal' ? styles.horizontal : styles.vertical} ${forceShow ? styles.forceShow : ''}`}>
+      <div className={`${styles.thumbsTrack} ${orientation === 'horizontal' ? styles.horizontal : styles.vertical}`} ref={setThumbsTrackRef}>
+        <div 
+          className={`${styles.viewport} ${styles.scrollable} ${orientation === 'horizontal' ? styles.horizontal : styles.vertical}`} 
+          ref={emblaThumbsRef}
+        >
+          <div className={`${styles.container} ${orientation === 'horizontal' ? styles.horizontal : styles.vertical}`}>
             {mediaItems.map((item, index) => (
               <button
                 key={index}
@@ -285,7 +328,7 @@ const Thumbnails = ({
         {shouldShowButtons && (
           <>
             <button
-              className={`${styles.thumbNavButton} ${styles.prev} ${!isHovered || !canScrollPrev ? styles.hidden : ''}`}
+              className={`${styles.thumbNavButton} ${styles.prev} ${orientation === 'horizontal' ? styles.horizontal : styles.vertical} ${!isHovered || !canScrollPrev ? styles.hidden : ''}`}
               onClick={scrollThumbsPrev}
               aria-label="Miniaturas anteriores"
               type="button"
@@ -294,7 +337,7 @@ const Thumbnails = ({
             </button>
             
             <button
-              className={`${styles.thumbNavButton} ${styles.next} ${!isHovered || !canScrollNext ? styles.hidden : ''}`}
+              className={`${styles.thumbNavButton} ${styles.next} ${orientation === 'horizontal' ? styles.horizontal : styles.vertical} ${!isHovered || !canScrollNext ? styles.hidden : ''}`}
               onClick={scrollThumbsNext}
               aria-label="Miniaturas siguientes"
               type="button"

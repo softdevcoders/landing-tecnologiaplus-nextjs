@@ -246,6 +246,11 @@ const clientes = {
     alt: "Logo Metro",
     title: "Logo Metro",
   },
+  Farmatodo: {
+    src: `${BASE_URL}/v1760975107/farmatogo-logo`,
+    alt: "Logo Farmatodo",
+    title: "Logo Farmatodo",
+  },
 }
 
 export const logosTermicos = [
@@ -283,6 +288,7 @@ export const logosTurnoExpress = [
   clientes.Easy,
   clientes.PriceSmart,
   clientes.Metro,
+  clientes.Farmatodo,
 ];
 
 export const logosTurnoMaster = [

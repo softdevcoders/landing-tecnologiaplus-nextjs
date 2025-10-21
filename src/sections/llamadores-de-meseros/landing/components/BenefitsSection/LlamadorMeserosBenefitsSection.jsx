@@ -1,6 +1,5 @@
 import style from "./LlamadorMeserosBenefitsSection.module.scss";
 import BenefitsSection from "@/components/benefits";
-import YouTubePlayer from "@/components/youtube-player";
 import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 const benefits = [
@@ -32,19 +31,11 @@ const benefits = [
 
 function LlamadorMeserosBenefitsSection() {
   return (
-    <section className={style.benefits__section_container} data-nosnippet>
-      <div className={style.video__container}>
-        <YouTubePlayer
-          videoId="XGGhLks0iVc" 
-          title="Llamador de Meseros - Tecnología Plus"
-        />
-      </div>
-      <BenefitsSection 
-        benefits={benefits} 
-        className={style.benefits__container_list}
-        title="Beneficios del Llamador de Meseros"
-      />
-    </section>
+    <BenefitsSection 
+      benefits={benefits} 
+      title="Beneficios del Llamador de Meseros"
+      className={style.benefits__container_list}
+    />
   );
 }
 

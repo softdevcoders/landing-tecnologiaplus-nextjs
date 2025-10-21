@@ -19,7 +19,10 @@ const Viewer3D = ({
   onError = () => {},
   config = {},
   preset = 'minimal',
-  isMobile = false
+  isMobile = false,
+  enableZoom = false, // Nueva prop para habilitar zoom
+  zoomLevel = 0, // Nivel de zoom inicial (0 = automático)
+  enableControls = false // Habilitar controles de UI
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -27,8 +30,26 @@ const Viewer3D = ({
   const [retryCount, setRetryCount] = useState(0);
   const [embedUrl, setEmbedUrl] = useState(null);
 
-  // Determinar el preset a usar basado en el dispositivo
-  const effectivePreset = isMobile ? 'mobile' : preset;
+  // Determinar el preset a usar basado en las props y dispositivo
+  const getEffectivePreset = () => {
+    if (isMobile) return 'mobile';
+    if (enableZoom && enableControls) return 'zoomEnabled';
+    if (enableZoom) return 'zoomLimited';
+    return preset;
+  };
+  
+  const effectivePreset = getEffectivePreset();
+  
+  // Crear configuración personalizada basada en las props
+  const customConfig = {
+    ...config,
+    ...(enableZoom && {
+      camera: 1 // Habilitar controles de cámara
+    }),
+    ...(enableControls && {
+      ui_controls: 1
+    })
+  };
 
   // Efecto para manejar la hidratación del lado del cliente
   useEffect(() => {
@@ -38,10 +59,10 @@ const Viewer3D = ({
   // Efecto para construir la URL del embed cuando el componente esté montado
   useEffect(() => {
     if (isMounted && modelID) {
-      const url = buildEmbedUrl(modelID, config, effectivePreset);
+      const url = buildEmbedUrl(modelID, customConfig, effectivePreset);
       setEmbedUrl(url);
     }
-  }, [isMounted, modelID, config, effectivePreset]);
+  }, [isMounted, modelID, customConfig, effectivePreset]);
 
   // Efecto para reiniciar el estado cuando cambia el modelID
   useEffect(() => {
@@ -66,7 +87,7 @@ const Viewer3D = ({
       setRetryCount(prev => prev + 1);
       setTimeout(() => {
         // Forzar recarga del iframe cambiando la URL
-        const url = buildEmbedUrl(modelID, config, effectivePreset);
+        const url = buildEmbedUrl(modelID, customConfig, effectivePreset);
         setEmbedUrl(url + `&retry=${retryCount + 1}`);
       }, 1000 * (retryCount + 1)); // Delay incremental
     } else {

@@ -65,8 +65,10 @@ const YouTubePlayer = ({
       rel: '0',
       modestbranding: '1',
       showinfo: '0',
-      enablejsapi: '0',
+      enablejsapi: '1', // Habilitar API de JavaScript para mejor funcionalidad
       origin: typeof window !== 'undefined' ? window.location.origin : '',
+      playsinline: '1', // Permitir reproducción en línea en móviles
+      controls: '1', // Mostrar controles del reproductor
       ...(autoplay && { autoplay: '1' }),
       ...(muted && { mute: '1' }),
       ...(startTime > 0 && { start: startTime.toString() }),
@@ -256,7 +258,7 @@ const YouTubePlayer = ({
             allowFullScreen
             onError={handleIframeError}
             onLoad={handleIframeLoad}
-            sandbox="allow-scripts allow-same-origin allow-presentation"
+            sandbox="allow-scripts allow-same-origin allow-presentation allow-forms allow-popups allow-popups-to-escape-sandbox"
             aria-label={`Reproductor de video: ${title || 'Video de YouTube'}`}
           />
         </div>
