@@ -22,6 +22,7 @@ export const localizadoresCirC2 = {
           type: 'image',
           ...mainImage,
         },
+
         {
           type: 'image',
           src: 'v1760638297/avisador_de_pedidos_cir_c2_con_medidas',     
@@ -62,6 +63,13 @@ export const localizadoresCirC2 = {
           alt: 'Localizadores para restaurantes en Colombia modelo Cir-C2 con tecnología rompe muros',
           title: 'Localizadores Cir-C2 rompe muros: cobertura ideal para restaurantes en Colombia',
           darkBackground: true
+        },
+        {
+          type: '3d',
+          modelID: 'a31cf7ea2e914152a9c9fbb928c0c555',
+          thumbnail: 'v1759858183/localizadores_para_restaurantes_cir_c2_amarillo',
+          preview: 'v1759858183/localizadores_para_restaurantes_cir_c2_amarillo',
+          alt: 'Modelo 3D del localizador de clientes CIR-C2 amarillo' 
         },
       ]
     },
