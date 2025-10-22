@@ -47,6 +47,14 @@
     width: 30%;
     object-fit: contain;
   }
+
+  // Ocultar en desktop solo cuando thumbnailsOrientation no es horizontal
+  // Cuando thumbnailsOrientation es horizontal, se muestra en todos los dispositivos
+  @media (min-width: 768px) {
+    .gallery:not(.horizontalThumbnails) & {
+      display: none;
+    }
+  }
 }
 
 .mainCarousel {

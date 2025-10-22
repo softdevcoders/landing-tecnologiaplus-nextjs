@@ -105,7 +105,7 @@ const ImageGallery = ({
                       title={`${productTitle} - Modelo 3D ${index + 1}`}
                       isMobile={isMobile}
                       preset="minimal" // Usar configuración minimalista por defecto
-                      showIconArrastrarParaRotar={thumbnailsOrientation !== 'horizontal'}
+                      showIconArrastrarParaRotar={!isMobile && thumbnailsOrientation !== 'horizontal'}
                     />
                   </div>
                 ) : (
@@ -174,11 +174,12 @@ const ImageGallery = ({
         )}
       </div>
 
-      {thumbnailsOrientation === 'horizontal' && (
+      {/* Icono "arrastrar para rotar" - para items 3D, siempre abajo cuando thumbnailsOrientation es horizontal, solo en móvil para otros casos */}
+      {currentMediaItem?.type === '3d' && (thumbnailsOrientation === 'horizontal' || isMobile) && (
         <div className={styles.viewer3d__iconArrastrarParaRotar}>
           <img 
             src={getOptimizedImageUrl({url: 'v1761071071/arrastrar-para-rotar-3d', quality: 80})} 
-            alt="3D Viewer"
+            alt="Arrastra para rotar el modelo 3D"
           />
         </div>
       )}
