@@ -70,20 +70,6 @@ export const localizadoresCirC2 = {
           preview: 'v1759858183/localizadores_para_restaurantes_cir_c2_amarillo',
           alt: 'Modelo 3D del localizador de clientes CIR-C2 amarillo' 
         },
-        {
-          type: '3d',
-          modelID: 'a31cf7ea2e914152a9c9fbb928c0c555',
-          thumbnail: 'v1759858183/localizadores_para_restaurantes_cir_c2_amarillo',
-          preview: 'v1759858183/localizadores_para_restaurantes_cir_c2_amarillo',
-          alt: 'Modelo 3D del localizador de clientes CIR-C2 amarillo' 
-        },
-        {
-          type: '3d',
-          modelID: 'a31cf7ea2e914152a9c9fbb928c0c555',
-          thumbnail: 'v1759858183/localizadores_para_restaurantes_cir_c2_amarillo',
-          preview: 'v1759858183/localizadores_para_restaurantes_cir_c2_amarillo',
-          alt: 'Modelo 3D del localizador de clientes CIR-C2 amarillo' 
-        },
       ]
     },
     {

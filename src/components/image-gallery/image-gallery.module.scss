@@ -25,12 +25,26 @@
       gap: 0.625rem;
       height: 100%; /* Asegurar que use toda la altura disponible */
       max-height: 100%; /* Limitar altura máxima */
+      margin-top: 0;
     }
 
     @media (min-width: 1200px) {
       column-gap: 0;
-      row-gap: 0.625rem;
+      row-gap: 0;
     }
+  }
+}
+
+.viewer3d__iconArrastrarParaRotar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 1;
+  width: 100%;
+
+  img {
+    width: 30%;
+    object-fit: contain;
   }
 }
 
@@ -165,8 +179,6 @@
   align-items: center;
   justify-content: center;
 }
-
-
 
 .navButton {
   display: flex;

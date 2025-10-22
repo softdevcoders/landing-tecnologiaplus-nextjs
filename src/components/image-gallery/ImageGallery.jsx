@@ -12,6 +12,7 @@ import Thumbnails from "./components/thumbnails";
 import GalleryModal from "./components/gallery-modal/GalleryModal"; 
 import { useMainCarousel } from "./hooks/useMainCarousel";
 import { useGalleryState } from "./hooks/useGalleryState";
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 const ImageGallery = ({ 
   mediaItems = [], 
@@ -104,6 +105,7 @@ const ImageGallery = ({
                       title={`${productTitle} - Modelo 3D ${index + 1}`}
                       isMobile={isMobile}
                       preset="minimal" // Usar configuración minimalista por defecto
+                      showIconArrastrarParaRotar={thumbnailsOrientation !== 'horizontal'}
                     />
                   </div>
                 ) : (
@@ -171,6 +173,15 @@ const ImageGallery = ({
           />
         )}
       </div>
+
+      {thumbnailsOrientation === 'horizontal' && (
+        <div className={styles.viewer3d__iconArrastrarParaRotar}>
+          <img 
+            src={getOptimizedImageUrl({url: 'v1761071071/arrastrar-para-rotar-3d', quality: 80})} 
+            alt="3D Viewer"
+          />
+        </div>
+      )}
 
       {/* Modal de galería */}
       <GalleryModal

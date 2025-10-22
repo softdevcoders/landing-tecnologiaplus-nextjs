@@ -22,7 +22,8 @@ const Viewer3D = ({
   preset = 'minimal',
   isMobile = false,
   enableZoom = false, // Nueva prop para habilitar zoom
-  enableControls = false // Habilitar controles de UI
+  enableControls = false, // Habilitar controles de UI
+  showIconArrastrarParaRotar = false
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -153,12 +154,14 @@ const Viewer3D = ({
       
       <div className={styles.viewer3d__coverTop}></div>
       <div className={styles.viewer3d__coverBottom}></div>
-      <div className={styles.viewer3d__iconArrastrarParaRotar}>
-        <img 
-          src={getOptimizedImageUrl({url: 'v1761071071/arrastrar-para-rotar-3d', quality: 80})} 
-          alt="3D Viewer"
-        />
-      </div>
+      {showIconArrastrarParaRotar && (
+        <div className={styles.viewer3d__iconArrastrarParaRotar}>
+          <img 
+            src={getOptimizedImageUrl({url: 'v1761071071/arrastrar-para-rotar-3d', quality: 80})} 
+            alt="3D Viewer"
+          />
+        </div>
+      )}
 
       <iframe
         key={`${modelID}-${retryCount}`} // Forzar re-render cuando cambie el retry
