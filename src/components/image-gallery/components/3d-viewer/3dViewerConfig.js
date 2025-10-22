@@ -22,13 +22,13 @@ export const DEFAULT_3D_CONFIG = {
   ui_annotations: 0,
   
   // Parámetros de cámara y visualización
-  camera: 0, // Habilitar controles de cámara
+  camera: 1, // Habilitar controles de cámara
   transparent: 0,
   autospin: 1,
   orbit_constraint_pan_y: 0,
   
   // Parámetros adicionales de la documentación oficial
-  blending: 1,
+  blending: 0,
   annotation_cycle: 0,
   annotations_visible: 0,
   

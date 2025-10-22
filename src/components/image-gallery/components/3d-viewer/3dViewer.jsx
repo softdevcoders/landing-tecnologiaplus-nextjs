@@ -32,14 +32,7 @@ const Viewer3D = ({
   const [embedUrl, setEmbedUrl] = useState(null);
 
   // Determinar el preset a usar basado en las props y dispositivo
-  const getEffectivePreset = () => {
-    if (isMobile) return 'mobile';
-    if (enableZoom && enableControls) return 'zoomEnabled';
-    if (enableZoom) return 'zoomLimited';
-    return preset;
-  };
-  
-  const effectivePreset = getEffectivePreset();
+
   
   // Crear configuración personalizada basada en las props
   const customConfig = {
@@ -60,10 +53,10 @@ const Viewer3D = ({
   // Efecto para construir la URL del embed cuando el componente esté montado
   useEffect(() => {
     if (isMounted && modelID) {
-      const url = buildEmbedUrl(modelID, customConfig, effectivePreset);
+      const url = buildEmbedUrl(modelID, customConfig, 'minimal');
       setEmbedUrl(url);
     }
-  }, [isMounted, modelID, customConfig, effectivePreset]);
+  }, [isMounted, modelID, customConfig]);
 
   // Efecto para reiniciar el estado cuando cambia el modelID
   useEffect(() => {
@@ -88,7 +81,7 @@ const Viewer3D = ({
       setRetryCount(prev => prev + 1);
       setTimeout(() => {
         // Forzar recarga del iframe cambiando la URL
-        const url = buildEmbedUrl(modelID, customConfig, effectivePreset);
+        const url = buildEmbedUrl(modelID, customConfig, 'minimal');
         setEmbedUrl(url + `&retry=${retryCount + 1}`);
       }, 1000 * (retryCount + 1)); // Delay incremental
     } else {
@@ -96,7 +89,7 @@ const Viewer3D = ({
       setIsLoading(false);
       onError("Error al cargar el modelo 3D después de varios intentos");
     }
-  }, [onError, retryCount, modelID, config, effectivePreset]);
+  }, [onError, retryCount, modelID, config]);
 
   // Validación del modelo
   if (!modelID) {
