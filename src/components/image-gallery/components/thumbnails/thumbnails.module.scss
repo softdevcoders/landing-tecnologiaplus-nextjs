@@ -14,7 +14,6 @@
     order: 2; // Cambiar a order: 2 para que aparezca después de la galería
     width: 100%;
     flex-shrink: 0;
-    margin-top: 1rem; // Cambiar a margin-top para espaciado superior
 
     @media (min-width: 768px) {
       width: 115px;
