@@ -42,6 +42,10 @@ const Thumbnails = ({
       const canNext = emblaThumbsApi.canScrollNext();
       setCanScrollPrev(canPrev);
       setCanScrollNext(canNext);
+      
+      // Mostrar botones si hay scroll disponible (elementos fuera del viewport)
+      const hasOverflow = canPrev || canNext;
+      setShouldShowButtons(hasOverflow);
     }, 0);
   }, [emblaThumbsApi]);
 
@@ -198,10 +202,6 @@ const Thumbnails = ({
       emblaThumbsApi.on('select', onThumbsSelect);
       emblaThumbsApi.on('reInit', onThumbsSelect);
       onThumbsSelect();
-
-      // Mostrar botones solo si hay scroll disponible
-      const hasOverflow = emblaThumbsApi.scrollSnapList().length > 4;
-      setShouldShowButtons(hasOverflow);
     };
 
     requestAnimationFrame(initCarousel);
