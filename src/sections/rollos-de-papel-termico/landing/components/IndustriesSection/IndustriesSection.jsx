@@ -34,7 +34,7 @@ function RollosIndustriesSection() {
     <IndustriesSection>
       <IndustriesSectionContainer>
         <IndustriesSectionTitle 
-          title="Nuestros Rollos Térmicos funcionan en todos los sectores, desde el sector salud hasta oficinas y comercios." 
+          title="Nuestros Rollos Térmicos funcionan en todos los sectores, desde el sector salud hasta oficinas y comercios" 
           className={style.industries__section__title}
         />
         <IndustriesSectionList> 

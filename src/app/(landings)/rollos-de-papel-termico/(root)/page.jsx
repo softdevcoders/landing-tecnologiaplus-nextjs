@@ -6,13 +6,14 @@ import IndustriesSection from "@/sections/rollos-de-papel-termico/landing/compon
 import ProductsSection from "@/sections/rollos-de-papel-termico/landing/components/ProductsSection/ProductsSection";
 import RelatedProducts from "@/sections/rollos-de-papel-termico/landing/components/RelatedProducts/RelatedProducts";
 import TechnicalDetails from "@/sections/rollos-de-papel-termico/landing/components/TechnicalDetails/TechnicalDetails";
+import PreguntasFrecuentes from "@/sections/rollos-de-papel-termico/landing/components/PreguntasFrecuentes";
 
 export async function generateMetadata() {
   const { 'rollos-de-papel-termico': { root: metadata } } = getMetadata('landings');
   return metadata;
 }
 
-export default function RollosTermicosLanding() {
+export default function RollosDePapelTermicoLanding() {
   return (
     <>
       <HeroSection />
@@ -22,6 +23,7 @@ export default function RollosTermicosLanding() {
       <TechnicalDetails />
       <IndustriesSection />
       <RelatedProducts />
+      <PreguntasFrecuentes />
     </>
   );
 }

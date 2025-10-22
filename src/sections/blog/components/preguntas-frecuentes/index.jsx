@@ -6,7 +6,8 @@ import {
   turneroTurnoexpressPreguntasFrecuentes,
   sistemasDeTurnosTurnomasterPreguntasFrecuentes,
   dispensadorDeTicketsPreguntasFrecuentes,
-  rollosDeFichosParaTurnosPreguntasFrecuentes
+  rollosDeFichosParaTurnosPreguntasFrecuentes,
+  rollosTermicosPreguntasFrecuentes
 } from "@/config/preguntas-frecuentes";
 import { routes } from "@/config/routes";
 
@@ -42,6 +43,10 @@ const PreguntasFrecuentesBlog = ({ categoryKey }) => {
     case routes.blog.children.rollosDeFichosParaTurnos.category_key:
       preguntasFrecuentes = rollosDeFichosParaTurnosPreguntasFrecuentes;
       title = "Preguntas frecuentes sobre rollos de fichos para turnos";
+      break;
+    case routes.blog.children.rollosDePapelTermico.category_key:
+      preguntasFrecuentes = rollosTermicosPreguntasFrecuentes;
+      title = "Preguntas frecuentes sobre rollos de papel térmico";
       break;
     default:  
       preguntasFrecuentes = null;

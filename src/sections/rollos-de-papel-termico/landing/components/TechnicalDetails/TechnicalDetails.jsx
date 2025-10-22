@@ -62,8 +62,7 @@ function TurnosTechnicalDetails() {
   return (
     <section className={style.technical__details} data-nosnippet> 
       <div className={style.header}>
-        <h2 className={style.title}>Ficha Técnica</h2>
-        <p className={style.description}>Rollos térmicos</p>
+        <h2 className={style.title}>Ficha Técnica de los Rollos Térmicos</h2>
       </div>
       <div className={style.carousel_container}>
         <div className={style.carousel}>
@@ -97,7 +96,7 @@ function TurnosTechnicalDetails() {
           </ul>
         </div>
         <div className={style.features}>
-          <span>Características</span>
+          <span>Características del papel de transferencia térmica</span>
           <ul>
             {features.map((feature, index) => (
               <li key={index}>

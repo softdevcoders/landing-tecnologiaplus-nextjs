@@ -5,7 +5,7 @@ function ClientsSection() {
   return (
     <NuestrosClientes 
       title="Algunos de nuestros clientes"
-      description="Nuestra calidad en rollos térmicos respalda a grandes empresas."
+      description="Clientes que prefieren nuestros Rollos Térmicos"
       logos={logosTermicos}
     />
   );
