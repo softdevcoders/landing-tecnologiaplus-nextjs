@@ -26,6 +26,7 @@ const ImageGallery = ({
   const {
     emblaMainRef,
     selectedIndex,
+    setSelectedIndex,
     isZoomed,
     setIsZoomed,
     scrollPrev,
@@ -47,15 +48,15 @@ const ImageGallery = ({
   // Efecto para reiniciar el estado cuando cambian los items
   useEffect(() => {
     reInitCarousel();
-    resetGalleryState(setIsZoomed, () => {});
-  }, [displayMediaItems, reInitCarousel, resetGalleryState, setIsZoomed]);
+    resetGalleryState(setIsZoomed, setSelectedIndex);
+  }, [displayMediaItems, reInitCarousel, resetGalleryState, setIsZoomed, setSelectedIndex]);
 
   // Efecto para reiniciar el estado cuando cambia el color seleccionado
   useEffect(() => {
     if (colorContext?.selectedColor) {
-      resetGalleryState(setIsZoomed, () => {});
+      resetGalleryState(setIsZoomed, setSelectedIndex);
     }
-  }, [colorContext?.selectedColor, resetGalleryState, setIsZoomed]);
+  }, [colorContext?.selectedColor, resetGalleryState, setIsZoomed, setSelectedIndex]);
 
   // Verificar si el item actual tiene fondo oscuro
   const hasDarkBackground = currentMediaItem?.darkBackground || false;
