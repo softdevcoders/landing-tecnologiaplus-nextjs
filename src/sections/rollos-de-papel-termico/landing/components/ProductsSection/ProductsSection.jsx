@@ -10,17 +10,17 @@ function ProductsSection() {
         <Image
           width={1022}
           height={909}
-          sizes="(max-width: 768px) 80vw, (max-width: 1024px) 60vw, (max-width: 1400px) 35vw, 20vw"
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349920/image-1_1_ljyxis_qdsmdq"
-          alt="Rollos Térmicos blancos"
+          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_900,f_webp,q_80/v1761239492/papel_termico_para_punto_de_venta"
+          alt="Papel térmico en rollos para puntos de venta y datáfonos"
+          title="Papel térmico de alta calidad para impresoras y datáfonos"
           unoptimized={true}
         />
         <Image
           width={1237}
           height={908}
-          sizes="(max-width: 768px) 80vw, (max-width: 1024px) 60vw, (max-width: 1400px) 35vw, 25vw"
-          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349923/Recurso-13_2x-8_1_suitny_l91ptd"
-          alt="rollos de papel termico para impresoras"
+          src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_900,f_webp,q_80/v1761239493/rollos_termicos_para_impresora_pos"
+          alt="Rollos térmicos para impresora de punto de venta con impresión nítida y duradera"
+          title="Rollos térmicos para impresora ideales para tu negocio"
           unoptimized={true}
         />
       </div>
