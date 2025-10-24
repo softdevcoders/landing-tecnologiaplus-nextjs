@@ -4,7 +4,7 @@ import { logosTermicos } from "@/config/client-logos";
 function ClientsSection() {
   return (
     <NuestrosClientes 
-      title="Algunos de nuestros clientes"
+      title="Clientes que prefieren nuestros Rollos Térmicos"
       description="Nuestra calidad en rollos térmicos respalda a grandes empresas."
       logos={logosTermicos}
     />
