@@ -36,7 +36,7 @@ const PostView = ({ post }) => {
           <div className={style.blogPostView__content}>  
             <div className={style.blogPostView__imageContainer}>
               <Image
-                src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_720,q_80/${post.imagen_principal.src}`} 
+                src={`https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_1200,q_80/${post.imagen_principal.src}`} 
                 alt={post.imagen_principal.alt ?? optimizedAltText}
                 title={post.imagen_principal.title ?? optimizedAltText}
                 className={style.blogPostView__image}
