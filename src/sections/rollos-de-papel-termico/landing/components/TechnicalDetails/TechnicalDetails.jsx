@@ -102,7 +102,7 @@ function TurnosTechnicalDetails() {
           </ul>
         </div>
         <div className={style.features}>
-          <h2>Características del papel de transferencia térmica</h2>
+          <h2 className={style.features__title}>Características del papel de transferencia térmica</h2>
           <ul>
             {features.map((feature, index) => (
               <li key={index}>
