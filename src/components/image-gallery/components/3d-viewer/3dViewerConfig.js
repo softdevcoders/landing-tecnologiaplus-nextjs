@@ -24,7 +24,7 @@ export const DEFAULT_3D_CONFIG = {
   // Parámetros de cámara y visualización
   camera: 1, // Habilitar controles de cámara
   transparent: 0,
-  autospin: 1,
+  autospin: 0,
   orbit_constraint_pan_y: 0,
   
   // Parámetros adicionales de la documentación oficial
