@@ -9,6 +9,7 @@ function RelatedProductsRollosPapelTermico() {
         categories.TURNERO_TURNOEXPRESS.category_key,
         categories.ROLLOS_DE_FICHOS_PARA_TURNOS.category_key,
       ]}
+      addMarginBottom={false}
     />
   ) 
 }

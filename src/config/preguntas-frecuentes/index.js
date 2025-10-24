@@ -5,3 +5,4 @@ export { preguntasFrecuentes as turneroTurnoexpressPreguntasFrecuentes } from '.
 export { preguntasFrecuentes as sistemasDeTurnosTurnomasterPreguntasFrecuentes } from './sistema-de-turnos-turnomaster';
 export { preguntasFrecuentes as dispensadorDeTicketsPreguntasFrecuentes } from './dispensador-de-tickets';
 export { preguntasFrecuentes as rollosDeFichosParaTurnosPreguntasFrecuentes } from './rollos-de-fichos-para-turnos';
+export { preguntasFrecuentes as rollosTermicosPreguntasFrecuentes } from './rollos-de-papel-termico';

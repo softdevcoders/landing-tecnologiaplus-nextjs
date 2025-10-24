@@ -21,6 +21,8 @@
       font-size: 1.5625rem;
       font-weight: 900;
       color: #606060;
+      max-width: 20rem;
+      text-align: center;
     }
 
     .description {
@@ -98,6 +100,15 @@
       align-items: center;
       gap: 2rem;
       width: 100%;  
+
+      .features__title {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #333;
+        line-height: 1.2;
+        text-align: center;
+        margin: 0;
+      }
       
       h3 {
         font-size: 1.5625rem;
@@ -129,7 +140,7 @@
             user-select: none;
           }
 
-          p {
+          p, h3 {
             font-size: 1rem;
             font-weight: 400;
             color: #606060;
@@ -193,6 +204,8 @@
 
       .title {
         font-size: 2.5rem;
+        max-width: 30rem;
+        text-align: left;
       }
 
       .description {

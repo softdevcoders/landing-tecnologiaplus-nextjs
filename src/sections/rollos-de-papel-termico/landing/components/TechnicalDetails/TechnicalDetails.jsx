@@ -10,8 +10,9 @@ const colors = [
   {
     id: "blanco",
     label: "Blanco",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349924/w95mg3v5l3rz4s634bso_dqg6eq",
-    alt: "rollos y etiquetas para impresoras termicas",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/w_1200,f_webp,q_80/v1761239490/papel_de_impresion_termica_para_turnos_qr",
+    alt: "Etiqueta impresa con papel de impresión térmica para turnos con código QR",
+    title: "Papel de impresión térmica ideal para etiquetas y turnos QR",
     width: 1789,
     height: 1415,
   },
@@ -24,29 +25,33 @@ const features = [
   },
   {
     label: "Material: <br />papel térmico",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349924/uq6mantgalzbg1cwabg2_lq36yt",
-    alt: "icono de ticket gris",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1761239490/icono_papel_termico_gris_blanco",
+    alt: "icono de papel térmico gris",
+    title: "Papel térmico griss",
     width: 136,
     height: 128,
   },
   {
     label: "Distintos<br />tamaños", 
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349922/mfucx7jyhfttrhehhv6f_gparqv",
-    alt: "icono de Rollos térmicos",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1761239489/aicono_rollos_termicos_grises",
+    alt: "Icono de Rollos térmicos gris con fondo blanco",
+    title: "Icono de rollos térmicos grises",
     width: 153,
     height: 115,
   },
   { 
     label: "Tipo de uso:<br /> para impresora térmica",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349922/mklyxhubukpeobmbjxso_swt54w",
-    alt: "icono de rollos termicos impresora",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1761239490/icono_impresora_papel_termico",
+    alt: "Icono de impresora con papel térmico",
+    title: "Icono de impresora termica con papel",
     width: 143,
     height: 145,
   },
   {
     label: "Compatible con la mayoría <br /> de impresoras térmicas.",
-    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/v1738349920/jacnophczhcmtv5jmrmt_vsmuoe",
-    alt: "icono de símbolo de aprobación",
+    src: "https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1761239490/icono_compatibilidad_impresoras_termicas",
+    alt: "icono de compatibilidad con la mayoría de impresoras térmicas",
+    title: "Icono compatibilidad con impresoras térmicas",
     width: 108,
     height: 104,
   },
@@ -62,8 +67,7 @@ function TurnosTechnicalDetails() {
   return (
     <section className={style.technical__details} data-nosnippet> 
       <div className={style.header}>
-        <h2 className={style.title}>Ficha Técnica</h2>
-        <p className={style.description}>Rollos térmicos</p>
+        <h2 className={style.title}>Ficha Técnica de los Rollos Térmicos</h2>
       </div>
       <div className={style.carousel_container}>
         <div className={style.carousel}>
@@ -71,7 +75,8 @@ function TurnosTechnicalDetails() {
             <div className={`${style.item} ${selectedColor === color.id ? style.selected : ""}`} key={color.id}> 
               <Image 
                 src={color.src} 
-                alt={color.alt} 
+                alt={color.alt}
+                title={color.title}
                 width={color.width} 
                 height={color.height}
                 sizes="(max-width: 768px) 100vw, 80vw"
@@ -97,7 +102,7 @@ function TurnosTechnicalDetails() {
           </ul>
         </div>
         <div className={style.features}>
-          <span>Características</span>
+          <h2 className={style.features__title}>Características del papel de transferencia térmica</h2>
           <ul>
             {features.map((feature, index) => (
               <li key={index}>
@@ -106,7 +111,8 @@ function TurnosTechnicalDetails() {
                 ) : (
                   <Image 
                     src={feature.src} 
-                    alt={feature.alt} 
+                    alt={feature.alt}
+                    title={feature.title}
                     width={feature.width} 
                     height={feature.height} 
                     className={style.icon}
@@ -114,7 +120,7 @@ function TurnosTechnicalDetails() {
                     unoptimized={true}
                   />
                 )}
-                <p dangerouslySetInnerHTML={{ __html: feature.label }} />
+                <h3 dangerouslySetInnerHTML={{ __html: feature.label }} />
               </li>
             ))}
           </ul>
