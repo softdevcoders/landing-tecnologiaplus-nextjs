@@ -14,7 +14,7 @@ export const DEFAULT_3D_CONFIG = {
   ui_infos: 0,
   ui_inspector: 0,
   ui_watermark: 0,
-  ui_stop: 1,
+  ui_stop: 0,
   ui_help: 0,
   ui_settings: 0,
   ui_vr: 0,
@@ -28,7 +28,7 @@ export const DEFAULT_3D_CONFIG = {
   orbit_constraint_pan_y: 0,
   
   // Parámetros adicionales de la documentación oficial
-  blending: 1,
+  blending: 0,
   annotation_cycle: 0,
   annotations_visible: 0,
   

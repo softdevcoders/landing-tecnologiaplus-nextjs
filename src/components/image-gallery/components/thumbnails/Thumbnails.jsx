@@ -11,8 +11,6 @@ const Thumbnails = ({
   mediaItems = [],
   selectedIndex,
   onThumbClick,
-  productTitle = '',
-  selectedColor = '',
   orientation = 'vertical', // 'vertical' | 'horizontal'
   forceShow = false // Forzar visualización en móvil
 }) => {
@@ -44,6 +42,10 @@ const Thumbnails = ({
       const canNext = emblaThumbsApi.canScrollNext();
       setCanScrollPrev(canPrev);
       setCanScrollNext(canNext);
+      
+      // Mostrar botones si hay scroll disponible (elementos fuera del viewport)
+      const hasOverflow = canPrev || canNext;
+      setShouldShowButtons(hasOverflow);
     }, 0);
   }, [emblaThumbsApi]);
 
@@ -200,10 +202,6 @@ const Thumbnails = ({
       emblaThumbsApi.on('select', onThumbsSelect);
       emblaThumbsApi.on('reInit', onThumbsSelect);
       onThumbsSelect();
-
-      // Mostrar botones solo si hay scroll disponible
-      const hasOverflow = emblaThumbsApi.scrollSnapList().length > 4;
-      setShouldShowButtons(hasOverflow);
     };
 
     requestAnimationFrame(initCarousel);
@@ -278,8 +276,8 @@ const Thumbnails = ({
                   <div className={styles.thumb3d}>
                     <Image
                       src={getOptimizedImageUrl({url: item.thumbnail || item.preview, width: 150, height: 150, quality: 80})}
-                      alt={`Miniatura: ${item.alt || 'Modelo 3D'}`}
-                      title={`Miniatura: ${item.alt || 'Modelo 3D'}`}
+                      alt={item.alt}
+                      title={item.title ? item.title : `Miniatura: ${item.alt}`}
                       width={150} 
                       height={150}
                       sizes={getOptimizedSizes('thumbnail', false)}
@@ -300,12 +298,20 @@ const Thumbnails = ({
                         <path d="M2 12l10 5 10-5"/>
                       </svg>
                     </div>
+                    {orientation === 'vertical' && (
+                      <div className={styles.thumb3d__iconArrastrarParaRotar}>
+                        <img 
+                          src={getOptimizedImageUrl({url: 'v1761071071/arrastrar-para-rotar-3d', quality: 80})} 
+                          alt="3D Viewer"
+                        />
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <Image
                     src={getOptimizedImageUrl({url: item.src, width: 150, height: 150, quality: 80})}
-                    alt={`Miniatura: ${item.alt}`}
-                    title={`Miniatura: ${item.alt}`}
+                    alt={item.alt}
+                    title={item.title ? item.title : `Miniatura: ${item.alt}`}
                     width={150} 
                     height={150}
                     sizes={getOptimizedSizes('thumbnail', false)}

@@ -11,7 +11,7 @@ function ProductosRelacionadosSection() {
       ]} 
       isVerMasVersionNueva={true}
       addMarginBottom={false}
-      title="Productos relacionados del localizador CIR C2"
+      title="Productos relacionados del avisador de pedidos LRS CIR-C2"
       headingTag="h2"
     />
   )

@@ -12,6 +12,7 @@ import Thumbnails from "./components/thumbnails";
 import GalleryModal from "./components/gallery-modal/GalleryModal"; 
 import { useMainCarousel } from "./hooks/useMainCarousel";
 import { useGalleryState } from "./hooks/useGalleryState";
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 const ImageGallery = ({ 
   mediaItems = [], 
@@ -25,6 +26,7 @@ const ImageGallery = ({
   const {
     emblaMainRef,
     selectedIndex,
+    setSelectedIndex,
     isZoomed,
     setIsZoomed,
     scrollPrev,
@@ -46,15 +48,15 @@ const ImageGallery = ({
   // Efecto para reiniciar el estado cuando cambian los items
   useEffect(() => {
     reInitCarousel();
-    resetGalleryState(setIsZoomed, () => {});
-  }, [displayMediaItems, reInitCarousel, resetGalleryState, setIsZoomed]);
+    resetGalleryState(setIsZoomed, setSelectedIndex);
+  }, [displayMediaItems, reInitCarousel, resetGalleryState, setIsZoomed, setSelectedIndex]);
 
   // Efecto para reiniciar el estado cuando cambia el color seleccionado
   useEffect(() => {
     if (colorContext?.selectedColor) {
-      resetGalleryState(setIsZoomed, () => {});
+      resetGalleryState(setIsZoomed, setSelectedIndex);
     }
-  }, [colorContext?.selectedColor, resetGalleryState, setIsZoomed]);
+  }, [colorContext?.selectedColor, resetGalleryState, setIsZoomed, setSelectedIndex]);
 
   // Verificar si el item actual tiene fondo oscuro
   const hasDarkBackground = currentMediaItem?.darkBackground || false;
@@ -104,6 +106,7 @@ const ImageGallery = ({
                       title={`${productTitle} - Modelo 3D ${index + 1}`}
                       isMobile={isMobile}
                       preset="minimal" // Usar configuración minimalista por defecto
+                      showIconArrastrarParaRotar={!isMobile && thumbnailsOrientation !== 'horizontal'}
                     />
                   </div>
                 ) : (
@@ -171,6 +174,16 @@ const ImageGallery = ({
           />
         )}
       </div>
+
+      {/* Icono "arrastrar para rotar" - para items 3D, siempre abajo cuando thumbnailsOrientation es horizontal, solo en móvil para otros casos */}
+      {currentMediaItem?.type === '3d' && (thumbnailsOrientation === 'horizontal' || isMobile) && (
+        <div className={styles.viewer3d__iconArrastrarParaRotar}>
+          <img 
+            src={getOptimizedImageUrl({url: 'v1761071071/arrastrar-para-rotar-3d', quality: 80})} 
+            alt="Arrastra para rotar el modelo 3D"
+          />
+        </div>
+      )}
 
       {/* Modal de galería */}
       <GalleryModal

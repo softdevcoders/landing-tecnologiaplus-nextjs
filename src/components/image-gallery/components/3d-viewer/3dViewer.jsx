@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import styles from "./3d-viewer.module.scss";
 import { buildEmbedUrl } from "./3dViewerConfig";
+import { getOptimizedImageUrl } from "@/lib/imageUtils";
 
 const View3DIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -21,8 +22,8 @@ const Viewer3D = ({
   preset = 'minimal',
   isMobile = false,
   enableZoom = false, // Nueva prop para habilitar zoom
-  zoomLevel = 0, // Nivel de zoom inicial (0 = automático)
-  enableControls = false // Habilitar controles de UI
+  enableControls = false, // Habilitar controles de UI
+  showIconArrastrarParaRotar = false
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -31,14 +32,7 @@ const Viewer3D = ({
   const [embedUrl, setEmbedUrl] = useState(null);
 
   // Determinar el preset a usar basado en las props y dispositivo
-  const getEffectivePreset = () => {
-    if (isMobile) return 'mobile';
-    if (enableZoom && enableControls) return 'zoomEnabled';
-    if (enableZoom) return 'zoomLimited';
-    return preset;
-  };
-  
-  const effectivePreset = getEffectivePreset();
+
   
   // Crear configuración personalizada basada en las props
   const customConfig = {
@@ -59,10 +53,10 @@ const Viewer3D = ({
   // Efecto para construir la URL del embed cuando el componente esté montado
   useEffect(() => {
     if (isMounted && modelID) {
-      const url = buildEmbedUrl(modelID, customConfig, effectivePreset);
+      const url = buildEmbedUrl(modelID, customConfig, 'minimal');
       setEmbedUrl(url);
     }
-  }, [isMounted, modelID, customConfig, effectivePreset]);
+  }, [isMounted, modelID, customConfig]);
 
   // Efecto para reiniciar el estado cuando cambia el modelID
   useEffect(() => {
@@ -87,7 +81,7 @@ const Viewer3D = ({
       setRetryCount(prev => prev + 1);
       setTimeout(() => {
         // Forzar recarga del iframe cambiando la URL
-        const url = buildEmbedUrl(modelID, customConfig, effectivePreset);
+        const url = buildEmbedUrl(modelID, customConfig, 'minimal');
         setEmbedUrl(url + `&retry=${retryCount + 1}`);
       }, 1000 * (retryCount + 1)); // Delay incremental
     } else {
@@ -95,7 +89,7 @@ const Viewer3D = ({
       setIsLoading(false);
       onError("Error al cargar el modelo 3D después de varios intentos");
     }
-  }, [onError, retryCount, modelID, config, effectivePreset]);
+  }, [onError, retryCount, modelID, config]);
 
   // Validación del modelo
   if (!modelID) {
@@ -153,6 +147,14 @@ const Viewer3D = ({
       
       <div className={styles.viewer3d__coverTop}></div>
       <div className={styles.viewer3d__coverBottom}></div>
+      {showIconArrastrarParaRotar && (
+        <div className={styles.viewer3d__iconArrastrarParaRotar}>
+          <img 
+            src={getOptimizedImageUrl({url: 'v1761071071/arrastrar-para-rotar-3d', quality: 80})} 
+            alt="3D Viewer"
+          />
+        </div>
+      )}
 
       <iframe
         key={`${modelID}-${retryCount}`} // Forzar re-render cuando cambie el retry

@@ -124,6 +124,7 @@ export const useMainCarousel = () => {
   return {
     emblaMainRef,
     selectedIndex,
+    setSelectedIndex,
     isZoomed,
     setIsZoomed,
     scrollPrev,

@@ -14,7 +14,6 @@
 
   .title {
     background: linear-gradient(90deg, #00bdff, #ac00ff);
-    text-align: center;
     text-wrap: balance;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -27,6 +26,7 @@
     width: -moz-fit-content;
     width: fit-content;
     margin-bottom: 1rem;
+    max-width: 60rem;
     
     @media (min-width: 768px) {
       font-size: 2rem;

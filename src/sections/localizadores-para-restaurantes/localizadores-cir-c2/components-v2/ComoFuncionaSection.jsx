@@ -31,7 +31,7 @@ const ComoFuncionaSection = () => {
   return (
     <ComoFunciona 
       comoFuncionaPasos={comoFuncionaPasos} 
-      title="¿Cómo funciona el localizador de restaurantes autoservicio CIR-C2?" 
+      title="¿Cómo funcionan los localizadores para restaurantes autoservicio CIR-C2?" 
     />
   );
 };
