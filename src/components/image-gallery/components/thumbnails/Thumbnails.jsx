@@ -276,8 +276,8 @@ const Thumbnails = ({
                   <div className={styles.thumb3d}>
                     <Image
                       src={getOptimizedImageUrl({url: item.thumbnail || item.preview, width: 150, height: 150, quality: 80})}
-                      alt={`Miniatura: ${item.alt || 'Modelo 3D'}`}
-                      title={`Miniatura: ${item.alt || 'Modelo 3D'}`}
+                      alt={item.alt}
+                      title={item.title ? item.title : `Miniatura: ${item.alt}`}
                       width={150} 
                       height={150}
                       sizes={getOptimizedSizes('thumbnail', false)}
@@ -310,8 +310,8 @@ const Thumbnails = ({
                 ) : (
                   <Image
                     src={getOptimizedImageUrl({url: item.src, width: 150, height: 150, quality: 80})}
-                    alt={`Miniatura: ${item.alt}`}
-                    title={`Miniatura: ${item.alt}`}
+                    alt={item.alt}
+                    title={item.title ? item.title : `Miniatura: ${item.alt}`}
                     width={150} 
                     height={150}
                     sizes={getOptimizedSizes('thumbnail', false)}
