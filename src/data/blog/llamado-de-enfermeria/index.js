@@ -156,5 +156,27 @@ export const articulos = [
       ]
     },
     "categoria": routes.blog.children.llamadoDeEnfermeria.category_key
+  },
+  {
+    "id": 105466,
+    "fecha_creacion": "2025-10-24T14:43:08",
+    "slug": "beneficios-llamador-de-enfermeria-pacientes-personal",
+    "enlace_completo": `${routes.blog.children.llamadoDeEnfermeria.url}/beneficios-llamador-de-enfermeria-pacientes-personal`,
+    "titulo": "¿Qué beneficios aporta un llamador de enfermería a los pacientes y al personal de enfermería?",
+    "plantilla": "/llamado-de-enfermeria/html/beneficios-llamador-de-enfermeria-pacientes-personal.html",
+    "extracto": "<p>Imaginemos lo siguiente: un paciente post-operatorio, con movilidad reducida, presiona el botón de la cama para pedir ayuda, pero la enfermera está en otra ala del hospital y no se ha dado cuenta de la solicitud. El tiempo de espera se alarga. El paciente se siente vulnerable, incluso abandonado.</p>\n",
+    "imagen_principal": {
+      "src": "v1761330170/beneficios_llamador_de_enfermeria_pacientes_tecnologia_plus",
+      "alt": "Paciente experimenta los beneficios del llamador de enfermería de Tecnología Plus para mejorar la atención hospitalaria.",
+      "title": "Beneficios del llamador de enfermería para pacientes y enfermería"
+    },
+    "metadatos": {
+      "title": "Llamador de enfermería: Descubre sus beneficios",
+      "description": "Conoce cómo el llamador de enfermería optimiza la atención, mejora la comunicación y eleva la calidad del servicio hospitalario. Asesoría personalizada",
+      "keywords": [
+        "llamador de enfermería"
+      ]
+    },
+    "categoria": routes.blog.children.llamadoDeEnfermeria.category_key
   }
 ]
