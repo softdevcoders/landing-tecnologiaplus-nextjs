@@ -178,5 +178,27 @@ export const articulos = [
       ]
     },
     "categoria": routes.blog.children.llamadoDeEnfermeria.category_key
+  },
+  {
+    "id": 105467,
+    "fecha_creacion": "2025-10-27T14:43:08",
+    "slug": "timbres-inalambricos-para-enfermos-atencion-hospitalaria",
+    "enlace_completo": `${routes.blog.children.llamadoDeEnfermeria.url}/timbres-inalambricos-para-enfermos-atencion-hospitalaria`,
+    "titulo": "Mejora la Atención en Áreas de Hospitalización con timbres inalambricos para enfermos",
+    "plantilla": "/llamado-de-enfermeria/html/timbres-inalambricos-para-enfermos-atencion-hospitalaria.html",
+    "extracto": "<p>En hospitales, clínicas y centros de cuidado, cada segundo cuenta. Los timbres inalámbricos para enfermos se han convertido en una herramienta esencial para mejorar la comunicación entre pacientes y el personal de enfermería, brindando rapidez, autonomía y tranquilidad en cada llamada.</p>\n",
+    "imagen_principal": {
+      "src": "v1761578777/timbres_inalambricos_para_enfermos_hospitalizacion",
+      "alt": "Timbres inalámbricos para enfermos en habitación de hospital",
+      "title": "Timbres inalámbricos para enfermos que mejoran la atención en hospital"
+    },
+    "metadatos": {
+      "title": "Timbres inalámbricos para enfermos: Atención eficaz",
+      "description": "Timbres inalámbricos para enfermos optimizan la atención en áreas de hospitalización, facilitando la comunicación rápida entre pacientes y personal.",
+      "keywords": [
+        "timbres inalambricos para enfermos"
+      ]
+    },
+    "categoria": routes.blog.children.llamadoDeEnfermeria.category_key
   }
 ]
