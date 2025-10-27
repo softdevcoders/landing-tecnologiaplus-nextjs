@@ -42,7 +42,7 @@ const PreguntasFrecuentesBlog = ({ categoryKey }) => {
       break;
     case routes.blog.children.rollosDeFichosParaTurnos.category_key:
       preguntasFrecuentes = rollosDeFichosParaTurnosPreguntasFrecuentes;
-      title = "Preguntas frecuentes sobre rollos de fichos para turnos";
+      title = "Preguntas frecuentes sobre rollos de papel termico personalizados";
       break;
     case routes.blog.children.rollosDePapelTermico.category_key:
       preguntasFrecuentes = rollosTermicosPreguntasFrecuentes;

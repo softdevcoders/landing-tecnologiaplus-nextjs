@@ -76,8 +76,6 @@
           margin-top: 1rem;
           font-size: 16px;
           line-height: 1.5;
-
-
         }
 
         a {
@@ -168,27 +166,107 @@
           }
         }
 
+        // Mobile-first: Tabla responsive con headers en cada celda
         table {
           width: 100%;
           border-collapse: collapse;
           margin: 2rem 0;
 
-          th {
-            background-color: #6a0dad;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
+          // En móvil: cada celda con su header
+          thead {
+            display: none; // Ocultar cabeceras en móvil
           }
 
-          th:not(:first-child) {
-            border-left: 2px solid #e0e0e0;
+          tbody {
+            tr {
+              display: block;
+              background: #fff;
+              border: 1px solid #e0e0e0;
+              border-radius: 8px;
+              margin-bottom: 1rem;
+              overflow: hidden;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+              td {
+                display: block;
+                padding: 0;
+                border: none;
+                text-align: center;
+                border-bottom: 1px solid #f0f0f0;
+                position: relative;
+
+                &:last-child {
+                  border-bottom: none;
+                }
+
+                // Header de cada celda
+                &::before {
+                  content: attr(data-label);
+                  display: block;
+                  background-color: #6a0dad;
+                  color: #fff;
+                  padding: 0.75rem 1rem;
+                  font-weight: 600;
+                  font-size: 0.9rem;
+                  text-align: center;
+                  border-bottom: 1px solid #e0e0e0;
+                  margin-bottom: 0.5rem;
+                }
+
+                // Contenido de la celda
+                padding: 1rem;
+                color: #606060;
+                line-height: 1.5;
+                font-size: 1rem;
+                background-color: #fff;
+              }
+            }
           }
 
-          td {
-            padding: 1rem;
-            border: 1px solid #e0e0e0;
+          // En pantallas grandes: comportamiento normal de tabla
+          @media (min-width: 768px) {
+            thead {
+              display: table-header-group;
+            }
+
+            tbody {
+              tr {
+                display: table-row;
+                background: none;
+                border: none;
+                border-radius: 0;
+                margin-bottom: 0;
+                overflow: visible;
+                box-shadow: none;
+
+                td {
+                  display: table-cell;
+                  padding: 1rem;
+                  border: 1px solid #e0e0e0;
+                  position: static;
+
+                  &::before,
+                  &::after {
+                    display: none;
+                  }
+                }
+              }
+            }
+
+            th {
+              background-color: #6a0dad;
+              color: #fff;
+              padding: 1rem;
+              text-align: center;
+              border: 1px solid #e0e0e0;
+            }
+
+            th:not(:first-child) {
+              border-left: 2px solid #e0e0e0;
+            }
           }
         }
+
 
         picture {
           display: flex;
