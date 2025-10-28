@@ -200,5 +200,27 @@ export const articulos = [
       ]
     },
     "categoria": routes.blog.children.llamadoDeEnfermeria.category_key
+  },
+  {
+    "id": 105468,
+    "fecha_creacion": "2025-10-28T14:43:08",
+    "slug": "llamadores-de-enfermeria-calidad-servicio-geriatrico",
+    "enlace_completo": `${routes.blog.children.llamadoDeEnfermeria.url}/llamadores-de-enfermeria-calidad-servicio-geriatrico`,
+    "titulo": "Cómo los Llamadores de enfermería Elevan la Calidad del Servicio Geriatrico",
+    "plantilla": "/llamado-de-enfermeria/html/llamadores-de-enfermeria-calidad-servicio-geriatrico.html",
+    "extracto": "<p>El cuidado geriátrico enfrenta un desafío constante: ofrecer una atención inmediata, humana y personalizada a los adultos mayores. En muchos hogares de cuidado y clínicas, un retraso de segundos puede causar ansiedad, frustración o incluso poner en riesgo la salud del paciente.</p>\n",
+    "imagen_principal": {
+      "src": "v1761667293/llamadores_de_enfermeria_mejoran_servicio_geriatrico.png",
+      "alt": "Llamadores de enfermería en habitación geriátrica mejorando la atención",
+      "title": "Llamadores de enfermería que elevan la calidad del servicio geriátrico"
+    },
+    "metadatos": {
+      "title": "Llamadores de enfermería: Servicio geriátrico",
+      "description": "Llamadores de enfermería elevan la atención geriátrica, integrando alarmas de luz, pantallas receptoras y relojes para asistencia inmediata.",
+      "keywords": [
+        "llamadores de enfermería"
+      ]
+    },
+    "categoria": routes.blog.children.llamadoDeEnfermeria.category_key
   }
 ]
