@@ -1,9 +1,9 @@
 import { routes } from "@/config/routes";
-import { controlNumerico } from "@/config/productos-galeria-ver-mas/llamadores-meseros/control-numerico";
-import { habladorDeMesa } from "@/config/productos-galeria-ver-mas/llamadores-meseros/hablador-de-mesa";
-import { relojReceptorDeLlamados } from "@/config/productos-galeria-ver-mas/llamadores-meseros/reloj-receptor-de-llamados";
-import { pantallaT1B } from "@/config/productos-galeria-ver-mas/llamadores-meseros/pantalla-t1-b";
-import { pantallaT6 } from "@/config/productos-galeria-ver-mas/llamadores-meseros/pantalla-t6";
+import { controlNumerico } from "@/data/productos-galeria-ver-mas/llamadores-meseros/control-numerico";
+import { habladorDeMesa } from "@/data/productos-galeria-ver-mas/llamadores-meseros/hablador-de-mesa";
+import { relojReceptorDeLlamados } from "@/data/productos-galeria-ver-mas/llamadores-meseros/reloj-receptor-de-llamados";
+import { pantallaT1B } from "@/data/productos-galeria-ver-mas/llamadores-meseros/pantalla-t1-b";
+import { pantallaT6 } from "@/data/productos-galeria-ver-mas/llamadores-meseros/pantalla-t6";
 
 // Inverntar un cambio
 
