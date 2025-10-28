@@ -3,7 +3,7 @@ import styles from './infinite-slider.module.scss';
 import { useEffect, useRef } from 'react';
 
 export default function InfiniteSlider({ logos, speed = 60 }) {
-  // Triplicamos los logos para asegurar una transición más suave
+  // Duplicamos los logos para crear el efecto infinito
   const duplicated = [...logos, ...logos];
 
   // Referencia al track que se anima
@@ -17,10 +17,13 @@ export default function InfiniteSlider({ logos, speed = 60 }) {
     // Velocidad deseada en píxeles por segundo (recibida por prop `speed`)
     const updateDuration = () => {
       const trackWidth = track.scrollWidth;
-      // Se anima hasta -50% del ancho total
+      // Se anima hasta -50% del ancho total (mitad del track duplicado)
       const travelDistance = trackWidth * 0.5; // px
       const duration = travelDistance / speed; // segundos
       track.style.setProperty('--slider-duration', `${duration}s`);
+      
+      // Debug: verificar que el track tenga el ancho correcto
+      console.log('Track width:', trackWidth, 'Travel distance:', travelDistance, 'Duration:', duration);
     };
 
     updateDuration();
