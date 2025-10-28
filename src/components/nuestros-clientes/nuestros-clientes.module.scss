@@ -41,6 +41,11 @@
     gap: 2rem;
     width: 100%;
     overflow: hidden;
+    
+    // Safari-specific fixes
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000px;
 
     .nuestros__clientes__background_gradient_left, 
     .nuestros__clientes__background_gradient_right {

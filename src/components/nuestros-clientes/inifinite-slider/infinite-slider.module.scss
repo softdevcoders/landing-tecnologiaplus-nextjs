@@ -1,23 +1,32 @@
 .infiniteSlider {
   --slider-duration: 20s;
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
   padding: 2rem 0;
   background: #fff;
   position: relative;
   display: flex;
   width: fit-content;
+  min-width: 200%;
   animation: scroll var(--slider-duration) linear infinite;
   will-change: transform;
   transform: translateZ(0);
   column-gap: 5rem;
+  
+  // Safari-specific fixes
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  -webkit-animation: scroll var(--slider-duration) linear infinite;
 
   @media (min-width: 768px) {
     animation: scroll 50s linear infinite;
+    -webkit-animation: scroll 50s linear infinite;
   }
 
   @media (min-width: 1024px) {
     animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
   }
 
   img {
@@ -31,6 +40,13 @@
     transition: filter 0.3s ease;
     display: block;
     max-width: 100%;
+    min-width: 130px;
+    
+    // Safari-specific fixes for images
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-filter: grayscale(100%) opacity(0.7);
+    -webkit-transition: -webkit-filter 0.3s ease;
   }
 }
 
@@ -40,5 +56,14 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@-webkit-keyframes scroll {
+  from {
+    -webkit-transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-50%);
   }
 }
