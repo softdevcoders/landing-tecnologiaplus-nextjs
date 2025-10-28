@@ -206,11 +206,6 @@ const clientes = {
     alt: "Logo Cosechas",
     title: "Logo Cosechas",
   },
-  Wok: {
-    src: `${BASE_URL}/v1758305607/wok-logo`,
-    alt: "Logo Wok",
-    title: "Logo Wok",
-  },
   DominoPizza: {
     src: `${BASE_URL}/v1758305606/dominos-logo`,
     alt: "Logo Domino's Pizza",
@@ -250,6 +245,16 @@ const clientes = {
     src: `${BASE_URL}/v1760975107/farmatogo-logo`,
     alt: "Logo Farmatodo",
     title: "Logo Farmatodo",
+  },
+  Mimos: {
+    src: `${BASE_URL}/v1761666072/mimos-logo`,
+    alt: "Logo Mimos",
+    title: "Logo Mimos",
+  },
+  PizzaHut: {
+    src: `${BASE_URL}/v1761666072/pizza-hut-logo`,
+    alt: "Logo Pizza Hut",
+    title: "Logo Pizza Hut",
   },
 }
 
@@ -344,11 +349,12 @@ export const logosLocalizadores = [
   clientes.Montolvo,
   clientes.SrWok,
   clientes.Cosechas,
-  clientes.Wok,
   clientes.DominoPizza,
   clientes.JuanValdez,
   clientes.CrepesWaffles,
   clientes.LaFincaDeRigo,
+  clientes.Mimos,
+  clientes.PizzaHut,
 ];
 
 export const logosHome = [
