@@ -120,7 +120,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a 
-                    href="https://ul.waze.com/ul?place=ChIJ-afFdjEoRI4RFepmRGgN4qA&ll=6.22033970%2C-75.56726930&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                    href="https://ul.waze.com/ul?place=ChIJ3RLCgSooRI4RRvgqOvZYcas&ll=6.20707180%2C-75.57189350&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Abrir ubicación en Waze"
@@ -128,7 +128,7 @@ const Footer = () => {
                     className={styles.footer__location_link}
                   >
                     <Location size={16}/>
-                    <span>Medellín • El Poblado edificio Oceanía.</span>
+                    <span>Medellín, Av. El Poblado #5A-113 oficina 807</span>
                   </a>
                 </li>
               </ul>
