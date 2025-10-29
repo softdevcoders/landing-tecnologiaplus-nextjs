@@ -125,6 +125,10 @@ export const routes = {
         rec_c2: {
           label: "REC C2",
           url: "/localizadores-para-restaurantes/localizadores-cir-c2"
+        },
+        localizadoresCirResistenteAlAgua: {
+          label: "CIR Resistentes al Agua",
+          url: "/localizadores-para-restaurantes/localizadores-cir-resistente-al-agua",
         }
       }
     },
