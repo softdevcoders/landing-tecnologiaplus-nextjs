@@ -20,10 +20,11 @@
     margin-bottom: 2rem;
   }
 
+  // Mobile First: Estilos base para móvil
   .products__container {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 2rem;
+    gap: 2rem;
     align-items: center;
     margin-bottom: 2rem;
     width: 100%;
@@ -31,11 +32,21 @@
 
     .products__container__item {
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1 / 1; // Mantener ratio cuadrado en móvil
+      min-height: 0; // Permitir que aspect-ratio funcione correctamente
     
-      .products__container__item__image {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
+      // El visualizador 3D se ajusta automáticamente
+      > div {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        aspect-ratio: 1 / 1 !important;
+        min-height: 0 !important;
+        overflow: hidden !important; // Contener los covers dentro del contenedor
+        position: relative !important;
       }
     }
   }
@@ -77,10 +88,24 @@
     margin-bottom: 2rem;
     text-align: center;
   }
-}
 
-@media (min-width: 1024px) {
-  .products__section {
+  // Icono "arrastra para rotar" - visible en todas las pantallas
+  .viewer3d__iconArrastrarParaRotar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+      max-width: 10rem;
+      object-fit: contain;
+    }
+  }
+
+  // Desktop: Estilos para pantallas grandes (mobile first)
+  @media (min-width: 1024px) {
     padding: 5rem 3rem 8rem;
 
     .products__title {
@@ -92,22 +117,19 @@
     }
 
     .products__container {
-      width: 100%;
       max-width: 1400px;
-      grid-template-columns: repeat(14, 1fr);
-      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
       margin-bottom: 4rem;
 
-      .products__container__item:first-of-type {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        grid-column: 1 / 7;
-      }
+      .products__container__item {
+        min-height: 0;
+        max-height: none;
 
-      .products__container__item:last-of-type {
-        width: 100%;
-        grid-column: 7 / 15;
+        > div {
+          max-height: 100% !important;
+          overflow: hidden !important; // Contener los covers dentro del contenedor
+          position: relative !important;
+        }
       }
     }
     
