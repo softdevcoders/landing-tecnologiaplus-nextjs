@@ -138,7 +138,7 @@
         align-items: flex-start;
         gap: 2rem;
 
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
           flex-direction: row;
           gap: 3rem;
         }
@@ -178,8 +178,16 @@
               display: flex;
               gap: 0.5rem;
 
+              svg {
+                width: 16px !important;
+                height: 16px !important;
+                flex-shrink: 0;
+              }
+
               span {
                 text-align: left;
+                max-width: 25rem;
+                text-wrap: balance;
               }
             }
           }

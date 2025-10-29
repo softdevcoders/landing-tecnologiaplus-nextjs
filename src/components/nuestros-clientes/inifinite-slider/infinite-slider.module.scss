@@ -19,14 +19,15 @@
   -webkit-perspective: 1000px;
   -webkit-animation: scroll var(--slider-duration) linear infinite;
 
+  // Las animaciones en media queries también usan la variable calculada dinámicamente
   @media (min-width: 768px) {
-    animation: scroll 50s linear infinite;
-    -webkit-animation: scroll 50s linear infinite;
+    animation: scroll var(--slider-duration) linear infinite;
+    -webkit-animation: scroll var(--slider-duration) linear infinite;
   }
 
   @media (min-width: 1024px) {
-    animation: scroll 40s linear infinite;
-    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll var(--slider-duration) linear infinite;
+    -webkit-animation: scroll var(--slider-duration) linear infinite;
   }
 
   img {
