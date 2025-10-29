@@ -180,11 +180,8 @@
 
               span {
                 text-align: left;
-
-                @media (min-width: 1024px) {
-                  max-width: 30rem;
-                  text-wrap: balance;
-                }
+                max-width: 25rem;
+                text-wrap: balance;
               }
             }
           }
