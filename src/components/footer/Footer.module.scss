@@ -178,6 +178,12 @@
               display: flex;
               gap: 0.5rem;
 
+              svg {
+                width: 16px !important;
+                height: 16px !important;
+                flex-shrink: 0;
+              }
+
               span {
                 text-align: left;
                 max-width: 25rem;
