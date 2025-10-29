@@ -115,7 +115,7 @@ const Footer = () => {
                     className={styles.footer__location_link}
                   >
                     <Location size={16}/>
-                    <span>Bogotá, Cra 19 # 82-85 oficina 401.</span>
+                    <span>Bogotá Edificio Country Office Cra 19 # 82-85 oficina 401</span>
                   </a>
                 </li>
                 <li>
@@ -128,7 +128,7 @@ const Footer = () => {
                     className={styles.footer__location_link}
                   >
                     <Location size={16}/>
-                    <span>Medellín, Av. El Poblado #5A-113 oficina 807</span>
+                    <span>Medellín One Plaza Bussines Center Av. El Poblado #5A-113 oficina 807</span>
                   </a>
                 </li>
               </ul>
@@ -156,7 +156,6 @@ const Footer = () => {
               <span>Envíos a toda Latinoamérica</span>
             </div>
           </div>
-
         </div>
       </div>
 
