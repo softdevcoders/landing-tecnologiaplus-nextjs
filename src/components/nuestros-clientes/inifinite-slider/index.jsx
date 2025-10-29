@@ -1,10 +1,14 @@
 'use client';
 import styles from './infinite-slider.module.scss';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useMemo } from 'react';
 
 export default function InfiniteSlider({ logos, speed = 60 }) {
-  // Duplicamos los logos para crear el efecto infinito
-  const duplicated = [...logos, ...logos];
+  // Duplicamos los logos múltiples veces para asegurar que haya suficiente contenido
+  // en pantallas grandes. Duplicamos al menos 4 veces para pantallas grandes.
+  const duplicated = useMemo(() => {
+    const copies = Math.max(4, Math.ceil(8 / logos.length)); // Mínimo 4 copias, o más si hay pocos logos
+    return Array(copies).fill(logos).flat();
+  }, [logos]);
 
   // Referencia al track que se anima
   const trackRef = useRef(null);
@@ -21,9 +25,6 @@ export default function InfiniteSlider({ logos, speed = 60 }) {
       const travelDistance = trackWidth * 0.5; // px
       const duration = travelDistance / speed; // segundos
       track.style.setProperty('--slider-duration', `${duration}s`);
-      
-      // Debug: verificar que el track tenga el ancho correcto
-      console.log('Track width:', trackWidth, 'Travel distance:', travelDistance, 'Duration:', duration);
     };
 
     updateDuration();
