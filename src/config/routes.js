@@ -128,7 +128,7 @@ export const routes = {
         },
         localizadoresCirResistenteAlAgua: {
           label: "CIR Resistentes al Agua",
-          url: "/localizadores-para-restaurantes/localizadores-cir-resistente-al-agua",
+          url: "/localizadores-para-restaurantes/localizadores-restaurantes-cir-resistentes-agua",
         }
       }
     },

@@ -2,13 +2,13 @@ import { routes } from "@/config/routes";
 import { generateLandingMetadata } from "@/data/metadata/config";
 import { getLandingPageConfig } from "@/data/metadata/config/landing-pages-data";
 
-const title = "Localizador clientes CIR Resistentes al Agua: ideal en autoservicio";
-const description = "Localizador clientes CIR Resistentes al Agua: somos fabricantes de equipos para restaurantes autoservicio que agilizan la atención y elevan la experiencia del cliente.";
-const keywords = ["localizadores para restaurantes"];
+const title = "Localizadores para restaurantes: Resistentes al agua";
+const description = "Localizadores para restaurantes CIR resistentes al agua, ideales para terrazas, piscinas y zonas húmedas. Somos fabricantes en Tecnología Plus.";
+const keywords = ["Localizadores para restaurantes"];
 const url = `${process.env.NEXT_PUBLIC_BASE_URL}${routes.landings.localizadoresParaRestaurantes.children.localizadoresCirResistenteAlAgua.url}`;
 
 // Obtener configuración centralizada (imágenes, categoría, etc.)
-const landingConfig = getLandingPageConfig('localizadoresParaRestaurantes', 'localizadores-cir-resistente-al-agua');
+const landingConfig = getLandingPageConfig('localizadoresParaRestaurantes', 'localizadores-restaurantes-cir-resistentes-agua');
 
 // Generar metadatos usando el sistema centralizado
 export const metadata = generateLandingMetadata({

@@ -34,7 +34,7 @@ import { metadata as encuestaVirtualOpinamasterLanding } from '@/data/metadata/d
 // Localizadores para restaurantes
 import { metadata as localizadoresParaRestaurantesLandingLocalizadoresRecV3 } from '@/data/metadata/data/landings/localizadores-para-restaurantes/localizadores-rec-v3';
 import { metadata as localizadoresParaRestaurantesLandingLocalizadoresCirC2 } from '@/data/metadata/data/landings/localizadores-para-restaurantes/localizadores-cir-c2';
-import { metadata as localizadoresParaRestaurantesLandingLocalizadoresCirResistenteAlAgua } from '@/data/metadata/data/landings/localizadores-para-restaurantes/localizadores-cir-resistente-al-agua';
+import { metadata as localizadoresParaRestaurantesLandingLocalizadoresCirResistenteAlAgua } from '@/data/metadata/data/landings/localizadores-para-restaurantes/localizadores-restaurantes-cir-resistentes-agua';
 
 // Llamado de enfermería
 import { metadata as llamadoDeEnfermeriaAlarmaDeLuzLanding } from '@/data/metadata/data/landings/llamado-de-enfermeria/alarma-de-luz';
@@ -125,7 +125,7 @@ export default {
       root: localizadoresParaRestaurantesLanding,
       'localizadores-rec-v3': localizadoresParaRestaurantesLandingLocalizadoresRecV3,
       'localizadores-cir-c2': localizadoresParaRestaurantesLandingLocalizadoresCirC2,
-      'localizadores-cir-resistente-al-agua': localizadoresParaRestaurantesLandingLocalizadoresCirResistenteAlAgua,
+      'localizadores-restaurantes-cir-resistentes-agua': localizadoresParaRestaurantesLandingLocalizadoresCirResistenteAlAgua,
     },
     'rollos-de-fichos-para-turnos': {
       root: rollosDeFichosParaTurnosLanding,
