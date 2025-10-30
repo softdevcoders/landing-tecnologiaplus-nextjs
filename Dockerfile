@@ -3,7 +3,7 @@
 #########################################
 FROM node:24.0.0-alpine AS development
 
-RUN apk add --no-cache libc6-compat && \
+RUN apk add --no-cache libc6-compat git && \
     mkdir -p /app && \
     chown -R node:node /app
 
