@@ -121,14 +121,17 @@ export const routes = {
         rec_v3: {
           label: "REC V3",
           url: "/localizadores-para-restaurantes/localizadores-rec-v3",
+          includeInSitemap: true,
         },
         rec_c2: {
           label: "REC C2",
-          url: "/localizadores-para-restaurantes/localizadores-cir-c2"
+          url: "/localizadores-para-restaurantes/localizadores-cir-c2",
+          includeInSitemap: true,
         },
         localizadoresCirResistenteAlAgua: {
           label: "CIR Resistentes al Agua",
           url: "/localizadores-para-restaurantes/localizadores-restaurantes-cir-resistentes-agua",
+          includeInSitemap: false,
         }
       }
     },
@@ -139,30 +142,37 @@ export const routes = {
         e2_n: {
           label: "Llamador de meseros E2-N con tecla pagar",
           url: "/llamadores-de-meseros/llamador-de-meseros-e2-n-con-tecla-pagar",
+          includeInSitemap: true,
         },
         e2_b: {
           label: "Llamador de meseros E2-B",
           url: "/llamadores-de-meseros/llamador-de-meseros-e2-b",
+          includeInSitemap: true,
         },
         habladorDeMesa:{
           label: "Hablador de mesa",
           url: "/llamadores-de-meseros/hablador-de-mesa",
+          includeInSitemap: true,
         },
         controlNumerico: {  
           label: "Control numérico",
           url: "/llamadores-de-meseros/control-numerico",
+          includeInSitemap: true,
         },
         relojReceptorDeLlamados: {
           label: "Reloj receptor de llamados",
           url: "/llamadores-de-meseros/reloj-receptor-de-llamados",
+          includeInSitemap: true,
         },
         t1_b: {
           label: "Pantalla T1-B",
           url: "/llamadores-de-meseros/pantalla-t1-b",
+          includeInSitemap: true,
         },
         t6: {
           label: "Pantalla T6",
           url: "/llamadores-de-meseros/pantalla-t6",
+          includeInSitemap: true,
         }
       }
     },
@@ -173,26 +183,32 @@ export const routes = {
         turneroT3ModuloTurno: {
           label: "Turnero T3 módulo turno",
           url: "/turnero-turnoexpress/turnero-t3-modulo-turno",
+          includeInSitemap: true,
         },
         turneroT3ConLogo: {
           label: "Turnero T3 con logo",
           url: "/turnero-turnoexpress/turnero-t3-con-logo",
+          includeInSitemap: true,
         },
         turneroT1B: {
           label: "Turnero T1-B",
           url: "/turnero-turnoexpress/turnero-t1-b",
+          includeInSitemap: true,
         },
         turneroT1N: {
           label: "Turnero T1-N",
           url: "/turnero-turnoexpress/turnero-t1-n",
+          includeInSitemap: true,
         },
         turneroFilaUnicaSupermercados: {
           label: "Turnero fila única supermercados",
           url: "/turnero-turnoexpress/turnero-fila-unica-supermercados",
+          includeInSitemap: true,
         },
         turneroTransformer: {
           label: "Turnero Transformer",
           url: "/turnero-turnoexpress/turnero-transformer",
+          includeInSitemap: true,
         }
       }
     },
@@ -207,6 +223,7 @@ export const routes = {
         rollosDeTurnos: {
           label: "Rollos de turnos",
           url: "/rollos-de-fichos-para-turnos/rollos-de-turnos",
+          includeInSitemap: true,
         }
       }
     },
@@ -217,6 +234,7 @@ export const routes = {
         rollosTermicos:{
           label: "Rollos térmicos",
           url: "/rollos-de-papel-termico/rollos-termicos",
+          includeInSitemap: true,
         }
       }
     },
@@ -227,6 +245,7 @@ export const routes = {
         dispensadorDeTicketsCaracol: {
           label: "Dispensador de tickets caracol",
           url: "/dispensador-de-tickets/dispensador-de-tickets-caracol",
+          includeInSitemap: true,
         }
       }
     },
@@ -237,30 +256,37 @@ export const routes = {
         alarmaDeLuz: {
           label: "Alarma de luz",
           url: "/llamado-de-enfermeria/alarma-de-luz",
+          includeInSitemap: true,
         },
         llamadorE2NBlanco: {
           label: "Llamador E2 blanco",
           url: "/llamado-de-enfermeria/llamador-e2-blanco",
+          includeInSitemap: true,
         },
         llamadorE1ParaCuello: {
           label: "Llamador E1 para cuello",
           url: "/llamado-de-enfermeria/llamador-e1-para-cuello",
+          includeInSitemap: true,
         },
         llamadorEx1: {
           label: "Llamador EX1",
           url: "/llamado-de-enfermeria/llamador-ex1",
+          includeInSitemap: true,
         },
         pantallaT1B: {
           label: "Pantalla T1-B",
           url: "/llamado-de-enfermeria/pantalla-t1-b",
+          includeInSitemap: true,
         },
         pantallaT6: {
           label: "Pantalla T6",
           url: "/llamado-de-enfermeria/pantalla-t6",
+          includeInSitemap: true,
         },
         relojReceptorDeLlamados: {
           label: "Reloj receptor de llamados",
           url: "/llamado-de-enfermeria/reloj-receptor-de-llamados",
+          includeInSitemap: true,
         }
       }
     },
@@ -271,10 +297,12 @@ export const routes = {
         calificadorDeServicio: {
           label: "Calificador de servicio",
           url: "/calificador-de-servicio-al-cliente-opinamaster/calificador-de-servicio",
+          includeInSitemap: true,
         },
         avisoDeParedParaCalificarServicio: {
           label: "Aviso de pared para calificar servicio",
           url: "/calificador-de-servicio-al-cliente-opinamaster/aviso-de-pared-para-calificar-servicio",
+          includeInSitemap: true,
         }
       }
     },

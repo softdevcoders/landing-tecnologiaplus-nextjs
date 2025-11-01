@@ -5,8 +5,8 @@ import LocalizadoresHeroSection from "@/sections/localizadores-para-restaurantes
 import LocalizadoresIndustriesSection from "@/sections/localizadores-para-restaurantes/landing/components/IndustriesSection/LocalizadoresIndustriesSection";
 import LocalizadoresProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/ProductsSection/LocalizadoresProductsSection";
 import LocalizadoresRelatedProducts from "@/sections/localizadores-para-restaurantes/landing/components/RelatedProducts/LocalizadoresRelatedProducts";
-// import LocalizadoresSecondaryProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/SecondaryProductsSection/LocalizadoresSecondaryProductsSection";
-import LocalizadoresSecondaryProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/SecondaryProductsSectionV2/LocalizadoresSecondaryProductsSection";
+import LocalizadoresSecondaryProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/SecondaryProductsSection/LocalizadoresSecondaryProductsSection";
+// import LocalizadoresSecondaryProductsSection from "@/sections/localizadores-para-restaurantes/landing/components/SecondaryProductsSectionV2/LocalizadoresSecondaryProductsSection";
 import LocalizadoresPreguntasFrecuentes from "@/sections/localizadores-para-restaurantes/landing/components/PreguntasFrecuentes";
 
 // Los metadatos ya están optimizados en el archivo de metadata centralizado

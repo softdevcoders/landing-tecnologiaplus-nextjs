@@ -44,12 +44,14 @@ export default async function sitemap() {
           if (landingRoute.children) {
             for (const childKey in landingRoute.children) {
               const childRoute = landingRoute.children[childKey];
-              links.push({ 
-                url: `${baseUrl}${childRoute.url}`, 
-                changeFrequency: 'daily', 
-                priority: 1.0, 
-                lastModified: formatDate(new Date()) 
-              });
+              if(childRoute.includeInSitemap === true) {
+                links.push({ 
+                  url: `${baseUrl}${childRoute.url}`, 
+                  changeFrequency: 'daily', 
+                  priority: 1.0, 
+                  lastModified: formatDate(new Date()) 
+                });
+              }
             }
           }
         }
