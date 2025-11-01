@@ -23,7 +23,8 @@ const Viewer3D = ({
   isMobile = false,
   enableZoom = false, // Nueva prop para habilitar zoom
   enableControls = false, // Habilitar controles de UI
-  showIconArrastrarParaRotar = false
+  showIconArrastrarParaRotar = false,
+  coverPaddingInline = '1.5rem' // Permite ajustar el padding de los covers desde el padre
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -145,8 +146,8 @@ const Viewer3D = ({
         </div>
       )}
       
-      <div className={styles.viewer3d__coverTop}></div>
-      <div className={styles.viewer3d__coverBottom}></div>
+      <div className={styles.viewer3d__coverTop} style={{ paddingInline: coverPaddingInline }}></div>
+      <div className={styles.viewer3d__coverBottom} style={{ paddingInline: coverPaddingInline }}></div>
       {showIconArrastrarParaRotar && (
         <div className={styles.viewer3d__iconArrastrarParaRotar}>
           <img 

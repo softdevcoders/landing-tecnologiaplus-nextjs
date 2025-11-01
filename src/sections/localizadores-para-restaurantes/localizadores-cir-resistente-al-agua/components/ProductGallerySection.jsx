@@ -4,7 +4,7 @@ import { productosGaleriaVerMas } from '@/data/productos-galeria-ver-mas';
 function ProductGallerySection() {
   return (
     <GaleriaVerMas 
-      verMasInformacion={productosGaleriaVerMas.localizadoresParaRestaurantes.localizadoresRecV3}   
+      verMasInformacion={productosGaleriaVerMas.localizadoresParaRestaurantes.localizadoresCirResistenteAlAgua}   
     />
   );
 }

@@ -29,7 +29,7 @@ export const LANDING_IMAGES = {
       height: landingHeros.localizadoresParaRestaurantes.portada.imagenes[1].height
     },
     'localizadores-cir-c2': {
-      url: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1750866698/localizadores_cir_c2_25_06_2024_sk4gqn',
+      url: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1760638309/localizadores_para_restaurantes_cir_c2_amarillo',
       alt: 'Localizadores para restaurantes CIR-C2.',
       width: 1500,
       height: 1500
@@ -37,6 +37,12 @@ export const LANDING_IMAGES = {
     'localizadores-rec-v3': {
       url: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,w_1500,q_70/v1759858183/localizadores_para_restaurantes_rec_v3_con_base_de_carga',
       alt: 'Localizadores para restaurantes REC-V3 con base de carga para avisar pedidos.',
+      width: 1500,
+      height: 1500
+    },
+    'localizadores-restaurantes-cir-resistentes-agua': {
+      url: 'https://res.cloudinary.com/ddqh0mkx9/image/upload/v1761664211/ver-mas-localizadores-cir-resistente-al-agua-1',
+      alt: 'Localizadores para restaurantes CIR Resistentes al Agua ideales para optimizar la atención al cliente',
       width: 1500,
       height: 1500
     }
