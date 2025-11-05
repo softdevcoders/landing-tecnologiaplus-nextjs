@@ -76,7 +76,7 @@ function LlamadoDeEnfermeriaProductsSection() {
         <div className={style.products__container__item}>
           <div className={style.products__container__item__image}>
             <Image
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1758724166/llamador_de_enfermeria_boton__pared"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/f_webp,q_80/v1761837062/llamador_de_enfermeria_boton_pared"
               alt="Llamador de enfermería CuidaMaster para pared con botón de llamado y cancelación"
               title="Llamador de Enfermería | Botón CuidaMaster para pared"
               width={468}
@@ -89,7 +89,7 @@ function LlamadoDeEnfermeriaProductsSection() {
         <div className={style.products__container__item}>
           <div className={style.products__container__item__image}>
             <Image
-              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/q_80/v1757698091/sistema_de_llamado_de_enfermeria_colgante_pacientes"
+              src="https://res.cloudinary.com/ddqh0mkx9/image/upload/q_80/v1761837063/sistema_de_llamado_de_enfermeria_colgante__pacientes"
               alt="Sistema de llamado de enfermería CuidaMaster con cordón colgante para pacientes"
               title="Sistema de Llamado de Enfermería colgante para pacientes"
               width={649}
