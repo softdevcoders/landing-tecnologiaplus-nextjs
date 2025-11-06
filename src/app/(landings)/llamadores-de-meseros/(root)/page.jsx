@@ -5,7 +5,6 @@ import LlamadorMeserosHeroSection from "@/sections/llamadores-de-meseros/landing
 import LlamadorMeserosIndustriesSection from "@/sections/llamadores-de-meseros/landing/components/IndustriesSection/LlamadorMeserosIndustriesSection";
 import LlamadorMeserosProductsSection from "@/sections/llamadores-de-meseros/landing/components/ProductsSection/LlamadorMeserosProductsSection";
 import LlamadorMeserosRelatedProducts from "@/sections/llamadores-de-meseros/landing/components/RelatedProducts/LlamadorMeserosRelatedProducts";
-import LlamadorMeserosVideosSection from "@/sections/llamadores-de-meseros/landing/components/LlamadorMeserosVideosSection/LlamadorMeserosVideosSection";
 import LlamadorMeserosVerMasSection from "@/sections/llamadores-de-meseros/landing/components/LlamadorMeserosVerMasSection/LlamadorMeserosVerMasSection";
 import StepsSectionLlamadorMeseros from "@/sections/llamadores-de-meseros/landing/components/StepsSection/StepsSectionLlamadorMeseros";
 import LlamadoresDeMeserosPreguntasFrecuentes from "@/sections/llamadores-de-meseros/landing/components/PreguntasFrecuentes";
@@ -26,7 +25,6 @@ export default function LlamadorMeserosLanding() {
       <LlamadorMeserosProductsSection />
       <StepsSectionLlamadorMeseros />
       <LlamadorMeserosVerMasSection />
-      {/* <LlamadorMeserosVideosSection /> */}
       <LlamadorMeserosIndustriesSection />
       <LlamadorMeserosRelatedProducts />
       <LlamadoresDeMeserosPreguntasFrecuentes />

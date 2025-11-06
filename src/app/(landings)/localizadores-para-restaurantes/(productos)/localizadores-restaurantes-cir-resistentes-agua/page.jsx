@@ -6,6 +6,7 @@ import FichaTecnicaSection from '@/sections/localizadores-para-restaurantes/loca
 import NuestrosClientesSection from '@/sections/localizadores-para-restaurantes/localizadores-restaurantes-cir-resistentes-agua/components/NuestrosClientesSection';
 import ProductosRelacionadosSection from '@/sections/localizadores-para-restaurantes/localizadores-restaurantes-cir-resistentes-agua/components/ProductosRelacionadosSection';
 import LlamadoresDeMeserosPreguntasFrecuentes from '@/sections/localizadores-para-restaurantes/localizadores-restaurantes-cir-resistentes-agua/components/PreguntasFrecuentes'
+import ComoFuncionaSection from '@/sections/localizadores-para-restaurantes/localizadores-restaurantes-cir-resistentes-agua/components/ComoFuncionaSection';
 
 export async function generateMetadata() {
   const { 'localizadores-para-restaurantes': { 'localizadores-restaurantes-cir-resistentes-agua': metadata } } = getMetadata('landings');
@@ -18,6 +19,7 @@ const VerMasLocalizadoresCirResistenteAlAgua = () => {
       <ProductGallerySection />
       <DetallesDelProductoSection />
       <FichaTecnicaSection />
+      <ComoFuncionaSection />
       <NuestrosClientesSection />
       <ProductosRelacionadosSection />
       <LlamadoresDeMeserosPreguntasFrecuentes />

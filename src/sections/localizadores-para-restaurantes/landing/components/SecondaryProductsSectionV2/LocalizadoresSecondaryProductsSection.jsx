@@ -64,7 +64,7 @@ function LocalizadoresSecondaryProductsSection() {
                 <Image
                   width={800}
                   height={595}
-                  src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_800,f_webp,q_80/v1761759212/localizador_restaurantes_cir-resistente-al-agua"
+                  src="https://res.cloudinary.com/ddqh0mkx9/image/upload/w_800,f_webp,q_80/v1762447446/localizadores_restaurantes_cir_resistentes_agua"
                   alt="Localizador para clientes modelo CIR C2 junto a su base de carga"
                   title="Localizador CIR C2 para clientes con base de carga"
                   unoptimized={true}
