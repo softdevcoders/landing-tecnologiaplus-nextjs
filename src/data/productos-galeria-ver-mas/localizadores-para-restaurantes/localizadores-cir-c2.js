@@ -128,6 +128,13 @@ export const localizadoresCirC2 = {
           title: 'Localizadores Cir-C2 rojos rompe muros: conexión estable y potente en Colombia',
           darkBackground: true
         },
+        {
+          type: '3d',
+          modelID: 'ada3112545a645dfa008aeb7effe68d5',
+          thumbnail: 'v1760638307/localizadores_para_restaurantes_cir_c2_rojo',
+          preview: 'v1760638307/localizadores_para_restaurantes_cir_c2_rojo',
+          alt: 'Modelo 3D del localizador de clientes CIR-C2 rojo' 
+        },
       ]
     },
     {
@@ -185,6 +192,13 @@ export const localizadoresCirC2 = {
           alt: 'Localizadores para restaurantes en Colombia Cir-C2 grises con tecnología rompe muros de largo alcance',
           title: 'Localizadores Cir-C2 grises rompe muros para negocios gastronómicos en Colombia',
           darkBackground: true
+        },
+        {
+          type: '3d',
+          modelID: 'fb3f154661054c52a128fefc67aa6b9d',
+          thumbnail: 'v1760638305/localizadores_para_restaurantes_cir_c2_gris',
+          preview: 'v1760638305/localizadores_para_restaurantes_cir_c2_gris',
+          alt: 'Modelo 3D del localizador de clientes CIR-C2 gris' 
         },
       ]
     },
