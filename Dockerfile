@@ -7,7 +7,7 @@ RUN apk add --no-cache libc6-compat git && \
     mkdir -p /app && \
     chown -R node:node /app
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN npm install -g pnpm@10.8.1
 
 WORKDIR /app
 
@@ -29,7 +29,7 @@ FROM node:24.0.0-alpine AS builder
 
 RUN apk add --no-cache libc6-compat
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN npm install -g pnpm@10.8.1
 
 WORKDIR /app
 
@@ -61,7 +61,7 @@ FROM node:24.0.0-alpine AS production
 RUN apk add --no-cache libc6-compat curl
 
 # Install pnpm globally in the production stage
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN npm install -g pnpm@10.8.1
 
 WORKDIR /app
 
