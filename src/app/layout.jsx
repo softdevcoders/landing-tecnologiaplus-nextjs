@@ -11,8 +11,8 @@ import HybridServerSchema from '@/components/schema/HybridServerSchema'
 
 import { Bebas_Neue, Montserrat, Archivo_Black } from 'next/font/google'
 import { SHOULD_ROBOTS_INDEX } from "@/data/metadata/config";
- 
-const montserrat = Montserrat({ 
+
+const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
         {/* Critical resource hints - processed first for maximum performance */}
         <ResourceHints />
 
-        {/* Security Headers */}
+        {/* Security Headers cambios */}
         {/* <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="referrer" content="strict-origin-when-cross-origin" /> */}
 
@@ -100,9 +100,9 @@ export default function RootLayout({ children }) {
 
         {/* Schema 100% server-side para SEO */}
         <GuaranteedServerSchema />
-        
+
         {/* Gestión de schemas durante navegación SPA */}
-        <HybridServerSchema /> 
+        <HybridServerSchema />
       </head>
       <body>
 
