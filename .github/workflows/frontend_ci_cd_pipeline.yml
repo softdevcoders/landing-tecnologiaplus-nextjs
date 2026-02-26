@@ -159,7 +159,32 @@ jobs:
 
       - name: Pull New Docker Image
         run: |
-          echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker pull ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
+          MAX_RETRIES=3
+          TIMEOUT=180
+          ATTEMPT=0
+          SUCCESS=false
+
+          while [ $ATTEMPT -lt $MAX_RETRIES ]; do
+            ATTEMPT=$((ATTEMPT + 1))
+            echo "🐳 Pull intento $ATTEMPT/$MAX_RETRIES..."
+
+            if timeout $TIMEOUT bash -c "echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker pull ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}"; then
+              echo "✅ Pull exitoso en el intento $ATTEMPT"
+              SUCCESS=true
+              break
+            else
+              EXIT_CODE=$?
+              if [ $ATTEMPT -lt $MAX_RETRIES ]; then
+                echo "⚠️ Pull falló o superó el timeout (exit: $EXIT_CODE). Reintentando en 10s..."
+                sleep 10
+              fi
+            fi
+          done
+
+          if [ "$SUCCESS" = false ]; then
+            echo "❌ Docker pull falló después de $MAX_RETRIES intentos"
+            exit 1
+          fi
 
       - name: Deploy New Instance
         run: |
