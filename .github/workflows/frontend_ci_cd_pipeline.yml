@@ -74,8 +74,8 @@ jobs:
           username: ${{ env.DOCKER_HUB_USERNAME }}
           password: ${{ env.DOCKER_HUB_PASSWORD }}
 
-      # - name: Push Docker Image to Docker Hub
-      #   run: docker push ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
+      - name: Push Docker Image to Docker Hub
+        run: docker push ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
 
   blue-green-deployment:
     name: Blue-Green Deployment
@@ -157,34 +157,34 @@ jobs:
             echo "new_container=${{ env.DOCKER_CONTAINER_NAME }}-green" >> $GITHUB_OUTPUT
           fi
 
-      # - name: Pull New Docker Image
-      #   run: |
-      #     MAX_RETRIES=3
-      #     TIMEOUT=600
-      #     ATTEMPT=0
-      #     SUCCESS=false
+      - name: Pull New Docker Image
+        run: |
+          MAX_RETRIES=3
+          TIMEOUT=600
+          ATTEMPT=0
+          SUCCESS=false
 
-      #     while [ $ATTEMPT -lt $MAX_RETRIES ]; do
-      #       ATTEMPT=$((ATTEMPT + 1))
-      #       echo "🐳 Pull intento $ATTEMPT/$MAX_RETRIES..."
+          while [ $ATTEMPT -lt $MAX_RETRIES ]; do
+            ATTEMPT=$((ATTEMPT + 1))
+            echo "🐳 Pull intento $ATTEMPT/$MAX_RETRIES..."
 
-      #       if timeout $TIMEOUT bash -c "echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker pull ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}"; then
-      #         echo "✅ Pull exitoso en el intento $ATTEMPT"
-      #         SUCCESS=true
-      #         break
-      #       else
-      #         EXIT_CODE=$?
-      #         if [ $ATTEMPT -lt $MAX_RETRIES ]; then
-      #           echo "⚠️ Pull falló o superó el timeout (exit: $EXIT_CODE). Reintentando en 10s..."
-      #           sleep 10
-      #         fi
-      #       fi
-      #     done
+            if timeout $TIMEOUT bash -c "echo ${{ env.SHH_USER_PASSWORD }} | sudo -S docker pull ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}"; then
+              echo "✅ Pull exitoso en el intento $ATTEMPT"
+              SUCCESS=true
+              break
+            else
+              EXIT_CODE=$?
+              if [ $ATTEMPT -lt $MAX_RETRIES ]; then
+                echo "⚠️ Pull falló o superó el timeout (exit: $EXIT_CODE). Reintentando en 10s..."
+                sleep 10
+              fi
+            fi
+          done
 
-      #     if [ "$SUCCESS" = false ]; then
-      #       echo "❌ Docker pull falló después de $MAX_RETRIES intentos"
-      #       exit 1
-      #     fi
+          if [ "$SUCCESS" = false ]; then
+            echo "❌ Docker pull falló después de $MAX_RETRIES intentos"
+            exit 1
+          fi
 
       - name: Deploy New Instance
         run: |
